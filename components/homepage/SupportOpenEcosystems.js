@@ -35,9 +35,7 @@ const items = [
   },
 
 ]
-export default function SupportOpenEcosystems() {
-  const support_open_ecosystems_title = 'How Platformable supports open ecosystems'
-  
+export default function SupportOpenEcosystems({list_items_cards, support_open_ecosystems_title}) {
   return (
     <section className='bg-green-medium py-10 text-[#2A2FC1]'>
       <div className='flex gap-10  mb-10'>
@@ -48,7 +46,8 @@ export default function SupportOpenEcosystems() {
       <div className='px-32'>
         <div className='grid grid-rows-4 grid-cols-2 xl:gap-y-5 xl:gap-8'>
           {
-            items.map((item, i) => (
+            list_items_cards && 
+            list_items_cards?.map((item, i) => (
               <ListItemCard item_description={item} key={i}/>
             ))
           }
