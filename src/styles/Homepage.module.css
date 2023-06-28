@@ -1,0 +1,39 @@
+#section_explore {
+    background: linear-gradient(180deg, #7542F5 0%, #E67EFF 100%) 0% 0% no-repeat padding-box;
+}
+#sectors_value_list {
+    list-style-type: '+' !important;
+}
+
+#cards_group  button[data-card-number='1'] {
+    background: linear-gradient(-90deg, #06DE8B 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
+    background-size: 150% 150%;
+    animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+}
+
+#cards_group  button[data-card-number='2'] {
+    background: linear-gradient(to left, #FF9D00 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
+    background-size: 150% 150%;
+    animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+}
+
+#cards_group  button[data-card-number='3'] {
+    background: linear-gradient(to left, #0062FF 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
+    background-size: 150% 150%;
+    animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

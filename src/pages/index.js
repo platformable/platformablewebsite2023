@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Layout from "../../components/Layout";
-import styles from "@/styles/Homepage.module.css";
+import "@/styles/Homepage.module.css";
 import SupportOpenEcosystems from "../../components/homepage/SupportOpenEcosystems";
+import Explore from "../../components/homepage/Explore";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ export default function Home() {
           platformable
         </button>
         <SupportOpenEcosystems />
+        <Explore />
       </div>
     </Layout>
   );
