@@ -1,5 +1,5 @@
 import React from "react";
-
+import styles from '@/styles/Homepage.module.css'
 export default function StakeholdersOpenEcosystems({ videos, title }) {
   return (
     <section className="py-10">
@@ -7,20 +7,20 @@ export default function StakeholdersOpenEcosystems({ videos, title }) {
         <img src="" alt="plat logo" width={100} />
         <h2 className="text-[#5B24EC] font-bold font-karla ">{title}</h2>
       </div>
-      <div className="px-32 flex flex-col items-center gap-10">
-        <div className="flex items-center justify-center gap-10">
+      <div className="px-32 flex flex-col  gap-10">
+        <div className="flex items-center px-7 justify-between gap-10">
           <label className="flex items-center gap-5">
-            <input type="radio" name="stakeholder_flow" defaultChecked={true}/>
+            <input type="radio" className={styles.custom_radio_button} name="stakeholder_flow" defaultChecked={true}/>
             <p className="font-bold">For governments and regulators</p>
 
           </label>
           <label className="flex items-center gap-5">
-            <input type="radio" name="stakeholder_flow" />
+            <input type="radio" className={styles.custom_radio_button} name="stakeholder_flow" />
             <p className="font-bold">For bussineses and organizations</p>
 
           </label>
           <label className="flex items-center gap-5">
-            <input type="radio" name="stakeholder_flow" />
+            <input type="radio" className={styles.custom_radio_button} name="stakeholder_flow" />
             <p className="font-bold">For citizens</p>
 
           </label>

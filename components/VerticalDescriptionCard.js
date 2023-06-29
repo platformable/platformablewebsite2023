@@ -14,7 +14,9 @@ export default function VerticalDescriptionCard({sector, position}) {
         ))}
       </ul>
       <button data-card-number={position} className='text-[30px] text-white font-medium flex justify-around items-center gap-3 rounded-md px-7 py-2'>
-        {vertical_description_card_button_text}
+        <div>
+        <b>{vertical_description_card_button_text.split(' ')[0]}</b>{" "}{vertical_description_card_button_text.split(' ')[1]}
+        </div>
         <img src="/icon_arrow_sec_02.svg" alt="go to solutions arros icon" />
       </button>
     </div>
