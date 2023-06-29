@@ -18,13 +18,13 @@ const sectorsList = [
     vertical_description_card_button_text: 'Platformable solutions',
   },
 ]
-export default function Explore() {
-  
+export default function Explore({vertical_description_card, title}) {
+  console.log(vertical_description_card)
   return (
     <section id={styles.section_explore} className='py-10'>
       <div className='flex gap-10  mb-10'>
         <img src='' alt="plat logo" width={100}/>
-        <h2 className='text-white font-bold font-karla '>Explore all sectors</h2>
+        <h2 className='text-white font-bold font-karla '>{title}</h2>
       </div>
       <div className='px-32'>
         <div id={styles.cards_group} className=' grid  grid-cols-3  xl:gap-10'>

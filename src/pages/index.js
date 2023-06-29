@@ -4,11 +4,13 @@ import Layout from "../../components/Layout";
 import "@/styles/Homepage.module.css";
 import SupportOpenEcosystems from "../../components/homepage/SupportOpenEcosystems";
 import Explore from "../../components/homepage/Explore";
+import StakeholdersOpenEcosystems from "../../components/homepage/StakeholdersOpenEcosystems";
+import ProductsServices from "../../components/homepage/ProductsServices";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({data}) {
-
+console.log(data)
   return (
     <Layout>
       <div className="container mx-auto">
@@ -18,9 +20,11 @@ export default function Home({data}) {
         </button>
         <SupportOpenEcosystems
           list_items_cards={data?.attributes?.list_item_cards}
-          support_open_ecosystems_title={data?.attributes?.support_open_ecosystems_title}
+          title={data?.attributes?.support_open_ecosystems_title}
         />
-        <Explore />
+        <StakeholdersOpenEcosystems videos={data?.attributes?.stakeholder_video} title={data?.attributes?.stakeholder_title}/>
+        <ProductsServices title={data?.attributes?.product_services_title} product_cards={data?.attributes?.product_cards}/>
+        <Explore vertical_description_card={data?.attributes?.vertical_description_card} title={data?.attributes?.explore_sectors_title}/>
       </div>
     </Layout>
   );
@@ -28,7 +32,7 @@ export default function Home({data}) {
 
 export async function getServerSideProps(ctx) {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/homepage?populate[hero_img]=*&populate[stakeholder_img_1]=*&populate[stakeholder_img_2]=*&populate[stakeholder_img_3]=*&populate[list_item_cards][populate][list_item_card_img]=*&populate[product_cards][populate][list_card_description_img]=*&populate[vertical_description_card]=*&populate[testimonials][populate][testimonials_img]=*`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/homepage?populate[hero_img]=*&populate[stakeholder_img_1]=*&populate[stakeholder_img_2]=*&populate[stakeholder_img_3]=*&populate[stakeholder_video]=*&populate[list_item_cards][populate][list_item_card_img]=*&populate[product_cards][populate][list_card_description_img]=*&populate[vertical_description_card]=*&populate[testimonials][populate][testimonials_img]=*`);
     const data = await res.json();
 
     return {

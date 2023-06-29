@@ -1,3 +1,6 @@
+.section_products_services {
+    background: transparent linear-gradient(to top, #99F0CF 0%, #E2FFF4 100%) 0% 0% no-repeat padding-box;
+}
 #section_explore {
     background: linear-gradient(180deg, #7542F5 0%, #E67EFF 100%) 0% 0% no-repeat padding-box;
 }
