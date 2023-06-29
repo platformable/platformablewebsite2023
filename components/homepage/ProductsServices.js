@@ -12,12 +12,12 @@ export default function ProductsServices({title, product_cards}) {
           product_cards && 
           product_cards?.map(card => (
             <div className='flex flex-col shadow-lg'>
-              <section className='bg-violet-500 rounded-t-md flex justify-between items-center text-white px-10 py-5'>
+              <section className='bg-[#5B24EC] rounded-t-md flex justify-between items-center text-white px-10 py-5'>
                 <div className='flex items-center gap-5'>
                     <img width={45} src={`${process.env.NEXT_PUBLIC_SERVER_URL}${card?.list_card_description_img?.data?.attributes?.url}`} alt={`${card?.list_card_description_product_name} icon`}/>
                     <h6>{card?.list_card_description_product_name}</h6>
                 </div>
-                <button className='flex gap-2'>
+                <button className='shadow-md flex items-center gap-2 border-white border rounded-lg  px-5 py-2'>
                   <span className='text-white'>{card?.list_card_description_button_text}</span>
                   <img src="/icon_arrow_sec_02.svg" alt={`know more about ${card?.list_card_description_product_name}`}/>
                 </button>

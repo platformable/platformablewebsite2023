@@ -29,6 +29,13 @@
     -moz-animation: Gradient 5s ease infinite;
 }
 
+.custom_radio_button {
+    accent-color: #8956FF;
+    width: 30px;
+    height: 30px;
+}
+
+
 @keyframes Gradient {
 	0% {
 		background-position: 0% 50%;
