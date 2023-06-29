@@ -14,10 +14,6 @@ console.log(data)
   return (
     <Layout>
       <div className="container mx-auto">
-        <h3>platformable</h3>
-        <button className="bg-blue-500 rounded-md p-5 text-white shadow-md ml-10">
-          platformable
-        </button>
         <SupportOpenEcosystems
           list_items_cards={data?.attributes?.list_item_cards}
           title={data?.attributes?.support_open_ecosystems_title}
