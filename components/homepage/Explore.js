@@ -29,8 +29,8 @@ export default function Explore({vertical_description_card, title}) {
       <div className='px-32'>
         <div id={styles.cards_group} className=' grid  grid-cols-3  xl:gap-10'>
           {
-            sectorsList?.map((sector, i) => (
-              <VerticalDescriptionCard sector={sector} key={i} position={i+1}/>
+            vertical_description_card?.map((card, i) => (
+              <VerticalDescriptionCard card={card} key={i} position={i+1}/>
             ))
           }
         </div>

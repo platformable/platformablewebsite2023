@@ -1,15 +1,16 @@
 import React from 'react'
 import styles from '@/styles/Homepage.module.css'
-export default function VerticalDescriptionCard({sector, position}) {
-  const  {vertical_description_card_title, vertical_description_card_text, vertical_description_card_button_text} = sector
+export default function VerticalDescriptionCard({card, position}) {
+  const  {vertical_description_card_title, sector_values, vertical_description_card_button_text} = card
+  console.log("card",card)
   return (
     <div className='rounded-2xl bg-white shadow-md p-7 grid grid-rows-[1.5fr_4fr_1fr] gap-5 font-karla'>
       <h4 className='font-medium'>{vertical_description_card_title}</h4>
       <ul id='sectors_value_list' className={styles.sectors_value_list}>
-        {vertical_description_card_text?.map((item, i) => (
+        {sector_values?.map((item, i) => (
           <div className='flex gap-3 items-center' key={i}>
             <p className=''>+</p>
-            <h6 id='sectors-value'>{item}</h6>
+            <h6 id='sectors-value'>{item.sector_value_text}</h6>
           </div>
         ))}
       </ul>
