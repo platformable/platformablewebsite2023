@@ -9,8 +9,8 @@ export default function SupportOpenEcosystems({list_items_cards, title}) {
         <h2 className='font-bold font-karla '>{title}</h2>
 
       </div>
-      <div className='px-32'>
-        <div className='grid grid-rows-4 grid-cols-2 xl:gap-y-5 xl:gap-8'>
+      <div className='px-5 lg:px-32'>
+        <div className='grid grid-rows-4 xl:grid-cols-2 gap-14  lg:gap-y-8'>
           {
             list_items_cards && 
             list_items_cards?.map((item, i) => (

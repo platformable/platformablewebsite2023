@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import Logo from '/public/logo.png'
+import Logo from "/public/logo.png";
 
 export default function Header() {
   const [navbar, setNavbar] = useState(false);
@@ -11,15 +11,14 @@ export default function Header() {
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <a href="#">
-            <Image
-    className="text-center"
-    src={Logo}
-    alt={'platformable logo'}
-    width={160}
-    height={32}
-unoptimized
-  />
-            
+              <Image
+                className="text-center"
+                src={Logo}
+                alt={"platformable logo"}
+                width={160}
+                height={32}
+                unoptimized
+              />
             </a>
             <div className="md:hidden">
               <button
@@ -66,21 +65,21 @@ unoptimized
             }`}
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-40 md:space-y-0">
-              <li className="text-black hover:text-indigo-200">
+              <li className="text-[#3024C6] font-bold hover:text-indigo-200">
                 <a href="#">Understand</a>
               </li>
-              <li className="text-black hover:text-indigo-200">
+              <li className="text-[#3024C6] font-bold hover:text-indigo-200">
                 <a href="#">Act</a>
               </li>
-              <li className="text-black hover:text-indigo-200">
+              <li className="text-[#3024C6] font-bold hover:text-indigo-200">
                 <a href="#">Engage</a>
               </li>
-              <li className="text-black hover:text-indigo-200">
+              <li className="text-[#3024C6] font-bold hover:text-indigo-200">
                 <a href="#">Contact </a>
               </li>
             </ul>
 
-          {/*   <div className="mt-3 space-y-2 lg:hidden md:inline-block">
+            {/*   <div className="mt-3 space-y-2 lg:hidden md:inline-block">
               <a
                 href="#"
                 className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
