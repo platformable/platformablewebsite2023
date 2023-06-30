@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Logo from "/public/logo.png";
+import Link from "next/link";
 
 export default function Header() {
   const [navbar, setNavbar] = useState(false);
