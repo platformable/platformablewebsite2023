@@ -34,12 +34,13 @@ export default function StakeholdersOpenEcosystems({ videos, title }) {
 
   return (
     <section className="py-10">
-      <div className="flex gap-10  mb-10">
-        <img src="" alt="plat logo" width={100} />
+      <div className="flex gap-10 items-center mb-10">
+      <img src='/icon_section02.png' alt="platformable logo" className='h-20 -ml-48 lg:-ml-36'/>
+
         <h2 className="text-[#5B24EC] font-bold font-karla ">{title}</h2>
       </div>
-      <div className="px-5 lg:px-32 md:flex flex-col  gap-10 hidden ">
-        <div className="flex items-center px-7 justify-between gap-10">
+      <div className="px-5 xl:px-32 md:flex flex-col  gap-10 ">
+        <div className="flex flex-col md:flex-row md:items-center px-7 mb-7 md:mb-10 justify-between gap-10">
           {arrayOfVideos?.map((video, i) => (
             <label className="flex items-center gap-5" key={i}>
               <input

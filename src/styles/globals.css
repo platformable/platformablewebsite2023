@@ -65,10 +65,76 @@ h6 {
   background-color: var(--green-medium);
 }
 
+
+
+/* DIFFERENT DEVICES */
+
+@media screen and (max-width: 480px) {
+  p {
+    font-size:18px;
+    }
+    
+    h1 {
+    font-size: 38px;
+    }
+    
+    h2 {
+      font-size: 30px;
+    }
+    
+    h3 {
+      font-size: 28px;
+    }
+    
+    h4 {
+      font-size: 25px;
+    }
+    
+    h5 {
+      font-size: 22px;
+    }
+    
+    h6 {
+      font-size:20px;
+    }
+    
+}
+
+@media  (max-width: 1240px) {
+  p {
+    font-size:20px;
+    }
+    
+    h1 {
+    font-size: 44px;
+    }
+    
+    h2 {
+      font-size: 38px;
+    }
+    
+    h3 {
+      font-size: 35px;
+    }
+    
+    h4 {
+      font-size: 29px;
+    }
+    
+    h5 {
+      font-size: 26px;
+    }
+    
+    h6 {
+      font-size:22px;
+    }
+    
+
 .bg-green-dark {
   background-color: var(--green-dark);
 }
 
 .bg-blue-medium {
   background-color: var(--blue-medium);
+
 }
