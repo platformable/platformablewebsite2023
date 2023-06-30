@@ -45,7 +45,7 @@ export default function Testimonials({ data, title }) {
         <div className="grid gap-x-5 md:grid-cols-6 grid-cols-2 md:gap-y-0 gap-y-3 items-center mt-20 justify-center">
         {logos && logos.map((logo,index)=>{
           return (
-            <div><img src={logo.logo} alt={'platformable'}/></div>
+            <div key={index}><img src={logo.logo} alt={'platformable'}/></div>
           )
         })}
         </div>
