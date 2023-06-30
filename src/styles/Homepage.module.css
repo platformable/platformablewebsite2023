@@ -47,3 +47,10 @@
 		background-position: 0% 50%;
 	}
 }
+
+.contact-btn {
+    background: linear-gradient(-90deg, #F157FF 0%, #8955FF 100%) 0% 0% no-repeat padding-box;
+    background-size: 150% 150%;
+    animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+}
