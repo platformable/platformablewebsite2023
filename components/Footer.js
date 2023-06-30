@@ -94,8 +94,8 @@ export default function Footer() {
         <div className="grid gap-10 lg:pt-5" key={index}>
           <span className="font-bold opacity-90">{section.title}</span>
           <div className="grid gap-2">
-            {section.links.map((link) => (
-              <small>
+            {section.links.map((link,index) => (
+              <small key={index}>
                 <Link href={link.url}>{link.label}</Link>
               </small>
             ))}
