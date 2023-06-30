@@ -18,7 +18,7 @@ console.log(data)
           list_items_cards={data?.attributes?.list_item_cards}
           title={data?.attributes?.support_open_ecosystems_title}
         />
-        <StakeholdersOpenEcosystems videos={data?.attributes?.stakeholder_video} title={data?.attributes?.stakeholder_title}/>
+        <StakeholdersOpenEcosystems videos={[data?.attributes.stakeholder_img_1, data?.attributes.stakeholder_img_2, data?.attributes.stakeholder_img_3]} title={data?.attributes?.stakeholder_title}/>
         <ProductsServices title={data?.attributes?.product_services_title} product_cards={data?.attributes?.product_cards}/>
         <Explore vertical_description_card={data?.attributes?.vertical_description_card} title={data?.attributes?.explore_sectors_title}/>
       </div>

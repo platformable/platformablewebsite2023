@@ -4,7 +4,7 @@ export default function ListItemCard({item_description}) {
   const {list_item_card_text, list_item_card_img} = item_description
   return (
     <div className='bg-white rounded-xl shadow-md py-5 px-7 flex items-center gap-5'>
-        <img src={`${process.env.NEXT_PUBLIC_SERVER_URL}${list_item_card_img.data.attributes.url}`} alt={list_item_card_text} />
+        <img src={list_item_card_img?.data?.attributes.url} alt={list_item_card_text} />
         <p className='font-medium'>{list_item_card_text}</p>
     </div>
   )
