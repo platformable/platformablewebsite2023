@@ -27,7 +27,7 @@ export default function StakeholdersOpenEcosystems({ videos, title }) {
     },
     {
       label: "For citizens",
-      video_src: '',
+      video_src: videos[2]?.data?.attributes?.url,
     },
   ];
 
