@@ -26,13 +26,13 @@ export default function Testimonials({ data, title }) {
     },
   ]
   return (
-    <section className={`py-40 ${styles["testimonials-bg"]}`}>
+    <section className={`pt-40 pb-10 ${styles["testimonials-bg"]}`}>
       <div className="flex gap-10  mb-10">
         <img src="/icon_section05.svg"  alt="platformable logo" className='h-20 -ml-48 lg:-ml-36' />
         <h2 className="text-[#5B24EC] font-bold font-karla">{title}</h2>
       </div>
       <div className="px-5 lg:px-32 ">
-        <div className="grid md:grid-cols-2 grid-cols-1  md:gap-y-0 gap-y-5 gap-x-10 md:my-0 px-32">
+        <div className="grid md:grid-cols-2 grid-cols-1  md:gap-y-0 gap-y-5 gap-x-10 md:my-0 md:px-32 px-5">
           {data && data?.map((testimonial,index)=>{
             return (
             <TestimonialCard testimonial={testimonial} key={index} index={index}/>
@@ -40,7 +40,7 @@ export default function Testimonials({ data, title }) {
           })}
  
         </div>
-        <div className="grid gap-x-5 md:grid-cols-6 grid-cols-1 items-center my-20 justify-center">
+        <div className="grid gap-x-5 md:grid-cols-6 grid-cols-2 md:gap-y-0 gap-y-3 items-center mt-20 justify-center">
         {logos && logos.map((logo,index)=>{
           return (
             <div><img src={logo.logo} alt={'platformable'}/></div>
