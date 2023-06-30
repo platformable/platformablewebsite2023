@@ -68,7 +68,7 @@ export default function Footer() {
   return (
     <section className="px-5 xl:px-32 pt-10 pb-24 lg:flex  gap-16 lg:gap-32 items-start ">
       <div className="grid gap-5">
-        <a href="/">
+        <Link href="/">
           <Image
             className="text-center"
             src={Logo}
@@ -77,7 +77,7 @@ export default function Footer() {
             height={70}
             unoptimized
           />
-        </a>
+        </Link>
 
         <span className="font-karla">
           We are committed to minimising the amount

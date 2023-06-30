@@ -10,7 +10,7 @@ export default function Header() {
       <div className="justify-between px-4 mx-auto  md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="/">
+          <Link href="/"> 
               <Image
                 className="text-center"
                 src={Logo}
@@ -19,7 +19,7 @@ export default function Header() {
                 height={32}
                 unoptimized
               />
-            </a>
+            </Link>
             <div className="md:hidden">
               <button
                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -66,16 +66,16 @@ export default function Header() {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-40 md:space-y-0">
               <li className="text-[#3024C6] font-bold hover:text-indigo-200">
-                <a href="#">Understand</a>
+                <Link href="#">Understand</Link>
               </li>
               <li className="text-[#3024C6] font-bold hover:text-indigo-200">
-                <a href="#">Act</a>
+                <Link href="#">Act</Link>
               </li>
               <li className="text-[#3024C6] font-bold hover:text-indigo-200">
-                <a href="#">Engage</a>
+                <Link href="#">Engage</Link>
               </li>
               <li className="text-[#3024C6] font-bold hover:text-indigo-200">
-                <a href="#">Contact </a>
+                <Link href="#">Contact </Link>
               </li>
             </ul>
 
