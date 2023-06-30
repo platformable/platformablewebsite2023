@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,700;1,200&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -66,6 +66,7 @@ h6 {
 }
 
 
+
 /* DIFFERENT DEVICES */
 
 @media screen and (max-width: 480px) {
@@ -128,4 +129,12 @@ h6 {
       font-size:22px;
     }
     
+
+.bg-green-dark {
+  background-color: var(--green-dark);
+}
+
+.bg-blue-medium {
+  background-color: var(--blue-medium);
+
 }
