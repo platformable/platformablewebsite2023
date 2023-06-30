@@ -49,7 +49,14 @@
 }
 
 .contact-btn {
-    background: linear-gradient(-90deg, #F157FF 0%, #8955FF 100%) 0% 0% no-repeat padding-box;
+    background: linear-gradient(-90deg, #8955FF  0%, #F157FF 100%) 0% 0% no-repeat padding-box;
+    background-size: 150% 150%;
+    animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+}
+
+.testimonials-bg {
+    background: linear-gradient(-90deg, #EFEAFF  0%, #ffffff 100%) 0% 0% no-repeat padding-box;
     background-size: 150% 150%;
     animation: Gradient 5s ease infinite;
     -moz-animation: Gradient 5s ease infinite;

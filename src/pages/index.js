@@ -7,11 +7,12 @@ import Explore from "../../components/homepage/Explore";
 import StakeholdersOpenEcosystems from "../../components/homepage/StakeholdersOpenEcosystems";
 import ProductsServices from "../../components/homepage/ProductsServices";
 import Hero from "../../components/homepage/Hero";
+import Testimonials from "../../components/homepage/Testimonials";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ data }) {
-  console.log(data);
+
   const newData = data.attributes;
   return (
     <Layout>
@@ -28,6 +29,7 @@ export default function Home({ data }) {
         <StakeholdersOpenEcosystems videos={[data?.attributes.stakeholder_img_1, data?.attributes.stakeholder_img_2, data?.attributes.stakeholder_img_3]} title={data?.attributes?.stakeholder_title}/>
         <ProductsServices title={data?.attributes?.product_services_title} product_cards={data?.attributes?.product_cards}/>
         <Explore vertical_description_card={data?.attributes?.vertical_description_card} title={data?.attributes?.explore_sectors_title}/>
+        <Testimonials data={data.attributes.testimonials} title={newData.testimonials_title}/>
       </div>
     </Layout>
   );
