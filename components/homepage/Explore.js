@@ -21,8 +21,9 @@ const sectorsList = [
 export default function Explore({vertical_description_card, title}) {
   return (
     <section id={styles.section_explore} className='py-10'>
-      <div className='flex gap-10  mb-20'>
-        <img src='' alt="plat logo" width={100}/>
+      <div className='flex items-center mb-20'>
+      <img src='/icon_section04.png' alt="platformable logo" className='-ml-60 lg:-ml-52'/>
+
         <h2 className='text-white font-bold font-karla '>{title}</h2>
       </div>
       <div className='px-5 lg:px-32'>
