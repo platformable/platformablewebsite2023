@@ -35,7 +35,9 @@ export default function Testimonials({ data, title }) {
         <div className="grid md:grid-cols-2 grid-cols-1  md:gap-y-0 gap-y-5 gap-x-10 md:my-0 md:px-32 px-5">
           {data && data?.map((testimonial,index)=>{
             return (
-            <TestimonialCard testimonial={testimonial} key={index} index={index}/>
+              <div key={index}>
+            <TestimonialCard testimonial={testimonial}  index={index}/>
+            </div>
             )
           })}
  
