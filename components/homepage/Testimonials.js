@@ -34,7 +34,7 @@ export default function Testimonials({ data, title }) {
         <h2 className="text-[#5B24EC] font-bold font-karla">{title}</h2>
       </div>
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-[1fr_1fr] gap-x-10 lg:px-32 md:px-0 px-5 md:gap-y-0 gap-y-5">
+        <div className="grid md:grid-cols-[1fr_1fr] gap-x-10 md:px-0 px-5 md:gap-y-0 gap-y-5">
           {data &&
             data.map((testimonial, index) => {
               return (

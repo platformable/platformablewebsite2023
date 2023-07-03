@@ -10,7 +10,7 @@ export default function ProductsServices({title, product_cards}) {
 
         <h2 className='text-[#2A2FC1] font-bold font-karla '>{title}</h2>
       </div>
-        <div className='grid lg:grid-cols-2 px-5 xl:px-32 gap-10 xl:gap-10'>
+        <div className='grid lg:grid-cols-2 container mx-auto  gap-10 xl:gap-10'>
          {
           product_cards && 
           product_cards?.map((card, i) => (

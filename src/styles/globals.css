@@ -138,3 +138,7 @@ h6 {
   background-color: var(--blue-medium);
 
 }
+
+.test::before {
+  content: "Read this: ";
+}

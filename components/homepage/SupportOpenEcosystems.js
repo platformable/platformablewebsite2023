@@ -4,12 +4,12 @@ import ListItemCard from '../ListItemCard'
 export default function SupportOpenEcosystems({list_items_cards, title}) {
   return (
     <section className='bg-green-medium py-10 text-[#2A2FC1]'>
-      <div className='flex items-center   mb-10'>
-        <img src='/icon_section01.png' alt="platformable logo" className='-ml-60 lg:-ml-52'/>
+      <div className='container mx-auto flex items-center   mb-10'>
+        {/* <img src='/icon_section01.png' alt="platformable logo" className=''/> */}
         <h2 className='font-bold font-karla '>{title}</h2>
 
       </div>
-      <div className='px-5 xl:px-32'>
+      <div className='container mx-auto'>
         <div className='grid grid-cols lg:grid-rows-4 lg:grid-cols-2 gap-10 lg:gap-10  lg:gap-y-8'>
           {
             list_items_cards && 

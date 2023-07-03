@@ -39,7 +39,7 @@ export default function StakeholdersOpenEcosystems({ videos, title }) {
 
         <h2 className="text-[#5B24EC] font-bold font-karla ">{title}</h2>
       </div>
-      <div className="px-5 xl:px-32 md:flex flex-col  gap-10 ">
+      <div className="container mx-auto  md:flex flex-col  gap-10 ">
         <div className="flex flex-col md:flex-row md:items-center px-7 mb-7 md:mb-10 justify-between gap-10">
           {arrayOfVideos?.map((video, i) => (
             <label className="flex items-center gap-5" key={i}>

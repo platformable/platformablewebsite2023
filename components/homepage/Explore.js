@@ -26,7 +26,7 @@ export default function Explore({vertical_description_card, title}) {
 
         <h2 className='text-white font-bold font-karla '>{title}</h2>
       </div>
-      <div className='px-5 lg:px-32'>
+      <div className='container mx-auto '>
         <div id={styles.cards_group} className=' grid  md:grid-cols-2 lg:grid-cols-3 gap-y-20 md:gap-x-10 '>
           {
             vertical_description_card?.map((card, i) => (
