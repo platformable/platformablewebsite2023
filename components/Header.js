@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <nav className="">
-      <div className="justify-between px-4 mx-auto  md:items-center md:flex md:px-8">
+      <div className="justify-between px-5 lg:px-32   md:items-center md:flex ">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
           <Link href="/"> 
