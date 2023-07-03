@@ -26,7 +26,7 @@ export default function Home({ data }) {
           hero_title={newData.hero_title}
         />
         <button
-          className={`${styles["contact-btn"]} fixed top-0 left-0   px-10 py-3 text-white my-5 rounded-tr-md rounded-br-md md:block  `}
+          className={`${styles["contact-btn"]} fixed top-0 left-0   px-10 py-3 text-white my-5 rounded-tr-md rounded-br-md md:block hidden `}
           >
             <Link href="/">
               <div className="flex gap-x-5 self-start items-center ">
