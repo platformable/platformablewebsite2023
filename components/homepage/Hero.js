@@ -38,7 +38,7 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
           </button>
         </div>
       </div>
-      <button
+      {/* <button
         className={`${styles["contact-btn"]} contact-btn px-10 py-3 text-white my-5 rounded-tr-md rounded-br-md md:block hidden `}
       >
         <Link href="/">
@@ -48,7 +48,7 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
             <img src="/icon_arrow.png" alt="" />
           </div>
         </Link>
-      </button>
+      </button> */}
     </section>
   );
 }

@@ -24,8 +24,8 @@ export default function Testimonials({ data, title }) {
     },
   ];
   return (
-    <section className={`pt-40 pb-10 ${styles["testimonials-bg"]}`}>
-      <div className="flex gap-10  mb-10">
+    <section className={`py-10  ${styles["testimonials-bg"]}`}>
+      <div className="flex items-center gap-10  mb-10">
         <img
           src="/icon_section05.svg"
           alt="platformable logo"
@@ -39,18 +39,20 @@ export default function Testimonials({ data, title }) {
             data.map((testimonial, index) => {
               return (
                 <div
-                  className="item bg-white rounded-tl-lg rounded-tr-lg relative p-7"
+                  className="item bg-white grid grid-rows-[1fr_3fr_1fr] rounded-tl-lg rounded-tr-lg relative p-7"
                   key={index}
                 >
                   <img
                     src={testimonial.testimonials_img.data.attributes.url}
                     alt=""
+                    
+                    className="place-center"
                   />
                   <div
                     dangerouslySetInnerHTML={{
                       __html: testimonial.testimonials_text,
                     }}
-                    className="py-40 italic font-light"
+                    className="py-7 italic font-light"
                   />
 
                   <div
