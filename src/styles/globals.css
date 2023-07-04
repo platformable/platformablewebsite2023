@@ -7,16 +7,23 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
+  --purple:#7743F5;
   --purple-extra-dark:#1D17A8;
   --purple-dark:#2A2FC1;
   --purple-medium:#5B24EC;
+  --purple-light:#A17EFF;
+  --purple-extra-light:#DCD1FF;
   --green-medium:#99F0CF;
   --green-dark:#0ADC8D;
   --green-light:#E2FFF4;
   --blue-dark:#0A1385;
+  --blue:#3024C6;
+  --blue-extra-dark:#3423C9;
   --blue-medium:#0562FF;
   --pink-light:#F1ACFF;
+  --pink:#F157FF;
+
+
 }
 
 @media (prefers-color-scheme: dark) {
