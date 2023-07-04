@@ -1,0 +1,15 @@
+<svg id="icon_section05" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="325.014" height="92.77" viewBox="0 0 325.014 92.77">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="0.5" x2="0.222" y2="0.299" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8657ff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path id="Subtraction_17" data-name="Subtraction 17" d="M4507.5,10213.625l-281.182-.358v-90.556l.43-.006c17.575-.189,174.1-1.85,256.879-1.85,14.228,0,25.712.049,34.133.146H4510.5l40.833,44.5L4510.5,10210h.32l-3.318,3.627Z" transform="translate(-4226.317 -10120.855)" opacity="0.455" fill="url(#linear-gradient)"/>
+  <g id="Group_194" data-name="Group 194" transform="translate(-214.329 -71.07)">
+    <g id="Group_1" data-name="Group 1" transform="translate(463.105 86.213)">
+      <path id="Path_1" data-name="Path 1" d="M29.907,0,23.925,5.981,5.981,23.925,0,29.907l5.981,5.981L29.907,59.813l5.981-5.981L11.963,29.907,29.907,11.963,47.851,29.907,35.888,41.869l5.981,5.981L53.832,35.888l5.981-5.981-5.981-5.981L35.888,5.981Z" fill="#fff"/>
+      <rect id="Rectangle_5" data-name="Rectangle 5" width="9.305" height="9.305" transform="translate(23.327 29.907) rotate(-45)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
