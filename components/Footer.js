@@ -91,7 +91,7 @@ export default function Footer() {
 
      <div className="grid grid-cols-3 mt-10 lg:mt-0 gap-16 lg:gap-24">
      {sitemap.map((section,index) => (
-        <div className="grid gap-10 lg:pt-5" key={index}>
+        <div className="grid gap-10 content-start lg:pt-5" key={index}>
           <span className="font-bold opacity-90">{section.title}</span>
           <div className="grid gap-2">
             {section.links.map((link,index) => (
@@ -104,7 +104,7 @@ export default function Footer() {
       ))}
       
      </div>
-     <div className="grid gap-10 pt-10 lg:pt-3 ">
+     <div className="grid gap-10  pt-10 lg:pt-3 ">
           <p className="font-bold ">Newsletter</p>
           <div className="grid gap-2">
            <input type="text" placeholder="Email" className="lg:w-64 rounded p-4 border-blue-600 border-2 border-opacity-50"/>
