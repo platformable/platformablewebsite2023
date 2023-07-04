@@ -5,10 +5,15 @@ export default function ProductsServices({title, product_cards}) {
  
   return (
     <section className={`${styles.section_products_services} py-10`}>
-      <div className='flex items-center  mb-10'>
-        <img src='/icon_section01.png' alt="platformable logo" className='-ml-60 lg:-ml-52'/>
-
-        <h2 className='text-[#2A2FC1] font-bold font-karla '>{title}</h2>
+       <div className="container mx-auto md:mb-10 mb-10">
+        <div className="flex gap-x-5 items-center ">
+        <img src='/icon_section01.svg' alt="platformable logo" className='md:flex hidden'/>
+          <h2
+            className={`text-[#5B24EC]  font-bold font-karla  md:leading-10 leading-9`}
+          >
+            {title}
+          </h2>
+        </div>
       </div>
         <div className='grid lg:grid-cols-2 container mx-auto  gap-10 xl:gap-10'>
          {

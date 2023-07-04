@@ -25,24 +25,18 @@ export default function Testimonials({ data, title }) {
   ];
   return (
     <section className={`py-10  ${styles["testimonials-bg"]} `}>
-      {/*  <div className="flex items-center gap-10  mb-10 md:px-0 ">
-        <img
-          src="/icon_section05.svg"
-          alt="platformable logo"
-          className=""
-        />
-        <h2 className="text-[#5B24EC] font-bold font-karla">{title}</h2>
-      </div> */}
-      <div className="container mx-auto mb-7">
-      <div className="flex gap-x-5 items-center">
-     {/*    <img src="/icon_section05.svg" alt="platformable logo" className="-mr-8" /> */}
-        
-          <h2 className={`text-[#5B24EC] md:flex hidden font-bold font-karla ${styles["titles-icon"]} md:leading-10 leading-8`}>{title}</h2>
-          <h2 className={`text-[#5B24EC] font-bold font-karla md:hidden flex md:leading-10 leading-8`}>{title}</h2>
+      <div className="container mx-auto md:mb-10 mb-0">
+        <div className="flex gap-x-5 items-center ">
+          <img src="/platformable-icon-purple.svg" alt="" className="md:flex hidden"/>
+          <h2
+            className={`text-[#5B24EC]  font-bold font-karla  md:leading-10 leading-8`}
+          >
+            {title}
+          </h2>
         </div>
       </div>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto py-10">
         <div className="grid md:grid-cols-[1fr_1fr] gap-x-10 md:px-0 px-5 md:gap-y-0 gap-y-5 lg:px-32">
           {data &&
             data.map((testimonial, index) => {
@@ -60,7 +54,7 @@ export default function Testimonials({ data, title }) {
                     dangerouslySetInnerHTML={{
                       __html: testimonial.testimonials_text,
                     }}
-                    className="py-7 italic font-light"
+                    className="py-10 italic font-light"
                   />
 
                   <div
@@ -86,35 +80,6 @@ export default function Testimonials({ data, title }) {
                 </div>
               );
             })}
-
-          {/* <div className="item bg-white rounded-tl-lg rounded-tr-lg relative">
-              <img src="https://dummyimage.com/120x50/000/fff" alt="" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, eaque deserunt? Quasi reprehenderit illum itaque consectetur facilis repellendus architecto impedit nostrum, similique vitae sint facere earum dicta nulla debitis nam.
-               
-              </p>
-
-          <div className="absolute bottom-0 left-0 right-0 bg-green-dark rounded-tl-lg rounded-tr-lg p-7">
-             <p>Melissa</p>
-             <span>CEO</span>
-            </div>
-            </div> */}
-
-          {/*    <div className="item bg-white rounded-tl-lg rounded-tr-lg relative">
-              <img src="https://dummyimage.com/120x50/000/fff" alt="" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, eaque deserunt? Quasi reprehenderit illum itaque consectetur facilis repellendus architecto impedit nostrum, similique vitae sint facere earum dicta nulla debitis nam.
-
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, eaque deserunt? Quasi reprehenderit illum itaque consectetur facilis repellendus architecto impedit nostrum, similique vitae sint facere earum dicta nulla debitis nam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, eaque deserunt? Quasi reprehenderit illum itaque consectetur facilis repellendus architecto impedit nostrum, similique vitae sint facere earum dicta nulla debitis nam.
-               
-              </p>
-
-          <div className="absolute bottom-0 left-0 right-0 bg-green-dark rounded-tl-lg rounded-tr-lg p-7">
-             <p>Melissa</p>
-             <span>CEO</span>
-            </div>
-            </div> */}
         </div>
 
         <div className="grid gap-x-5 md:grid-cols-6 grid-cols-2 md:gap-y-0 gap-y-3 items-center mt-20 justify-center md:px-0 px-5">
