@@ -146,6 +146,3 @@ h6 {
 
 }
 
-.test::before {
-  content: "Read this: ";
-}
