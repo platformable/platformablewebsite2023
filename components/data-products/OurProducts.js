@@ -1,3 +1,5 @@
+import styles from '@/styles/DataProducts.module.css'
+
 export default function OurProducts () {
     return (
         <section className="container mx-auto py-10">
