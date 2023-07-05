@@ -11,7 +11,7 @@ export default function DataProducts({ data }) {
   return (
     <Layout>
       <Hero />
-      <OurProducts />
+      <OurProducts products={data?.products} title={data?.data_products_products_titl}/>
       <OurProcess />
       <Testimonials />
       <FindMore />
