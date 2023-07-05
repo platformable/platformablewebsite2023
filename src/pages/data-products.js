@@ -14,8 +14,8 @@ export default function DataProducts({ data }) {
           <h3>Our Products</h3>
         </div>
         <div  className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {[1, 2, 3, 4].map((card, i) => (
-            <div className="" data-card-number={card} key={i}>
+          {[1, 2, 3, 4].map((card,index) => (
+            <div className="" data-card-number={card} key={index}>
               <div className={`${styles.card_heading}  p-7`}>
                 <h6>Open Banking/ Open Finance Trends Report</h6>
               </div>
