@@ -7,14 +7,15 @@ import Footer from "../../components/Footer";
 import FindMore from "../../components/data-products/FindMore";
 import Testimonials from "../../components/homepage/Testimonials";
 export default function DataProducts({ data }) {
-  console.log(data);
+  console.log("data",data);
+
   return (
     <Layout>
-      <Hero />
+      <Hero data={data}/>
       <OurProducts products={data?.products} title={data?.data_products_products_titl}/>
-      <OurProcess />
-      <Testimonials />
-      <FindMore />
+      <OurProcess data={data}/>
+      <Testimonials data={data?.testimonials} title={data?.data_product_testimonial_title} logos={false}/>
+      <FindMore data={data}/>
       <Footer />
     </Layout>
   );

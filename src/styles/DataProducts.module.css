@@ -56,3 +56,11 @@ div[data-card-number='4'] .card_heading  {
 		background-position: 0% 50%;
 	}
 }
+
+.data-products-our-process-bg {
+    background: linear-gradient(#7542F5  0%,  #E67EFF 100%) 0% 0% no-repeat padding-box;
+    background-size: 150% 150%;
+    animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+    /*  */
+}
