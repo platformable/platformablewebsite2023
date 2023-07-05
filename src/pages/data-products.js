@@ -1,35 +1,21 @@
 import Layout from "../../components/Layout";
 import Hero from "../../components/data-products/Hero";
 import styles from '@/styles/DataProducts.module.css'
+import OurProducts from "../../components/data-products/OurProducts";
+import OurProcess from "../../components/data-products/OurProcess";
+import Footer from "../../components/Footer";
+import FindMore from "../../components/data-products/FindMore";
+import Testimonials from "../../components/homepage/Testimonials";
 export default function DataProducts({ data }) {
   console.log(data);
   return (
     <Layout>
       <Hero />
-      <section className="container mx-auto py-10">
-        <div className="mb-10">
-          <img src="" alt="" />
-          <h3>Our Products</h3>
-        </div>
-        <div  className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {[1, 2, 3, 4].map((card,index) => (
-            <div className="" data-card-number={card} key={index}>
-              <div className={`${styles.card_heading}  p-7`}>
-                <h6>Open Banking/ Open Finance Trends Report</h6>
-              </div>
-              <div className="">
-                <p>
-                  Quarterly global trends report summarising all bank platforms,
-                  fintech API providers, APIs, business models, partnerships,
-                  and use cases in open banking and open finance
-                </p>
-                <br/>
-                <i>Data used to create the trends report is provided with each edition</i>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <OurProducts />
+      <OurProcess />
+      <Testimonials />
+      <FindMore />
+      <Footer />
     </Layout>
   );
 }
