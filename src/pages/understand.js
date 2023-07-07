@@ -3,35 +3,39 @@ import Footer from "../../components/Footer";
 import Hero from "../../components/understand/Hero";
 import ResourcesSearch from "../../components/understand/ResourcesSearch";
 
-export default function DataProducts({}) {
-  //   console.log("data",data);
+export default function DataProducts({ data, posts }) {
+  // console.log("data", posts);
 
   return (
     <Layout>
-      <Hero heroImg={''} hero_title={'Understand'}/>
-      <ResourcesSearch />
+      <Hero data={data} />
+      <ResourcesSearch posts={posts}/>
       <Footer />
     </Layout>
   );
 }
 
-// export async function getServerSideProps(ctx) {
-//   try {
-//     const res = await fetch(
-//       `${process.env.NEXT_PUBLIC_SERVER_URL}/api/data-product?populate[data_products_hero_img]=*&populate[products]=*&populate[testimonials][populate][testimonials_img]=*`
-//     );
-//     const data = await res.json();
+export async function getServerSideProps(ctx) {
+  try {
+    const [data, posts] = await Promise.all([
+      fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/understand?populate=*`
+      ).then((res) => res.json()),
+      fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?populate=*`).then(
+        (res) => res.json()),
+    ]);
 
-//     return {
-//       props: {
-//         data: data?.data?.attributes,
-//       },
-//     };
-//   } catch (error) {
-//     return {
-//       props: {
-//         data: "No Data",
-//       },
-//     };
-//   }
-// }
+    return {
+      props: {
+        data: data?.data?.attributes,
+        posts: posts?.data,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        data: "No Data",
+      },
+    };
+  }
+}

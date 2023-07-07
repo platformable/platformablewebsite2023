@@ -26,13 +26,13 @@ export default function OurProducts({ title, products }) {
                 dangerouslySetInnerHTML={{
                   __html: card?.data_products_product_description,
                 }}
-                className="py-5 px-3 xl:px-5 text-[var(--purple-medium)] "
+                className="pt-5 pb-10 px-3 xl:px-5 text-[var(--purple-medium)] "
               />
 
               {card.data_products_product_price_quarter &&
                 card.data_products_product_price_year && (
-                  <div className="grid gap-5 items-center justify-center px-3 lg:px-5 2xl:px-10">
-                    <img />
+                  <div className="grid gap-3 items-center justify-center px-3 lg:px-5 2xl:px-10">
+                    <div className="flex items-center justify-center"><img src="/pdf_copy.svg" alt="pdf copy"/> </div>
                     <p className="text-center px-5 text-[var(--purple-medium)]">Simple copy</p>
                     <button className="rounded-md  bg-[var(--purple-light)] py-2 mb-16 text-white">
                       <p>Download</p>
