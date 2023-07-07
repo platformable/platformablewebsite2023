@@ -32,3 +32,7 @@
     /*  */
 }
 
+.button_selected_category_gradient {
+    background: transparent linear-gradient(to left, #FF9D00 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
+}
+

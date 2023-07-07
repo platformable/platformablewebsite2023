@@ -67,7 +67,7 @@ export default function Header() {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-40 md:space-y-0">
               <li className="text-[#3024C6] font-bold hover:text-indigo-200">
-                <Link href="#">Understand</Link>
+                <Link href="/understand">Understand</Link>
               </li>
               <li className="text-[#3024C6] font-bold hover:text-indigo-200">
                 <Link href="#">Act</Link>
