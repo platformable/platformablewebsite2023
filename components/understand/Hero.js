@@ -8,7 +8,7 @@ export default function Hero({ data }) {
       <div className={styles.hero_bg_gradient}>
         <div className="container mx-auto py-10">
           <h1 className={`mb-10 text-white `}>{data?.understand_hero_title}</h1>
-          <p
+          <div
             dangerouslySetInnerHTML={{
               __html: data?.understand_hero_description
             }}
@@ -18,7 +18,7 @@ export default function Hero({ data }) {
       </div>
       <div className="container mx-auto grid grid-cols-2 py-10">
         <div className="flex flex-col justify-between py-5 gap-5">
-          <p
+          <div
             dangerouslySetInnerHTML={{
               __html: data?.understand_hero_description2
             }}
