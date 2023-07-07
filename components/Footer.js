@@ -85,7 +85,9 @@ export default function Footer() {
           <br /> See our privacy policy for more details
           <br />
           <br />
-          Proudly based in Barcelona
+          <span className="flex items-center gap-2">
+            Proudly <span><img src="/pride_heart.png" alt="pride heart"/></span> based in Barcelona
+            </span>
         </span>
       </div>
 
@@ -106,9 +108,9 @@ export default function Footer() {
      </div>
      <div className="grid gap-10  pt-10 lg:pt-3 ">
           <p className="font-bold ">Newsletter</p>
-          <div className="grid gap-2">
+          <div className="flex gap-3 items-center">
            <input type="text" placeholder="Email" className="lg:w-64 rounded p-4 border-blue-600 border-2 border-opacity-50"/>
-
+           <img src="/iron_footer.svg" alt="Send subcription"/>
           </div>
         </div>
     </section>

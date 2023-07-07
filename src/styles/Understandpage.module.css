@@ -1,0 +1,24 @@
+.hero_bg_gradient {
+    background: transparent linear-gradient(to left, #5B24EC 0%, #3423C9 100%) 0% 0% no-repeat padding-box;
+}
+
+.hero_explore_btn_bg_gradient {
+    background: transparent linear-gradient(to left, #08DD8C 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
+    background-size: 135% 135%;
+    animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+}
+
+    
+    
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
