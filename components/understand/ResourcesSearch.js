@@ -13,7 +13,7 @@ console.log(posts)
     setSearchWord(word);
 
   };
-  const chooseCategory = (category) => category === selectedCategory ? setSelectedCategory('') : setSelectedCategory(category) 
+  const chooseCategory = (category) => category === selectedCategory ? setSelectedCategory('All') : setSelectedCategory(category) 
   
 
   console.log("selectedCategory",selectedCategory)
