@@ -2,6 +2,10 @@ import React from "react";
 
 export default function PostCard({ post }) {
 
+    const calculateTimeToRead = article => {
+        return Math.ceil(article.trim().split(/\s+/).length / 225)
+      }
+
   return (
     <div className="bg-white rounded-md relative grid md:grid-rows-[3fr_1fr_3fr] grid-rows-[0.8fr_0.2fr_1fr]">
       <div className="p-7">
@@ -26,7 +30,10 @@ export default function PostCard({ post }) {
         </div>
         <div className="flex justify-end items-center gap-x-3">
             <img src="/clockl.svg" alt="" />
-            <span className='text-[var(--purple-medium)] font-bold'>3 min</span>
+            <span className='text-[var(--purple-medium)] font-bold'>
+                {post?.attributes?.content
+                                      ? <span>{calculateTimeToRead(post?.attributes?.content)+' min read'}</span>
+                                      : "0"}</span>
         </div>
       </div>
        

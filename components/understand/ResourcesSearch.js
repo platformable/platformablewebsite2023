@@ -16,7 +16,7 @@ console.log(posts)
   const chooseCategory = (category) => category === selectedCategory ? setSelectedCategory('All') : setSelectedCategory(category) 
   
 
-  console.log("selectedCategory",selectedCategory)
+
   return (
     <section className={`${styles['understand-posts-bg']}`}>
       <div className="container mx-auto py-10">
