@@ -55,6 +55,7 @@ console.log(posts)
         <div className="grid md:grid-cols-3 grid-cols-1 gap-x-5 px-5 gap-y-5 md:px-0 my-10">
 
           {posts ? posts
+          .filter(post => !selectedCategory || selectedCategory !== 'All' ? post.attributes.categories.data[0].attributes.name===selectedCategory : post)
           .filter((post, index) => {
             if (
               searchWord === ""
@@ -63,7 +64,6 @@ console.log(posts)
             }
             return post.attributes.content.toLowerCase().includes(searchWord) 
             || post.attributes.title.toLowerCase().includes(searchWord)
-            || post.attributes.categories.data[0].attributes.name===selectedCategory
           }).map((post,index)=>{
             return (
               
