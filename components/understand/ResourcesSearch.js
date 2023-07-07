@@ -29,21 +29,21 @@ console.log(posts)
           className="text-white font-bold"
         />
 
-        <div className="grid md:grid-cols-[1fr_3fr_3fr_3fr] grid-cols-1 gap-x-5 my-10">
+        <div className="grid md:grid-cols-[1fr_3fr_3fr_3fr] grid-cols-1 gap-5 my-10">
           <button className={`${selectedCategory === 'All' ? styles.button_selected_category_gradient : ''} px-10 py-3 rounded-md border text-white`}
           onClick={()=>chooseCategory('All')}>
             <span>All</span>
           </button>
 
-          <button className={`${selectedCategory === 'Open Ecosystem' ? styles.button_selected_category_gradient : ''} px-10 py-1 rounded-md border text-white`}  onClick={()=>chooseCategory('Open Ecosystem')}>
+          <button className={`${selectedCategory === 'Open Ecosystem' ? styles.button_selected_category_gradient : ''} px-10 py-3 md:py-1 rounded-md border text-white`}  onClick={()=>chooseCategory('Open Ecosystem')}>
             <span>Open Ecosystem</span>
           </button>
 
-          <button className={`${selectedCategory === 'Open Banking/Open Finance' ? styles.button_selected_category_gradient : ''} px-10 py-1 rounded-md border text-white`}  onClick={()=>chooseCategory('Open Banking/Open Finance')}>
+          <button className={`${selectedCategory === 'Open Banking/Open Finance' ? styles.button_selected_category_gradient : ''} px-10 py-3 md:py-1 rounded-md border text-white`}  onClick={()=>chooseCategory('Open Banking/Open Finance')}>
             <span>Open Banking/Open Finance</span>
           </button>
 
-          <button className={`${selectedCategory === 'Open Health' ? styles.button_selected_category_gradient : ''} px-10 py-1 rounded-md border text-white`}  onClick={()=>chooseCategory('Open Health')}>
+          <button className={`${selectedCategory === 'Open Health' ? styles.button_selected_category_gradient : ''} px-10 py-3 md:py-1 rounded-md border text-white`}  onClick={()=>chooseCategory('Open Health')}>
             <span>Open Health</span>
           </button>
 
