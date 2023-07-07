@@ -4,12 +4,12 @@ import Hero from "../../components/understand/Hero";
 import ResourcesSearch from "../../components/understand/ResourcesSearch";
 
 export default function DataProducts({ data, posts }) {
-  // console.log("data", posts);
+   //console.log("data", data);
 
   return (
     <Layout>
       <Hero data={data} />
-      <ResourcesSearch posts={posts}/>
+      <ResourcesSearch posts={posts} data={data}/>
       <Footer />
     </Layout>
   );

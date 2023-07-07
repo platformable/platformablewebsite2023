@@ -146,3 +146,12 @@ h6 {
 
 }
 
+/* BLOGS */
+
+.blog-card-date-bg {
+  background: linear-gradient(-90deg, #FF9D00 0%, #EF58FE 100%) 0% 0% no-repeat padding-box;
+  background-size: 150% 150%;
+  animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+  /*  */
+}
