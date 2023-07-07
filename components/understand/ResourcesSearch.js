@@ -49,8 +49,11 @@ console.log(posts)
 
         </div>
 
+<div className="flex justify-center">
 
         <Search searchFunction={searchFunction} />
+
+        </div>
 
         <div className="grid md:grid-cols-3 grid-cols-1 gap-x-5 px-5 gap-y-5 md:px-0 my-10">
 
