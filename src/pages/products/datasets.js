@@ -22,23 +22,23 @@ export default function DataProducts({ data }) {
   );
 }
 
-// export async function getServerSideProps(ctx) {
-//   try {
-//     const res = await fetch(
-//       `${process.env.NEXT_PUBLIC_SERVER_URL}/api/data-product?populate[data_products_hero_img]=*&populate[products]=*&populate[testimonials][populate][testimonials_img]=*`
-//     );
-//     const data = await res.json();
+export async function getServerSideProps(ctx) {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/dataset?populate[datasets_img]=*&populate[products]=*&populate[testimonials][populate][testimonials_img]=*`
+    );
+    const data = await res.json();
 
-//     return {
-//       props: {
-//         data: data?.data?.attributes,
-//       },
-//     };
-//   } catch (error) {
-//     return {
-//       props: {
-//         data: "No Data",
-//       },
-//     };
-//   }
-// }
+    return {
+      props: {
+        data: data?.data?.attributes,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        data: "No Data",
+      },
+    };
+  }
+}
