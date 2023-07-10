@@ -40,13 +40,13 @@ export default function Testimonials({ data, title, logos }) {
         </div>
       </div>
 
-      <div className="container mx-auto py-10">
-        <div className="grid md:grid-cols-[1fr_1fr] gap-x-10 md:px-0 px-5 md:gap-y-0 gap-y-5 lg:px-32">
+      <div className={`${data?.length === 1 ? 'flex justify-center' : ''} container  mx-auto py-10`}>
+        <div className={`grid ${data?.length > 1 ? 'md:grid-cols-'+data?.length : ' '}  mb-10 gap-x-10 md:px-0 px-5 md:gap-y-0 gap-y-5 lg:px-32`}>
           {data &&
             data.map((testimonial, index) => {
               return (
                 <div
-                  className="item bg-white grid md:grid-rows-[0.5fr_10fr_0.5fr] grid-rows-[0.5fr_10fr_1fr] rounded-lg relative p-7 shadow-md"
+                  className="max-w-[600px] max-h-[800px] item bg-white grid md:grid-rows-[0.5fr_10fr_0.5fr] grid-rows-[0.5fr_10fr_1fr] rounded-lg relative p-7 shadow-2xl"
                   key={index}
                 >
                   <img

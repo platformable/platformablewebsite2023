@@ -7,15 +7,15 @@ import OurProcess from "../../../components/datasets/OurProcess";
 import Hero from "../../../components/datasets/Hero";
 import OurDatasets from "../../../components/datasets/OurDatasets";
 
-export default function DataProducts({ data }) {
+export default function DataSets({ data }) {
   console.log("data", data);
 
   return (
     <Layout>
-      <Hero />
-      <OurDatasets />
-      <OurProcess />
-      <Testimonials />
+      <Hero data={data}/>
+      <OurDatasets title={data?.datasets_products_title} datasets={data?.products}/>
+      <OurProcess title={data?.datasets_process_title}/>
+      <Testimonials title={data?.datasets_testimonial_title} data={data?.testimonials}/>
       <FindMore />
       <Footer />
     </Layout>
