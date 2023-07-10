@@ -18,9 +18,9 @@ export default function OurProcess({ data }) {
   
           </div>
           <div
-              className='flex items-center justify-center bg-white bg-opacity-50'
+              className='flex items-center justify-center bg-white bg-opacity-50 rounded py-72'
             >
-                <h4 className='text-[var(--purple-dark)]'></h4>
+                <h4 className='text-[var(--purple-dark)]'>Diagram</h4>
                 </div>
         </div>
       </section>

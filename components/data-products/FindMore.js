@@ -17,7 +17,7 @@ export default function FindMore({ data }) {
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-x-5 md:px-0 px-5 gap-y-5">
-          <div className="find-more-cards bg-white rounded-md shadow-md p-7">
+          <div className="find-more-cards bg-white rounded-xl shadow-md p-7">
             <h6 className="text-center text-[var(--blue)] font-medium">Understand</h6>
             
             <div className="flex justify-center my-10">
@@ -30,7 +30,7 @@ export default function FindMore({ data }) {
             </p>
           </div>
 
-          <div className="find-more-cards bg-white rounded-md shadow-md p-7">
+          <div className="find-more-cards bg-white rounded-xl shadow-md p-7">
             <h6 className="text-center text-[var(--blue)] font-medium">Act</h6>
            <div className="flex justify-center my-10">
                 <img src="https://dummyimage.com/200x200/000/fff" alt="" />
@@ -41,7 +41,7 @@ export default function FindMore({ data }) {
             </p>
           </div>
 
-          <div className="find-more-cards bg-white rounded-md shadow-md p-7">
+          <div className="find-more-cards bg-white rounded-xl shadow-md p-7">
             <h6 className="text-center text-[var(--blue)] font-medium">Engage</h6>
            <div className="flex justify-center my-10">
                 <img src="https://dummyimage.com/200x200/000/fff" alt="" />

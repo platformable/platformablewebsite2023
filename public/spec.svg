@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61.343" height="70.31" viewBox="0 0 61.343 70.31">
+  <defs>
+    <filter id="Rectangle_1614" x="0" y="0" width="61.343" height="70.31" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="spec" transform="translate(9 6)">
+    <g id="Group_2667" data-name="Group 2667">
+      <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Rectangle_1614)">
+        <g id="Rectangle_1614-2" data-name="Rectangle 1614" transform="translate(9 6)" fill="#fff" stroke="#5b24ec" stroke-width="2">
+          <rect width="43.343" height="52.31" rx="2" stroke="none"/>
+          <rect x="1" y="1" width="41.343" height="50.31" rx="1" fill="none"/>
+        </g>
+      </g>
+      <g id="Rectangle_1615" data-name="Rectangle 1615" transform="translate(6.607 5.396)" fill="#fff" stroke="#5b24ec" stroke-width="2">
+        <rect width="43.343" height="52.31" rx="2" stroke="none"/>
+        <rect x="1" y="1" width="41.343" height="50.31" rx="1" fill="none"/>
+      </g>
+    </g>
+    <text id="SPEC_SHEET" data-name="SPEC
+SHEET" transform="translate(28.156 29.019)" fill="#5b24ec" font-size="12" font-family="Karla" font-weight="600"><tspan x="-14" y="0">SPEC</tspan><tspan x="-18" y="13">SHEET</tspan></text>
+  </g>
+</svg>
