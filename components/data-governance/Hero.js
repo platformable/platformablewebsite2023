@@ -11,15 +11,15 @@ export default function Hero({ data }) {
           dangerouslySetInnerHTML={{
             __html: data?.hero_description,
           }}
-          className="lg:w-4/6 xl:w-3/6"
+          className="lg:w-4/6 xl:w-3/5"
         />
       </div>
-      <div className={`bg-[#D258FA] py-10 `}>
+      <div className={`${styles.hero_background_gradient} py-10 `}>
         <div className="container mx-auto grid gap-7">
         <img
             src={data?.hero_img?.data.attributes.url}
             alt="Data products mapped"
-            className="xl:-mt-96 lg:-mt-72 lg:-mr-14 hidden justify-self-end lg:block lg:w-2/6 xl:w-3/6"
+            className="xl:-mt-96 lg:-mt-72 lg:-mr-14 hidden justify-self-end lg:block lg:w-2/6 xl:w-2/5"
           />
           <div
             dangerouslySetInnerHTML={{
