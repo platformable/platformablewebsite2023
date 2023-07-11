@@ -42,7 +42,7 @@ export default function GovernanceProducts({ title, products }) {
                 </button>
                 <div className="flex items-center justify-center">
                   <img
-                    src={card?.bookbuybtn_img.data.attributes.url}
+                    src={card?.bookbuybtn_img?.data?.attributes?.url}
                     alt="Product icon"
                   />
                 </div>
