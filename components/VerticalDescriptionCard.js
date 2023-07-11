@@ -3,8 +3,8 @@ import styles from '@/styles/Homepage.module.css'
 export default function VerticalDescriptionCard({card, position}) {
   const  {vertical_description_card_title, sector_values, vertical_description_card_button_text} = card
   return (
-    <div className='rounded-2xl bg-white shadow-md p-7 grid md:grid-rows-[1.5fr_4fr_1fr] gap-5 font-karla'>
-      <h4 className='font-medium font-karla'>{vertical_description_card_title}</h4>
+    <div className='rounded-2xl bg-white shadow-md p-7 grid md:grid-rows-[1.5fr_4fr_1fr] gap-5 '>
+      <h4 className='font-medium '>{vertical_description_card_title}</h4>
       <ul id='sectors_value_list' className={styles.sectors_value_list}>
         {sector_values?.map((item, i) => (
             <h6 id='sectors-value' key={i}>{item.sector_value_text}</h6>

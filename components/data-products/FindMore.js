@@ -11,7 +11,7 @@ export default function FindMore({ data }) {
             className="md:flex hidden"
           />
           <h2
-            className={`text-white  font-bold font-karla  md:leading-10 leading-8 `}
+            className={`text-white  font-bold md:leading-10 leading-8 `}
           >
             Find out more
           </h2>

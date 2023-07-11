@@ -79,7 +79,7 @@ export default function Footer() {
           />
         </Link>
 
-        <span className="font-karla font-bold">
+        <span className="font-bold">
           We are committed to minimising the amount
           <br /> of data we collect about our visitors and subscribers.
           <br /> See our privacy policy for more details

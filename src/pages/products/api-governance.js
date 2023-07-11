@@ -12,7 +12,7 @@ export default function APIGovernance({ data }) {
     <Layout>
       <GovernanceProducts title={data?.products_title} products={data?.products} />
       <GovernanceServices description={data?.services_description} services={data?.services}/>
-      <Testimonials data={data?.testimonials} title={data?.data_product_testimonial_title} logos={false}/>
+      <Testimonials data={data?.testimonials} title={data?.testimonials_title} logos={false}/>
       <FindMore data={data}/>
       <Footer />
     </Layout>
