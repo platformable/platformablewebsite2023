@@ -12,7 +12,7 @@ export default function ProductsServices({ title, product_cards }) {
             className="md:flex hidden"
           />
           <h2
-            className={`text-[#5B24EC]  font-bold font-karla  md:leading-10 leading-9`}
+            className={`text-[#5B24EC] font-bold md:leading-10 leading-9`}
           >
             {title}
           </h2>

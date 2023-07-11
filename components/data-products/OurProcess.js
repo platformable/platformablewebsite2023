@@ -11,7 +11,7 @@ export default function OurProcess({ data }) {
             className="md:flex hidden"
           />
           <h2
-            className={`text-white  font-bold font-karla  md:leading-10 leading-8 `}
+            className={`text-white  font-bold  md:leading-10 leading-8 `}
           >
             {data?.data_products_process_title}
           </h2>

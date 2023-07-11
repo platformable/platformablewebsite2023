@@ -6,7 +6,7 @@ export default function SupportOpenEcosystems({list_items_cards, title}) {
     <section className=' bg-green-medium py-10 text-[#2A2FC1]'>
       <div className='flex gap-x-5 items-center container mx-auto  mb-10'>
         <img src='/icon_section01.svg' alt="platformable logo" className='md:flex hidden'/>
-        <h2 className='font-bold font-karla leading-8 md:leading-10 lg:leading-tight'>{title}</h2>
+        <h2 className='font-bold leading-8 md:leading-10 lg:leading-tight'>{title}</h2>
 
       </div>
       <div className='container mx-auto'>

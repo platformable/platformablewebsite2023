@@ -33,7 +33,7 @@ export default function Testimonials({ data, title, logos }) {
             className="md:flex hidden"
           />
           <h2
-            className={`text-[#5B24EC]  font-bold font-karla  md:leading-10 leading-8`}
+            className={`text-[#5B24EC]  font-bold  md:leading-10 leading-8`}
           >
             {title}
           </h2>
