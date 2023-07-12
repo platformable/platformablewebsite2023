@@ -3,7 +3,7 @@ import styles from "@/styles/Understandpage.module.css";
 import PostCard from "../PostCard";
 import Search from '../../components/Search'
 
-export default function ResourcesSearch({ data,posts }) {
+export default function ResourcesSearch({ posts, heading }) {
 console.log(posts)
 
   const [searchWord, setSearchWord] = useState("");
@@ -24,7 +24,7 @@ console.log(posts)
   
       <div
           dangerouslySetInnerHTML={{
-            __html: data?.understand_blog_description,
+            __html: heading,
           }}
           className="text-white font-bold"
         />

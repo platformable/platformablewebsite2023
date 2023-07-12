@@ -8,41 +8,46 @@ const sitemap = [
     title: "About us",
     links: [
       {
-        label: "Content",
-        url: "/",
+        label: "Understand",
+        url: "/understand",
       },
       {
-        label: "Content",
-        url: "/",
+        label: "Act",
+        url: "/act",
       },
       {
-        label: "Content",
+        label: "Engage",
         url: "/",
       },
-      {
-        label: "Content",
-        url: "/",
-      },
+      
     ],
   },
   {
     title: "Products",
     links: [
       {
-        label: "Content",
-        url: "/",
+        label: "Datasets",
+        url: "/products/datasets",
       },
       {
-        label: "Content",
-        url: "/",
+        label: "Data products",
+        url: "/products/data-products",
       },
       {
-        label: "Content",
-        url: "/",
+        label: "Data governance",
+        url: "/products/data-governance",
       },
       {
-        label: "Content",
-        url: "/",
+        label: "API governance",
+        url: "/products/api-governance",
+      },
+      {
+        label: "Speaker engagement",
+        url: "/products/speaker-engagement",
+      },
+      {
+        label: "Open ecosystem consultancy",
+        url: "/products/open-ecosystem-consultancy",
       },
     ],
   },
@@ -91,7 +96,7 @@ export default function Footer() {
         </span>
       </div>
 
-     <div className="grid grid-cols-3 mt-10 lg:mt-0 gap-16 lg:gap-24">
+     <div className="grid grid-cols-3 mt-10 lg:mt-0 gap-16 lg:gap-20">
      {sitemap.map((section,index) => (
         <div className="grid gap-10 content-start lg:pt-5" key={index}>
           <span className="font-bold opacity-90">{section.title}</span>

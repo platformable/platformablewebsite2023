@@ -11,7 +11,7 @@ export default function Hero({ data }) {
           dangerouslySetInnerHTML={{
             __html: data?.datasets_description,
           }}
-          className="lg:w-4/6 xl:w-3/6"
+          className="lg:w-3/6 xl:w-[60%] 2xl:w-3/5"
         />
       </div>
       <div className={`${styles.hero_background_gradient} py-10 `}>
@@ -19,7 +19,7 @@ export default function Hero({ data }) {
         <img
             src={data?.datasets_img?.data.attributes.url}
             alt="Data products mapped"
-            className="xl:-mt-96 lg:-mt-72 lg:-mr-14 hidden justify-self-end lg:block lg:w-2/6 xl:w-3/6"
+            className=" lg:-mt-[28rem] xl:-mt-96  lg:-mt-72 lg:-mr-10 hidden justify-self-end lg:block lg:w-3/6 xl:w-[40%] 2xl:w-2/5"
           />
           <div
             dangerouslySetInnerHTML={{
