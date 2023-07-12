@@ -41,7 +41,7 @@ export default function Testimonials({ data, title, logos }) {
       </div>
 
       <div className={`${data?.length === 1 ? 'flex justify-center' : ''} container  mx-auto py-10`}>
-        <div className={`grid ${data?.length > 1 ? 'md:grid-cols-'+data?.length : ' '}  mb-10 gap-x-10 md:px-0 px-5 md:gap-y-0 gap-y-5 lg:px-32`}>
+        <div className={`grid ${data?.length > 1 ? 'md:grid-cols-'+data?.length : ' '}  mb-10 gap-x-10 md:px-0 px-5 md:gap-y-0 gap-y-5 2xl:px-32`}>
           {data &&
             data.map((testimonial, index) => {
               return (
