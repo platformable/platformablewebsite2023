@@ -39,12 +39,12 @@ export default function Hero({ data }) {
           className="font-medium"
         />
       </div>
-      <div className="">
+      <div className={`${styles.bg_hero_description_4} py-16`}>
       <div
           dangerouslySetInnerHTML={{
             __html: data?.hero_description4,
           }}
-          className={`${styles.bg_hero_description_4} container mx-auto py-16 text-white font-bold`}
+          className={` container mx-auto text-white font-bold`}
         />
       </div>
 
