@@ -16,14 +16,15 @@ export default function Hero({data}) {
         </div>
         
       </div>
-      <div className="container mx-auto py-16 flex flex-col lg:flex-row gap-y-8 gap-8">
-        <img src={data?.hero_img?.data?.attributes.url} alt="Act platformable tools iamge" className=""/>   
-
+      <div className="container mx-auto py-16  block md:flex items-center lg:flex-row gap-y-8 gap-8">
+        <div className="md:w-2/4 block md:mb-0 mb-5">
+        <img src={data?.hero_img?.data?.attributes.url} alt="Act platformable tools image" className=""/>   
+        </div>
         <div
           dangerouslySetInnerHTML={{
             __html: data?.hero_description2,
           }}
-          className="text-[25px]"
+          className="text-[25px] md:w-2/4 block"
         />
        
       </div>
