@@ -45,7 +45,7 @@ export default function Testimonials({ data, title, logos }) {
           {data &&
             data.map((testimonial, index) => {
               return (
-                <div class="rounded-md bg-white shadow-xl grid grid-rows-[0.5fr_2fr_0.5fr] justify-between">
+                <div className="rounded-md bg-white shadow-xl grid grid-rows-[0.5fr_2fr_0.5fr] justify-between" key={index}>
                 <div className="p-7">
                 <img
                     src={testimonial.testimonials_img.data.attributes.url}
