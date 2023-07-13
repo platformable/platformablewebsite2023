@@ -33,6 +33,27 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+/* #rect_parent[data-product-type-rectangle="Rectangle Data governance"]:hover ~ rect[id="Rectangle Data governance"]  {
+  fill: red;
+} */
+
+.change_fill_color {
+  animation: opacityMove 10s infinite ease-in-out;
+  /* opacity: 70%; */
+}
+
+@keyframes opacityMove {
+	0% {
+		opacity: 70%;
+	}
+	50% {
+		opacity: 0% ;
+	}
+	100% {
+		opacity: 70%;
+	}
+  
+}
 
 body {
   font-family: 'Open Sans', sans-serif;

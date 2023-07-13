@@ -2,8 +2,20 @@ import Link from "next/link"
 import styles from '@/styles/Engagepage.module.css'
 
 export const EngageDiagram = ({title}) => {
-    const handleClickProductsSections =() => {
-        console.log("hola")
+    const higlightSection = async (e) => {
+        const heading_rect = document.getElementsByName(e.target.id)
+        heading_rect[0].style.fill = '#26CC9B70'
+
+        // animation test
+        // heading_rect[0].classList.add('change_fill_color')
+    }
+    const unhighlightSection = (e) => {
+        const heading_rect = document.getElementsByName(e.target.id)
+        heading_rect[0].style.fill = '#5b24ec'
+
+        // end animation test
+        // heading_rect[0].classList.remove('change_fill_color')
+
     }
     return (
         <section className={`${styles.bg_engage_diagram} py-10`}>
@@ -15,56 +27,56 @@ export const EngageDiagram = ({title}) => {
                 <filter id="Rectangle_2391" x="367.112" y="169.172" width="378.172" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2403" x="367.112" y="1096.892" width="378.172" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-2"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-2"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2407" x="367.112" y="1489.588" width="378.172" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-3"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-3"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2397" x="367.112" y="501.359" width="378.172" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-4"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-4"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2392" x="747.112" y="169.205" width="378.17" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-5"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-5"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2401" x="747.112" y="1096.925" width="378.17" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-6"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-6"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2405" x="747.112" y="1489.621" width="378.17" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-7"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-7"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2395" x="747.112" y="501.393" width="378.17" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-8"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-8"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
@@ -90,56 +102,56 @@ export const EngageDiagram = ({title}) => {
                 <filter id="Rectangle_2393" x="747.112" y="0" width="378.17" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-9"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-9"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2402" x="747.112" y="927.719" width="378.17" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-10"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-10"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2406" x="747.112" y="1320.416" width="378.17" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-11"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-11"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2396" x="747.112" y="332.188" width="378.17" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-12"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-12"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2394" x="367.112" y="0.172" width="378.172" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-13"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-13"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2404" x="367.112" y="927.891" width="378.172" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-14"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-14"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2408" x="367.112" y="1320.588" width="378.172" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-15"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-15"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
                 <filter id="Rectangle_2398" x="367.112" y="332.359" width="378.172" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-16"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-16"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
@@ -176,7 +188,7 @@ export const EngageDiagram = ({title}) => {
                 <filter id="Rectangle_2410" x="1127.928" y="1320.01" width="382.379" height="139" filterUnits="userSpaceOnUse">
                 <feOffset dy="3" input="SourceAlpha"/>
                 <feGaussianBlur stdDeviation="3" result="blur-17"/>
-                <feFlood flood-opacity="0.161"/>
+                <feFlood floodOpacity="0.161"/>
                 <feComposite operator="in" in2="blur-17"/>
                 <feComposite in="SourceGraphic"/>
                 </filter>
@@ -206,15 +218,30 @@ export const EngageDiagram = ({title}) => {
                 <path id="Path_3625" data-name="Path 3625" d="M-10531.437,11907.469v-54.2H-11143" transform="translate(11467.635 -11372.525)" fill="none" stroke="#fff" strokeWidth="2"/>
                 
             
+                {/* CHILD'S HEADER RECTANGLES */}
+                <rect name="Rectangle API governance" width="346.078" height="121" rx="12" transform="translate(0 420.245)" fill="#5b24ec"/>
+                <rect name="Rectangle Open ecosystem consultancy" width="346.078" height="121" rx="12" transform="translate(0 724.883)" fill="#5b24ec"/>
+                <rect name="Rectangle Data products" width="346.078" height="121" rx="12" transform="translate(0 1012.322)" fill="#5b24ec"/>
+                <rect name="Rectangle Datasets" width="346.078" height="121" rx="12" transform="translate(0 1405.019)" fill="#5b24ec"/>
+                <rect name="Rectangle Speaker engagement" width="346.078" height="121" rx="12" transform="translate(0 1718.096)" fill="#5b24ec"/>
+                
+                
+                        <rect id="Rectangle_fjisk" name="Rectangle Data governance" width="346.078" height="121" rx="12" transform="translate(0 87.351)" fill="#5b24ec"/>
+                        <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2394)">
+                        <rect id="Rectangle_2394-2" data-name="Rectangle 2394" width="360.172" height="121" rx="12" transform="translate(376.11 6.17)" fill="#5b24ec"/>
+                        </g>
+                        <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2393)">
+                        <rect id="Rectangle_2393-2" data-name="Rectangle 2393" width="360.17" height="121" rx="12" transform="translate(756.11 6)" fill="#5b24ec"/>
+                        </g>
+                        <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2392)">
+                        <rect id="Rectangle_2392-2" data-name="Rectangle 2392" width="360.17" height="121" rx="12" transform="translate(756.11 175.21)" fill="#5b24ec"/>
+                        </g>
+                        <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2391)">
+                        <rect id="Rectangle_2391-2" data-name="Rectangle 2391" width="360.172" height="121" rx="12" transform="translate(376.11 175.17)" fill="#5b24ec"/>
+                        </g>
                 
                 
                 
-                
-                
-                <rect id="Rectangle_2388" data-name="Rectangle 2388" width="346.078" height="121" rx="12" transform="translate(0 87.351)" fill="#5b24ec"/>
-                <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2391)">
-                <rect id="Rectangle_2391-2" data-name="Rectangle 2391" width="360.172" height="121" rx="12" transform="translate(376.11 175.17)" fill="#5b24ec"/>
-                </g>
                 <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2403)">
                 <rect id="Rectangle_2403-2" data-name="Rectangle 2403" width="360.172" height="121" rx="12" transform="translate(376.11 1102.89)" fill="#5b24ec"/>
                 </g>
@@ -224,9 +251,7 @@ export const EngageDiagram = ({title}) => {
                 <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2397)">
                 <rect id="Rectangle_2397-2" data-name="Rectangle 2397" width="360.172" height="121" rx="12" transform="translate(376.11 507.36)" fill="#5b24ec"/>
                 </g>
-                <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2392)">
-                <rect id="Rectangle_2392-2" data-name="Rectangle 2392" width="360.17" height="121" rx="12" transform="translate(756.11 175.21)" fill="#5b24ec"/>
-                </g>
+                
                 <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2401)">
                 <rect id="Rectangle_2401-2" data-name="Rectangle 2401" width="360.17" height="121" rx="12" transform="translate(756.11 1102.92)" fill="#5b24ec"/>
                 </g>
@@ -369,9 +394,7 @@ export const EngageDiagram = ({title}) => {
                     </g>
                 </g>
                 </g>
-                <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2393)">
-                <rect id="Rectangle_2393-2" data-name="Rectangle 2393" width="360.17" height="121" rx="12" transform="translate(756.11 6)" fill="#5b24ec"/>
-                </g>
+               
                 <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2402)">
                 <rect id="Rectangle_2402-2" data-name="Rectangle 2402" width="360.17" height="121" rx="12" transform="translate(756.11 933.72)" fill="#5b24ec"/>
                 </g>
@@ -381,9 +404,7 @@ export const EngageDiagram = ({title}) => {
                 <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2396)">
                 <rect id="Rectangle_2396-2" data-name="Rectangle 2396" width="360.17" height="121" rx="12" transform="translate(756.11 338.19)" fill="#5b24ec"/>
                 </g>
-                <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2394)">
-                <rect id="Rectangle_2394-2" data-name="Rectangle 2394" width="360.172" height="121" rx="12" transform="translate(376.11 6.17)" fill="#5b24ec"/>
-                </g>
+               
                 <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2404)">
                 <rect id="Rectangle_2404-2" data-name="Rectangle 2404" width="360.172" height="121" rx="12" transform="translate(376.11 933.89)" fill="#5b24ec"/>
                 </g>
@@ -502,10 +523,7 @@ export const EngageDiagram = ({title}) => {
                     </g>
                 </g>
                 </g>
-                <rect id="Rectangle_2389" data-name="Rectangle 2389" width="346.078" height="121" rx="12" transform="translate(0 420.245)" fill="#5b24ec"/>
-                <rect id="Rectangle_2399" data-name="Rectangle 2399" width="346.078" height="121" rx="12" transform="translate(0 724.883)" fill="#5b24ec"/>
-                <rect id="Rectangle_2411" data-name="Rectangle 2411" width="346.078" height="121" rx="12" transform="translate(0 1718.096)" fill="#5b24ec"/>
-                <rect id="Rectangle_2400" data-name="Rectangle 2400" width="346.078" height="121" rx="12" transform="translate(0 1012.322)" fill="#5b24ec"/>
+                
                 <text id="API_Governance" data-name="API 
             Governance" transform="translate(115.307 447.745)" fill="#fff" fontSize="25" fontFamily="OpenSans-Bold, Open Sans" fontWeight="700"><tspan x="0" y="27">API </tspan><tspan x="0" y="57">Governance</tspan></text>
                 <text id="Open_Ecosystem_Consultancy" data-name="Open Ecosystem 
@@ -659,7 +677,6 @@ export const EngageDiagram = ({title}) => {
                     </g>
                 </g>
                 </g>
-                <rect id="Rectangle_2409" data-name="Rectangle 2409" width="346.078" height="121" rx="12" transform="translate(0 1405.019)" fill="#5b24ec"/>
                 <text id="Datasets" transform="translate(115.307 1446.519)" fill="#fff" fontSize="25" fontFamily="OpenSans-Bold, Open Sans" fontWeight="700"><tspan x="0" y="27">Datasets</tspan></text>
                 <g id="icon01_sec_02" transform="translate(26.307 1424.328)">
                 <g id="Group_2260" data-name="Group 2260" clipPath="url(#clip-path-13)">
@@ -687,31 +704,39 @@ export const EngageDiagram = ({title}) => {
                 </g>
                 </g>
             </g>
-                 <Link href="/products/data-governance">
-                    <rect width="100%" height="300" rx="12" fill="#ffffff00" onClick={handleClickProductsSections} >
+                <Link href="/products/data-governance">
+                    <rect   onMouseEnter={higlightSection} onMouseLeave={unhighlightSection} className={styles.rectangle_parent_product} id="Rectangle Data governance" width="100%" height="300" rx="12" fill="#ffffff00"  >
                         {/* Data Governance */}
                     </rect>
+
+                       
                 </Link>
                  <Link href="/products/api-governance">
-                    <rect y="330" width="100%" height="300" rx="12" fill="#ffffff00" onClick={handleClickProductsSections} >
+                    <rect onMouseEnter={higlightSection} onMouseLeave={unhighlightSection} id="Rectangle API governance" y="330" width="100%" height="300" rx="12" fill="#ffffff00"  >
                         {/* API Governance */}
                     </rect>
                 </Link>
                 <Link href="/products/open-ecosystem-consultancy">
-                    <rect y="710" width="100%" height="150" rx="12" fill="#ffffff00" onClick={handleClickProductsSections} >
+                    <rect onMouseEnter={higlightSection} onMouseLeave={unhighlightSection} id="Rectangle Open ecosystem consultancy" y="710" width="100%" height="150" rx="12" fill="#ffffff00"  >
                         {/* Open ecosystem consultancy */}
                     </rect>
                 </Link>
                 
-                <Link href="/products/">
-                    <rect y="920" width="100%" height="300" rx="12" fill="#ffffff00" onClick={handleClickProductsSections} >
+                <Link href="/products/data-products">
+                    <rect onMouseEnter={higlightSection} onMouseLeave={unhighlightSection} id="Rectangle Data products" y="920" width="100%" height="300" rx="12" fill="transparent" pointerEvents='fill' >
                         {/* Data Products */}
                     </rect>
                 </Link>
                 
-                <Link href="/products/">
-                    <rect y="1315" width="100%" height="300" rx="12" fill="#ffffff00" onClick={handleClickProductsSections} >
+                <Link href="/products/datasets">
+                    <rect onMouseEnter={higlightSection} onMouseLeave={unhighlightSection} id="Rectangle Datasets" y="1315" width="100%" height="300" rx="12" fill="none" pointerEvents='all' >
                         {/* Datasets */}
+                    </rect>
+                </Link>
+
+                <Link href="/products/speaker-engagement">
+                    <rect onMouseEnter={higlightSection} onMouseLeave={unhighlightSection} id="Rectangle Speaker engagement" y="1700" width="100%" height="170" rx="12" fill="#ffffff00"   >
+                        {/* Speaker engagement */}
                     </rect>
                 </Link>
                 </svg>
