@@ -1,4 +1,5 @@
 import styles from "@/styles/APIGovernance.module.css";
+import { EngageDiagram } from "../EngageDiagram";
 
 export default function OurProcess({ data }) {
   return (
@@ -22,9 +23,10 @@ export default function OurProcess({ data }) {
           }}
           className="text-white"
         />
-        <div className="mt-10 flex items-center justify-center bg-white bg-opacity-50 rounded py-72">
+        <EngageDiagram />
+        {/* <div className="mt-10 flex items-center justify-center bg-white bg-opacity-50 rounded py-72">
           <h4 className="text-[var(--purple-dark)]">Diagram</h4>
-        </div>
+        </div> */}
       </div>
     </section>
   );
