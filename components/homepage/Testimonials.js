@@ -45,43 +45,41 @@ export default function Testimonials({ data, title, logos }) {
           {data &&
             data.map((testimonial, index) => {
               return (
-                <div
-                  className="max-w-[600px] max-h-[800px] item bg-white grid md:grid-rows-[0.5fr_10fr_0.5fr] grid-rows-[0.5fr_10fr_1fr] rounded-lg relative p-7 shadow-2xl"
-                  key={index}
-                >
-                  <img
+                <div class="rounded-md bg-white shadow-xl grid grid-rows-[0.5fr_2fr_0.5fr] justify-between">
+                <div className="p-7">
+                <img
                     src={testimonial.testimonials_img.data.attributes.url}
                     alt=""
                     className="place-center"
                   />
-                  <div
+                </div>
+               
+                <div
                     dangerouslySetInnerHTML={{
                       __html: testimonial.testimonials_text,
                     }}
-                    className="py-10 italic font-light"
+                    className="flex items-center italic font-light px-7 py-5 md:py-10"
                   />
-
-                  <div
-                    className={`${
+              
+                <div className={`${
                       index % 2 == 0 ? "bg-blue-medium" : "bg-green-dark "
-                    } absolute bottom-0 left-0 right-0 rounded-bl-lg rounded-br-lg p-7`}
-                  >
-                    <p
+                    } rounded-bl-lg rounded-br-lg p-7`}>
+                <p
                       className={`${
                         index % 2 == 0 ? "text-white" : "text-black"
                       }`}
                     >
                       {testimonial.testimonials_clientname}
                     </p>
-                    <span
+                  <span
                       className={`${
                         index % 2 == 0 ? "text-white" : "text-black"
                       }`}
                     >
                       {testimonial.testimonials_client_role}
                     </span>
-                  </div>
                 </div>
+              </div>
               );
             })}
         </div>
