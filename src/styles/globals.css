@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla&family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,100;1,300;1,400;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,19 +56,19 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 p {
-font-size:25px;
+font-size:20px;
 }
 
 h1 {
-font-size: 55px;
+font-size: 50px;
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 46px;
 }
 
 h3 {
@@ -80,11 +80,11 @@ h4 {
 }
 
 h5 {
-  font-size: 32px;
+  font-size: 30px;
 }
 
 h6 {
-  font-size:28px;
+  font-size:24px;
 }
 
 
