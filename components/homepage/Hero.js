@@ -30,10 +30,9 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
                   src="/logo_icon_white.png"
                   alt=""
                   className=""
-                  width={28}
                 />
                 <p>Contact us</p>
-                <img src="/icon_arrow.png" alt="" />
+                <img src="/icon_arrow_purple.svg" alt="arrow icon" />
               </div>
             </Link>
           </button>

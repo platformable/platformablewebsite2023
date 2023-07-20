@@ -30,8 +30,8 @@ export default function Home({ data }) {
           >
             <Link href="/">
               <div className="flex gap-x-5 self-start items-center ">
-                <img src="/logo_icon_white.png" alt="" className="" />
-                <p>Contact us</p>
+                <img src="/icon_section01.svg" alt="" className="" />
+                <p className="text-[#2A2FC1]">Contact us</p>
                 <img src="/icon_arrow.png" alt="" />
               </div>
             </Link>

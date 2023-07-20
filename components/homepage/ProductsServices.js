@@ -35,12 +35,12 @@ export default function ProductsServices({ title, product_cards }) {
                   </h6>
                 </div>
                 <Link href={`/products${card?.list_card_description_button_text}`}>
-                  <button className="shadow-md flex items-center gap-2 border-white border rounded-lg  px-3 md:p-x5 py-2">
-                    <span className="text-white text-sm md:text-base">
+                  <button className="border-none shadow-md flex bg-[var(--yellow)] items-center gap-2  rounded-lg  px-3 md:p-x5 py-2">
+                    <span className="text-sm md:text-base text-[var(--purple-medium)]">
                       Know more
                     </span>
                     <img
-                      src="/icon_arrow_sec_02.svg"
+                      src="/icon_arrow_purple.svg"
                       alt={`know more about ${card?.list_card_description_product_name}`}
                       className="w-3.5 md:w-7 lg:w-8"
                     />
@@ -50,7 +50,7 @@ export default function ProductsServices({ title, product_cards }) {
               <section
                 className={`${
                   card?.list_card_description_is_costumizable
-                    ? "grid grid-rows-[4fr_1fr_4fr]"
+                    ? "grid grid-rows-[3.5fr_1fr_4fr]"
                     : "flex items-start "
                 }   gap-7 bg-white px-7 md:px-10 py-7 h-full rounded-b-md`}
               >
