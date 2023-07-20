@@ -8,41 +8,46 @@ const sitemap = [
     title: "About us",
     links: [
       {
-        label: "Content",
-        url: "/",
+        label: "Understand",
+        url: "/understand",
       },
       {
-        label: "Content",
-        url: "/",
+        label: "Act",
+        url: "/act",
       },
       {
-        label: "Content",
+        label: "Engage",
         url: "/",
       },
-      {
-        label: "Content",
-        url: "/",
-      },
+      
     ],
   },
   {
     title: "Products",
     links: [
       {
-        label: "Content",
-        url: "/",
+        label: "Datasets",
+        url: "/products/datasets",
       },
       {
-        label: "Content",
-        url: "/",
+        label: "Data products",
+        url: "/products/data-products",
       },
       {
-        label: "Content",
-        url: "/",
+        label: "Data governance",
+        url: "/products/data-governance",
       },
       {
-        label: "Content",
-        url: "/",
+        label: "API governance",
+        url: "/products/api-governance",
+      },
+      {
+        label: "Speaker engagement",
+        url: "/products/speaker-engagement",
+      },
+      {
+        label: "Open ecosystem consultancy",
+        url: "/products/open-ecosystem-consultancy",
       },
     ],
   },
@@ -79,19 +84,21 @@ export default function Footer() {
           />
         </Link>
 
-        <span className="font-karla">
+        <span className="font-bold">
           We are committed to minimising the amount
           <br /> of data we collect about our visitors and subscribers.
           <br /> See our privacy policy for more details
           <br />
           <br />
-          Proudly based in Barcelona
+          <span className="flex items-center gap-2">
+            Proudly <span><img src="/pride_heart.png" alt="pride heart"/></span> based in Barcelona
+            </span>
         </span>
       </div>
 
-     <div className="grid grid-cols-3 mt-10 lg:mt-0 gap-16 lg:gap-24">
+     <div className="grid grid-cols-3 mt-10 lg:mt-0 gap-16 lg:gap-20">
      {sitemap.map((section,index) => (
-        <div className="grid gap-10 lg:pt-5" key={index}>
+        <div className="grid gap-10 content-start lg:pt-5" key={index}>
           <span className="font-bold opacity-90">{section.title}</span>
           <div className="grid gap-2">
             {section.links.map((link,index) => (
@@ -104,11 +111,11 @@ export default function Footer() {
       ))}
       
      </div>
-     <div className="grid gap-10 pt-10 lg:pt-3 ">
+     <div className="grid gap-10  pt-10 lg:pt-3 ">
           <p className="font-bold ">Newsletter</p>
-          <div className="grid gap-2">
+          <div className="flex gap-3 items-center">
            <input type="text" placeholder="Email" className="lg:w-64 rounded p-4 border-blue-600 border-2 border-opacity-50"/>
-
+           <img src="/iron_footer.svg" alt="Send subcription"/>
           </div>
         </div>
     </section>

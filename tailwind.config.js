@@ -2,11 +2,14 @@
 module.exports = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  purge: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+  // purge: [
+  //   "./src/**/*.{js,ts,jsx,tsx}",
+  //   './pages/**/*.{js,ts,jsx,tsx}',
+  //   './components/**/*.{js,ts,jsx,tsx}',
+  // ],
   theme: {
     extend: {
       backgroundImage: {
@@ -14,9 +17,9 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      fontFamily: {
-        'sans': ['Roboto', 'sans-serif'],
-      }
+      // fontFamily: {
+      //   'sans': ['Roboto', 'sans-serif'],
+      // }
     },
     container: {
       padding: {

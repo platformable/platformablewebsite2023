@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,700;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Open+Sans:wght@300;400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,16 +7,23 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
+  --purple:#7743F5;
   --purple-extra-dark:#1D17A8;
   --purple-dark:#2A2FC1;
   --purple-medium:#5B24EC;
+  --purple-light:#A17EFF;
+  --purple-extra-light:#DCD1FF;
   --green-medium:#99F0CF;
   --green-dark:#0ADC8D;
   --green-light:#E2FFF4;
   --blue-dark:#0A1385;
+  --blue:#3024C6;
+  --blue-extra-dark:#3423C9;
   --blue-medium:#0562FF;
   --pink-light:#F1ACFF;
+  --pink:#F157FF;
+
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,9 +33,30 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+/* #rect_parent[data-product-type-rectangle="Rectangle Data governance"]:hover ~ rect[id="Rectangle Data governance"]  {
+  fill: red;
+} */
 
-.font-karla {
-  font-family: 'Karla', sans-serif;
+.change_fill_color {
+  animation: opacityMove 10s infinite ease-in-out;
+  /* opacity: 70%; */
+}
+
+@keyframes opacityMove {
+	0% {
+		opacity: 70%;
+	}
+	50% {
+		opacity: 0% ;
+	}
+	100% {
+		opacity: 70%;
+	}
+  
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
 p {
@@ -114,11 +142,11 @@ h6 {
     }
     
     h3 {
-      font-size: 35px;
+      font-size: 32px;
     }
     
     h4 {
-      font-size: 29px;
+      font-size: 25px;
     }
     
     h5 {
@@ -139,6 +167,12 @@ h6 {
 
 }
 
-.test::before {
-  content: "Read this: ";
+/* BLOGS */
+
+.blog-card-date-bg {
+  background: linear-gradient(-90deg, #FF9D00 0%, #EF58FE 100%) 0% 0% no-repeat padding-box;
+  background-size: 150% 150%;
+  animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+  /*  */
 }

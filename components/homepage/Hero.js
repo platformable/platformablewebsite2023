@@ -3,12 +3,13 @@ import React from "react";
 import styles from "@/styles/Homepage.module.css";
 
 export default function Hero({ heroImg, heroSubtitle, hero_title }) {
-  console.log("hero_title", hero_title);
+
   const subtitle = heroSubtitle.split(" ")[0];
   const simpleSubtitle = heroSubtitle.substr(heroSubtitle.indexOf(" ") + 1);
+
   return (
     <section id="hero" className="">
-      <div className="lg:px-32 mx-auto py-10">
+      <div className="container mx-auto py-10">
         <h1
           className={`text-center text-[#5B24EC] lg:text-[55px] text-[34px] font-bold md:leading-none leading-10 mb-4 md:px-0 px-3`}
         >

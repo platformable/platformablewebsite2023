@@ -21,9 +21,9 @@ export default function Home({ data }) {
     <Layout>
       <div className="relative">
         <Hero
-          heroImg={data.attributes.hero_img.data.attributes.url}
-          heroSubtitle={newData.hero_subtitle}
-          hero_title={newData.hero_title}
+          heroImg={data?.attributes?.hero_img?.data?.attributes.url}
+          heroSubtitle={newData?.hero_subtitle}
+          hero_title={newData?.hero_title}
         />
         <button
           className={`${styles["contact-btn"]} fixed top-0 left-0   px-10 py-3 text-white my-5 rounded-tr-md rounded-br-md md:block hidden `}
@@ -40,10 +40,10 @@ export default function Home({ data }) {
           list_items_cards={data?.attributes?.list_item_cards}
           title={data?.attributes?.support_open_ecosystems_title}
         />
-        <StakeholdersOpenEcosystems videos={[data?.attributes.stakeholder_img_1, data?.attributes.stakeholder_img_2, data?.attributes.stakeholder_img_3]} title={data?.attributes?.stakeholder_title}/>
+        <StakeholdersOpenEcosystems videos={[data?.attributes?.stakeholder_img_1, data?.attributes?.stakeholder_img_2, data?.attributes.stakeholder_img_3]} title={data?.attributes?.stakeholder_title}/>
         <ProductsServices title={data?.attributes?.product_services_title} product_cards={data?.attributes?.product_cards}/>
         <Explore vertical_description_card={data?.attributes?.vertical_description_card} title={data?.attributes?.explore_sectors_title}/>
-        <Testimonials data={data.attributes.testimonials} title={newData.testimonials_title}/>
+        <Testimonials data={data?.attributes.testimonials} title={newData?.testimonials_title} logos={true}/>
         <Footer />
 
 
