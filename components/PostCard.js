@@ -17,7 +17,7 @@ export default function PostCard({ post }) {
           <p>Mon</p>
         </div>
         <div className="items-center flex justify-center text-center ">
-          <span className="text-center mr-7">{post?.attributes.categories.data[0].attributes.name}</span>
+          <span className="text-center mr-7">{post?.attributes?.category?.data?.attributes?.name}</span>
         </div>
       </div>
 
