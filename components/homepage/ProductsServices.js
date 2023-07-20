@@ -42,7 +42,7 @@ export default function ProductsServices({ title, product_cards }) {
                     <img
                       src="/icon_arrow_purple.svg"
                       alt={`know more about ${card?.list_card_description_product_name}`}
-                      className="w-3.5 md:w-7 lg:w-8"
+                      className="w-3.5 md:w-7 lg:w-6"
                     />
                   </button>
                 </Link>

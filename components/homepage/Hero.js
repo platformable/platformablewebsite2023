@@ -22,7 +22,7 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
         <img src={heroImg} alt="" className="py-10 md:px-0 px-5" />
         <div className="flex justify-center">
           <button
-            className={`${styles["contact-btn"]} contact-btn px-10 py-3 text-white my-5 rounded-md md:hidden block md:px-5`}
+            className={`${styles["contact-btn"]} contact-btn px-10 py-3  my-5 rounded-md md:hidden block md:px-5`}
           >
             <Link href="/">
               <div className="flex gap-x-5 self-start items-center ">
@@ -33,6 +33,7 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
                 />
                 <p>Contact us</p>
                 <img src="/icon_arrow_purple.svg" alt="arrow icon" />
+                
               </div>
             </Link>
           </button>
