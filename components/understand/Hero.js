@@ -12,7 +12,7 @@ export default function Hero({ data }) {
             dangerouslySetInnerHTML={{
               __html: data?.understand_hero_description
             }}
-            className="text-white"
+            className="text-white font-extralight"
           />
         </div>
       </div>
