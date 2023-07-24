@@ -7,7 +7,7 @@ export default function Hero({ data }) {
     <section id="hero" className="">
       <div className={styles.hero_bg_gradient}>
         <div className="container mx-auto py-10">
-          <h1 className={`mb-10 text-white `}>{data?.understand_hero_title}</h1>
+          <h1 className={`mb-5 font-bold text-white `}>{data?.understand_hero_title}</h1>
           <div
             dangerouslySetInnerHTML={{
               __html: data?.understand_hero_description

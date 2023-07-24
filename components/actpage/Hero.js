@@ -5,17 +5,17 @@ export default function Hero({ data }) {
     <section>
       <div className={styles.bg_hero}>
         <div className="text-white container mx-auto py-10">
-          <h1 className="mb-10">Act</h1>
+          <h1 className="mb-5 font-bold">Act</h1>
 
           <div
             dangerouslySetInnerHTML={{
               __html: data?.hero_description,
             }}
-            className="text-[25px]"
+            className=""
           />
         </div>
       </div>
-      <div className="container mx-auto py-16  grid md:grid-cols-[2fr_3fr] grid-cols-1 gap-x-5 md:gap-y-0 gap-y-5 items-center">
+      <div className="container mx-auto py-16  grid md:grid-cols-[1fr_1fr]  grid-cols-1 gap-x-20 md:gap-y-0 gap-y-5 items-center">
         <div className="">
           <img
             src={data?.hero_img?.data?.attributes.url}
@@ -28,7 +28,7 @@ export default function Hero({ data }) {
             dangerouslySetInnerHTML={{
               __html: data?.hero_description_highlighted,
             }}
-            className="px-7 py-3 flex items-center text-center rounded-lg bg-[#DEDBFF]"
+            className="px-10 2xl:px-20 2xl:py-2 py-5 flex items-center text-center rounded-xl bg-[#DEDBFF]"
           />
 
           <div
