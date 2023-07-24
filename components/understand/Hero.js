@@ -24,6 +24,13 @@ export default function Hero({ data }) {
             }}
             className=""
           />
+
+        <div
+            dangerouslySetInnerHTML={{
+              __html: data?.hero_description_highlighted
+            }}
+            className="bg-green-medium p-7 rounded-md"
+          />
           <Link href="/">
             <div className={`${styles.hero_explore_btn_bg_gradient} text-white rounded shadow-md font-medium flex items-center justify-center gap-10 py-3 px-5 bg-blue-400`}>
               <p className="text-center">Explore the Open Ecosystem Value model</p>
