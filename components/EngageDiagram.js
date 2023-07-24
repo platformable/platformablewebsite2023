@@ -19,8 +19,9 @@ export const EngageDiagram = ({title}) => {
     }
     return (
         <section className={`${styles.bg_engage_diagram} py-10`}>
-            
             <div className='container mx-auto'>
+            <p className="mb-10 text-white font-medium">{title}</p>
+
                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1510.307 1845.096">
             
             <defs>
@@ -262,7 +263,7 @@ export const EngageDiagram = ({title}) => {
                 <rect id="Rectangle_2395-2" data-name="Rectangle 2395" width="360.17" height="121" rx="12" transform="translate(756.11 507.39)" fill="#5b24ec"/>
                 </g>
                 <text id="Data_Governance" data-name="Data 
-            Governance" transform="translate(115.307 109.656)" fill="#fff" fontSize="25" fontFamily="OpenSans-Bold, Open Sans" fontWeight="700"><tspan x="0" y="27">Data </tspan><tspan x="0" y="57">Governance</tspan></text>
+            Governance" transform="translate(115.307 109.656)" fill="#fff" fontSize="25"  fontWeight="700"><tspan x="0" y="27">Data </tspan><tspan x="0" y="57">Governance</tspan></text>
                 <g id="icon02_sec_02" transform="translate(17.307 106.449)">
                 <g id="Group_2313" data-name="Group 2313" transform="translate(0)">
                     <g id="Group_1255" data-name="Group 1255" transform="translate(0.002 55.278)">
@@ -284,20 +285,20 @@ export const EngageDiagram = ({title}) => {
                 </g>
                 </g>
                 <text id="Virtual_learning_management_system" data-name="Virtual learning 
-            management system" transform="translate(472.13 201.172)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">Virtual learning </tspan><tspan x="0" y="49">management system</tspan></text>
+            management system" transform="translate(472.13 201.172)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">Virtual learning </tspan><tspan x="0" y="49">management system</tspan></text>
                 <text id="API_industry_Trends_Report" data-name="API industry 
-            Trends Report" transform="translate(472.13 1128.893)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">API industry </tspan><tspan x="0" y="49">Trends Report</tspan></text>
-                <text id="Open_Health" data-name="Open Health" transform="translate(472.13 1535.855)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">Open Health</tspan></text>
+            Trends Report" transform="translate(472.13 1128.893)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">API industry </tspan><tspan x="0" y="49">Trends Report</tspan></text>
+                <text id="Open_Health" data-name="Open Health" transform="translate(472.13 1535.855)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">Open Health</tspan></text>
                 <text id="Virtual_learning_management_system-2" data-name="Virtual learning 
-            management system" transform="translate(472.13 533.359)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">Virtual learning </tspan><tspan x="0" y="49">management system</tspan></text>
+            management system" transform="translate(472.13 533.359)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">Virtual learning </tspan><tspan x="0" y="49">management system</tspan></text>
                 <text id="Data_governance_mentoring_support" data-name="Data governance 
-            mentoring support" transform="translate(852.945 196.828)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">Data governance </tspan><tspan x="0" y="49">mentoring support</tspan></text>
+            mentoring support" transform="translate(852.945 196.828)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">Data governance </tspan><tspan x="0" y="49">mentoring support</tspan></text>
                 <text id="Open_banking_regulation_tracker_" data-name="Open banking 
             regulation tracker
-            " transform="translate(852.945 1124.548)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">Open banking </tspan><tspan x="0" y="49">regulation tracker</tspan></text>
-                <text id="Privacy_technology" data-name="Privacy technology" transform="translate(852.945 1532.012)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">Privacy technology</tspan></text>
+            " transform="translate(852.945 1124.548)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">Open banking </tspan><tspan x="0" y="49">regulation tracker</tspan></text>
+                <text id="Privacy_technology" data-name="Privacy technology" transform="translate(852.945 1532.012)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">Privacy technology</tspan></text>
                 <text id="API_governance_mentoring_support" data-name="API governance 
-            mentoring support" transform="translate(852.945 529.016)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">API governance </tspan><tspan x="0" y="49">mentoring support</tspan></text>
+            mentoring support" transform="translate(852.945 529.016)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">API governance </tspan><tspan x="0" y="49">mentoring support</tspan></text>
                 <g id="Component_65_2" data-name="Component 65 – 2" transform="translate(399.065 203.172)">
                 <g id="Rectangle_2365" data-name="Rectangle 2365" stroke="#fff" strokeWidth="1" fill="url(#linear-gradient-2)">
                     <rect width="54" height="53" rx="3" stroke="none"/>
@@ -415,11 +416,11 @@ export const EngageDiagram = ({title}) => {
                 <rect id="Rectangle_2398-2" data-name="Rectangle 2398" width="360.172" height="121" rx="12" transform="translate(376.11 338.36)" fill="#5b24ec"/>
                 </g>
                 <text id="Self-paced_learning_management_system" data-name="Self-paced learning
-            management system" transform="translate(472.13 30.172)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">Self-paced learning</tspan><tspan x="0" y="49">management system</tspan></text>
-                <text id="Open_Banking_Open_Finance_Trends_Report" data-name="Open Banking/Open Finance Trends Report" transform="translate(472.13 957.893)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">Open Banking/Open </tspan><tspan x="0" y="49">Finance Trends Report</tspan></text>
-                <text id="Open_Banking_Open_Finance" data-name="Open Banking/Open Finance" transform="translate(472.13 1350.588)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">Open Banking/Open </tspan><tspan x="0" y="49">Finance</tspan></text>
+            management system" transform="translate(472.13 30.172)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">Self-paced learning</tspan><tspan x="0" y="49">management system</tspan></text>
+                <text id="Open_Banking_Open_Finance_Trends_Report" data-name="Open Banking/Open Finance Trends Report" transform="translate(472.13 957.893)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">Open Banking/Open </tspan><tspan x="0" y="49">Finance Trends Report</tspan></text>
+                <text id="Open_Banking_Open_Finance" data-name="Open Banking/Open Finance" transform="translate(472.13 1350.588)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">Open Banking/Open </tspan><tspan x="0" y="49">Finance</tspan></text>
                 <text id="Self-paced_learning_management_system-2" data-name="Self-paced learning
-            management system" transform="translate(472.13 362.359)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">Self-paced learning</tspan><tspan x="0" y="49">management system</tspan></text>
+            management system" transform="translate(472.13 362.359)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">Self-paced learning</tspan><tspan x="0" y="49">management system</tspan></text>
                 <g id="Component_65_1" data-name="Component 65 – 1" transform="translate(399.312 34.172)">
                 <g id="Rectangle_2365-6" data-name="Rectangle 2365" stroke="#fff" strokeWidth="1" fill="url(#linear-gradient-2)">
                     <rect width="54" height="53" rx="3" stroke="none"/>
@@ -469,12 +470,12 @@ export const EngageDiagram = ({title}) => {
                 </g>
                 </g>
                 <text id="Data_governance_systems_app" data-name="Data governance 
-            systems app" transform="translate(852.945 33.598)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">Data governance </tspan><tspan x="0" y="49">systems app</tspan></text>
+            systems app" transform="translate(852.945 33.598)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">Data governance </tspan><tspan x="0" y="49">systems app</tspan></text>
                 <text id="Open_banking_Open_finance_API_product_pricing_tool" data-name="Open banking/ Open finance API product 
-            pricing tool" transform="translate(852.945 947.603)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">Open banking/ Open </tspan><tspan x="0" y="49">finance API product </tspan><tspan x="0" y="74">pricing tool</tspan></text>
-                <text id="Government_APIs" data-name="Government APIs" transform="translate(852.945 1364.808)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">Government APIs</tspan></text>
+            pricing tool" transform="translate(852.945 947.603)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">Open banking/ Open </tspan><tspan x="0" y="49">finance API product </tspan><tspan x="0" y="74">pricing tool</tspan></text>
+                <text id="Government_APIs" data-name="Government APIs" transform="translate(852.945 1364.808)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">Government APIs</tspan></text>
                 <text id="API_governance_systems_app" data-name="API governance 
-            systems app" transform="translate(852.945 365.785)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">API governance </tspan><tspan x="0" y="49">systems app</tspan></text>
+            systems app" transform="translate(852.945 365.785)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">API governance </tspan><tspan x="0" y="49">systems app</tspan></text>
                 <g id="Component_65_3" data-name="Component 65 – 3" transform="translate(778.494 36.81)">
                 <g id="Rectangle_2365-8" data-name="Rectangle 2365" stroke="#fff" strokeWidth="1" fill="url(#linear-gradient-2)">
                     <rect width="54" height="53" rx="3" stroke="none"/>
@@ -525,12 +526,12 @@ export const EngageDiagram = ({title}) => {
                 </g>
                 
                 <text id="API_Governance" data-name="API 
-            Governance" transform="translate(115.307 447.745)" fill="#fff" fontSize="25" fontFamily="OpenSans-Bold, Open Sans" fontWeight="700"><tspan x="0" y="27">API </tspan><tspan x="0" y="57">Governance</tspan></text>
+            Governance" transform="translate(115.307 447.745)" fill="#fff" fontSize="25"  fontWeight="700"><tspan x="0" y="27">API </tspan><tspan x="0" y="57">Governance</tspan></text>
                 <text id="Open_Ecosystem_Consultancy" data-name="Open Ecosystem 
-            Consultancy" transform="translate(115.307 751.383)" fill="#fff" fontSize="25" fontFamily="OpenSans-Bold, Open Sans" fontWeight="700"><tspan x="0" y="27">Open Ecosystem </tspan><tspan x="0" y="60">Consultancy</tspan></text>
+            Consultancy" transform="translate(115.307 751.383)" fill="#fff" fontSize="25"  fontWeight="700"><tspan x="0" y="27">Open Ecosystem </tspan><tspan x="0" y="60">Consultancy</tspan></text>
                 <text id="Speaker_Engagement" data-name="Speaker 
-            Engagement" transform="translate(115.307 1744.596)" fill="#fff" fontSize="25" fontFamily="OpenSans-Bold, Open Sans" fontWeight="700"><tspan x="0" y="27">Speaker </tspan><tspan x="0" y="60">Engagement</tspan></text>
-                <text id="Data_products" data-name="Data products" transform="translate(115.307 1053.822)" fill="#fff" fontSize="25" fontFamily="OpenSans-Bold, Open Sans" fontWeight="700"><tspan x="0" y="27">Data products</tspan></text>
+            Engagement" transform="translate(115.307 1744.596)" fill="#fff" fontSize="25"  fontWeight="700"><tspan x="0" y="27">Speaker </tspan><tspan x="0" y="60">Engagement</tspan></text>
+                <text id="Data_products" data-name="Data products" transform="translate(115.307 1053.822)" fill="#fff" fontSize="25"  fontWeight="700"><tspan x="0" y="27">Data products</tspan></text>
                 <g id="icon05_sec02" transform="translate(15.307 439.555)">
                 <g id="Group_2343" data-name="Group 2343" transform="translate(0 0)">
                     <path id="Path_2451" data-name="Path 2451" d="M23.309,8.544,12.841,14.778l-2.52-7.542,7.948-4.727Z" transform="translate(6.056 1.472)" fill="#bba4ff" stroke="#bba4ff" strokeWidth="1"/>
@@ -664,7 +665,7 @@ export const EngageDiagram = ({title}) => {
                 <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2410)">
                 <rect id="Rectangle_2410-2" data-name="Rectangle 2410" width="364.379" height="121" rx="12" transform="translate(1136.93 1326.01)" fill="#5b24ec"/>
                 </g>
-                <text id="API_industry" data-name="API industry" transform="translate(1232.945 1364.059)" fill="#fff" fontSize="22" fontFamily="OpenSans-Semibold, Open Sans" fontWeight="600"><tspan x="0" y="24">API industry</tspan></text>
+                <text id="API_industry" data-name="API industry" transform="translate(1232.945 1364.059)" fill="#fff" fontSize="22" fontFamily="" fontWeight="600"><tspan x="0" y="24">API industry</tspan></text>
                 <g id="Component_65_11" data-name="Component 65 – 11" transform="translate(1159.881 1354.01)">
                 <g id="Rectangle_2365-11" data-name="Rectangle 2365" stroke="#fff" strokeWidth="1" fill="url(#linear-gradient-2)">
                     <rect width="54" height="53" rx="3" stroke="none"/>
@@ -677,7 +678,7 @@ export const EngageDiagram = ({title}) => {
                     </g>
                 </g>
                 </g>
-                <text id="Datasets" transform="translate(115.307 1446.519)" fill="#fff" fontSize="25" fontFamily="OpenSans-Bold, Open Sans" fontWeight="700"><tspan x="0" y="27">Datasets</tspan></text>
+                <text id="Datasets" transform="translate(115.307 1446.519)" fill="#fff" fontSize="25"  fontWeight="700"><tspan x="0" y="27">Datasets</tspan></text>
                 <g id="icon01_sec_02" transform="translate(26.307 1424.328)">
                 <g id="Group_2260" data-name="Group 2260" clipPath="url(#clip-path-13)">
                     <g id="Group_2259" data-name="Group 2259" transform="translate(0 0)">
