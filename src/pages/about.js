@@ -16,7 +16,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function About({ data }) {
 
-  const newData = data.attributes;
+  //const newData = data.attributes;
   return (
     <Layout>
       <div className="relative">
