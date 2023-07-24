@@ -37,7 +37,7 @@ console.log("posts",posts)
         />
 
         <div className="grid md:grid-cols-[1fr_3fr_3fr_3fr] grid-cols-1 gap-5 my-10">
-          <button className={`${selectedCategory === 'All' ? 'bg-[var(--yellow)] text-[var(--purple-extra-dark)]' : ''} px-10 py-3 rounded-md border text-white`}
+          <button className={`${selectedCategory === 'All' ? 'bg-[var(--yellow)] text-[var(--purple-extra-dark)] border-none' : 'text-white'} px-10 py-3 rounded-md border `}
           onClick={()=>chooseCategory('All')}>
             <span>All</span>
           </button>
