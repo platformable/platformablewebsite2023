@@ -20,12 +20,12 @@ export default function About({ data }) {
   return (
     <Layout>
       <div className="relative">
-        <Hero
-        //   heroImg={data?.attributes?.hero_img?.data?.attributes.url}
-        //   heroSubtitle={newData?.hero_subtitle}
-        //   hero_title={newData?.hero_title}
-        />
-        <button
+      {/*   <Hero
+     heroImg={data?.attributes?.hero_img?.data?.attributes.url}
+       heroSubtitle={newData?.hero_subtitle}
+          hero_title={newData?.hero_title} 
+        /> */}
+        {/* <button
           className={`${styles["contact-btn"]} fixed top-0 left-0   px-10 py-3 text-white my-5 rounded-tr-md rounded-br-md md:block hidden `}
           >
             <Link href="/">
@@ -35,7 +35,7 @@ export default function About({ data }) {
                 <img src="/icon_arrow.png" alt="" />
               </div>
             </Link>
-        </button>
+        </button> */}
         
         <Footer />
 
