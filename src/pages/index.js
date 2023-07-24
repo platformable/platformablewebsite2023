@@ -30,8 +30,8 @@ export default function Home({ data }) {
           >
             <Link href="/">
               <div className="flex gap-x-5 self-start items-center ">
-                <img src="/logo_icon_white.png" alt="" className="" />
-                <p>Contact us</p>
+                <img src="/icon_section01.svg" alt="" className="" />
+                <p className="text-[#2A2FC1]">Contact us</p>
                 <img src="/icon_arrow.png" alt="" />
               </div>
             </Link>
@@ -43,7 +43,7 @@ export default function Home({ data }) {
         <StakeholdersOpenEcosystems videos={[data?.attributes?.stakeholder_img_1, data?.attributes?.stakeholder_img_2, data?.attributes.stakeholder_img_3]} title={data?.attributes?.stakeholder_title}/>
         <ProductsServices title={data?.attributes?.product_services_title} product_cards={data?.attributes?.product_cards}/>
         <Explore vertical_description_card={data?.attributes?.vertical_description_card} title={data?.attributes?.explore_sectors_title}/>
-        <Testimonials data={data?.attributes.testimonials} title={newData?.testimonials_title} logos={true}/>
+        {/* <Testimonials data={data?.attributes.testimonials} title={newData?.testimonials_title} logos={true}/> */}
         <Footer />
 
 

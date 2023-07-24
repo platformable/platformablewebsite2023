@@ -22,7 +22,7 @@
   --blue-medium:#0562FF;
   --pink-light:#F1ACFF;
   --pink:#F157FF;
-
+  --yellow: #FFE200;
 
 }
 
@@ -64,7 +64,7 @@ font-size:20px;
 }
 
 h1 {
-font-size: 50px;
+  font-size: 40px;
 }
 
 h2 {

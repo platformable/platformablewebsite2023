@@ -37,7 +37,7 @@ console.log("posts",posts)
         />
 
         <div className="grid md:grid-cols-[1fr_3fr_3fr_3fr] grid-cols-1 gap-5 my-10">
-          <button className={`${selectedCategory === 'All' ? styles.button_selected_category_gradient : ''} px-10 py-3 rounded-md border text-white`}
+          <button className={`${selectedCategory === 'All' ? 'bg-[var(--yellow)] text-[var(--purple-extra-dark)]' : ''} px-10 py-3 rounded-md border text-white`}
           onClick={()=>chooseCategory('All')}>
             <span>All</span>
           </button>
@@ -56,7 +56,7 @@ console.log("posts",posts)
 
         </div>
 
-<div className="flex justify-center">
+<div className="flex">
 
         <Search searchFunction={searchFunction} />
 
