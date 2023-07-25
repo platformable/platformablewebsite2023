@@ -19,20 +19,7 @@
   margin-right: 130px;
   font-size: 19px;
   color: #3024c6;
-  font-weight: bold;
 }
-/* .hide {
-  display: none;
-}
-
-.show {
-  display: block;
-  border-radius: 5px;
-  right: 100px;
-  top: 300px;
-  padding: 30px;
-} */
-
 .drop-down-container {
   position: absolute;
   width: 800px;
@@ -56,7 +43,7 @@
 }
 
 h3.drop-down-info-title {
-  color: #c21992;
+  color: #f259f9;
   font-size: 20px;
 }
 
@@ -79,7 +66,7 @@ h3.drop-down-info-title {
   padding: 10px;
 }
 .drop-down-info-hovered:hover {
-  background-color: #f9ed06;
+  background-color: #ffe200;
   border-radius: 5px;
 }
 
@@ -218,7 +205,6 @@ h3.drop-down-info-title {
     position: absolute;
     margin-top: 20px;
     right: 20px;
-
     width: 50%;
   }
   .nav-one-links {
