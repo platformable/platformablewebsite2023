@@ -267,7 +267,7 @@ export default function Header() {
       <nav className={headerStyles["nav-two"]}>
         <div className={headerStyles["nav-bar-two"]}>
           <div className={headerStyles["logo-two-container"]}>
-            <Link href="#" class="flex items-center">
+            <Link href="#" className="flex items-center">
               <Image
                 src={Logo}
                 className="h-8 mr-3"
@@ -306,9 +306,9 @@ export default function Header() {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M1 1h15M1 7h15M1 13h15"
                 />
               </svg>
