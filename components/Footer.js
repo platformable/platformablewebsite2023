@@ -6,7 +6,7 @@ import footerStyles from "../src/styles/Footer.module.css";
 
 const sitemap = [
   {
-    title: "About us",
+    title: "How we work",
     links: [
       {
         label: "Understand",
@@ -55,12 +55,12 @@ const sitemap = [
     title: "Company",
     links: [
       {
-        label: "Carrers",
-        url: "/",
+        label: "About us",
+        url: "/aboutus",
       },
       {
-        label: "Blog",
-        url: "/",
+        label: "Contact us",
+        url: "/contact-us",
       },
       {
         label: "Press",

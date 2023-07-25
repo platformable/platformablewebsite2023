@@ -2,11 +2,11 @@ import React from "react";
 
 export default function SearchEvents({ searchFunction }) {
   return (
-    <div className="block md:flex justify-start items-center md:px-0 ">
-      <p className="mr-5 md:block text-white">Search</p>
+    <div className="block md:flex items-center md:px-0 w-full">
+      <p className="mr-5 inline-block text-white ">Search</p>
 
-      <div className="block md:flex ">
-        <div className="block md:flex border-1  rounded-lg  rounded-lg w-96">
+      <div className="w-full">
+        <div className="block md:flex border-1  rounded-lg  rounded-lg ">
           <label
             htmlFor="default-search"
             className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
@@ -18,7 +18,7 @@ export default function SearchEvents({ searchFunction }) {
               type="search"
               onChange={(e) => searchFunction(e.target.value)}
               id="default-search"
-              className="block p-4 pr-9 w-full text-lg border-black text-black rounded-lg border border-gray-300 "
+              className="block p-4 pr-9 w-full text-lg border-black text-black rounded-lg border-2 border-white bg-transparent "
               defaultValue=""
               required
             />
@@ -28,7 +28,7 @@ export default function SearchEvents({ searchFunction }) {
                 aria-hidden="true"
                 className="w-5 h-5 text-gray-500 dark:text-gray-400"
                 fill="none"
-                stroke="currentColor"
+                stroke="white"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >

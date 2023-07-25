@@ -16,7 +16,7 @@ export default function DataGovernance({ data }) {
       <GovernanceProducts title={data?.products_title} products={data?.products} />
       <OurProcess data={data}/>
       <GovernanceServices description={data?.services_description} services={data?.services}/>
-      <Testimonials data={data?.testimonials} title={data?.testimonials_title} logos={false}/>
+      {/* <Testimonials data={data?.testimonials} title={data?.testimonials_title} logos={false}/> */}
       <FindMore data={data}/>
       <Footer />
     </Layout>

@@ -7,7 +7,7 @@ export default function Hero({ data }) {
     <section id="hero" className="">
       <div className={styles.hero_bg_gradient}>
         <div className="container mx-auto py-10">
-          <h1 className={`mb-10 text-white `}>{data?.understand_hero_title}</h1>
+          <h1 className={`mb-5 font-bold text-white `}>{data?.understand_hero_title}</h1>
           <div
             dangerouslySetInnerHTML={{
               __html: data?.understand_hero_description
@@ -17,12 +17,19 @@ export default function Hero({ data }) {
         </div>
       </div>
       <div className="container mx-auto flex flex-col flex-col-reverse md:grid md:grid-cols-2 py-10">
-        <div className="flex flex-col justify-between py-5 gap-5">
+        <div className="flex flex-col justify-around py-5 gap-5">
           <div
             dangerouslySetInnerHTML={{
               __html: data?.understand_hero_description2
             }}
             className=""
+          />
+
+        <div
+            dangerouslySetInnerHTML={{
+              __html: data?.hero_description_highlighted
+            }}
+            className="bg-green-medium p-7 rounded-md"
           />
           <Link href="/">
             <div className={`${styles.hero_explore_btn_bg_gradient} text-white rounded shadow-md font-medium flex items-center justify-center gap-10 py-3 px-5 bg-blue-400`}>
