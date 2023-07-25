@@ -20,7 +20,7 @@ export const EngageDiagram = ({title}) => {
     return (
         <section className={`${styles.bg_engage_diagram} py-10`}>
             <div className='container mx-auto'>
-            <p className="mb-10 text-white font-medium">{title}</p>
+            <p className="mb-10 text-white font-bold">{title}</p>
 
                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1510.307 1845.096">
             

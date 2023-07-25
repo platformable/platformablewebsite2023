@@ -37,20 +37,20 @@ console.log("posts",posts)
         />
 
         <div className="grid md:grid-cols-[1fr_3fr_3fr_3fr] grid-cols-1 gap-5 my-10">
-          <button className={`${selectedCategory === 'All' ? 'bg-[var(--yellow)] text-[var(--purple-extra-dark)]' : ''} px-10 py-3 rounded-md border text-white`}
+          <button className={`${selectedCategory === 'All' ? 'bg-[var(--yellow)] text-[var(--purple-extra-dark)] border-none' : 'text-white'} px-10 py-3 rounded-md border `}
           onClick={()=>chooseCategory('All')}>
             <span>All</span>
           </button>
 
-          <button className={`${selectedCategory === 'Open Ecosystems' ? styles.button_selected_category_gradient : ''} px-10 py-3 md:py-1 rounded-md border text-white`}  onClick={()=>chooseCategory('Open Ecosystems')}>
+          <button className={`${selectedCategory === 'Open Ecosystems' ? styles.button_selected_category_gradient_OE : ''} px-10 py-3 md:py-1 rounded-md border text-white`}  onClick={()=>chooseCategory('Open Ecosystems')}>
             <span>Open Ecosystems</span>
           </button>
 
-          <button className={`${selectedCategory === 'Open Banking / Open Finance' ? styles.button_selected_category_gradient : ''} px-10 py-3 md:py-1 rounded-md border text-white`}  onClick={()=>chooseCategory('Open Banking / Open Finance')}>
+          <button className={`${selectedCategory === 'Open Banking / Open Finance' ? styles.button_selected_category_gradient_OBOF : ''} px-10 py-3 md:py-1 rounded-md border text-white`}  onClick={()=>chooseCategory('Open Banking / Open Finance')}>
             <span>Open Banking/Open Finance</span>
           </button>
 
-          <button className={`${selectedCategory === 'Open Health' ? styles.button_selected_category_gradient : ''} px-10 py-3 md:py-1 rounded-md border text-white`}  onClick={()=>chooseCategory('Open Health')}>
+          <button className={`${selectedCategory === 'Open Health' ? styles.button_selected_category_gradient_OH : ''} px-10 py-3 md:py-1 rounded-md border text-white`}  onClick={()=>chooseCategory('Open Health')}>
             <span>Open Health</span>
           </button>
 

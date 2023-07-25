@@ -34,7 +34,7 @@ export default function Hero({ data }) {
             dangerouslySetInnerHTML={{
               __html: data?.hero_description_highlighted,
             }}
-            className="px-10 2xl:px-20 2xl:py-7 py-5 flex items-center text-center rounded-xl bg-[#DEDBFF]"
+            className="px-10 2xl:px-20 2xl:py-7 py-5 flex items-center text-center rounded-xl bg-[#DEDBFF] font-bold text-[var(--purple-extra-dark)]"
           />
 
           <div
