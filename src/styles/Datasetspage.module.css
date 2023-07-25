@@ -24,7 +24,7 @@ div[data-card-number='1'] .card_heading {
 
 div[data-card-number='2'] .card_heading  {
     /* background: transparent linear-gradient(269deg, #19D395 0%, #F157FF 100%) 0% 0% no-repeat padding-box; */
-    background: transparent linear-gradient(269deg, #FC912A 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #F157FF 0%, #0062FF 100%) 0% 0% no-repeat padding-box;
 
     /* background-size: 200% 200%; */
     /* animation: Gradient 5s ease infinite; */

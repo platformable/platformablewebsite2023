@@ -1,9 +1,45 @@
 import styles from "@/styles/DataProducts.module.css";
+import Link from "next/link";
 
 export default function FindMore({ data }) {
+  const slices = [
+    {
+      title: 'Understand',
+      link: '/understand',
+      image: ''
+    },
+    {
+      title: 'Act',
+      link: '/act',
+      image: ''
+    },
+    {
+      title: 'Engage',
+      link: '/engage',
+      image: ''
+    },
+  ]
   return (
-    <section className={`py-10  ${styles["data-products-our-process-bg"]}`}>
-      <div className="container mx-auto">
+    <section className={`py-10  bg-white`}>
+      <div className={styles.pic_ctn}>
+    {slices?.map( slice => (
+      <div className={`${styles.image} grid grid-cols-[4fr_1.5fr]`}>
+        <div className="flex flex-col gap-y-10">
+          <h3 className="font-bold">{slice.title}</h3>
+          <Link href={slice.link}>
+          <button className="rounded bg-[var(--yellow)] px-10 py-4 text-lg text-center font-bold lg:rounded-xl text-[var(--purple-medium)]">
+            Find out more
+          </button>
+          </Link>
+          
+        </div>
+        <img className={``} src="https://picsum.photos/200/300?t=1" alt="" />
+    </div>
+    ))}
+    
+   
+  </div>
+      {/* <div className="container mx-auto">
         <div className="flex gap-x-5 items-center  mb-10">
           <img
             src="/platformable-icon-white.svg"
@@ -52,7 +88,7 @@ export default function FindMore({ data }) {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

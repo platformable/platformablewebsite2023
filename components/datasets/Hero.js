@@ -27,7 +27,7 @@ export default function Hero({ data }) {
             <img
               src={data?.datasets_img?.data.attributes.url}
               alt="Data products mapped"
-              className=" lg:-mt-[28rem] xl:-mt-72  lg:-mt-72 lg:-mr-10 hidden justify-self-end lg:block lg:w-3/6 xl:w-[40%] 2xl:w-2/5 h-96"
+              className=" lg:-mt-[28rem] xl:-mt-72  lg:-mt-[24pc] lg:-mr-10 hidden justify-self-end lg:block lg:w-3/6 xl:w-[40%] 2xl:w-2/5 h-96"
             />
           </div>
         </div>
