@@ -7,8 +7,10 @@ export default function OurDatasets({ title, datasets }) {
         
         <div className="grid xl:mt-10 gap-1">
           <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] ">
-            <div className="flex items-center bg-[#3328C3] px-7 rounded-tl-xl">
-              <img src="" alt="" />
+            <div className="flex items-center bg-[#3328C3] px-7 gap-5 rounded-tl-xl">
+              <div className="w-2/6 flex justify-center">
+                <img  src="/logo_icon_white.png" alt="Platformable logo" />
+              </div>
               <h4 className="text-white">Datasets</h4>
             </div>
             <div className="grid place-items-center py-5 bg-white px-7">
