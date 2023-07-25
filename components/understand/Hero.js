@@ -16,7 +16,7 @@ export default function Hero({ data }) {
           />
         </div>
       </div>
-      <div className="container mx-auto flex flex-col flex-col-reverse md:grid md:grid-cols-2 py-10">
+      <div className="container mx-auto flex flex-col flex-col-reverse md:grid md:grid-cols-2 gap-20 py-10">
         <div className="flex flex-col justify-around py-5 gap-5">
           <div
             dangerouslySetInnerHTML={{
