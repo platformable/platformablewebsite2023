@@ -95,15 +95,17 @@ div[data-card-number='4'] .card_heading  {
   
   .pic_ctn {
     position: relative;
-    width: 100vw;
+    width: 80vw;
     height: 300px;
-    margin-top: 15vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
   }
  
   .image {
     position: absolute;
     top: 0;
-    width: 75%;
+    /* width: 70%; */
     left: calc(20%);
     opacity: 0;
     animation: display 30s infinite ease-in-out;
