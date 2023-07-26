@@ -104,7 +104,7 @@ div[data-card-number='4'] .card_heading  {
     position: absolute;
     top: 0;
     /* width: 70%; */
-    left: calc(20%);
+    /* left: calc(20%); */
     opacity: 0;
     animation: display 30s infinite ease-in-out;
   }
