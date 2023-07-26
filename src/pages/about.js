@@ -10,6 +10,10 @@ import Hero from "../../components/about/Hero";
 import Footer from "../../components/Footer";
 import Testimonials from "../../components/homepage/Testimonials";
 import Link from "next/link";
+import OurCommitment from "../../components/about/OurCommitment";
+import OurMission from "../../components/about/OurMission";
+import PrivacyPolicy from "../../components/about/PrivacyPolicy";
+import Team from "../../components/about/Team";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,12 +24,8 @@ export default function About({ data }) {
   return (
     <Layout>
       <div className="relative">
-      {/*   <Hero
-     heroImg={data?.attributes?.hero_img?.data?.attributes.url}
-       heroSubtitle={newData?.hero_subtitle}
-          hero_title={newData?.hero_title} 
-        /> */}
-        {/* <button
+        <Hero data={data}/>
+        <button
           className={`${styles["contact-btn"]} fixed top-0 left-0   px-10 py-3 text-white my-5 rounded-tr-md rounded-br-md md:block hidden `}
           >
             <Link href="/">
@@ -35,7 +35,11 @@ export default function About({ data }) {
                 <img src="/icon_arrow.png" alt="" />
               </div>
             </Link>
-        </button> */}
+        </button>
+        <OurMission data={data}/>
+        <OurCommitmentdata data={data} />
+        <PrivacyPolicy data={data} />
+        <Team />
         
         <Footer />
 
@@ -46,23 +50,23 @@ export default function About({ data }) {
   );
 }
 
-// export async function getServerSideProps(ctx) {
-//   try {
-//     const res = await fetch(
-//       `${process.env.NEXT_PUBLIC_SERVER_URL}/api/homepage?populate[hero_img]=*&populate[stakeholder_img_1]=*&populate[stakeholder_img_2]=*&populate[stakeholder_img_3]=*&populate[stakeholder_video]=*&populate[list_item_cards][populate][list_item_card_img]=*&populate[product_cards][populate][list_card_description_img]=*&populate[vertical_description_card][populate][sector_values]=*&populate[testimonials][populate][testimonials_img]=*&populate[vertical_description_card]=*&populate[vertical_description_card][populate][sector_value]=*`
-//     );
-//     const data = await res.json();
+export async function getServerSideProps(ctx) {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/homepage?populate[hero_img]=*&populate[stakeholder_img_1]=*&populate[stakeholder_img_2]=*&populate[stakeholder_img_3]=*&populate[stakeholder_video]=*&populate[list_item_cards][populate][list_item_card_img]=*&populate[product_cards][populate][list_card_description_img]=*&populate[vertical_description_card][populate][sector_values]=*&populate[testimonials][populate][testimonials_img]=*&populate[vertical_description_card]=*&populate[vertical_description_card][populate][sector_value]=*`
+    );
+    const data = await res.json();
 
-//     return {
-//       props: {
-//         data: data.data,
-//       },
-//     };
-//   } catch (error) {
-//     return {
-//       props: {
-//         data: "No Data",
-//       },
-//     };
-//   }
-// }
+    return {
+      props: {
+        data: data.data,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        data: "No Data",
+      },
+    };
+  }
+}
