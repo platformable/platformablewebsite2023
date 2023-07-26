@@ -38,7 +38,7 @@ export default function About({ data }) {
       </div>
 
       <PrivacyPolicy data={data} />
-      <Team />
+      <Team data={data.team.data} styles={styles}/>
 
       <Footer />
     </Layout>
