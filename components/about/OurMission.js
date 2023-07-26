@@ -3,13 +3,13 @@ import React from 'react'
 export default function OurMission({data}) {
   return (
      <>
-     <div id="ourMission" className={` py-20 container mx-auto `}>
+     <div id="ourMission" className={`text-white py-10 container mx-auto `}>
           <div className="grid gap-7">
             <div
               dangerouslySetInnerHTML={{
-                __html: "",
+                __html: data?.ourMission,
               }}
-              className=""
+              className="text-[30px] font-bold"
             />
 
             <div className="grid lg:grid-cols-3 gap-y-14 lg:gap-x-7 text-white">

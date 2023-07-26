@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1510.307" height="1845.096" viewBox="0 0 1510.307 1845.096">
+<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1510.307 1845.096">
   <defs>
     <filter id="Rectangle_2391" x="367.112" y="169.172" width="378.172" height="139" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
@@ -7,53 +7,39 @@
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Rectangle_2403" x="367.112" y="1096.892" width="378.172" height="139" filterUnits="userSpaceOnUse">
+    <filter id="Rectangle_2508" x="1128.112" y="0.172" width="378.172" height="139" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-2"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur-2"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Rectangle_2407" x="367.112" y="1489.588" width="378.172" height="139" filterUnits="userSpaceOnUse">
+    <filter id="Rectangle_2403" x="367.112" y="1096.892" width="378.172" height="139" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-3"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur-3"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Rectangle_2397" x="367.112" y="501.359" width="378.172" height="139" filterUnits="userSpaceOnUse">
+    <filter id="Rectangle_2407" x="367.112" y="1489.588" width="378.172" height="139" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-4"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur-4"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Rectangle_2392" x="747.112" y="169.205" width="378.17" height="139" filterUnits="userSpaceOnUse">
+    <filter id="Rectangle_2397" x="367.112" y="501.359" width="378.172" height="139" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-5"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur-5"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Rectangle_2401" x="747.112" y="1096.925" width="378.17" height="139" filterUnits="userSpaceOnUse">
+    <filter id="Rectangle_2405" x="747.112" y="1489.621" width="378.17" height="139" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-6"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur-6"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="Rectangle_2405" x="747.112" y="1489.621" width="378.17" height="139" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur-7"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur-7"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="Rectangle_2395" x="747.112" y="501.393" width="378.17" height="139" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur-8"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur-8"/>
       <feComposite in="SourceGraphic"/>
     </filter>
     <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
@@ -67,36 +53,46 @@
       <stop offset="0" stop-color="#f157ff"/>
       <stop offset="1" stop-color="#06de8b"/>
     </linearGradient>
-    <linearGradient id="linear-gradient-3" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+    <linearGradient id="linear-gradient-4" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#f157ff"/>
       <stop offset="1" stop-color="#0062ff"/>
     </linearGradient>
-    <linearGradient id="linear-gradient-7" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#f157ff"/>
-      <stop offset="1" stop-color="#ff9d00"/>
-    </linearGradient>
     <filter id="Rectangle_2393" x="747.112" y="0" width="378.17" height="139" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-7"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_2402" x="747.112" y="927.719" width="378.17" height="139" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-8"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-8"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_2510" x="1127.928" y="927.719" width="378.17" height="139" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-9"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur-9"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Rectangle_2402" x="747.112" y="927.719" width="378.17" height="139" filterUnits="userSpaceOnUse">
+    <filter id="Rectangle_2406" x="747.112" y="1320.416" width="378.17" height="139" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-10"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur-10"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Rectangle_2406" x="747.112" y="1320.416" width="378.17" height="139" filterUnits="userSpaceOnUse">
+    <filter id="Rectangle_2396" x="747.112" y="332.188" width="378.17" height="139" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-11"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur-11"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Rectangle_2396" x="747.112" y="332.188" width="378.17" height="139" filterUnits="userSpaceOnUse">
+    <filter id="Rectangle_2509" x="1128.114" y="332.188" width="378.17" height="139" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur-12"/>
       <feFlood flood-opacity="0.161"/>
@@ -131,6 +127,10 @@
       <feComposite operator="in" in2="blur-16"/>
       <feComposite in="SourceGraphic"/>
     </filter>
+    <linearGradient id="linear-gradient-9" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f157ff"/>
+      <stop offset="1" stop-color="#ff9d00"/>
+    </linearGradient>
     <clipPath id="clip-path-2">
       <rect id="Rectangle_1400" data-name="Rectangle 1400" width="79.474" height="82.381" fill="#bba4ff" stroke="#bba4ff" stroke-width="1"/>
     </clipPath>
@@ -159,7 +159,7 @@
       <stop offset="1" stop-color="#846eff"/>
     </linearGradient>
     <clipPath id="clip-path-12">
-      <rect id="Rectangle_1404-6" data-name="Rectangle 1404" width="25.21" height="34.081" transform="translate(0 0)" fill="#3001aa"/>
+      <rect id="Rectangle_1404-6" data-name="Rectangle 1404" width="25.21" height="34.081" fill="#3001aa"/>
     </clipPath>
     <filter id="Rectangle_2410" x="1127.928" y="1320.01" width="382.379" height="139" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
@@ -188,13 +188,27 @@
     <path id="Path_3630" data-name="Path 3630" d="M-10501.22,11907.469v-54.2h-216.09" transform="translate(11057.418 -10776.993)" fill="none" stroke="#fff" stroke-width="2"/>
     <path id="Path_3636" data-name="Path 3636" d="M-10501.22,11907.469v-54.2h-216.09" transform="translate(11057.418 -10384.297)" fill="none" stroke="#fff" stroke-width="2"/>
     <path id="Path_3627" data-name="Path 3627" d="M-10501.22,11907.469v-54.2h-216.09" transform="translate(11057.418 -11372.525)" fill="none" stroke="#fff" stroke-width="2"/>
-    <path id="Path_3623" data-name="Path 3623" d="M-10531.437,11907.469v-54.2H-11143" transform="translate(11467.635 -11704.713)" fill="none" stroke="#fff" stroke-width="2"/>
-    <path id="Path_3631" data-name="Path 3631" d="M-10531.437,11907.469v-54.2H-11143" transform="translate(11467.635 -10776.993)" fill="none" stroke="#fff" stroke-width="2"/>
+    <path id="Path_3623" data-name="Path 3623" d="M-10150.437,11808.916v44.354H-11143" transform="translate(11467.635 -11704.713)" fill="none" stroke="#fff" stroke-width="2"/>
+    <path id="Path_3631" data-name="Path 3631" d="M-10146.557,11806.345v45.992l-996.447.934" transform="translate(11467.635 -10776.993)" fill="none" stroke="#fff" stroke-width="2"/>
     <path id="Path_3634" data-name="Path 3634" d="M-10531.437,11907.469v-54.2H-11143" transform="translate(11467.635 -10384.297)" fill="none" stroke="#fff" stroke-width="2"/>
-    <path id="Path_3625" data-name="Path 3625" d="M-10531.437,11907.469v-54.2H-11143" transform="translate(11467.635 -11372.525)" fill="none" stroke="#fff" stroke-width="2"/>
-    <rect id="Rectangle_2388" data-name="Rectangle 2388" width="346.078" height="121" rx="12" transform="translate(0 87.351)" fill="#5b24ec"/>
+    <path id="Path_3625" data-name="Path 3625" d="M-10156.218,11790.256v63.015H-11143" transform="translate(11467.635 -11372.525)" fill="none" stroke="#fff" stroke-width="2"/>
+    
+    
+    
+    {/* CHILD'S HEADER RECTANGLES */}
+    <rect id="Rectangle_2388" name="Rectangle Data governance" data-name="Rectangle 2388" width="346.078" height="121" rx="12" transform="translate(0 87.351)" fill="#5b24ec"/>
+    <rect id="Rectangle_2389" name="Rectangle API governance" data-name="Rectangle 2389" width="346.078" height="121" rx="12" transform="translate(0 420.245)" fill="#5b24ec"/>
+    <rect id="Rectangle_2399" name="Rectangle Open ecosystem consultancy" data-name="Rectangle 2399" width="1497.284" height="121" rx="12" transform="translate(0 724.883)" fill="#5b24ec"/>
+    <rect id="Rectangle_2411" name="Rectangle Speaker engagement" data-name="Rectangle 2411" width="1501.307" height="121" rx="12" transform="translate(0 1718.096)" fill="#5b24ec"/>
+    <rect id="Rectangle_2400" name="Rectangle Rectangle Data products" data-name="Rectangle 2400" width="346.078" height="121" rx="12" transform="translate(0 1012.322)" fill="#5b24ec"/>
+    <rect id="Rectangle_2409" name="Rectangle Datasets" data-name="Rectangle 2409" width="346.078" height="121" rx="12" transform="translate(0 1405.019)" fill="#5b24ec"/>
+    
+    
     <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2391)">
       <rect id="Rectangle_2391-2" data-name="Rectangle 2391" width="360.172" height="121" rx="12" transform="translate(376.11 175.17)" fill="#5b24ec"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2508)">
+      <rect id="Rectangle_2508-2" data-name="Rectangle 2508" width="360.172" height="121" rx="12" transform="translate(1137.11 6.17)" fill="#5b24ec"/>
     </g>
     <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2403)">
       <rect id="Rectangle_2403-2" data-name="Rectangle 2403" width="360.172" height="121" rx="12" transform="translate(376.11 1102.89)" fill="#5b24ec"/>
@@ -205,20 +219,11 @@
     <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2397)">
       <rect id="Rectangle_2397-2" data-name="Rectangle 2397" width="360.172" height="121" rx="12" transform="translate(376.11 507.36)" fill="#5b24ec"/>
     </g>
-    <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2392)">
-      <rect id="Rectangle_2392-2" data-name="Rectangle 2392" width="360.17" height="121" rx="12" transform="translate(756.11 175.21)" fill="#5b24ec"/>
-    </g>
-    <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2401)">
-      <rect id="Rectangle_2401-2" data-name="Rectangle 2401" width="360.17" height="121" rx="12" transform="translate(756.11 1102.92)" fill="#5b24ec"/>
-    </g>
     <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2405)">
       <rect id="Rectangle_2405-2" data-name="Rectangle 2405" width="360.17" height="121" rx="12" transform="translate(756.11 1495.62)" fill="#5b24ec"/>
     </g>
-    <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2395)">
-      <rect id="Rectangle_2395-2" data-name="Rectangle 2395" width="360.17" height="121" rx="12" transform="translate(756.11 507.39)" fill="#5b24ec"/>
-    </g>
     <text id="Data_Governance" data-name="Data 
-Governance" transform="translate(115.307 109.656)" fill="#fff" font-size="25" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="27">Data </tspan><tspan x="0" y="57">Governance</tspan></text>
+Governance" transform="translate(115.307 114.14)" fill="#fff" font-size="24" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="25">Data </tspan><tspan x="0" y="55">Governance</tspan></text>
     <g id="icon02_sec_02" transform="translate(17.307 106.449)">
       <g id="Group_2313" data-name="Group 2313" transform="translate(0)">
         <g id="Group_1255" data-name="Group 1255" transform="translate(0.002 55.278)">
@@ -239,21 +244,16 @@ Governance" transform="translate(115.307 109.656)" fill="#fff" font-size="25" fo
         </g>
       </g>
     </g>
-    <text id="Virtual_learning_management_system" data-name="Virtual learning 
-management system" transform="translate(472.13 201.172)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">Virtual learning </tspan><tspan x="0" y="49">management system</tspan></text>
-    <text id="API_industry_Trends_Report" data-name="API industry 
-Trends Report" transform="translate(472.13 1128.893)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">API industry </tspan><tspan x="0" y="49">Trends Report</tspan></text>
-    <text id="Open_Health" data-name="Open Health" transform="translate(472.13 1535.855)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">Open Health</tspan></text>
-    <text id="Virtual_learning_management_system-2" data-name="Virtual learning 
-management system" transform="translate(472.13 533.359)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">Virtual learning </tspan><tspan x="0" y="49">management system</tspan></text>
-    <text id="Data_governance_mentoring_support" data-name="Data governance 
-mentoring support" transform="translate(852.945 196.828)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">Data governance </tspan><tspan x="0" y="49">mentoring support</tspan></text>
-    <text id="Open_banking_regulation_tracker_" data-name="Open banking 
-regulation tracker
-" transform="translate(852.945 1124.548)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">Open banking </tspan><tspan x="0" y="49">regulation tracker</tspan></text>
-    <text id="Privacy_technology" data-name="Privacy technology" transform="translate(852.945 1532.012)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">Privacy technology</tspan></text>
-    <text id="API_governance_mentoring_support" data-name="API governance 
-mentoring support" transform="translate(852.945 529.016)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">API governance </tspan><tspan x="0" y="49">mentoring support</tspan></text>
+    <text id="Data_Governance_Mentoring_Support" data-name="Data Governance 
+Mentoring Support" transform="translate(472.13 202.756)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">Data Governance </tspan><tspan x="0" y="51">Mentoring Support</tspan></text>
+    <text id="Virtual_Learning_Management_System" data-name="Virtual Learning
+Management System" transform="translate(1233.13 17.013)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">Virtual Learning</tspan><tspan x="0" y="51">Management </tspan><tspan x="0" y="79">System</tspan></text>
+    <text id="API_Industry_Trends_Report" data-name="API Industry 
+Trends Report" transform="translate(472.13 1130.476)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">API Industry </tspan><tspan x="0" y="51">Trends Report</tspan></text>
+    <text id="Open_Health" data-name="Open Health" transform="translate(472.13 1535.855)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">Open Health</tspan></text>
+    <text id="Privacy_Technology" data-name="Privacy Technology" transform="translate(852.945 1532.012)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">Privacy Technology</tspan></text>
+    <text id="API_Governance_Mentoring_Support" data-name="API Governance 
+Mentoring Support" transform="translate(472.13 534.943)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">API Governance </tspan><tspan x="0" y="51">Mentoring Support</tspan></text>
     <g id="Component_65_2" data-name="Component 65 – 2" transform="translate(399.065 203.172)">
       <g id="Rectangle_2365" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
         <rect width="54" height="53" rx="3" stroke="none"/>
@@ -266,43 +266,43 @@ mentoring support" transform="translate(852.945 529.016)" fill="#fff" font-size=
         </g>
       </g>
     </g>
-    <g id="Component_67_2" data-name="Component 67 – 2" transform="translate(399.065 1130.892)">
-      <g id="Rectangle_2364" data-name="Rectangle 2364" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-3)">
+    <g id="Component_65_12" data-name="Component 65 – 12" transform="translate(1160.065 34.172)">
+      <g id="Rectangle_2365-2" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
         <rect width="54" height="53" rx="3" stroke="none"/>
         <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
       </g>
-      <g id="Group_3654" data-name="Group 3654" transform="translate(-451.104 -74.338)">
+      <g id="Group_3655-2" data-name="Group 3655" transform="translate(-451.104 -74.619)">
         <g id="Group_1-2" data-name="Group 1" transform="translate(463.105 86.213)">
           <path id="Path_1-2" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
           <rect id="Rectangle_5-2" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
         </g>
       </g>
     </g>
-    <g id="Component_67_3" data-name="Component 67 – 3" transform="translate(399.065 1523.588)">
-      <g id="Rectangle_2364-2" data-name="Rectangle 2364" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-3)">
+    <g id="Component_67_2" data-name="Component 67 – 2" transform="translate(399.065 1130.892)">
+      <g id="Rectangle_2364" data-name="Rectangle 2364" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-4)">
         <rect width="54" height="53" rx="3" stroke="none"/>
         <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
       </g>
-      <g id="Group_3654-2" data-name="Group 3654" transform="translate(-451.104 -74.338)">
+      <g id="Group_3654" data-name="Group 3654" transform="translate(-451.104 -74.338)">
         <g id="Group_1-3" data-name="Group 1" transform="translate(463.105 86.213)">
           <path id="Path_1-3" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
           <rect id="Rectangle_5-3" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
         </g>
       </g>
     </g>
-    <g id="Component_65_7" data-name="Component 65 – 7" transform="translate(399.065 535.359)">
-      <g id="Rectangle_2365-2" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
+    <g id="Component_67_3" data-name="Component 67 – 3" transform="translate(399.065 1523.588)">
+      <g id="Rectangle_2364-2" data-name="Rectangle 2364" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-4)">
         <rect width="54" height="53" rx="3" stroke="none"/>
         <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
       </g>
-      <g id="Group_3655-2" data-name="Group 3655" transform="translate(-451.104 -74.619)">
+      <g id="Group_3654-2" data-name="Group 3654" transform="translate(-451.104 -74.338)">
         <g id="Group_1-4" data-name="Group 1" transform="translate(463.105 86.213)">
           <path id="Path_1-4" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
           <rect id="Rectangle_5-4" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
         </g>
       </g>
     </g>
-    <g id="Component_65_4" data-name="Component 65 – 4" transform="translate(778.494 200.83)">
+    <g id="Component_65_7" data-name="Component 65 – 7" transform="translate(399.065 535.359)">
       <g id="Rectangle_2365-3" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
         <rect width="54" height="53" rx="3" stroke="none"/>
         <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
@@ -314,39 +314,15 @@ mentoring support" transform="translate(852.945 529.016)" fill="#fff" font-size=
         </g>
       </g>
     </g>
-    <g id="Component_66_4" data-name="Component 66 – 4" transform="translate(778.494 1128.551)">
-      <g id="Path_3632" data-name="Path 3632" fill="url(#linear-gradient-7)">
-        <path d="M 51 52.5 L 3 52.5 C 1.621500015258789 52.5 0.5 51.37850189208984 0.5 50 L 0.5 3 C 0.5 1.621500015258789 1.621500015258789 0.5 3 0.5 L 51 0.5 C 52.37850189208984 0.5 53.5 1.621500015258789 53.5 3 L 53.5 50 C 53.5 51.37850189208984 52.37850189208984 52.5 51 52.5 Z" stroke="none"/>
-        <path d="M 3 1 C 1.897201538085938 1 1 1.897201538085938 1 3 L 1 50 C 1 51.10279846191406 1.897201538085938 52 3 52 L 51 52 C 52.10279846191406 52 53 51.10279846191406 53 50 L 53 3 C 53 1.897201538085938 52.10279846191406 1 51 1 L 3 1 M 3 0 L 51 0 C 52.6568489074707 0 54 1.343151092529297 54 3 L 54 50 C 54 51.6568489074707 52.6568489074707 53 51 53 L 3 53 C 1.343151092529297 53 0 51.6568489074707 0 50 L 0 3 C 0 1.343151092529297 1.343151092529297 0 3 0 Z" stroke="none" fill="#fff"/>
-      </g>
-      <g id="Group_3653" data-name="Group 3653" transform="translate(-451.104 -74.62)">
-        <g id="Group_1-6" data-name="Group 1" transform="translate(463.105 86.213)">
-          <path id="Path_1-6" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
-          <rect id="Rectangle_5-6" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
-        </g>
-      </g>
-    </g>
     <g id="Component_65_10" data-name="Component 65 – 10" transform="translate(778.494 1521.246)">
       <g id="Rectangle_2365-4" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
         <rect width="54" height="53" rx="3" stroke="none"/>
         <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
       </g>
       <g id="Group_3655-4" data-name="Group 3655" transform="translate(-451.104 -74.619)">
-        <g id="Group_1-7" data-name="Group 1" transform="translate(463.105 86.213)">
-          <path id="Path_1-7" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
-          <rect id="Rectangle_5-7" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
-        </g>
-      </g>
-    </g>
-    <g id="Component_65_5" data-name="Component 65 – 5" transform="translate(778.494 533.018)">
-      <g id="Rectangle_2365-5" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
-        <rect width="54" height="53" rx="3" stroke="none"/>
-        <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
-      </g>
-      <g id="Group_3655-5" data-name="Group 3655" transform="translate(-451.104 -74.619)">
-        <g id="Group_1-8" data-name="Group 1" transform="translate(463.105 86.213)">
-          <path id="Path_1-8" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
-          <rect id="Rectangle_5-8" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
+        <g id="Group_1-6" data-name="Group 1" transform="translate(463.105 86.213)">
+          <path id="Path_1-6" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
+          <rect id="Rectangle_5-6" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
         </g>
       </g>
     </g>
@@ -356,11 +332,17 @@ mentoring support" transform="translate(852.945 529.016)" fill="#fff" font-size=
     <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2402)">
       <rect id="Rectangle_2402-2" data-name="Rectangle 2402" width="360.17" height="121" rx="12" transform="translate(756.11 933.72)" fill="#5b24ec"/>
     </g>
+    <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2510)">
+      <rect id="Rectangle_2510-2" data-name="Rectangle 2510" width="360.17" height="121" rx="12" transform="translate(1136.93 933.72)" fill="#5b24ec"/>
+    </g>
     <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2406)">
       <rect id="Rectangle_2406-2" data-name="Rectangle 2406" width="360.17" height="121" rx="12" transform="translate(756.11 1326.42)" fill="#5b24ec"/>
     </g>
     <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2396)">
       <rect id="Rectangle_2396-2" data-name="Rectangle 2396" width="360.17" height="121" rx="12" transform="translate(756.11 338.19)" fill="#5b24ec"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2509)">
+      <rect id="Rectangle_2509-2" data-name="Rectangle 2509" width="360.17" height="121" rx="12" transform="translate(1137.11 338.19)" fill="#5b24ec"/>
     </g>
     <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2394)">
       <rect id="Rectangle_2394-2" data-name="Rectangle 2394" width="360.172" height="121" rx="12" transform="translate(376.11 6.17)" fill="#5b24ec"/>
@@ -374,92 +356,121 @@ mentoring support" transform="translate(852.945 529.016)" fill="#fff" font-size=
     <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2398)">
       <rect id="Rectangle_2398-2" data-name="Rectangle 2398" width="360.172" height="121" rx="12" transform="translate(376.11 338.36)" fill="#5b24ec"/>
     </g>
-    <text id="Self-paced_learning_management_system" data-name="Self-paced learning
-management system" transform="translate(472.13 30.172)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">Self-paced learning</tspan><tspan x="0" y="49">management system</tspan></text>
-    <text id="Open_Banking_Open_Finance_Trends_Report" data-name="Open Banking/Open Finance Trends Report" transform="translate(472.13 957.893)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">Open Banking/Open </tspan><tspan x="0" y="49">Finance Trends Report</tspan></text>
-    <text id="Open_Banking_Open_Finance" data-name="Open Banking/Open Finance" transform="translate(472.13 1350.588)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">Open Banking/Open </tspan><tspan x="0" y="49">Finance</tspan></text>
-    <text id="Self-paced_learning_management_system-2" data-name="Self-paced learning
-management system" transform="translate(472.13 362.359)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">Self-paced learning</tspan><tspan x="0" y="49">management system</tspan></text>
+    
+    <text id="Self-paced_Learning_Management_System" data-name="Self-paced Learning
+Management System" transform="translate(472.13 16.99)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">Self-paced Learning</tspan><tspan x="0" y="51">Management </tspan><tspan x="0" y="79">System</tspan></text>
+    <text id="Open_Banking_Open_Finance_Trends_Report" data-name="Open Banking/Open Finance Trends Report" transform="translate(472.13 961.715)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">Open Banking/Open </tspan><tspan x="0" y="51">Finance Trends </tspan></text>
+    <text id="Open_Banking_Open_Finance" data-name="Open Banking/Open Finance" transform="translate(472.13 1350.588)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">Open Banking/Open </tspan><tspan x="0" y="51">Finance</tspan></text>
+    <text id="Self-paced_Learning_Management_System-2" data-name="Self-paced Learning
+Management System" transform="translate(472.13 348.865)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">Self-paced Learning</tspan><tspan x="0" y="51">Management </tspan><tspan x="0" y="79">System</tspan></text>
     <g id="Component_65_1" data-name="Component 65 – 1" transform="translate(399.312 34.172)">
-      <g id="Rectangle_2365-6" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
+      <g id="Rectangle_2365-5" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
         <rect width="54" height="53" rx="3" stroke="none"/>
         <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
       </g>
-      <g id="Group_3655-6" data-name="Group 3655" transform="translate(-451.104 -74.619)">
+      <g id="Group_3655-5" data-name="Group 3655" transform="translate(-451.104 -74.619)">
+        <g id="Group_1-7" data-name="Group 1" transform="translate(463.105 86.213)">
+          <path id="Path_1-7" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
+          <rect id="Rectangle_5-7" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+    <g id="Component_66_2" data-name="Component 66 – 2" transform="translate(399.312 961.892)">
+      <g id="Path_3632" data-name="Path 3632" fill="url(#linear-gradient-9)">
+        <path d="M 51 52.5 L 3 52.5 C 1.621500015258789 52.5 0.5 51.37850189208984 0.5 50 L 0.5 3 C 0.5 1.621500015258789 1.621500015258789 0.5 3 0.5 L 51 0.5 C 52.37850189208984 0.5 53.5 1.621500015258789 53.5 3 L 53.5 50 C 53.5 51.37850189208984 52.37850189208984 52.5 51 52.5 Z" stroke="none"/>
+        <path d="M 3 1 C 1.897201538085938 1 1 1.897201538085938 1 3 L 1 50 C 1 51.10279846191406 1.897201538085938 52 3 52 L 51 52 C 52.10279846191406 52 53 51.10279846191406 53 50 L 53 3 C 53 1.897201538085938 52.10279846191406 1 51 1 L 3 1 M 3 0 L 51 0 C 52.6568489074707 0 54 1.343151092529297 54 3 L 54 50 C 54 51.6568489074707 52.6568489074707 53 51 53 L 3 53 C 1.343151092529297 53 0 51.6568489074707 0 50 L 0 3 C 0 1.343151092529297 1.343151092529297 0 3 0 Z" stroke="none" fill="#fff"/>
+      </g>
+      <g id="Group_3653" data-name="Group 3653" transform="translate(-451.104 -74.62)">
+        <g id="Group_1-8" data-name="Group 1" transform="translate(463.105 86.213)">
+          <path id="Path_1-8" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
+          <rect id="Rectangle_5-8" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+    <g id="Component_66_7" data-name="Component 66 – 7" transform="translate(399.312 1354.588)">
+      <g id="Path_3632-2" data-name="Path 3632" fill="url(#linear-gradient-9)">
+        <path d="M 51 52.5 L 3 52.5 C 1.621500015258789 52.5 0.5 51.37850189208984 0.5 50 L 0.5 3 C 0.5 1.621500015258789 1.621500015258789 0.5 3 0.5 L 51 0.5 C 52.37850189208984 0.5 53.5 1.621500015258789 53.5 3 L 53.5 50 C 53.5 51.37850189208984 52.37850189208984 52.5 51 52.5 Z" stroke="none"/>
+        <path d="M 3 1 C 1.897201538085938 1 1 1.897201538085938 1 3 L 1 50 C 1 51.10279846191406 1.897201538085938 52 3 52 L 51 52 C 52.10279846191406 52 53 51.10279846191406 53 50 L 53 3 C 53 1.897201538085938 52.10279846191406 1 51 1 L 3 1 M 3 0 L 51 0 C 52.6568489074707 0 54 1.343151092529297 54 3 L 54 50 C 54 51.6568489074707 52.6568489074707 53 51 53 L 3 53 C 1.343151092529297 53 0 51.6568489074707 0 50 L 0 3 C 0 1.343151092529297 1.343151092529297 0 3 0 Z" stroke="none" fill="#fff"/>
+      </g>
+      <g id="Group_3653-2" data-name="Group 3653" transform="translate(-451.104 -74.62)">
         <g id="Group_1-9" data-name="Group 1" transform="translate(463.105 86.213)">
           <path id="Path_1-9" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
           <rect id="Rectangle_5-9" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
         </g>
       </g>
     </g>
-    <g id="Component_66_2" data-name="Component 66 – 2" transform="translate(399.312 961.892)">
-      <g id="Path_3632-2" data-name="Path 3632" fill="url(#linear-gradient-7)">
-        <path d="M 51 52.5 L 3 52.5 C 1.621500015258789 52.5 0.5 51.37850189208984 0.5 50 L 0.5 3 C 0.5 1.621500015258789 1.621500015258789 0.5 3 0.5 L 51 0.5 C 52.37850189208984 0.5 53.5 1.621500015258789 53.5 3 L 53.5 50 C 53.5 51.37850189208984 52.37850189208984 52.5 51 52.5 Z" stroke="none"/>
-        <path d="M 3 1 C 1.897201538085938 1 1 1.897201538085938 1 3 L 1 50 C 1 51.10279846191406 1.897201538085938 52 3 52 L 51 52 C 52.10279846191406 52 53 51.10279846191406 53 50 L 53 3 C 53 1.897201538085938 52.10279846191406 1 51 1 L 3 1 M 3 0 L 51 0 C 52.6568489074707 0 54 1.343151092529297 54 3 L 54 50 C 54 51.6568489074707 52.6568489074707 53 51 53 L 3 53 C 1.343151092529297 53 0 51.6568489074707 0 50 L 0 3 C 0 1.343151092529297 1.343151092529297 0 3 0 Z" stroke="none" fill="#fff"/>
+    <g id="Component_65_8" data-name="Component 65 – 8" transform="translate(399.312 366.359)">
+      <g id="Rectangle_2365-6" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
+        <rect width="54" height="53" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
       </g>
-      <g id="Group_3653-2" data-name="Group 3653" transform="translate(-451.104 -74.62)">
+      <g id="Group_3655-6" data-name="Group 3655" transform="translate(-451.104 -74.619)">
         <g id="Group_1-10" data-name="Group 1" transform="translate(463.105 86.213)">
           <path id="Path_1-10" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
           <rect id="Rectangle_5-10" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
         </g>
       </g>
     </g>
-    <g id="Component_66_7" data-name="Component 66 – 7" transform="translate(399.312 1354.588)">
-      <g id="Path_3632-3" data-name="Path 3632" fill="url(#linear-gradient-7)">
-        <path d="M 51 52.5 L 3 52.5 C 1.621500015258789 52.5 0.5 51.37850189208984 0.5 50 L 0.5 3 C 0.5 1.621500015258789 1.621500015258789 0.5 3 0.5 L 51 0.5 C 52.37850189208984 0.5 53.5 1.621500015258789 53.5 3 L 53.5 50 C 53.5 51.37850189208984 52.37850189208984 52.5 51 52.5 Z" stroke="none"/>
-        <path d="M 3 1 C 1.897201538085938 1 1 1.897201538085938 1 3 L 1 50 C 1 51.10279846191406 1.897201538085938 52 3 52 L 51 52 C 52.10279846191406 52 53 51.10279846191406 53 50 L 53 3 C 53 1.897201538085938 52.10279846191406 1 51 1 L 3 1 M 3 0 L 51 0 C 52.6568489074707 0 54 1.343151092529297 54 3 L 54 50 C 54 51.6568489074707 52.6568489074707 53 51 53 L 3 53 C 1.343151092529297 53 0 51.6568489074707 0 50 L 0 3 C 0 1.343151092529297 1.343151092529297 0 3 0 Z" stroke="none" fill="#fff"/>
+    <text id="Data_Governance_Systems_App" data-name="Data Governance 
+Systems App" transform="translate(852.945 32.766)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">Data Governance </tspan><tspan x="0" y="51">Systems App</tspan></text>
+    <text id="Open_Banking_Open_finance_API_product_pricing_tool" data-name="Open Banking/ Open finance API product 
+pricing tool" transform="translate(851.313 942.669)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">Open Banking/ Open </tspan><tspan x="0" y="51">finance API product </tspan><tspan x="0" y="79">pricing tool</tspan></text>
+    <text id="Open_Banking_Regulation_Tracker" data-name="Open Banking 
+Regulation Tracker" transform="translate(1233.761 962.106)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">Open Banking </tspan><tspan x="0" y="48">Regulation Tracker</tspan></text>
+    <text id="Government_APIs" data-name="Government APIs" transform="translate(852.945 1364.808)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">Government APIs</tspan></text>
+    <text id="API_Governance_Systems_App" data-name="API Governance 
+Systems App" transform="translate(852.945 365.715)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">API Governance </tspan><tspan x="0" y="51">Systems App</tspan></text>
+    <text id="Virtual_Learning_Management_System-2" data-name="Virtual Learning
+Management System" transform="translate(1233.947 348.865)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">Virtual Learning</tspan><tspan x="0" y="51">Management </tspan><tspan x="0" y="79">System</tspan></text>
+    <g id="Component_65_3" data-name="Component 65 – 3" transform="translate(778.494 36.81)">
+      <g id="Rectangle_2365-7" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
+        <rect width="54" height="53" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
       </g>
-      <g id="Group_3653-3" data-name="Group 3653" transform="translate(-451.104 -74.62)">
+      <g id="Group_3655-7" data-name="Group 3655" transform="translate(-451.104 -74.619)">
         <g id="Group_1-11" data-name="Group 1" transform="translate(463.105 86.213)">
           <path id="Path_1-11" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
           <rect id="Rectangle_5-11" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
         </g>
       </g>
     </g>
-    <g id="Component_65_8" data-name="Component 65 – 8" transform="translate(399.312 366.359)">
-      <g id="Rectangle_2365-7" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
-        <rect width="54" height="53" rx="3" stroke="none"/>
-        <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
+    <g id="Component_66_3" data-name="Component 66 – 3" transform="translate(778.494 964.529)">
+      <g id="Path_3632-3" data-name="Path 3632" fill="url(#linear-gradient-9)">
+        <path d="M 51 52.5 L 3 52.5 C 1.621500015258789 52.5 0.5 51.37850189208984 0.5 50 L 0.5 3 C 0.5 1.621500015258789 1.621500015258789 0.5 3 0.5 L 51 0.5 C 52.37850189208984 0.5 53.5 1.621500015258789 53.5 3 L 53.5 50 C 53.5 51.37850189208984 52.37850189208984 52.5 51 52.5 Z" stroke="none"/>
+        <path d="M 3 1 C 1.897201538085938 1 1 1.897201538085938 1 3 L 1 50 C 1 51.10279846191406 1.897201538085938 52 3 52 L 51 52 C 52.10279846191406 52 53 51.10279846191406 53 50 L 53 3 C 53 1.897201538085938 52.10279846191406 1 51 1 L 3 1 M 3 0 L 51 0 C 52.6568489074707 0 54 1.343151092529297 54 3 L 54 50 C 54 51.6568489074707 52.6568489074707 53 51 53 L 3 53 C 1.343151092529297 53 0 51.6568489074707 0 50 L 0 3 C 0 1.343151092529297 1.343151092529297 0 3 0 Z" stroke="none" fill="#fff"/>
       </g>
-      <g id="Group_3655-7" data-name="Group 3655" transform="translate(-451.104 -74.619)">
+      <g id="Group_3653-3" data-name="Group 3653" transform="translate(-451.104 -74.62)">
         <g id="Group_1-12" data-name="Group 1" transform="translate(463.105 86.213)">
           <path id="Path_1-12" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
           <rect id="Rectangle_5-12" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
         </g>
       </g>
     </g>
-    <text id="Data_governance_systems_app" data-name="Data governance 
-systems app" transform="translate(852.945 33.598)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">Data governance </tspan><tspan x="0" y="49">systems app</tspan></text>
-    <text id="Open_banking_Open_finance_API_product_pricing_tool" data-name="Open banking/ Open finance API product 
-pricing tool" transform="translate(852.945 947.603)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">Open banking/ Open </tspan><tspan x="0" y="49">finance API product </tspan><tspan x="0" y="74">pricing tool</tspan></text>
-    <text id="Government_APIs" data-name="Government APIs" transform="translate(852.945 1364.808)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">Government APIs</tspan></text>
-    <text id="API_governance_systems_app" data-name="API governance 
-systems app" transform="translate(852.945 365.785)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">API governance </tspan><tspan x="0" y="49">systems app</tspan></text>
-    <g id="Component_65_3" data-name="Component 65 – 3" transform="translate(778.494 36.81)">
-      <g id="Rectangle_2365-8" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
-        <rect width="54" height="53" rx="3" stroke="none"/>
-        <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
+    <g id="Component_66_8" data-name="Component 66 – 8" transform="translate(1159.31 964.529)">
+      <g id="Path_3632-4" data-name="Path 3632" fill="url(#linear-gradient-9)">
+        <path d="M 51 52.5 L 3 52.5 C 1.621500015258789 52.5 0.5 51.37850189208984 0.5 50 L 0.5 3 C 0.5 1.621500015258789 1.621500015258789 0.5 3 0.5 L 51 0.5 C 52.37850189208984 0.5 53.5 1.621500015258789 53.5 3 L 53.5 50 C 53.5 51.37850189208984 52.37850189208984 52.5 51 52.5 Z" stroke="none"/>
+        <path d="M 3 1 C 1.897201538085938 1 1 1.897201538085938 1 3 L 1 50 C 1 51.10279846191406 1.897201538085938 52 3 52 L 51 52 C 52.10279846191406 52 53 51.10279846191406 53 50 L 53 3 C 53 1.897201538085938 52.10279846191406 1 51 1 L 3 1 M 3 0 L 51 0 C 52.6568489074707 0 54 1.343151092529297 54 3 L 54 50 C 54 51.6568489074707 52.6568489074707 53 51 53 L 3 53 C 1.343151092529297 53 0 51.6568489074707 0 50 L 0 3 C 0 1.343151092529297 1.343151092529297 0 3 0 Z" stroke="none" fill="#fff"/>
       </g>
-      <g id="Group_3655-8" data-name="Group 3655" transform="translate(-451.104 -74.619)">
+      <g id="Group_3653-4" data-name="Group 3653" transform="translate(-451.104 -74.62)">
         <g id="Group_1-13" data-name="Group 1" transform="translate(463.105 86.213)">
           <path id="Path_1-13" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
           <rect id="Rectangle_5-13" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
         </g>
       </g>
     </g>
-    <g id="Component_66_3" data-name="Component 66 – 3" transform="translate(778.494 964.529)">
-      <g id="Path_3632-4" data-name="Path 3632" fill="url(#linear-gradient-7)">
-        <path d="M 51 52.5 L 3 52.5 C 1.621500015258789 52.5 0.5 51.37850189208984 0.5 50 L 0.5 3 C 0.5 1.621500015258789 1.621500015258789 0.5 3 0.5 L 51 0.5 C 52.37850189208984 0.5 53.5 1.621500015258789 53.5 3 L 53.5 50 C 53.5 51.37850189208984 52.37850189208984 52.5 51 52.5 Z" stroke="none"/>
-        <path d="M 3 1 C 1.897201538085938 1 1 1.897201538085938 1 3 L 1 50 C 1 51.10279846191406 1.897201538085938 52 3 52 L 51 52 C 52.10279846191406 52 53 51.10279846191406 53 50 L 53 3 C 53 1.897201538085938 52.10279846191406 1 51 1 L 3 1 M 3 0 L 51 0 C 52.6568489074707 0 54 1.343151092529297 54 3 L 54 50 C 54 51.6568489074707 52.6568489074707 53 51 53 L 3 53 C 1.343151092529297 53 0 51.6568489074707 0 50 L 0 3 C 0 1.343151092529297 1.343151092529297 0 3 0 Z" stroke="none" fill="#fff"/>
+    <g id="Component_65_9" data-name="Component 65 – 9" transform="translate(778.494 1357.226)">
+      <g id="Rectangle_2365-8" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
+        <rect width="54" height="53" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
       </g>
-      <g id="Group_3653-4" data-name="Group 3653" transform="translate(-451.104 -74.62)">
+      <g id="Group_3655-8" data-name="Group 3655" transform="translate(-451.104 -74.619)">
         <g id="Group_1-14" data-name="Group 1" transform="translate(463.105 86.213)">
           <path id="Path_1-14" data-name="Path 1" d="M14.907,0,11.926,2.981,2.981,11.926,0,14.907l2.981,2.981L14.907,29.814l2.981-2.981L5.963,14.907l8.944-8.944,8.944,8.944L17.889,20.87l2.981,2.981,5.963-5.963,2.981-2.981-2.981-2.981L17.889,2.981Z" fill="#fff"/>
           <rect id="Rectangle_5-14" data-name="Rectangle 5" width="4.638" height="4.638" transform="translate(11.628 14.907) rotate(-45)" fill="#fff"/>
         </g>
       </g>
     </g>
-    <g id="Component_65_9" data-name="Component 65 – 9" transform="translate(778.494 1357.226)">
+    <g id="Component_65_6" data-name="Component 65 – 6" transform="translate(778.494 368.997)">
       <g id="Rectangle_2365-9" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
         <rect width="54" height="53" rx="3" stroke="none"/>
         <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
@@ -471,7 +482,7 @@ systems app" transform="translate(852.945 365.785)" fill="#fff" font-size="22" f
         </g>
       </g>
     </g>
-    <g id="Component_65_6" data-name="Component 65 – 6" transform="translate(778.494 368.997)">
+    <g id="Component_65_13" data-name="Component 65 – 13" transform="translate(1159.496 368.997)">
       <g id="Rectangle_2365-10" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
         <rect width="54" height="53" rx="3" stroke="none"/>
         <rect x="0.5" y="0.5" width="53" height="52" rx="2.5" fill="none"/>
@@ -483,17 +494,11 @@ systems app" transform="translate(852.945 365.785)" fill="#fff" font-size="22" f
         </g>
       </g>
     </g>
-    <rect id="Rectangle_2389" data-name="Rectangle 2389" width="346.078" height="121" rx="12" transform="translate(0 420.245)" fill="#5b24ec"/>
-    <rect id="Rectangle_2399" data-name="Rectangle 2399" width="346.078" height="121" rx="12" transform="translate(0 724.883)" fill="#5b24ec"/>
-    <rect id="Rectangle_2411" data-name="Rectangle 2411" width="346.078" height="121" rx="12" transform="translate(0 1718.096)" fill="#5b24ec"/>
-    <rect id="Rectangle_2400" data-name="Rectangle 2400" width="346.078" height="121" rx="12" transform="translate(0 1012.322)" fill="#5b24ec"/>
     <text id="API_Governance" data-name="API 
-Governance" transform="translate(115.307 447.745)" fill="#fff" font-size="25" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="27">API </tspan><tspan x="0" y="57">Governance</tspan></text>
-    <text id="Open_Ecosystem_Consultancy" data-name="Open Ecosystem 
-Consultancy" transform="translate(115.307 751.383)" fill="#fff" font-size="25" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="27">Open Ecosystem </tspan><tspan x="0" y="60">Consultancy</tspan></text>
-    <text id="Speaker_Engagement" data-name="Speaker 
-Engagement" transform="translate(115.307 1744.596)" fill="#fff" font-size="25" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="27">Speaker </tspan><tspan x="0" y="60">Engagement</tspan></text>
-    <text id="Data_products" data-name="Data products" transform="translate(115.307 1053.822)" fill="#fff" font-size="25" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="27">Data products</tspan></text>
+Governance" transform="translate(115.307 451.187)" fill="#fff" font-size="24" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="25">API </tspan><tspan x="0" y="55">Governance</tspan></text>
+    <text id="Open_Ecosystem_Consultancy" data-name="Open Ecosystem Consultancy" transform="translate(115.307 768.883)" fill="#fff" font-size="24" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="25">Open Ecosystem Consultancy</tspan></text>
+    <text id="Speaker_Engagement" data-name="Speaker Engagement" transform="translate(115.307 1762.096)" fill="#fff" font-size="24" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="25">Speaker Engagement</tspan></text>
+    <text id="Data_Products" data-name="Data Products" transform="translate(115.307 1056.322)" fill="#fff" font-size="24" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="25">Data Products</tspan></text>
     <g id="icon05_sec02" transform="translate(15.307 439.555)">
       <g id="Group_2343" data-name="Group 2343" transform="translate(0 0)">
         <path id="Path_2451" data-name="Path 2451" d="M23.309,8.544,12.841,14.778l-2.52-7.542,7.948-4.727Z" transform="translate(6.056 1.472)" fill="#bba4ff" stroke="#bba4ff" stroke-width="1"/>
@@ -569,32 +574,32 @@ Engagement" transform="translate(115.307 1744.596)" fill="#fff" font-size="25" f
         </g>
       </g>
     </g>
-    <g id="icon03_sec_02" transform="translate(11.307 1737.405)">
+    <g id="icon03_sec_02" transform="translate(13.851 1738.965)">
       <g id="Group_2345" data-name="Group 2345" transform="translate(9.951 52.241)">
         <g id="Group_2318-3" data-name="Group 2318" transform="translate(0 0)" clip-path="url(#clip-path-9)">
           <path id="Path_2482-3" data-name="Path 2482" d="M10.211,0A7.111,7.111,0,1,1,3.1,7.11,7.11,7.11,0,0,1,10.211,0" transform="translate(0.455 0.001)" fill="#bba4ff"/>
           <path id="Path_2483-3" data-name="Path 2483" d="M21.331,24.93A10.666,10.666,0,0,0,0,24.93" transform="translate(0 2.092)" fill="#bba4ff"/>
         </g>
       </g>
-      <g id="Group_2346" data-name="Group 2346" transform="translate(64.447 52.241)">
+      <g id="Group_2346" data-name="Group 2346" transform="translate(59.447 52.241)">
         <g id="Group_2318-4" data-name="Group 2318" transform="translate(0 0)" clip-path="url(#clip-path-9)">
           <path id="Path_2482-4" data-name="Path 2482" d="M10.211,0A7.111,7.111,0,1,1,3.1,7.11,7.11,7.11,0,0,1,10.211,0" transform="translate(0.455 0.001)" fill="#bba4ff"/>
           <path id="Path_2483-4" data-name="Path 2483" d="M21.331,24.93A10.666,10.666,0,0,0,0,24.93" transform="translate(0 2.092)" fill="#bba4ff"/>
         </g>
       </g>
-      <g id="Group_2347" data-name="Group 2347" transform="translate(37.199 52.241)">
+      <g id="Group_2347" data-name="Group 2347" transform="translate(34.44 52.241)">
         <g id="Group_2318-5" data-name="Group 2318" transform="translate(0 0)" clip-path="url(#clip-path-9)">
           <path id="Path_2482-5" data-name="Path 2482" d="M10.211,0A7.111,7.111,0,1,1,3.1,7.11,7.11,7.11,0,0,1,10.211,0" transform="translate(0.455 0.001)" fill="#bba4ff"/>
           <path id="Path_2483-5" data-name="Path 2483" d="M21.331,24.93A10.666,10.666,0,0,0,0,24.93" transform="translate(0 2.092)" fill="#bba4ff"/>
         </g>
       </g>
       <g id="Rectangle_1422" data-name="Rectangle 1422" stroke="#fff" stroke-width="2" fill="url(#linear-gradient-20)">
-        <rect width="88.737" height="42.222" rx="4" stroke="none"/>
-        <rect x="1" y="1" width="86.737" height="40.222" rx="3" fill="none"/>
+        <rect width="83.737" height="42.222" rx="4" stroke="none"/>
+        <rect x="1" y="1" width="81.737" height="40.222" rx="3" fill="none"/>
       </g>
       <g id="Group_2348" data-name="Group 2348" transform="translate(10.668 6.228)">
         <g id="Group_2324" data-name="Group 2324" transform="translate(0 6.031)">
-          <g id="Group_2318-6" data-name="Group 2318" transform="translate(0 0)" clip-path="url(#clip-path-12)">
+          <g id="Group_2318-6" data-name="Group 2318" clip-path="url(#clip-path-12)">
             <path id="Path_2482-6" data-name="Path 2482" d="M11.5,0A8.4,8.4,0,1,1,3.1,8.4,8.4,8.4,0,0,1,11.5,0" transform="translate(1.101 2.148)" fill="#3001aa"/>
             <path id="Path_2483-6" data-name="Path 2483" d="M25.21,26.869a12.605,12.605,0,0,0-25.21,0" transform="translate(0 7.213)" fill="#3001aa"/>
           </g>
@@ -627,7 +632,7 @@ Engagement" transform="translate(115.307 1744.596)" fill="#fff" font-size="25" f
     <g transform="matrix(1, 0, 0, 1, 0, -6)" filter="url(#Rectangle_2410)">
       <rect id="Rectangle_2410-2" data-name="Rectangle 2410" width="364.379" height="121" rx="12" transform="translate(1136.93 1326.01)" fill="#5b24ec"/>
     </g>
-    <text id="API_industry" data-name="API industry" transform="translate(1232.945 1364.059)" fill="#fff" font-size="22" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="24">API industry</tspan></text>
+    <text id="API_Industry" data-name="API Industry" transform="translate(1232.945 1364.059)" fill="#fff" font-size="22" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="23">API Industry</tspan></text>
     <g id="Component_65_11" data-name="Component 65 – 11" transform="translate(1159.881 1354.01)">
       <g id="Rectangle_2365-11" data-name="Rectangle 2365" stroke="#fff" stroke-width="1" fill="url(#linear-gradient-2)">
         <rect width="54" height="53" rx="3" stroke="none"/>
@@ -640,8 +645,8 @@ Engagement" transform="translate(115.307 1744.596)" fill="#fff" font-size="25" f
         </g>
       </g>
     </g>
-    <rect id="Rectangle_2409" data-name="Rectangle 2409" width="346.078" height="121" rx="12" transform="translate(0 1405.019)" fill="#5b24ec"/>
-    <text id="Datasets" transform="translate(115.307 1446.519)" fill="#fff" font-size="25" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="27">Datasets</tspan></text>
+   
+    <text id="Datasets" transform="translate(115.307 1449.929)" fill="#fff" font-size="24" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="25">Datasets</tspan></text>
     <g id="icon01_sec_02" transform="translate(26.307 1424.328)">
       <g id="Group_2260" data-name="Group 2260" clip-path="url(#clip-path-13)">
         <g id="Group_2259" data-name="Group 2259" transform="translate(0 0)">
@@ -668,4 +673,39 @@ Engagement" transform="translate(115.307 1744.596)" fill="#fff" font-size="25" f
       </g>
     </g>
   </g>
+  <Link href="/products/data-governance">
+                    <rect   onMouseEnter={higlightSection} onMouseLeave={unhighlightSection} className={styles.rectangle_parent_product} id="Rectangle Data governance" width="100%" height="300" rx="12" fill="#ffffff00"  >
+                        {/* Data Governance */}
+                    </rect>
+
+                       
+                </Link>
+                 <Link href="/products/api-governance">
+                    <rect onMouseEnter={higlightSection} onMouseLeave={unhighlightSection} id="Rectangle API governance" y="330" width="100%" height="300" rx="12" fill="#ffffff00"  >
+                        {/* API Governance */}
+                    </rect>
+                </Link>
+                <Link href="/products/open-ecosystem-consultancy">
+                    <rect onMouseEnter={higlightSection} onMouseLeave={unhighlightSection} id="Rectangle Open ecosystem consultancy" y="710" width="100%" height="150" rx="12" fill="#ffffff00"  >
+                        {/* Open ecosystem consultancy */}
+                    </rect>
+                </Link>
+                
+                <Link href="/products/data-products">
+                    <rect onMouseEnter={higlightSection} onMouseLeave={unhighlightSection} id="Rectangle Data products" y="920" width="100%" height="300" rx="12" fill="transparent" pointerEvents='fill' >
+                        {/* Data Products */}
+                    </rect>
+                </Link>
+                
+                <Link href="/products/datasets">
+                    <rect onMouseEnter={higlightSection} onMouseLeave={unhighlightSection} id="Rectangle Datasets" y="1315" width="100%" height="300" rx="12" fill="none" pointerEvents='all' >
+                        {/* Datasets */}
+                    </rect>
+                </Link>
+
+                <Link href="/products/speaker-engagement">
+                    <rect onMouseEnter={higlightSection} onMouseLeave={unhighlightSection} id="Rectangle Speaker engagement" y="1700" width="100%" height="170" rx="12" fill="#ffffff00"   >
+                        {/* Speaker engagement */}
+                    </rect>
+                </Link>
 </svg>
