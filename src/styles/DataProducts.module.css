@@ -62,8 +62,6 @@ div[data-card-number='4'] .card_heading  {
     /*  */
 }
 
-
-
   
   .pic_ctn {
     width: 100vw;
@@ -123,3 +121,4 @@ div[data-card-number='4'] .card_heading  {
   .image:nth-child(5) {
     animation-delay: 24s;
   }
+
