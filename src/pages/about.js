@@ -33,12 +33,12 @@ export default function About({ data }) {
             </div>
           </Link>
         </button>
-        <OurMission data={data} />
-        <OurCommitment data={data} />
+        <OurMission id="our-mission" data={data} />
+          <OurCommitment id="our-commitment" data={data} />
       </div>
 
-      <PrivacyPolicy data={data} />
-      <Team data={data.team.data} styles={styles}/>
+      <PrivacyPolicy id="our-privacy" data={data} />
+      <Team id="our-team" data={data.team.data} styles={styles}/>
 
       <Footer />
     </Layout>
