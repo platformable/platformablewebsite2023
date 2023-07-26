@@ -22,8 +22,8 @@ export default function FindMore({ images }) {
   return (
     <section className={`py-10  bg-white overflow-x-hidden`}>
       <div className={styles.pic_ctn}>
-    {slices?.map( slice => (
-      <div className={`${styles.image} grid grid-cols-[4fr_1.5fr]`}>
+    {slices?.map( (slice,index) => (
+      <div className={`${styles.image} grid grid-cols-[4fr_1.5fr]`} key={index}>
         <div className="flex flex-col gap-y-10">
           <h2 className="font-bold text-[var(--purple-medium)]">{slice.title}</h2>
           <Link href={slice.link}>
