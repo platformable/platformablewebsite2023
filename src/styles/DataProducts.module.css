@@ -122,3 +122,72 @@ div[data-card-number='4'] .card_heading  {
     animation-delay: 24s;
   }
 
+
+
+
+
+
+
+
+
+
+/* $animation-timing: 27s;
+$carousel-items: 9;
+$animation-delay-fraction: $animation-timing / $carousel-items;
+$animation-steps-fraction: 100 / $carousel-items;
+$slide-change-timing: 3; // percentage of total animation cycle */
+
+
+
+
+.carousel__item {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  /* padding: 0 12px; */
+  opacity: 0;
+  will-change: transform, opacity; 
+  animation: carousel-animate-vertical 27s linear infinite;
+}
+
+ .carousel__item[id="1"] {
+  animation-delay: 9s;
+}
+.carousel__item[id="2"] {
+  animation-delay: 18s;
+}
+.carousel__item[id="3"] {
+  animation-delay: 27s;
+} 
+
+@keyframes carousel-animate-vertical {
+  0% {
+    transform: translateY(85%) scale(0.3);
+    opacity: 0;
+    visibility: hidden;
+  }
+  3%,
+  33% {
+    transform: translateY(85%) scale(0.5);
+    opacity: .4;
+    visibility: visible;
+  }
+  36%,
+  66% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  69%,
+  99% {
+    transform: translateY(-85%) scale(0.5);
+    opacity: .4;
+    visibility: visible;
+  }
+  
+  100% {
+    transform: translateY(-85%) scale(0.3);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
