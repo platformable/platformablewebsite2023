@@ -81,9 +81,10 @@ User needs, Business Model Potential, Scalability assessment`,
             Our Process
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-5" >
+        <div className="grid md:grid-cols-1 grid-cols-1 gap-5" >
+          <img src="/our-process-diagram.png" alt="" />
           
-          <ProcessCards data={OurProcessData}/>       
+          {/* <ProcessCards data={OurProcessData}/>  */}      
         </div>
       </div>
     </section>
