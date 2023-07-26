@@ -1,0 +1,101 @@
+import React from "react";
+import TestimonialCard from "./TestimonialCard";
+import styles from "@/styles/Homepage.module.css";
+
+export default function Testimonials({ data, title, logos }) {
+  const brands = [
+    {
+      logo: "/LN_logo.png",
+    },
+    {
+      logo: "/iseal_logo.png",
+    },
+    {
+      logo: "/axway_logo.png",
+    },
+    {
+      logo: "/APIToS_logo.png",
+    },
+    {
+      logo: "/odi_logo.png",
+    },
+    {
+      logo: "/alias_logo.png",
+    },
+  ];
+  return (
+    <section className={`py-10  ${styles["testimonials-bg"]} `}>
+      <div className="container mx-auto md:mb-10 mb-0">
+        <div className="flex gap-x-5 items-center ">
+          <img
+            src="/platformable-icon-purple.svg"
+            alt=""
+            className="md:flex hidden"
+          />
+          <h2
+            className={`text-[#5B24EC]  font-bold  md:leading-10 leading-8`}
+          >
+            {title}
+          </h2>
+        </div>
+      </div>
+
+      <div className={`${data?.length === 1 ? 'flex justify-center' : ''} container  mx-auto py-10`}>
+        <div className={`grid ${data?.length > 1 ? 'md:grid-cols-'+data?.length : ' '}  mb-10 gap-x-10 md:px-0 px-5 md:gap-y-0 gap-y-5 2xl:px-32`}>
+          {data &&
+            data.map((testimonial, index) => {
+              return (
+                <div className="rounded-md bg-white shadow-xl grid grid-rows-[0.5fr_2fr_0.5fr] justify-between" key={index}>
+                <div className="p-7">
+                <img
+                    src={testimonial.testimonials_img.data.attributes.url}
+                    alt=""
+                    className="place-center"
+                  />
+                </div>
+               
+                <div
+                    dangerouslySetInnerHTML={{
+                      __html: testimonial.testimonials_text,
+                    }}
+                    className="flex items-center italic font-light px-7 py-5 md:py-10"
+                  />
+              
+                <div className={`${
+                      index % 2 == 0 ? "bg-blue-medium" : "bg-green-dark "
+                    } rounded-bl-lg rounded-br-lg p-7`}>
+                <p
+                      className={`${
+                        index % 2 == 0 ? "text-white" : "text-black"
+                      }`}
+                    >
+                      {testimonial.testimonials_clientname}
+                    </p>
+                  <span
+                      className={`${
+                        index % 2 == 0 ? "text-white" : "text-black"
+                      }`}
+                    >
+                      {testimonial.testimonials_client_role}
+                    </span>
+                </div>
+              </div>
+              );
+            })}
+        </div>
+        {logos && (
+          <div className="grid gap-x-5 md:grid-cols-6 grid-cols-2 md:gap-y-0 gap-y-3 items-center mt-20 justify-center md:px-0 px-5">
+            {brands &&
+              brands.map((logo, index) => {
+                return (
+                  <div key={index} className="flex justify-center">
+                    <img src={logo.logo} alt={"platformable"} />
+                  </div>
+                );
+              })}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}

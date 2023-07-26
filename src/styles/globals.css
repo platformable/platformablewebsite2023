@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,100;1,300;1,400;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +8,27 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+<<<<<<< HEAD
+=======
+
+  --purple:#7743F5;
+  --purple-extra-dark:#1D17A8;
+  --purple-dark:#2A2FC1;
+  --purple-medium:#5B24EC;
+  --purple-light:#A17EFF;
+  --purple-extra-light:#DCD1FF;
+  --green-medium:#99F0CF;
+  --green-dark:#0ADC8D;
+  --green: #06DE8B;
+  --green-light:#E2FFF4;
+  --blue-dark:#0A1385;
+  --blue:#3024C6;
+  --blue-extra-dark:#3423C9;
+  --blue-medium:#0562FF;
+  --pink-light:#F1ACFF;
+  --pink:#F157FF;
+  --yellow: #FFE200;
+>>>>>>> 88d90bdf83f88b4cbeec30b8a563e73335d4e2b9
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,7 +38,11 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+/* #rect_parent[data-product-type-rectangle="Rectangle Data governance"]:hover ~ rect[id="Rectangle Data governance"]  {
+  fill: red;
+} */
 
+<<<<<<< HEAD
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +51,146 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+=======
+.change_fill_color {
+  animation: opacityMove 10s infinite ease-in-out;
+  /* opacity: 70%; */
+}
+
+@keyframes opacityMove {
+  0% {
+    opacity: 70%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 70%;
+  }
+}
+
+body {
+
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+p {
+font-size:20px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 46px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 36px;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+h6 {
+  font-size:24px;
+}
+
+/* backgrounds */
+.bg-green-medium {
+  background-color: var(--green-medium);
+}
+
+.bg-purple-light{
+  background-color: var(--purple-light);
+}
+
+/* DIFFERENT DEVICES */
+
+@media screen and (max-width: 480px) {
+  p {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 25px;
+  }
+
+  h5 {
+    font-size: 22px;
+  }
+
+  h6 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1240px) {
+  p {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 25px;
+  }
+
+  h5 {
+    font-size: 26px;
+  }
+
+  h6 {
+    font-size: 22px;
+  }
+}
+
+.bg-green-dark {
+  background-color: var(--green-dark);
+}
+
+.bg-blue-medium {
+  background-color: var(--blue-medium);
+}
+
+/* BLOGS */
+
+.blog-card-date-bg {
+  background: linear-gradient(-90deg, #ff9d00 0%, #ef58fe 100%) 0% 0% no-repeat
+    padding-box;
+  background-size: 150% 150%;
+  animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+  /*  */
+>>>>>>> 88d90bdf83f88b4cbeec30b8a563e73335d4e2b9
 }

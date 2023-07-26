@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53.746" height="61.142" viewBox="0 0 53.746 61.142">
+  <defs>
+    <filter id="Rectangle_1614" x="0" y="0" width="53.746" height="61.142" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2600" data-name="Rectangle 2600" width="23.059" height="31.701" fill="#3328c3"/>
+    </clipPath>
+  </defs>
+  <g id="specification_sheet" data-name="specification sheet" transform="translate(9 6)">
+    <g id="Group_3831" data-name="Group 3831" transform="translate(-274.621 -1661.471)">
+      <g transform="matrix(1, 0, 0, 1, 265.62, 1655.47)" filter="url(#Rectangle_1614)">
+        <g id="Rectangle_1614-2" data-name="Rectangle 1614" transform="translate(9 6)" fill="#fff" stroke="#3328c3" stroke-width="1">
+          <rect width="35.746" height="43.142" rx="2" stroke="none"/>
+          <rect x="0.5" y="0.5" width="34.746" height="42.142" rx="1.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Rectangle_1615" data-name="Rectangle 1615" transform="translate(278.07 1664.921)" fill="#fff" stroke="#3328c3" stroke-width="1">
+        <rect width="35.746" height="43.142" rx="2" stroke="none"/>
+        <rect x="0.5" y="0.5" width="34.746" height="42.142" rx="1.5" fill="none"/>
+      </g>
+      <g id="Group_3829" data-name="Group 3829" transform="translate(284.414 1670.642)">
+        <path id="Path_3744" data-name="Path 3744" d="M5.566,40.179h8.369v6.767H5.566Zm-.011-3.226H13.92v1.953H5.555Zm-3.808-1.2v1.2H4.294v2H1.737V40.13H4.286v6.854H1.745V48.14H24.168V46.964H15.2V40.128h8.962V38.916H15.188v-2h8.966V35.752Z" transform="translate(-1.111 -22.87)" fill="#3328c3"/>
+        <g id="Group_3830" data-name="Group 3830" transform="translate(0 0)">
+          <g id="Group_3829-2" data-name="Group 3829" transform="translate(0 0)" clip-path="url(#clip-path)">
+            <rect id="Rectangle_2593" data-name="Rectangle 2593" width="22.435" height="1.143" transform="translate(0.624 9.668)" fill="#3328c3"/>
+            <rect id="Rectangle_2594" data-name="Rectangle 2594" width="15.993" height="1.147" transform="translate(7.05 27.341)" fill="#3328c3"/>
+            <rect id="Rectangle_2595" data-name="Rectangle 2595" width="22.414" height="1.149" transform="translate(0.64 6.46)" fill="#3328c3"/>
+            <rect id="Rectangle_2596" data-name="Rectangle 2596" width="12.781" height="1.145" transform="translate(10.261 30.556)" fill="#3328c3"/>
+            <rect id="Rectangle_2597" data-name="Rectangle 2597" width="7.964" height="1.144" transform="translate(0.624 3.24)" fill="#3328c3"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
