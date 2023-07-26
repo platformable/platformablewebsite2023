@@ -11,8 +11,8 @@ export default function OurCommitment({ data }) {
           <h4 className="font-bold">{data?.ourCommitment_title}</h4>
         </div>
         <article className="grid gap-32">
-          {data?.commitments?.map((commit) => (
-            <div className="grid grid-cols-[1fr_3fr] gap-7">
+          {data?.commitments?.map((commit,index) => (
+            <div className="grid grid-cols-[1fr_3fr] gap-7" key={index}>
               <div className="flex flex-col gap-y-5 px-10 justify-center border-r-2 border-white">
                 <img src={commit.commitment_img?.data?.attributes.url} alt="" />
                 <p>{commit?.commitment_text}</p>
