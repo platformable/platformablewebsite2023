@@ -1,0 +1,70 @@
+.hero_bg_gradient {
+    background: transparent linear-gradient(to left, #5B24EC 0%, #3423C9 100%) 0% 0% no-repeat padding-box;
+}
+
+.hero_explore_btn_bg_gradient {
+    background: transparent linear-gradient(to left, #08DD8C 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
+    background-size: 135% 135%;
+    animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+}
+
+    
+    
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.understand-posts-bg {
+    background: linear-gradient( #7542F5 0%,   #E67EFF 100%) 0% 0% no-repeat padding-box;
+    background-size: 150% 150%;
+    animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+    /*  */
+}
+
+.button_selected_category_gradient_OE {
+    background: transparent linear-gradient(90deg, #F157FF 0%, #06DE8B 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    box-shadow: none;
+}
+
+.button_selected_category_gradient_OE:hover {
+    background: transparent linear-gradient(90deg, #F157FF 0%, #06DE8B 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+
+.button_selected_category_gradient_OBOF {
+    background: transparent linear-gradient(-90deg, #FF9D00 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    box-shadow: none;
+}
+
+.button_selected_category_gradient_OBOF:hover {
+    background: transparent linear-gradient(-90deg, #FF9D00 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.button_selected_category_gradient_OH {
+    background: transparent linear-gradient(90deg, #F157FF 0%, #0062FF 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    box-shadow: none;
+}
+
+.button_selected_category_gradient_OH:hover {
+    background: transparent linear-gradient(90deg, #F157FF 0%, #0062FF 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    box-shadow: 0px 3px 6px #00000029;
+}
