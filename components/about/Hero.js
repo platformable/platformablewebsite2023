@@ -8,9 +8,9 @@ export default function Hero({ data }) {
             dangerouslySetInnerHTML={{
               __html: data?.hero_description,
             }}
-            className="lg:w-3/6 2xl:w-4/7"
+            // className="lg:w-3/6 2xl:w-4/7"
           />
-          <img src={data?.hero_img?.data?.attributes.url} alt="" />
+          <img src={data?.hero_img?.data?.attributes.url} alt="Platofmrable Environmnet logo" />
         </div>
 
        
