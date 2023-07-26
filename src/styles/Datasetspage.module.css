@@ -1,5 +1,8 @@
 .hero_background_gradient {
-    background: transparent linear-gradient(90deg, #5B24EC 0%, #8A55FF 100%) 0% 0% no-repeat padding-box;
+    background-color: #5B24EC;
+}
+.bg_section_datasets {
+    background-color: #5B24EC;
 }
 .datasets-our-process-bg {
     background: #E9E8F8;
@@ -13,38 +16,41 @@
 
 div[data-card-number='1'] .card_heading {
     background:  transparent linear-gradient(269deg, #FC912A 0%, #F157FF 100%) 0% 0% no-repeat padding-box;;
-    background-size: 200% 200%;
+    /* background-size: 200% 200%;
     animation: Gradient 5s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite; */
 }
 
 div[data-card-number='2'] .card_heading  {
-    background: transparent linear-gradient(269deg, #19D395 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
-    background-size: 200% 200%;
-    animation: Gradient 5s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
+    /* background: transparent linear-gradient(269deg, #19D395 0%, #F157FF 100%) 0% 0% no-repeat padding-box; */
+    background: transparent linear-gradient(90deg, #F157FF 0%, #0062FF 100%) 0% 0% no-repeat padding-box;
+
+    /* background-size: 200% 200%; */
+    /* animation: Gradient 5s ease infinite; */
+    /* -moz-animation: Gradient 5s ease infinite; */
 }
 
 div[data-card-number='3'] .card_heading  {
-    background: transparent linear-gradient(269deg, #FC912A 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
-    background-size: 200% 200%;
-    animation: Gradient 5s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
+    /* background: transparent linear-gradient(269deg, #FC912A 0%, #F157FF 100%) 0% 0% no-repeat padding-box; */
+    background: transparent linear-gradient(269deg, #19D395 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
+    /* background-size: 200% 200%; */
+    /* animation: Gradient 5s ease infinite; */
+    /* -moz-animation: Gradient 5s ease infinite; */
 }
 
 
 div[data-card-number='4'] .card_heading  {
     background: transparent linear-gradient(269deg, #19D395 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
-    background-size: 200% 200%;
-    animation: Gradient 5s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
+    /* background-size: 200% 200%; */
+    /* animation: Gradient 5s ease infinite; */
+    /* -moz-animation: Gradient 5s ease infinite; */
 }
 
 div[data-card-number='5'] .card_heading  {
     background: transparent linear-gradient(269deg, #19D395 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
-    background-size: 200% 200%;
-    animation: Gradient 5s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
+    /* background-size: 200% 200%; */
+    /* animation: Gradient 5s ease infinite; */
+    /* -moz-animation: Gradient 5s ease infinite; */
 }
 
 @keyframes Gradient {

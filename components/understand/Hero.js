@@ -16,7 +16,7 @@ export default function Hero({ data }) {
           />
         </div>
       </div>
-      <div className="container mx-auto flex flex-col flex-col-reverse md:grid md:grid-cols-2 py-10">
+      <div className="container mx-auto flex flex-col flex-col-reverse md:grid md:grid-cols-2 gap-20 py-10">
         <div className="flex flex-col justify-around py-5 gap-5">
           <div
             dangerouslySetInnerHTML={{
@@ -29,7 +29,7 @@ export default function Hero({ data }) {
             dangerouslySetInnerHTML={{
               __html: data?.hero_description_highlighted
             }}
-            className="bg-green-medium p-7 rounded-md"
+            className="bg-green-medium p-7 rounded-xl 2xl:rounded-2xl"
           />
           <Link href="/">
             <div className={`${styles.hero_explore_btn_bg_gradient} text-white rounded shadow-md font-medium flex items-center justify-center gap-10 py-3 px-5 bg-blue-400`}>

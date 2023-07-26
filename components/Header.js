@@ -18,10 +18,10 @@ export default function Header() {
         "Accelerate your API services throug out partners and services",
       descriptionD: "Read about our customer stories",
       descriptionE: "Join a team of international players",
-      linkB: "https://www.gravitee.io/",
-      linkC: "https://www.fdmgroup.com/",
-      linkD: "https://www.gravitee.io/",
-      linkE: "https://www.fdmgroup.com/",
+      // linkB: "https://www.gravitee.io/",
+      // linkC: "https://www.fdmgroup.com/",
+      // linkD: "https://www.gravitee.io/",
+      // linkE: "https://www.fdmgroup.com/",
       list: ["apples", "oranges", "pairs"],
     },
   ];
@@ -38,10 +38,10 @@ export default function Header() {
         "Accelerate your API services throug out partners and services",
       descriptionD: "Read about our customer stories",
       descriptionE: "Join a team of international players",
-      linkB: "https://www.gravitee.io/",
-      linkC: "https://www.fdmgroup.com/",
-      linkD: "https://www.gravitee.io/",
-      linkE: "https://www.fdmgroup.com/",
+      // linkB: "https://www.gravitee.io/",
+      // linkC: "https://www.fdmgroup.com/",
+      // linkD: "https://www.gravitee.io/",
+      // linkE: "https://www.fdmgroup.com/",
       list: ["shrimp", "olives", "meat"],
     },
   ];
@@ -58,10 +58,10 @@ export default function Header() {
         "Accelerate your API services throug out partners and services",
       descriptionD: "Read about our customer stories",
       descriptionE: "Join a team of international players",
-      linkB: "https://www.gravitee.io/",
-      linkC: "https://www.fdmgroup.com/",
-      linkD: "https://www.gravitee.io/",
-      linkE: "https://www.fdmgroup.com/",
+      // linkB: "https://www.gravitee.io/",
+      // linkC: "https://www.fdmgroup.com/",
+      // linkD: "https://www.gravitee.io/",
+      // linkE: "https://www.fdmgroup.com/",
       list: ["cava", "beer", "lemonade"],
     },
   ];
@@ -79,10 +79,10 @@ export default function Header() {
         "Accelerate your API services throug out partners and services",
       descriptionD: "Read about our customer stories",
       descriptionE: "Join a team of international players",
-      linkB: "https://www.gravitee.io/",
-      linkC: "https://www.fdmgroup.com/",
-      linkD: "https://www.gravitee.io/",
-      linkE: "https://www.fdmgroup.com/",
+      // linkB: "https://www.gravitee.io/",
+      // linkC: "https://www.fdmgroup.com/",
+      // linkD: "https://www.gravitee.io/",
+      // linkE: "https://www.fdmgroup.com/",
       list: ["cava", "beer", "lemonade"],
     },
   ];
@@ -126,7 +126,7 @@ export default function Header() {
   return (
     <div className="">
       <nav
-        className={`${headerStyles["nav-one"]} flex items-center bg-white border-gray-200 dark:bg-gray-900`}
+        className={`${headerStyles["nav-one"]} pt-3 container mx-auto flex items-center bg-white border-gray-200 dark:bg-gray-900`}
         onMouseLeave={handleMouseLeave}
       >
         <div className={headerStyles["logo-one-container"]}>

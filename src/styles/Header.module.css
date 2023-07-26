@@ -1,12 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&display=swap");
+
 
 .nav-one {
   position: relative;
 }
 .logo-one-container {
-  margin-left: 40px;
-  margin-top: 20px;
+  /* margin-left: 40px; */
+  margin-top: 20px; 
 }
 .nav-one-ul-container {
   font-size: 18px;
@@ -35,7 +34,7 @@
 
 .drop-down-top-title {
   color: #5b24ec;
-  font-family: "Outfit", sans-serif;
+  /* font-family: "Outfit", sans-serif; */
   letter-spacing: 2px;
   display: inline-block;
   margin-left: 60px;
