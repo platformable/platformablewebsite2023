@@ -96,6 +96,10 @@ h6 {
   background-color: var(--green-medium);
 }
 
+.bg-purple-light{
+  background-color: var(--purple-light);
+}
+
 /* DIFFERENT DEVICES */
 
 @media screen and (max-width: 480px) {

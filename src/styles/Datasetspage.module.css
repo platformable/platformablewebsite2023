@@ -5,14 +5,13 @@
     background-color: #5B24EC;
 }
 .datasets-our-process-bg {
-    background: linear-gradient(#7542F5  0%,  #E67EFF 100%) 0% 0% no-repeat padding-box;
-    background-size: 150% 150%;
-    animation: Gradient 5s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
+    background: #E9E8F8;
 }
 
 
-
+.datasets-product-bg {
+    background: transparent linear-gradient(90deg, #5B24EC 0%, #8A55FF 100%) 0% 0% no-repeat padding-box;
+}
 /* GRADIENTS */
 
 div[data-card-number='1'] .card_heading {
