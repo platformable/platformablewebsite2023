@@ -61,3 +61,8 @@ div[data-card-number='4'] .card_heading  {
     background: transparent linear-gradient(180deg, #5B24EC 0%, #8A55FF 100%) 0% 0% no-repeat padding-box;
     /*  */
 }
+
+.datasets-products-bg {
+    background: transparent linear-gradient(180deg, #5B24EC 0%, #8A55FF 100%) 0% 0% no-repeat padding-box;
+    /*  */
+}
