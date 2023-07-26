@@ -27,7 +27,7 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
             <Link href="/">
               <div className="flex gap-x-5 self-start items-center ">
                 <img
-                  src="/logo_icon_white.png"
+                  src="/icon_section01.svg"
                   alt=""
                   className=""
                 />
