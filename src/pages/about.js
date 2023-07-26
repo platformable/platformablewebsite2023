@@ -37,7 +37,7 @@ export default function About({ data }) {
             </Link>
         </button>
         <OurMission data={data}/>
-        <OurCommitmentdata data={data} />
+        <OurCommitment data={data} />
         <PrivacyPolicy data={data} />
         <Team />
         
