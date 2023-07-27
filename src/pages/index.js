@@ -26,15 +26,15 @@ export default function Home({ data }) {
           hero_title={newData?.hero_title}
         />
         <button
-          className={`${styles["contact-btn"]} fixed top-0 left-0   px-10 py-3 text-white my-5 rounded-tr-md rounded-br-md md:block hidden `}
-          >
-            <Link href="/">
-              <div className="flex gap-x-5 self-start items-center ">
-                <img src="/icon_section01.svg" alt="" className="" />
-                <p className="text-[#2A2FC1]">Contact us</p>
-                <img src="/icon_arrow_purple.svg" alt="" />
-              </div>
-            </Link>
+          className={`${styles["contact-btn"]} bg-[var(--yellow)] shadow fixed top-0 left-0  pl-20 pr-7  py-3 text-white my-5 rounded-tr-md rounded-br-md md:block hidden `}
+        >
+          <Link href="/">
+            <div className="flex gap-x-5  self-start items-center ">
+              <img src="/icon_section01.svg" alt="" className="" />
+              <p className="text-[#2A2FC1]">Contact us</p>
+              <img src="/icon_arrow_purple_dark.png" alt="" />
+            </div>
+          </Link>
         </button>
         <SupportOpenEcosystems
           list_items_cards={data?.attributes?.list_item_cards}

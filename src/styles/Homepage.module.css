@@ -49,10 +49,6 @@
 }
 
 .contact-btn {
-    background: transparent linear-gradient(90deg, #FFE200 0%, #FFBA00 100%) 0% 0% no-repeat padding-box;
-    background-size: 150% 150%;
-    animation: Gradient 5s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
 
     position: sticky;
     top: 20px;
