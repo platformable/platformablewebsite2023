@@ -68,23 +68,23 @@ font-size:20px;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 44px;
 }
 
 h2 {
-  font-size: 46px;
-}
-
-h3 {
   font-size: 40px;
 }
 
+h3 {
+  font-size: 38px;
+}
+
 h4 {
-  font-size: 36px;
+  font-size: 34px;
 }
 
 h5 {
-  font-size: 30px;
+  font-size: 28px;
 }
 
 h6 {
@@ -94,6 +94,10 @@ h6 {
 /* backgrounds */
 .bg-green-medium {
   background-color: var(--green-medium);
+}
+
+.bg-purple-light{
+  background-color: var(--purple-light);
 }
 
 /* DIFFERENT DEVICES */

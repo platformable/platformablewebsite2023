@@ -5,94 +5,67 @@ import Link from "next/link";
 import headerStyles from "../src/styles/Header.module.css";
 
 export default function Header() {
-  let infoOne = [
+  let info = [
     {
       title: "Understand",
+      href: "/understand",
       titleB: "About",
-      titleC: "Partners",
-      titleD: "Customer Success Stories",
-      titleE: "Diversity and Inclusion",
+      titleC: "How we work",
+      titleD: "Our Success Stories",
+      titleE: "Our Mind",
       descriptionB:
         "Real-Time usage alerts and anomaly detection on multiple channels",
       descriptionC:
         "Accelerate your API services throug out partners and services",
       descriptionD: "Read about our customer stories",
       descriptionE: "Join a team of international players",
-      linkB: "https://www.gravitee.io/",
-      linkC: "https://www.fdmgroup.com/",
-      linkD: "https://www.gravitee.io/",
-      linkE: "https://www.fdmgroup.com/",
+      // linkB: "https://www.gravitee.io/",
+      // linkC: "https://www.fdmgroup.com/",
+      // linkD: "https://www.gravitee.io/",
+      // linkE: "https://www.fdmgroup.com/",
       list: ["apples", "oranges", "pairs"],
     },
-  ];
-  let infoTwo = [
     {
       title: "Act",
+      href: "/act",
       titleB: "About",
-      titleC: "Partners",
-      titleD: "Customer Success Stories",
-      titleE: "Diversity and Inclusion",
+      titleC: "Our Partners",
+      titleD: "Our Processes",
+      titleE: "Our Donations",
       descriptionB:
         "Real-Time usage alerts and anomaly detection on multiple channels",
       descriptionC:
         "Accelerate your API services throug out partners and services",
       descriptionD: "Read about our customer stories",
       descriptionE: "Join a team of international players",
-      linkB: "https://www.gravitee.io/",
-      linkC: "https://www.fdmgroup.com/",
-      linkD: "https://www.gravitee.io/",
-      linkE: "https://www.fdmgroup.com/",
+      // linkB: "https://www.gravitee.io/",
+      // linkC: "https://www.fdmgroup.com/",
+      // linkD: "https://www.gravitee.io/",
+      // linkE: "https://www.fdmgroup.com/",
       list: ["shrimp", "olives", "meat"],
     },
-  ];
-  let infoThree = [
     {
       title: "Engage",
+      href: "/engage",
       titleB: "About",
       titleC: "Partners",
-      titleD: "Customer Success Stories",
-      titleE: "Diversity and Inclusion",
+      titleD: "Services",
+      titleE: "Products",
       descriptionB:
         "Real-Time usage alerts and anomaly detection on multiple channels",
       descriptionC:
         "Accelerate your API services throug out partners and services",
       descriptionD: "Read about our customer stories",
       descriptionE: "Join a team of international players",
-      linkB: "https://www.gravitee.io/",
-      linkC: "https://www.fdmgroup.com/",
-      linkD: "https://www.gravitee.io/",
-      linkE: "https://www.fdmgroup.com/",
+      // linkB: "https://www.gravitee.io/",
+      // linkC: "https://www.fdmgroup.com/",
+      // linkD: "https://www.gravitee.io/",
+      // linkE: "https://www.fdmgroup.com/",
       list: ["cava", "beer", "lemonade"],
     },
   ];
 
-  let infoFour = [
-    {
-      title: "Contact",
-      titleB: "About",
-      titleC: "Partners",
-      titleD: "Customer Success Stories",
-      titleE: "Diversity and Inclusion",
-      descriptionB:
-        "Real-Time usage alerts and anomaly detection on multiple channels",
-      descriptionC:
-        "Accelerate your API services throug out partners and services",
-      descriptionD: "Read about our customer stories",
-      descriptionE: "Join a team of international players",
-      linkB: "https://www.gravitee.io/",
-      linkC: "https://www.fdmgroup.com/",
-      linkD: "https://www.gravitee.io/",
-      linkE: "https://www.fdmgroup.com/",
-      list: ["cava", "beer", "lemonade"],
-    },
-  ];
-
-  let [visibleUnderstand, setVisibleUnderstand] = useState(false);
-  let [visibleAct, setVisibleAct] = useState(false);
-  let [visibleEngage, setVisibleEngage] = useState(false);
-  let [visibleContact, setVisibleContact] = useState(false);
-
-  const [visit, setVisit] = useState(false);
+  const [visit, setVisit] = useState("");
 
   const [burgerClick, setBurgerClick] = useState(false);
   const [responsiveListOne, setResponsiveListOne] = useState(false);
@@ -105,157 +78,115 @@ export default function Header() {
   const [plusClickThree, setPlusClickThree] = useState(false);
   const [plusClickFour, setPlusClickFour] = useState(false);
 
-  const divContent = visibleUnderstand
-    ? infoOne
-    : visibleAct
-    ? infoTwo
-    : visibleEngage
-    ? infoThree
-    : visibleContact
-    ? infoFour
-    : "";
-
   //this function is for when i leave the block
   const handleMouseLeave = () => {
-    setVisibleUnderstand(false);
-    setVisibleEngage(false);
-    setVisibleAct(false);
-    setVisibleContact(false);
+    setVisit("");
   };
 
   return (
-    <div className="">
+    <div className="container mx-auto">
       <nav
-        className={`${headerStyles["nav-one"]} flex items-center bg-white border-gray-200`}
+        className={`${headerStyles["nav-one"]} py-5  flex items-center justify-between border-gray-200`}
         onMouseLeave={handleMouseLeave}
       >
-        <div className={headerStyles["logo-one-container"]}>
-          <Link href="/">
-            <Image
-              src={Logo}
-              className={headerStyles["logo-platformable"]}
-              alt="Platformable Logo"
-            />
-          </Link>
-        </div>
-
+        <Link href="/">
+          <Image
+            src={Logo}
+            className=""
+            alt="Platformable"
+            width={250}
+            height={70}
+            unoptimized
+          />
+        </Link>
         <div
           id="mega-menu"
-          className={`${headerStyles["nav-one-ul-container"]} items-center flex hidden w-full md:flex md:w-auto md:order-1`}
+          className={`${headerStyles["nav-one-ul-container"]}  items-center flex hidden  md:flex md:w-auto md:order-1`}
         >
           <ul
-            className={`${headerStyles["nav-ul"]} flex mt-4 font-medium md:flex-row md:space-x-8 md:mt-2`}
+            className={`${headerStyles["nav-ul"]} flex  font-medium md:flex-row md:space-x-8 `}
           >
-            <li
-              onMouseEnter={() => {
-                setVisibleUnderstand(true);
-                setVisibleEngage(false);
-                setVisibleAct(false);
-                setVisibleContact(false);
-              }}
-            >
-              <Link
-                href="/understand"
-                data-dropdown-toggle="mega-menu-dropdown"
-                className={`${headerStyles["nav-one-links"]} block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700`}
-                aria-current="page"
+            {info?.map((item, index) => (
+              <li
+                onMouseEnter={() => {
+                  setVisit(item.title);
+                }}
+                key={index}
               >
-                Understand
-              </Link>
-            </li>
-            <li
-              onMouseEnter={() => {
-                setVisibleAct(true);
-                setVisibleUnderstand(false);
-                setVisibleEngage(false);
-                setVisibleContact(false);
-              }}
-            >
-              {/* the li has a button and then two divs inside eachother, the second div has 3 divs with each div having a ul */}
-              <Link href="/act" className={headerStyles["nav-one-links"]}>
-                Act
-              </Link>
-            </li>
-            <li
-              onMouseEnter={() => {
-                setVisibleEngage(true);
-                setVisibleUnderstand(false);
-                setVisibleAct(false);
-                setVisibleContact(false);
-              }}
-            >
-              <Link href="/engage" className={headerStyles["nav-one-links"]}>
-                Engage
-              </Link>
-            </li>
-            <li
-              onMouseEnter={() => {
-                setVisibleContact(true);
-                setVisibleEngage(false);
-                setVisibleUnderstand(false);
-                setVisibleAct(false);
-              }}
-            >
-              <a href="#" className={headerStyles["nav-one-links"]}>
-                Contact
-              </a>
-            </li>
+                <Link
+                  href={item.href}
+                  data-dropdown-toggle="mega-menu-dropdown"
+                  className={`${headerStyles["nav-one-links"]} block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700`}
+                  aria-current="page"
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+
             <div
               // id="mega-menu-dropdown"
-              onMouseEnter={() => setVisit(true)}
+              // onMouseEnter={() => setVisit()}
               onMouseLeave={handleMouseLeave}
             >
-              {divContent && (
-                <div className={headerStyles["drop-down-container"]}>
-                  <h2 className={headerStyles["drop-down-top-title"]}>
-                    {divContent[0].title}
-                  </h2>
-                  <div className={headerStyles["drop-down-first-row-info"]}>
-                    <div className={headerStyles["drop-down-info-hovered"]}>
-                      <a href={divContent[0].linkB} target="_blank">
-                        <h3 className={headerStyles["drop-down-info-title"]}>
-                          {divContent[0].titleB}
-                        </h3>
-                        <p className={headerStyles["drop-down-descriptions"]}>
-                          {divContent[0].descriptionB}
-                        </p>
-                      </a>
+              {info
+                ?.filter((e) => e.title === visit)
+                .map((item, index) => (
+                  <div
+                    className={headerStyles["drop-down-container"]}
+                    key={index}
+                  >
+                    <h2
+                      className={`${headerStyles["drop-down-top-title"]} font-bold`}
+                    >
+                      {item.title}
+                    </h2>
+                    <div className={headerStyles["drop-down-first-row-info"]}>
+                      <div className={headerStyles["drop-down-info-hovered"]}>
+                        <a href={item.linkB} target="_blank">
+                          <h3 className={headerStyles["drop-down-info-title"]}>
+                            {item.titleB}
+                          </h3>
+                          <p className={headerStyles["drop-down-descriptions"]}>
+                            {item.descriptionB}
+                          </p>
+                        </a>
+                      </div>
+                      <div className={headerStyles["drop-down-info-hovered"]}>
+                        <a href={item.linkC} target="_blank">
+                          <h3 className={headerStyles["drop-down-info-title"]}>
+                            {item.titleC}
+                          </h3>
+                          <p className={headerStyles["drop-down-descriptions"]}>
+                            {item.descriptionC}
+                          </p>
+                        </a>
+                      </div>
                     </div>
-                    <div className={headerStyles["drop-down-info-hovered"]}>
-                      <a href={divContent[0].linkC} target="_blank">
-                        <h3 className={headerStyles["drop-down-info-title"]}>
-                          {divContent[0].titleC}
-                        </h3>
-                        <p className={headerStyles["drop-down-descriptions"]}>
-                          {divContent[0].descriptionC}
-                        </p>
-                      </a>
+                    <div className={headerStyles["drop-down-second-row-info"]}>
+                      <div className={headerStyles["drop-down-info-hovered"]}>
+                        <a href={item.linkD} target="_blank">
+                          <h3 className={headerStyles["drop-down-info-title"]}>
+                            {item.titleD}
+                          </h3>
+                          <p className={headerStyles["drop-down-descriptions"]}>
+                            {item.descriptionD}
+                          </p>
+                        </a>
+                      </div>
+                      <div className={headerStyles["drop-down-info-hovered"]}>
+                        <a href={item.linkE} target="_blank">
+                          <h3 className={headerStyles["drop-down-info-title"]}>
+                            {item.titleE}
+                          </h3>
+                          <p className={headerStyles["drop-down-descriptions"]}>
+                            {item.descriptionE}
+                          </p>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                  <div className={headerStyles["drop-down-second-row-info"]}>
-                    <div className={headerStyles["drop-down-info-hovered"]}>
-                      <a href={divContent[0].linkD} target="_blank">
-                        <h3 className={headerStyles["drop-down-info-title"]}>
-                          {divContent[0].titleD}
-                        </h3>
-                        <p className={headerStyles["drop-down-descriptions"]}>
-                          {divContent[0].descriptionD}
-                        </p>
-                      </a>
-                    </div>
-                    <div className={headerStyles["drop-down-info-hovered"]}>
-                      <a href={divContent[0].linkE} target="_blank">
-                        <h3 className={headerStyles["drop-down-info-title"]}>
-                          {divContent[0].titleE}
-                        </h3>
-                        <p className={headerStyles["drop-down-descriptions"]}>
-                          {divContent[0].descriptionE}
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              )}
+                ))}
             </div>
           </ul>
         </div>
@@ -270,7 +201,7 @@ export default function Header() {
             <Link href="#" className="flex items-center">
               <Image
                 src={Logo}
-                className="h-8 mr-3"
+                className=""
                 alt="Platformable Logo"
                 id={headerStyles["responsive-logo-two"]}
               />
@@ -365,7 +296,7 @@ export default function Header() {
                 plusClickOne ? "block" : "hidden"
               }  `}
             >
-              <li className={headerStyles["embed-list-item"]}>
+              {/* <li className={headerStyles["embed-list-item"]}>
                 <a href={infoOne[0].linkB}>{infoOne[0].titleB}</a>
               </li>
               <li className={headerStyles["embed-list-item"]}>
@@ -376,7 +307,7 @@ export default function Header() {
               </li>
               <li className={headerStyles["embed-list-item"]}>
                 <a href={infoOne[0].linkE}>{infoOne[0].titleE}</a>
-              </li>
+              </li> */}
             </ul>
           </li>
           <li>
@@ -418,7 +349,7 @@ export default function Header() {
                 )}
               </button>
             </div>
-            <ul
+            {/* <ul
               className={`${headerStyles["embed-ul"]} ${
                 plusClickTwo ? "block" : "hidden"
               }`}
@@ -435,7 +366,7 @@ export default function Header() {
               <li className={headerStyles["embed-list-item"]}>
                 <a href={infoTwo[0].linkE}>{infoTwo[0].titleE}</a>
               </li>
-            </ul>
+            </ul> */}
           </li>
           <li>
             <div
@@ -476,7 +407,7 @@ export default function Header() {
                 )}
               </button>
             </div>
-            <ul
+            {/* <ul
               className={`${headerStyles["embed-ul"]} ${
                 plusClickThree ? "block" : "hidden"
               }`}
@@ -493,7 +424,7 @@ export default function Header() {
               <li className={headerStyles["embed-list-item"]}>
                 <a href={infoThree[0].linkE}>{infoThree[0].titleE}</a>
               </li>
-            </ul>
+            </ul> */}
           </li>
           <li>
             <div
@@ -540,7 +471,7 @@ export default function Header() {
                 plusClickFour ? "block" : "hidden"
               }  `}
             >
-              <li className={headerStyles["embed-list-item"]}>
+              {/* <li className={headerStyles["embed-list-item"]}>
                 <a href={infoFour[0].linkB}>{infoFour[0].titleB}</a>
               </li>
               <li className={headerStyles["embed-list-item"]}>
@@ -551,7 +482,7 @@ export default function Header() {
               </li>
               <li className={headerStyles["embed-list-item"]}>
                 <a href={infoFour[0].linkE}>{infoFour[0].titleE}</a>
-              </li>
+              </li> */}
             </ul>
           </li>
         </ul>
