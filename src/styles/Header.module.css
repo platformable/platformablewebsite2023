@@ -21,8 +21,8 @@
 }
 .drop-down-container {
   position: absolute;
-  width: 800px;
-  height: 450px;
+  width: auto;
+  height: auto;
   border: 2px solid #3024c6;
   margin-top: 30px;
   margin-left: -520px;
@@ -37,7 +37,7 @@
   /* font-family: "Outfit", sans-serif; */
   letter-spacing: 2px;
   display: inline-block;
-  margin-left: 60px;
+ 
   font-size: 22px;
 }
 
@@ -55,8 +55,8 @@ h3.drop-down-info-title {
 .drop-down-first-row-info,
 .drop-down-second-row-info {
   display: flex;
-  gap: 70px;
-  padding-left: 30px;
+  gap: 30px;
+  /* padding-left: 30px; */
   width: 700px;
   margin: 0 auto;
 }
