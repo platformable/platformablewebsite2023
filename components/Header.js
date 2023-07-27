@@ -134,7 +134,7 @@ export default function Header() {
            <Image
                 src={Logo}
                 className=""
-                alt="Platformable Logo"
+                alt="Platformable"
                 width={250}
                 height={70}
                 unoptimized
