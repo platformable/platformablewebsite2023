@@ -8,7 +8,7 @@ export default function FindMore({ images }) {
       subtitle: "LEARN HOW OPEN ECOSYSTEMS CAN CREATE A FUTURE WE ALL WANT TO LIVE IN",
       header_icon: '/understand_logo_platformable.svg',
       link: '/understand',
-      image: images[0]?.attributes.url
+      image: images[0]?.attributes?.url
     },
     {
       title: 'Act',

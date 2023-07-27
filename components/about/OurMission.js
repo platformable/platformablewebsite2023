@@ -4,6 +4,10 @@ export default function OurMission({data}) {
   return (
      <>
      <div id="ourMission" className={`text-white py-10 container mx-auto `}>
+     <div id="header" className="flex gap-3 mb-10">
+          <img src="/logo_icon_white.png" alt="Platofrmable logo" />
+          <h4 className="font-bold">{'Our Mission'}</h4>
+        </div>
           <div className="grid gap-7">
             <div
               dangerouslySetInnerHTML={{
