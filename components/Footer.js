@@ -153,13 +153,14 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Email"
-                className={`lg:w-64 rounded p-4 border-blue-600 border-2 border-opacity-50`}
+                className={` relative w-80 lg:w-64 rounded p-4 border-blue-600 border-2 border-opacity-50`}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <img
                 src="/iron_footer.svg"
                 alt="Send subcription"
+                className={`absolute  ml-64 w-14 lg:ml-48`}
                 onClick={handleSubmit}
               />
             </div>
