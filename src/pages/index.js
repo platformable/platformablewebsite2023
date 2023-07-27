@@ -11,11 +11,9 @@ import Footer from "../../components/Footer";
 import Testimonials from "../../components/homepage/Testimonials";
 import Link from "next/link";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ data }) {
-
   const newData = data.attributes;
   return (
     <Layout>
@@ -27,32 +25,44 @@ export default function Home({ data }) {
         />
         <button
           className={`${styles["contact-btn"]} fixed top-0 left-0   px-10 py-3 text-white my-5 rounded-tr-md rounded-br-md md:block hidden `}
-          >
-            <Link href="/">
-              <div className="flex gap-x-5 self-start items-center ">
-                <img src="/icon_section01.svg" alt="" className="" />
-                <p className="text-[#2A2FC1]">Contact us</p>
-                <img src="/icon_arrow.png" alt="" />
-              </div>
-            </Link>
+        >
+          <Link href="/">
+            <div className="flex gap-x-5 self-start items-center ">
+              <img src="/icon_section01.svg" alt="" className="" />
+              <p className="text-[#2A2FC1]">Contact us</p>
+              <img src="/icon_arrow.png" alt="" />
+            </div>
+          </Link>
         </button>
         <SupportOpenEcosystems
           list_items_cards={data?.attributes?.list_item_cards}
           title={data?.attributes?.support_open_ecosystems_title}
         />
-        <StakeholdersOpenEcosystems videos={[data?.attributes?.stakeholder_img_1, data?.attributes?.stakeholder_img_2, data?.attributes.stakeholder_img_3]} title={data?.attributes?.stakeholder_title}/>
-        <ProductsServices title={data?.attributes?.product_services_title} product_cards={data?.attributes?.product_cards}/>
-        <Explore vertical_description_card={data?.attributes?.vertical_description_card} title={data?.attributes?.explore_sectors_title}/>
+        <StakeholdersOpenEcosystems
+          videos={[
+            data?.attributes?.stakeholder_img_1,
+            data?.attributes?.stakeholder_img_2,
+            data?.attributes.stakeholder_img_3,
+          ]}
+          title={data?.attributes?.stakeholder_title}
+        />
+        <ProductsServices
+          title={data?.attributes?.product_services_title}
+          product_cards={data?.attributes?.product_cards}
+        />
+        <Explore
+          vertical_description_card={
+            data?.attributes?.vertical_description_card
+          }
+          title={data?.attributes?.explore_sectors_title}
+        />
         {/* <Testimonials data={data?.attributes.testimonials} title={newData?.testimonials_title} logos={true}/> */}
         <Footer />
-
-
-
       </div>
     </Layout>
   );
 }
-
+//it is like the useEffect
 export async function getServerSideProps(ctx) {
   try {
     const res = await fetch(

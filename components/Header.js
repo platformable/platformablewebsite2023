@@ -126,7 +126,7 @@ export default function Header() {
   return (
     <div className="">
       <nav
-        className={`${headerStyles["nav-one"]} flex items-center bg-white border-gray-200 dark:bg-gray-900`}
+        className={`${headerStyles["nav-one"]} flex items-center bg-white border-gray-200`}
         onMouseLeave={handleMouseLeave}
       >
         <div className={headerStyles["logo-one-container"]}>
