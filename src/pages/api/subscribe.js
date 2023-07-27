@@ -20,12 +20,12 @@ export default async function subscribe(req, res) {
       }
     );
 
-    if (response.status === 201) {
+    if (response.ok) {
       return res.status(200).json({ success: true });
     } else {
-      return res.status(response.status).json(await response.json());
+      return res.status(400).json({ message: `subscription failed` });
     }
   } catch (error) {
-    return res.status(error.response.status).json(error.response.data);
+    return res.status(500).json({ error: error.message });
   }
 }

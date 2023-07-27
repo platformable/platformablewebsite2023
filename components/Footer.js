@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useState } from "react";
 import Logo from "/public/logo.png";
 import Image from "next/image";
-import footerStyles from "../src/styles/Footer.module.css";
 
 const sitemap = [
   {
@@ -77,7 +76,6 @@ export default function Footer() {
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
   async function handleSubmit(event) {
-    event.preventDefault();
     try {
       let response = await fetch(`/api/subscribe`, {
         method: "POST",
@@ -89,7 +87,6 @@ export default function Footer() {
       });
 
       if (response.ok) {
-        console.log(`successfull subscribtion`);
         setEmail("");
         setIsResponse(true);
       } else {
@@ -156,14 +153,13 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Email"
-                className={` ${footerStyles["footer-input-container"]} lg:w-64 rounded p-4 border-blue-600 border-2 border-opacity-50`}
+                className={`lg:w-64 rounded p-4 border-blue-600 border-2 border-opacity-50`}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <img
                 src="/iron_footer.svg"
                 alt="Send subcription"
-                className={`${footerStyles["footer-subscribe-button"]}`}
                 onClick={handleSubmit}
               />
             </div>
