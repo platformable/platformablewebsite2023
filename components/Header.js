@@ -130,6 +130,7 @@ export default function Header() {
         className={`${headerStyles["nav-one"]} py-5  flex items-center justify-between border-gray-200 dark:bg-gray-900`}
         onMouseLeave={handleMouseLeave}
       >
+        <Link href='/'>
            <Image
                 src={Logo}
                 className=""
@@ -137,9 +138,8 @@ export default function Header() {
                 width={250}
                 height={70}
                 unoptimized
-                // id={headerStyles["responsive-logo-two"]}
               />
-
+        </Link>
         <div
           id="mega-menu"
           className={`${headerStyles["nav-one-ul-container"]}  items-center flex hidden  md:flex md:w-auto md:order-1`}
