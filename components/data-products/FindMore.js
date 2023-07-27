@@ -1,5 +1,6 @@
 import styles from "@/styles/DataProducts.module.css";
 import Link from "next/link";
+import carouselStyles from '@/styles/Carousel.module.scss'
 
 export default function FindMore({ images }) {
   const slices = [
@@ -26,10 +27,10 @@ export default function FindMore({ images }) {
     },
   ]
   return (
-    <section className={`py-10 pt-32  container mx-auto overflow-y-hidden  bg-white overflow-x-hidden`}>
-      <div className={` relative h-screen flex flex-col justify-center`}>
+    <section className={`py-10 container mx-auto overflow-y-hidden  bg-white overflow-x-hidden hidden lg:block`}>
+      <div className={`relative h-screen flex flex-col justify-center`}>
     {slices?.map( (slice,index) => (
-      <div className={`${styles.carousel__item} grid grid-cols-[3fr_1.5fr] `} id={index+1} key={index}>
+      <div className={`${carouselStyles.carousel__item} grid grid-cols-[3fr_1.5fr] px-24`} id={index+1} key={index}>
         <div className="flex flex-col gap-y-10 mb-10">
           <div className="flex gap-5 items-center">
             <img src={slice?.header_icon} alt="" />
