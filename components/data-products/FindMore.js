@@ -3,27 +3,28 @@ import Link from "next/link";
 import carouselStyles from '@/styles/Carousel.module.scss'
 
 export default function FindMore({ images }) {
+  
   const slices = [
     {
       title: 'Understand',
       subtitle: "LEARN HOW OPEN ECOSYSTEMS CAN CREATE A FUTURE WE ALL WANT TO LIVE IN",
       header_icon: '/understand_logo_platformable.svg',
       link: '/understand',
-      image: images[0]?.attributes?.url
+      image: images && images[0]?.attributes?.url || null
     },
     {
       title: 'Act',
       subtitle: "OUR RANGE OF PRODUCTS AND SERVICES CAN HELP YOU BUILD YOUR ORGANISATION INTO OPEN DIGITAL ECOSYSTEMS",
       header_icon: '/act_logo_platformable.svg',
       link: '/act',
-      image: images[1]?.attributes.url
+      image: images &&  images[1]?.attributes.url || null
     },
     {
       title: 'Engage',
       subtitle: "TO ACTIVELY PARTICIPATE IN AN OPEN ECOSYSTEM, FOLLOW OUR RECOMMENDED RESOURCES AND TOOLS",
       header_icon: '/engage_logo_platformable.svg',
-      link: '/engage',
-      image: images[2]?.attributes.url
+      link: '/engage', 
+      image:images &&   images[2]?.attributes.url || null
     },
   ]
   return (
@@ -45,7 +46,7 @@ export default function FindMore({ images }) {
           </Link>
           
         </div>
-        <img className={``} src={slice.image} alt="" />
+        <img className={``} src={slice?.image} alt="" />
     </div>
     ))}
     

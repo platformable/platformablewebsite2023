@@ -7,25 +7,7 @@ import headerStyles from "../src/styles/Header.module.css";
 export default function Header() {
  
   let info = [
-    {
-      title: "About",
-      href: "/about",
-      titleB: "Our Mission",
-      titleC: "Our Commitment",
-      titleD: "Our Privacy Policy",
-      titleE: "Our Team",
-      descriptionB:
-        "Real-Time usage alerts and anomaly detection on multiple channels",
-      descriptionC:
-        "Accelerate your API services throug out partners and services",
-      descriptionD: "Read about our customer stories",
-      descriptionE: "Join a team of international players",
-      // linkB: "https://www.gravitee.io/",
-      // linkC: "https://www.fdmgroup.com/",
-      // linkD: "https://www.gravitee.io/",
-      // linkE: "https://www.fdmgroup.com/",
-      list: ["apples", "oranges", "pairs"],
-    },
+ 
     {
       title: "Understand",
       href: "/understand",
@@ -82,26 +64,7 @@ export default function Header() {
       // linkD: "https://www.gravitee.io/",
       // linkE: "https://www.fdmgroup.com/",
       list: ["cava", "beer", "lemonade"],
-    },
-    {
-      title: "Contact",
-      href: "/",
-      titleB: "About",
-      titleC: "Partners",
-      titleD: "Customer Success Stories",
-      titleE: "Diversity and Inclusion",
-      descriptionB:
-        "Real-Time usage alerts and anomaly detection on multiple channels",
-      descriptionC:
-        "Accelerate your API services throug out partners and services",
-      descriptionD: "Read about our customer stories",
-      descriptionE: "Join a team of international players",
-      // linkB: "https://www.gravitee.io/",
-      // linkC: "https://www.fdmgroup.com/",
-      // linkD: "https://www.gravitee.io/",
-      // linkE: "https://www.fdmgroup.com/",
-      list: ["cava", "beer", "lemonade"],
-    },
+    }
   ];
 
  
@@ -127,7 +90,7 @@ export default function Header() {
   return (
     <div className="container mx-auto">
       <nav
-        className={`${headerStyles["nav-one"]} py-5  flex items-center justify-between border-gray-200 dark:bg-gray-900`}
+        className={`${headerStyles["nav-one"]} py-5  flex items-center justify-between border-gray-200`}
         onMouseLeave={handleMouseLeave}
       >
         <Link href='/'>
