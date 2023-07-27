@@ -17,7 +17,7 @@ export default function APIGovernance({ data }) {
       <OurProcess data={data}/>
       <GovernanceServices description={data?.services_description} services={data?.services}/>
       {/* <Testimonials data={data?.testimonials} title={data?.testimonials_title} logos={false}/> */}
-      <FindMore data={data}/>
+      <FindMore images={data?.sectors_img?.data}/>
       <Footer />
     </Layout>
   );
