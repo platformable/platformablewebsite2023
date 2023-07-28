@@ -23,6 +23,8 @@ export default function Testimonials({ data, title, logos }) {
       logo: "/alias_logo.png",
     },
   ];
+
+  console.log("data",data)
   return (
     <section className={`py-10  ${styles["testimonials-bg"]} `}>
       <div className="container mx-auto md:mb-10 mb-0">
@@ -65,7 +67,8 @@ export default function Testimonials({ data, title, logos }) {
                
                 
               
-                <div className={`${styles.bg_footer_testimonial_card} rounded-bl-lg rounded-br-lg p-7`}>
+                <div className={`${styles.bg_footer_testimonial_card} flex justify-between  items-center rounded-bl-lg rounded-br-lg p-7`}>
+                  <div>
                 <p
                       className={`font-black`}
                     >
@@ -76,6 +79,10 @@ export default function Testimonials({ data, title, logos }) {
                     >
                       {testimonial.testimonials_client_role}
                     </span>
+                    </div>
+                    <div>
+                      <a href={testimonial.url} className="underline" target="_blank">{testimonial.url.replace("https://","")}</a>
+                    </div>
                 </div>
               </div>
               );
