@@ -8,7 +8,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
   --purple:#7743F5;
   --purple-extra-dark:#1D17A8;
   --purple-dark:#2A2FC1;
@@ -27,7 +26,9 @@
   --pink-light:#F1ACFF;
   --pink:#F157FF;
   --yellow: #FFE200;
+
   --orange-medium: #FFC400;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,6 +41,7 @@
 /* #rect_parent[data-product-type-rectangle="Rectangle Data governance"]:hover ~ rect[id="Rectangle Data governance"]  {
   fill: red;
 } */
+
 
 .change_fill_color {
   animation: opacityMove 10s infinite ease-in-out;
