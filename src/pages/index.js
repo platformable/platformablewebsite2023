@@ -12,6 +12,7 @@ import Testimonials from "../../components/homepage/Testimonials";
 import Link from "next/link";
 
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ data }) {
@@ -19,6 +20,7 @@ export default function Home({ data }) {
   const newData = data.attributes;
   return (
     <Layout>
+
       <div className="relative">
         <Hero
           heroImg={data?.attributes?.hero_img?.data?.attributes.url}
@@ -49,6 +51,7 @@ export default function Home({ data }) {
 
 
       </div>
+
     </Layout>
   );
 }

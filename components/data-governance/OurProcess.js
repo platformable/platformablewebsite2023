@@ -6,7 +6,7 @@ export default function OurProcess({ data }) {
       <div className="container text-[var(--blue-extra-dark)] mx-auto">
         <div className="flex gap-x-5 items-center  mb-10">
           <img
-            src="/platformable-icon-white.svg"
+            src="/platformable-icon-purple-dark.png"
             alt=""
             className="md:flex hidden"
           />
@@ -22,8 +22,9 @@ export default function OurProcess({ data }) {
           }}
           className=""
         />
-        <div className="mt-10 flex items-center justify-center bg-white bg-opacity-50 rounded py-72">
-          <h4 className="text-[var(--purple-dark)]">Diagram</h4>
+        <div className=" flex items-center justify-center  rounded py-7">
+          <img src={data?.process_media?.data?.attributes?.url} alt="" />
+          
         </div>
       </div>
     </section>
