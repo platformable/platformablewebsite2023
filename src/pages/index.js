@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-=======
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Layout from "../../components/Layout";
@@ -14,7 +10,7 @@ import Hero from "../../components/homepage/Hero";
 import Footer from "../../components/Footer";
 import Testimonials from "../../components/homepage/Testimonials";
 import Link from "next/link";
->>>>>>> 88d90bdf83f88b4cbeec30b8a563e73335d4e2b9
+
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,9 +20,7 @@ export default function Home({ data }) {
   const newData = data.attributes;
   return (
     <Layout>
-<<<<<<< HEAD
- 
-=======
+
       <div className="relative">
         <Hero
           heroImg={data?.attributes?.hero_img?.data?.attributes.url}
@@ -57,7 +51,7 @@ export default function Home({ data }) {
 
 
       </div>
->>>>>>> 88d90bdf83f88b4cbeec30b8a563e73335d4e2b9
+
     </Layout>
   );
 }
