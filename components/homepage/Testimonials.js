@@ -47,9 +47,9 @@ export default function Testimonials({ data, title, logos }) {
           {data &&
             data.map((testimonial, index) => {
               return (
-                <div className="rounded-md bg-white shadow-xl grid grid-rows-[3fr_1fr] justify-between" key={index}>
-                <div className="flex flex-col md:flex-row items-end ">
-                <div className="p-7">
+                <div className="rounded-2xl bg-white shadow-xl grid grid-rows-[3fr_1fr] justify-between" key={index}>
+                <div className="p-7 flex flex-col gap-4 md:flex-row items-center rounded-t-2xl">
+                <div className="">
                   <img
                       src={testimonial.testimonials_img.data.attributes.url}
                       alt=""
@@ -62,12 +62,14 @@ export default function Testimonials({ data, title, logos }) {
                     className="flex items-center italic font-light  py-5 md:py-10 "
                   />
                 </div>
-                <img src="" />
+
+                <img src={testimonial.testimonials_img?.data?.attributes.url} className=""/>
+
                 </div>
                
                 
               
-                <div className={`${styles.bg_footer_testimonial_card} flex justify-between  items-center rounded-bl-lg rounded-br-lg p-7`}>
+                <div className={`${styles.bg_footer_testimonial_card} flex justify-between  items-center rounded-bl-2xl rounded-br-2xl p-7`}>
                   <div>
                 <p
                       className={`font-black`}

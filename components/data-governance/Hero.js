@@ -14,7 +14,7 @@ export default function Hero({ data }) {
           className="lg:w-3/6 2xl:w-3/5"
         />
       </div>
-      <div className={`bg-[var(--purple-medium)] pt-10 pb-10 `}>
+      <div className={`bg-[var(--purple-medium)] pt-10  `}>
         <div className="container mx-auto grid gap-7">
         <img
             src={data?.hero_img?.data.attributes.url}

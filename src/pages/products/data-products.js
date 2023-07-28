@@ -15,7 +15,7 @@ export default function DataProducts({ data }) {
       <OurProducts products={data?.products} title={data?.data_products_products_titl}/>
       <OurProcess data={data}/>
       <Testimonials data={data?.testimonials} title={data?.data_product_testimonial_title} logos={false}/>
-      <FindMore images={data?.sectors_img?.data}/>
+      <FindMore sectors={data?.sectors}/>
       <Footer />
     </Layout>
   );
@@ -24,7 +24,7 @@ export default function DataProducts({ data }) {
 export async function getServerSideProps(ctx) {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/data-product?populate[data_products_hero_img]=*&populate[products][populate][product_icon]=*&populate[testimonials][populate][testimonials_img]=*&populate[discovery_images]=*&populate[scope_img1]=*&populate[scope_img2]=*&populate[scope_img3]=*`
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/data-product?populate[data_products_hero_img]=*&populate[products][populate][product_icon]=*&populate[testimonials][populate][testimonials_img]=*&populate[discovery_images]=*&populate[scope_img1]=*&populate[scope_img2]=*&populate[scope_img3]=*&populate[sectors][populate][icon]=*&&populate[sectors][populate][image]=*`
     );
     const data = await res.json();
 

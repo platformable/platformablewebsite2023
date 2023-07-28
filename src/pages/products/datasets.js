@@ -16,7 +16,7 @@ export default function DataSets({ data }) {
       <OurDatasets title={data?.datasets_products_title} datasets={data?.products}/>
       <OurProcess title={data?.datasets_process_title}/>
       {/* <Testimonials title={data?.datasets_testimonial_title} data={data?.testimonials}/> */}
-      <FindMore images={data?.sectors_img?.data}/>
+      <FindMore sectors={data?.sectors}/>
       <Footer />
     </Layout>
   );

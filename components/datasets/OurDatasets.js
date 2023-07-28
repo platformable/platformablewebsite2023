@@ -6,7 +6,7 @@ export default function OurDatasets({ title, datasets }) {
       <div className="container mx-auto">
         
         <div className="hidden md:grid  gap-1">
-        <p className="text-white  font-bold mb-10">
+        <p className="text-white  font-bold mb-5 xl:mb-10">
         You can also access our datasets by purchasing one of our ready-made data products, including trends reports and analytical tools.
         </p>
           <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] ">
@@ -43,9 +43,9 @@ export default function OurDatasets({ title, datasets }) {
                 className={`${styles.card_heading} flex items-center justify-start gap-7  p-7`}
               >
                 <img src={card?.product_icon?.data?.attributes.url} alt="" className="w-2/6" />
-                <h6 className="text-white font-bold w-4/6">
+                <p className="text-white font-bold w-4/6">
                   {card?.datasets_product_name}
-                </h6>
+                </p>
               </div>
             
               <div className="flex items-center justify-center bg-white">
