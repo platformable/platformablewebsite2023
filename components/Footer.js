@@ -56,15 +56,11 @@ const sitemap = [
     links: [
       {
         label: "About us",
-        url: "/aboutus",
+        url: "/about",
       },
       {
         label: "Contact us",
         url: "/contact-us",
-      },
-      {
-        label: "Press",
-        url: "/",
       },
     ],
   },
