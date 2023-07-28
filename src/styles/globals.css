@@ -8,15 +8,13 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-<<<<<<< HEAD
-=======
-
   --purple:#7743F5;
   --purple-extra-dark:#1D17A8;
   --purple-dark:#2A2FC1;
   --purple-medium:#5B24EC;
   --purple-light:#A17EFF;
   --purple-extra-light:#DCD1FF;
+  --purple-double-extra-light: #E9E8F8;
   --green-medium:#99F0CF;
   --green-dark:#0ADC8D;
   --green: #06DE8B;
@@ -28,7 +26,9 @@
   --pink-light:#F1ACFF;
   --pink:#F157FF;
   --yellow: #FFE200;
->>>>>>> 88d90bdf83f88b4cbeec30b8a563e73335d4e2b9
+
+  --orange-medium: #FFC400;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,16 +42,7 @@
   fill: red;
 } */
 
-<<<<<<< HEAD
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-=======
+
 .change_fill_color {
   animation: opacityMove 10s infinite ease-in-out;
   /* opacity: 70%; */
@@ -81,23 +72,23 @@ font-size:20px;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 44px;
 }
 
 h2 {
-  font-size: 46px;
-}
-
-h3 {
   font-size: 40px;
 }
 
+h3 {
+  font-size: 38px;
+}
+
 h4 {
-  font-size: 36px;
+  font-size: 34px;
 }
 
 h5 {
-  font-size: 30px;
+  font-size: 28px;
 }
 
 h6 {
@@ -192,5 +183,4 @@ h6 {
   animation: Gradient 5s ease infinite;
   -moz-animation: Gradient 5s ease infinite;
   /*  */
->>>>>>> 88d90bdf83f88b4cbeec30b8a563e73335d4e2b9
 }

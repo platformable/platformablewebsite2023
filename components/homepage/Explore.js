@@ -26,7 +26,7 @@ export default function Explore({vertical_description_card, title}) {
       <div className="flex gap-x-5 items-center md:mb-20 mb-10">
           <img src="/platformable-icon-white.svg" alt="" className="md:flex hidden"/>
           <h2
-            className={`text-white  font-bold  md:leading-10 leading-8`}
+            className={`text-white  font-bold  md:leading-10 leading-10`}
           >
             {title}
           </h2>

@@ -58,67 +58,15 @@ div[data-card-number='4'] .card_heading  {
 }
 
 .data-products-our-process-bg {
-    background: transparent linear-gradient(180deg, #5B24EC 0%, #8A55FF 100%) 0% 0% no-repeat padding-box;
+    background: #E9E8F8;
     /*  */
 }
 
-  
-  .pic_ctn {
-    width: 100vw;
-    height: 200px;
-  }
-  
-  @keyframes display {
-    0% {
-      transform: translateX(800px);
-      opacity: 0;
-    }
-    10% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    20% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    30% {
-      transform: translateX(-800px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(-800px);
-      opacity: 0;
-    }
-  }
-  
-  .pic_ctn {
-    position: relative;
-    width: 80vw;
-    height: 300px;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+.bg_section_discovery {
+    background: transparent linear-gradient(360deg, #F157FF 0%, #C018CE 100%) 0% 0% no-repeat padding-box;
+}
 
-  }
+.bg_section_scope {
+    background: transparent linear-gradient(0deg, #7C46F6 0%, #3A26CC 100%) 0% 0% no-repeat padding-box;
+}
  
-  .image {
-    position: absolute;
-    top: 0;
-    /* width: 70%; */
-    /* left: calc(20%); */
-    opacity: 0;
-    animation: display 30s infinite ease-in-out;
-  }
-  
-  .image:nth-child(2) {
-    animation-delay: 6s;
-  }
-  .image:nth-child(3) {
-    animation-delay: 12s;
-  }
-  .image:nth-child(4) {
-    animation-delay: 18s;
-  }
-  .image:nth-child(5) {
-    animation-delay: 24s;
-  }
-

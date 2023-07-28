@@ -23,6 +23,8 @@ export default function Testimonials({ data, title, logos }) {
       logo: "/alias_logo.png",
     },
   ];
+
+  console.log("data",data)
   return (
     <section className={`py-10  ${styles["testimonials-bg"]} `}>
       <div className="container mx-auto md:mb-10 mb-0">
@@ -45,39 +47,42 @@ export default function Testimonials({ data, title, logos }) {
           {data &&
             data.map((testimonial, index) => {
               return (
-                <div className="rounded-md bg-white shadow-xl grid grid-rows-[0.5fr_2fr_0.5fr] justify-between" key={index}>
+                <div className="rounded-md bg-white shadow-xl grid grid-rows-[3fr_1fr] justify-between" key={index}>
+                <div className="flex flex-col md:flex-row items-end ">
                 <div className="p-7">
-                <img
-                    src={testimonial.testimonials_img.data.attributes.url}
-                    alt=""
-                    className="place-center"
-                  />
-                </div>
-               
-                <div
+                  <img
+                      src={testimonial.testimonials_img.data.attributes.url}
+                      alt=""
+                      className="place-center"
+                    />
+                    <div
                     dangerouslySetInnerHTML={{
                       __html: testimonial.testimonials_text,
                     }}
-                    className="flex items-center italic font-light px-7 py-5 md:py-10"
+                    className="flex items-center italic font-light  py-5 md:py-10 "
                   />
+                </div>
+                <img src="" />
+                </div>
+               
+                
               
-                <div className={`${
-                      index % 2 == 0 ? "bg-blue-medium" : "bg-green-dark "
-                    } rounded-bl-lg rounded-br-lg p-7`}>
+                <div className={`${styles.bg_footer_testimonial_card} flex justify-between  items-center rounded-bl-lg rounded-br-lg p-7`}>
+                  <div>
                 <p
-                      className={`${
-                        index % 2 == 0 ? "text-white" : "text-black"
-                      }`}
+                      className={`font-black`}
                     >
                       {testimonial.testimonials_clientname}
                     </p>
                   <span
-                      className={`${
-                        index % 2 == 0 ? "text-white" : "text-black"
-                      }`}
+                      className={``}
                     >
                       {testimonial.testimonials_client_role}
                     </span>
+                    </div>
+                    <div>
+                      <a href={testimonial.url} className="underline" target="_blank">{testimonial.url.replace("https://","")}</a>
+                    </div>
                 </div>
               </div>
               );

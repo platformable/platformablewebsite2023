@@ -19,7 +19,7 @@ export default function Hero({ data }) {
         <img
             src={data?.hero_img?.data.attributes.url}
             alt="Data products mapped"
-            className="2xl:-mt-[40rem] xl:-mt-[34rem] lg:-mt-[28rem] 2xl:-mt-[32rem] lg:-mr-14 hidden justify-self-end lg:block lg:w-3/6 2xl:w-2/5"
+            className="2xl:-mt-[40rem] xl:-mt-[34rem] lg:-mt-[28rem] 2xl:-mt-[26rem] lg:-mr-14 hidden justify-self-end lg:block lg:w-3/6 2xl:w-2/5"
           />
           <div
             dangerouslySetInnerHTML={{

@@ -11,11 +11,11 @@ export default function OurCommitment({ data }) {
           <h4 className="font-bold">{data?.ourCommitment_title}</h4>
         </div>
         <article className="grid gap-32">
-          {data?.commitments?.map((commit) => (
-            <div className="grid grid-cols-[1fr_3fr] gap-7">
-              <div className="flex flex-col gap-y-5 px-10 justify-center border-r-2 border-white">
+          {data?.commitments?.map((commit,index) => (
+            <div className="grid md:grid-cols-[1fr_3fr] grid-cols-1 gap-7" key={index}>
+              <div className="flex flex-col gap-y-5 px-10 justify-center border-r-2 md:border-white border-none">
                 <img src={commit.commitment_img?.data?.attributes.url} alt="" />
-                <p>{commit?.commitment_text}</p>
+                <p className="font-bold">{commit?.commitment_text}</p>
               </div>
               <div
                 dangerouslySetInnerHTML={{

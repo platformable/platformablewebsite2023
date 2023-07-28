@@ -5,7 +5,10 @@ export default function OurDatasets({ title, datasets }) {
     <section className={`${styles.bg_section_datasets} py-10`}>
       <div className="container mx-auto">
         
-        <div className="grid xl:mt-10 gap-1">
+        <div className="hidden md:grid xl:mt-10 gap-1">
+        <p className="text-white font-medium mb-10">
+        You can also access our datasets by purchasing one of our ready-made data products, including trends reports and analytical tools.
+        </p>
           <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] ">
             <div className="flex items-center bg-[#3328C3] px-7 gap-5 rounded-tl-xl">
               <div className="w-2/6 flex justify-center">
@@ -72,21 +75,21 @@ export default function OurDatasets({ title, datasets }) {
             </div>
           ))}
            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] bg-white py-7">
-            <div className="px-7 col-start-1 col-end-5 text-[#3328C3] ">
+            <div className="px-7 col-start-1 col-end-5 text-[#3328C3]  flex items-center gap-x-5">
+              <img src="/dataset_blank.png" alt="dataset blank icon" />
+             <div className="">
              <h5 className="mb-1 font-bold">{"Didn't find the product you were looking for ?"}</h5>
              <p>If you have a specific product in mind or if you need assistance in building your own dataset</p>
+             </div>
             </div>
             <div className="grid items-center px-7 ">
-                <button className="bg-[var(--yellow)] px-3 py-2 rounded-md text-[var(--purple)]">
-                  <p>Buy now</p>
+                <button className="bg-[var(--yellow)] px-3 py-2 shadow-md rounded-md text-[var(--purple)]">
+                  <p className="font-bold">Contact us</p>
                 </button>
               </div>
           </div>
         </div>
-        <p className="text-white font-medium my-7">
-          You can also access our datasets by purchasing one of our ready-made
-          data products, including trends reports and analytical tools.
-        </p>
+       
       </div>
     </section>
   );
