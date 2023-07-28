@@ -34,8 +34,8 @@ export default function OurProcess({ data }) {
             </div>
             <div className="grid md:grid-cols-3 gap-y-7 gap-x-7">
 
-                 {data?.discovery_images?.data?.map(img => (
-                  <img src={img.attributes.url} alt="" className=""/>
+                 {data?.discovery_images?.data?.map((img,index) => (
+                  <img src={img.attributes.url} alt="" className="" key={index}/>
                  )
                 )} 
                 
