@@ -5,7 +5,7 @@ export default function OurDatasets({ title, datasets }) {
     <section className={`${styles.bg_section_datasets} py-10`}>
       <div className="container mx-auto">
         
-        <div className="grid xl:mt-10 gap-1">
+        <div className="hidden md:grid xl:mt-10 gap-1">
         <p className="text-white font-medium mb-10">
         You can also access our datasets by purchasing one of our ready-made data products, including trends reports and analytical tools.
         </p>
