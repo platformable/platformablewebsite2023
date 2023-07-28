@@ -2,11 +2,11 @@ import styles from "@/styles/Datasetspage.module.css";
 
 export default function OurDatasets({ title, datasets }) {
   return (
-    <section className={`${styles.bg_section_datasets} py-10`}>
+    <section className={`${styles.bg_section_datasets} pb-20 pt-2`}>
       <div className="container mx-auto">
         
-        <div className="hidden md:grid xl:mt-10 gap-1">
-        <p className="text-white font-medium mb-10">
+        <div className="hidden md:grid  gap-1">
+        <p className="text-white  font-bold mb-10">
         You can also access our datasets by purchasing one of our ready-made data products, including trends reports and analytical tools.
         </p>
           <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] ">
@@ -76,7 +76,7 @@ export default function OurDatasets({ title, datasets }) {
           ))}
            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] bg-white py-7">
             <div className="px-7 col-start-1 col-end-5 text-[#3328C3]  flex items-center gap-x-5">
-              <img src="/dataset_blank.png" alt="dataset blank icon" />
+              <img src="/didnt_find.png" alt="dataset blank icon" />
              <div className="">
              <h5 className="mb-1 font-bold">{"Didn't find the product you were looking for ?"}</h5>
              <p>If you have a specific product in mind or if you need assistance in building your own dataset</p>
