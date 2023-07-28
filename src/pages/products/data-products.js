@@ -24,7 +24,7 @@ export default function DataProducts({ data }) {
 export async function getServerSideProps(ctx) {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/data-product?populate[data_products_hero_img]=*&populate[products]=*&populate[testimonials][populate][testimonials_img]=*`
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/data-product?populate[data_products_hero_img]=*&populate[products][populate][product_icon]=*&populate[testimonials][populate][testimonials_img]=*`
     );
     const data = await res.json();
 
