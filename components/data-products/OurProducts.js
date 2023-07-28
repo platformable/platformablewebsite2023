@@ -2,7 +2,7 @@ import styles from "@/styles/DataProducts.module.css";
 
 export default function OurProducts({ title, products }) {
   return (
-    <section className=" py-10 bg-[var(--purple-medium)]">
+    <section className="py-10 bg-[var(--purple-medium)]">
       {/* <div className="mb-10 flex gap-x-5">
         <img src="/platformable-icon-purple.svg" alt="Platformable logo" className=""/>
         <h3 className="text-[var(--purple-medium)] font-bold">{title}</h3>
@@ -14,7 +14,7 @@ export default function OurProducts({ title, products }) {
               <div className="w-2/6 flex justify-center">
                 <img  src="/logo_icon_white.png" alt="Platformable logo" />
               </div>
-              <h6 className="text-white font-bold">Data products</h6>
+              <h6 className="text-white font-bold">Data Products</h6>
             </div>
             <div className="grid place-items-center py-5 bg-white">
               <img src="/overview.svg" alt="datapoints svg" />
