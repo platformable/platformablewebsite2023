@@ -2,7 +2,7 @@ import styles from "@/styles/DataProducts.module.css";
 
 export default function OurProducts({ title, products }) {
   return (
-    <section className="py-10 bg-[var(--purple-medium)]">
+    <section className="pb-20 pt-2 bg-[var(--purple-medium)]">
       {/* <div className="mb-10 flex gap-x-5">
         <img src="/platformable-icon-purple.svg" alt="Platformable logo" className=""/>
         <h3 className="text-[var(--purple-medium)] font-bold">{title}</h3>

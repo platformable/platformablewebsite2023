@@ -2,9 +2,9 @@ import styles from "@/styles/DataGovernancepage.module.css";
 
 export default function GovernanceProducts({ title, products }) {
   return (
-    <section className="bg-[var(--purple-medium)] py-10">
+    <section className="pb-20 pt-2 bg-[var(--purple-medium)] ">
       <div className="container mx-auto">
-      <div className="mb-10 flex gap-x-5">
+      <div className="flex gap-x-5">
         {/* <img
           src="/platformable-icon-purple.svg"
           alt="Platformable logo"
