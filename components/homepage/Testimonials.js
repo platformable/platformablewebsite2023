@@ -63,7 +63,7 @@ export default function Testimonials({ data, title, logos }) {
                   />
                 </div>
 
-                <img src="/axway_logo.png" className=""/>
+                <img src={testimonial.testimonials_img?.data?.attributes.url} className=""/>
 
                 </div>
                

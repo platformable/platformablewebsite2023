@@ -26,7 +26,7 @@ export default function DataGovernance({ data }) {
 export async function getServerSideProps(ctx) {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/data-governance?populate[hero_img]=*?&populate[services][populate][service_img]=*&populate[products][populate][bookbuybtn_img]=*&populate[testimonials][populate][testimonials_img]=*&populate[products][populate][product_icon]=*`
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/data-governance?populate[hero_img]=*?&populate[services][populate][service_img]=*&populate[products][populate][bookbuybtn_img]=*&populate[testimonials][populate][testimonials_img]=*&populate[products][populate][product_icon]=*&populate[process_media]=*`
     );
     const data = await res.json();
 

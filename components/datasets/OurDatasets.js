@@ -6,7 +6,7 @@ export default function OurDatasets({ title, datasets }) {
       <div className="container mx-auto">
         
         <div className="hidden md:grid  gap-1">
-        <p className="text-white  font-bold mb-10">
+        <p className="text-white  font-bold mb-5 xl:mb-10">
         You can also access our datasets by purchasing one of our ready-made data products, including trends reports and analytical tools.
         </p>
           <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] ">

@@ -14,7 +14,7 @@ export default function GovernanceProducts({ title, products }) {
           {title}
         </h3> */}
       </div>
-      <div className="hidden md:grid xl:mt-10 gap-1 ">
+      <div className="hidden md:grid mt-5 xl:mt-10 gap-1 ">
           <div className="grid grid-cols-[1.5fr_2fr_1fr_1fr] ">
             <div className="flex items-center bg-[#3328C3] px-7 gap-5 rounded-tl-xl">
               <div className="w-2/6 flex justify-center">
@@ -42,15 +42,15 @@ export default function GovernanceProducts({ title, products }) {
               key={i}
             >
               <div
-                className={`${styles.card_heading} flex items-center justify-start gap-7 py-5  px-7`}
+                className={`${styles.card_heading} flex flex-col lg:flex-row items-center justify-start gap-5  py-14 px-2`}
               >
                 <img src={card?.product_icon?.data?.attributes?.url} alt="" className="w-2/6" />
-                <h6 className="text-white font-bold w-4/6">
+                <p className="text-white font-bold w-4/6">
                   {card?.title}
-                </h6>
+                </p>
               </div>
             
-              <div className="flex items-center p-7 justify-center bg-white p">
+              <div className="flex  p-7 justify-center bg-white p">
                 
                 <div
                     dangerouslySetInnerHTML={{
@@ -68,22 +68,10 @@ export default function GovernanceProducts({ title, products }) {
               </div>
               
               <div className="grid items-center px-7 bg-[#E9E8F8]">
-                {card.data_products_product_price_quarter &&
-                card.data_products_product_price_year ? (
-                  <div className="grid grid-rows-2 gap-y-10">
-                  <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple)]">
-                    <p><strong>${card.data_products_product_price_quarter}</strong> per quarter</p>
-                  </button>
-                  <button className="bg-[var(--orange-medium)] leading-snug px-3 py-2 shadow rounded-md text-[var(--purple)]">
-                    <p><strong>${card.data_products_product_price_year}</strong> per year</p>
-                    <small>save 25%</small>
-                  </button>
-                  </div>
-                ) : (
-                  <button className="bg-[var(--pink)] shadow px-3 py-2 rounded-md text-white">
-                  <p>Join waiting list</p>
+              <button className="bg-[var(--yellow)]  shadow px-3 py-2 rounded-md text-white">
+                  <p className="text-[var(--purple)]">Buy now</p>
                 </button>
-                )}
+              
                 
               </div>
               
