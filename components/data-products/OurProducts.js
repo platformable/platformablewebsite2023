@@ -2,7 +2,7 @@ import styles from "@/styles/DataProducts.module.css";
 
 export default function OurProducts({ title, products }) {
   return (
-    <section className=" py-10 bg-[var(--purple-medium)]">
+    <section className="py-10 bg-[var(--purple-medium)]">
       {/* <div className="mb-10 flex gap-x-5">
         <img src="/platformable-icon-purple.svg" alt="Platformable logo" className=""/>
         <h3 className="text-[var(--purple-medium)] font-bold">{title}</h3>
@@ -14,7 +14,7 @@ export default function OurProducts({ title, products }) {
               <div className="w-2/6 flex justify-center">
                 <img  src="/logo_icon_white.png" alt="Platformable logo" />
               </div>
-              <h6 className="text-white font-bold">Data products</h6>
+              <h6 className="text-white font-bold">Data Products</h6>
             </div>
             <div className="grid place-items-center py-5 bg-white">
               <img src="/overview.svg" alt="datapoints svg" />
@@ -90,7 +90,7 @@ export default function OurProducts({ title, products }) {
           ))}
            <div className="grid grid-cols-[1.5fr_2fr_1fr_1fr] bg-white py-7">
             <div className="px-7 col-start-1 col-end-4 text-[#3328C3]  flex items-center gap-x-5">
-              <img src="/dataset_blank.png" alt="dataset blank icon" />
+              <img src="/didnt_find.png" alt="dataset blank icon" />
              <div className="">
              <h5 className="mb-1 font-bold">{"Didn't find the product you were looking for ?"}</h5>
              <p>If you have a specific product in mind or if you need assistance in building your own dataset</p>
