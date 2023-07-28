@@ -58,8 +58,15 @@ div[data-card-number='4'] .card_heading  {
 }
 
 .data-products-our-process-bg {
-    background: transparent linear-gradient(180deg, #5B24EC 0%, #8A55FF 100%) 0% 0% no-repeat padding-box;
+    background: #E9E8F8;
     /*  */
 }
 
+.bg_section_discovery {
+    background: transparent linear-gradient(360deg, #F157FF 0%, #C018CE 100%) 0% 0% no-repeat padding-box;
+}
+
+.bg_section_scope {
+    background: transparent linear-gradient(0deg, #7C46F6 0%, #3A26CC 100%) 0% 0% no-repeat padding-box;
+}
  
