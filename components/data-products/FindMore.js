@@ -2,51 +2,36 @@ import styles from "@/styles/DataProducts.module.css";
 import Link from "next/link";
 import carouselStyles from '@/styles/Carousel.module.scss'
 
-export default function FindMore({ images }) {
+export default function FindMore({ sectors }) {
   
-  const slices = [
-    {
-      title: 'Understand',
-      subtitle: "LEARN HOW OPEN ECOSYSTEMS CAN CREATE A FUTURE WE ALL WANT TO LIVE IN",
-      header_icon: '/understand_logo_platformable.svg',
-      link: '/understand',
-      image: images && images[0]?.attributes?.url || null
-    },
-    {
-      title: 'Act',
-      subtitle: "OUR RANGE OF PRODUCTS AND SERVICES CAN HELP YOU BUILD YOUR ORGANISATION INTO OPEN DIGITAL ECOSYSTEMS",
-      header_icon: '/act_logo_platformable.svg',
-      link: '/act',
-      image: images &&  images[1]?.attributes.url || null
-    },
-    {
-      title: 'Engage',
-      subtitle: "TO ACTIVELY PARTICIPATE IN AN OPEN ECOSYSTEM, FOLLOW OUR RECOMMENDED RESOURCES AND TOOLS",
-      header_icon: '/engage_logo_platformable.svg',
-      link: '/engage', 
-      image:images &&   images[2]?.attributes.url || null
-    },
-  ]
+  
   return (
     <section className={`py-10 container mx-auto overflow-y-hidden  bg-white overflow-x-hidden hidden lg:block`}>
       <div className={`relative h-screen flex flex-col justify-center`}>
-    {slices?.map( (slice,index) => (
-      <div className={`${carouselStyles.carousel__item} grid grid-cols-[3fr_1.5fr] px-24`} id={index+1} key={index}>
+    {sectors?.map( (sector,index) => (
+      <div className={`${carouselStyles.carousel__item} grid grid-cols-[3fr_1.5fr] xl:px-24`} id={index+1} key={index}>
         <div className="flex flex-col gap-y-10 mb-10">
           <div className="flex gap-5 items-center">
-            <img src={slice?.header_icon} alt="" />
-            <h2 className="font-bold text-[var(--purple-medium)]">{slice?.title}</h2>
+            <img src={sector?.icon?.data?.attributes?.url} alt="" />
+            <h2 className="font-bold text-[var(--purple-medium)]">{sector?.title}</h2>
           </div>
-          <p className="text-[var(--purple-medium)] pr-16 font-bold">{slice?.subtitle}</p>
+          {/* <p className="text-[var(--purple-medium)]  font-bold">{sector?.subtitle}</p> */}
 
-          <Link href={slice.link}>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: sector?.description,
+            }}
+            className="pr-16 text-[var(--purple-medium)]"
+          />
+
+          <Link href={`/${sector.link}`}>
           <button className="rounded bg-[var(--yellow)] px-10 py-4 text-lg text-center font-bold lg:rounded-xl text-[var(--purple-medium)]">
             Find out more
           </button>
           </Link>
           
         </div>
-        <img className={``} src={slice?.image} alt="" />
+        <img className={``} src={sector?.image?.data?.attributes?.url} alt="" />
     </div>
     ))}
     

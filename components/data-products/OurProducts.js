@@ -11,13 +11,13 @@ export default function OurProducts({ title, products }) {
       <div className="hidden md:grid mt-5 xl:mt-10 gap-1 container mx-auto">
           <div className="grid grid-cols-[1.5fr_2fr_1fr_1fr] ">
             <div className="flex items-center bg-[#3328C3] px-7 gap-5 rounded-tl-xl">
-              <div className="w-2/6 flex justify-center">
+              <div className="w-2/6 flex justify-center hidden lg:block">
                 <img  src="/logo_icon_white.png" alt="Platformable logo" />
               </div>
               <h6 className="text-white font-bold">Data Products</h6>
             </div>
             <div className="grid place-items-center py-5 bg-white">
-              <img src="/overview.svg" alt="datapoints svg" />
+              <img src="/overview.svg" alt="datapoints svg" className=""/>
               <p className="font-bold text-[var(--purple-medium)]">Overview</p>
             </div>
             <div className="grid place-items-center py-5 px-7 bg-[#F6F4FF]">
@@ -36,12 +36,12 @@ export default function OurProducts({ title, products }) {
               key={i}
             >
               <div
-                className={`${styles.card_heading} flex items-center justify-start gap-7 py-5  px-7`}
+                className={`${styles.card_heading} flex flex-col lg:flex-row items-center justify-start gap-5 py-12  px-2`}
               >
                 <img src={card?.product_icon?.data?.attributes?.url} alt="" className="w-2/6" />
-                <h6 className="text-white font-bold w-4/6">
+                <p className="text-white text-center lg:text-left font-bold w-4/6">
                   {card?.data_products_product_name}
-                </h6>
+                </p>
               </div>
             
               <div className="flex items-center p-7 justify-center bg-white p">
