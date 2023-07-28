@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70.053" height="58.193" viewBox="0 0 70.053 58.193">
+  <defs>
+    <filter id="Union_54" x="0" y="0" width="70.053" height="58.193" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2833" data-name="Rectangle 2833" width="21.687" height="15.107" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="overview" transform="translate(9.533 6.533)">
+    <g id="Group_4146" data-name="Group 4146">
+      <g transform="matrix(1, 0, 0, 1, -9.53, -6.53)" filter="url(#Union_54)">
+        <path id="Union_54-2" data-name="Union 54" d="M47.3,38.848,42.345,35.8l-.029.046-4.47-2.816-2.724-1.677.017-.029-7.482-4.713a15.9,15.9,0,1,1,2.86-4.442l14.6,9.2-.016.026,4.92,3.1a2.415,2.415,0,0,1,.573,3.356l-.026.045A2.609,2.609,0,0,1,48.4,39.16,2.063,2.063,0,0,1,47.3,38.848ZM4.3,8.659A13.673,13.673,0,1,0,15.916,2.223,13.675,13.675,0,0,0,4.3,8.659Z" transform="translate(9.53 6.53)" fill="#3328c3" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+      </g>
+      <circle id="Ellipse_531" data-name="Ellipse 531" cx="13.5" cy="13.5" r="13.5" transform="translate(2.523 3.183)" fill="#fff"/>
+    </g>
+    <g id="Group_4147" data-name="Group 4147" transform="translate(4.688 8.884)">
+      <g id="Group_4146-2" data-name="Group 4146" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Path_4066" data-name="Path 4066" d="M10.793,15.107A12.255,12.255,0,0,1,.668,9.521,3.387,3.387,0,0,1,.645,5.513C5.077-1.825,16.58-1.84,21.039,5.483a3.461,3.461,0,0,1-.09,4.152,12.333,12.333,0,0,1-10.156,5.472m.02-12.769A5.18,5.18,0,0,0,10.888,12.7a5.268,5.268,0,0,0,5.149-5.229,5.213,5.213,0,0,0-5.224-5.131" transform="translate(0 0)" fill="#3328c3"/>
+        <path id="Path_4067" data-name="Path 4067" d="M27.809,12.952l-2.288,2.4H28.7a3.222,3.222,0,0,1-2.617,3.506,3.536,3.536,0,0,1-2.892-6.267c1.4-1.078,2.913-.992,4.617.361" transform="translate(-14.515 -7.892)" fill="#3328c3"/>
+      </g>
+    </g>
+  </g>
+</svg>

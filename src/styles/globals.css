@@ -26,6 +26,7 @@
   --pink-light:#F1ACFF;
   --pink:#F157FF;
   --yellow: #FFE200;
+  --orange-medium: #FFC400;
 }
 
 @media (prefers-color-scheme: dark) {
