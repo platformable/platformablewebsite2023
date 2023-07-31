@@ -22,8 +22,8 @@ export default function OurProcess({ data }) {
           }}
           className=""
         />
-        <div className="mt-10 flex items-center justify-center bg-white bg-opacity-50 rounded py-72">
-          <h4 className="text-[var(--blue-extra-dark)]">Diagram</h4>
+        <div className=" rounded ">
+        <img src={data?.diagram?.data?.attributes?.url} alt="" />
         </div>
       </div>
     </section>

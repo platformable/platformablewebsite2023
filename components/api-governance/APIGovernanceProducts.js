@@ -1,6 +1,6 @@
 import styles from "@/styles/DataGovernancepage.module.css";
 
-export default function GovernanceProducts({ title, products }) {
+export default function GovernanceProducts({  products }) {
   return (
     <section className="pb-20 pt-2 bg-[var(--purple-medium)] ">
       <div className="container mx-auto">
@@ -20,7 +20,7 @@ export default function GovernanceProducts({ title, products }) {
               <div className="w-2/6 flex justify-center">
                 <img  src="/logo_icon_white.png" alt="Platformable logo" />
               </div>
-              <h6 className="text-white font-bold">Data Governance</h6>
+              <h6 className="text-white font-bold">API Governance Products</h6>
             </div>
             <div className="grid place-items-center py-5 bg-white">
               <img src="/overview.svg" alt="datapoints svg" />
