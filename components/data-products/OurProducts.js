@@ -38,8 +38,8 @@ export default function OurProducts({ title, products }) {
               <div
                 className={`${styles.card_heading} flex flex-col lg:flex-row items-center justify-start gap-5 py-12  px-2`}
               >
-                <img src={card?.product_icon?.data?.attributes?.url} alt="" className="w-2/6" />
-                <p className="text-white text-center lg:text-left font-bold w-4/6">
+                <img src={card?.product_icon?.data?.attributes?.url} alt="" className="w-2/7" />
+                <p className="text-white text-center lg:text-left font-bold w-5/7">
                   {card?.data_products_product_name}
                 </p>
               </div>

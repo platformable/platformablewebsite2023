@@ -1,6 +1,6 @@
 import styles from "@/styles/DataGovernancepage.module.css";
 
-export default function GovernanceProducts({ title, products }) {
+export default function GovernanceProducts({  products }) {
   return (
     <section className="pb-20 pt-2 bg-[var(--purple-medium)] ">
       <div className="container mx-auto">

@@ -42,8 +42,8 @@ export default function OurDatasets({ title, datasets }) {
               <div
                 className={`${styles.card_heading} flex items-center justify-start gap-7  p-7`}
               >
-                <img src={card?.product_icon?.data?.attributes.url} alt="" className="w-2/6" />
-                <p className="text-white font-bold w-4/6">
+                <img src={card?.product_icon?.data?.attributes.url} alt="" className="w-2/7" />
+                <p className="text-white font-bold w-5/7">
                   {card?.datasets_product_name}
                 </p>
               </div>
