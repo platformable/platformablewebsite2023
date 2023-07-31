@@ -44,8 +44,8 @@ export default function GovernanceProducts({ title, products }) {
               <div
                 className={`${styles.card_heading} flex flex-col lg:flex-row items-center justify-start gap-5  py-14 px-2`}
               >
-                <img src={card?.bookbuybtn_img?.data?.attributes?.url} alt="" className="w-2/6" />
-                <p className="text-white font-bold w-4/6">
+                <img src={card?.product_icon?.data?.attributes?.url} alt="" className="w-2/7" />
+                <p className="text-white font-bold w-5/7">
                   {card?.title}
                 </p>
               </div>
