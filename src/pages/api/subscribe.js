@@ -20,12 +20,35 @@ export default async function subscribe(req, res) {
       }
     );
 
-    if (response.status === 201) {
+    if (response.ok) {
       return res.status(200).json({ success: true });
     } else {
-      return res.status(response.status).json(await response.json());
+      return res.status(400).json({ message: `subscription failed` });
     }
   } catch (error) {
-    return res.status(error.response.status).json(error.response.data);
+    return res.status(500).json({ error: error.message });
   }
 }
+
+// export async function getSubscribers(req, res) {
+//   try {
+//     const response = await fetch(
+//       `https://api.mailerlite.com/api/v2/groups/${groupId}/subscribers`,
+//       {
+//         method: "GET",
+//         headers: {
+//           "Content-Type": "application/json",
+//           "X-MailerLite-ApiKey": apiKey,
+//         },
+//       }
+//     );
+
+//     if (response.ok) {
+//       return res.status(200).json(await response.json());
+//     } else {
+//       return res.status(400).json({ message: `Couldn't access subscribers` });
+//     }
+//   } catch (error) {
+//     return res.status(500).json({ error: error.message });
+//   }
+// }

@@ -218,9 +218,11 @@ export default function Header() {
                   setPlusClickOne(false);
                   setPlusClickTwo(false);
                   setPlusClickThree(false);
+                  setPlusClickFour(false);
                   setResponsiveListOne(false);
                   setResponsiveListTwo(false);
                   setResponsiveListThree(false);
+                  setResponsiveListFour(false);
                 }}
               >
                 X
