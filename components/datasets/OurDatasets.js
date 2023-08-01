@@ -2,10 +2,13 @@ import styles from "@/styles/Datasetspage.module.css";
 
 export default function OurDatasets({ title, datasets }) {
   return (
-    <section className={`${styles.bg_section_datasets} py-10`}>
+    <section className={`${styles.bg_section_datasets} pb-20 pt-2`}>
       <div className="container mx-auto">
         
-        <div className="grid xl:mt-10 gap-1">
+        <div className="hidden md:grid  gap-1">
+        <p className="text-white  font-bold mb-5 xl:mb-10">
+        You can also access our datasets by purchasing one of our ready-made data products, including trends reports and analytical tools.
+        </p>
           <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] ">
             <div className="flex items-center bg-[#3328C3] px-7 gap-5 rounded-tl-xl">
               <div className="w-2/6 flex justify-center">
@@ -39,10 +42,10 @@ export default function OurDatasets({ title, datasets }) {
               <div
                 className={`${styles.card_heading} flex items-center justify-start gap-7  p-7`}
               >
-                <img src={card?.product_icon?.data?.attributes.url} alt="" className="w-2/6" />
-                <h6 className="text-white font-bold w-4/6">
+                <img src={card?.product_icon?.data?.attributes.url} alt="" className="w-2/7" />
+                <p className="text-white font-bold w-5/7">
                   {card?.datasets_product_name}
-                </h6>
+                </p>
               </div>
             
               <div className="flex items-center justify-center bg-white">
@@ -72,21 +75,21 @@ export default function OurDatasets({ title, datasets }) {
             </div>
           ))}
            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] bg-white py-7">
-            <div className="px-7 col-start-1 col-end-5 text-[#3328C3] ">
+            <div className="px-7 col-start-1 col-end-5 text-[#3328C3]  flex items-center gap-x-5">
+              <img src="/didnt_find.png" alt="dataset blank icon" />
+             <div className="">
              <h5 className="mb-1 font-bold">{"Didn't find the product you were looking for ?"}</h5>
              <p>If you have a specific product in mind or if you need assistance in building your own dataset</p>
+             </div>
             </div>
             <div className="grid items-center px-7 ">
-                <button className="bg-[var(--yellow)] px-3 py-2 rounded-md text-[var(--purple)]">
-                  <p>Buy now</p>
+                <button className="bg-[var(--yellow)] px-3 py-2 shadow-md rounded-md text-[var(--purple)]">
+                  <p className="font-bold">Contact us</p>
                 </button>
               </div>
           </div>
         </div>
-        <p className="text-white font-medium my-7">
-          You can also access our datasets by purchasing one of our ready-made
-          data products, including trends reports and analytical tools.
-        </p>
+       
       </div>
     </section>
   );

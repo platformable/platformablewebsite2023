@@ -42,10 +42,11 @@ export default function Home({ data }) {
           videos={[
             data?.attributes?.stakeholder_img_1,
             data?.attributes?.stakeholder_img_2,
-            data?.attributes.stakeholder_img_3,
+            data?.attributes?.stakeholder_img_3,
           ]}
           title={data?.attributes?.stakeholder_title}
         />
+
         <ProductsServices
           title={data?.attributes?.product_services_title}
           product_cards={data?.attributes?.product_cards}
