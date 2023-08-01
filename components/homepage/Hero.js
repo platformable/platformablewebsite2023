@@ -3,7 +3,6 @@ import React from "react";
 import styles from "@/styles/Homepage.module.css";
 
 export default function Hero({ heroImg, heroSubtitle, hero_title }) {
-
   const subtitle = heroSubtitle.split(" ")[0];
   const simpleSubtitle = heroSubtitle.substr(heroSubtitle.indexOf(" ") + 1);
 
@@ -26,14 +25,9 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
           >
             <Link href="/">
               <div className="flex gap-x-5 self-start items-center ">
-                <img
-                  src="/icon_section01.svg"
-                  alt=""
-                  className=""
-                />
+                <img src="/icon_section01.svg" alt="" className="" />
                 <p>Contact us</p>
                 <img src="/icon_arrow_purple.svg" alt="arrow icon" />
-                
               </div>
             </Link>
           </button>

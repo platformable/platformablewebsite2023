@@ -29,3 +29,26 @@ export default async function subscribe(req, res) {
     return res.status(500).json({ error: error.message });
   }
 }
+
+// export async function getSubscribers(req, res) {
+//   try {
+//     const response = await fetch(
+//       `https://api.mailerlite.com/api/v2/groups/${groupId}/subscribers`,
+//       {
+//         method: "GET",
+//         headers: {
+//           "Content-Type": "application/json",
+//           "X-MailerLite-ApiKey": apiKey,
+//         },
+//       }
+//     );
+
+//     if (response.ok) {
+//       return res.status(200).json(await response.json());
+//     } else {
+//       return res.status(400).json({ message: `Couldn't access subscribers` });
+//     }
+//   } catch (error) {
+//     return res.status(500).json({ error: error.message });
+//   }
+// }
