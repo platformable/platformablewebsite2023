@@ -20,7 +20,7 @@ export default function DataProducts({ data }) {
 export async function getServerSideProps(ctx) {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/speaker-engagement?populate[services][populate][service_img]=*`
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/speaker-engagement?populate[services][populate][service_img]=*&populate[hero_img]=*&populate[sectors][populate][image]=*`
     );
     const data = await res.json();
 
