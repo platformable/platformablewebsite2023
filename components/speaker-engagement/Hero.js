@@ -7,7 +7,7 @@ export default function Hero({ data }) {
         <h1 className="mb-10 text-[var(--purple-medium)] font-bold">
           {data?.title}
         </h1>
-        <div className="flex">
+        <div className="flex gap-10">
           <div
             dangerouslySetInnerHTML={{
               __html:
@@ -18,7 +18,7 @@ export default function Hero({ data }) {
           <img
             src={data?.hero_img?.data.attributes.url}
             alt="Data products mapped"
-            className="lg:-mb-[2rem] xl:-mt-24 lg:-mr-10 hidden justify-self-end lg:block lg:w-3/6 xl:w-[40%] 2xl:w-2/5 h-96"
+            className="lg:-mt-24 xl:-mt-28  lg:-mt-[24pc] lg:-mr-10 hidden justify-self-end lg:block lg:w-3/6 xl:w-[40%] 2xl:w-2/5 h-96"
           />
         </div>
       </div>
