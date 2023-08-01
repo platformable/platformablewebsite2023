@@ -16,7 +16,7 @@ export default function DataSets({ data }) {
       <OurDatasets title={data?.datasets_products_title} datasets={data?.products}/>
       <OurProcess title={data?.datasets_process_title}/>
       {/* <Testimonials title={data?.datasets_testimonial_title} data={data?.testimonials}/> */}
-      <FindMore images={data?.sectors_img?.data}/>
+      <FindMore sectors={data?.sectors}/>
       <Footer />
     </Layout>
   );
@@ -25,7 +25,7 @@ export default function DataSets({ data }) {
 export async function getServerSideProps(ctx) {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/dataset?populate[datasets_img]=*&populate[sectors_img]=*&populate[products][populate][product_icon]=*&populate[testimonials][populate][testimonials_img]=*`
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/dataset?populate[datasets_img]=*&populate[sectors_img]=*&populate[products][populate][product_icon]=*&populate[testimonials][populate][testimonials_img]=*&populate[sectors][populate][image]=*`
     );
     const data = await res.json();
 

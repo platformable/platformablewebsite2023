@@ -29,23 +29,23 @@ const sitemap = [
         url: "/products/datasets",
       },
       {
-        label: "Data products",
+        label: "Data Products",
         url: "/products/data-products",
       },
       {
-        label: "Data governance",
+        label: "Data Governance",
         url: "/products/data-governance",
       },
       {
-        label: "API governance",
+        label: "API Governance",
         url: "/products/api-governance",
       },
       {
-        label: "Speaker engagement",
+        label: "Speaker Engagement",
         url: "/products/speaker-engagement",
       },
       {
-        label: "Open ecosystem consultancy",
+        label: "Open Ecosystem Consultancy",
         url: "/products/open-ecosystem-consultancy",
       },
     ],
@@ -55,15 +55,11 @@ const sitemap = [
     links: [
       {
         label: "About us",
-        url: "/aboutus",
+        url: "/about",
       },
       {
         label: "Contact us",
         url: "/contact-us",
-      },
-      {
-        label: "Press",
-        url: "/",
       },
     ],
   },
