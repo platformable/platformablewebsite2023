@@ -15,11 +15,13 @@ export default function Hero({ data }) {
             }}
             className="lg:w-3/6 xl:w-[60%] 2xl:w-3/5"
           />
+          <div className="lg:w-3/6 xl:w-[60%] 2xl:w-3/5 flex justify-center">
           <img
-            src={data?.hero_img?.data?.attributes.url}
-            alt="Data products mapped"
-            className="lg:-mt-24 xl:-mt-28  lg:-mt-[24pc] lg:-mr-10 hidden justify-self-end lg:block lg:w-3/6 xl:w-[40%] 2xl:w-2/5 h-96"
-          />
+              src={data?.hero_img?.data.attributes.url}
+              alt="Data products mapped"
+              className="lg:-mt-[2rem] xl:-mt-44  lg:-mt-[24pc]  hidden justify-end lg:block  h-96 relative top-24"
+            />
+            </div>
         </div>
       </div>
     </section>
