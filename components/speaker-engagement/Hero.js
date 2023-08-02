@@ -1,4 +1,4 @@
-import styles from "@/styles/DataProducts.module.css";
+import styles from "@/styles/OpenEcosystempage.module.css";
 
 export default function Hero({ data }) {
   return (
@@ -16,7 +16,7 @@ export default function Hero({ data }) {
             className="lg:w-3/6 xl:w-[60%] 2xl:w-3/5"
           />
           <img
-            src={data?.hero_img?.data.attributes.url}
+            src={data?.hero_img?.data?.attributes.url}
             alt="Data products mapped"
             className="lg:-mt-24 xl:-mt-28  lg:-mt-[24pc] lg:-mr-10 hidden justify-self-end lg:block lg:w-3/6 xl:w-[40%] 2xl:w-2/5 h-96"
           />
