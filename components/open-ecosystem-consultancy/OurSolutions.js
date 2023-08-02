@@ -3,18 +3,21 @@ import styles from "@/styles/OpenEcosystempage.module.css";
 export default function OurSolutions({ data }) {
   return (
     <section className="pb-20 pt-2 bg-[var(--purple-medium)] ">
-      <div className="container mx-auto">
-        <div className="flex gap-x-5">
+      <div className="container mx-auto pt-10">
+        <div className="flex gap-x-5 mb-16">
           <img
-            src="/platformable-icon-purple.svg"
+            src="/platformable-icon-white.svg"
             alt="Platformable logo"
             className=""
           />
-          <h3 className="text-[var(--purple-medium)] font-bold">
-            Platformable solutions for your evolving needs
+          <div>
+          <h3 className="text-white font-bold mb-5">
+            {data?.solutions_title}
           </h3>
+          <p className="text-white">{data?.solutions_description}</p>
+          </div>
         </div>
-        <div className="grid mt-5 xl:mt-10 gap-y-4 lg:gap-y-7">
+        <div className="grid mt-5 xl:mt-10 gap-y-10 lg:gap-y-7">
           {data?.solutions.map((solution, index) => (
             <div className="grid lg:grid-cols-[1fr_8.5fr] lg:h-48 xl:h-32" key={index}>
               <div
