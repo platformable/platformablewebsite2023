@@ -7,7 +7,7 @@ export default function FindMore({ sectors }) {
   
   return (
     <section className={`py-10 container mx-auto overflow-y-hidden  bg-white overflow-x-hidden hidden lg:block`}>
-      <div className={`relative h-96 flex my-10 flex-col justify-center`}>
+      <div className={`relative h-96 flex mt-10 flex-col justify-center`}>
     {sectors?.map( (sector,index) => (
       <div className={`${carouselStyles.carousel__item} grid grid-cols-[3fr_1.5fr] xl:px-24`} id={index+1} key={index}>
         <div className="flex flex-col gap-y-10 mb-10">
