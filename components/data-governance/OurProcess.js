@@ -10,11 +10,11 @@ export default function OurProcess({ data }) {
             alt=""
             className="md:flex hidden"
           />
-          <h2
+          <h3
             className={`font-bold md:leading-10 leading-8 `}
           >
             {data?.process_title}
-          </h2>
+          </h3>
         </div>
         <div
           dangerouslySetInnerHTML={{

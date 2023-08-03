@@ -75,11 +75,11 @@ User needs, Business Model Potential, Scalability assessment`,
             alt=""
             className="md:flex hidden"
           />
-          <h2
+          <h3
             className={`text-[#3B27CE]  font-bold md:leading-10 leading-8 `}
           >
             Our Process
-          </h2>
+          </h3>
         </div>
         <div className="grid md:grid-cols-1 grid-cols-1 gap-5" >
           <img src="/our-process-diagram.png" alt="" />

@@ -1,4 +1,4 @@
-import styles from "@/styles/APIGovernance.module.css";
+import styles from "@/styles/OpenEcosystempage.module.css";
 
 export default function OurProcess({ data }) {
   return (
@@ -16,13 +16,8 @@ export default function OurProcess({ data }) {
             {data?.our_process_title}
           </h3>
         </div>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: data?.process_description,
-          }}
-          className=""
-        />
-        <div className=" rounded ">
+        
+        <div className="">
         <img src={data?.diagram?.data?.attributes?.url} alt="" />
         </div>
       </div>
