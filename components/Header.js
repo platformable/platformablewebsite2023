@@ -5,9 +5,7 @@ import Link from "next/link";
 import headerStyles from "../src/styles/Header.module.css";
 
 export default function Header() {
- 
   let info = [
- 
     {
       title: "Understand",
       href: "/understand",
@@ -64,11 +62,10 @@ export default function Header() {
       // linkD: "https://www.gravitee.io/",
       // linkE: "https://www.fdmgroup.com/",
       list: ["cava", "beer", "lemonade"],
-    }
+    },
   ];
 
- 
-  const [visit, setVisit] = useState('');
+  const [visit, setVisit] = useState("");
 
   const [burgerClick, setBurgerClick] = useState(false);
   const [responsiveListOne, setResponsiveListOne] = useState(false);
@@ -81,10 +78,9 @@ export default function Header() {
   const [plusClickThree, setPlusClickThree] = useState(false);
   const [plusClickFour, setPlusClickFour] = useState(false);
 
-
   //this function is for when i leave the block
   const handleMouseLeave = () => {
-    setVisit('');
+    setVisit("");
   };
 
   return (
@@ -93,15 +89,15 @@ export default function Header() {
         className={`${headerStyles["nav-one"]} py-5  flex items-center justify-between border-gray-200`}
         onMouseLeave={handleMouseLeave}
       >
-        <Link href='/'>
-           <Image
-                src={Logo}
-                className=""
-                alt="Platformable"
-                width={250}
-                height={70}
-                unoptimized
-              />
+        <Link href="/">
+          <Image
+            src={Logo}
+            className=""
+            alt="Platformable"
+            width={250}
+            height={70}
+            unoptimized
+          />
         </Link>
         <div
           id="mega-menu"
@@ -110,82 +106,87 @@ export default function Header() {
           <ul
             className={`${headerStyles["nav-ul"]} flex  font-medium md:flex-row md:space-x-8 `}
           >
-            {info?.map((item,index) => (
+            {info?.map((item, index) => (
               <li
-              onMouseEnter={() => {
-                setVisit(item.title);
-              }}
-              key={index}
-            >
-              <Link
-                href={item.href}
-                data-dropdown-toggle="mega-menu-dropdown"
-                className={`${headerStyles["nav-one-links"]} block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700`}
-                aria-current="page"
+                onMouseEnter={() => {
+                  setVisit(item.title);
+                }}
+                key={index}
               >
-                {item.title}
-                
-              </Link>
-            </li>
+                <Link
+                  href={item.href}
+                  data-dropdown-toggle="mega-menu-dropdown"
+                  className={`${headerStyles["nav-one-links"]} block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700`}
+                  aria-current="page"
+                >
+                  {item.title}
+                </Link>
+              </li>
             ))}
-           
+
             <div
               // id="mega-menu-dropdown"
               // onMouseEnter={() => setVisit()}
               onMouseLeave={handleMouseLeave}
             >
-               {info?.filter(e => e.title === visit).map((item, index) => (
-                <div className={headerStyles["drop-down-container"]} key={index}>
-                  <h2 className={`${headerStyles["drop-down-top-title"]} font-bold`}>
-                    {item.title}
-                  </h2>
-                  <div className={headerStyles["drop-down-first-row-info"]}>
-                    <div className={headerStyles["drop-down-info-hovered"]}>
-                      <a href={item.linkB} target="_blank">
-                        <h3 className={headerStyles["drop-down-info-title"]}>
-                          {item.titleB}
-                        </h3>
-                        <p className={headerStyles["drop-down-descriptions"]}>
-                          {item.descriptionB}
-                        </p>
-                      </a>
+              {info
+                ?.filter((e) => e.title === visit)
+                .map((item, index) => (
+                  <div
+                    className={headerStyles["drop-down-container"]}
+                    key={index}
+                  >
+                    <h2
+                      className={`${headerStyles["drop-down-top-title"]} font-bold`}
+                    >
+                      {item.title}
+                    </h2>
+                    <div className={headerStyles["drop-down-first-row-info"]}>
+                      <div className={headerStyles["drop-down-info-hovered"]}>
+                        <a href={item.linkB} target="_blank">
+                          <h3 className={headerStyles["drop-down-info-title"]}>
+                            {item.titleB}
+                          </h3>
+                          <p className={headerStyles["drop-down-descriptions"]}>
+                            {item.descriptionB}
+                          </p>
+                        </a>
+                      </div>
+                      <div className={headerStyles["drop-down-info-hovered"]}>
+                        <a href={item.linkC} target="_blank">
+                          <h3 className={headerStyles["drop-down-info-title"]}>
+                            {item.titleC}
+                          </h3>
+                          <p className={headerStyles["drop-down-descriptions"]}>
+                            {item.descriptionC}
+                          </p>
+                        </a>
+                      </div>
                     </div>
-                    <div className={headerStyles["drop-down-info-hovered"]}>
-                      <a href={item.linkC} target="_blank">
-                        <h3 className={headerStyles["drop-down-info-title"]}>
-                          {item.titleC}
-                        </h3>
-                        <p className={headerStyles["drop-down-descriptions"]}>
-                          {item.descriptionC}
-                        </p>
-                      </a>
+                    <div className={headerStyles["drop-down-second-row-info"]}>
+                      <div className={headerStyles["drop-down-info-hovered"]}>
+                        <a href={item.linkD} target="_blank">
+                          <h3 className={headerStyles["drop-down-info-title"]}>
+                            {item.titleD}
+                          </h3>
+                          <p className={headerStyles["drop-down-descriptions"]}>
+                            {item.descriptionD}
+                          </p>
+                        </a>
+                      </div>
+                      <div className={headerStyles["drop-down-info-hovered"]}>
+                        <a href={item.linkE} target="_blank">
+                          <h3 className={headerStyles["drop-down-info-title"]}>
+                            {item.titleE}
+                          </h3>
+                          <p className={headerStyles["drop-down-descriptions"]}>
+                            {item.descriptionE}
+                          </p>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                  <div className={headerStyles["drop-down-second-row-info"]}>
-                    <div className={headerStyles["drop-down-info-hovered"]}>
-                      <a href={item.linkD} target="_blank">
-                        <h3 className={headerStyles["drop-down-info-title"]}>
-                          {item.titleD}
-                        </h3>
-                        <p className={headerStyles["drop-down-descriptions"]}>
-                          {item.descriptionD}
-                        </p>
-                      </a>
-                    </div>
-                    <div className={headerStyles["drop-down-info-hovered"]}>
-                      <a href={item.linkE} target="_blank">
-                        <h3 className={headerStyles["drop-down-info-title"]}>
-                          {item.titleE}
-                        </h3>
-                        <p className={headerStyles["drop-down-descriptions"]}>
-                          {item.descriptionE}
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-               )
-              )} 
+                ))}
             </div>
           </ul>
         </div>

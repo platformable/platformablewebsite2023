@@ -21,7 +21,8 @@ module.exports = {
       //   'sans': ['Roboto', 'sans-serif'],
       // }
       colors: {
-        customPurple: "#7743F5",
+        customPurple: "#5B24EC",
+        customBlue: "#3328C3",
       },
     },
     container: {

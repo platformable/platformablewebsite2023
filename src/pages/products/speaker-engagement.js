@@ -1,17 +1,17 @@
 import Layout from "../../../components/Layout";
 import Hero from "../../../components/speaker-engagement/Hero";
-import styles from '@/styles/DataProducts.module.css'
+import styles from "@/styles/DataProducts.module.css";
 import Footer from "../../../components/Footer";
 import FindMore from "../../../components/data-products/FindMore";
 import EngagementTopics from "../../../components/speaker-engagement/EngagementTopics";
 export default function DataProducts({ data }) {
-  console.log("data",data);
+  console.log("data", data);
 
   return (
     <Layout>
-      <Hero data={data}/>
-      <EngagementTopics />
-      <FindMore sectors={data?.sectors}/>
+      <Hero data={data} />
+      <EngagementTopics topics={data} />
+      <FindMore sectors={data?.sectors} />
       <Footer />
     </Layout>
   );
