@@ -4,14 +4,15 @@ import styles from '@/styles/Engagepage.module.css'
 export const EngageDiagram = ({title}) => {
     const higlightSection = async (e) => {
         const heading_rect = document.getElementsByName(e.target.id)
-        heading_rect[0].style.fill = '#26CC9B70'
+        heading_rect[0].style.stroke = '#fff'
+        heading_rect[0].style.strokeWidth = '3px'
 
         // animation test
         // heading_rect[0].classList.add('change_fill_color')
     }
     const unhighlightSection = (e) => {
         const heading_rect = document.getElementsByName(e.target.id)
-        heading_rect[0].style.fill = '#5b24ec'
+        heading_rect[0].style.stroke = ''
 
         // end animation test
         // heading_rect[0].classList.remove('change_fill_color')
@@ -590,7 +591,7 @@ Governance" transform="translate(115.307 451.187)" fill="#fff" font-size="24" fo
       </g>
       <path id="Path_2590" data-name="Path 2590" d="M201,268.236c0,7.586,8.01,13.758,17.852,13.758a22.452,22.452,0,0,0,6.361-.91l.434-.128,1.962,6.4,3.043-8.815.333-.239c3.633-2.6,5.716-6.273,5.716-10.067,0-7.586-8.01-13.758-17.85-13.758S201,260.65,201,268.236" transform="translate(-160.901 -243.659)" fill="#bba4ff"/>
       <path id="Path_2589" data-name="Path 2589" d="M250.066,273.385c0,10.426-11.008,18.908-24.534,18.908a30.859,30.859,0,0,1-8.742-1.251l-.6-.176-4.855,7.034-2.024-10.352-.458-.328C203.864,283.642,201,278.6,201,273.385c0-10.425,11.008-18.907,24.532-18.907s24.534,8.482,24.534,18.907" transform="translate(-201.001 -254.478)" stroke="#fff" stroke-width="2" fill="url(#linear-gradient-19)"/>
-      <text id="_" data-name="?" transform="translate(48.634 10.82)" fill="#fff" font-size="27" font-family="Karla" font-weight="700"><tspan x="-6" y="25">?</tspan></text>
+      <text id="_" data-name="?" transform="translate(57.634 8.82)" fill="#fff" font-size="27" font-family="Karla" font-weight="700"><tspan x="-6" y="25">?</tspan></text>
       <g id="Group_2337" data-name="Group 2337" transform="translate(11.954 5.022)">
         <g id="Group_1-17" data-name="Group 1" transform="translate(0 0)">
           <path id="Path_1-17" data-name="Path 1" d="M13,0,10.4,2.6,2.6,10.4,0,13l2.6,2.6L13,26l2.6-2.6L5.2,13,13,5.2,20.8,13l-5.2,5.2,2.6,2.6,5.2-5.2L26,13l-2.6-2.6L15.6,2.6Z" fill="#fff"/>
