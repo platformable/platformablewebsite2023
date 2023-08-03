@@ -19,7 +19,7 @@ export default function OurSolutions({ data }) {
         </div>
         <div className="grid mt-5 xl:mt-10 gap-y-10 lg:gap-y-7">
           {data?.solutions.map((solution, index) => (
-            <div className="grid lg:grid-cols-[1fr_8.5fr] lg:h-48 xl:h-32" key={index}>
+            <div className="grid lg:grid-cols-[1fr_8.5fr] lg:h-40 h-auto" key={index}>
               <div
                 className={`${styles.bg_solution_tile} flex items-center justify-center bg-[#3328C3] max-lg:py-5 px-3 xl:px-7 gap-5  rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none  `}
               >
@@ -36,7 +36,7 @@ export default function OurSolutions({ data }) {
             </div>
           ))}
 
-          <div className="grid grid-cols-[2fr_8.5fr_2fr] bg-white py-7">
+          <div className="grid md:grid-cols-[2fr_8.5fr_2fr] grid-cols-1 bg-white py-7">
             <div className="px-7 col-start-1 col-end-3 text-[#3328C3]  flex items-center gap-x-5 xl:gap-x-16">
               <img src="/didnt_find.png" alt="dataset blank icon" />
               <div className="">
