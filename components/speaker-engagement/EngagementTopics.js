@@ -29,7 +29,11 @@ export default function EngagementTopics({ topics }) {
               height={38}
               className="mb-2"
             />
-            <p className={`text-center text-base`}>{topic?.service}</p>
+            <p
+              className={`px-10 md:px-44 lg:px-8 xl:px-0 text-center text-base`}
+            >
+              {topic?.service}
+            </p>
           </div>
         ))}
       </div>
@@ -45,7 +49,11 @@ export default function EngagementTopics({ topics }) {
               height={38}
               className="mb-2"
             />
-            <p className={`text-center text-base`}>{topic?.service}</p>
+            <p
+              className={`px-10 md:px-44 lg:px-8 xl:px-0 text-center text-base`}
+            >
+              {topic?.service}
+            </p>
           </div>
         ))}
       </div>
