@@ -28,9 +28,7 @@
   border-radius: 8px;
   z-index: 99;
   background-color: white;
-  /* padding: 20px; */
-  padding-top: 20px;
-  padding-bottom: 50px;
+  padding: 2.5rem 1.75rem;
 }
 
 .drop-down-top-title {
@@ -40,19 +38,18 @@
   display: inline-block;
 
   font-size: 22px;
-  margin-top: 24px;
 }
 
 h3.drop-down-info-title {
   color: #f259f9;
   font-size: 20px;
-  margin-top: 28px;
+  /* margin-top: 28px; */
 }
 
 .drop-down-descriptions {
-  margin-top: 3px;
+  margin-top: 0.5rem;
   width: 280px;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 18px;
 }
 
@@ -60,10 +57,10 @@ h3.drop-down-info-title {
 .drop-down-second-row-info,
 .drop-down-third-row-info {
   display: flex;
-  gap: 30px;
+  gap: 1rem;
   /* padding-left: 30px; */
   /* width: 700px; */
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* border: 2px solid pink; */
 }
 .drop-down-second-row-info {
@@ -71,7 +68,7 @@ h3.drop-down-info-title {
 }
 .drop-down-info-hovered {
   margin-top: 10px;
-  padding-left: 20px;
+  padding: 1.25rem;
 }
 .drop-down-info-hovered:hover {
   background-color: #fff6b2;
