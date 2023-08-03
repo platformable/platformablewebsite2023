@@ -4,7 +4,7 @@ export default function EngagementTopics({ topics }) {
   console.log(topics);
   return (
     <div
-      className={` lg:pb-20 lg:mt-[-60px] min-h-screen bg-[var(--purple-medium)] pt-16 min-h-full md:min-h-full md:pb-20 `}
+      className={` lg:pb-20  min-h-screen bg-[var(--purple-medium)] pt-16 min-h-full md:min-h-full md:pb-20 `}
     >
       <div className="container mx-auto text-white">
         <div className="flex gap-x-4">

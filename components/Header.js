@@ -137,7 +137,7 @@ export default function Header() {
                     key={index}
                   >
                     <h2
-                      className={`${headerStyles["drop-down-top-title"]} font-bold`}
+                      className={`${headerStyles["drop-down-top-title"]} font-bold pl-5`}
                     >
                       {item.title}
                     </h2>
