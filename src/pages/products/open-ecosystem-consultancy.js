@@ -24,7 +24,7 @@ export default function DataProducts({ data }) {
 export async function getServerSideProps(ctx) {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/open-ecosystem?populate[hero_img]=*&populate[solutions][populate][icon]=*&&populate[sectors][populate][image]=*&populate[diagram]=*`
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/open-ecosystem?populate[hero_img]=*&populate[solutions][populate][icon]=*&&populate[sectors][populate][image]=*&populate[diagram]=*&populate[sectors][populate][icon]=*`
     );
     const data = await res.json();
 

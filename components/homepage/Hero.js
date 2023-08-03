@@ -9,11 +9,11 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
   return (
     <section id="hero" className="">
       <div className="container mx-auto py-10">
-        <h1
+        <h2
           className={`text-center text-[#5B24EC] font-bold md:leading-none leading-10 mb-4 md:px-0 px-3`}
         >
           {hero_title}
-        </h1>
+        </h2>
         <h3 className="text-center md:leading-10 leading-8 md:px-0 px-5  font-light">
           {" "}
           <strong>{subtitle}</strong> {simpleSubtitle}{" "}
