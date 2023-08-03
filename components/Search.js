@@ -6,7 +6,7 @@ export default function SearchEvents({ searchFunction }) {
       <p className="mr-5 inline-block text-white ">Search</p>
 
       <div className="w-full">
-        <div className="block md:flex border-1  rounded-lg  rounded-lg ">
+        <div className="block md:flex   rounded-lg  rounded-lg ">
           <label
             htmlFor="default-search"
             className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
@@ -18,7 +18,7 @@ export default function SearchEvents({ searchFunction }) {
               type="search"
               onChange={(e) => searchFunction(e.target.value)}
               id="default-search"
-              className="block p-4 pr-9 w-full text-lg border-black text-black rounded-lg border-2 border-white bg-transparent "
+              className="block p-4 pr-9 w-full text-lg border-black text-black rounded-lg border-4 border-white bg-white text-black "
               defaultValue=""
               required
             />
