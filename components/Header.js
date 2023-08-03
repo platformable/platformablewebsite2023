@@ -6,13 +6,15 @@ import headerStyles from "../src/styles/Header.module.css";
 
 export default function Header() {
   let info = [
+    
+    
     {
-      title: "Understand",
-      href: "/understand",
+      title: "Engage",
+      href: "/engage",
       titleB: "About",
-      titleC: "How we work",
-      titleD: "Our Success Stories",
-      titleE: "Our Mind",
+      titleC: "Partners",
+      titleD: "Services",
+      titleE: "Products",
       descriptionB:
         "Real-Time usage alerts and anomaly detection on multiple channels",
       descriptionC:
@@ -23,8 +25,9 @@ export default function Header() {
       // linkC: "https://www.fdmgroup.com/",
       // linkD: "https://www.gravitee.io/",
       // linkE: "https://www.fdmgroup.com/",
-      list: ["apples", "oranges", "pairs"],
+      list: ["cava", "beer", "lemonade"],
     },
+    
     {
       title: "Act",
       href: "/act",
@@ -45,12 +48,12 @@ export default function Header() {
       list: ["shrimp", "olives", "meat"],
     },
     {
-      title: "Engage",
-      href: "/engage",
+      title: "Understand",
+      href: "/understand",
       titleB: "About",
-      titleC: "Partners",
-      titleD: "Services",
-      titleE: "Products",
+      titleC: "How we work",
+      titleD: "Our Success Stories",
+      titleE: "Our Mind",
       descriptionB:
         "Real-Time usage alerts and anomaly detection on multiple channels",
       descriptionC:
@@ -61,7 +64,7 @@ export default function Header() {
       // linkC: "https://www.fdmgroup.com/",
       // linkD: "https://www.gravitee.io/",
       // linkE: "https://www.fdmgroup.com/",
-      list: ["cava", "beer", "lemonade"],
+      list: ["apples", "oranges", "pairs"],
     },
   ];
 
@@ -103,8 +106,8 @@ export default function Header() {
           id="mega-menu"
           className={`${headerStyles["nav-one-ul-container"]}  items-center flex hidden  md:flex md:w-auto md:order-1`}
         >
-          <ul
-            className={`${headerStyles["nav-ul"]} flex  font-medium md:flex-row md:space-x-8 `}
+          <ul //Use flex row reverse to avoid white space at right padding of screen
+            className={`${headerStyles["nav-ul"]} flex  font-medium md:flex-row-reverse md:gap-x-8 `}
           >
             {info?.map((item, index) => (
               <li
