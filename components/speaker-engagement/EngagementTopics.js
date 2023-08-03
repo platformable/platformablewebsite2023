@@ -22,7 +22,7 @@ export default function EngagementTopics({ topics }) {
         className={`xl:w-3/5 flex md:flex-col xl:flex-row sm:flex-row mx-auto md:w-11/12 w-9/12 md:gap-1 lg:w-10/12`}
       >
         {topics.services.slice(0, 3).map((topic, index) => (
-          <div className=" flex-1 flex flex-col text-white  items-center  lg:mb-0  md:gap-3 ">
+          <div className=" flex-1 flex flex-col text-white  items-center  lg:mb-0  md:gap-3 " key={index}>
             <img
               src={topic?.service_img.data?.attributes?.url}
               width={100}
@@ -43,7 +43,7 @@ export default function EngagementTopics({ topics }) {
             className={`${
               index === 0 ? "lg:mt-[-36px]" : null
             }  text-white flex flex-1 flex-col items-center justify-center mb-16 md:gap-3`}
-          >
+            key={index}>
             <img
               src={topic?.service_img.data?.attributes?.url}
               width={100}
