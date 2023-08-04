@@ -40,19 +40,19 @@ export default function BlogPage({ data, relatedPosts }) {
               </div>
             </div>
           </div>
-          <h3 className="content-title font-bold text-[var(--purple-extra-dark)]">
+          <h3 className="content-title font-bold text-[var(--purple-extra-dark)] mb-5">
             {data?.title}
           </h3>
-          <p>Written by {' '}
+          <span>Written by {' '}    </span>
                    {data?.teams?.data.map((team,index)=>
-                      <div key={index}>
+                      <span key={index}>
                           {team.attributes.name+ ' ' + team.attributes.lastname}{" "}
                           {index < data?.teams?.data.length - 1
                             ? " & "
                             : ""}
-                            </div>
+                            </span>
                    )}
-                    </p>
+                
           <div
             dangerouslySetInnerHTML={{
               __html: data?.content,
@@ -70,7 +70,7 @@ export default function BlogPage({ data, relatedPosts }) {
                 <div className="flex flex-col items-center" key={index}>
                   <img src={member?.attributes?.image?.data?.attributes.url} alt="member image" className="mb-7" width={150}/>
                   <p className="font-bold text-[var(--purple-medium)]">{member?.attributes?.name + ' ' + member?.attributes?.lastname}</p>
-                  <span className="font-medium">{member?.attributes?.position}</span>
+                  <span className="font-medium">{member?.attributes?.position.toUpperCase()}</span>
                 </div>
               ))}
           </div>
@@ -95,10 +95,13 @@ export default function BlogPage({ data, relatedPosts }) {
 }
 // 
 export async function getServerSideProps(ctx) {
+  const id= ctx.params.id
+
+  console.log("ctx",ctx)
   try {
     const [data, relatedPosts] = await Promise.all([
       fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts/1?populate[teams][populate][image]=*&populate[featured_img]=*&populate[sectors]=*&populate[category]=*`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts/${id}?populate[teams][populate][image]=*&populate[featured_img]=*&populate[sectors]=*&populate[category]=*`
       ).then((res) => res.json()),
       fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?populate=*&filters[sectors][name]=Open%20Health`).then(
         (res) => res.json()),
