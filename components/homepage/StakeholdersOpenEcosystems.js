@@ -36,7 +36,7 @@ export default function StakeholdersOpenEcosystems({ videos, title }) {
     <section className="py-10">
         <div className="flex gap-x-5 items-center container mx-auto  mb-10">
           <img src="/icon_section02.svg" alt="platformable logo" className="md:flex hidden"/>
-          <h2 className={`text-[#5B24EC] font-bold leading-8 md:leading-10 lg:leading-tight`}>{title}</h2>
+          <h2 className={`text-[var(--purple-medium)] font-bold leading-8 md:leading-10 lg:leading-tight`}>{title}</h2>
         
         </div>
         
