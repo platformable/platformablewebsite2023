@@ -16,7 +16,7 @@ export default function SearchEvents({ searchFunction }) {
           <div className="relative w-full">
             <input
               type="search"
-              onChange={(e) => searchFunction(e.target.value)}
+              onChange={(e) => searchFunction(e.target.value.toLowerCase())}
               id="default-search"
               className="block p-4 pr-9 w-full text-lg border-black text-black rounded-lg border-4 border-white bg-white text-black "
               defaultValue=""
