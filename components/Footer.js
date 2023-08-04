@@ -17,7 +17,7 @@ const sitemap = [
       },
       {
         label: "Engage",
-        url: "/",
+        url: "/engage",
       },
     ],
   },
@@ -60,6 +60,10 @@ const sitemap = [
       {
         label: "Contact us",
         url: "/contact-us",
+      },
+      {
+        label: "Blog",
+        url: "/blog",
       },
     ],
   },
@@ -191,14 +195,14 @@ export default function Footer() {
           {isResponse ? (
             <p className="text-customPurple">Thank you for Subscribing!</p>
           ) : (
-            <div className={`flex gap-3 items-center `}>
+            <div className={`flex gap-3 items-center relative `}>
               <input
                 type="email"
                 placeholder="Email"
                 className={
                   errorMessage === ""
-                    ? "relative w-80 lg:w-64 rounded p-4 border-blue-600 border-2 border-opacity-50"
-                    : "relative w-80 lg:w-64 rounded p-4 border-red-600 border-2 border-opacity-50"
+                    ? "relative w-80 lg:w-64 rounded p-4 border-blue-600 border-2 border-opacity-50 "
+                    : "relative w-80 lg:w-64 rounded p-4 border-red-600 border-2 border-opacity-50 "
                 }
                 x
                 value={email}
@@ -207,7 +211,7 @@ export default function Footer() {
               <img
                 src="/iron_footer.svg"
                 alt="Send subcription"
-                className={`absolute  ml-64 w-14 lg:ml-48 cursor-pointer`}
+                className={`absolute ml-64 w-14 lg:ml-48 cursor-pointer `}
                 onClick={handleClick}
               />
             </div>
