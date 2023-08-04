@@ -9,7 +9,7 @@ export default function BlogPreviewCard({ post }) {
   return (
     <div className="bg-white rounded-md relative grid md:grid-rows-[3fr_1fr_3fr] grid-rows-[0.8fr_0.2fr_1fr]">
       <div className="p-7">
-        <img src={post?.attributes.featured_img.data.attributes.url} alt="" />
+        <img src={post?.attributes?.featured_img?.data.attributes.url} alt="" />
       </div>
       <div className="grid grid-cols-[1fr_3fr] blog-card-date-bg">
         <div className="flex flex-col items-center justify-center rounded-tr-md rounded-br-md text-white p-2">
@@ -22,7 +22,7 @@ export default function BlogPreviewCard({ post }) {
       </div>
 
       <div className="grid justify-center text-center p-7 ">
-        <p className="font-bol leading-8 font-bold text-[#1B014B]">{post.attributes.title}</p>
+        <p className="font-bol leading-8 font-bold text-[var(--purple-extra-dark)]">{post?.attributes?.title}</p>
        
         <div className="relative mt-auto ">
         <div className="flex justify-center text-center px-7 pb-7">
