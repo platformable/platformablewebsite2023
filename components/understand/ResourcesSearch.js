@@ -27,7 +27,7 @@ console.log("posts",posts)
       <div className="container mx-auto py-10">
       <div
           dangerouslySetInnerHTML={{
-            __html: heading,
+            __html: heading ? heading : null,
           }}
           className="text-white font-bold"
         />
