@@ -1,0 +1,7 @@
+.bg_blog_header {
+    background: transparent linear-gradient(270deg, #FF9D00 0%, #E67EFF 100%) 0% 0% no-repeat padding-box;
+}
+
+.bg_related_articles {
+    background: transparent linear-gradient(180deg, #7542F5 0%, #E67EFF 100%) 0% 0% no-repeat padding-box;
+}
