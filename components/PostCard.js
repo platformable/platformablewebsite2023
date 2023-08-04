@@ -11,13 +11,13 @@ export default function PostCard({ post }) {
       <div className="p-7">
         <img src={post?.attributes.featured_img.data.attributes.url} alt="" />
       </div>
-      <div className="grid grid-cols-[1fr_3fr]">
-        <div className="text-center blog-card-date-bg rounded-tr-md rounded-br-md text-white p-2">
+      <div className="grid grid-cols-[1fr_3fr] blog-card-date-bg">
+        <div className="flex flex-col items-center justify-center rounded-tr-md rounded-br-md text-white p-2">
           <p>00</p>
           <p>Mon</p>
         </div>
-        <div className="items-center flex justify-center text-center ">
-          <span className="text-center mr-7">{post?.attributes?.category?.data?.attributes?.name}</span>
+        <div className="items-center flex ">
+          <p className=" mr-7 text-white font-bold">{post?.attributes?.category?.data?.attributes?.name}</p>
         </div>
       </div>
 
@@ -25,15 +25,20 @@ export default function PostCard({ post }) {
         <p className="font-bol leading-8 font-bold text-[#1B014B]">{post.attributes.title}</p>
        
         <div className="relative mt-auto ">
-        <div className="flex justify-center text-center p-7">
+        <div className="flex justify-center text-center px-7 pb-7">
           <span>Written by Spencer Perkins & Phuong Pham & Mark Boyd</span>
         </div>
-        <div className="flex justify-end items-center gap-x-3">
-            <img src="/clockl.svg" alt="" />
+        <div className="flex justify-between items-center gap-x-3">
+           <div className="flex gap-x-3">
+           {post?.attributes?.category?.data?.attributes?.name}
+           </div>
+           <div className="flex items-center gap-x-3">
+           <img src="/clockl.svg" alt="" />
             <span className='text-[var(--purple-medium)] font-bold'>
                 {post?.attributes?.content
                                       ? <span>{calculateTimeToRead(post?.attributes?.content)+' min read'}</span>
                                       : "0"}</span>
+           </div>
         </div>
       </div>
        
