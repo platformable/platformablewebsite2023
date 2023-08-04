@@ -50,7 +50,7 @@ export default function BlogPage({ data, relatedPosts }) {
                           {index < data?.teams?.data.length - 1
                             ? " & "
                             : ""}
-                            </>
+                            </div>
                    )}
                     </p>
           <div
