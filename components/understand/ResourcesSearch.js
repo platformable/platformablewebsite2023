@@ -1,7 +1,7 @@
 import React, { useState,useEffect, useRef } from "react";
 import styles from "@/styles/Understandpage.module.css";
-import PostCard from "../PostCard";
 import Search from '../../components/Search'
+import BlogPreviewCard from "../BlogPreviewCard";
 
 export default function ResourcesSearch({ posts, heading }) {
 console.log("posts",posts)
@@ -15,10 +15,6 @@ console.log("posts",posts)
 
   };
   const chooseCategory = (category) => category === selectedCategory ? setSelectedCategory('All') : setSelectedCategory(category) 
-  
-
-
-  
   
 
 
@@ -81,7 +77,7 @@ console.log("posts",posts)
           }).map((post,index)=>{
             return (
               
-                <PostCard post={post} key={index}/>
+                <BlogPreviewCard post={post} key={index}/>
               
             )
           }):null}

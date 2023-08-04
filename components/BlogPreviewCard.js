@@ -1,19 +1,51 @@
-export default function BlogPreviewCard({}) {
-    return (
-        <div className="rounded-md grid grid-[3fr_1fr_3fr_1fr] shadow">
-                <div className="flex justify-center items-center py-2"></div>
-                <div className="flex items-center gap-x-2 py-2">
-                    <div>
-                        13 <br />
-                        Aug
-                    </div>
-                    <span>Open Banking/Open Finance</span>
-                </div>
-                <div className="py-2 px-3">
-                    <h5>New report release: Q3 2022 Open Banking/Open Finance Bussiness models and use cases</h5>
-                    <small>Written by Spencer Perkins</small>
-                </div>
-                <div className="px-3 py-2 flex items-center justify-between"></div>
+import React from "react";
+
+export default function BlogPreviewCard({ post }) {
+
+    const calculateTimeToRead = article => {
+        return Math.ceil(article.trim().split(/\s+/).length / 225)
+      }
+
+  return (
+    <div className="bg-white rounded-md relative grid md:grid-rows-[3fr_1fr_3fr] grid-rows-[0.8fr_0.2fr_1fr]">
+      <div className="p-7">
+        <img src={post?.attributes.featured_img.data.attributes.url} alt="" />
+      </div>
+      <div className="grid grid-cols-[1fr_3fr] blog-card-date-bg">
+        <div className="flex flex-col items-center justify-center rounded-tr-md rounded-br-md text-white p-2">
+          <p>00</p>
+          <p>Mon</p>
         </div>
-    );
+        <div className="items-center flex ">
+          <p className=" mr-7 text-white font-bold">{post?.attributes?.category?.data?.attributes?.name}</p>
+        </div>
+      </div>
+
+      <div className="grid justify-center text-center p-7 ">
+        <p className="font-bol leading-8 font-bold text-[#1B014B]">{post.attributes.title}</p>
+       
+        <div className="relative mt-auto ">
+        <div className="flex justify-center text-center px-7 pb-7">
+          <span>Written by Spencer Perkins & Phuong Pham & Mark Boyd</span>
+        </div>
+        <div className="flex justify-between items-center gap-x-3">
+           <div className="flex gap-x-3 text-[var(--purple-medium)] font-bold">
+            <img src="" alt="" />
+           {post?.attributes?.category?.data?.attributes?.name}
+           </div>
+           <div className="flex items-center gap-x-3">
+           <img src="/clockl.svg" alt="" />
+            <span className='text-[var(--purple-medium)]  font-bold'>
+                {post?.attributes?.content
+                                      ? <span>{calculateTimeToRead(post?.attributes?.content)+' min read'}</span>
+                                      : "0"}</span>
+           </div>
+        </div>
+      </div>
+       
+      </div>
+
+     
+    </div>
+  );
 }
