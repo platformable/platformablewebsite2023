@@ -146,7 +146,7 @@ export default function Footer() {
   // }
   return (
     <>
-      <section className="container mx-auto pt-20 pb-24 lg:flex  gap-16 lg:gap-32 items-start ">
+      <section className="container mx-auto pt-20 pb-24 lg:flex  gap-16 lg:gap-32 items-start md:block hidden ">
         <div className="grid gap-5">
           <Link href="/">
             <Image
@@ -201,8 +201,8 @@ export default function Footer() {
                 placeholder="Email"
                 className={
                   errorMessage === ""
-                    ? "relative w-80 lg:w-64 rounded p-4 border-blue-600 border-2 border-opacity-50 "
-                    : "relative w-80 lg:w-64 rounded p-4 border-red-600 border-2 border-opacity-50 "
+                    ? "relative w-80 lg:w-64 rounded p-4 border-blue-600 border-2 border-opacity-50 md:block hidden "
+                    : "relative w-80 lg:w-64 rounded p-4 border-red-600 border-2 border-opacity-50 md:block hidden"
                 }
                 x
                 value={email}
@@ -211,7 +211,7 @@ export default function Footer() {
               <img
                 src="/iron_footer.svg"
                 alt="Send subcription"
-                className={`absolute ml-64 w-14 lg:ml-48 cursor-pointer `}
+                className={`absolute ml-64 w-14 lg:ml-48 cursor-pointer md:block hidden`}
                 onClick={handleClick}
               />
             </div>

@@ -5,7 +5,7 @@ import BlogPreviewCard from "../BlogPreviewCard";
 import Link from "next/link";
 
 export default function ResourcesSearch({ posts, heading }) {
-  console.log("posts", posts);
+
   const featuredPost=posts[0]?.attributes
 
   const [searchWord, setSearchWord] = useState("");
@@ -85,7 +85,7 @@ export default function ResourcesSearch({ posts, heading }) {
         </div>
 
         <section id="featured-post" className="my-10">
-<Link href={`/blog/${posts[0].id}`}>
+<Link href={`/blog/${posts[0].attributes.slug}`}>
             <div className="bg-white rounded-md">
               <div className={`featured-post-top ${styles['featured-post-top-bg']} rounded-tl-md rounded-tr-md`}>
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 py-3 px-7">

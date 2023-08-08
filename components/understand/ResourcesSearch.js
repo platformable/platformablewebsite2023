@@ -29,7 +29,7 @@ console.log("posts",posts)
           dangerouslySetInnerHTML={{
             __html: heading ? heading : null,
           }}
-          className="text-white font-bold"
+          className="text-white "
         />
 
         <div className="grid md:grid-cols-[1fr_3fr_3fr_3fr] grid-cols-1 gap-5 my-10">

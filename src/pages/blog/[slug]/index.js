@@ -3,7 +3,11 @@ import Layout from "../../../../components/Layout";
 import styles from "@/styles/Blogpage.module.css";
 import BlogPreviewCard from "../../../../components/BlogPreviewCard";
 
+import {LinkedinShareButton,LinkedinIcon} from "react-share";
+
 export default function BlogPage({ data, relatedPosts }) {
+
+  console.log("data del post", data)
 
   return (
     <Layout>
@@ -33,8 +37,10 @@ export default function BlogPage({ data, relatedPosts }) {
                 <span>3 min read</span>
               </div>
               <div className="flex items-center gap-x-3">
-              <img width={30} src="/email_blue.svg" alt="email" />
-              <img width={30} src="/linkedin_blue.svg" alt="linkedin" />
+              <a href={`mailto:test@example.com?subject=${data.slug}!&body=${data.excerpt.replace( /(<([^>]+)>)/ig, '')}`}><img width={30} src="/email_blue.svg" alt="email" /></a> 
+           <LinkedinShareButton title="tlelelelel" summary="cbcbxvcbxvbxv" source="http://www.platformable.com" url={`https://www.platformable.com/blog/${data.slug}`}>
+            <LinkedinIcon size={30} round={true} iconFillColor={'white'} bgStyle={{fill:'#3423C5'}}/>
+            </LinkedinShareButton>
               <img width={30} src="/tidal_blue.svg" alt="tidal" />
 
               </div>
@@ -95,13 +101,13 @@ export default function BlogPage({ data, relatedPosts }) {
 }
 // 
 export async function getServerSideProps(ctx) {
-  const id= ctx.params.id
+  const slug= ctx.params.slug
+console.log("slugslug",slug)
 
-  console.log("ctx",ctx)
   try {
     const [data, relatedPosts] = await Promise.all([
       fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts/${id}?populate[teams][populate][image]=*&populate[featured_img]=*&populate[sectors]=*&populate[category]=*`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?filters[slug]=${slug}&populate[teams][populate][image]=*&populate[featured_img]=*&populate[sectors]=*&populate[category]=*`
       ).then((res) => res.json()),
       fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?populate=*&filters[sectors][name]=Open%20Health`).then(
         (res) => res.json()),
@@ -110,7 +116,7 @@ export async function getServerSideProps(ctx) {
 
     return {
       props: {
-        data: data?.data?.attributes,
+        data: await data.data[0].attributes,
         relatedPosts: relatedPosts?.data
       },
     };
