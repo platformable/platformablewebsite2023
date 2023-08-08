@@ -87,7 +87,7 @@ export default function Header() {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto" id="header">
       <nav
         className={`${headerStyles["nav-one"]} py-5  flex items-center justify-between border-gray-200`}
         onMouseLeave={handleMouseLeave}
