@@ -10,7 +10,7 @@ export default function DataProducts({ data, posts }) {
     <Layout>
       <Hero data={data} />
       <ResourcesSearch  posts={posts} heading={data?.understand_blog_description}/>
-      <Footer />
+
     </Layout>
   );
 }

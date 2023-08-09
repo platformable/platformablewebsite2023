@@ -16,7 +16,7 @@ export default function DataProducts({ data }) {
       <OurProcess data={data}/>
       <Testimonials data={data?.testimonials} title={data?.data_product_testimonial_title} logos={false}/>
       <FindMore sectors={data?.sectors}/>
-      <Footer />
+
     </Layout>
   );
 }

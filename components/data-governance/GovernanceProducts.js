@@ -56,7 +56,7 @@ export default function GovernanceProducts({ title, products }) {
                     dangerouslySetInnerHTML={{
                       __html: card?.description,
                     }}
-                    className="text-[var(--purple-medium)]"
+                    className="text-[var(--purple-medium)] text-left"
                   />
               </div>
 

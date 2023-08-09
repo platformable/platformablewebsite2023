@@ -19,7 +19,7 @@ export default function OurSolutions({ data }) {
         </div>
         <div className="grid mt-5 xl:mt-10 gap-y-10 lg:gap-y-7">
           {data?.solutions.map((solution, index) => (
-            <div className="grid lg:grid-cols-[1fr_8.5fr] lg:h-40 h-auto" key={index}>
+            <div className="grid lg:grid-cols-[1.5fr_8.5fr] lg:h-40 h-auto" key={index}>
               <div
                 className={`${styles.bg_solution_tile} flex items-center justify-center bg-[#3328C3] max-lg:py-5 px-3 xl:px-7 gap-5  rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none  `}
               >

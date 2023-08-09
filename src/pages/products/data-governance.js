@@ -18,7 +18,7 @@ export default function DataGovernance({ data }) {
       <GovernanceServices description={data?.services_description} services={data?.services}/>
       {/* <Testimonials data={data?.testimonials} title={data?.testimonials_title} logos={false}/> */}
       <FindMore sectors={data?.sectors}/>
-      <Footer />
+
     </Layout>
   );
 }

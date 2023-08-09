@@ -50,13 +50,13 @@ export default function BlogPreviewCard({ post }) {
             })}
           </div>
           <div className="flex justify-between items-center gap-x-3">
-            <div className="flex gap-x-3 text-[var(--purple-medium)] font-bold">
+            <div className="flex gap-x-3 text-[#3524C6] font-bold">
               <img src="/platformable-icon-purple-dark.png" alt="" width={32} />
               {post?.attributes?.category?.data?.attributes?.name}
             </div>
             <div className="flex items-center gap-x-3">
               <img src="/clockl.svg" alt="" />
-              <span className="text-[var(--purple-medium)]  font-bold">
+              <span className="text-[#3524C6]  font-bold">
                 {post?.attributes?.content ? (
                   <span>
                     {calculateTimeToRead(post?.attributes?.content) +

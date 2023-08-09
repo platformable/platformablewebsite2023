@@ -63,7 +63,7 @@ export default function Testimonials({ data, title, logos }) {
                   />
                 </div>
 
-                <img src={testimonial.testimonials_img?.data?.attributes.url} className=""/>
+                <img src={'https://res.cloudinary.com/platformable/image/upload/v1691588894/platformablewebsite2023/API_To_S_report_cover_95dcfc7ad2.png'} className=""/>
 
                 </div>
                

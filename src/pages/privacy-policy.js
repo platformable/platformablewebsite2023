@@ -18,7 +18,7 @@ export default function PrivacyPolicy({ data }) {
          
         </div>
     </section>
-      <Footer />
+
     </Layout>
   );
 }

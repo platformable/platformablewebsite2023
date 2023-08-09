@@ -20,7 +20,7 @@ export default function OurProcess({ data }) {
           dangerouslySetInnerHTML={{
             __html: data?.process_description,
           }}
-          className=""
+          className="text-[#3B27CE]"
         />
         <div className=" rounded ">
         <img src={data?.diagram?.data?.attributes?.url} alt="" />

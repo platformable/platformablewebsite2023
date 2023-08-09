@@ -24,15 +24,15 @@ export default function GovernanceProducts({  products }) {
             </div>
             <div className="grid place-items-center py-5 bg-white">
               <img src="/overview.svg" alt="datapoints svg" />
-              <p className="font-bold text-[var(--purple-medium)]">Overview</p>
+              <p className="font-bold text-[#3328C3]">Overview</p>
             </div>
             <div className="grid place-items-center py-5 px-7 bg-[#F6F4FF]">
             <img src="/sample_icon.svg" alt="Specification sheet svg" />
-              <p className="font-bold text-center text-[var(--purple-medium)]">Sample copy</p>
+              <p className="font-bold text-center text-[#3328C3]">Sample copy</p>
             </div>
             <div className="grid place-items-center py-5 px-7 bg-[#E9E8F8] rounded-tr-xl">
               <img src="/purchase_icon.svg" alt="bulk download svg" />
-              <p className="font-bold text-[var(--purple-medium)]">Purchase</p>
+              <p className="font-bold text-[#3328C3]">Purchase</p>
             </div>
           </div>
           {products?.map((card, i) => (
@@ -50,13 +50,13 @@ export default function GovernanceProducts({  products }) {
                 </p>
               </div>
             
-              <div className="flex  p-7 justify-center bg-white p">
+              <div className="flex  p-7 justify-center bg-white ">
                 
                 <div
                     dangerouslySetInnerHTML={{
                       __html: card?.description,
                     }}
-                    className="text-[var(--purple-medium)]"
+                    className="text-[#3328C3] text-left"
                   />
               </div>
 

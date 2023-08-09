@@ -16,21 +16,21 @@ export default function OurDatasets({ title, datasets }) {
               </div>
               <h4 className="text-white">Datasets</h4>
             </div>
-            <div className="grid place-items-center py-5 bg-white px-7">
-              <img src="/datapoints.svg" alt="datapoints svg" />
-              <p className="font-bold text-[var(--purple-medium)]">Data points</p>
+            <div className="grid grid grid-rows-[1fr_1fr] place-items-center py-5 bg-white px-7 text-center">
+              <img src="/datapoints.svg" alt="datapoints svg" className="h-14"/>
+              <p className="font-bold text-[#3328C3] text-center" >Data points</p>
             </div>
-            <div className="grid place-items-center py-5 px-7 bg-[#F6F4FF]">
-            <img src="/spec.svg" alt="Specification sheet svg" />
-              <p className="font-bold text-[var(--purple-medium)]">Specification sheet</p>
+            <div className="grid grid-rows-[1fr_1fr] place-items-center py-5 px-7 bg-[#F6F4FF]">
+            <img src="/spec.svg" alt="Specification sheet svg" className="h-14"/>
+              <p className="font-bold text-[#3328C3] text-center">Specification sheet</p>
             </div>
-            <div className="grid place-items-center py-5 px-7 bg-[#E9E8F8]">
+            <div className="grid grid-rows-[1fr_1fr] place-items-center py-5 px-7 bg-[#E9E8F8]">
               <img src="/bulk.svg" alt="bulk download svg" />
-              <p className="font-bold text-[var(--purple-medium)]">Bulk purchase</p>
+              <p className="font-bold text-[#3328C3] text-center">Bulk purchase</p>
             </div>
-            <div className="grid place-items-center py-5 px-7 bg-[#DEDCF5] rounded-tr-xl">
+            <div className="grid grid-rows-[1fr_1fr] place-items-center py-5 px-7 bg-[#DEDCF5] rounded-tr-xl">
               <img src="/API.svg" alt="API svg" />
-              <p className="font-bold text-[var(--purple-medium)]">Purchase via API</p>
+              <p className="font-bold text-[#3328C3] text-center">Purchase via API</p>
             </div>
           </div>
           {datasets?.map((card, i) => (
@@ -40,7 +40,7 @@ export default function OurDatasets({ title, datasets }) {
               key={i}
             >
               <div
-                className={`${styles.card_heading} flex items-center justify-start gap-7  p-7`}
+                className={`${styles.card_heading} grid grid-cols-[1fr_2fr] p-7 gap-5 items-center`}
               >
                 <img src={card?.product_icon?.data?.attributes.url} alt="" className="w-2/7" />
                 <p className="text-white font-bold w-5/7">
@@ -62,7 +62,7 @@ export default function OurDatasets({ title, datasets }) {
               </div>
               
               <div className="grid items-center px-7 bg-[#E9E8F8]">
-                <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple)]">
+                <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple-medium)]">
                   <p>Buy now</p>
                 </button>
               </div>

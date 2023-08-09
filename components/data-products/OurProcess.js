@@ -52,9 +52,9 @@ export default function OurProcess({ data }) {
             </div>
             <div className="grid grid-cols-1 gap-y-3">
               <img src={data?.scope_img1?.data.attributes.url} alt=""></img>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid md:grid-cols-2 grid-cols-1 gap-4 justify-between">
               <img src={data?.scope_img2?.data.attributes.url} alt=""></img>
-              <img src={data?.scope_img3?.data[0].attributes.url} alt=""></img>
+              <img src={data?.scope_img3?.data[0].attributes.url} alt="" width="98.5%"></img>
 
               </div>
             </div>

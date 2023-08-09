@@ -146,7 +146,7 @@ export default function Footer() {
   // }
   return (
     <>
-      <section className="container mx-auto pt-20 pb-24 lg:flex  gap-16 lg:gap-32 items-start md:block hidden ">
+      <section className="container mx-auto pt-20 pb-24 lg:flex  gap-16 lg:gap-32 items-start ">
         <div className="grid gap-5">
           <Link href="/">
             <Image

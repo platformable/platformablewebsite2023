@@ -40,7 +40,6 @@ export default function About({ data }) {
       <PrivacyPolicy id="our-privacy" data={data} />
       <Team id="our-team" data={data.team.data} styles={styles}/>
 
-      <Footer />
     </Layout>
   );
 }

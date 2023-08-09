@@ -58,7 +58,7 @@ export default function Home({ data }) {
           title={data?.attributes?.explore_sectors_title}
         />
         {/* <Testimonials data={data?.attributes.testimonials} title={newData?.testimonials_title} logos={true}/> */}
-        <Footer />
+    
       </div>
     </Layout>
   );

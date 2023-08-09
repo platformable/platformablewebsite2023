@@ -10,7 +10,7 @@ export default function ActPage({ data, posts }) {
     <Layout>
       <Hero data={data} />
       <ResourcesSearch posts={posts} heading={data?.blog_description}/>
-      <Footer />
+
     </Layout>
   );
 }

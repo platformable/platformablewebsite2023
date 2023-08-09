@@ -12,7 +12,7 @@ export default function DataProducts({ data }) {
       <Hero data={data} />
       <EngagementTopics topics={data} />
       <FindMore sectors={data?.sectors} />
-      <Footer />
+
     </Layout>
   );
 }

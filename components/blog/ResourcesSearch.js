@@ -6,7 +6,11 @@ import Link from "next/link";
 
 export default function ResourcesSearch({ posts, heading }) {
 
-  const featuredPost=posts[0]?.attributes
+  console.log("posts",posts)
+
+  const featuredPost=posts[posts.length-1]?.attributes
+
+  console.log("featuredPost",featuredPost)
 
   const [searchWord, setSearchWord] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -22,7 +26,7 @@ export default function ResourcesSearch({ posts, heading }) {
       
 
       const calculateTimeToRead = article => {
-        return Math.ceil(article.trim().split(/\s+/).length / 225)
+        return Math.ceil(article?.trim().split(/\s+/).length / 225)
       }
   return (
     <section className={`${styles["understand-posts-bg"]}`}>
@@ -85,25 +89,25 @@ export default function ResourcesSearch({ posts, heading }) {
         </div>
 
         <section id="featured-post" className="my-10">
-<Link href={`/blog/${posts[0].attributes.slug}`}>
+<Link href={`/blog/${posts[posts.length-1].attributes.slug}`}>
             <div className="bg-white rounded-md">
               <div className={`featured-post-top ${styles['featured-post-top-bg']} rounded-tl-md rounded-tr-md`}>
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 py-3 px-7">
-                  <div><p className="text-white font-bold">{new Date(featuredPost.publishedAt).getDate()} {new Date(featuredPost.publishedAt).toLocaleDateString('en-US',{month:'long'})}</p></div>
-                  <p className="text-white">{featuredPost.sectors.data[0].attributes.name}</p>
+                  <div><p className="text-white font-bold">{new Date(featuredPost?.publishedAt).getDate()} {new Date(featuredPost?.publishedAt).toLocaleDateString('en-US',{month:'long'})}</p></div>
+                  <p className="text-white">{featuredPost?.sectors.data[0].attributes.name}</p>
                 </div>
               </div>
               <div className="featured-post-content">
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 p-7 items-center">
                   <div>
-                    <h6 className="leading-8 font-bold text-[#1B014B] my-5">{featuredPost.title}</h6>
+                    <h6 className="leading-8 font-bold text-[#1B014B] my-5">{featuredPost?.title}</h6>
                  
                     <span>Written by {' '}   </span>
-                   {featuredPost.teams.data.map((team,index)=>{
+                   {featuredPost?.teams.data.map((team,index)=>{
                     return (
                       <span key={index}>
                           {team.attributes.name+ ' ' + team.attributes.lastname}{" "}
-                          {index < featuredPost.teams.data.length - 1
+                          {index < featuredPost?.teams.data.length - 1
                             ? " & "
                             : ""}
                             </span>
@@ -120,10 +124,11 @@ export default function ResourcesSearch({ posts, heading }) {
                     <div className="flex justify-between my-5">
                       <div className="flex gap-x-5 items-center">
                         <img src="/platformable-icon-purple-dark.png" alt="" />
-                        <p className="text-[#1B014B]">Engage</p>
+                        <p className="text-[#3524C6] font-bold">{featuredPost?.category.data.attributes.name}</p>
                       </div>
-                    <div className="flex items-center">
-                        <p className="text-[#1B014B]">{calculateTimeToRead(featuredPost?.content)+' min read'}</p>
+                    <div className="flex items-center gap-x-3">
+                      <img src="/clockl.svg" alt="" />
+                        <p className="text-[#3524C6] font-bold">{calculateTimeToRead(featuredPost?.content)+' min read'}</p>
                       
                     </div>
                     </div>

@@ -16,7 +16,7 @@ export default function DataProducts({ data }) {
       <OurSolutions data={data} />
       <OurProcess data={data} />
       <FindMore sectors={data?.sectors}/>
-      <Footer />
+
     </Layout>
   );
 }

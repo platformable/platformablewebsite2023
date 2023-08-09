@@ -17,7 +17,7 @@ export default function DataSets({ data }) {
       <OurProcess title={data?.datasets_process_title}/>
       {/* <Testimonials title={data?.datasets_testimonial_title} data={data?.testimonials}/> */}
       <FindMore sectors={data?.sectors}/>
-      <Footer />
+
     </Layout>
   );
 }
