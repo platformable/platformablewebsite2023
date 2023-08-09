@@ -9,8 +9,8 @@ export default function BlogPreviewCard({ post }) {
   return (
     // <Link href={`/blog/${}`}>
     <div className="bg-white rounded-md relative grid md:grid-rows-[0.5fr_100px_1fr]  grid-rows-[0.8fr_0.2fr_1fr]">
-      <div className="p-7">
-       <Link href={`/blog/${post.attributes.slug}`}><img src={post?.attributes?.featured_img?.data.attributes.url} alt="" /></Link>
+      <div className="p-7 relative overflow-hidden h-60">
+       <Link href={`/blog/${post.attributes.slug}`}><img src={post?.attributes?.featured_img?.data.attributes.url} alt="" className="w-full h-full object-contain"/></Link>
       </div>
       <div className="grid grid-cols-[1fr_3fr] blog-card-date-bg">
         <div className="flex flex-col items-center justify-center rounded-tr-md rounded-br-md text-white p-2">

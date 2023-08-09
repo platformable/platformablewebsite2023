@@ -127,9 +127,12 @@ export default function BlogPage({ data, relatedPosts }) {
               <h5 className="text-white font-bold">Related articles</h5>
             </div>
             <div className="grid lg:grid-cols-3 gap-x-10">
-              {relatedPosts?.map((post, index) => (
-                <BlogPreviewCard post={post} key={index} />
-              ))}
+              {relatedPosts?.map((post, index) => {
+                  if(index <= 2){
+                    return <BlogPreviewCard post={post} key={index} />
+                  } else {null}
+      
+              })}
             </div>
           </div>
         </div>
