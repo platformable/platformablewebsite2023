@@ -3056,31 +3056,35 @@ section#timeline article div.inner {
   font-size: 20px;
   border-collapse: separate;
   border-spacing: 0;
-  width:100% !important;
+
   border-bottom: 3px solid #1a014c;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+  white-space: wrap;
 }
 
 .blog-page table th {
 /*   width:100% !important; */
 }
+figure.table table {
+  width: 100% !important;
 
+}
 /* .blog-page table p {
 margin:0 !important;
 } */
-
+.blog-page table tbody tr{
+  width:100%;
+}
 .blog-page figure.table tr th,
 .blog-page figure.table tr td {
   /* border-right: 1px solid #09b; */
   border-bottom: 1px solid #ccc;
   padding: 20px;
-  font-family: Poppins !important;
   text-align: left;
-  /* width:100% !important; */
+  width:auto!important;
 }
 .blog-page figure.table tr th:first-child,
 .blog-page figure.table tr td:first-child {
