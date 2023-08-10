@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import Link from "next/link";
 import Layout from "../../../../components/Layout";
 import styles from "@/styles/Blogpage.module.css";
@@ -8,6 +9,10 @@ import { LinkedinShareButton, LinkedinIcon } from "react-share";
 
 export default function BlogPage({ data, relatedPosts }) {
   console.log("data", data);
+
+  useEffect(() => {
+    window?.twttr?.widgets?.load();
+  }, []);
 
   return (
     <Layout>
