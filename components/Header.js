@@ -6,8 +6,6 @@ import headerStyles from "../src/styles/Header.module.css";
 
 export default function Header() {
   let info = [
-    
-    
     {
       title: "Engage",
       href: "/engage",
@@ -27,7 +25,7 @@ export default function Header() {
       // linkE: "https://www.fdmgroup.com/",
       list: ["cava", "beer", "lemonade"],
     },
-    
+
     {
       title: "Act",
       href: "/act",
