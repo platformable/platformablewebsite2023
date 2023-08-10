@@ -1,7 +1,6 @@
 import Layout from "../../../components/Layout";
 import styles from "../../styles/Blog.module.css";
 import ResourcesSearch from "../../../components/blog/ResourcesSearch";
-import Footer from "../../../components/Footer";
 
 export default function BlogsIndex({ posts }) {
   return (
@@ -16,7 +15,6 @@ export default function BlogsIndex({ posts }) {
           <ResourcesSearch posts={posts} />
         </div>
       </section>
-      <Footer />
     </Layout>
   );
 }
