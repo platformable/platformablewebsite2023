@@ -4,7 +4,7 @@ import Layout from "../../../../components/Layout";
 import styles from "@/styles/Blogpage.module.css";
 import BlogPreviewCard from "../../../../components/BlogPreviewCard";
 import Head from "next/head";
-
+import { InlineWidget } from "react-calendly";
 import { LinkedinShareButton, LinkedinIcon } from "react-share";
 
 export default function BlogPage({ data, relatedPosts }) {
@@ -13,7 +13,9 @@ export default function BlogPage({ data, relatedPosts }) {
   useEffect(() => {
     window?.twttr?.widgets?.load();
   }, []);
-
+  const calculateTimeToRead = article => {
+    return Math.ceil(article?.trim().split(/\s+/).length / 225)
+  }
   return (
     <Layout>
       <Head>
@@ -52,7 +54,7 @@ export default function BlogPage({ data, relatedPosts }) {
             <div className="items-center flex gap-x-7">
               <div className="flex items-center gap-x-2">
                 <img src="/clockl.svg" alt="watch" />
-                <span className="font-bold text-[#2B30C1]">3 min read</span>
+                <span className="font-bold text-[#2B30C1]">{calculateTimeToRead(data.content)} min read</span>
               </div>
               <div className="flex items-center gap-x-3">
                 <a
@@ -63,8 +65,8 @@ export default function BlogPage({ data, relatedPosts }) {
                   <img width={30} src="/email_blue.svg" alt="email" />
                 </a>
                 <LinkedinShareButton
-                  title="tlelelelel"
-                  summary="cbcbxvcbxvbxv"
+                  title={data.slug}
+                  summary="platformable"
                   source="http://www.platformable.com"
                   url={`https://www.platformable.com/blog/${data.slug}`}
                 >
@@ -97,12 +99,19 @@ export default function BlogPage({ data, relatedPosts }) {
             className={`mt-7  blog-page`}
             id="blogPage"
           />
-          <div
+        {/*   <div
             dangerouslySetInnerHTML={{
               __html: data?.excerpt,
             }}
             className="mt-7"
-          />
+          /> */}
+
+      
+
+
+          {
+            data.Calendly? <InlineWidget url="https://calendly.com/platformable" /> : null 
+          }
           <div className="my-20 flex flex-col gap-10 lg:flex-row items-center justify-center">
             {data?.teams?.data?.map((member, index) => (
               <div className="flex flex-col items-center" key={index}>
@@ -123,6 +132,20 @@ export default function BlogPage({ data, relatedPosts }) {
               </div>
             ))}
           </div>
+
+          {data?.footnote? (
+          <div className="p-7 rounded-md bg-[#FBC6FD] my-20">
+            <p className='font-bold'>Article references</p>
+            {data?.footnote?.map((note,index)=>{
+              return (
+                <div className="flex gap-x-1 my-5" key={index}>
+                  <span className="text-xs">{index+1}</span>
+                  <p>Platformable value model: <strong>{note?.footnote}</strong></p>
+                </div>
+              )
+            })}
+          </div>
+          ):null}
         </article>
         <div className={`${styles.bg_related_articles}`}>
           <div className="container mx-auto gap-x-3 pt-10 pb-16">
@@ -153,7 +176,7 @@ export async function getServerSideProps(ctx) {
   try {
     const [data, relatedPosts] = await Promise.all([
       fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?filters[slug]=${slug}&populate[teams][populate][image]=*&populate[featured_img]=*&populate[sectors]=*&populate[category]=*`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?filters[slug]=${slug}&populate[teams][populate][image]=*&populate[featured_img]=*&populate[sectors]=*&populate[category]=*&populate[footnote]=*`
       ).then((res) => res.json()),
       fetch(
         `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?populate=*&filters[sectors][name]=Open%20Health`

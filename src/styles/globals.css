@@ -216,6 +216,16 @@ h6 {
   font-weight: bold;
 }
 
+.blog-page iframe {
+  text-align: center !important;
+  margin: 0 auto;
+  margin: 10px auto;
+}
+
+.blog-page p {
+  margin:25px 0;
+}
+
 .blog-page article {
   display: flex;
   justify-content: center;
