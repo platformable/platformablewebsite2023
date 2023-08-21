@@ -65,7 +65,10 @@
   --os-sub3: #c7f3e5;
   --labs-dark: #a60073;
   --labs-sub3: #e6add4;
-
+  --gradient-obof: linear-gradient(to right, #FF9D00 0%, #F157FF 100%) 0% 0%;
+  --gradient-oe: linear-gradient(to right,#F157FF 0%, #06DE8B 100%) 0% 0%; /* define gradient variable */
+  --gradient-oh: linear-gradient(to right,#F157FF 0%, #0062FF 100%) 0% 0%; /* define gradient variable */
+ 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -95,7 +98,9 @@
     opacity: 70%;
   }
 }
-
+ html {
+  scroll-behavior: smooth !important;
+}
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -138,6 +143,18 @@ h6 {
 .bg-purple-light {
   background-color: var(--purple-light);
 }
+
+
+.bg--gradient-obof{
+  background: var(--gradient-obof);
+}
+.bg--gradient-oe{
+  background: var(--gradient-oe);
+}
+.bg--gradient-oh{
+  background: var(--gradient-oh);
+}
+
 
 /* DIFFERENT DEVICES */
 

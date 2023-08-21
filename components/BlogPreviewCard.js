@@ -5,14 +5,22 @@ export default function BlogPreviewCard({ post }) {
   const calculateTimeToRead = (article) => {
     return Math.ceil(article.trim().split(/\s+/).length / 225);
   };
+  const setHeaderSectorColor = (sectorName) => {
+    const sectorColors = {
+      'Open Ecosystems': 'bg--gradient-oe',
+      'Open Banking / Open Finance': 'bg--gradient-obof',
+      'Open Health': 'bg--gradient-oh',
 
+    }
+    return sectorColors[sectorName]
+  }
   return (
     // <Link href={`/blog/${}`}>
     <div className="bg-white rounded-md relative grid md:grid-rows-[0.5fr_100px_1fr]  grid-rows-[0.8fr_0.2fr_1fr]">
       <div className="p-7 relative overflow-hidden h-60">
        <Link href={`/blog/${post?.attributes?.slug}`}><img src={post?.attributes?.featured_img?.data?.attributes?.url} alt="" className="w-full h-full object-contain"/></Link>
       </div>
-      <div className="grid grid-cols-[1fr_3fr] blog-card-date-bg">
+      <div className={`${setHeaderSectorColor(post?.attributes?.sectors?.data[0]?.attributes?.name)} grid grid-cols-[1fr_3fr]`}>
         <div className="flex flex-col items-center justify-center rounded-tr-md rounded-br-md text-white p-2">
           <p className="text-white font-bold">
             {new Date(post?.attributes?.publishedAt).getDate()}

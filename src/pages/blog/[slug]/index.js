@@ -61,6 +61,23 @@ export default function BlogPage({ data }) {
   useEffect(() => {
     window?.twttr?.widgets?.load();
 
+  }, []);
+  const calculateTimeToRead = article => {
+    return Math.ceil(article?.trim().split(/\s+/).length / 225)
+  }
+
+
+  const setHeaderSectorColor = (sectorName) => {
+    const sectorColors = {
+      'Open Ecosystems': 'bg--gradient-oe',
+      'Open Banking / Open Finance': 'bg--gradient-obof',
+      'Open Health': 'bg--gradient-oh',
+
+    }
+    return sectorColors[sectorName]
+  }
+
+
     setSelectedPostcategory(data?.sectors?.data[0]?.attributes.name);
     getAllPosts(selectedPostCategory);
     findIndexOfActivePost();
@@ -71,6 +88,7 @@ export default function BlogPage({ data }) {
   };
 
   console.log("selectedPostIndexPosition", selectedPostIndexPosition);
+
   return (
     <Layout>
       <Head>
@@ -81,7 +99,7 @@ export default function BlogPage({ data }) {
         <meta property="og:title" content="My new title" key="title" />
       </Head>
       <section className="blog-container">
-        <div className={`${styles.bg_blog_header} blog-header`}>
+        <div className={`${setHeaderSectorColor(data?.sectors?.data?.[0].attributes.name)} blog-header`}>
           <div className="container mx-auto flex justify-between items-center py-10">
             <h1 className="font-bold text-white">
               {data?.sectors?.data?.[0].attributes.name}

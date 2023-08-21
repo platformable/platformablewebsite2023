@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import styles from "@/styles/Blog.module.css";
 import Search from "../Search";
 import BlogPreviewCard from "../BlogPreviewCard";
@@ -15,6 +15,13 @@ export default function ResourcesSearch({ posts, heading }) {
   const [searchWord, setSearchWord] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
+  const [seeAllPosts, setSeeAllPosts] = useState(false);
+  //UseMemo is used to calculate before render
+  const showedPosts = useMemo(
+    () => seeAllPosts === false ? posts.slice(0, 3) : posts,
+    [seeAllPosts]
+  );
+    console.log("showed",showedPosts)
   const searchFunction = (word) => {
     setSearchWord(word);
   };
@@ -89,7 +96,7 @@ export default function ResourcesSearch({ posts, heading }) {
         </div>
 
         <section id="featured-post" className="my-10">
-<Link href={`/blog/${posts[posts.length-1].attributes.slug}`}>
+          <Link href={`/blog/${posts[posts.length-1].attributes.slug}`}>
             <div className="bg-white rounded-md">
               <div className={`featured-post-top ${styles['featured-post-top-bg']} rounded-tl-md rounded-tr-md`}>
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 py-3 px-7">
@@ -145,8 +152,8 @@ export default function ResourcesSearch({ posts, heading }) {
         </section>
 
         <div className="grid md:grid-cols-3 grid-cols-1 gap-x-5 px-5 gap-y-5 md:px-0 my-10">
-          {posts
-            ? posts
+          {showedPosts
+            ? showedPosts
                 .filter((post) =>
                   !selectedCategory || selectedCategory !== "All"
                     ? //?  post?.attributes?.sectors?.data[0]?.attributes?.name?.includes(selectedCategory)
@@ -170,6 +177,16 @@ export default function ResourcesSearch({ posts, heading }) {
                   return <BlogPreviewCard post={post} key={index} />;
                 })
             : null}
+        </div>
+        <div className="flex gap-3 flex-col justify-center items-center">
+          <p className="text-white ">{!seeAllPosts ? 'Check all posts' : 'Show less'}</p>
+          {!seeAllPosts ? (
+          <img src="/arrow_collapse_bottom.svg" alt="arrow icon" className="cursor-pointer" onClick={() => setSeeAllPosts(true)} />
+
+          ) : (
+          <img src="/arrow_collapse_top.svg" alt="arrow icon" className="cursor-pointer"  onClick={() => setSeeAllPosts(false)} />
+
+          )}
         </div>
       </div>
     </section>
