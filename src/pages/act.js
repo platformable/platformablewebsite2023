@@ -1,10 +1,10 @@
 import Layout from "../../components/Layout";
 import Footer from "../../components/Footer";
 import Hero from "../../components/actpage/Hero";
-import ResourcesSearch from "../../components/understand/ResourcesSearch";
+import ResourcesSearch from "../../components/actpage/ResourcesSearch";
 
 export default function ActPage({ data, posts }) {
-   console.log("data", data);
+
 
   return (
     <Layout>
