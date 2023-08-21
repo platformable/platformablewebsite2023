@@ -98,7 +98,9 @@
     opacity: 70%;
   }
 }
-
+ html {
+  scroll-behavior: smooth !important;
+}
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;

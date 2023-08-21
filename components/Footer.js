@@ -287,10 +287,14 @@ export default function Footer() {
       </section>
       <div
         // style={{ backgroundColor: "var(--purple-medium)" }}
-        className={` ${style["bg-footer"]} text-white text-center py-5 border-t border-white border-solid`}
+        className={` ${style["bg-footer"]} text-white  flex flex-col gap-4 justify-center items-center  py-5 border-t border-white border-solid`}
       >
-        <span className="block text-lg cursor-pointer">^</span>
-        <Link href="#header">GO ON TOP</Link>
+
+        <Link href="#header">
+        <img src="/arrow_collapse_top.svg" alt="arrow icon" className="cursor-pointer"  />
+
+        </Link>
+        GO ON TOP
       </div>
     </>
   );
