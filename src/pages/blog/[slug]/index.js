@@ -57,7 +57,6 @@ export default function BlogPage({ data }) {
   }
  
 
-  console.log("previousPost", previousPost);
   useEffect(() => {
     window?.twttr?.widgets?.load();
 
@@ -90,12 +89,10 @@ export default function BlogPage({ data }) {
   return (
     <Layout>
       <Head>
-        <title>{data?.title} </title>
-        <meta property="og:title" content="My page title" key="title" />
+        <title>{data?.title}</title>
+        <meta property="og:title" content={data.title} key="title" />
       </Head>
-      <Head>
-        <meta property="og:title" content="My new title" key="title" />
-      </Head>
+
       <section className="blog-container">
         <div className={`${setHeaderSectorColor(data?.sectors?.data?.[0].attributes.name)} blog-header`}>
           <div className="container mx-auto flex justify-between items-center py-10">
@@ -201,7 +198,7 @@ export default function BlogPage({ data }) {
             ))}
           </div>
 
-          {data?.footnote ? (
+          {data?.footnote >0 ? (
             <div className="p-7 rounded-md bg-[#FBC6FD] my-10">
               <p className="font-bold">Article references</p>
               {data?.footnote?.map((note, index) => {
