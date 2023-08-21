@@ -6,10 +6,12 @@ import BlogPreviewCard from "../BlogPreviewCard";
 export default function ResourcesSearch({ posts, heading }) {
 
 
+
   const [searchWord, setSearchWord] = useState("");
   const [selectedCategory,setSelectedCategory]=useState('All')
 
-  const selectedCategoryPosts = posts.filter(post=>post.attributes.category.data.attributes.name==="Understand")
+
+  const selectedCategoryPosts = posts.filter(post=>post.attributes.category.data.attributes.name==="Engage")
   console.log("selectedCategoryPosts",selectedCategoryPosts)
 
   const searchFunction = (word) => {
