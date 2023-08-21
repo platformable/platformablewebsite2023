@@ -61,10 +61,11 @@ export default function BlogPage({ data }) {
   useEffect(() => {
     window?.twttr?.widgets?.load();
 
-  }, []);
-  const calculateTimeToRead = article => {
-    return Math.ceil(article?.trim().split(/\s+/).length / 225)
-  }
+    setSelectedPostcategory(data?.sectors?.data[0]?.attributes.name);
+    getAllPosts(selectedPostCategory);
+    findIndexOfActivePost();
+  }, [data,selectedPostIndexPosition,selectedPostCategory]);
+
 
 
   const setHeaderSectorColor = (sectorName) => {
@@ -78,10 +79,7 @@ export default function BlogPage({ data }) {
   }
 
 
-    setSelectedPostcategory(data?.sectors?.data[0]?.attributes.name);
-    getAllPosts(selectedPostCategory);
-    findIndexOfActivePost();
-  }, [data,selectedPostIndexPosition,selectedPostCategory]);
+
 
   const calculateTimeToRead = (article) => {
     return Math.ceil(article?.trim().split(/\s+/).length / 225);
