@@ -1,4 +1,5 @@
-import {useEffect} from 'react'
+import { useEffect, useState, useMemo } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Layout from "../../../../components/Layout";
 import styles from "@/styles/Blogpage.module.css";
@@ -7,21 +8,73 @@ import Head from "next/head";
 import { InlineWidget } from "react-calendly";
 import { LinkedinShareButton, LinkedinIcon } from "react-share";
 
-export default function BlogPage({ data, relatedPosts }) {
-  console.log("data", data);
+export default function BlogPage({ data }) {
+  const router = useRouter();
 
+  //get post index to create next and prev logic
+  const [relatedSectorPosts, setRelatedSectorPosts] = useState([]);
+  const [selectedPostCategory,setSelectedPostcategory]=useState(null)
+  const [selectedPostIndexPosition, setSelectedPostIndexPosition] =useState(null);
+  const [previousPost, setPreviousPost] = useState(false);
+  const [nextPost, setNextPost] = useState(false);
+
+  const getAllPosts = async (category) => {
+    fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?populate=*&filters[sectors][name]=${category}`
+    )
+      .then((res) => res.json())
+      .then((res) => setRelatedSectorPosts(res.data))
+      .catch((e) => console.log("same sector posts error", e));
+  };
+
+  const previousPostButton = () => {
+    const getSlug =
+      relatedSectorPosts[selectedPostIndexPosition - 1].attributes?.slug;
+    router.push(`/blog/${getSlug}`);
+  };
+
+  const nextPostButton = () => {
+    const getSlug =
+      relatedSectorPosts[selectedPostIndexPosition + 1].attributes?.slug;
+    router.push(`/blog/${getSlug}`);
+  };
+
+  async function findIndexOfActivePost() {
+    const postIndex = relatedSectorPosts.findIndex(
+      (post) => post.attributes.slug.toLowerCase() === data.slug.toLowerCase()
+    );
+    console.log("postIndesx", postIndex);
+
+    setSelectedPostIndexPosition(postIndex);
+
+    selectedPostIndexPosition <= 0
+      ? setPreviousPost(false)
+      : setPreviousPost(true);
+    selectedPostIndexPosition === relatedSectorPosts.length - 1
+      ? setNextPost(false)
+      : setNextPost(true);
+  
+  }
+ 
+
+  console.log("previousPost", previousPost);
   useEffect(() => {
     window?.twttr?.widgets?.load();
-  }, []);
-  const calculateTimeToRead = article => {
-    return Math.ceil(article?.trim().split(/\s+/).length / 225)
-  }
+
+    setSelectedPostcategory(data?.sectors?.data[0]?.attributes.name);
+    getAllPosts(selectedPostCategory);
+    findIndexOfActivePost();
+  }, [data,selectedPostIndexPosition,selectedPostCategory]);
+
+  const calculateTimeToRead = (article) => {
+    return Math.ceil(article?.trim().split(/\s+/).length / 225);
+  };
+
+  console.log("selectedPostIndexPosition", selectedPostIndexPosition);
   return (
     <Layout>
       <Head>
-        <title>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.{" "}
-        </title>
+        <title>{data?.title} </title>
         <meta property="og:title" content="My page title" key="title" />
       </Head>
       <Head>
@@ -54,7 +107,9 @@ export default function BlogPage({ data, relatedPosts }) {
             <div className="items-center flex gap-x-7">
               <div className="flex items-center gap-x-2">
                 <img src="/clockl.svg" alt="watch" />
-                <span className="font-bold text-[#2B30C1]">{calculateTimeToRead(data.content)} min read</span>
+                <span className="font-bold text-[#2B30C1]">
+                  {calculateTimeToRead(data.content)} min read
+                </span>
               </div>
               <div className="flex items-center gap-x-3">
                 <a
@@ -99,19 +154,16 @@ export default function BlogPage({ data, relatedPosts }) {
             className={`mt-7  blog-page`}
             id="blogPage"
           />
-        {/*   <div
+          {/*   <div
             dangerouslySetInnerHTML={{
               __html: data?.excerpt,
             }}
             className="mt-7"
           /> */}
 
-      
-
-
-          {
-            data.Calendly? <InlineWidget url="https://calendly.com/platformable" /> : null 
-          }
+          {data.Calendly ? (
+            <InlineWidget url="https://calendly.com/platformable" />
+          ) : null}
           <div className="my-20 flex flex-col gap-10 lg:flex-row items-center justify-center">
             {data?.teams?.data?.map((member, index) => (
               <div className="flex flex-col items-center" key={index}>
@@ -133,20 +185,41 @@ export default function BlogPage({ data, relatedPosts }) {
             ))}
           </div>
 
-          {data?.footnote? (
-          <div className="p-7 rounded-md bg-[#FBC6FD] my-20">
-            <p className='font-bold'>Article references</p>
-            {data?.footnote?.map((note,index)=>{
-              return (
-                <div className="flex gap-x-1 my-5" key={index}>
-                  <span className="text-xs">{index+1}</span>
-                  <p>Platformable value model: <strong>{note?.footnote}</strong></p>
-                </div>
-              )
-            })}
-          </div>
-          ):null}
+          {data?.footnote ? (
+            <div className="p-7 rounded-md bg-[#FBC6FD] my-10">
+              <p className="font-bold">Article references</p>
+              {data?.footnote?.map((note, index) => {
+                return (
+                  <div className="flex gap-x-1 my-5" key={index}>
+                    <span className="text-xs">{index + 1}</span>
+                    <p>
+                      Platformable value model:{" "}
+                      <strong>{note?.footnote}</strong>
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          ) : null}
         </article>
+
+        <div className="container mx-auto  justify-center flex gap-x-5 mb-20">
+          <button
+            className="rounded px-10 py-2 bg-blue-100"
+            onClick={previousPostButton}
+            disabled={previousPost ? false : true}
+          >
+            Prev
+          </button>
+          <button
+            className="rounded px-10 py-2 bg-blue-100"
+            onClick={nextPostButton}
+            disabled={nextPost ? false : true}
+          >
+            Next
+          </button>
+        </div>
+
         <div className={`${styles.bg_related_articles}`}>
           <div className="container mx-auto gap-x-3 pt-10 pb-16">
             <div className="flex items-center gap-x-5 mb-10 ">
@@ -155,11 +228,12 @@ export default function BlogPage({ data, relatedPosts }) {
               <h5 className="text-white font-bold">Related articles</h5>
             </div>
             <div className="grid lg:grid-cols-3 gap-x-10">
-              {relatedPosts?.map((post, index) => {
-                  if(index <= 2){
-                    return <BlogPreviewCard post={post} key={index} />
-                  } else {null}
-      
+              {relatedSectorPosts?.map((post, index) => {
+                if (index <= 2) {
+                  return <BlogPreviewCard post={post} key={index} />;
+                } else {
+                  null;
+                }
               })}
             </div>
           </div>
@@ -174,19 +248,21 @@ export async function getServerSideProps(ctx) {
   console.log("slugslug", slug);
 
   try {
-    const [data, relatedPosts] = await Promise.all([
+    const [data] = await Promise.all([
       fetch(
         `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?filters[slug]=${slug}&populate[teams][populate][image]=*&populate[featured_img]=*&populate[sectors]=*&populate[category]=*&populate[footnote]=*`
       ).then((res) => res.json()),
-      fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?populate=*&filters[sectors][name]=Open%20Health`
-      ).then((res) => res.json()),
+      // fetch(
+      //   `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?populate=*&filters[sectors][name]=Open Health`
+      // ).then((res) => res.json()),
     ]);
+
+    console.log("data", data);
 
     return {
       props: {
         data: await data.data[0].attributes,
-        relatedPosts: relatedPosts?.data,
+        // relatedPosts: relatedPosts?.data,
       },
     };
   } catch (error) {
