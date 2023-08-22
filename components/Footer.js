@@ -170,8 +170,10 @@ export default function Footer() {
             <br /> visitors and subscribers.
             <br />
             <br /> See our
-            <span style={{ color: "var(--yellow)" }}> privacy policy</span> for
-            more details
+            <Link href="/privacy-policy">
+              <span style={{ color: "var(--yellow)" }}> privacy policy </span>
+            </Link>
+            for more details
             <br />
             <br />
             <span className="flex items-center gap-2">
@@ -199,9 +201,9 @@ export default function Footer() {
           ))}
         </div>
         <div className="grid gap-10 mt-14 md:flex md:flex-row md:justify-center md:gap-20 md:mt-20 lg:grid lg:gap-10 lg:mt-6 lg:w-2/12">
-          <div className="flex flex-col gap-y-5 md:justify-center ">
+          <div className="flex flex-col gap-y-5 md:justify-center">
             {/* md:justify-center put the icons and text in the center vertically */}
-            <div className="flex gap-x-5 justify-center ">
+            <div className="flex gap-x-5 justify-center">
               <Link href="mailto:mark@platformable.com">
                 <img
                   src="/email white.png"
@@ -227,13 +229,16 @@ export default function Footer() {
                 />
               </Link>
             </div>
-            <div className="text-center">
-              <p className="font-bold text-base">
+            <div className="text-center flex justify-center">
+              <p className="font-bold text-base md:w-3/4 lg:w-full">
+                Enter your email address to join our newsletter community
+              </p>
+              {/* <p className="font-bold text-base">
                 Subscribe to stay updated and{" "}
               </p>
               <p style={{ color: "var(--yellow)" }} className="font-bold">
                 Get 10% DISCOUNT
-              </p>
+              </p> */}
             </div>
           </div>
           <div className="">
@@ -289,10 +294,12 @@ export default function Footer() {
         // style={{ backgroundColor: "var(--purple-medium)" }}
         className={` ${style["bg-footer"]} text-white  flex flex-col gap-4 justify-center items-center  py-5 border-t border-white border-solid`}
       >
-
         <Link href="#header">
-        <img src="/arrow_collapse_top.svg" alt="arrow icon" className="cursor-pointer"  />
-
+          <img
+            src="/arrow_collapse_top.svg"
+            alt="arrow icon"
+            className="cursor-pointer"
+          />
         </Link>
         GO ON TOP
       </div>
