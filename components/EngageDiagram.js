@@ -23,7 +23,7 @@ export const EngageDiagram = ({title}) => {
             <div className='container mx-auto'>
             <p className="mb-10 text-white font-bold">{title}</p>
 
-            <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1510.307 1845.096">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="-2 0 1510.307 1845.096">
   <defs>
     <filter id="Rectangle_2391" x="367.112" y="169.172" width="378.172" height="139" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
