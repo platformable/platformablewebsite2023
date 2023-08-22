@@ -39,7 +39,9 @@ export default function BlogPage({ data }) {
     router.push(`/blog/${getSlug}`);
   };
 
-  async function findIndexOfActivePost() {
+  const findIndexOfActivePost =(relatedSectorPosts) => {
+
+    console.log("ejecutando find index")
     const postIndex = relatedSectorPosts.findIndex(
       (post) => post.attributes.slug.toLowerCase() === data.slug.toLowerCase()
     );
@@ -60,10 +62,21 @@ export default function BlogPage({ data }) {
   useEffect(() => {
     window?.twttr?.widgets?.load();
 
+  }, []);
+
+  useEffect(()=>{
+
     setSelectedPostcategory(data?.sectors?.data[0]?.attributes.name);
+
+  },[selectedPostCategory])
+
+  useEffect(()=>{
     getAllPosts(selectedPostCategory);
-    findIndexOfActivePost();
-  }, [data,selectedPostIndexPosition,selectedPostCategory]);
+  },[data,selectedPostCategory])
+
+  useEffect(()=>{
+    findIndexOfActivePost(relatedSectorPosts);
+  },[selectedPostIndexPosition,relatedSectorPosts])
 
 
 
