@@ -1,10 +1,32 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Logo from "/public/logo.png";
 import Link from "next/link";
 import headerStyles from "../src/styles/Header.module.css";
+import NavigationOptions from "./NavigationOptions";
 
 export default function Header() {
+
+const [navigation,setNavigation]=useState([])
+
+
+useEffect( ()=>{
+
+  const getData = fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/navigations`)
+  .then(response=>response.json())
+  .then(response=>setNavigation(response.data))
+  .catch(e=>console.log(e))
+
+
+
+
+
+},[])
+
+
+console.log("navigation",navigation)
+
+
   let info = [
     {
       title: "Engage",
@@ -130,64 +152,29 @@ export default function Header() {
               // onMouseEnter={() => setVisit()}
               onMouseLeave={handleMouseLeave}
             >
-              {info
+              {/* {info
                 ?.filter((e) => e.title === visit)
-                .map((item, index) => (
-                  <div
-                    className={headerStyles["drop-down-container"]}
-                    key={index}
-                  >
-                    <h2
-                      className={`${headerStyles["drop-down-top-title"]} font-bold pl-5`}
-                    >
-                      {item.title}
-                    </h2>
-                    <div className={headerStyles["drop-down-first-row-info"]}>
-                      <div className={headerStyles["drop-down-info-hovered"]}>
-                        <a href={item.linkB} target="_blank">
-                          <h3 className={headerStyles["drop-down-info-title"]}>
-                            {item.titleB}
-                          </h3>
-                          <p className={headerStyles["drop-down-descriptions"]}>
-                            {item.descriptionB}
-                          </p>
-                        </a>
-                      </div>
-                      <div className={headerStyles["drop-down-info-hovered"]}>
-                        <a href={item.linkC} target="_blank">
-                          <h3 className={headerStyles["drop-down-info-title"]}>
-                            {item.titleC}
-                          </h3>
-                          <p className={headerStyles["drop-down-descriptions"]}>
-                            {item.descriptionC}
-                          </p>
-                        </a>
-                      </div>
-                    </div>
-                    <div className={headerStyles["drop-down-second-row-info"]}>
-                      <div className={headerStyles["drop-down-info-hovered"]}>
-                        <a href={item.linkD} target="_blank">
-                          <h3 className={headerStyles["drop-down-info-title"]}>
-                            {item.titleD}
-                          </h3>
-                          <p className={headerStyles["drop-down-descriptions"]}>
-                            {item.descriptionD}
-                          </p>
-                        </a>
-                      </div>
-                      <div className={headerStyles["drop-down-info-hovered"]}>
-                        <a href={item.linkE} target="_blank">
-                          <h3 className={headerStyles["drop-down-info-title"]}>
-                            {item.titleE}
-                          </h3>
-                          <p className={headerStyles["drop-down-descriptions"]}>
-                            {item.descriptionE}
-                          </p>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                .map((item, index) => ( */}
+
+                {
+                  visit === 'Understand' && (
+                  <NavigationOptions headerStyles={headerStyles} name="Understand" navigation={navigation}/>
+                  )
+                }
+
+{
+                  visit === 'Act' && (
+                  <NavigationOptions headerStyles={headerStyles} name="Act" navigation={navigation}/>
+                  )
+                }
+
+{
+                  visit === 'Engage' && (
+                  <NavigationOptions headerStyles={headerStyles} name="Engage" navigation={navigation}/>
+                  )
+                }
+                  
+               {/* ))}  */}
             </div>
           </ul>
         </div>
@@ -299,17 +286,8 @@ export default function Header() {
                 plusClickOne ? "block" : "hidden"
               }  `}
             >
-              {/* <li className={headerStyles["embed-list-item"]}>
-                <a href={infoOne[0].linkB}>{infoOne[0].titleB}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoOne[0].linkC}>{infoOne[0].titleC}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoOne[0].linkD}>{infoOne[0].titleD}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoOne[0].linkE}>{infoOne[0].titleE}</a>
+           {/*    <li className={headerStyles["embed-list-item"]}>
+                <a>Hola</a>
               </li> */}
             </ul>
           </li>

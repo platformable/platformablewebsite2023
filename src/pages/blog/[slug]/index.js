@@ -229,20 +229,21 @@ export default function BlogPage({ data }) {
           ) : null}
         </article>
 
-        <div className="container mx-auto  justify-center flex gap-x-5 mb-20">
+        <div className="container mx-auto  justify-center flex gap-x-5 mb-20 items-center">
           <button
-            className="rounded px-10 py-2 bg-blue-100"
+            className={`rounded px-10 py-5 bg-blue-100 ${styles.bg_blog_next_btn} border-white shadow-md`}
             onClick={previousPostButton}
             disabled={previousPost ? false : true}
           >
-            Prev
+           <img src="/icon_aroow.svg" alt="" />
           </button>
+          <p>Related article</p>
           <button
-            className="rounded px-10 py-2 bg-blue-100"
+            className={`rounded px-10 py-5 bg-blue-100 ${styles.bg_blog_next_btn} border-white shadow-md`}
             onClick={nextPostButton}
             disabled={nextPost ? false : true}
           >
-            Next
+            <img src="/icon_aroow.svg" alt="" />
           </button>
         </div>
 
