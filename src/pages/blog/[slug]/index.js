@@ -12,6 +12,8 @@ import Meta from "../../../../components/Meta";
 export default function BlogPage({ data }) {
   const router = useRouter();
 
+console.log("data",data)
+
   //get post index to create next and prev logic
   const [relatedSectorPosts, setRelatedSectorPosts] = useState([]);
   const [selectedPostCategory, setSelectedPostcategory] = useState(null);
