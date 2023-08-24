@@ -24,7 +24,7 @@ useEffect( ()=>{
 },[])
 
 
-console.log("navigation",navigation)
+
 
 
   let info = [
@@ -106,6 +106,8 @@ console.log("navigation",navigation)
     setVisit("");
   };
 
+
+
   return (
     <div className="container mx-auto" id="header">
       <nav
@@ -186,12 +188,13 @@ console.log("navigation",navigation)
       <nav className={headerStyles["nav-two"]}>
         <div className={headerStyles["nav-bar-two"]}>
           <div className={headerStyles["logo-two-container"]}>
-            <Link href="#" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <Image
                 src={Logo}
                 className=""
                 alt="Platformable Logo"
                 id={headerStyles["responsive-logo-two"]}
+                width={250}
               />
             </Link>
           </div>
@@ -286,9 +289,19 @@ console.log("navigation",navigation)
                 plusClickOne ? "block" : "hidden"
               }  `}
             >
-           {/*    <li className={headerStyles["embed-list-item"]}>
-                <a>Hola</a>
-              </li> */}
+               {
+                navigation?.map((nav,index)=>{
+                    if(nav.attributes.category==='Understand'){
+                      return (
+                        <Link href={nav.attributes.path} key={index}>
+                        <li className={headerStyles["embed-list-item"]} >
+                        <a>{nav.attributes.name}</a>
+                        </li> 
+                        </Link>
+                      )      
+              }})
+              }
+           
             </ul>
           </li>
           <li>
@@ -330,24 +343,24 @@ console.log("navigation",navigation)
                 )}
               </button>
             </div>
-            {/* <ul
+            <ul
               className={`${headerStyles["embed-ul"]} ${
                 plusClickTwo ? "block" : "hidden"
               }`}
             >
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoTwo[0].linkB}>{infoTwo[0].titleB}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoTwo[0].linkC}>{infoTwo[0].titleC}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoTwo[0].linkD}>{infoTwo[0].titleD}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoTwo[0].linkE}>{infoTwo[0].titleE}</a>
-              </li>
-            </ul> */}
+             {
+                navigation?.map((nav,index)=>{
+                    if(nav.attributes.category==='Act'){
+                      return (
+                        <Link href={nav.attributes.path} key={index}>
+                        <li className={headerStyles["embed-list-item"]}>
+                        <a>{nav.attributes.name}</a>
+                        </li> 
+                        </Link>
+                      )      
+              }})
+              }
+            </ul>
           </li>
           <li>
             <div
@@ -388,84 +401,26 @@ console.log("navigation",navigation)
                 )}
               </button>
             </div>
-            {/* <ul
+            <ul
               className={`${headerStyles["embed-ul"]} ${
                 plusClickThree ? "block" : "hidden"
               }`}
             >
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoThree[0].linkB}>{infoThree[0].titleB}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoThree[0].linkC}>{infoThree[0].titleC}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoThree[0].linkD}>{infoThree[0].titleD}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoThree[0].linkE}>{infoThree[0].titleE}</a>
-              </li>
-            </ul> */}
-          </li>
-          <li>
-            <div
-              className={
-                responsiveListFour
-                  ? headerStyles["title-plus-container-responsive"]
-                  : headerStyles["title-plus-container"]
+            {
+                navigation?.map((nav,index)=>{
+                    if(nav.attributes.category==='Engage'){
+                      return (
+                        <Link href={nav.attributes.path} key={index}>
+                        <li className={headerStyles["embed-list-item"]}>
+                        <a>{nav.attributes.name}</a>
+                        </li> 
+                        </Link>
+                      )      
+              }})
               }
-            >
-              <span className={headerStyles["list-title-res"]}>Contact</span>
-              <button
-                type="button"
-                className={headerStyles["responsive-plus-button"]}
-                onClick={() => {
-                  setPlusClickFour((plusClickFour) => !plusClickFour);
-                  setResponsiveListFour(
-                    (responsiveListFour) => !responsiveListFour
-                  );
-                }}
-              >
-                {plusClickFour ? (
-                  <div className={headerStyles["responsive-minus-button"]}>
-                    -
-                  </div>
-                ) : (
-                  <div
-                    onClick={() => {
-                      setPlusClickOne(false);
-                      setPlusClickTwo(false);
-                      setPlusClickThree(false);
-                      setResponsiveListOne(false);
-                      setResponsiveListTwo(false);
-                      setResponsiveListThree(false);
-                    }}
-                  >
-                    +
-                  </div>
-                )}
-              </button>
-            </div>
-
-            <ul
-              className={`${headerStyles["embed-ul"]} ${
-                plusClickFour ? "block" : "hidden"
-              }  `}
-            >
-              {/* <li className={headerStyles["embed-list-item"]}>
-                <a href={infoFour[0].linkB}>{infoFour[0].titleB}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoFour[0].linkC}>{infoFour[0].titleC}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoFour[0].linkD}>{infoFour[0].titleD}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoFour[0].linkE}>{infoFour[0].titleE}</a>
-              </li> */}
             </ul>
           </li>
+        
         </ul>
       </nav>
     </div>
