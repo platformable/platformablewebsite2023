@@ -101,7 +101,7 @@ export default function BlogPage({ data }) {
             data?.sectors?.data?.[0].attributes.name
           )} blog-header`}
         >
-          <div className="container mx-auto flex justify-between items-center py-10">
+          <div className="container mx-auto md:flex block justify-between items-center py-10">
             <h1 className="font-bold text-white">
               {data?.sectors?.data?.[0].attributes.name}
             </h1>
@@ -113,7 +113,7 @@ export default function BlogPage({ data }) {
           </div>
         </div>
         <article className="py-10  container mx-auto">
-          <div className="content-header text-[var(--purple-extra-dark)] flex justify-between mb-10">
+          <div className="content-header text-[var(--purple-extra-dark)] md:flex block justify-between mb-10">
             <div className="flex items-center gap-x-3">
               <img
                 src="/platformable-icon-purple-little.svg"
@@ -123,7 +123,7 @@ export default function BlogPage({ data }) {
                 {data?.category?.data?.attributes?.name}
               </h5>
             </div>
-            <div className="items-center flex gap-x-7">
+            <div className="items-center flex gap-x-7 gap-y-7 md:mt-0 mt-5">
               <div className="flex items-center gap-x-2">
                 <img src="/clockl.svg" alt="watch" />
                 <span className="font-bold text-[#2B30C1]">

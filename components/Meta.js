@@ -12,7 +12,7 @@ const Meta = ({ title, keywords, description,data }) => {
         <title>{data?.title}</title>
 
         {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content={data?.featured_img?.attributes?.url} />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={data?.title} />
         <meta name="twitter:description" content={data?.excerpt.replace(/(<([^>]+)>)/gi, '')} />
         <meta name="twitter:site" content="http://www.platformable.com" />
