@@ -61,7 +61,7 @@ const sitemap = [
       },
       {
         label: "Contact us",
-        url: "/contact-us",
+        url: "#",
       },
       {
         label: "Blog",
@@ -150,7 +150,7 @@ export default function Footer() {
     <>
       <section
         // style={{ backgroundColor: "var(--purple-medium)" }}
-        className={`${style["bg-footer"]}  mx-auto text-white pt-20 pb-24 px-4 lg:flex lg:gap-2 justify-center items-start`}
+        className={`${style["bg-footer"]}  mx-auto text-white pt-11 pb-8 px-4 lg:flex lg:gap-2 justify-center items-start`}
       >
         <div className="grid xl:gap-16 pt-6 lg:pt-3">
           <Link href="/">
@@ -255,7 +255,6 @@ export default function Footer() {
                 </small>
                 <input
                   type="email"
-                  placeholder="Email"
                   className={
                     errorMessage === ""
                       ? "relative mx-auto w-full p-4 md:p-3 md:w-full lg:p-4 rounded-md  border-none border-2 border-opacity-50 text-black "
@@ -292,16 +291,18 @@ export default function Footer() {
       </section>
       <div
         // style={{ backgroundColor: "var(--purple-medium)" }}
-        className={` ${style["bg-footer"]} text-white  flex flex-col gap-4 justify-center items-center  py-5 border-t border-white border-solid`}
+        className={` ${style["bg-footer"]} text-white  flex flex-col justify-center items-center  pt-5 pb-8 border-t border-white border-solid`}
       >
         <Link href="#header">
-          <img
-            src="/arrow_collapse_top.svg"
-            alt="arrow icon"
-            className="cursor-pointer"
-          />
+          <div className="flex flex-col items-center gap-2">
+            <img
+              src="/arrow_collapse_top.svg"
+              alt="arrow icon"
+              className="cursor-pointer"
+            />
+            GO TO TOP
+          </div>
         </Link>
-        GO ON TOP
       </div>
     </>
   );
