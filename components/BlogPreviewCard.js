@@ -65,7 +65,7 @@ export default function BlogPreviewCard({ post }) {
             })}
           </div>
           <div className="flex justify-between items-center gap-x-3">
-            <div className="flex gap-x-3 text-[#3524C6] font-bold">
+            <div className="flex items-center gap-x-3 text-[#3524C6] font-bold">
               <img src="/platformable-icon-purple-dark.png" alt="" width={32} />
               {post?.attributes?.category?.data?.attributes?.name}
             </div>
