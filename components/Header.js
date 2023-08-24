@@ -293,8 +293,8 @@ useEffect( ()=>{
                 navigation?.map((nav,index)=>{
                     if(nav.attributes.category==='Understand'){
                       return (
-                        <Link href={nav.attributes.path}>
-                        <li className={headerStyles["embed-list-item"]}>
+                        <Link href={nav.attributes.path} key={index}>
+                        <li className={headerStyles["embed-list-item"]} >
                         <a>{nav.attributes.name}</a>
                         </li> 
                         </Link>
@@ -352,7 +352,7 @@ useEffect( ()=>{
                 navigation?.map((nav,index)=>{
                     if(nav.attributes.category==='Act'){
                       return (
-                        <Link href={nav.attributes.path}>
+                        <Link href={nav.attributes.path} key={index}>
                         <li className={headerStyles["embed-list-item"]}>
                         <a>{nav.attributes.name}</a>
                         </li> 
@@ -410,7 +410,7 @@ useEffect( ()=>{
                 navigation?.map((nav,index)=>{
                     if(nav.attributes.category==='Engage'){
                       return (
-                        <Link href={nav.attributes.path}>
+                        <Link href={nav.attributes.path} key={index}>
                         <li className={headerStyles["embed-list-item"]}>
                         <a>{nav.attributes.name}</a>
                         </li> 
