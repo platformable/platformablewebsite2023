@@ -15,7 +15,7 @@ export default function NavigationOptions({ headerStyles, name, navigation }) {
           {navigation.map((nav, index) => {
             if (nav.attributes.category === name && nav.attributes.side_of_navigation==='left') {
               return (
-                <div className={headerStyles["drop-down-info-hovered"]}>
+                <div className={headerStyles["drop-down-info-hovered"]} key={index}>
                   <Link href={nav.attributes.path} >
                     <h3 className={headerStyles["drop-down-info-title"]}>
                       {nav?.attributes?.name}
@@ -39,7 +39,7 @@ export default function NavigationOptions({ headerStyles, name, navigation }) {
           {navigation.map((nav, index) => {
             if (nav.attributes.category === name && nav.attributes.side_of_navigation==='right') {
               return (
-                <div className={headerStyles["drop-down-info-hovered"]}>
+                <div className={headerStyles["drop-down-info-hovered"]} key={index}>
                   <Link href={nav.attributes.path} >
                     <h3 className={headerStyles["drop-down-info-title"]}>
                       {nav?.attributes?.name}
