@@ -6,11 +6,11 @@ import Link from "next/link";
 
 export default function ResourcesSearch({ posts, heading }) {
 
-  console.log("posts",posts)
+  // console.log("posts",posts)
 
   const featuredPost=posts[posts.length-1]?.attributes
 
-  console.log("featuredPost",featuredPost)
+  // console.log("featuredPost",featuredPost)
 
   const [searchWord, setSearchWord] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -18,10 +18,21 @@ export default function ResourcesSearch({ posts, heading }) {
   const [seeAllPosts, setSeeAllPosts] = useState(false);
   //UseMemo is used to calculate before render
   const showedPosts = useMemo(
-    () => seeAllPosts === false ? posts.slice(0, 3) : posts,
-    [seeAllPosts]
+    () => {
+      return selectedCategory === 'All' ? posts :  seeAllPosts === false ? 
+                      //?  post?.attributes?.sectors?.data[0]?.attributes?.name?.includes(selectedCategory)
+                      posts?.filter((post) =>
+                        post?.attributes?.sectors?.data?.some(element => element.attributes.name.includes(selectedCategory))
+                        
+                      ).splice(0, 3)
+                    : posts?.filter((post) =>
+                        post?.attributes?.sectors?.data?.some(element => element.attributes.name.includes(selectedCategory))
+                        
+                      )
+    },
+    [seeAllPosts, selectedCategory]
   );
-    console.log("showed",showedPosts)
+    // console.log("showed",showedPosts)
   const searchFunction = (word) => {
     setSearchWord(word);
   };
@@ -147,14 +158,14 @@ export default function ResourcesSearch({ posts, heading }) {
         <div className="grid md:grid-cols-3 grid-cols-1 gap-x-5 px-5 gap-y-5 md:px-0 my-10">
           {showedPosts
             ? showedPosts
-                .filter((post) =>
-                  !selectedCategory || selectedCategory !== "All"
-                    ? //?  post?.attributes?.sectors?.data[0]?.attributes?.name?.includes(selectedCategory)
-                      post?.attributes?.sectors?.data?.some((element) =>
-                        element.attributes.name.includes(selectedCategory)
-                      )
-                    : post
-                )
+                // .filter((post) =>
+                  // !selectedCategory || selectedCategory !== "All"
+                  //   ? //?  post?.attributes?.sectors?.data[0]?.attributes?.name?.includes(selectedCategory)
+                  //     post?.attributes?.sectors?.data?.some((element) =>
+                  //       element.attributes.name.includes(selectedCategory)
+                  //     )
+                  //   : post
+                // )
                 .filter((post, index) => {
                   if (searchWord === "") {
                     return post;
