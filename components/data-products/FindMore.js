@@ -1,42 +1,49 @@
 import styles from "@/styles/DataProducts.module.css";
 import Link from "next/link";
-import carouselStyles from '@/styles/Carousel.module.scss'
+import carouselStyles from "@/styles/Carousel.module.scss";
 
 export default function FindMore({ sectors }) {
-  
-  
   return (
-    <section className={`py-10 container mx-auto overflow-y-hidden  bg-white overflow-x-hidden hidden lg:block`}>
+    <section
+      className={`pt-10 pb-20 container mx-auto overflow-y-hidden  bg-white overflow-x-hidden hidden lg:block`}
+    >
       <div className={`relative h-96 flex mt-10 flex-col justify-center`}>
-    {sectors?.map( (sector,index) => (
-      <div className={`${carouselStyles.carousel__item} grid grid-cols-[3fr_1.5fr] xl:px-24`} id={index+1} key={index}>
-        <div className="flex flex-col gap-y-10 mb-10">
-          <div className="flex gap-5 items-center">
-            <img src={sector?.icon?.data?.attributes?.url} alt="" />
-            <h2 className="font-bold text-[var(--purple-medium)]">{sector?.title}</h2>
-          </div>
-          {/* <p className="text-[var(--purple-medium)]  font-bold">{sector?.subtitle}</p> */}
-
+        {sectors?.map((sector, index) => (
           <div
-            dangerouslySetInnerHTML={{
-              __html: sector?.description,
-            }}
-            className="pr-16 text-[var(--purple-medium)]"
-          />
+            className={`${carouselStyles.carousel__item} grid grid-cols-[3fr_1.5fr] xl:px-24`}
+            id={index + 1}
+            key={index}
+          >
+            <div className="flex flex-col gap-y-10 mb-10">
+              <div className="flex gap-5 items-center">
+                <img src={sector?.icon?.data?.attributes?.url} alt="" />
+                <h2 className="font-bold text-[var(--purple-medium)]">
+                  {sector?.title}
+                </h2>
+              </div>
+              {/* <p className="text-[var(--purple-medium)]  font-bold">{sector?.subtitle}</p> */}
 
-          <Link href={`/${sector.link}`}>
-          <button className="rounded bg-[var(--yellow)] px-10 py-4 text-lg text-center font-bold lg:rounded-xl text-[var(--purple-medium)]">
-            Find out more
-          </button>
-          </Link>
-          
-        </div>
-        <img className={``} src={sector?.image?.data?.attributes?.url} alt="" />
-    </div>
-    ))}
-    
-   
-  </div>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: sector?.description,
+                }}
+                className="pr-16 text-[var(--purple-medium)]"
+              />
+
+              <Link href={`/${sector.link}`}>
+                <button className="rounded bg-[var(--yellow)] px-10 py-4 text-lg text-center font-bold lg:rounded-xl text-[var(--purple-medium)]">
+                  Find out more
+                </button>
+              </Link>
+            </div>
+            <img
+              className={``}
+              src={sector?.image?.data?.attributes?.url}
+              alt=""
+            />
+          </div>
+        ))}
+      </div>
       {/* <div className="container mx-auto">
         <div className="flex gap-x-5 items-center  mb-10">
           <img
