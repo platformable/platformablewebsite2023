@@ -45,7 +45,7 @@ export default function BlogPage({ data }) {
     const postIndex = relatedSectorPosts.findIndex(
       (post) => post.attributes.slug.toLowerCase() === data.slug.toLowerCase()
     );
-    console.log("postIndesx", postIndex);
+
 
     setSelectedPostIndexPosition(postIndex);
 
@@ -97,7 +97,7 @@ export default function BlogPage({ data }) {
     return Math.ceil(article?.trim().split(/\s+/).length / 225);
   };
 
-  console.log("selectedPostIndexPosition", selectedPostIndexPosition);
+
 
   return (
     <Layout>
@@ -172,7 +172,19 @@ export default function BlogPage({ data }) {
               {index < data?.teams?.data.length - 1 ? " & " : ""}
             </span>
           ))}
+<br />
 
+{data?.update_date ? (
+   <span>
+   Updated at {new Date(data?.update_date).toDateString()}
+ </span>
+): (
+  <span>
+  Published at {new Date(data?.publishedAt).toDateString()}
+</span>
+
+) }
+        
           <div
             dangerouslySetInnerHTML={{
               __html: data?.content,

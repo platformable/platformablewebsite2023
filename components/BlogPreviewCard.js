@@ -23,14 +23,21 @@ export default function BlogPreviewCard({ post }) {
       <div className={`${setHeaderSectorColor(post?.attributes?.sectors?.data[0]?.attributes?.name)} grid grid-cols-[1fr_3fr]`}>
         <div className="flex flex-col items-center justify-center rounded-tr-md rounded-br-md text-white p-2">
           <p className="text-white font-bold">
-            {new Date(post?.attributes?.publishedAt).getDate()}
+
+          {post?.attributes?.update_date ? (new Date(post?.attributes?.update_date).getDate()) : (new Date(post?.attributes?.publishedAt).getDate())}
+
           </p>
           <p>
             {" "}
-            {new Date(post?.attributes?.publishedAt).toLocaleDateString(
+
+            {post?.attributes?.update_date ? (new Date(post?.attributes?.update_date).toLocaleDateString(
               "en-US",
               { month: "long" }
-            )}
+            )): (new Date(post?.attributes?.publishedAt).toLocaleDateString(
+              "en-US",
+              { month: "long" }
+            ))}
+
           </p>
         </div>
         <div className="items-center flex gap-x-7 ml-2">
