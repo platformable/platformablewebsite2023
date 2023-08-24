@@ -1,39 +1,39 @@
 import Head from "next/head";
 
-const Meta = ({ title, keywords, description }) => {
+const Meta = ({ title, keywords, description,data }) => {
   return (
-    <div>
+  
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content={keywords} />
-        <meta name="description" content={description} />
+        <meta name="description" content={data?.excerpt.replace(/(<([^>]+)>)/gi, '')} />
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
-        <title>{title}</title>
+        <title>{data?.title}</title>
 
         {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:site" content="" />
-        <meta name="twitter:image" content="your_image_url.jpg" />
+        <meta name="twitter:card" content={data?.featured_img?.attributes?.url} />
+        <meta name="twitter:title" content={data?.title} />
+        <meta name="twitter:description" content={data?.excerpt.replace(/(<([^>]+)>)/gi, '')} />
+        <meta name="twitter:site" content="http://www.platformable.com" />
+        <meta name="twitter:image" content={data?.featured_img?.attributes?.url} />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        <meta property="og:description" content={data?.excerpt.replace(/(<([^>]+)>)/gi, '')} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="your_image_url.jpg" />
-        <meta property="og:image:secure_url" content="your_image_url.jpg" />
-        <meta property="og:image:alt" content={title} />
-        <meta property="og:url" content="https://your-website-url.com" />
-        <meta property="og:site_name" content="Your Website Name" />
+        <meta property="og:image" content={data?.featured_img?.attributes?.url} />
+        <meta property="og:image:secure_url" content={data?.featured_img?.attributes?.url} />
+        <meta property="og:image:alt" content={data?.title} />
+        <meta property="og:url" content="https://platformable.com" />
+        <meta property="og:site_name" content="platformable.com" />
       </Head>
-    </div>
+    
   );
 };
 
 Meta.defaultProps = {
-  title: "Platformable",
+  // title: "Platformable",
   keywords:
     "platformable, data, api, open ecosystems, open banking, open finance, open health",
   description:

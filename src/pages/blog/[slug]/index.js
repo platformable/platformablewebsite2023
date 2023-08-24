@@ -7,14 +7,16 @@ import BlogPreviewCard from "../../../../components/BlogPreviewCard";
 import Head from "next/head";
 import { InlineWidget } from "react-calendly";
 import { LinkedinShareButton, LinkedinIcon } from "react-share";
+import Meta from "../../../../components/Meta";
 
 export default function BlogPage({ data }) {
   const router = useRouter();
 
   //get post index to create next and prev logic
   const [relatedSectorPosts, setRelatedSectorPosts] = useState([]);
-  const [selectedPostCategory,setSelectedPostcategory]=useState(null)
-  const [selectedPostIndexPosition, setSelectedPostIndexPosition] =useState(null);
+  const [selectedPostCategory, setSelectedPostcategory] = useState(null);
+  const [selectedPostIndexPosition, setSelectedPostIndexPosition] =
+    useState(null);
   const [previousPost, setPreviousPost] = useState(false);
   const [nextPost, setNextPost] = useState(false);
 
@@ -39,13 +41,11 @@ export default function BlogPage({ data }) {
     router.push(`/blog/${getSlug}`);
   };
 
-  const findIndexOfActivePost =(relatedSectorPosts) => {
-
-    console.log("ejecutando find index")
+  const findIndexOfActivePost = (relatedSectorPosts) => {
+    console.log("ejecutando find index");
     const postIndex = relatedSectorPosts.findIndex(
       (post) => post.attributes.slug.toLowerCase() === data.slug.toLowerCase()
     );
-
 
     setSelectedPostIndexPosition(postIndex);
 
@@ -55,43 +55,32 @@ export default function BlogPage({ data }) {
     selectedPostIndexPosition === relatedSectorPosts.length - 1
       ? setNextPost(false)
       : setNextPost(true);
-  
-  }
- 
+  };
 
   useEffect(() => {
     window?.twttr?.widgets?.load();
-
   }, []);
 
-  useEffect(()=>{
-
+  useEffect(() => {
     setSelectedPostcategory(data?.sectors?.data[0]?.attributes.name);
+  }, [selectedPostCategory]);
 
-  },[selectedPostCategory])
-
-  useEffect(()=>{
+  useEffect(() => {
     getAllPosts(selectedPostCategory);
-  },[data,selectedPostCategory])
+  }, [data, selectedPostCategory]);
 
-  useEffect(()=>{
+  useEffect(() => {
     findIndexOfActivePost(relatedSectorPosts);
-  },[selectedPostIndexPosition,relatedSectorPosts])
-
-
+  }, [selectedPostIndexPosition, relatedSectorPosts]);
 
   const setHeaderSectorColor = (sectorName) => {
     const sectorColors = {
-      'Open Ecosystems': 'bg--gradient-oe',
-      'Open Banking / Open Finance': 'bg--gradient-obof',
-      'Open Health': 'bg--gradient-oh',
-
-    }
-    return sectorColors[sectorName]
-  }
-
-
-
+      "Open Ecosystems": "bg--gradient-oe",
+      "Open Banking / Open Finance": "bg--gradient-obof",
+      "Open Health": "bg--gradient-oh",
+    };
+    return sectorColors[sectorName];
+  };
 
   const calculateTimeToRead = (article) => {
     return Math.ceil(article?.trim().split(/\s+/).length / 225);
@@ -99,15 +88,19 @@ export default function BlogPage({ data }) {
 
 
 
+
   return (
     <Layout>
-      <Head>
-        <title>{data?.title}</title>
-        <meta property="og:title" content={data.title} key="title" />
-      </Head>
+    
+        <Meta data={data}/>
+     
 
       <section className="blog-container">
-        <div className={`${setHeaderSectorColor(data?.sectors?.data?.[0].attributes.name)} blog-header`}>
+        <div
+          className={`${setHeaderSectorColor(
+            data?.sectors?.data?.[0].attributes.name
+          )} blog-header`}
+        >
           <div className="container mx-auto flex justify-between items-center py-10">
             <h1 className="font-bold text-white">
               {data?.sectors?.data?.[0].attributes.name}
@@ -172,19 +165,16 @@ export default function BlogPage({ data }) {
               {index < data?.teams?.data.length - 1 ? " & " : ""}
             </span>
           ))}
-<br />
+          <br />
 
-{data?.update_date ? (
-   <span>
-   Updated at {new Date(data?.update_date).toDateString()}
- </span>
-): (
-  <span>
-  Published at {new Date(data?.publishedAt).toDateString()}
-</span>
+          {data?.update_date ? (
+            <span>Updated at {new Date(data?.update_date).toDateString()}</span>
+          ) : (
+            <span>
+              Published at {new Date(data?.publishedAt).toDateString()}
+            </span>
+          )}
 
-) }
-        
           <div
             dangerouslySetInnerHTML={{
               __html: data?.content,
@@ -223,7 +213,7 @@ export default function BlogPage({ data }) {
             ))}
           </div>
 
-          {data?.footnote >0 ? (
+          {data?.footnote > 0 ? (
             <div className="p-7 rounded-md bg-[#FBC6FD] my-10">
               <p className="font-bold">Article references</p>
               {data?.footnote?.map((note, index) => {
@@ -247,7 +237,7 @@ export default function BlogPage({ data }) {
             onClick={previousPostButton}
             disabled={previousPost ? false : true}
           >
-           <img src="/icon_aroow.svg" alt="" />
+            <img src="/icon_aroow.svg" alt="" />
           </button>
           <p>Related article</p>
           <button
