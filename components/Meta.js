@@ -19,7 +19,7 @@ const Meta = ({ title, keywords, description,data }) => {
         <meta name="twitter:image" content={data?.featured_img?.attributes?.formats.thumbnail.url} />
 
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={data?.title} />
         <meta property="og:description" content={data?.excerpt.replace(/(<([^>]+)>)/gi, '')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={data?.featured_img?.attributes?.formats.thumbnail.url} />
