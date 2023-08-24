@@ -23,7 +23,7 @@ const Meta = ({ title, keywords, description,data }) => {
         <meta property="og:description" content={data?.excerpt.replace(/(<([^>]+)>)/gi, '')} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={data?.featured_img?.attributes?.formats.thumbnail.url} />
-        <meta property="og:image:secure_url" content={'https://www.platformble.com'} />
+        <meta property="og:image:secure_url" content={data?.featured_img?.attributes?.formats.thumbnail.url} />
         <meta property="og:image:alt" content={data?.title} />
         <meta property="og:url" content="https://platformable.com" />
         <meta property="og:site_name" content="platformable.com" />

@@ -42,7 +42,7 @@ export default function BlogPage({ data }) {
   };
 
   const findIndexOfActivePost = (relatedSectorPosts) => {
-    console.log("ejecutando find index");
+    
     const postIndex = relatedSectorPosts.findIndex(
       (post) => post.attributes.slug.toLowerCase() === data.slug.toLowerCase()
     );
