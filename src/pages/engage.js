@@ -4,15 +4,17 @@ import Footer from "../../components/Footer";
 import { EngageDiagram } from "../../components/EngageDiagram";
 import Hero from "../../components/engagepage/Hero";
 import ResourcesSearch from "../../components/engagepage/ResourcesSearch";
+import Meta from '../../components/Meta';
 
 
 
 export default function DataProducts({ data,posts }) {
-  // console.log("data",data);
-  console.log("posts",posts)
+  console.log("data",data);
+  // console.log("posts",posts)
 
   return (
     <Layout>
+      <Meta title={data?.title} data={data} />
       <Hero data={data}/>
       <EngageDiagram title={data?.products_title}/>
       <ResourcesSearch  posts={posts} heading={data?.understand_blog_description}/>

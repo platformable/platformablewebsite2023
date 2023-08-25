@@ -2,12 +2,14 @@ import Layout from "../../components/Layout";
 import Footer from "../../components/Footer";
 import Hero from "../../components/understand/Hero";
 import ResourcesSearch from "../../components/understand/ResourcesSearch";
+import Meta from "../../components/Meta";
 
 export default function DataProducts({ data, posts }) {
-   //console.log("data", data);
+   console.log("data", data);
 
   return (
     <Layout>
+      <Meta title={data?.understand_hero_title} data={data} />
       <Hero data={data} />
       <ResourcesSearch  posts={posts} heading={data?.understand_blog_description}/>
 

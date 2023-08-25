@@ -12,7 +12,7 @@ export default function ResourcesSearch({ posts, heading }) {
 
 
   const selectedCategoryPosts = posts.filter(post=>post.attributes.category.data.attributes.name==="Engage")
-  console.log("selectedCategoryPosts",selectedCategoryPosts)
+  
 
   const searchFunction = (word) => {
     setSearchWord(word);

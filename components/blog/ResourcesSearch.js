@@ -19,16 +19,11 @@ export default function ResourcesSearch({ posts, heading }) {
   //UseMemo is used to calculate before render
   const showedPosts = useMemo(
     () => {
-      return selectedCategory === 'All' ? posts :  seeAllPosts === false ? 
-                      //?  post?.attributes?.sectors?.data[0]?.attributes?.name?.includes(selectedCategory)
-                      posts?.filter((post) =>
-                        post?.attributes?.sectors?.data?.some(element => element.attributes.name.includes(selectedCategory))
-                        
-                      ).splice(0, 3)
-                    : posts?.filter((post) =>
+      const findPostsBycategory = selectedCategory === 'All' ? posts : posts?.filter((post) =>
                         post?.attributes?.sectors?.data?.some(element => element.attributes.name.includes(selectedCategory))
                         
                       )
+      return seeAllPosts ? findPostsBycategory : findPostsBycategory.slice(0,3)
     },
     [seeAllPosts, selectedCategory]
   );
@@ -156,16 +151,7 @@ export default function ResourcesSearch({ posts, heading }) {
         </section>
 
         <div className="grid md:grid-cols-3 grid-cols-1 gap-x-5 px-5 gap-y-5 md:px-0 my-10">
-          {showedPosts
-            ? showedPosts
-                // .filter((post) =>
-                  // !selectedCategory || selectedCategory !== "All"
-                  //   ? //?  post?.attributes?.sectors?.data[0]?.attributes?.name?.includes(selectedCategory)
-                  //     post?.attributes?.sectors?.data?.some((element) =>
-                  //       element.attributes.name.includes(selectedCategory)
-                  //     )
-                  //   : post
-                // )
+          { showedPosts ? showedPosts 
                 .filter((post, index) => {
                   if (searchWord === "") {
                     return post;
@@ -180,7 +166,7 @@ export default function ResourcesSearch({ posts, heading }) {
                 .map((post, index) => {
                   return <BlogPreviewCard post={post} key={index} />;
                 })
-            : null}
+           : null }
         </div>
         <div className="flex gap-3 flex-col justify-center items-center">
           <p className="text-white ">{!seeAllPosts ? 'Check all posts' : 'Show less'}</p>

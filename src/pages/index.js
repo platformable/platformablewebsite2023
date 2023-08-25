@@ -10,6 +10,7 @@ import Hero from "../../components/homepage/Hero";
 import Footer from "../../components/Footer";
 import Testimonials from "../../components/homepage/Testimonials";
 import Link from "next/link";
+import Meta from "../../components/Meta";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function Home({ data }) {
   const newData = data.attributes;
   return (
     <Layout>
+      <Meta title={data?.hero_title} data={data}/>
       <div className="relative">
         <Hero
           heroImg={data?.attributes?.hero_img?.data?.attributes.url}
