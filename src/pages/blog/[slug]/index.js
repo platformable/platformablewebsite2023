@@ -239,7 +239,7 @@ console.log("data",data)
             onClick={previousPostButton}
             disabled={previousPost ? false : true}
           >
-            <img src="/icon_aroow.svg" alt="" />
+            <img src="/left_arrow.svg" alt="" />
           </button>
           <p>Related article</p>
           <button
