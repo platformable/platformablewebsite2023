@@ -14,7 +14,7 @@ export default function FindMore({ sectors }) {
             id={index + 1}
             key={index}
           >
-            <div className="flex flex-col gap-y-10 mb-10">
+            <div className="grid grid-rows-[1fr_1.5fr_1fr] gap-y-10 mb-10">
               <div className="flex gap-5 items-center">
                 <img src={sector?.icon?.data?.attributes?.url} alt="" />
                 <h2 className="font-bold text-[var(--purple-medium)]">

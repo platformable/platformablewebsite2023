@@ -194,7 +194,7 @@ console.log("data",data)
           {data.Calendly ? (
             <InlineWidget url="https://calendly.com/platformable" />
           ) : null}
-          <div className="my-20 flex flex-col gap-10 lg:flex-row items-center justify-center">
+          {/* <div className="my-20 flex flex-col gap-10 lg:flex-row items-center justify-center "> */}
             {data?.teams?.data?.map((member, index) => (
               <div className="flex flex-col items-center" key={index}>
                 <img
@@ -213,7 +213,7 @@ console.log("data",data)
                 </span>
               </div>
             ))}
-          </div>
+          {/* </div> */}
 
           {data?.footnote > 0 ? (
             <div className="p-7 rounded-md bg-[#FBC6FD] my-10">
