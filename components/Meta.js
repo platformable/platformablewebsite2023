@@ -12,18 +12,18 @@ const Meta = ({ title, keywords, description,data }) => {
         <title>{data?.title}</title>
 
         {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content={data?.featured_img?.attributes?.url} />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={data?.title} />
         <meta name="twitter:description" content={data?.excerpt.replace(/(<([^>]+)>)/gi, '')} />
         <meta name="twitter:site" content="http://www.platformable.com" />
-        <meta name="twitter:image" content={data?.featured_img?.attributes?.formats.thumbnail.url} />
+        <meta name="twitter:image" content={data?.featured_img?.data.attributes?.formats.small.url} />
 
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={data?.title} />
         <meta property="og:description" content={data?.excerpt.replace(/(<([^>]+)>)/gi, '')} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={data?.featured_img?.attributes?.formats.thumbnail.url} />
-        <meta property="og:image:secure_url" content={data?.featured_img?.attributes?.formats.thumbnail.url} />
+        <meta property="og:image" content={data?.featured_img?.data.attributes?.formats.small.url} />
+        <meta property="og:image:secure_url" content={data?.featured_img?.data.attributes?.formats.small.url} />
         <meta property="og:image:alt" content={data?.title} />
         <meta property="og:url" content="https://platformable.com" />
         <meta property="og:site_name" content="platformable.com" />
