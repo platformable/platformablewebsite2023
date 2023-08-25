@@ -1,17 +1,18 @@
 import Layout from "../../../components/Layout";
 import styles from '@/styles/DataProducts.module.css'
 import Hero from "../../../components/data-governance/Hero";
-import Footer from "../../../components/Footer";
 import FindMore from "../../../components/data-products/FindMore";
 import Testimonials from "../../../components/homepage/Testimonials";
 import OurProcess from "../../../components/data-governance/OurProcess";
 import GovernanceServices from "../../../components/GovernanceServices";
 import GovernanceProducts from "../../../components/data-governance/GovernanceProducts";
+import Meta from "../../../components/Meta";
 export default function DataGovernance({ data }) {
   console.log("data",data);
 
   return (
     <Layout>
+      <Meta title={data?.dg_title} data={data} />
       <Hero data={data}/>
       <GovernanceProducts title={data?.products_title} products={data?.products} />
       <OurProcess data={data}/>

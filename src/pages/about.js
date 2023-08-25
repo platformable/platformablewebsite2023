@@ -14,12 +14,14 @@ import OurCommitment from "../../components/about/OurCommitment";
 import OurMission from "../../components/about/OurMission";
 import PrivacyPolicy from "../../components/about/PrivacyPolicy";
 import Team from "../../components/about/Team";
+import Meta from "../../components/Meta";
 
 export default function About({ data }) {
   console.log(data);
   //const newData = data.attributes;
   return (
     <Layout>
+      <Meta title="About us" data={data} />
       <div className={`${styles.hero_background_gradient} relative`}>
         <Hero data={data} />
         <button

@@ -1,30 +1,30 @@
 import Head from "next/head";
 
-const Meta = ({ title, keywords, description,data }) => {
+const Meta = ({ title, keywords, data }) => {
   return (
   
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content={keywords} />
-        <meta name="description" content={data?.excerpt.replace(/(<([^>]+)>)/gi, '')} />
+        <meta name="description" content={data?.excerpt?.replace(/(<([^>]+)>)/gi, '')} />
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
-        <title>{data?.title}</title>
+        <title>{title}</title>
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={data?.title} />
-        <meta name="twitter:description" content={data?.excerpt.replace(/(<([^>]+)>)/gi, '')} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={data?.excerpt?.replace(/(<([^>]+)>)/gi, '')} />
         <meta name="twitter:site" content="http://www.platformable.com" />
-        <meta name="twitter:image" content={data?.featured_img?.data.attributes?.formats.small.url} />
+        <meta name="twitter:image" content={data?.featured_img?.data.attributes?.formats.small.url ||'https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png'} />
 
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={data?.title} />
-        <meta property="og:description" content={data?.excerpt.replace(/(<([^>]+)>)/gi, '')} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={data?.excerpt?.replace(/(<([^>]+)>)/gi, '')} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={data?.featured_img?.data.attributes?.formats.small.url} />
-        <meta property="og:image:secure_url" content={data?.featured_img?.data.attributes?.formats.small.url} />
-        <meta property="og:image:alt" content={data?.title} />
+        <meta property="og:image" content={data?.featured_img?.data.attributes?.formats.small.url ||'https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png'} />
+        <meta property="og:image:secure_url" content={data?.featured_img?.data.attributes?.formats.small.url || 'https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png'} />
+        <meta property="og:image:alt" content={title} />
         <meta property="og:url" content="https://platformable.com" />
         <meta property="og:site_name" content="platformable.com" />
       </Head>

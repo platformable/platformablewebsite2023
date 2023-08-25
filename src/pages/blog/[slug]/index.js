@@ -94,7 +94,7 @@ console.log("data",data)
   return (
     <Layout>
     
-        <Meta data={data}/>
+        <Meta title={data?.title} data={data}/>
      
 
       <section className="blog-container">

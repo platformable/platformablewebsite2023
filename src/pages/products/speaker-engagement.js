@@ -4,11 +4,14 @@ import styles from "@/styles/DataProducts.module.css";
 import Footer from "../../../components/Footer";
 import FindMore from "../../../components/data-products/FindMore";
 import EngagementTopics from "../../../components/speaker-engagement/EngagementTopics";
+import Meta from "../../../components/Meta";
+
 export default function DataProducts({ data }) {
   console.log("data", data);
 
   return (
     <Layout>
+      <Meta title={data?.title} data={data} />
       <Hero data={data} />
       <EngagementTopics topics={data} />
       <FindMore sectors={data?.sectors} />

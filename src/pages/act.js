@@ -2,12 +2,14 @@ import Layout from "../../components/Layout";
 import Footer from "../../components/Footer";
 import Hero from "../../components/actpage/Hero";
 import ResourcesSearch from "../../components/actpage/ResourcesSearch";
+import Meta from "../../components/Meta";
 
 export default function ActPage({ data, posts }) {
 
 
   return (
     <Layout>
+      <Meta title={'Act'} data={data} />
       <Hero data={data} />
       <ResourcesSearch posts={posts} heading={data?.blog_description}/>
 

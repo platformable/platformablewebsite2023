@@ -5,13 +5,14 @@ import Footer from "../../../components/Footer";
 import FindMore from "../../../components/data-products/FindMore";
 import OurProcess from "../../../components/open-ecosystem-consultancy/OurProcess";
 import OurSolutions from "../../../components/open-ecosystem-consultancy/OurSolutions";
-
+import Meta from "../../../components/Meta";
 
 export default function DataProducts({ data }) {
   console.log("data",data);
 
   return (
     <Layout>
+      <Meta title={data?.title} data={data} />
       <Hero data={data}/>
       <OurSolutions data={data} />
       <OurProcess data={data} />

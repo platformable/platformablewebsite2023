@@ -6,12 +6,14 @@ import Testimonials from "../../../components/homepage/Testimonials";
 import OurProcess from "../../../components/datasets/OurProcess";
 import Hero from "../../../components/datasets/Hero";
 import OurDatasets from "../../../components/datasets/OurDatasets";
+import Meta from "../../../components/Meta";
 
 export default function DataSets({ data }) {
   console.log("data", data);
 
   return (
     <Layout>
+      <Meta title={data?.datasets_title} data={data} />
       <Hero data={data}/>
       <OurDatasets title={data?.datasets_products_title} datasets={data?.products}/>
       <OurProcess title={data?.datasets_process_title}/>

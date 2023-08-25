@@ -1,10 +1,12 @@
 import Layout from '../../components/Layout';
 import Footer from "../../components/Footer";
+import Meta from '../../components/Meta';
 export default function PrivacyPolicy({ data }) {
   console.log("data",data);
 
   return (
     <Layout>
+      <Meta title={data?.title} data={data} />
       <section className="">
       <div className="container mx-auto py-10">
         <h1 className="mb-10 font-bold">

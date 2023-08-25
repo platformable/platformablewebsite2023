@@ -7,13 +7,15 @@ import GovernanceServices from "../../../components/GovernanceServices";
 import APIGovernanceProducts from "../../../components/api-governance/APIGovernanceProducts";
 import Hero from "../../../components/api-governance/Hero";
 import OurProcess from "../../../components/api-governance/OurProcess";
+import Meta from "../../../components/Meta";
 export default function APIGovernance({ data }) {
   console.log("data",data);
 
   return (
     <Layout>
+      <Meta title={data?.hero_title} data={data} />
       <Hero data={data}/>
-      <APIGovernanceProducts  products={data?.products} />
+      <APIGovernanceProducts products={data?.products} />
       <OurProcess data={data}/>
       <GovernanceServices description={data?.services_description} services={data?.services}/>
       {/* <Testimonials data={data?.testimonials} title={data?.testimonials_title} logos={false}/> */}
