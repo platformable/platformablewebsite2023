@@ -5,6 +5,7 @@ import ResourcesSearch from "../../components/actpage/ResourcesSearch";
 import Meta from "../../components/Meta";
 
 export default function ActPage({ data, posts }) {
+  console.log("data", data);
 
 
   return (
@@ -21,7 +22,7 @@ export async function getServerSideProps(ctx) {
   try {
     const [data, posts] = await Promise.all([
       fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/act?populate[hero_img]=*`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/act?populate[hero_img]=*&populate[featured_img]=*`
       ).then((res) => res.json()),
       fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?populate=*`).then(
         (res) => res.json()),

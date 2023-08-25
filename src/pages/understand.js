@@ -5,7 +5,7 @@ import ResourcesSearch from "../../components/understand/ResourcesSearch";
 import Meta from "../../components/Meta";
 
 export default function DataProducts({ data, posts }) {
-   //console.log("data", data);
+   console.log("data", data);
 
   return (
     <Layout>

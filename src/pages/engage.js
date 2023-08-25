@@ -9,8 +9,8 @@ import Meta from '../../components/Meta';
 
 
 export default function DataProducts({ data,posts }) {
-  // console.log("data",data);
-  console.log("posts",posts)
+  console.log("data",data);
+  // console.log("posts",posts)
 
   return (
     <Layout>

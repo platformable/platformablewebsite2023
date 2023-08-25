@@ -49,7 +49,7 @@ export default function About({ data }) {
 export async function getServerSideProps(ctx) {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/about?populate[ourMission1_img]=*&populate[ourMission2_img]=*&populate[ourMission3_img]=*&populate[commitments][populate][commitment_img]=*&populate[hero_img]=*&populate[team]=*`
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/about?populate[ourMission1_img]=*&populate[ourMission2_img]=*&populate[ourMission3_img]=*&populate[commitments][populate][commitment_img]=*&populate[hero_img]=*&populate[team]=*&populate[featured_img]=*`
     );
     const data = await res.json();
 

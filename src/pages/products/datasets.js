@@ -27,7 +27,7 @@ export default function DataSets({ data }) {
 export async function getServerSideProps(ctx) {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/dataset?populate[datasets_img]=*&populate[sectors_img]=*&populate[products][populate][product_icon]=*&populate[testimonials][populate][testimonials_img]=*&populate[sectors][populate][image]=*&populate[sectors][populate][icon]=*`
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/dataset?populate[datasets_img]=*&populate[featured_img]=*&populate[sectors_img]=*&populate[products][populate][product_icon]=*&populate[testimonials][populate][testimonials_img]=*&populate[sectors][populate][image]=*&populate[sectors][populate][icon]=*`
     );
     const data = await res.json();
 
