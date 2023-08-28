@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Logo from "/public/logo.png";
 import Image from "next/image";
-import LogoWhite from "/public/logo_temp_white.png";
+import LogoWhite from "/public/Platformable-logo-white.png";
 import style from "../src/styles/Footer.module.css";
 
 const sitemap = [

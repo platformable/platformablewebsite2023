@@ -54,7 +54,7 @@ export default function NavigationOptions({ headerStyles, name, navigation }) {
             ) {
               return (
                 <div
-                  className={headerStyles["drop-down-info-hovered"]}
+                  className={`${headerStyles["drop-down-info-hovered"]} grid  ${nav?.attributes?.order ? `order-[${nav?.attributes?.order}]` : '' }`}
                   key={index}
                 >
                   <Link href={nav.attributes.path}>
@@ -69,11 +69,11 @@ export default function NavigationOptions({ headerStyles, name, navigation }) {
                     />
                   </Link>
                 </div>
-              );
+              )
             } else {
               null;
             }
-          })}
+          }).sort()}
         </div>
       </div>
     </div>

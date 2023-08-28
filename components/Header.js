@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState,useEffect } from "react";
-import Logo from "/public/logo.png";
+import Logo from "/public/Platformable-logo.png";
 import Link from "next/link";
 import headerStyles from "../src/styles/Header.module.css";
 import NavigationOptions from "./NavigationOptions";
@@ -24,7 +24,7 @@ useEffect( ()=>{
 },[])
 
 
-
+console.log("navigtion", navigation)
 
 
   let info = [
