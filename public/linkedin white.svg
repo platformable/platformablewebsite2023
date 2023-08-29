@@ -1,0 +1,10 @@
+<svg id="linkedin_white" data-name="linkedin white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3207" data-name="Rectangle 3207" width="25" height="25" transform="translate(0 0.249)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_4738" data-name="Group 4738" transform="translate(0 -0.249)" clip-path="url(#clip-path)">
+    <path id="Path_4829" data-name="Path 4829" d="M19.94,0H5.247A5.248,5.248,0,0,0,0,5.247V19.94a5.248,5.248,0,0,0,5.247,5.247H19.94a5.247,5.247,0,0,0,5.247-5.247V5.247A5.247,5.247,0,0,0,19.94,0M8.4,19.94H5.247V8.4H8.4ZM6.823,7.065A1.851,1.851,0,1,1,8.658,5.214,1.845,1.845,0,0,1,6.823,7.065M20.99,19.94H17.841V14.059c0-3.535-4.2-3.267-4.2,0V19.94H10.495V8.4h3.148v1.852c1.465-2.714,7.346-2.914,7.346,2.6Z" transform="translate(0 0.061)" fill="#fff"/>
+  </g>
+</svg>
