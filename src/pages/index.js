@@ -40,14 +40,14 @@ export default function Home({ data }) {
           list_items_cards={data?.attributes?.list_item_cards}
           title={data?.attributes?.support_open_ecosystems_title}
         />
-        <StakeholdersOpenEcosystems
+        {/* <StakeholdersOpenEcosystems
           videos={[
             data?.attributes?.stakeholder_img_1,
             data?.attributes?.stakeholder_img_2,
             data?.attributes?.stakeholder_img_3,
           ]}
           title={data?.attributes?.stakeholder_title}
-        />
+        /> */}
 
         <ProductsServices
           title={data?.attributes?.product_services_title}
