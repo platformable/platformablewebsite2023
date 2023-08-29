@@ -153,7 +153,18 @@ console.log("data",data)
                     bgStyle={{ fill: "#3423C5" }}
                   />
                 </LinkedinShareButton>
-                <img width={30} src="/tidal_blue.svg" alt="tidal" />
+                <Link
+                href="https://tidal.com/browse/mix/0105d4b80651774ef38931747c080a"
+                target="_blank"
+              >
+                <img
+                  src="/tidal_blue.svg"
+                  className="text-white"
+                  alt="tidal"
+                  width={32}
+                />
+              </Link>
+               
               </div>
             </div>
           </div>
