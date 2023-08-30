@@ -152,7 +152,7 @@ export default function Footer() {
         // style={{ backgroundColor: "var(--purple-medium)" }}
         className={`${style["bg-footer"]}  mx-auto text-white pt-11 pb-8 px-4 lg:flex lg:gap-2 justify-center items-start`}
       >
-        <div className="grid xl:gap-16 pt-6 lg:pt-3">
+        <div className="grid xl:gap-14 pt-6 lg:pt-0">
           <Link href="/">
             <Image
               className="text-center"
@@ -200,45 +200,33 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <div className="grid gap-10 mt-14 md:flex md:flex-row md:justify-center md:gap-20 md:mt-20 lg:grid lg:gap-10 lg:mt-6 lg:w-2/12">
+        <div className="grid gap-10 mt-14 md:flex md:flex-row md:justify-center md:gap-20 md:mt-20 lg:grid lg:gap-5 lg:mt-4 xl:mt-0 lg:w-2/12">
           <div className="flex flex-col gap-y-5 md:justify-center">
             {/* md:justify-center put the icons and text in the center vertically */}
             <div className="flex gap-x-5 justify-center">
               <Link href="mailto:mark@platformable.com">
-                <img
-                  src="/email white.png"
-                  className="text-white"
-                  alt="email"
-                />
+                <img src="/email.svg" className="text-white" alt="email" />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/platformable/"
                 className="text-white"
                 target="_blank"
               >
-                <img src="/linkedin white.png" alt="linkedin" />
+                <img src="/Linkedin.svg" alt="linkedin" />
               </Link>
               <Link
                 href="https://tidal.com/browse/mix/0105d4b80651774ef38931747c080a"
                 target="_blank"
               >
-                <img
-                  src="/tidal white.png"
-                  className="text-white"
-                  alt="tidal"
-                />
+                <img src="/Tidal.svg" className="text-white" alt="tidal" />
               </Link>
             </div>
             <div className="text-center flex justify-center">
-              <p className="font-bold text-base md:w-3/4 lg:w-full">
-                Enter your email address to join our newsletter community
-              </p>
-              {/* <p className="font-bold text-base">
-                Subscribe to stay updated and{" "}
-              </p>
-              <p style={{ color: "var(--yellow)" }} className="font-bold">
-                Get 10% DISCOUNT
-              </p> */}
+              <div className="md:w-3/4 lg:w-full">
+                <p className="font-bold text-base">
+                  Join our newsletter community
+                </p>
+              </div>
             </div>
           </div>
           <div className="">
@@ -251,7 +239,7 @@ export default function Footer() {
                 className={`flex flex-col mx-auto w-11/12 md:w-full xl:contents`}
               >
                 <small className="text-white mb-1  md:ml-1 lg:ml-0">
-                  Enter your Email
+                  Enter your email
                 </small>
                 <input
                   type="email"
