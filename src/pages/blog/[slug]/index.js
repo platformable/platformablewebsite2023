@@ -108,7 +108,7 @@ console.log("data",data)
               {data?.sectors?.data?.[0].attributes.name}
             </h1>
             <Link href="/blog">
-              <button className="py-2 px-7 border-white border-2 shadow rounded text-white font-medium">
+              <button className="py-2 px-7 bg-[var(--yellow)] border-2 shadow rounded font-medium">
                 Back to blog section
               </button>
             </Link>
@@ -299,7 +299,7 @@ export async function getServerSideProps(ctx) {
       // ).then((res) => res.json()),
     ]);
 
-    console.log("data", data);
+    // console.log("data", data);
 
     return {
       props: {

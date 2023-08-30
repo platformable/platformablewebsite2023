@@ -21,7 +21,7 @@ export default function ResourcesSearch({ posts, heading }) {
   const chooseCategory = (category) => category === selectedCategory ? setSelectedCategory('All') : setSelectedCategory(category) 
   
 
-
+console.log("selectedCategoryPosts", selectedCategoryPosts)
  
 
 
@@ -78,7 +78,9 @@ export default function ResourcesSearch({ posts, heading }) {
             }
             return post.attributes.content.toLowerCase().includes(searchWord) 
             || post.attributes.title.toLowerCase().includes(searchWord)
-          }).map((post,index)=>{
+          })
+          .sort((a, b) => new Date(b?.attributes?.update_date) - new Date(a?.attributes?.update_date)) 
+          .map((post,index)=>{
             return (
               
                 <BlogPreviewCard post={post} key={index}/>

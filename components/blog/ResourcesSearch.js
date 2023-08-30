@@ -151,7 +151,8 @@ export default function ResourcesSearch({ posts, heading }) {
         </section>
 
         <div className="grid md:grid-cols-3 grid-cols-1 gap-x-5 px-5 gap-y-5 md:px-0 my-10">
-          { showedPosts ? showedPosts 
+          { showedPosts ? showedPosts
+                .sort((a, b) => new Date(a?.attributes?.update_date) - new Date(b?.attributes?.update_date)) 
                 .filter((post, index) => {
                   if (searchWord === "") {
                     return post;
