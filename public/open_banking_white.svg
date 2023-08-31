@@ -1,0 +1,57 @@
+<svg id="Open_Banking" data-name="Open Banking" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128.653" height="106.646" viewBox="0 0 128.653 106.646">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1589" data-name="Rectangle 1589" width="50.877" height="57.787" fill="none" stroke="#fff" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_4150" data-name="Group 4150" transform="translate(37.26 26.057)">
+    <g id="Group_3853" data-name="Group 3853" transform="translate(0 0)">
+      <g id="Group_2614" data-name="Group 2614" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Path_2801" data-name="Path 2801" d="M14.209,51.5v7.042H51.963V51.5" transform="translate(-7.58 -33.002)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_2802" data-name="Path 2802" d="M0,0H46.663V2.7c0,1.483-1.5,2.7-3.333,2.7h-40C1.5,5.393,0,4.18,0,2.7Z" transform="translate(48.77 55.203) rotate(180)" fill="none" stroke="#fff" stroke-width="1"/>
+        <rect id="Rectangle_1587" data-name="Rectangle 1587" width="5.394" height="24.27" transform="translate(6.629 25.54)" fill="none" stroke="#fff" stroke-width="1"/>
+        <rect id="Rectangle_1588" data-name="Rectangle 1588" width="5.394" height="24.27" transform="translate(38.989 25.54)" fill="none" stroke="#fff" stroke-width="1"/>
+        <ellipse id="Ellipse_434" data-name="Ellipse 434" cx="4.045" cy="4.045" rx="4.045" ry="4.045" transform="translate(21.461 12.056)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_2803" data-name="Path 2803" d="M5.006,17.848,23.208,7.2a2.316,2.316,0,0,1,2.292,0L43.7,17.848a2.4,2.4,0,0,0,3.236-.809,2,2,0,0,0,.27-1.214A2.225,2.225,0,0,0,46,13.8l-20.63-12a2.316,2.316,0,0,0-2.292,0l-20.63,12A2.635,2.635,0,0,0,1.5,15.826a2.273,2.273,0,0,0,2.292,2.292A3.934,3.934,0,0,0,5.006,17.848Z" transform="translate(1.084 1.084)" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="Path_2804" data-name="Path 2804" d="M53.3,82.1h0a9.438,9.438,0,1,1-9.439,9.438A9.467,9.467,0,0,1,53.3,82.1Z" transform="translate(-27.796 -53.861)" fill="none" stroke="#fff" stroke-width="1"/>
+      </g>
+    </g>
+    <path id="Path_3762" data-name="Path 3762" d="M79.858,70.061l.322.589a4.341,4.341,0,0,1,.259,1.473H77.976c-.031-.224-.044-.45-.1-.666a1.081,1.081,0,0,0-.663-.839,1,1,0,0,0-1.384.921,1.265,1.265,0,0,0,.706,1.305c.41.217.836.4,1.258.6a6.462,6.462,0,0,1,1.608.968,2.722,2.722,0,0,1,.965,1.968,2.94,2.94,0,0,1-.5,1.962,3.013,3.013,0,0,1-1.9,1.166c-.174.037-.35.063-.54.1v1.436H76.263V79.593a3.566,3.566,0,0,1-2.757-1.5,3.613,3.613,0,0,1-.54-2.026h2.453c.03.213.043.43.093.638a1.3,1.3,0,0,0,1.625,1.008,1,1,0,0,0,.77-1.121,1.269,1.269,0,0,0-.721-1.186c-.366-.185-.744-.345-1.118-.514a6.961,6.961,0,0,1-1.734-.981,2.664,2.664,0,0,1-.973-1.962,2.983,2.983,0,0,1,.333-1.686,3.033,3.033,0,0,1,1.933-1.422c.246-.068.5-.1.771-.158V67.176h1.166v1.546c.148.032.283.058.416.091a3.2,3.2,0,0,1,1.878,1.248" transform="translate(-51.266 -36.369)" fill="#fff"/>
+  </g>
+  <g id="Open_Banking-2" data-name="Open Banking">
+    <path id="Path_2796" data-name="Path 2796" d="M-24459.281-405.36l5.945-7.03" transform="translate(24555.133 445.893)" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <path id="Path_3833" data-name="Path 3833" d="M-24459-411.967l5.957,5.865" transform="translate(24554.242 424.518)" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <path id="Path_2799" data-name="Path 2799" d="M0,14.08,12.116,0" transform="translate(24.162 83.117) rotate(16)" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <path id="Path_2797" data-name="Path 2797" d="M0,8.127,9.246,0" transform="matrix(-0.438, -0.899, 0.899, -0.438, 97.941, 89.465)" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <path id="Path_2798" data-name="Path 2798" d="M0,9.634,7.62,0" transform="translate(30.286 29.773) rotate(-97)" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <path id="Path_3834" data-name="Path 3834" d="M0,0,5.364,5.378" transform="translate(11.144 29.543) rotate(-97)" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <g id="Ellipse_428" data-name="Ellipse 428" transform="translate(96.386 15.377)" fill="none" stroke="#fff" stroke-width="1.5">
+      <ellipse cx="10.983" cy="10.983" rx="10.983" ry="10.983" stroke="none"/>
+      <ellipse cx="10.983" cy="10.983" rx="10.233" ry="10.233" fill="none"/>
+    </g>
+    <g id="Ellipse_430" data-name="Ellipse 430" transform="translate(100.733 82.077) rotate(-19)" fill="none" stroke="#fff" stroke-width="1.5">
+      <ellipse cx="10.983" cy="10.983" rx="10.983" ry="10.983" stroke="none"/>
+      <ellipse cx="10.983" cy="10.983" rx="10.233" ry="10.233" fill="none"/>
+    </g>
+    <g id="Ellipse_429" data-name="Ellipse 429" transform="translate(83.207)" fill="none" stroke="#fff" stroke-width="1.5">
+      <ellipse cx="7.688" cy="7.688" rx="7.688" ry="7.688" stroke="none"/>
+      <ellipse cx="7.688" cy="7.688" rx="6.938" ry="6.938" fill="none"/>
+    </g>
+    <g id="Ellipse_433" data-name="Ellipse 433" transform="translate(7.693 92.368)" fill="none" stroke="#fff" stroke-width="1.5">
+      <ellipse cx="7.139" cy="7.139" rx="7.139" ry="7.139" stroke="none"/>
+      <ellipse cx="7.139" cy="7.139" rx="6.389" ry="6.389" fill="none"/>
+    </g>
+    <g id="Ellipse_432" data-name="Ellipse 432" transform="translate(0 27.175)" fill="none" stroke="#fff" stroke-width="1.5">
+      <ellipse cx="7.139" cy="7.139" rx="7.139" ry="7.139" stroke="none"/>
+      <ellipse cx="7.139" cy="7.139" rx="6.389" ry="6.389" fill="none"/>
+    </g>
+    <g id="Ellipse_431" data-name="Ellipse 431" transform="translate(10.983 5.209)" fill="none" stroke="#fff" stroke-width="1.5">
+      <ellipse cx="10.983" cy="10.983" rx="10.983" ry="10.983" stroke="none"/>
+      <ellipse cx="10.983" cy="10.983" rx="10.233" ry="10.233" fill="none"/>
+    </g>
+    <g id="Ellipse_434-2" data-name="Ellipse 434" transform="translate(22.803 19.61)" fill="none" stroke="#fff" stroke-width="1.5">
+      <ellipse cx="39.538" cy="39.538" rx="39.538" ry="39.538" stroke="none"/>
+      <ellipse cx="39.538" cy="39.538" rx="38.788" ry="38.788" fill="none"/>
+    </g>
+  </g>
+</svg>
