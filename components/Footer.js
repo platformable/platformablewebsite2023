@@ -200,7 +200,7 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <div className="grid gap-10 mt-14 md:flex md:flex-row md:justify-center md:gap-20 md:mt-20 lg:grid lg:gap-5 lg:mt-4 xl:mt-0 lg:w-2/12">
+        <div className="grid gap-4 mt-14 md:flex md:flex-col md:justify-center md:gap-4 md:mt-20 lg:grid lg:gap-2 lg:mt-4 xl:mt-0 lg:w-2/12">
           <div className="flex flex-col gap-y-5 md:justify-center">
             {/* md:justify-center put the icons and text in the center vertically */}
             <div className="flex gap-x-5 justify-center">
@@ -218,11 +218,15 @@ export default function Footer() {
                 href="https://tidal.com/browse/mix/0105d4b80651774ef38931747c080a"
                 target="_blank"
               >
-                <img src="/Tidal.svg" className="text-white" alt="tidal" />
+                <img
+                  src="/tidal_footer.svg"
+                  className="text-white"
+                  alt="tidal"
+                />
               </Link>
             </div>
-            <div className="text-center flex justify-center">
-              <div className="md:w-3/4 lg:w-full">
+            <div className="text-center flex justify-center mt-3 md:mt-2 lg:mt-3">
+              <div className="md:w-3/4 lg:w-full ">
                 <p className="font-bold text-base">
                   Join our newsletter community
                 </p>
@@ -236,7 +240,7 @@ export default function Footer() {
               </p>
             ) : (
               <div
-                className={`flex flex-col mx-auto w-11/12 md:w-full xl:contents`}
+                className={`flex flex-col mx-auto w-11/12 md:w-5/12 xl:contents`}
               >
                 <small className="text-white mb-1  md:ml-1 lg:ml-0">
                   Enter your email
