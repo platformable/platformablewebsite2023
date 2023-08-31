@@ -18,12 +18,12 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
           {" "}
           <strong>{subtitle}</strong> {simpleSubtitle}{" "}
         </h3>
-        <img src={heroImg} alt="" className="py-10 md:px-0 px-5" />
+        <img src={heroImg} alt="" className="pt-10 md:px-0 px-5" />
         <div className="flex justify-center">
           <button
-            className={`${styles["contact-btn"]} contact-btn px-10 py-3  my-5 rounded-md md:hidden block md:px-5`}
+            className={`${styles["contact-btn"]} contact-btn px-10 py-3  mb-5 rounded-md md:hidden block md:px-5`}
           >
-            <Link href="/">
+            <Link href="/contact-us">
               <div className="flex gap-x-5 self-start items-center ">
                 <img src="/icon_section01.svg" alt="" className="" />
                 <p>Contact us</p>

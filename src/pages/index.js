@@ -28,7 +28,7 @@ export default function Home({ data }) {
         <button
           className={`${styles["contact-btn"]} bg-[var(--yellow)] shadow fixed top-0 left-0  pl-20 pr-7  py-3 text-white my-5 rounded-tr-md rounded-br-md md:block hidden `}
         >
-          <Link href="/">
+          <Link href="/contact-us">
             <div className="flex gap-x-5  self-start items-center ">
               <img src="/icon_section01.svg" alt="" className="" />
               <p className="text-[#2A2FC1]">Contact us</p>

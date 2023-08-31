@@ -61,7 +61,7 @@ const sitemap = [
       },
       {
         label: "Contact us",
-        url: "#",
+        url: "/contact-us",
       },
       {
         label: "Blog",

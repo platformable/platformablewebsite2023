@@ -1,5 +1,5 @@
 import styles from "@/styles/DataProducts.module.css";
-
+import Link from "next/link";
 export default function OurProducts({ title, products }) {
   return (
     <section className="pb-20 pt-2 bg-[var(--purple-medium)]">
@@ -97,9 +97,12 @@ export default function OurProducts({ title, products }) {
              </div>
             </div>
             <div className="grid items-center px-7 ">
-                <button className="bg-[var(--yellow)] px-3 py-2 shadow-md rounded-md text-[var(--purple)]">
+              <Link href="/contact-us" className="flex justify-center">
+              <button className="bg-[var(--yellow)] px-3 py-2 shadow-md rounded-md text-[var(--purple)]">
                   <p className="font-bold">Contact us</p>
                 </button>
+              </Link>
+                
               </div>
           </div>
         </div>
