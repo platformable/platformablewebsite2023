@@ -31,8 +31,8 @@
 
   --orange-medium: #ffc400;
 
-  --russian-violet-dark:#3425c9;
-  --russian-violet-light:#e5ddf6;
+  --russian-violet-dark:#22da8f;
+  --russian-violet-light:#cfffef;
   --sunglow-dark:#22da8f;
   --sunglow-light:#cfffef;
   --red-orange-dark:#f5a423;
@@ -801,7 +801,7 @@ h6 {
 .banks .personas-top,
 .fintechs .personas-top,
 .financial-inclusion .personas-top {
-  background-color: #fb5012;
+  background-color: var(--oe-dark);
   color: white;
 }
 
@@ -813,8 +813,8 @@ h6 {
 .banks .personas-bottom-text,
 .fintechs .personas-bottom-text,
 .financial-inclusion .personas-bottom-text {
-  background-color: var(--red-orange-light);
-  color: var(--russian-violet-dark);
+  background-color: var(--oe-light);
+  /* color: var(--russian-violet-dark); */
 }
 
 .policy-lead .personas-top,
@@ -830,8 +830,8 @@ h6 {
 .policy-lead .personas-bottom-text,
 .dg-lead .personas-bottom-text,
 .pm-lead .personas-bottom-text {
-  background-color: #d8c1fb;
-  color: var(--russian-violet-dark);
+  background-color: var(--oe-light);
+  /* color: var(--oe-dark); */
 }
 
 /* LABS-HEADER */
