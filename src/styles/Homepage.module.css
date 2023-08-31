@@ -1,72 +1,102 @@
 .section_products_services {
-    background: transparent linear-gradient(to top, #99F0CF 0%, #E2FFF4 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(to top, #99f0cf 0%, #e2fff4 100%) 0%
+    0% no-repeat padding-box;
 }
 #section_explore {
-    background: linear-gradient(180deg, #7542F5 0%, #E67EFF 100%) 0% 0% no-repeat padding-box;
+  background: linear-gradient(180deg, #7542f5 0%, #e67eff 100%) 0% 0% no-repeat
+    padding-box;
 }
 #sectors_value_list {
-    list-style-type: '+' !important;
+  list-style-type: "+" !important;
 }
 
-#cards_group  button[data-card-number='1'] {
-    background: linear-gradient(-90deg, #06DE8B 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
-    background-size: 150% 150%;
-    animation: Gradient 5s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
+/* card gradients */
+.gradient-card-1 {
+  background: linear-gradient(91deg, #f157ff 0%, #06de8b 100%) 0% 0% no-repeat
+    padding-box;
+  background-size: 150% 150%;
+  animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
 }
 
-#cards_group  button[data-card-number='2'] {
-    background: linear-gradient(to left, #FF9D00 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
-    background-size: 150% 150%;
-    animation: Gradient 5s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
+.gradient-card-2 {
+  background: transparent linear-gradient(271deg, #ff9d00 0%, #f157ff 100%) 0%
+    0% no-repeat padding-box;
+  background-size: 150% 150%;
+  animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
 }
 
-#cards_group  button[data-card-number='3'] {
-    background: linear-gradient(to left, #0062FF 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
-    background-size: 150% 150%;
-    animation: Gradient 5s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
+.gradient-card-3 {
+  background: transparent linear-gradient(270deg, #0062ff 0%, #f157ff 100%) 0%
+    0% no-repeat padding-box;
+  background-size: 150% 150%;
+  animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+}
+
+/* Button gradients */
+
+#cards_group button[data-card-number="1"] {
+  background: linear-gradient(-90deg, #06de8b 0%, #f157ff 100%) 0% 0% no-repeat
+    padding-box;
+  background-size: 150% 150%;
+  animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+}
+
+#cards_group button[data-card-number="2"] {
+  background: linear-gradient(to left, #ff9d00 0%, #f157ff 100%) 0% 0% no-repeat
+    padding-box;
+  background-size: 150% 150%;
+  animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+}
+
+#cards_group button[data-card-number="3"] {
+  background: linear-gradient(to left, #0062ff 0%, #f157ff 100%) 0% 0% no-repeat
+    padding-box;
+  background-size: 150% 150%;
+  animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
 }
 
 .custom_radio_button {
-    accent-color: #8956FF;
-    width: 30px;
-    height: 30px;
+  accent-color: #8956ff;
+  width: 30px;
+  height: 30px;
 }
 
-
 @keyframes Gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .contact-btn {
-
-    position: sticky;
-    top: 20px;
-    z-index: 20;
+  position: sticky;
+  top: 20px;
+  z-index: 20;
 }
 
 .testimonials-bg {
-    background: transparent linear-gradient(180deg, #FFFFFF 0%, #EFEAFF 100%) 0% 0% no-repeat padding-box;
-    background-size: 150% 150%;
-    animation: Gradient 5s ease infinite;
-    -moz-animation: Gradient 5s ease infinite;
-    /*  */
+  background: transparent linear-gradient(180deg, #ffffff 0%, #efeaff 100%) 0%
+    0% no-repeat padding-box;
+  background-size: 150% 150%;
+  animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+  /*  */
 }
 .bg_footer_testimonial_card {
-    background: transparent linear-gradient(90deg, #0ADC8D30 0%, #F157FF30 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #0adc8d30 0%, #f157ff30 100%)
+    0% 0% no-repeat padding-box;
 }
 .testimonials_container_grid {
-    grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
-
-
