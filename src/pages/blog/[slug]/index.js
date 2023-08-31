@@ -12,7 +12,7 @@ import Meta from "../../../../components/Meta";
 export default function BlogPage({ data }) {
   const router = useRouter();
 
-console.log("data",data)
+// console.log("data",data)
 
   //get post index to create next and prev logic
   const [relatedSectorPosts, setRelatedSectorPosts] = useState([]);
@@ -287,7 +287,7 @@ console.log("data",data)
 //
 export async function getServerSideProps(ctx) {
   const slug = ctx.params.slug;
-  console.log("slugslug", slug);
+  // console.log("slugslug", slug);
 
   try {
     const [data] = await Promise.all([

@@ -11,7 +11,7 @@ export default function Hero({ data }) {
             dangerouslySetInnerHTML={{
               __html: data?.subtitle,
             }}
-            className="mb-14 text-[var(--green)] font-bold"
+            className="mb-14 text-[var(--green)] "
           />
 
           <div className="flex flex-col lg:grid lg:grid-cols-[4fr_1fr_4fr] xl:gap-x-20 items-center gap-10 mb-10">

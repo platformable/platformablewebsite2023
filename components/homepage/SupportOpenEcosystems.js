@@ -40,7 +40,7 @@ export default function SupportOpenEcosystems({ list_items_cards, title }) {
   //     .map((card, i) => <ListItemCard item_description={card} key={i} />);
 
   return (
-    <section className=" bg-green-medium py-10 text-[#2A2FC1]">
+    <section className=" bg-[var(--purple-double-extra-light)] py-10 text-[#2A2FC1]">
       <div className="flex gap-x-5 items-center container mx-auto  mb-10">
         <img
           src="/icon_section01.svg"
