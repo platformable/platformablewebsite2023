@@ -7,6 +7,7 @@ import OurProcess from "../../../components/datasets/OurProcess";
 import Hero from "../../../components/datasets/Hero";
 import OurDatasets from "../../../components/datasets/OurDatasets";
 import Meta from "../../../components/Meta";
+import OurDatasetsMobile from "../../../components/datasets/OurDatasetsMobile";
 
 export default function DataSets({ data }) {
   // console.log("data", data);
@@ -16,6 +17,10 @@ export default function DataSets({ data }) {
       <Meta title={data?.datasets_title} data={data} />
       <Hero data={data}/>
       <OurDatasets title={data?.datasets_products_title} datasets={data?.products}/>
+      
+      <OurDatasetsMobile title={data?.datasets_products_title} datasets={data?.products}/>
+
+    
       <OurProcess title={data?.datasets_process_title}/>
       {/* <Testimonials title={data?.datasets_testimonial_title} data={data?.testimonials}/> */}
       <FindMore sectors={data?.sectors}/>
