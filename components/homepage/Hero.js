@@ -11,16 +11,16 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
     <section id="hero" className="">
       <div className="container mx-auto pb-10 pt-3">
         <h3
-          className={`text-center text-[#5B24EC] text-3xl font-bold md:leading-none leading-10 mb-4 md:px-0 px-3`}
+          className={`text-center text-[#5B24EC]  font-bold md:leading-none leading-10 mb-4 md:px-0 px-3`}
         >
           {hero_title}
         </h3>
-        <h3 className="text-center md:leading-10 leading-8 md:px-0 px-5  font-light text-3xl">
+        <h3 className="text-center md:leading-10 leading-8 md:px-0 px-5  font-light ">
           {" "}
           <strong>{subtitle}</strong> {simpleSubtitle}{" "}
         </h3>
         <div className="flex justify-center items-center">
-        <img src={heroImg} alt="" className="pt-10 md:px-0 px-5" width={'1050px'}/>
+        <img src={heroImg} alt="" className="pt-10 md:px-0 px-5" width={'950px'}/>
         </div>
         
 {/* 
