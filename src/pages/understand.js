@@ -11,7 +11,7 @@ export default function DataProducts({ data, posts }) {
     <Layout>
       <Meta title={data?.understand_hero_title} data={data} />
       <Hero data={data} />
-      <ResourcesSearch  posts={posts} heading={data?.understand_blog_description}/>
+      <ResourcesSearch  posts={posts} heading={data?.understand_blog_description} filterByCategory={'Understand'}/>
 
     </Layout>
   );

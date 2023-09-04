@@ -7,7 +7,7 @@ import FindMore from "../../../components/data-products/FindMore";
 import Testimonials from "../../../components/homepage/Testimonials";
 import Meta from "../../../components/Meta";
 export default function DataProducts({ data }) {
-  console.log("data",data);
+  // console.log("data",data);
 
   return (
     <Layout>

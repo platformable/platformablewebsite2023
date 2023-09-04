@@ -10,10 +10,6 @@ export default function BlogsIndex({ posts }) {
       <section id="blog" className={`${styles["background_blog"]} py-10`}>
         <div className="container mx-auto">
           <h1 className="mb-5 font-bold text-white ">Blog</h1>
-         {/*  <h6 className={`text-[#FFE200]`}>
-            EXPLORE OUR BLOG SECTION BY SECTOR AND ALLOW OUR INSIGHTFUL AND
-            ENGAGING ARTICLES TO INSPIRE YOU
-          </h6> */}
           <ResourcesSearch posts={posts} />
         </div>
       </section>

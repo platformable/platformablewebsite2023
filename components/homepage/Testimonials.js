@@ -24,7 +24,7 @@ export default function Testimonials({ data, title, logos }) {
     },
   ];
 
-  console.log("data",data)
+  // console.log("data",data)
   return (
     <section className={`py-10  ${styles["testimonials-bg"]} `}>
       <div className="container mx-auto md:mb-10 mb-0">
@@ -34,59 +34,74 @@ export default function Testimonials({ data, title, logos }) {
             alt=""
             className="md:flex hidden"
           />
-          <h2
-            className={`text-[#5B24EC]  font-bold  md:leading-10 leading-8`}
-          >
+          <h2 className={`text-[#5B24EC]  font-bold  md:leading-10 leading-8`}>
             {title}
           </h2>
         </div>
       </div>
 
-      <div className={`${data?.length === 1 ? 'flex justify-center' : ''} container  mx-auto py-10`}>
-        <div className={`grid ${data?.length > 1 ? 'md:grid-cols-'+data?.length : ' '}  mb-10 gap-x-10 md:px-0 px-5 md:gap-y-0 gap-y-5 2xl:px-32`}>
+      <div
+        className={`${
+          data?.length === 1 ? "flex justify-center" : ""
+        } container  mx-auto `}
+      >
+        <div
+          className={`grid ${
+            data?.length > 1 ? "md:grid-cols-" + data?.length : " "
+          } gap-x-10 md:px-0 px-5 md:gap-y-0  2xl:px-32`}
+        >
           {data &&
             data.map((testimonial, index) => {
               return (
-                <div className="rounded-2xl bg-white shadow-xl grid grid-rows-[3fr_1fr] justify-between" key={index}>
-                <div className="p-7 flex flex-col gap-4 md:flex-row items-center rounded-t-2xl">
-                <div className="">
-                  <img
-                      src={testimonial.testimonials_img.data.attributes.url}
-                      alt=""
-                      className="place-center"
+                <div
+                  className="rounded-2xl bg-white shadow-xl grid grid-rows-[3fr_0.8fr] content-between"
+                  key={index}
+                >
+                  <div className="px-7 pt-7 flex flex-col gap-4 md:flex-row items-center rounded-t-2xl">
+                    <div className="">
+                      <img
+                        src={testimonial.testimonials_img.data.attributes.url}
+                        alt=""
+                        className="place-center"
+                      />
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: testimonial.testimonials_text,
+                        }}
+                        className="flex items-center italic font-light  py-5 md:py-10 "
+                      />
+                    </div>
+
+                    <img
+                      src={
+                        "https://res.cloudinary.com/platformable/image/upload/v1691588894/platformablewebsite2023/API_To_S_report_cover_95dcfc7ad2.png"
+                      }
+                      className=""
                     />
-                    <div
-                    dangerouslySetInnerHTML={{
-                      __html: testimonial.testimonials_text,
-                    }}
-                    className="flex items-center italic font-light  py-5 md:py-10 "
-                  />
-                </div>
+                  </div>
 
-                <img src={'https://res.cloudinary.com/platformable/image/upload/v1691588894/platformablewebsite2023/API_To_S_report_cover_95dcfc7ad2.png'} className=""/>
-
-                </div>
-               
-                
-              
-                <div className={`${styles.bg_footer_testimonial_card} flex justify-between  items-center rounded-bl-2xl rounded-br-2xl p-7`}>
-                  <div>
-                <p
-                      className={`font-black`}
-                    >
-                      {testimonial.testimonials_clientname}
-                    </p>
-                  <span
-                      className={``}
-                    >
-                      {testimonial.testimonials_client_role}
-                    </span>
+                  <div
+                    className={`${styles.bg_footer_testimonial_card} flex justify-between  items-center rounded-bl-2xl rounded-br-2xl px-7 py-4`}
+                  >
+                    <div>
+                      <p className={`font-black`}>
+                        {testimonial.testimonials_clientname}
+                      </p>
+                      <span className={``}>
+                        {testimonial.testimonials_client_role}
+                      </span>
                     </div>
                     <div>
-                      <a href={testimonial.url} className="underline" target="_blank">{testimonial.url.replace("https://","")}</a>
+                      <a
+                        href={testimonial.url}
+                        className="underline"
+                        target="_blank"
+                      >
+                        {testimonial.url.replace("https://", "")}
+                      </a>
                     </div>
+                  </div>
                 </div>
-              </div>
               );
             })}
         </div>

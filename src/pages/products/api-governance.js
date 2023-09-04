@@ -9,7 +9,7 @@ import Hero from "../../../components/api-governance/Hero";
 import OurProcess from "../../../components/api-governance/OurProcess";
 import Meta from "../../../components/Meta";
 export default function APIGovernance({ data }) {
-  console.log("data",data);
+  // console.log("data",data);
 
   return (
     <Layout>

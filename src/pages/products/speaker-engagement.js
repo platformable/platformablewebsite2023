@@ -7,7 +7,7 @@ import EngagementTopics from "../../../components/speaker-engagement/EngagementT
 import Meta from "../../../components/Meta";
 
 export default function DataProducts({ data }) {
-  console.log("data", data);
+  // console.log("data", data);
 
   return (
     <Layout>

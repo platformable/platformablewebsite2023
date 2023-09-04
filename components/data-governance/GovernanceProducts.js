@@ -16,7 +16,7 @@ export default function GovernanceProducts({ title, products }) {
         </h3> */}
         </div>
         <div className="hidden md:grid mt-5 xl:mt-10 gap-1 ">
-          <div className="grid grid-cols-[1.5fr_2fr_1fr_1fr] ">
+          <div className="grid grid-cols-[1.5fr_2fr_1fr] ">
             <div className="flex items-center bg-[#3328C3] px-7 gap-5 rounded-tl-xl">
               <div className="w-2/6 flex justify-center">
                 <img src="/logo_icon_white.png" alt="Platformable logo" />
@@ -27,12 +27,12 @@ export default function GovernanceProducts({ title, products }) {
               <img src="/overview.svg" alt="datapoints svg" />
               <p className="font-bold text-[var(--purple-medium)]">Overview</p>
             </div>
-            <div className="grid place-items-center py-5 px-7 bg-[#F6F4FF]">
+            {/* <div className="grid place-items-center py-5 px-7 bg-[#F6F4FF]">
               <img src="/sample_icon.svg" alt="Specification sheet svg" />
               <p className="font-bold text-center text-[var(--purple-medium)]">
                 Sample copy
               </p>
-            </div>
+            </div> */}
             <div className="grid place-items-center py-5 px-7 bg-[#E9E8F8] rounded-tr-xl">
               <img src="/purchase_icon.svg" alt="bulk download svg" />
               <p className="font-bold text-[var(--purple-medium)]">Purchase</p>
@@ -40,12 +40,12 @@ export default function GovernanceProducts({ title, products }) {
           </div>
           {products?.map((card, i) => (
             <div
-              className="grid grid-cols-[1.5fr_2fr_1fr_1fr] "
+              className="grid grid-cols-[1.5fr_2fr_1fr] "
               data-card-number={i + 1}
               key={i}
             >
               <div
-                className={`${styles.card_heading} flex flex-col lg:flex-row items-center justify-start gap-5  py-14 px-2`}
+                className={`${styles.card_heading} flex flex-col lg:flex-row items-center justify-start gap-5  py-7 px-2`}
               >
                 <img
                   src={card?.product_icon?.data?.attributes?.url}
@@ -64,15 +64,15 @@ export default function GovernanceProducts({ title, products }) {
                 />
               </div>
 
-              <div className="grid items-center px-7 bg-[#F6F4FF]">
+              {/* <div className="grid items-center px-7 bg-[#F6F4FF]">
                 <button className="rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white">
                   <p>Download</p>
                 </button>
-              </div>
+              </div> */}
 
               <div className="grid items-center px-7 bg-[#E9E8F8]">
                 <button className="bg-[var(--yellow)]  shadow px-3 py-2 rounded-md text-white">
-                  <p className="text-[var(--purple)]">Buy now</p>
+                  <p className="text-[var(--purple)]">Join waiting list</p>
                 </button>
               </div>
 
