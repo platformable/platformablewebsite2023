@@ -24,7 +24,7 @@ const Meta = ({ title, keywords, data }) => {
       <meta
         name="twitter:image"
         content={
-          data?.featured_img?.data?.attributes?.formats.small.url ||
+          data?.featured_img?.data?.attributes?.formats?.small?.url ||
           "https://res.cloudinary.com/platformable/image/upload/v1692982725/platformablewebsite2023/value_model_1280x720_ae8a224428.png"
         }
       />
@@ -39,14 +39,14 @@ const Meta = ({ title, keywords, data }) => {
       <meta
         property="og:image"
         content={
-          data?.featured_img?.data?.attributes?.formats.small.url ||
+          data?.featured_img?.data?.attributes?.formats?.small?.url ||
           "https://res.cloudinary.com/platformable/image/upload/v1692982725/platformablewebsite2023/value_model_1280x720_ae8a224428.png"
         }
       />
       <meta
         property="og:image:secure_url"
         content={
-          data?.featured_img?.data?.attributes?.formats.small.url ||
+          data?.featured_img?.data?.attributes?.formats?.small?.url ||
           "https://res.cloudinary.com/platformable/image/upload/v1692982725/platformablewebsite2023/value_model_1280x720_ae8a224428.png"
         }
       />

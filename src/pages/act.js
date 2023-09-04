@@ -1,18 +1,18 @@
 import Layout from "../../components/Layout";
 import Footer from "../../components/Footer";
 import Hero from "../../components/actpage/Hero";
-import ResourcesSearch from "../../components/actpage/ResourcesSearch";
+import ResourcesSearch from "../../components/understand/ResourcesSearch";
 import Meta from "../../components/Meta";
 
 export default function ActPage({ data, posts }) {
-  console.log("data", data);
+  // console.log("data", data);
 
 
   return (
     <Layout>
       <Meta title={'Act'} data={data} />
       <Hero data={data} />
-      <ResourcesSearch posts={posts} heading={data?.blog_description}/>
+      <ResourcesSearch posts={posts} heading={data?.blog_description} filterByCategory={'Act'}/>
 
     </Layout>
   );

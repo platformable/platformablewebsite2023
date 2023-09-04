@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function EngagementTopics({ topics }) {
-  console.log(topics);
+  // console.log(topics);
   return (
     <div
       className={`lg:pb-20  min-h-screen bg-[var(--purple-medium)] pt-16 min-h-full md:min-h-full md:pb-20 `}
@@ -9,7 +9,7 @@ export default function EngagementTopics({ topics }) {
       <div className="container mx-auto text-white">
         <div className="flex gap-x-4">
           <img src="/logo_icon_white.png" className="h-10 w-30" />
-          <h3 className="sm:text-4xl lg:text-xl xl:text-3xl text-xl">
+          <h3 className="sm:text-4xl lg:text-xl xl:text-3xl text-xl font-bold">
             {topics?.topics_title}
           </h3>
         </div>

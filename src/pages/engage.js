@@ -3,13 +3,13 @@ import styles from '@/styles/DataProducts.module.css'
 import Footer from "../../components/Footer";
 import { EngageDiagram } from "../../components/EngageDiagram";
 import Hero from "../../components/engagepage/Hero";
-import ResourcesSearch from "../../components/engagepage/ResourcesSearch";
+import ResourcesSearch from "../../components/understand/ResourcesSearch";
 import Meta from '../../components/Meta';
 
 
 
 export default function DataProducts({ data,posts }) {
-  console.log("data",data);
+  // console.log("data",data);
   // console.log("posts",posts)
 
   return (
@@ -17,7 +17,7 @@ export default function DataProducts({ data,posts }) {
       <Meta title={data?.title} data={data} />
       <Hero data={data}/>
       <EngageDiagram title={data?.products_title}/>
-      <ResourcesSearch  posts={posts} heading={data?.understand_blog_description}/>
+      <ResourcesSearch  posts={posts} heading={data?.blog_description} filterByCategory={'Engage'}/>
     </Layout>
   );
 }

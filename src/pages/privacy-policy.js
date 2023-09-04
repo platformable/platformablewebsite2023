@@ -2,7 +2,7 @@ import Layout from '../../components/Layout';
 import Footer from "../../components/Footer";
 import Meta from '../../components/Meta';
 export default function PrivacyPolicy({ data }) {
-  console.log("data",data);
+  // console.log("data",data);
 
   return (
     <Layout>

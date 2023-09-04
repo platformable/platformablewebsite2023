@@ -71,16 +71,7 @@ export default function ContactUs({ data, posts }) {
                     />
                   </label>
                 </div>
-                <div>
-                  <label>
-                    <small>Subject</small>
-                    <input
-                      type="text"
-                      name="subject"
-                      className="rounded shadow py-2 text-black px-2 w-full mt-1 "
-                    />
-                  </label>
-                </div>
+                
                 <div>
                   <label className="flex items-center gap-x-2">
                     <input type="radio" name="joinWaintingList" className="w-[30px] h-[20px]"/>
@@ -94,6 +85,16 @@ export default function ContactUs({ data, posts }) {
                   <label className="flex items-center gap-x-2">
                     <input type="radio" name="joinWaintingList" className="w-[30px] h-[20px]"/>
                     I want to contact Platformable
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    <small>Subject</small>
+                    <input
+                      type="text"
+                      name="subject"
+                      className="rounded shadow py-2 text-black px-2 w-full mt-1 "
+                    />
                   </label>
                 </div>
                 <div>

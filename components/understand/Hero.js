@@ -31,7 +31,7 @@ export default function Hero({ data }) {
             }}
             className="bg-green-medium p-7 rounded-xl 2xl:rounded-2xl"
           />
-          <Link href="/">
+          <Link href="/blog/measuring-the-value-of-open-ecosystems-1-our-model">
             <div className={`${styles.hero_explore_btn_bg_gradient} text-white rounded shadow-md font-medium flex items-center justify-center gap-10 py-3 px-5 bg-blue-400`}>
               <p className="text-center">Explore the Open Ecosystem Value model</p>
               <img src="/icon_arrow.png" alt="Explore link" />

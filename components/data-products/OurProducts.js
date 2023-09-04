@@ -1,6 +1,7 @@
 import styles from "@/styles/DataProducts.module.css";
 import Link from "next/link";
 export default function OurProducts({ title, products }) {
+  console.log(products)
   return (
     <section className="pb-20 pt-2 bg-[var(--purple-medium)]">
       {/* <div className="mb-10 flex gap-x-5">
@@ -55,10 +56,12 @@ export default function OurProducts({ title, products }) {
               </div>
 
             
-              <div className="grid items-center px-7 bg-[#F6F4FF]">
-                <button className="rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white">
+              <div className="grid items-center  px-7 bg-[#F6F4FF]">
+                {card?.btn_download_enabled ? (<button className="rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white ">
                   <p>Download</p>
-                </button>
+                </button>) : (
+                  <div className='flex justify-center'>-</div>
+                )}
               </div>
               
               <div className="grid items-center px-7 bg-[#E9E8F8]">

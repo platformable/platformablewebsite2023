@@ -9,7 +9,7 @@ import OurDatasets from "../../../components/datasets/OurDatasets";
 import Meta from "../../../components/Meta";
 
 export default function DataSets({ data }) {
-  console.log("data", data);
+  // console.log("data", data);
 
   return (
     <Layout>

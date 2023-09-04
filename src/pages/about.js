@@ -17,7 +17,7 @@ import Team from "../../components/about/Team";
 import Meta from "../../components/Meta";
 
 export default function About({ data }) {
-  console.log(data);
+  // console.log(data);
   //const newData = data.attributes;
   return (
     <Layout>

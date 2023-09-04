@@ -27,7 +27,7 @@ export default function FindMore({ sectors }) {
                 dangerouslySetInnerHTML={{
                   __html: sector?.description,
                 }}
-                className="pr-16 text-[var(--purple-medium)]"
+                className="pr-16 text-[var(--purple-medium)] font-bold"
               />
 
               <Link href={`/${sector.link}`}>
