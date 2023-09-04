@@ -12,7 +12,7 @@ export default function OurDatasetsMobile({ title, datasets }) {
 
         {datasets?.map((product, index) => {
           return (
-            <div className="product-container bg-white rounded-lg mb-5">
+            <div className="product-container bg-white rounded-lg mb-5" key={index}>
               <div id="product-title" className="bg-red-500 grid justify-center p-10 rounded-tl-lg rounded-tr-lg">
                 <p className="text-white">{product?.datasets_product_name}</p>
               </div>
