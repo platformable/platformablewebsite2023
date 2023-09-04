@@ -25,7 +25,7 @@ export default function Home({ data }) {
           heroSubtitle={newData?.hero_subtitle}
           hero_title={newData?.hero_title}
         />
-        <button
+  {/*       <button
           className={`${styles["contact-btn"]} bg-[var(--yellow)] shadow fixed top-0 left-0  pl-20 pr-7  py-3 text-white my-5 rounded-tr-md rounded-br-md md:block hidden `}
         >
           <Link href="/contact-us">
@@ -35,7 +35,7 @@ export default function Home({ data }) {
               <img src="/icon_arrow_purple_dark.png" alt="" />
             </div>
           </Link>
-        </button>
+        </button> */}
         <SupportOpenEcosystems
           list_items_cards={data?.attributes?.list_item_cards}
           title={data?.attributes?.support_open_ecosystems_title}

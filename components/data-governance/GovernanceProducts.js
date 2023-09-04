@@ -71,9 +71,11 @@ export default function GovernanceProducts({ title, products }) {
               </div> */}
 
               <div className="grid items-center px-7 bg-[#E9E8F8]">
+                <Link href={'/contact-us'}>
                 <button className="bg-[var(--yellow)]  shadow px-3 py-2 rounded-md text-white">
                   <p className="text-[var(--purple)]">Join waiting list</p>
                 </button>
+                </Link>
               </div>
 
               {/* <div className="grid items-center px-7 bg-[#DEDCF5]">

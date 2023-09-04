@@ -30,12 +30,14 @@ export default function Hero({ data }) {
             }}
             className="leading-relaxed"
           />
+
           <div
             dangerouslySetInnerHTML={{
               __html: data?.hero_description_highlighted,
             }}
             className="px-10 2xl:px-20 2xl:py-2 py-5 flex items-center text-center rounded-xl bg-[#DEDBFF] font-bold text-[var(--purple-extra-dark)]"
           />
+          
         </div>
       </div>
     </section>
