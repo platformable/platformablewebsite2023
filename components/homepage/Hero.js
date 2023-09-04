@@ -15,7 +15,7 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
         >
           {hero_title}
         </h3>
-        <h3 className="text-center md:leading-10 leading-8 md:px-0 px-5  font-light ">
+        <h3 className="text-center md:leading-10 leading-8 md:px-0 px-5 text-3xl font-light ">
           {" "}
           <strong>{subtitle}</strong> {simpleSubtitle}{" "}
         </h3>
