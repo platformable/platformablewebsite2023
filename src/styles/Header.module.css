@@ -19,7 +19,7 @@
 }
 .drop-down-container {
   position: absolute;
-  width: auto;
+  width: 60%;
   height: auto;
   border: 2px solid #3024c6;
   margin-top: 30px;
@@ -48,7 +48,7 @@ h3.drop-down-info-title {
 
 .drop-down-descriptions {
   margin-top: 0.5rem;
-  width: 280px;
+  /* width: 280px; */
   font-weight: 300;
 
 }
