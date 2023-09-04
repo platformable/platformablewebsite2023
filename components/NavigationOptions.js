@@ -17,63 +17,70 @@ export default function NavigationOptions({ headerStyles, name, navigation }) {
 
       <div className={`grid ${dobleColumn ? "grid-cols-2" : "grid-cols-1"}`}>
         <div id="nav-left-column">
-          {navigation.map((nav, index) => {
-            if (
-              nav.attributes.category === name &&
-              nav.attributes.side_of_navigation === "left"
-            ) {
-              return (
-                <div
-                  className={headerStyles["drop-down-info-hovered"]}
-                  key={index}
-                >
-                  <Link href={nav.attributes.path}>
-                    <h3 className={headerStyles["drop-down-info-title"]}>
-                      {nav?.attributes?.name}
-                    </h3>
+          {navigation
+            .sort((a, b) => a?.attributes?.order - b?.attributes.order)
+            .map((nav, index) => {
+              if (
+                nav.attributes.category === name &&
+                nav.attributes.side_of_navigation === "left"
+              ) {
+                return (
+                  <div
+                    className={headerStyles["drop-down-info-hovered"]}
+                    key={index}
+                  >
+                    <Link href={nav.attributes.path}>
+                      <h3 className={headerStyles["drop-down-info-title"]}>
+                        {nav?.attributes?.name}
+                      </h3>
 
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: nav?.attributes?.metadata,
-                      }}
-                      className={`${headerStyles["drop-down-descriptions"]} text-[11px] `}
-                    />
-                  </Link>
-                </div>
-              );
-            } else {
-              null;
-            }
-          })}
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: nav?.attributes?.metadata,
+                        }}
+                        className={`${headerStyles["drop-down-descriptions"]} text-[11px] `}
+                      />
+                    </Link>
+                  </div>
+                );
+              } else {
+                null;
+              }
+            })}
         </div>
         <div id="nav-right-column">
-          {navigation.map((nav, index) => {
-            if (
-              nav.attributes.category === name &&
-              nav.attributes.side_of_navigation === "right"
-            ) {
-              return (
-                <div
-                  className={`${headerStyles["drop-down-info-hovered"]} grid  ${nav?.attributes?.order ? `order-[${nav?.attributes?.order}]` : '' }`}
-                  key={index}
-                >
-                  <Link href={nav.attributes.path}>
-                    <h3 className={headerStyles["drop-down-info-title"]}>
-                      {nav?.attributes?.name}
-                    </h3>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: nav?.attributes?.metadata,
-                      }}
-                      className={`${headerStyles["drop-down-descriptions"]} `}
-                    />
-                  </Link>
-                </div>
-              )
-            } else {
-              null;
-            }
-          }).sort()}
+          {navigation
+            .sort((a, b) => a?.attributes?.order - b?.attributes.order)
+            .map((nav, index) => {
+              if (
+                nav.attributes.category === name &&
+                nav.attributes.side_of_navigation === "right"
+              ) {
+                return (
+                  <div
+                    className={`${
+                      headerStyles["drop-down-info-hovered"]
+                    } grid  `}
+                    key={index}
+                  >
+                    <Link href={nav.attributes.path}>
+                      <h3 className={headerStyles["drop-down-info-title"]}>
+                        {nav?.attributes?.name}
+                      </h3>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: nav?.attributes?.metadata,
+                        }}
+                        className={`${headerStyles["drop-down-descriptions"]} `}
+                      />
+                    </Link>
+                  </div>
+                );
+              } else {
+                null;
+              }
+            })
+            .sort()}
         </div>
       </div>
     </div>

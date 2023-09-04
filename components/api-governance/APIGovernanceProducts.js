@@ -52,7 +52,9 @@ export default function GovernanceProducts({ products }) {
                   alt=""
                   className="w-2/7"
                 />
-                <p className="text-white font-bold w-5/7 text-center lg:text-left">{card?.title}</p>
+                <p className="text-white font-bold w-5/7 text-center lg:text-left">
+                  {card?.title}
+                </p>
               </div>
 
               <div className="flex  p-7 justify-center bg-white ">
@@ -71,9 +73,11 @@ export default function GovernanceProducts({ products }) {
               </div> */}
 
               <div className="grid items-center px-7 bg-[#E9E8F8]">
-                <button className="bg-[var(--yellow)]  shadow px-3 py-2 rounded-md text-white">
-                  <p className="text-[var(--purple)]">Join waiting list</p>
-                </button>
+                <Link href="/contact-us" className="flex justify-center">
+                  <button className="bg-[var(--yellow)]  shadow px-3 py-2 rounded-md text-white">
+                    <p className="text-[var(--purple)]">Join waiting list</p>
+                  </button>
+                </Link>
               </div>
 
               {/* <div className="grid items-center px-7 bg-[#DEDCF5]">
@@ -129,18 +133,20 @@ export default function GovernanceProducts({ products }) {
                   <p className="text-center px-5 text-[var(--purple-medium)]">
                     Simple copy
                   </p>
-                  <button className="rounded-md  bg-[var(--purple-light)] py-2 mb-16 text-white">
+                  {/* <button className="rounded-md  bg-[var(--purple-light)] py-2 mb-16 text-white">
                     <p>Download</p>
-                  </button>
+                  </button> */}
                   <div className="flex items-center justify-center">
                     <img
                       src={card?.bookbuybtn_img?.data?.attributes?.url}
                       alt="Product icon"
                     />
                   </div>
-                  <button className="bg-[var(--blue-extra-dark)] py-2 rounded-md text-white">
-                    <p>Buy now</p>
-                  </button>
+                  <Link href="/contact-us" >
+                    <button className="bg-[var(--blue-extra-dark)] py-2 rounded-md text-white">
+                      <p>Join waiting list</p>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -34,7 +34,7 @@ export default function ContactUs({ data, posts }) {
                 method="POST"
                 onSubmit={handleSubmit}
                 data-netlify="true"
-                className="flex flex-col gap-y-7 lg:gap-y-10"
+                className="flex flex-col gap-y-7 lg:gap-y-8"
               >
                 <div className="grid grid-cols-2 gap-5">
                   <div className="">
@@ -103,7 +103,7 @@ export default function ContactUs({ data, posts }) {
 
                     <textarea
                       name="message"
-                      className="rounded shadow py-2 text-black px-2 w-full mt-1 "
+                      className="rounded shadow py-2 text-black px-2 w-full mt-1 md:h-32"
                     ></textarea>
                   </label>
                 </div>
