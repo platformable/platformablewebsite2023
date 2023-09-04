@@ -20,7 +20,7 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
           <strong>{subtitle}</strong> {simpleSubtitle}{" "}
         </h3>
         <div className="flex justify-center items-center">
-        <img src={heroImg} alt="" className="pt-10 md:px-0 px-5" width={'85%'}/>
+        <img src={heroImg} alt="" className="pt-10 md:px-0 px-5" width={'1050px'}/>
         </div>
         
 {/* 
