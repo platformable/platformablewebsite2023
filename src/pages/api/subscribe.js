@@ -3,6 +3,7 @@
 const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
 const groupId = process.env.NEXT_PUBLIC_GROUP_ID;
+const waitingListGroupId = process.env.NEXT_PUBLIC_WAITING_LIST_GROUP_ID
 
 export default async function subscribe(req, res) {
   // const { email } = req.body;
@@ -14,7 +15,7 @@ export default async function subscribe(req, res) {
 
   try {
     const response = await fetch(
-      `https://api.mailerlite.com/api/v2/groups/${groupId}/subscribers`,
+      `https://api.mailerlite.com/api/v2/groups/${waitingListGroupId}/subscribers`,
       {
         method: "POST",
         headers: {
