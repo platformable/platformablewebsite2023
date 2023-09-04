@@ -8,7 +8,7 @@ import OurSolutions from "../../../components/open-ecosystem-consultancy/OurSolu
 import Meta from "../../../components/Meta";
 
 export default function DataProducts({ data }) {
-  console.log("data",data);
+  // console.log("data",data);
 
   return (
     <Layout>

@@ -5,10 +5,9 @@ import BlogPreviewCard from "../BlogPreviewCard";
 import Link from "next/link";
 
 export default function ResourcesSearch({ posts, heading }) {
-
   // console.log("posts",posts)
 
-  const featuredPost=posts[posts.length-1]?.attributes
+  const featuredPost = posts[posts.length - 1]?.attributes;
 
   // console.log("featuredPost",featuredPost)
 
@@ -17,17 +16,18 @@ export default function ResourcesSearch({ posts, heading }) {
 
   const [seeAllPosts, setSeeAllPosts] = useState(false);
   //UseMemo is used to calculate before render
-  const showedPosts = useMemo(
-    () => {
-      const findPostsBycategory = selectedCategory === 'All' ? posts : posts?.filter((post) =>
-                        post?.attributes?.sectors?.data?.some(element => element.attributes.name.includes(selectedCategory))
-                        
-                      )
-      return seeAllPosts ? findPostsBycategory : findPostsBycategory.slice(0,3)
-    },
-    [seeAllPosts, selectedCategory]
-  );
-    // console.log("showed",showedPosts)
+  const showedPosts = useMemo(() => {
+    const findPostsBycategory =
+      selectedCategory === "All"
+        ? posts
+        : posts?.filter((post) =>
+            post?.attributes?.sectors?.data?.some((element) =>
+              element.attributes.name.includes(selectedCategory)
+            )
+          );
+    return seeAllPosts ? findPostsBycategory : findPostsBycategory.slice(0, 6);
+  }, [seeAllPosts, selectedCategory]);
+  // console.log("showed",showedPosts)
   const searchFunction = (word) => {
     setSearchWord(word);
   };
@@ -36,11 +36,18 @@ export default function ResourcesSearch({ posts, heading }) {
       ? setSelectedCategory("All")
       : setSelectedCategory(category);
 
-      
+  const calculateTimeToRead = (article) => {
+    return Math.ceil(article?.trim().split(/\s+/).length / 225);
+  };
+  const setHeaderSectorColor = (sectorName) => {
+    const sectorColors = {
+      'Open Ecosystems': 'bg--gradient-oe',
+      'Open Banking / Open Finance': 'bg--gradient-obof',
+      'Open Health': 'bg--gradient-oh',
 
-      const calculateTimeToRead = article => {
-        return Math.ceil(article?.trim().split(/\s+/).length / 225)
-      }
+    }
+    return sectorColors[sectorName]
+  }
   return (
     <section className={`${styles["understand-posts-bg"]}`}>
       <div className="">
@@ -74,7 +81,14 @@ export default function ResourcesSearch({ posts, heading }) {
             <span>Open Ecosystems</span>
           </button>
 
-          <button className={`${selectedCategory === 'Open Banking / Open Finance' ? styles.button_selected_category_gradient_OBOF : ''} px-1 py-2 xl:py-3  rounded-md border-2 xl:border-4 text-white`}  onClick={()=>chooseCategory('Open Banking / Open Finance')}>
+          <button
+            className={`${
+              selectedCategory === "Open Banking / Open Finance"
+                ? styles.button_selected_category_gradient_OBOF
+                : ""
+            } px-1 py-2 xl:py-3  rounded-md border-2 xl:border-4 text-white`}
+            onClick={() => chooseCategory("Open Banking / Open Finance")}
+          >
             <span>Open Banking/Open Finance</span>
           </button>
 
@@ -95,64 +109,90 @@ export default function ResourcesSearch({ posts, heading }) {
         </div>
 
         <section id="featured-post" className="my-10">
-          <Link href={`/blog/${posts[posts.length-1].attributes.slug}`}>
+          <Link href={`/blog/${featuredPost?.slug}`}>
             <div className="bg-white rounded-md">
-              <div className={`featured-post-top ${styles['featured-post-top-bg']} rounded-tl-md rounded-tr-md`}>
+              <div
+                className={`featured-post-top ${setHeaderSectorColor(featuredPost?.sectors?.data[0]?.attributes?.name)} rounded-tl-md rounded-tr-md`}
+              >
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 py-3 px-7">
-                  <div><p className="text-white font-bold">{new Date(featuredPost?.publishedAt).getDate()} {new Date(featuredPost?.publishedAt).toLocaleDateString('en-US',{month:'long'})}</p></div>
-                  <p className="text-white">{featuredPost?.sectors.data[0].attributes.name}</p>
+                  <div>
+                    <p className="text-white font-bold">
+                      {new Date(featuredPost?.publishedAt).getDate()}{" "}
+                      {new Date(featuredPost?.publishedAt).toLocaleDateString(
+                        "en-US",
+                        { month: "long" }
+                      )}
+                    </p>
+                  </div>
+                  <p className="text-white">
+                    {featuredPost?.sectors.data[0].attributes.name}
+                  </p>
                 </div>
               </div>
               <div className="featured-post-content">
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 p-7 items-center">
                   <div>
-                    <h6 className="leading-8 font-bold text-[#1B014B] my-5">{featuredPost?.title}</h6>
-                 
-                    <span>Written by {' '}   </span>
-                   {featuredPost?.teams.data.map((team,index)=>{
-                    return (
-                      <span key={index}>
-                          {team.attributes.name+ ' ' + team.attributes.lastname}{" "}
+                    <h6 className="leading-8 font-bold text-[#1B014B] my-5">
+                      {featuredPost?.title}
+                    </h6>
+
+                    <span>Written by </span>
+                    {featuredPost?.teams.data.map((team, index) => {
+                      return (
+                        <span key={index}>
+                          {team.attributes.name +
+                            " " +
+                            team.attributes.lastname}{" "}
                           {index < featuredPost?.teams.data.length - 1
                             ? " & "
                             : ""}
-                            </span>
-                    )
-                   })}
-                 
+                        </span>
+                      );
+                    })}
+
                     <div
-                        dangerouslySetInnerHTML={{
-                          __html: featuredPost?.excerpt
-                        }}
-                        className="mt-5 leading-7 text-[#1B014B]"
-                      />
+                      dangerouslySetInnerHTML={{
+                        __html: featuredPost?.excerpt,
+                      }}
+                      className="mt-5 leading-7 text-[#1B014B]"
+                    />
 
                     <div className="flex justify-between my-5">
                       <div className="flex gap-x-5 items-center">
                         <img src="/platformable-icon-purple-dark.png" alt="" />
-                        <p className="text-[#3524C6] font-bold">{featuredPost?.category.data.attributes.name}</p>
+                        <p className="text-[#3524C6] font-bold">
+                          {featuredPost?.category.data.attributes.name}
+                        </p>
                       </div>
-                    <div className="flex items-center gap-x-3">
-                      <img src="/clockl.svg" alt="" />
-                        <p className="text-[#3524C6] font-bold">{calculateTimeToRead(featuredPost?.content)+' min read'}</p>
-                      
-                    </div>
+                      <div className="flex items-center gap-x-3">
+                        <img src="/clockl.svg" alt="" />
+                        <p className="text-[#3524C6] font-bold">
+                          {calculateTimeToRead(featuredPost?.content) +
+                            " min read"}
+                        </p>
+                      </div>
                     </div>
                   </div>
                   <div>
-                    <img src={featuredPost?.featured_img.data.attributes.url} alt="" />
+                    <img
+                      src={featuredPost?.featured_img.data.attributes.url}
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
-
             </div>
-            </Link>
-
+          </Link>
         </section>
 
         <div className="grid md:grid-cols-3 grid-cols-1 gap-x-5 px-5 gap-y-5 md:px-0 my-10">
-          { showedPosts ? showedPosts
-                .sort((a, b) => new Date(a?.attributes?.update_date) - new Date(b?.attributes?.update_date)) 
+          {showedPosts
+            ? showedPosts
+                .sort(
+                  (a, b) =>
+                    new Date(a?.attributes?.update_date) -
+                    new Date(b?.attributes?.update_date)
+                )
                 .filter((post, index) => {
                   if (searchWord === "") {
                     return post;
@@ -167,16 +207,26 @@ export default function ResourcesSearch({ posts, heading }) {
                 .map((post, index) => {
                   return <BlogPreviewCard post={post} key={index} />;
                 })
-           : null }
+            : null}
         </div>
         <div className="flex gap-3 flex-col justify-center items-center">
-          <p className="text-white ">{!seeAllPosts ? 'Check all posts' : 'Show less'}</p>
+          <p className="text-white ">
+            {!seeAllPosts ? "See all of our posts" : "Show less"}
+          </p>
           {!seeAllPosts ? (
-          <img src="/arrow_collapse_bottom.svg" alt="arrow icon" className="cursor-pointer" onClick={() => setSeeAllPosts(true)} />
-
+            <img
+              src="/arrow_collapse_bottom.svg"
+              alt="arrow icon"
+              className="cursor-pointer"
+              onClick={() => setSeeAllPosts(true)}
+            />
           ) : (
-          <img src="/arrow_collapse_top.svg" alt="arrow icon" className="cursor-pointer"  onClick={() => setSeeAllPosts(false)} />
-
+            <img
+              src="/arrow_collapse_top.svg"
+              alt="arrow icon"
+              className="cursor-pointer"
+              onClick={() => setSeeAllPosts(false)}
+            />
           )}
         </div>
       </div>

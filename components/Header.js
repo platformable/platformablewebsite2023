@@ -24,7 +24,7 @@ useEffect( ()=>{
 },[])
 
 
-console.log("navigtion", navigation)
+// console.log("navigtion", navigation)
 
 
   let info = [

@@ -8,7 +8,7 @@ import GovernanceServices from "../../../components/GovernanceServices";
 import GovernanceProducts from "../../../components/data-governance/GovernanceProducts";
 import Meta from "../../../components/Meta";
 export default function DataGovernance({ data }) {
-  console.log("data",data);
+  // console.log("data",data);
 
   return (
     <Layout>

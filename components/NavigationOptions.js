@@ -7,7 +7,7 @@ export default function NavigationOptions({ headerStyles, name, navigation }) {
       item.attributes.category === name &&
       item.attributes.side_of_navigation === "right"
   );
-  console.log("doble", dobleColumn);
+  // console.log("doble", dobleColumn);
 
   return (
     <div className={`${headerStyles["drop-down-container"]} `}>
