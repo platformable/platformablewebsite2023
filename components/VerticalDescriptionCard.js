@@ -14,14 +14,14 @@ export default function VerticalDescriptionCard({ card, position }) {
   ];
 
   const cardUrl = [
-    { iconUrl: "/open_ecosystems_white.svg" },
-    { iconUrl: "/open_banking_white.svg" },
+    { iconUrl: "/home-Open-Ecosystems-icon.svg" },
+    { iconUrl: "/home-open-banking-icon.svg" },
     { iconUrl: "/open_health_white.svg" },
   ];
 
   return (
     <div
-      className={`rounded-2xl  shadow-md p-7 grid md:grid-rows-[1.5fr_3.5fr] gap-5 ${
+      className={`rounded-2xl  shadow-md px-5 pt-5 grid md:grid-rows-[1.5fr_3.5fr] gap-5 ${
         styles[gradientClasses[position - 1]]
       }`}
     >

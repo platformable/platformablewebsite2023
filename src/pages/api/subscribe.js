@@ -5,7 +5,12 @@ const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 const groupId = process.env.NEXT_PUBLIC_GROUP_ID;
 
 export default async function subscribe(req, res) {
-  const { email } = req.body;
+  // const { email } = req.body;
+
+  const email='alexei@platformable.com'
+  const name="Alexei"
+  const lastname="Garban"
+  
 
   try {
     const response = await fetch(
@@ -16,7 +21,7 @@ export default async function subscribe(req, res) {
           "Content-Type": "application/json",
           "X-MailerLite-ApiKey": apiKey,
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, name, lastname }),
       }
     );
 

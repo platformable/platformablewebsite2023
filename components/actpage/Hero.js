@@ -26,16 +26,16 @@ export default function Hero({ data }) {
         <div className="grid gap-10 h-full">
           <div
             dangerouslySetInnerHTML={{
-              __html: data?.hero_description_highlighted,
+              __html: data?.hero_description2,
             }}
-            className="px-10 2xl:px-20 2xl:py-2 py-5 flex items-center text-center rounded-xl bg-[#DEDBFF] font-bold text-[var(--purple-extra-dark)]"
+            className="leading-relaxed"
           />
 
           <div
             dangerouslySetInnerHTML={{
-              __html: data?.hero_description2,
+              __html: data?.hero_description_highlighted,
             }}
-            className="leading-relaxed"
+            className="px-10 2xl:px-20 2xl:py-2 py-5 flex items-center text-center rounded-xl bg-[#DEDBFF] font-bold text-[var(--purple-extra-dark)]"
           />
         </div>
       </div>

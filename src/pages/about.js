@@ -24,7 +24,7 @@ export default function About({ data }) {
       <Meta title="About us" data={data} />
       <div className={`${styles.hero_background_gradient} relative`}>
         <Hero data={data} />
-        <button
+        {/* <button
           className={`${styles["contact-btn"]} bg-[var(--yellow)] shadow fixed top-0 left-0  pl-20 pr-7  py-3 text-white my-5 rounded-tr-md rounded-br-md md:block hidden `}
         >
           <Link href="/contact-us">
@@ -34,7 +34,7 @@ export default function About({ data }) {
               <img src="/icon_arrow_purple_dark.png" alt="" />
             </div>
           </Link>
-        </button>
+        </button> */}
         <OurMission id="our-mission" data={data} />
           <OurCommitment id="our-commitment" data={data} />
       </div>

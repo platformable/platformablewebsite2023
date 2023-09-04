@@ -179,7 +179,7 @@ export default function Footer() {
             <span className="flex items-center gap-2">
               Proudly{" "}
               <span>
-                <img src="/proudly.png" alt="pride heart" />
+                <img src="/heart-fixed-icon.png" alt="pride heart" />
               </span>{" "}
               based in Barcelona
             </span>
