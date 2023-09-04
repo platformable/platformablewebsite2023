@@ -74,7 +74,7 @@ export default function Testimonials({ data, title, logos }) {
 
                     <img
                       src={
-                        "https://res.cloudinary.com/platformable/image/upload/v1691588894/platformablewebsite2023/API_To_S_report_cover_95dcfc7ad2.png"
+                        "https://res.cloudinary.com/platformable/image/upload/v1693836732/platformablewebsite2023/APITOS_9abec085ee.png"
                       }
                       className=""
                     />
