@@ -14,7 +14,7 @@ export default function OurDatasetsMobile({ title, datasets }) {
 
         {datasets?.map((product, index) => {
           return (
-            <div data-card-number={index + 1}>
+            <div data-card-number={index + 1} key={index}>
               <div
                 className={`product-container bg-white rounded-lg mb-5 pb-5 `}
                 key={index}
