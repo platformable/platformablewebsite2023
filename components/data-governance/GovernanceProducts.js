@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function GovernanceProducts({ title, products }) {
   return (
-    <section className="pb-20 pt-2 bg-[var(--purple-medium)] ">
+    <section className="pb-20 pt-2 bg-[var(--purple-medium)] md:block hidden">
       <div className="container mx-auto">
         <div className="flex gap-x-5">
           {/* <img

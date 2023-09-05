@@ -6,6 +6,7 @@ import Testimonials from "../../../components/homepage/Testimonials";
 import OurProcess from "../../../components/data-governance/OurProcess";
 import GovernanceServices from "../../../components/GovernanceServices";
 import GovernanceProducts from "../../../components/data-governance/GovernanceProducts";
+import GovernanceProductsMobile from "../../../components/data-governance/GovernanceProductsMobile";
 import Meta from "../../../components/Meta";
 export default function DataGovernance({ data }) {
   // console.log("data",data);
@@ -15,6 +16,7 @@ export default function DataGovernance({ data }) {
       <Meta title={data?.dg_title} data={data} />
       <Hero data={data}/>
       <GovernanceProducts title={data?.products_title} products={data?.products} />
+      <GovernanceProductsMobile title={data?.products_title} datasets={data?.products} />
       <OurProcess data={data}/>
       <GovernanceServices description={data?.services_description} services={data?.services}/>
       {/* <Testimonials data={data?.testimonials} title={data?.testimonials_title} logos={false}/> */}
