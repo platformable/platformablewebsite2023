@@ -252,8 +252,7 @@ h3.drop-down-info-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .title-plus-container {

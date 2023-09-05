@@ -21,7 +21,7 @@ export default function OurProcess({ data }) {
           dangerouslySetInnerHTML={{
             __html: data?.data_products_process_description,
           }}
-          className="mt-5 lg:mt-10 lg:mb-16 text-[var(--blue-extra-dark)] "
+          className="mt-5 mb-7 lg:mt-10 lg:mb-16 text-[var(--blue-extra-dark)] "
         />
         <section className="Discovery rounded-t-2xl shadow-lg ">
           <div className={`${styles.bg_section_discovery} text-white rounded-t-xl px-10 pt-7 pb-10`}>

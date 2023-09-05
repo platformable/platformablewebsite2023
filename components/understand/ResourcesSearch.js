@@ -59,7 +59,7 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
               selectedSector === "Open Ecosystems"
                 ? styles.button_selected_category_gradient_OE
                 : ""
-            } px-4 xl:py-3  rounded-md border-2 xl:border-4 text-white`}
+            } px-4 py-2 xl:py-3  rounded-md border-2 xl:border-4 text-white`}
             onClick={() => chooseSector("Open Ecosystems")}
           >
             <span>Open Ecosystems</span>
