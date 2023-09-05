@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function OurDatasets({ title, datasets }) {
 
-  console.log("datasets", datasets)
+
   return (
-    <section className={`${styles.bg_section_datasets} pb-20 pt-2`}>
+    <section className={`${styles.bg_section_datasets} md:pb-20 pb-0 pt-2`}>
       <div className="container mx-auto">
-        <div className="hidden md:grid  gap-1">
+        <div className="hidden md:block md:grid  gap-1">
           <p className="text-white  font-bold mb-5 xl:mb-10">
             You can also access our datasets by purchasing one of our ready-made
             data products, including trends reports and analytical tools.
