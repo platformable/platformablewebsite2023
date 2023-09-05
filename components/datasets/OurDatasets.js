@@ -82,7 +82,7 @@ export default function OurDatasets({ title, datasets }) {
                   <button className="rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white">
                   <p>Download</p>
                 </button>
-                ):<div className="flex justify-center">-</div>}
+                ):<div className="flex justify-center"></div>}
               </div>
 
               <div className="grid items-center px-7 bg-[#E9E8F8]">
@@ -90,7 +90,7 @@ export default function OurDatasets({ title, datasets }) {
                   <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple-medium)]">
                   <p>Buy now</p>
                 </button>
-                ): <div className="flex justify-center">-</div>}
+                ): <div className="flex justify-center"></div>}
                 
               </div>
 

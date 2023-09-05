@@ -45,7 +45,7 @@ export default function OurDatasetsMobile({ title, datasets }) {
                       <p>Download</p>
                     </button>
                   ) : (
-                    <div className="flex justify-center">-</div>
+                    <div className="flex justify-center"></div>
                   )}
                 </div>
 
@@ -60,7 +60,7 @@ export default function OurDatasetsMobile({ title, datasets }) {
                         <p>Buy now</p>
                       </button>
                     ) : (
-                      <div className="flex justify-center">-</div>
+                      <div className="flex justify-center"></div>
                     )}
                   </div>
 
