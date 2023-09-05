@@ -48,13 +48,14 @@ export default function OurProducts({ title, products }) {
               </p>
             </div>
 
-            <div className="flex items-center p-7 justify-center bg-white p">
+            <div className="text-[#3328C3] p-7 justify-center bg-white">
               <div
                 dangerouslySetInnerHTML={{
                   __html: card?.data_products_product_description,
                 }}
-                className="text-[#3328C3]"
+                className=" mb-4"
               />
+              <small className="font-bold">{card?.disclaimer}</small>
             </div>
 
             <div className="grid items-center  px-7 bg-[#F6F4FF]">
