@@ -295,7 +295,7 @@ useEffect( ()=>{
                       return (
                         <Link href={nav.attributes.path} key={index}>
                         <li className={headerStyles["embed-list-item"]} >
-                        <a>{nav.attributes.name}</a>
+                       {nav.attributes.name}
                         </li> 
                         </Link>
                       )      
@@ -354,7 +354,7 @@ useEffect( ()=>{
                       return (
                         <Link href={nav.attributes.path} key={index}>
                         <li className={headerStyles["embed-list-item"]}>
-                        <a>{nav.attributes.name}</a>
+                        {nav.attributes.name}
                         </li> 
                         </Link>
                       )      
@@ -412,7 +412,7 @@ useEffect( ()=>{
                       return (
                         <Link href={nav.attributes.path} key={index}>
                         <li className={headerStyles["embed-list-item"]}>
-                        <a>{nav.attributes.name}</a>
+                       {nav.attributes.name}
                         </li> 
                         </Link>
                       )      

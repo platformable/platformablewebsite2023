@@ -6,14 +6,16 @@ import OurProcess from "../../../components/data-products/OurProcess";
 import FindMore from "../../../components/data-products/FindMore";
 import Testimonials from "../../../components/homepage/Testimonials";
 import Meta from "../../../components/Meta";
+import OurProductssMobile from "../../../components/data-products/OurProductsMobile";
 export default function DataProducts({ data }) {
-  // console.log("data",data);
+  console.log("data",data);
 
   return (
     <Layout>
       <Meta title={data?.data_products_hero_title} data={data} />
       <Hero data={data}/>
       <OurProducts products={data?.products} title={data?.data_products_products_titl}/>
+      <OurProductssMobile products={data?.products} title={data?.data_products_products_titl}/>
       <OurProcess data={data}/>
       <Testimonials data={data?.testimonials} title={data?.data_product_testimonial_title} logos={false}/>
       <FindMore sectors={data?.sectors}/>
