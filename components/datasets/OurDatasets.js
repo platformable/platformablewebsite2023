@@ -78,7 +78,7 @@ export default function OurDatasets({ title, datasets }) {
               </div>
 
               <div className="grid items-center px-7 bg-[#F6F4FF]">
-                {card.btn_buy_enabled ? (
+                {card.btn_download_enabled ? (
                   <button className="rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white">
                   <p>Download</p>
                 </button>
@@ -86,7 +86,7 @@ export default function OurDatasets({ title, datasets }) {
               </div>
 
               <div className="grid items-center px-7 bg-[#E9E8F8]">
-                {card.btn_download_enabled ? (
+                {card.btn_buy_enabled ? (
                   <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple-medium)]">
                   <p>Buy now</p>
                 </button>
