@@ -48,7 +48,7 @@ export default function OurProducts({ title, products }) {
               </p>
             </div>
 
-            <div className="text-[#3328C3] p-7 justify-center bg-white">
+            <div className="text-[#3328C3] flex flex-col justify-center items-center p-7 bg-white">
               <div
                 dangerouslySetInnerHTML={{
                   __html: card?.data_products_product_description,
@@ -59,12 +59,10 @@ export default function OurProducts({ title, products }) {
             </div>
 
             <div className="grid items-center  px-7 bg-[#F6F4FF]">
-              {card?.btn_download_enabled ? (
+              {card?.btn_download_enabled && (
                 <button className="rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white ">
                   <p>Download</p>
                 </button>
-              ) : (
-                <div className="flex justify-center">-</div>
               )}
             </div>
 

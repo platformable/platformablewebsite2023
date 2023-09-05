@@ -36,12 +36,10 @@ export default function OurProductssMobile({ title, products }) {
                     Sample copy
                   </p>
                   <div className="grid items-center px-7">
-                    {product.btn_download_enabled ? (
+                    {product.btn_download_enabled && (
                       <button className="rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white">
                         <p>Download</p>
                       </button>
-                    ) : (
-                      <div className="flex justify-center">-</div>
                     )}
                   </div>
                 </div>
