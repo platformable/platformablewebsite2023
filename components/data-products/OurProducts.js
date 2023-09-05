@@ -11,7 +11,7 @@ export default function OurProducts({ title, products }) {
       <div className="hidden md:grid mt-5 xl:mt-10 gap-1 container mx-auto">
         <div className="grid grid-cols-[1.5fr_2fr_1fr_1fr] ">
           <div className="flex items-center bg-[#3328C3] px-7 gap-5 rounded-tl-xl">
-            <div className="w-2/6 flex justify-center hidden lg:block">
+            <div className="w-1/6 flex hidden lg:block">
               <img src="/logo_icon_white.png" alt="Platformable logo" />
             </div>
             <h6 className="text-white font-bold">Data Products</h6>

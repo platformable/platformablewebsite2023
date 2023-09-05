@@ -42,11 +42,11 @@ export default function OurProcess({ data }) {
             </div>
           </div>
           <div className={`${styles.bg_section_scope} text-white rounded-b-xl bg px-10 pt-7 pb-10`}>
-            <div className="flex gap-x-7 mb-10">
-            <img src="/platformable-icon-white.svg"  alt="platformable logo" />
+            <div className="grid md:flex gap-x-7 mb-10">
+            <img src="/platformable-icon-white.svg"  alt="platformable logo"  className="hidden md:block"/>
 
             <div>
-            <h5 className="font-bold mb-3 lg:mb-5 ">Scope and MVP</h5>
+            <h5 className="font-bold mb-7 lg:mb-5 ">Scope and MVP</h5>
             <p>{data?.scope_description}</p>
             </div>
             </div>
