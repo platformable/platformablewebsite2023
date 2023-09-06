@@ -2,13 +2,13 @@ import styles from "@/styles/DataProducts.module.css";
 import Link from "next/link";
 export default function OurProducts({ title, products }) {
   return (
-    <section className="pb-20 pt-2 bg-[var(--purple-medium)]">
+    <section className="pb-20 pt-2 bg-[var(--purple-medium)] hidden md:block">
       {/* <div className="mb-10 flex gap-x-5">
         <img src="/platformable-icon-purple.svg" alt="Platformable logo" className=""/>
         <h3 className="text-[var(--purple-medium)] font-bold">{title}</h3>
       </div> */}
 
-      <div className="hidden md:grid mt-5 xl:mt-10 gap-1 container mx-auto">
+      <div className="grid mt-5 xl:mt-10 gap-1 container mx-auto">
         <div className="grid grid-cols-[1.5fr_2fr_1fr_1fr] ">
           <div className="flex items-center bg-[#3328C3] px-7 gap-5 rounded-tl-xl">
             <div className="w-1/6 flex hidden lg:block">
@@ -48,7 +48,7 @@ export default function OurProducts({ title, products }) {
               </p>
             </div>
 
-            <div className="text-[#3328C3] p-7 justify-center bg-white">
+            <div className="text-[#3328C3] flex flex-col justify-center items-center p-7 bg-white">
               <div
                 dangerouslySetInnerHTML={{
                   __html: card?.data_products_product_description,
@@ -59,12 +59,10 @@ export default function OurProducts({ title, products }) {
             </div>
 
             <div className="grid items-center  px-7 bg-[#F6F4FF]">
-              {card?.btn_download_enabled ? (
+              {card?.btn_download_enabled && (
                 <button className="rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white ">
                   <p>Download</p>
                 </button>
-              ) : (
-                <div className="flex justify-center">-</div>
               )}
             </div>
 
