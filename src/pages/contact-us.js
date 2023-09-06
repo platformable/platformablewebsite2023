@@ -61,24 +61,21 @@ export default function ContactUs({ data, posts }) {
       <section className={`bg-[#7D43FF]`}>
         <div className="text-white container mx-auto pt-10 pb-16">
           <h1 className="mb-5 font-bold">{data?.title || "Contact us"}</h1>
-          <div className="wrapper grid lg:grid-cols-[1.2fr_1fr]">
-            <div className="message-form bg-[var(--purple-dark)] px-3 md:px-10 lg:px-8 py-10 max-lg:rounded-t-xl lg:rounded-l-xl ">
-              {/* {success ? (
-                <h4 className="font-bold mb-5">
-                  Thank you for joining our waiting list!
-                </h4>
-              ) : (
-                <h4 className="font-bold mb-5">Leave us a message</h4>
-              )} */}
+          <div className="wrapper grid lg:grid-cols-[1fr_1fr_1fr]">
+            
+            
+            <div id="left-column" className="px-3 md:px-10 lg:px-8 py-10 bg-[var(--purple-medium)] rounded-tl-lg">
 
-              <h4 className="font-bold mb-5">Leave us a message</h4>
+            <h6 className="font-bold mb-5">Join the waiting list</h6>
+            
+           
               <form
                 name="join-waiting-list"
                 method="POST"
                 onSubmit={joinWaitingList}
                 className="flex flex-col gap-y-7 lg:gap-y-8"
               >
-                <div className="grid grid-cols-2 gap-5">
+                <div className="grid gap-5">
                   <div className="">
                     <label>
                       <small> First name</small>
@@ -120,57 +117,39 @@ export default function ContactUs({ data, posts }) {
                   </label>
                 </div>
 
+                <button
+                        type="submit"
+                        className={` ${styles["contact-buttons-box-shadow"]} bg-[var(--pink)] px-7 py-2 text-white font-medium  rounded-xl  lg:py-4 lg:px-0`}
+                      >
+                        JOIN NOW
+                      </button>
+
                 <div>
                   {success ? (
                     <h6>Thank you for joining our waiting list!</h6>
-                  ) : (
-                    <label className="flex items-center gap-x-2">
-                      <input
-                        type="radio"
-                        name="joinWaintingList"
-                        checked
-                        className="w-[30px] h-[20px]"
-                        onClick={() => setClicked(false)}
-                      />
-                      For now, i just want to
-                      <button
-                        type="submit"
-                        className={` ${styles["contact-buttons-box-shadow"]} bg-[var(--pink)] px-7 py-2 text-white font-medium  rounded-xl md:w-6/12 md:py-3 lg:w-6/12 lg:py-4 lg:px-0`}
-                      >
-                        JOIN THE WAITING LIST
-                      </button>
-                    </label>
-                  )}
-                  {/* <label className="flex items-center gap-x-2">
-                    <input
-                      type="radio"
-                      name="joinWaintingList"
-                      checked
-                      className="w-[30px] h-[20px]"
-                      onClick={() => setClicked(false)}
-                    />
-                    For now, i just want to
-                    <button
-                      type="submit"
-                      className="bg-[var(--pink)] px-7 py-2 text-white font-medium shadow rounded-md"
-                    >
-                      Join waiting list
-                    </button>
-                  </label> */}
+                  ) : null
+                  }
+                
                 </div>
 
-                <div>
-                  <label className="flex items-center gap-x-2">
-                    <input
-                      type="radio"
-                      name="joinWaintingList"
-                      className="w-[30px] h-[20px]"
-                      onClick={() => setClicked(true)}
-                    />
-                    I want to contact Platformable
-                  </label>
-                </div>
+       
               </form>
+              
+            </div>
+
+
+
+
+            <div className="message-form bg-[var(--purple-dark)] px-3 md:px-10 lg:px-8 py-10  ">
+              {/* {success ? (
+                <h4 className="font-bold mb-5">
+                  Thank you for joining our waiting list!
+                </h4>
+              ) : (
+                <h4 className="font-bold mb-5">Leave us a message</h4>
+              )} */}
+<h6 className="font-bold mb-5">Leave us a message</h6>
+           
               {/* Form 2 */}
               <form
                 name="contact"
@@ -178,7 +157,7 @@ export default function ContactUs({ data, posts }) {
                 onSubmit={handleSubmit}
                 data-netlify="true"
               >
-                <div className="grid grid-cols-2 gap-5 hidden">
+                <div className="grid  gap-5 ">
                   <div className="">
                     <label>
                       <small> First name</small>
@@ -205,7 +184,7 @@ export default function ContactUs({ data, posts }) {
                     </label>
                   </div>
                 </div>
-                <div className="hidden">
+                <div className="">
                   <label>
                     <small>Your Email</small>
 
@@ -224,7 +203,6 @@ export default function ContactUs({ data, posts }) {
                     <input
                       type="text"
                       name="subject"
-                      disabled={!clicked}
                       className="rounded shadow py-2 text-black px-2 w-full mt-1 mb-4"
                     />
                   </label>
@@ -235,7 +213,7 @@ export default function ContactUs({ data, posts }) {
 
                     <textarea
                       name="message"
-                      disabled={!clicked}
+                      
                       className="rounded shadow py-2 text-black px-2 w-full mt-1 md:h-32"
                     ></textarea>
                   </label>
@@ -244,8 +222,8 @@ export default function ContactUs({ data, posts }) {
                 <div className="mt-4">
                   <button
                     type="submit"
-                    disabled={!clicked}
-                    className={`${styles["contact-buttons-box-shadow"]} rounded-lg shadow px-7 md:px-10 lg:w-6/12 bg-[var(--yellow)] ${styles["send-message-button"]} py-3 font-bold uppercase`}
+                    
+                    className={`${styles["contact-buttons-box-shadow"]} w-full rounded-lg shadow px-7 md:px-10  bg-[var(--yellow)] ${styles["send-message-button"]} py-3 font-bold uppercase`}
                   >
                     Send Message
                   </button>
@@ -253,9 +231,9 @@ export default function ContactUs({ data, posts }) {
               </form>
             </div>
             <div className="schedule-form bg-white px-3 md:px-5 lg:px-7 py-10 max-lg:rounded-b-xl lg:rounded-r-xl">
-              <h4 className="font-bold mb-5 text-[--purple-medium]">
+              <h6 className="font-bold mb-5 text-[--purple-medium]">
                 Schedule an appointment
-              </h4>
+              </h6>
               <InlineWidget url="https://calendly.com/platformable" />
             </div>
           </div>
