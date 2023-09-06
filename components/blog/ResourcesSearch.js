@@ -86,7 +86,7 @@ export default function ResourcesSearch({ posts, heading }) {
               selectedCategory === "Open Banking / Open Finance"
                 ? styles.button_selected_category_gradient_OBOF
                 : ""
-            } px-1 py-3 xl:py-3  rounded-md border-4 text-white`}
+            } px-1 py-3 xl:py-3 rounded-md border-4 text-white`}
             onClick={() => chooseCategory("Open Banking / Open Finance")}
           >
             <span>Open Banking/Open Finance</span>

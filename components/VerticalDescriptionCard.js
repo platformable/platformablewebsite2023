@@ -21,7 +21,7 @@ export default function VerticalDescriptionCard({ card, position }) {
 
   return (
     <div
-      className={`rounded-2xl  shadow-md px-5 pt-5 grid md:grid-rows-[1.5fr_3.5fr] gap-5 ${
+      className={`rounded-2xl  shadow-md px-5 pt-5 grid md:grid-rows-[1.5fr_3.3fr] gap-5 ${
         styles[gradientClasses[position - 1]]
       }`}
     >
