@@ -39,7 +39,7 @@ export default function SendMessageForm ({apiKey}) {
               {/* Form 2 */}
               <form
                 name="contact"
-                // method="POST"
+                method="POST"
                 onSubmit={handleSubmit}
                 data-netlify="true"
                 className="flex flex-col gap-y-5 lg:gap-y-6"
