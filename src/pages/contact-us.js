@@ -61,7 +61,7 @@ export default function ContactUs({ data, posts }) {
       <section className={`bg-[#7D43FF]`}>
         <div className="text-white container mx-auto pt-10 pb-16">
           <h1 className="mb-5 font-bold">{data?.title || "Contact us"}</h1>
-          <div className="wrapper grid lg:grid-cols-[1fr_1fr_1fr]">
+          <div className="wrapper grid lg:grid-cols-[1fr_1fr_1fr] grid-cols-1">
             
             
             <div id="left-column" className="px-3 md:px-10 lg:px-8 py-10 bg-[var(--purple-medium)] rounded-tl-lg">
