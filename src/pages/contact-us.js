@@ -148,15 +148,17 @@ export default function ContactUs({ data, posts }) {
               ) : (
                 <h4 className="font-bold mb-5">Leave us a message</h4>
               )} */}
-<h6 className="font-bold mb-5">Leave us a message</h6>
+              <h6 className="font-bold mb-5">Leave us a message</h6>
            
               {/* Form 2 */}
               <form
                 name="contact"
                 method="POST"
-                onSubmit={handleSubmit}
+                // onSubmit={handleSubmit}
                 data-netlify="true"
               >
+                <input type="hidden" name="form-name" value="contact" />
+
                 <div className="grid  gap-5 ">
                   <div className="">
                     <label>
