@@ -23,6 +23,6 @@ export default async function waitinglist(req, res) {
       return res.status(400).json({ message: `subscription failed` });
     }
   } catch (error) {
-    return res.status(500).json({ error: error.message });
+    return res.status(500).json({ message: error.message });
   }
 }

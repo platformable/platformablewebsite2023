@@ -9,17 +9,21 @@ export default function SendMessageForm ({apiKey}) {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
-
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    console.log('dispara evento')
     const myForm = event.target;
     const formData = new FormData(myForm);
-    // console.log(formData, myForm)
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      // body: new URLSearchParams(formData).toString(),
+      body: encode({ "form-name": "contact", firstName, lastName, email, subject, message })
     })
       .then((res) => console.log(res))
       .catch((error) => alert(error));

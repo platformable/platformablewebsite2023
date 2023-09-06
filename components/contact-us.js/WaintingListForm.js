@@ -6,10 +6,17 @@ export default function WaintingListForm ({apiKey}) {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
-    const [success, setSuccess] = useState(false);
+    const [submissionMessage, setSubmissionMessage] = useState('');
+
+
+    
     async function joinWaitingList(event) {
         event.preventDefault();
+        setSubmissionMessage('')
         try {
+          if (!firstName || !lastName || !email) {
+            throw new Error("All fields are required")
+          }
           let response = await fetch(`/api/waitinglist`, {
             method: "POST",
             headers: {
@@ -23,12 +30,13 @@ export default function WaintingListForm ({apiKey}) {
             setFirstName("");
             setLastName("");
             setEmail("");
-            setSuccess(true);
+            setSubmissionMessage('Thank you for joining our waiting list!');
           } else {
             let errorData = await response.json();
             return errorData;
           }
         } catch (error) {
+          setSubmissionMessage(error.message)
           return `Error: ${error}`;
         }
       }
@@ -93,11 +101,11 @@ export default function WaintingListForm ({apiKey}) {
                       </button>
 
                 <div>
-                  {success ? (
-                    <h6 className="text-[var(--green)] text-center">Thank you for joining our waiting list!</h6>
-                  ) : null
+                  {submissionMessage && (
+                    <h6 className="text-[var(--green)] text-center">{submissionMessage}</h6>
+                  ) 
                   }
-                
+                  
                 </div>
 
        
