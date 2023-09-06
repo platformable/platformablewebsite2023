@@ -109,6 +109,7 @@ export default function Footer() {
       setErrorMessage(`Please insert your email`);
     } else if (!emailRegex.test(email)) {
       setErrorMessage("Invalid email format");
+
       // } else if (subscribers.some((person) => person.email === email)) {
       //   setErrorMessage("You are already a subscriber");
       // }
@@ -117,9 +118,14 @@ export default function Footer() {
     }
   };
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log(`hello error`);
     handleError();
-    handleSubmit();
+    if (!errorMessage) {
+      handleSubmit();
+      console.log(`hello NO error`);
+    }
   };
 
   // useEffect(() => {
