@@ -89,7 +89,7 @@ export default function OurProducts({ title, products }) {
               ) : (
                 <Link href="/contact-us" className="flex justify-center">
                   <button className="bg-[var(--pink)] shadow px-3 py-2 rounded-md text-white">
-                    <p className="font-bold">Join waiting list</p>
+                    <p className="">Join waiting list</p>
                   </button>
                 </Link>
               )}
