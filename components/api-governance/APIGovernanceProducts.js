@@ -74,8 +74,8 @@ export default function GovernanceProducts({ products }) {
 
               <div className="grid items-center px-7 bg-[#E9E8F8]">
                 <Link href="/contact-us" className="flex justify-center">
-                  <button className="bg-[var(--yellow)]  shadow px-3 py-2 rounded-md text-white">
-                    <p className="text-[var(--purple)]">Join waiting list</p>
+                  <button className="bg-[var(--pink)]  shadow px-3 py-2 rounded-md text-white">
+                    <p className="">Join waiting list</p>
                   </button>
                 </Link>
               </div>
@@ -142,7 +142,7 @@ export default function GovernanceProducts({ products }) {
                       alt="Product icon"
                     />
                   </div>
-                  <Link href="/contact-us" >
+                  <Link href="/contact-us">
                     <button className="bg-[var(--blue-extra-dark)] py-2 rounded-md text-white">
                       <p>Join waiting list</p>
                     </button>
