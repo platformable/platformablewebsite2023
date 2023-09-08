@@ -145,7 +145,7 @@ export default function SendMessageForm({ apiKey }) {
         data-netlify="true"
         // data-netlify-success="/success-page"
         action="/pages/success"
-        onSubmit={handleCompleteSubmission}
+        // onSubmit={handleCompleteSubmission}
         className="flex flex-col gap-y-5 lg:gap-y-6"
       >
         <input type="hidden" name="form-name" value="contact" />
