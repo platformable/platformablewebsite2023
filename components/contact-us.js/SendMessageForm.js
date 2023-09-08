@@ -144,7 +144,7 @@ export default function SendMessageForm({ apiKey }) {
         method="POST"
         data-netlify="true"
         // data-netlify-success="/success-page"
-        action="/pages/success"
+        //action="/pages/success"
         // onSubmit={handleCompleteSubmission}
         className="flex flex-col gap-y-5 lg:gap-y-6"
       >
@@ -257,7 +257,7 @@ export default function SendMessageForm({ apiKey }) {
         <div>
           {success ? (
             <h6 className="text-[var(--green)] text-center">
-              Thank you for joining our waiting list!
+              Thank you for your message
             </h6>
           ) : null}
         </div>
