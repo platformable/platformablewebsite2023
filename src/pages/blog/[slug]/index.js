@@ -189,7 +189,7 @@ export default function BlogPage({ data }) {
               Published at {new Date(data?.publishedAt).toDateString()}
             </span>
           )}
-          {data?.markdown_content !== '' ? (
+          {data?.markdown_content ? (
             
             <ReactMarkdown
               className="blog-page"
