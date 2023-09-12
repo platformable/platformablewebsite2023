@@ -8,11 +8,20 @@ import Head from "next/head";
 import { InlineWidget } from "react-calendly";
 import { LinkedinShareButton, LinkedinIcon } from "react-share";
 import Meta from "../../../../components/Meta";
+import ReactMarkdown from "react-markdown";
+import rehypeSanitize from "rehype-sanitize";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
+
+// const file = await unified()
+//   .use(remarkRehype, {allowDangerousHtml: true})
+//   .use(rehypeSanitize)
+//   .process(await read('index.html'))
 
 export default function BlogPage({ data }) {
   const router = useRouter();
 
-// console.log("data",data)
+  // console.log("data",data)
 
   //get post index to create next and prev logic
   const [relatedSectorPosts, setRelatedSectorPosts] = useState([]);
@@ -44,7 +53,6 @@ export default function BlogPage({ data }) {
   };
 
   const findIndexOfActivePost = (relatedSectorPosts) => {
-    
     const postIndex = relatedSectorPosts.findIndex(
       (post) => post.attributes.slug.toLowerCase() === data.slug.toLowerCase()
     );
@@ -88,14 +96,9 @@ export default function BlogPage({ data }) {
     return Math.ceil(article?.trim().split(/\s+/).length / 225);
   };
 
-
-
-
   return (
     <Layout>
-    
-        <Meta title={data?.title} data={data}/>
-     
+      <Meta title={data?.title} data={data} />
 
       <section className="blog-container">
         <div
@@ -154,17 +157,16 @@ export default function BlogPage({ data }) {
                   />
                 </LinkedinShareButton>
                 <Link
-                href="https://tidal.com/browse/mix/0105d4b80651774ef38931747c080a"
-                target="_blank"
-              >
-                <img
-                  src="/tidal_blue.svg"
-                  className="text-white"
-                  alt="tidal"
-                  width={32}
-                />
-              </Link>
-               
+                  href="https://tidal.com/browse/mix/0105d4b80651774ef38931747c080a"
+                  target="_blank"
+                >
+                  <img
+                    src="/tidal_blue.svg"
+                    className="text-white"
+                    alt="tidal"
+                    width={32}
+                  />
+                </Link>
               </div>
             </div>
           </div>
@@ -187,43 +189,44 @@ export default function BlogPage({ data }) {
               Published at {new Date(data?.publishedAt).toDateString()}
             </span>
           )}
-
-          <div
-            dangerouslySetInnerHTML={{
-              __html: data?.content,
-            }}
-            className={`mt-7  blog-page`}
-            id="blogPage"
-          />
-          {/*   <div
-            dangerouslySetInnerHTML={{
-              __html: data?.excerpt,
-            }}
-            className="mt-7"
-          /> */}
+          {data?.markdown_content !== '' ? (
+            
+            <ReactMarkdown
+              className="blog-page"
+              children={data?.markdown_content}
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw, rehypeSanitize]}
+            />
+          ) : (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: data?.content,
+              }}
+              className={`mt-7  blog-page`}
+              id="blogPage"
+            />
+          )}
 
           {data.Calendly ? (
             <InlineWidget url="https://calendly.com/platformable" />
           ) : null}
           {/* <div className="my-20 flex flex-col gap-10 lg:flex-row items-center justify-center "> */}
-            {data?.teams?.data?.map((member, index) => (
-              <div className="flex flex-col items-center" key={index}>
-                <img
-                  src={member?.attributes?.image?.data?.attributes.url}
-                  alt="member image"
-                  className="mb-7"
-                  width={150}
-                />
-                <p className="font-bold text-[var(--purple-medium)]">
-                  {member?.attributes?.name +
-                    " " +
-                    member?.attributes?.lastname}
-                </p>
-                <span className="font-medium">
-                  {member?.attributes?.position.toUpperCase()}
-                </span>
-              </div>
-            ))}
+          {data?.teams?.data?.map((member, index) => (
+            <div className="flex flex-col items-center" key={index}>
+              <img
+                src={member?.attributes?.image?.data?.attributes.url}
+                alt="member image"
+                className="mb-7"
+                width={150}
+              />
+              <p className="font-bold text-[var(--purple-medium)]">
+                {member?.attributes?.name + " " + member?.attributes?.lastname}
+              </p>
+              <span className="font-medium">
+                {member?.attributes?.position.toUpperCase()}
+              </span>
+            </div>
+          ))}
           {/* </div> */}
 
           {data?.footnote > 0 ? (
@@ -269,7 +272,7 @@ export default function BlogPage({ data }) {
 
               <h5 className="text-white font-bold">Related articles</h5>
             </div>
-            <div className="grid lg:grid-cols-3 gap-x-10">
+            <div className="grid lg:grid-cols-3 gap-x-10 gap-y-7">
               {relatedSectorPosts?.map((post, index) => {
                 if (index <= 2) {
                   return <BlogPreviewCard post={post} key={index} />;
