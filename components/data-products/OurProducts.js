@@ -58,18 +58,22 @@ export default function OurProducts({ title, products }) {
               <small className="font-bold">{card?.disclaimer}</small>
             </div>
 
-            <div className="grid items-center  px-7 bg-[#F6F4FF]">
+            <div className="grid items-center justify-items-center px-7 bg-[#F6F4FF]">
               {card?.btn_download_enabled && (
+                <Link href={card?.data_products_products_sample || ''} className="" target="_blank">
                 <button className="rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white ">
                   <p>Download</p>
                 </button>
+                </Link>
+                
               )}
             </div>
 
-            <div className="grid items-center px-7 bg-[#E9E8F8]">
+            <div className="grid items-center justify-center px-7 bg-[#E9E8F8]">
               {card.data_products_product_price_quarter &&
               card.data_products_product_price_year ? (
                 <div className="grid grid-rows-2 gap-y-10">
+                  <Link href={card?.data_product_purchase_quarter || ''} className="flex justify-center" target="_blank">
                   <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple)]">
                     <p>
                       <strong>
@@ -78,6 +82,9 @@ export default function OurProducts({ title, products }) {
                       per quarter
                     </p>
                   </button>
+                  </Link>
+                 
+                  <Link href={card?.data_product_purchase_year || ''} className="flex justify-center" target="_blank">
                   <button className="bg-[var(--orange-medium)] leading-snug px-3 py-2 shadow rounded-md text-[var(--purple)]">
                     <p>
                       <strong>${card.data_products_product_price_year}</strong>{" "}
@@ -85,6 +92,8 @@ export default function OurProducts({ title, products }) {
                     </p>
                     <small>save 25%</small>
                   </button>
+                  </Link>
+                  
                 </div>
               ) : (
                 <Link href="/contact-us" className="flex justify-center">
