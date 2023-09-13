@@ -61,6 +61,33 @@ export default function SendMessageForm({ apiKey }) {
       )
       .join("&");
   };
+
+  const resetForm = () => {
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
+  };
+
+  const handleSendMessage = () => {
+    if (!handleError()) {
+      return;
+    }
+
+    if (handleError()) {
+      setLoading(false);
+      setSuccess(false);
+    }
+    // setLoading(true);
+
+    // // Simulate a delay for demonstration purposes (remove in production)
+    // setTimeout(() => {
+    //   setLoading(false);
+    //   setSuccess(true);
+    //   resetForm();
+    // }, 3000);
+  };
   // const handleSubmit = (event) => {
   //   console.log("dispara evento");
   //   // const myForm = event.target;
@@ -82,50 +109,54 @@ export default function SendMessageForm({ apiKey }) {
   //     .catch((error) => alert(error));
   // };
 
-  const handleSubmit = async (event) => {
-    if (!handleError()) {
-      return;
-    }
-    try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "contact",
-          firstName,
-          lastName,
-          email,
-          subject,
-          message,
-        }),
-      });
+  // const handleSubmit = async (event) => {
+  //   if (!handleError()) {
+  //     return;
+  //   }
 
-      if (response.ok) {
-        setFirstName("");
-        setLastName("");
-        setEmail("");
-      } else {
-        let errorData = await response.json();
-        console.log(errorData);
-      }
-    } catch (error) {
-      // Handle the error, e.g., display an error message
-      console.error("Error:", error);
-    }
-  };
+  //   setLoading(true);
+  //   try {
+  //     const response = await fetch("/", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //       body: encode({
+  //         "form-name": "contact",
+  //         firstName,
+  //         lastName,
+  //         email,
+  //         subject,
+  //         message,
+  //       }),
+  //     });
 
-  const handleCompleteSubmission = async (e) => {
-    e.preventDefault();
-    handleError();
-    setLoading(true);
-    setTimer(
-      setTimeout(() => {
-        //after the 3 seconds have passed
-        setLoading(false);
-      }, 3000) // 3000 milliseconds which means (3 seconds)
-    );
-    handleSubmit();
-  };
+  //     if (response.ok) {
+  //       setFirstName("");
+  //       setLastName("");
+  //       setEmail("");
+  //       setSuccess(true);
+  //       setTimer(
+  //         setTimeout(() => {
+  //           //after the 3 seconds have passed
+  //           setLoading(false);
+  //         }, 8000) // 3000 milliseconds which means (3 seconds)
+  //       );
+  //     } else {
+  //       let errorData = await response.json();
+  //       console.log(errorData);
+  //       setLoading(false);
+  //     }
+  //   } catch (error) {
+  //     // Handle the error, e.g., display an error message
+  //     console.error("Error:", error);
+  //     setLoading(false);
+  //   }
+  // };
+
+  // const handleCompleteSubmission = async (e) => {
+  //   e.preventDefault();
+  //   handleError();
+  //   handleSubmit();
+  // };
 
   return (
     <div className="message-form bg-[var(--purple-dark)] px-3 md:px-10 lg:px-8 py-10  ">
@@ -251,13 +282,14 @@ export default function SendMessageForm({ apiKey }) {
           type="submit"
           className={`${styles["contact-buttons-box-shadow"]} w-full rounded-lg shadow px-7 md:px-10  bg-[var(--yellow)] ${styles["send-message-button"]} py-3 font-bold uppercase`}
           disabled={loading} // Disable the button while loading
+          onClick={handleSendMessage}
         >
           {loading ? "Sending..." : "Send Message"}
         </button>
         <div>
           {success ? (
-            <h6 className="text-[var(--green)] text-center">
-              Thank you for your message
+            <h6 className="text-white text-center">
+              Thank you for your message!
             </h6>
           ) : null}
         </div>
