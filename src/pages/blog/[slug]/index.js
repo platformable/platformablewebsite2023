@@ -193,10 +193,11 @@ export default function BlogPage({ data }) {
             
             <ReactMarkdown
               className="blog-page"
-              children={data?.markdown_content}
+              // children={data?.markdown_content}
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeRaw, rehypeSanitize]}
-            />
+            >{data?.markdown_content}
+            </ReactMarkdown>
           ) : (
             <div
               dangerouslySetInnerHTML={{
