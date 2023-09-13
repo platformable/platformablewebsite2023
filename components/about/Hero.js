@@ -10,7 +10,7 @@ export default function Hero({ data }) {
             }}
             // className="lg:w-3/6 2xl:w-4/7"
           />
-          <img src={data?.hero_img?.data?.attributes.url} alt="Platofmrable Environmnet logo" />
+          <img src={data?.hero_img?.data?.attributes.url} alt="Platformable Environmnet logo" />
         </div>
 
        

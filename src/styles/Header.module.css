@@ -1,13 +1,10 @@
-
-
 /* .nav-one {
   position: relative;
 }*/
 .logo-one-container {
-
-  margin-top: 20px; 
+  margin-top: 20px;
   border: 1px solid black;
-} 
+}
 .nav-one-ul-container {
   font-size: 18px;
   /* margin-left: -200px; */
@@ -22,16 +19,16 @@
 }
 .drop-down-container {
   position: absolute;
-  width: auto;
+  width: 60%;
   height: auto;
   border: 2px solid #3024c6;
   margin-top: 30px;
   /* margin-left: -50vh; */
   right: 15%;
   border-radius: 8px;
-  padding: 30px;
   z-index: 99;
   background-color: white;
+  padding: 2.5rem 1.75rem;
 }
 
 .drop-down-top-title {
@@ -39,35 +36,48 @@
   /* font-family: "Outfit", sans-serif; */
   letter-spacing: 2px;
   display: inline-block;
- 
+
   font-size: 22px;
 }
 
 h3.drop-down-info-title {
   color: #f259f9;
-  font-size: 20px;
+  font-size: 14px;
+  /* margin-top: 28px; */
 }
 
 .drop-down-descriptions {
-  margin-top: 3px;
-  width: 280px;
-  font-weight: lighter;
-  font-size: 18px;
+  margin-top: 0.5rem;
+  /* width: 280px; */
+  font-weight: 300;
+
 }
+
+.drop-down-descriptions p {
+ font-size: 12px;
+
+}
+
+
 .drop-down-first-row-info,
-.drop-down-second-row-info {
+.drop-down-second-row-info,
+.drop-down-third-row-info {
   display: flex;
-  gap: 30px;
+  gap: 1rem;
   /* padding-left: 30px; */
   /* width: 700px; */
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  /* border: 2px solid pink; */
+}
+.drop-down-second-row-info {
+  margin-top: -10px;
 }
 .drop-down-info-hovered {
-  margin-top: 30px;
-  padding: 10px;
+  margin-top: 10px;
+  padding: 0.4rem;
 }
 .drop-down-info-hovered:hover {
-  background-color: #ffe200;
+  background-color: #fff6b2;
   border-radius: 5px;
 }
 
@@ -89,7 +99,7 @@ h3.drop-down-info-title {
   }
   .drop-down-container {
     right: 8%;
-  } 
+  }
 }
 
 /* @media (max-width: 280px) {
@@ -242,8 +252,7 @@ h3.drop-down-info-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .title-plus-container {

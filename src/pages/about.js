@@ -14,25 +14,27 @@ import OurCommitment from "../../components/about/OurCommitment";
 import OurMission from "../../components/about/OurMission";
 import PrivacyPolicy from "../../components/about/PrivacyPolicy";
 import Team from "../../components/about/Team";
+import Meta from "../../components/Meta";
 
 export default function About({ data }) {
-  console.log(data);
+  // console.log(data);
   //const newData = data.attributes;
   return (
     <Layout>
+      <Meta title="About us" data={data} />
       <div className={`${styles.hero_background_gradient} relative`}>
         <Hero data={data} />
-        <button
+        {/* <button
           className={`${styles["contact-btn"]} bg-[var(--yellow)] shadow fixed top-0 left-0  pl-20 pr-7  py-3 text-white my-5 rounded-tr-md rounded-br-md md:block hidden `}
         >
-          <Link href="/">
+          <Link href="/contact-us">
             <div className="flex gap-x-5  self-start items-center ">
               <img src="/icon_section01.svg" alt="" className="" />
               <p className="text-[#2A2FC1]">Contact us</p>
               <img src="/icon_arrow_purple_dark.png" alt="" />
             </div>
           </Link>
-        </button>
+        </button> */}
         <OurMission id="our-mission" data={data} />
           <OurCommitment id="our-commitment" data={data} />
       </div>
@@ -40,7 +42,6 @@ export default function About({ data }) {
       <PrivacyPolicy id="our-privacy" data={data} />
       <Team id="our-team" data={data.team.data} styles={styles}/>
 
-      <Footer />
     </Layout>
   );
 }
@@ -48,7 +49,7 @@ export default function About({ data }) {
 export async function getServerSideProps(ctx) {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/about?populate[ourMission1_img]=*&populate[ourMission2_img]=*&populate[ourMission3_img]=*&populate[commitments][populate][commitment_img]=*&populate[hero_img]=*&populate[team]=*`
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/about?populate[ourMission1_img]=*&populate[ourMission2_img]=*&populate[ourMission3_img]=*&populate[commitments][populate][commitment_img]=*&populate[hero_img]=*&populate[team]=*&populate[featured_img]=*`
     );
     const data = await res.json();
 

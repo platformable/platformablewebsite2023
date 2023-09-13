@@ -1,20 +1,40 @@
 import Image from "next/image";
-import { useState } from "react";
-import Logo from "/public/logo.png";
+import { useState,useEffect } from "react";
+import Logo from "/public/Platformable-logo.png";
 import Link from "next/link";
 import headerStyles from "../src/styles/Header.module.css";
+import NavigationOptions from "./NavigationOptions";
 
 export default function Header() {
- 
+
+const [navigation,setNavigation]=useState([])
+
+
+useEffect( ()=>{
+
+  const getData = fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/navigations`)
+  .then(response=>response.json())
+  .then(response=>setNavigation(response.data))
+  .catch(e=>console.log(e))
+
+
+
+
+
+},[])
+
+
+// console.log("navigtion", navigation)
+
+
   let info = [
- 
     {
-      title: "Understand",
-      href: "/understand",
+      title: "Engage",
+      href: "/engage",
       titleB: "About",
-      titleC: "How we work",
-      titleD: "Our Success Stories",
-      titleE: "Our Mind",
+      titleC: "Partners",
+      titleD: "Services",
+      titleE: "Products",
       descriptionB:
         "Real-Time usage alerts and anomaly detection on multiple channels",
       descriptionC:
@@ -25,8 +45,9 @@ export default function Header() {
       // linkC: "https://www.fdmgroup.com/",
       // linkD: "https://www.gravitee.io/",
       // linkE: "https://www.fdmgroup.com/",
-      list: ["apples", "oranges", "pairs"],
+      list: ["cava", "beer", "lemonade"],
     },
+
     {
       title: "Act",
       href: "/act",
@@ -47,12 +68,12 @@ export default function Header() {
       list: ["shrimp", "olives", "meat"],
     },
     {
-      title: "Engage",
-      href: "/engage",
+      title: "Understand",
+      href: "/understand",
       titleB: "About",
-      titleC: "Partners",
-      titleD: "Services",
-      titleE: "Products",
+      titleC: "How we work",
+      titleD: "Our Success Stories",
+      titleE: "Our Mind",
       descriptionB:
         "Real-Time usage alerts and anomaly detection on multiple channels",
       descriptionC:
@@ -63,12 +84,11 @@ export default function Header() {
       // linkC: "https://www.fdmgroup.com/",
       // linkD: "https://www.gravitee.io/",
       // linkE: "https://www.fdmgroup.com/",
-      list: ["cava", "beer", "lemonade"],
-    }
+      list: ["apples", "oranges", "pairs"],
+    },
   ];
 
- 
-  const [visit, setVisit] = useState('');
+  const [visit, setVisit] = useState("");
 
   const [burgerClick, setBurgerClick] = useState(false);
   const [responsiveListOne, setResponsiveListOne] = useState(false);
@@ -81,111 +101,82 @@ export default function Header() {
   const [plusClickThree, setPlusClickThree] = useState(false);
   const [plusClickFour, setPlusClickFour] = useState(false);
 
-
   //this function is for when i leave the block
   const handleMouseLeave = () => {
-    setVisit('');
+    setVisit("");
   };
 
+
+
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto" id="header">
       <nav
         className={`${headerStyles["nav-one"]} py-5  flex items-center justify-between border-gray-200`}
         onMouseLeave={handleMouseLeave}
       >
-        <Link href='/'>
-           <Image
-                src={Logo}
-                className=""
-                alt="Platformable"
-                width={250}
-                height={70}
-                unoptimized
-              />
+        <Link href="/">
+          <Image
+            src={Logo}
+            className=""
+            alt="Platformable"
+            width={250}
+            height={70}
+            unoptimized
+          />
         </Link>
         <div
           id="mega-menu"
           className={`${headerStyles["nav-one-ul-container"]}  items-center flex hidden  md:flex md:w-auto md:order-1`}
         >
-          <ul
-            className={`${headerStyles["nav-ul"]} flex  font-medium md:flex-row md:space-x-8 `}
+          <ul //Use flex row reverse to avoid white space at right padding of screen
+            className={`${headerStyles["nav-ul"]} flex  font-medium md:flex-row-reverse md:gap-x-8 `}
           >
-            {info?.map((item,index) => (
+            {info?.map((item, index) => (
               <li
-              onMouseEnter={() => {
-                setVisit(item.title);
-              }}
-              key={index}
-            >
-              <Link
-                href={item.href}
-                data-dropdown-toggle="mega-menu-dropdown"
-                className={`${headerStyles["nav-one-links"]} block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700`}
-                aria-current="page"
+                onMouseEnter={() => {
+                  setVisit(item.title);
+                }}
+                key={index}
               >
-                {item.title}
-                
-              </Link>
-            </li>
+                <Link
+                  href={item.href}
+                  data-dropdown-toggle="mega-menu-dropdown"
+                  className={`${headerStyles["nav-one-links"]} block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700`}
+                  aria-current="page"
+                >
+                  {item.title}
+                </Link>
+              </li>
             ))}
-           
+
             <div
               // id="mega-menu-dropdown"
               // onMouseEnter={() => setVisit()}
               onMouseLeave={handleMouseLeave}
             >
-               {info?.filter(e => e.title === visit).map((item, index) => (
-                <div className={headerStyles["drop-down-container"]} key={index}>
-                  <h2 className={`${headerStyles["drop-down-top-title"]} font-bold`}>
-                    {item.title}
-                  </h2>
-                  <div className={headerStyles["drop-down-first-row-info"]}>
-                    <div className={headerStyles["drop-down-info-hovered"]}>
-                      <a href={item.linkB} target="_blank">
-                        <h3 className={headerStyles["drop-down-info-title"]}>
-                          {item.titleB}
-                        </h3>
-                        <p className={headerStyles["drop-down-descriptions"]}>
-                          {item.descriptionB}
-                        </p>
-                      </a>
-                    </div>
-                    <div className={headerStyles["drop-down-info-hovered"]}>
-                      <a href={item.linkC} target="_blank">
-                        <h3 className={headerStyles["drop-down-info-title"]}>
-                          {item.titleC}
-                        </h3>
-                        <p className={headerStyles["drop-down-descriptions"]}>
-                          {item.descriptionC}
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                  <div className={headerStyles["drop-down-second-row-info"]}>
-                    <div className={headerStyles["drop-down-info-hovered"]}>
-                      <a href={item.linkD} target="_blank">
-                        <h3 className={headerStyles["drop-down-info-title"]}>
-                          {item.titleD}
-                        </h3>
-                        <p className={headerStyles["drop-down-descriptions"]}>
-                          {item.descriptionD}
-                        </p>
-                      </a>
-                    </div>
-                    <div className={headerStyles["drop-down-info-hovered"]}>
-                      <a href={item.linkE} target="_blank">
-                        <h3 className={headerStyles["drop-down-info-title"]}>
-                          {item.titleE}
-                        </h3>
-                        <p className={headerStyles["drop-down-descriptions"]}>
-                          {item.descriptionE}
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-               )
-              )} 
+              {/* {info
+                ?.filter((e) => e.title === visit)
+                .map((item, index) => ( */}
+
+                {
+                  visit === 'Understand' && (
+                  <NavigationOptions headerStyles={headerStyles} name="Understand" navigation={navigation}/>
+                  )
+                }
+
+{
+                  visit === 'Act' && (
+                  <NavigationOptions headerStyles={headerStyles} name="Act" navigation={navigation}/>
+                  )
+                }
+
+{
+                  visit === 'Engage' && (
+                  <NavigationOptions headerStyles={headerStyles} name="Engage" navigation={navigation}/>
+                  )
+                }
+                  
+               {/* ))}  */}
             </div>
           </ul>
         </div>
@@ -197,12 +188,13 @@ export default function Header() {
       <nav className={headerStyles["nav-two"]}>
         <div className={headerStyles["nav-bar-two"]}>
           <div className={headerStyles["logo-two-container"]}>
-            <Link href="#" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <Image
                 src={Logo}
                 className=""
                 alt="Platformable Logo"
                 id={headerStyles["responsive-logo-two"]}
+                width={250}
               />
             </Link>
           </div>
@@ -218,9 +210,11 @@ export default function Header() {
                   setPlusClickOne(false);
                   setPlusClickTwo(false);
                   setPlusClickThree(false);
+                  setPlusClickFour(false);
                   setResponsiveListOne(false);
                   setResponsiveListTwo(false);
                   setResponsiveListThree(false);
+                  setResponsiveListFour(false);
                 }}
               >
                 X
@@ -295,18 +289,19 @@ export default function Header() {
                 plusClickOne ? "block" : "hidden"
               }  `}
             >
-              {/* <li className={headerStyles["embed-list-item"]}>
-                <a href={infoOne[0].linkB}>{infoOne[0].titleB}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoOne[0].linkC}>{infoOne[0].titleC}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoOne[0].linkD}>{infoOne[0].titleD}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoOne[0].linkE}>{infoOne[0].titleE}</a>
-              </li> */}
+               {
+                navigation?.map((nav,index)=>{
+                    if(nav.attributes.category==='Understand'){
+                      return (
+                        <Link href={nav.attributes.path} key={index}>
+                        <li className={headerStyles["embed-list-item"]} >
+                       {nav.attributes.name}
+                        </li> 
+                        </Link>
+                      )      
+              }})
+              }
+           
             </ul>
           </li>
           <li>
@@ -348,24 +343,24 @@ export default function Header() {
                 )}
               </button>
             </div>
-            {/* <ul
+            <ul
               className={`${headerStyles["embed-ul"]} ${
                 plusClickTwo ? "block" : "hidden"
               }`}
             >
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoTwo[0].linkB}>{infoTwo[0].titleB}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoTwo[0].linkC}>{infoTwo[0].titleC}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoTwo[0].linkD}>{infoTwo[0].titleD}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoTwo[0].linkE}>{infoTwo[0].titleE}</a>
-              </li>
-            </ul> */}
+             {
+                navigation?.map((nav,index)=>{
+                    if(nav.attributes.category==='Act'){
+                      return (
+                        <Link href={nav.attributes.path} key={index}>
+                        <li className={headerStyles["embed-list-item"]}>
+                        {nav.attributes.name}
+                        </li> 
+                        </Link>
+                      )      
+              }})
+              }
+            </ul>
           </li>
           <li>
             <div
@@ -406,84 +401,26 @@ export default function Header() {
                 )}
               </button>
             </div>
-            {/* <ul
+            <ul
               className={`${headerStyles["embed-ul"]} ${
                 plusClickThree ? "block" : "hidden"
               }`}
             >
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoThree[0].linkB}>{infoThree[0].titleB}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoThree[0].linkC}>{infoThree[0].titleC}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoThree[0].linkD}>{infoThree[0].titleD}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoThree[0].linkE}>{infoThree[0].titleE}</a>
-              </li>
-            </ul> */}
-          </li>
-          <li>
-            <div
-              className={
-                responsiveListFour
-                  ? headerStyles["title-plus-container-responsive"]
-                  : headerStyles["title-plus-container"]
+            {
+                navigation?.map((nav,index)=>{
+                    if(nav.attributes.category==='Engage'){
+                      return (
+                        <Link href={nav.attributes.path} key={index}>
+                        <li className={headerStyles["embed-list-item"]}>
+                       {nav.attributes.name}
+                        </li> 
+                        </Link>
+                      )      
+              }})
               }
-            >
-              <span className={headerStyles["list-title-res"]}>Contact</span>
-              <button
-                type="button"
-                className={headerStyles["responsive-plus-button"]}
-                onClick={() => {
-                  setPlusClickFour((plusClickFour) => !plusClickFour);
-                  setResponsiveListFour(
-                    (responsiveListFour) => !responsiveListFour
-                  );
-                }}
-              >
-                {plusClickFour ? (
-                  <div className={headerStyles["responsive-minus-button"]}>
-                    -
-                  </div>
-                ) : (
-                  <div
-                    onClick={() => {
-                      setPlusClickOne(false);
-                      setPlusClickTwo(false);
-                      setPlusClickThree(false);
-                      setResponsiveListOne(false);
-                      setResponsiveListTwo(false);
-                      setResponsiveListThree(false);
-                    }}
-                  >
-                    +
-                  </div>
-                )}
-              </button>
-            </div>
-
-            <ul
-              className={`${headerStyles["embed-ul"]} ${
-                plusClickFour ? "block" : "hidden"
-              }  `}
-            >
-              {/* <li className={headerStyles["embed-list-item"]}>
-                <a href={infoFour[0].linkB}>{infoFour[0].titleB}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoFour[0].linkC}>{infoFour[0].titleC}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoFour[0].linkD}>{infoFour[0].titleD}</a>
-              </li>
-              <li className={headerStyles["embed-list-item"]}>
-                <a href={infoFour[0].linkE}>{infoFour[0].titleE}</a>
-              </li> */}
             </ul>
           </li>
+        
         </ul>
       </nav>
     </div>

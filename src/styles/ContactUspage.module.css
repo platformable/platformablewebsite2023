@@ -1,0 +1,6 @@
+.contact-buttons-box-shadow {
+  box-shadow: 0px 5px 9px #00000040;
+}
+.send-message-button {
+  color: var(--purple-medium-dark);
+}

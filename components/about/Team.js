@@ -9,15 +9,39 @@ export default function Team({ data,styles }) {
           <img src="/logo_icon_white.png" alt="Platofrmable logo" />
           <h4 className="font-bold text-white">Our Team</h4>
         </div>
-      <div className="flex flex-wrap justify-evenly">
-        {data.map((member, index) => (
+      <div className="flex flex-wrap justify-evenly mb-7">
+        {data.map((member, index) => {
+          if(index < 4)
+          
+          {
+
+         return  (
           <div key={index} className="w-full md:w-1/4 px-4 ">
             <div className="card">
               <img src={member.attributes.url} alt="" key={index} />
             </div>
           </div>
-        ))}
+        )} else {null}
+        })}
       </div>
+
+      <div className="flex flex-wrap justify-center">
+        {data.map((member, index) => {
+          if(index >= 4)
+          
+          {
+
+         return  (
+          <div key={index} className="w-full md:w-1/4 px-4 ">
+            <div className="card">
+              <img src={member.attributes.url} alt="" key={index} />
+            </div>
+          </div>
+        )} else {null}
+        })}
+      </div>
+
+
     </div>
     </section>
   );

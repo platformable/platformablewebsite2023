@@ -35,39 +35,48 @@ $slide-change-timing: 3; // percentage of total animation cycle
 //   }
 // }
 
-
+@keyframes animate-carousel-btn-primary {
+  0% {
+    opacity: 0;
+    transform: translate(-3em, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
 
 @keyframes carousel-animate-vertical {
   0% {
-    transform: translateY(100%) scale(0.5);
+    // transform: translateY(100%) scale(0.5);
     opacity: 0;
     visibility: hidden;
   }
   3%,
   33% {
-    transform: translateY(100%) scale(0.7);
-    opacity: 0.4;
-    visibility: visible;
+    // transform: translateY(100%) scale(0.7);
+    opacity: 0;
+    visibility: hidden;
   }
   36%,
   66% {
-    transform: translateY(0) scale(1);
+    // transform: translateY(0) scale(1);
     opacity: 1;
     visibility: visible;
   }
   69%,
   99% {
-    transform: translateY(-100%) scale(0.7);
-    opacity: 0.4;
-    visibility: visible;
+    // transform: translateY(-100%) scale(0.7);
+    opacity: 0;
+    visibility: hidden;
   }
   102% {
-    transform: translateY(-100%) scale(0.5);
+    // transform: translateY(-100%) scale(0.5);
     opacity: 0;
-    visibility: visible;
+    visibility: hidden;
   }
   100% {
-    transform: translateY(-100%) scale(0.5);
+    // transform: translateY(-100%) scale(0.5);
     opacity: 0;
     visibility: hidden;
   }

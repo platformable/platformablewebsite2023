@@ -11,7 +11,7 @@ export default function Hero({ data }) {
           dangerouslySetInnerHTML={{
             __html: data?.hero_description,
           }}
-          className="lg:w-4/6 xl:w-3/5"
+          className="lg:w-3/6 2xl:w-3/5"
         />
       </div>
       <div className={`bg-[#D258FA] py-10 `}>
@@ -19,7 +19,7 @@ export default function Hero({ data }) {
         <img
             src={data?.hero_img?.data.attributes.url}
             alt="Data products mapped"
-            className="xl:-mt-[24rem] lg:-mt-72 lg:-mr-14 hidden justify-self-end lg:block lg:w-2/6 xl:w-2/5"
+            className="lg:-mt-[24rem]  lg:-mr-10 hidden justify-self-end lg:block lg:w-3/6 xl:w-[40%] 2xl:w-2/5 h-96"
           />
           <div
             dangerouslySetInnerHTML={{
@@ -39,7 +39,7 @@ export default function Hero({ data }) {
           className="font-medium"
         />
       </div>
-      <div className={`${styles.bg_hero_description_4} py-16`}>
+      <div className={`bg-[var(--purple-medium)] pt-16 `}>
       <div
           dangerouslySetInnerHTML={{
             __html: data?.hero_description4,
