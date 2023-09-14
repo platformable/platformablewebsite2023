@@ -185,7 +185,7 @@ export default function SendMessageForm({ apiKey }) {
             <small> First name</small>
             <input
               type="text"
-              name="name"
+              name="firstName"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               className={
@@ -205,7 +205,7 @@ export default function SendMessageForm({ apiKey }) {
 
             <input
               type="text"
-              name="last_name"
+              name="lastName"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               // className="rounded shadow py-2 text-black px-2 w-full mt-1"
