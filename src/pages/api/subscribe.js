@@ -6,7 +6,7 @@ const groupId = process.env.NEXT_PUBLIC_GROUP_ID;
 const waitingListGroupId = process.env.NEXT_PUBLIC_WAITING_LIST_GROUP_ID;
 
 export default async function subscribe(req, res) {
-  // const { email } = req.body;
+  const { email } = req.body;
 
   // const email = "alexei@platformable.com";
   // const name = "Alexei";
@@ -21,7 +21,7 @@ export default async function subscribe(req, res) {
           "Content-Type": "application/json",
           "X-MailerLite-ApiKey": apiKey,
         },
-        body: JSON.stringify({ email, name, lastname }),
+        body: JSON.stringify({ email }),
       }
     );
 
