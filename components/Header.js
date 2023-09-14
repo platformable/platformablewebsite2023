@@ -12,7 +12,7 @@ const [navigation,setNavigation]=useState([])
 
 useEffect( ()=>{
 
-  const getData = fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/navigations`)
+  const getData = fetch(`https://platformable-webserverpro-2023-lllix.ondigitalocean.app/api/navigations`)
   .then(response=>response.json())
   .then(response=>setNavigation(response.data))
   .catch(e=>console.log(e))
