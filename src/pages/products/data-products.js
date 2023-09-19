@@ -8,7 +8,7 @@ import Testimonials from "../../../components/homepage/Testimonials";
 import Meta from "../../../components/Meta";
 import OurProductssMobile from "../../../components/data-products/OurProductsMobile";
 export default function DataProducts({ data }) {
-  console.log("data",data);
+  // console.log("data",data);
 
   return (
     <Layout>

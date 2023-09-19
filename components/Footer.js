@@ -101,7 +101,9 @@ export default function Footer() {
       return `Error: ${error}`;
     }
   }
-  async function verifyUserSubscription() {
+
+  async function verifyUserSubscription () {
+    // console.log("verify subscription")
     try {
       let response = await fetch(`/api/verifysubscription`, {
         method: "POST",
@@ -110,7 +112,7 @@ export default function Footer() {
         },
         body: JSON.stringify({ email }),
       });
-      console.log(response);
+
       if (response.status === 404) {
         handleSubmit();
       }
@@ -121,31 +123,31 @@ export default function Footer() {
       return `Error: ${error}`;
     }
   }
-  const handleError = () => {
+  const handleError = async () => {
+    setErrorMessage('')
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (email.length === 0) {
+      // console.log("pasa insert email")
       setErrorMessage(`Please insert your email`);
+
     } else if (!emailRegex.test(email)) {
+      // console.log("pasa invalid")
+
       setErrorMessage("Invalid email format");
 
       // } else if (subscribers.some((person) => person.email === email)) {
       //   setErrorMessage("You are already a subscriber");
       // }
-    } else {
-      setErrorMessage("");
-    }
+    } 
+    else {
+      // console.log("verify ", errorMessage)
+      verifyUserSubscription();
+      
+    } 
   };
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    console.log(`hello error`);
-    handleError();
-    if (!errorMessage) {
-      handleSubmit();
-      console.log(`hello NO error`);
-    }
-  };
+ 
 
   // useEffect(() => {
   //   handleGet();
@@ -291,7 +293,7 @@ export default function Footer() {
               /> */}
                 <button
                   type="button"
-                  onClick={verifyUserSubscription}
+                  onClick={handleError}
                   style={{
                     color: "var(--purple-medium-dark)",
                     backgroundColor: "var(--yellow)",
