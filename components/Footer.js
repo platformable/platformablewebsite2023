@@ -101,7 +101,7 @@ export default function Footer() {
       return `Error: ${error}`;
     }
   }
-  async function verifyUserSubscription () {
+  async function verifyUserSubscription() {
     try {
       let response = await fetch(`/api/verifysubscription`, {
         method: "POST",
@@ -110,11 +110,12 @@ export default function Footer() {
         },
         body: JSON.stringify({ email }),
       });
-      console.log(response)
+      console.log(response);
       if (response.status === 404) {
-        handleSubmit()
-      } if (response.status === 200) {
-        setErrorMessage('You are already registered')
+        handleSubmit();
+      }
+      if (response.status === 200) {
+        setErrorMessage("You are already registered");
       }
     } catch (error) {
       return `Error: ${error}`;
