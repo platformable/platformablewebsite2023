@@ -35,7 +35,7 @@ export default async function subscribe(req, res) {
   }
 }
 
-// export async function getSubscribers(req, res) {
+// export default async function getSubscribers(req, res) {
 //   try {
 //     const response = await fetch(
 //       `https://api.mailerlite.com/api/v2/groups/${groupId}/subscribers`,
