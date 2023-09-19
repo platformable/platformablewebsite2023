@@ -139,7 +139,7 @@ export default function BlogPage({ data }) {
                 <a
                   href={`mailto:test@example.com?subject=${
                     data.slug
-                  }!&body=${data.excerpt.replace(/(<([^>]+)>)/gi, "")}`}
+                  }!&body=${data?.excerpt?.replace(/(<([^>]+)>)/gi, "")}`}
                 >
                   <img width={30} src="/email_blue.svg" alt="email" />
                 </a>
@@ -312,7 +312,12 @@ export async function getServerSideProps(ctx) {
       },
     };
   } catch (error) {
+
     return {
+      redirect: {
+        permanent: false,
+        destination: "/blog",
+      },
       props: {
         data: "No Data",
       },

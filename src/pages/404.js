@@ -1,16 +1,16 @@
-import React,{useEffect} from 'react'
 
-export default function ErroPage() {
+import {useEffect} from 'react'
+import {useRouter} from 'next/router'
 
 
-  return null
-}
+export default function Custom404() {
+    const router = useRouter()
 
-export async function getStaticProps(context) {
-    return {
-      redirect: {
-        permanent: false,
-        destination: "https://platformable.com",
-      },
-    };
+    useEffect(()=>{
+        router.push("/")
+    },[])
+
+    return null
   }
+
+
