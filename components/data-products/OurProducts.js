@@ -72,6 +72,7 @@ export default function OurProducts({ title, products }) {
                   href={card?.data_products_products_sample || ""}
                   target="_blank"
                   className={`${!card?.data_products_products_sample && 'pointer-events-none '}`}
+                  onClick={() => sendPlausibleCustomGoal(card?.plausible_download_tracker)}
                 >
                   <button className='rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white'>
                     <p>Download</p>
@@ -87,6 +88,7 @@ export default function OurProducts({ title, products }) {
                   <Link
                     href={card?.data_product_purchase_quarter || ""}
                     className={`${!card?.data_product_purchase_quarter && 'pointer-events-none '} flex justify-center`}
+                    onClick={() => sendPlausibleCustomGoal(card?.plausible_purchase_quarter_tracker)}
                     target="_blank"
                   >
                     <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple)]">
@@ -102,6 +104,7 @@ export default function OurProducts({ title, products }) {
                   <Link
                     href={card?.data_product_purchase_year || ""}
                     className={`${!card?.data_product_purchase_year && 'pointer-events-none '} flex justify-center`}
+                    onClick={() => sendPlausibleCustomGoal(card?.plausible_purchase_year_tracker)}
                     target="_blank"
                   >
                     <button className="bg-[var(--orange-medium)] leading-snug px-3 py-2 shadow rounded-md text-[var(--purple)]">

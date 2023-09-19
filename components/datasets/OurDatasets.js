@@ -85,6 +85,7 @@ export default function OurDatasets({ title, datasets }) {
                   <Link
                     href={card?.datasets_specification || ""}
                     className={`${!card?.datasets_specification && 'pointer-events-none '} flex justify-center`}
+                    onClick={() => sendPlausibleCustomGoal(card?.plausible_download_tracker)}
                     target="_blank"
                   >
                     <button
@@ -103,6 +104,7 @@ export default function OurDatasets({ title, datasets }) {
                   <Link
                     href={card?.datasets_bulk_download || ""}
                     className={`${!card?.datasets_bulk_download && 'pointer-events-none '} flex justify-center`}
+                    onClick={() => sendPlausibleCustomGoal(card?.plausible_buy_tracker)}
                     target="_blank"
                   >
                     <button
