@@ -10,7 +10,6 @@ export default function Custom404() {
         router.push("/")
     },[])
 
-
     return null
   }
 
