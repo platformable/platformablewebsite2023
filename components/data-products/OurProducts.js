@@ -1,6 +1,14 @@
 import styles from "@/styles/DataProducts.module.css";
 import Link from "next/link";
+import { usePlausible } from "next-plausible";
+
 export default function OurProducts({ title, products }) {
+  const plausible = usePlausible();
+
+  const sendPlausibleCustomGoal = (goalName) => {
+    plausible(goalName);
+  };
+
   return (
     <section className="pb-20 pt-2 bg-[var(--purple-medium)] hidden md:block">
       {/* <div className="mb-10 flex gap-x-5">
@@ -60,12 +68,16 @@ export default function OurProducts({ title, products }) {
 
             <div className="grid items-center justify-items-center px-7 bg-[#F6F4FF]">
               {card?.btn_download_enabled && (
-                <Link href={card?.data_products_products_sample || ''} className="" target="_blank">
-                <button className="rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white ">
-                  <p>Download</p>
-                </button>
+                <Link
+                  href={card?.data_products_products_sample || ""}
+                  target="_blank"
+                  className={`${!card?.data_products_products_sample && 'pointer-events-none '}`}
+                  onClick={() => sendPlausibleCustomGoal(card?.plausible_download_tracker)}
+                >
+                  <button className='rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white'>
+                    <p>Download</p>
+                  </button>
                 </Link>
-                
               )}
             </div>
 
@@ -73,27 +85,38 @@ export default function OurProducts({ title, products }) {
               {card.data_products_product_price_quarter &&
               card.data_products_product_price_year ? (
                 <div className="grid grid-rows-2 gap-y-10">
-                  <Link href={card?.data_product_purchase_quarter || ''} className="flex justify-center" target="_blank">
-                  <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple)]">
-                    <p>
-                      <strong>
-                        ${card.data_products_product_price_quarter}
-                      </strong>{" "}
-                      per quarter
-                    </p>
-                  </button>
+                  <Link
+                    href={card?.data_product_purchase_quarter || ""}
+                    className={`${!card?.data_product_purchase_quarter && 'pointer-events-none '} flex justify-center`}
+                    onClick={() => sendPlausibleCustomGoal(card?.plausible_purchase_quarter_tracker)}
+                    target="_blank"
+                  >
+                    <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple)]">
+                      <p>
+                        <strong>
+                          ${card.data_products_product_price_quarter}
+                        </strong>{" "}
+                        per quarter
+                      </p>
+                    </button>
                   </Link>
-                 
-                  <Link href={card?.data_product_purchase_year || ''} className="flex justify-center" target="_blank">
-                  <button className="bg-[var(--orange-medium)] leading-snug px-3 py-2 shadow rounded-md text-[var(--purple)]">
-                    <p>
-                      <strong>${card.data_products_product_price_year}</strong>{" "}
-                      per year
-                    </p>
-                    <small>save 25%</small>
-                  </button>
+
+                  <Link
+                    href={card?.data_product_purchase_year || ""}
+                    className={`${!card?.data_product_purchase_year && 'pointer-events-none '} flex justify-center`}
+                    onClick={() => sendPlausibleCustomGoal(card?.plausible_purchase_year_tracker)}
+                    target="_blank"
+                  >
+                    <button className="bg-[var(--orange-medium)] leading-snug px-3 py-2 shadow rounded-md text-[var(--purple)]">
+                      <p>
+                        <strong>
+                          ${card.data_products_product_price_year}
+                        </strong>{" "}
+                        per year
+                      </p>
+                      <small>save 25%</small>
+                    </button>
                   </Link>
-                  
                 </div>
               ) : (
                 <Link href="/contact-us" className="flex justify-center">
