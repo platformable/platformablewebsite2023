@@ -1,10 +1,5 @@
-import React,{useEffect} from 'react'
 
-export default function Custom404() {
-    return <h1>404 - Page Not Found</h1>
-  }
-
-export async function getStaticProps(context) {
+export async function getStaticProps() {
     return {
       redirect: {
         permanent: false,
@@ -12,3 +7,9 @@ export async function getStaticProps(context) {
       },
     };
   }
+
+export default function Custom404() {
+    return <h1>404 - Page Not Found</h1>
+  }
+
+
