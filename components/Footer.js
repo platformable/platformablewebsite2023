@@ -79,7 +79,7 @@ export default function Footer() {
 
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
-  async function handleSubmit(event) {
+  async function handleSubmit() {
     try {
       let response = await fetch(`/api/subscribe`, {
         method: "POST",
@@ -101,7 +101,25 @@ export default function Footer() {
       return `Error: ${error}`;
     }
   }
-
+  async function verifyUserSubscription () {
+    try {
+      let response = await fetch(`/api/verifysubscription`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+      console.log(response)
+      if (response.status === 404) {
+        handleSubmit()
+      } if (response.status === 200) {
+        setErrorMessage('You are already registered')
+      }
+    } catch (error) {
+      return `Error: ${error}`;
+    }
+  }
   const handleError = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -272,7 +290,7 @@ export default function Footer() {
               /> */}
                 <button
                   type="button"
-                  onClick={handleClick}
+                  onClick={verifyUserSubscription}
                   style={{
                     color: "var(--purple-medium-dark)",
                     backgroundColor: "var(--yellow)",
