@@ -3,7 +3,7 @@ import React,{useEffect} from 'react'
 export default function ErroPage() {
 
 
-  return null
+  return (<>Error Page</>)
 }
 
 export async function getStaticProps(context) {
