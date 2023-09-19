@@ -1,7 +1,12 @@
 import styles from "@/styles/Datasetspage.module.css";
 import Link from "next/link";
+import { usePlausible } from "next-plausible";
 
 export default function OurDatasets({ title, datasets }) {
+  const plausible = usePlausible();
+  const sendPlausibleCustomGoal = (goalName) => {
+    plausible(goalName);
+  };
   return (
     <section className={`${styles.bg_section_datasets} md:pb-20 pb-0 pt-2`}>
       <div className="container mx-auto">
@@ -77,12 +82,17 @@ export default function OurDatasets({ title, datasets }) {
 
               <div className="grid items-center px-7 bg-[#F6F4FF]">
                 {card.btn_download_enabled ? (
-                  <Link href={card?.datasets_specification || ''} className="flex justify-center" target="_blank">
-                  <button className="rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white">
-                    <p>Download</p>
-                  </button>
+                  <Link
+                    href={card?.datasets_specification || ""}
+                    className={`${!card?.datasets_specification && 'pointer-events-none '} flex justify-center`}
+                    target="_blank"
+                  >
+                    <button
+                      className='rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white'
+                    >
+                      <p>Download</p>
+                    </button>
                   </Link>
-                  
                 ) : (
                   <div className="flex justify-center"></div>
                 )}
@@ -90,18 +100,24 @@ export default function OurDatasets({ title, datasets }) {
 
               <div className="grid items-center px-7 bg-[#E9E8F8]">
                 {card.btn_buy_enabled ? (
-                 <Link href={card?.datasets_bulk_download || ''} className="flex justify-center" target="_blank">
-                  <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple-medium)]">
-                    <p>Buy now</p>
-                  </button>
-                 </Link>
+                  <Link
+                    href={card?.datasets_bulk_download || ""}
+                    className={`${!card?.datasets_bulk_download && 'pointer-events-none '} flex justify-center`}
+                    target="_blank"
+                  >
+                    <button
+                      className='bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple-medium)]'
+                    >
+                      <p>Buy now</p>
+                    </button>
+                  </Link>
                 ) : (
                   <div className="flex justify-center"></div>
                 )}
               </div>
 
               <div className="grid place-content-center px-7 bg-[#DEDCF5]">
-                <Link href={"/contact-us"} >
+                <Link href={"/contact-us"}>
                   <button className="bg-[var(--pink)] shadow px-3 py-2 rounded-md text-white">
                     <p>Join waiting list</p>
                   </button>

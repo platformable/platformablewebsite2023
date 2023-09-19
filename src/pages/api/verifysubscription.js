@@ -3,7 +3,7 @@ const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
 export default async function verifySubscription(req, res) {
     const { email } = req.body;
-    console.log(email, apiKey)
+    // console.log(email, apiKey)
     try {
       const response = await fetch(
         `https://api.mailerlite.com/api/v2/subscribers/${email}`,
@@ -15,7 +15,7 @@ export default async function verifySubscription(req, res) {
           },
         }
       );
-        console.log(response)
+        // console.log(response)
       if (response.ok) {
         return res.status(200).send({subscribed: true});
       } else {
