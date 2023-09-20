@@ -4,7 +4,7 @@ import styles from "@/styles/Datasetspage.module.css";
 import Link from "next/link";
 
 export default function OurDatasetsMobile({ title, datasets }) {
-    console.log("datasets",datasets)
+    // console.log("datasets",datasets)
   return (
     <section className={`${styles.bg_section_datasets} py-5 md:hidden block `}>
       <div id="ourDatasetMobile" className="container mx-auto">
