@@ -20,14 +20,16 @@ export default function ResourcesSearch({ posts, heading }) {
     const filteredPosts = posts?.filter((post, index) => {
       if (searchWord === "") {
         return post;
-      } 
-      return (
-        post.attributes.content
-          .toLowerCase()
-          .includes(searchWord) ||
-        post.attributes.title.toLowerCase().includes(searchWord)
-      );
+      } else {
+        return (
+          post.attributes.title.toLowerCase().includes(searchWord.toLowerCase()) || 
+          post.attributes.content
+            .toLowerCase()
+            .includes(searchWord.toLowerCase())
+        );
+      }
     })
+    console.log("filteredPosts",filteredPosts)
     // console.log("filtrados ", filteredPosts)
     const findPostsBycategory =
       selectedCategory === "All"
@@ -37,7 +39,7 @@ export default function ResourcesSearch({ posts, heading }) {
               element.attributes.name.includes(selectedCategory)
             )
           );
-          console.log("all posts", findPostsBycategory)
+          // console.log("all posts", findPostsBycategory)
     return seeAllPosts ? findPostsBycategory : findPostsBycategory.slice(0, 6);
     // return findPostsBycategory
 

@@ -108,8 +108,8 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
                   return (
                     post.attributes.content
                       .toLowerCase()
-                      .includes(searchWord) ||
-                    post.attributes.title.toLowerCase().includes(searchWord)
+                      .includes(searchWord.toLowerCase()) ||
+                    post.attributes.title.toLowerCase().includes(searchWord.toLowerCase())
                   );
                 })
                 .map((post, index) => {
