@@ -13,7 +13,8 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
   const showedPosts = useMemo(() => {
     const selectedCategoryPosts = posts?.filter(
       (post) => post?.attributes.category.data.attributes.name?.toLowerCase() === filterByCategory?.toLowerCase()
-    );
+    )
+    
     const findPostsBycategory =
       selectedSector === "All"
         ? selectedCategoryPosts
@@ -22,7 +23,10 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
               element.attributes.name.includes(selectedSector)
             )
           );
-    return seeAllPosts ? findPostsBycategory : findPostsBycategory.slice(0, 6);
+    return seeAllPosts ? findPostsBycategory : findPostsBycategory.sort((a, b) =>
+    new Date(b?.attributes?.update_date) -
+    new Date(a?.attributes?.update_date)).slice(0, 6)
+    // return selectedCategoryPosts
   }, [seeAllPosts, selectedSector, searchWord]);
 
   const searchFunction = (word) => {
@@ -98,8 +102,8 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
             ? showedPosts
                 .sort(
                   (a, b) =>
-                    new Date(a?.attributes?.update_date) -
-                    new Date(b?.attributes?.update_date)
+                    new Date(b?.attributes?.update_date) -
+                    new Date(a?.attributes?.update_date)
                 )
                 .filter((post, index) => {
                   if (searchWord === "") {

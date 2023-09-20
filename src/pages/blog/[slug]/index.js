@@ -212,8 +212,10 @@ export default function BlogPage({ data }) {
             <InlineWidget url="https://calendly.com/platformable" />
           ) : null}
           {/* <div className="my-20 flex flex-col gap-10 lg:flex-row items-center justify-center "> */}
+          <div className="flex gap-x-10 gap-y-10 justify-center mt-20 mb-10 md:flex-row flex-col items-center">
           {data?.teams?.data?.map((member, index) => (
-            <div className="flex flex-col items-center" key={index}>
+            
+              <div key={index} className="grid justify-center items-center text-center">
               <img
                 src={member?.attributes?.image?.data?.attributes.url}
                 alt="member image"
@@ -227,7 +229,9 @@ export default function BlogPage({ data }) {
                 {member?.attributes?.position.toUpperCase()}
               </span>
             </div>
+           
           ))}
+           </div>
           {/* </div> */}
 
           {data?.footnote > 0 ? (
