@@ -17,17 +17,32 @@ export default function ResourcesSearch({ posts, heading }) {
   const [seeAllPosts, setSeeAllPosts] = useState(false);
   //UseMemo is used to calculate before render
   const showedPosts = useMemo(() => {
+    const filteredPosts = posts?.filter((post, index) => {
+      if (searchWord === "") {
+        return post;
+      } 
+      return (
+        post.attributes.content
+          .toLowerCase()
+          .includes(searchWord) ||
+        post.attributes.title.toLowerCase().includes(searchWord)
+      );
+    })
+    // console.log("filtrados ", filteredPosts)
     const findPostsBycategory =
       selectedCategory === "All"
-        ? posts
-        : posts?.filter((post) =>
+        ? filteredPosts
+        : filteredPosts?.filter((post) =>
             post?.attributes?.sectors?.data?.some((element) =>
               element.attributes.name.includes(selectedCategory)
             )
           );
+          console.log("all posts", findPostsBycategory)
     return seeAllPosts ? findPostsBycategory : findPostsBycategory.slice(0, 6);
-  }, [seeAllPosts, selectedCategory]);
-  // console.log("showed",showedPosts)
+    // return findPostsBycategory
+
+  }, [ searchWord, seeAllPosts]);
+  console.log("showed",showedPosts)
   const searchFunction = (word) => {
     setSearchWord(word);
   };
@@ -193,17 +208,17 @@ export default function ResourcesSearch({ posts, heading }) {
                     new Date(a?.attributes?.update_date) -
                     new Date(b?.attributes?.update_date)
                 )
-                .filter((post, index) => {
-                  if (searchWord === "") {
-                    return post;
-                  }
-                  return (
-                    post.attributes.content
-                      .toLowerCase()
-                      .includes(searchWord) ||
-                    post.attributes.title.toLowerCase().includes(searchWord)
-                  );
-                })
+                // .filter((post, index) => {
+                //   if (searchWord === "") {
+                //     return post;
+                //   }
+                //   return (
+                //     post.attributes.content
+                //       .toLowerCase()
+                //       .includes(searchWord) ||
+                //     post.attributes.title.toLowerCase().includes(searchWord)
+                //   );
+                // })
                 .map((post, index) => {
                   return <BlogPreviewCard post={post} key={index} />;
                 })
