@@ -8,11 +8,12 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
   const [selectedSector, setSelectedSector] = useState("All");
   const [seeAllPosts, setSeeAllPosts] = useState(false);
 
-  const selectedCategoryPosts = posts.filter(
-    (post) => post.attributes.category.data.attributes.name === filterByCategory
-  );
+  
 
   const showedPosts = useMemo(() => {
+    const selectedCategoryPosts = posts?.filter(
+      (post) => post?.attributes.category.data.attributes.name?.toLowerCase() === filterByCategory?.toLowerCase()
+    );
     const findPostsBycategory =
       selectedSector === "All"
         ? selectedCategoryPosts
@@ -22,7 +23,7 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
             )
           );
     return seeAllPosts ? findPostsBycategory : findPostsBycategory.slice(0, 6);
-  }, [seeAllPosts, selectedSector]);
+  }, [seeAllPosts, selectedSector, searchWord]);
 
   const searchFunction = (word) => {
     setSearchWord(word);
@@ -111,11 +112,6 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
                     post.attributes.title.toLowerCase().includes(searchWord)
                   );
                 })
-                .sort(
-                  (a, b) =>
-                    new Date(b?.attributes?.update_date) -
-                    new Date(a?.attributes?.update_date)
-                )
                 .map((post, index) => {
                   return <BlogPreviewCard post={post} key={index} />;
                 })
