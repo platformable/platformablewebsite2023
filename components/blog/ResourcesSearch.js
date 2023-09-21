@@ -17,20 +17,26 @@ export default function ResourcesSearch({ posts, heading }) {
   const [seeAllPosts, setSeeAllPosts] = useState(false);
   //UseMemo is used to calculate before render
   const showedPosts = useMemo(() => {
-    const filteredPosts = posts?.filter((post, index) => {
-      if (searchWord === "") {
-        return post;
-      } else {
-        return (
-          post.attributes.title.toLowerCase().includes(searchWord.toLowerCase()) || 
-          post.attributes.content
-            .toLowerCase()
-            .includes(searchWord.toLowerCase())
-        );
-      }
-    })
-    console.log("filteredPosts",filteredPosts)
-    // console.log("filtrados ", filteredPosts)
+    const filteredPosts = posts
+      ?.filter((post, index) => {
+        if (searchWord === "") {
+          return post;
+        } else {
+          return (
+            post.attributes.title
+              .toLowerCase()
+              .includes(searchWord.toLowerCase()) ||
+            post.attributes.content
+              .toLowerCase()
+              .includes(searchWord.toLowerCase())
+          );
+        }
+      })
+      .sort(
+        (a, b) =>
+          new Date(b?.attributes?.update_date) -
+          new Date(a?.attributes?.update_date)
+      );
     const findPostsBycategory =
       selectedCategory === "All"
         ? filteredPosts
@@ -39,12 +45,8 @@ export default function ResourcesSearch({ posts, heading }) {
               element.attributes.name.includes(selectedCategory)
             )
           );
-          // console.log("all posts", findPostsBycategory)
     return seeAllPosts ? findPostsBycategory : findPostsBycategory.slice(0, 6);
-    // return findPostsBycategory
-
-  }, [ searchWord, seeAllPosts]);
-  console.log("showed",showedPosts)
+  }, [searchWord, seeAllPosts, selectedCategory]);
   const searchFunction = (word) => {
     setSearchWord(word);
   };
@@ -58,13 +60,12 @@ export default function ResourcesSearch({ posts, heading }) {
   };
   const setHeaderSectorColor = (sectorName) => {
     const sectorColors = {
-      'Open Ecosystems': 'bg--gradient-oe',
-      'Open Banking / Open Finance': 'bg--gradient-obof',
-      'Open Health': 'bg--gradient-oh',
-
-    }
-    return sectorColors[sectorName]
-  }
+      "Open Ecosystems": "bg--gradient-oe",
+      "Open Banking / Open Finance": "bg--gradient-obof",
+      "Open Health": "bg--gradient-oh",
+    };
+    return sectorColors[sectorName];
+  };
   return (
     <section className={`${styles["understand-posts-bg"]}`}>
       <div className="">
@@ -129,7 +130,9 @@ export default function ResourcesSearch({ posts, heading }) {
           <Link href={`/blog/${featuredPost?.slug}`}>
             <div className="bg-white rounded-md">
               <div
-                className={`featured-post-top ${setHeaderSectorColor(featuredPost?.sectors?.data[0]?.attributes?.name)} rounded-tl-md rounded-tr-md`}
+                className={`featured-post-top ${setHeaderSectorColor(
+                  featuredPost?.sectors?.data[0]?.attributes?.name
+                )} rounded-tl-md rounded-tr-md`}
               >
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 py-3 px-7">
                   <div>
@@ -205,11 +208,7 @@ export default function ResourcesSearch({ posts, heading }) {
         <div className="grid md:grid-cols-3 grid-cols-1 gap-x-5 px-5 gap-y-5 md:px-0 my-10">
           {showedPosts
             ? showedPosts
-                .sort(
-                  (a, b) =>
-                    new Date(a?.attributes?.update_date) -
-                    new Date(b?.attributes?.update_date)
-                )
+
                 // .filter((post, index) => {
                 //   if (searchWord === "") {
                 //     return post;
