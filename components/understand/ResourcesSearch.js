@@ -8,13 +8,30 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
   const [selectedSector, setSelectedSector] = useState("All");
   const [seeAllPosts, setSeeAllPosts] = useState(false);
 
-  
-
   const showedPosts = useMemo(() => {
-    const selectedCategoryPosts = posts?.filter(
-      (post) => post?.attributes.category.data.attributes.name?.toLowerCase() === filterByCategory?.toLowerCase()
-    )
-    
+    const selectedCategoryPosts = posts
+      ?.filter((post, index) => {
+        if (searchWord === "") {
+          return post;
+        }
+        return (
+          post.attributes.content
+            .toLowerCase()
+            .includes(searchWord.toLowerCase()) ||
+          post.attributes.title.toLowerCase().includes(searchWord.toLowerCase())
+        );
+      })
+      .sort(
+        (a, b) =>
+          new Date(b?.attributes?.update_date) -
+          new Date(a?.attributes?.update_date)
+      )
+      .filter(
+        (post) =>
+          post?.attributes.category.data.attributes.name?.toLowerCase() ===
+          filterByCategory?.toLowerCase()
+      );
+
     const findPostsBycategory =
       selectedSector === "All"
         ? selectedCategoryPosts
@@ -23,9 +40,7 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
               element.attributes.name.includes(selectedSector)
             )
           );
-    return seeAllPosts ? findPostsBycategory : findPostsBycategory.sort((a, b) =>
-    new Date(b?.attributes?.update_date) -
-    new Date(a?.attributes?.update_date)).slice(0, 6)
+    return seeAllPosts ? findPostsBycategory : findPostsBycategory.slice(0, 6);
     // return selectedCategoryPosts
   }, [seeAllPosts, selectedSector, searchWord]);
 
@@ -36,7 +51,6 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
     category === selectedSector
       ? setSelectedSector("All")
       : setSelectedSector(category);
-
   return (
     <section className={`${styles["understand-posts-bg"]}`}>
       <div className="container mx-auto py-10">
@@ -100,22 +114,11 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
         <div className="grid md:grid-cols-3 grid-cols-1 gap-x-5 px-5 gap-y-5 md:px-0 my-10">
           {showedPosts
             ? showedPosts
-                .sort(
-                  (a, b) =>
-                    new Date(b?.attributes?.update_date) -
-                    new Date(a?.attributes?.update_date)
-                )
-                .filter((post, index) => {
-                  if (searchWord === "") {
-                    return post;
-                  }
-                  return (
-                    post.attributes.content
-                      .toLowerCase()
-                      .includes(searchWord.toLowerCase()) ||
-                    post.attributes.title.toLowerCase().includes(searchWord.toLowerCase())
-                  );
-                })
+                // .sort(
+                //   (a, b) =>
+                //     new Date(b?.attributes?.update_date) -
+                //     new Date(a?.attributes?.update_date)
+                // )
                 .map((post, index) => {
                   return <BlogPreviewCard post={post} key={index} />;
                 })
