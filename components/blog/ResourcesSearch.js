@@ -137,8 +137,8 @@ export default function ResourcesSearch({ posts, heading }) {
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 py-3 px-7">
                   <div>
                     <p className="text-white font-bold">
-                      {new Date(featuredPost?.publishedAt).getDate()}{" "}
-                      {new Date(featuredPost?.publishedAt).toLocaleDateString(
+                      {new Date(featuredPost?.update_date).getDate()}{" "}
+                      {new Date(featuredPost?.update_date).toLocaleDateString(
                         "en-US",
                         { month: "long" }
                       )}
