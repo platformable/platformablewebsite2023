@@ -139,7 +139,7 @@ export default function BlogPage({ data }) {
                 <a
                   href={`mailto:test@example.com?subject=${
                     data.slug
-                  }!&body=${data?.excerpt?.replace(/(<([^>]+)>)/gi, "")}`}
+                  }!&body=${data?.excerpt?.replace(/(<([^>]+)>)/gi, "")} - https://www.platformable.com/blog/${data.slug}`}
                 >
                   <img width={30} src="/email_blue.svg" alt="email" />
                 </a>
