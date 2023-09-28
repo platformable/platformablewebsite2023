@@ -146,7 +146,7 @@ export default function BlogPage({ data }) {
                 <LinkedinShareButton
                   title={data.slug}
                   summary="platformable"
-                  source="http://www.platformable.com"
+                  source={`https://www.platformable.com/blog/${data.slug}`}
                   url={`https://www.platformable.com/blog/${data.slug}`}
                 >
                   <LinkedinIcon
