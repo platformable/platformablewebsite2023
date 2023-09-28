@@ -71,6 +71,7 @@ export default function EngagementTopics({ topics }) {
         </p>
         <Link
           href="/contact-us"
+          onClick={() => plausible('Contact us', {props: {ContactUs: 'engagement topics'}})}
           className=" shadow-md rounded-md text-customBlue bg-[var(--yellow)] w-44 p-3 font-bold text-center"
         >
           Contact Us
