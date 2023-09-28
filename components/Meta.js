@@ -51,7 +51,7 @@ const Meta = ({ title, keywords, data }) => {
         }
       />
       <meta property="og:image:alt" content={title} />
-      <meta property="og:url" content={`https://www.platformable.com/blog/${datas?.slug}`} />
+      <meta property="og:url" content={`https://www.platformable.com/blog/${data?.slug}`} />
       <meta property="og:site_name" content="platformable.com" />
     </Head>
   );
