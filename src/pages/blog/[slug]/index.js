@@ -148,6 +148,7 @@ export default function BlogPage({ data }) {
                   summary="platformable"
                   source={`https://www.platformable.com/blog/${data.slug}`}
                   url={`https://www.platformable.com/blog/${data.slug}`}
+                  
                 >
                   <LinkedinIcon
                     size={30}
