@@ -12,6 +12,7 @@ import ReactMarkdown from "react-markdown";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
+import { usePlausible } from "next-plausible";
 
 // const file = await unified()
 //   .use(remarkRehype, {allowDangerousHtml: true})
@@ -20,7 +21,7 @@ import remarkGfm from "remark-gfm";
 
 export default function BlogPage({ data }) {
   const router = useRouter();
-
+  const plausible = usePlausible()
   // console.log("data",data)
 
   //get post index to create next and prev logic
@@ -139,16 +140,16 @@ export default function BlogPage({ data }) {
                 <a
                   href={`mailto:test@example.com?subject=${
                     data.slug
-                  }!&body=${data?.excerpt?.replace(/(<([^>]+)>)/gi, "")} - https://www.platformable.com/blog/${data.slug}`}
+                  }!&body=${data?.excerpt?.replace(/(<([^>]+)>)/gi, "")}`}
                 >
                   <img width={30} src="/email_blue.svg" alt="email" />
                 </a>
                 <LinkedinShareButton
-                  title={data.slug}
+                  title={data?.slug}
                   summary="platformable"
-                  source={`https://www.platformable.com/blog/${data.slug}`}
-                  url={`https://www.platformable.com/blog/${data.slug}`}
-                  
+                  source={`https://www.platformable.com/blog/${data?.slug}`}
+                  url={`https://www.platformable.com/blog/${data?.slug}`}
+                  onClick={() => plausible('ShareBlogLinkedin', {props: {ShareBlogLinkedin:`blog/${data?.slug}` }})}
                 >
                   <LinkedinIcon
                     size={30}
