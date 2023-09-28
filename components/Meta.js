@@ -20,7 +20,7 @@ const Meta = ({ title, keywords, data }) => {
         name="twitter:description"
         content={data?.excerpt?.replace(/(<([^>]+)>)/gi, "")}
       />
-      <meta name="twitter:site" content={`https://www.platformable.com/blog/${data.slug}`} />
+      <meta name="twitter:site" content={`https://www.platformable.com/blog/${data?.slug}`} />
       <meta
         name="twitter:image"
         content={
