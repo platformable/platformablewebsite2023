@@ -51,7 +51,7 @@ export default function OurSolutions({ data }) {
               </div>
             </div>
             <div className="grid items-center px-7 ">
-              <Link href="/contact-us" className="flex justify-center" >
+              <Link href="/contact-us" className="flex justify-center" onClick={() => plausible('Contact us', {props: {ContactUs: 'open ecosystem consultancy'}})}>
               <button className="bg-[var(--yellow)] px-3 py-2 shadow-md rounded-md text-[var(--purple)]">
                 <p className="font-bold">Contact us</p>
               </button>

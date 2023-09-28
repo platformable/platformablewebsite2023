@@ -142,7 +142,7 @@ export default function GovernanceProducts({ products }) {
                       alt="Product icon"
                     />
                   </div>
-                  <Link href="/contact-us">
+                  <Link href="/contact-us"  onClick={() => plausible('Contact us', {props: {ContactUs: 'API governance'}})}>
                     <button className="bg-[var(--blue-extra-dark)] py-2 rounded-md text-white">
                       <p>Join waiting list</p>
                     </button>
