@@ -138,9 +138,10 @@ export default function BlogPage({ data }) {
               </div>
               <div className="flex items-center gap-x-3">
                 <a
-                  href={`mailto:test@example.com?subject=${
+                target="_blank"
+                  href={`mailto:?subject=${
                     data.slug
-                  }!&body=${data?.excerpt?.replace(/(<([^>]+)>)/gi, "")}`}
+                  }!&body=${data?.excerpt?.replace(/(<([^>]+)>)/gi, "")} - https://www.platformable.com/blog/${data?.slug}`}
                 >
                   <img width={30} src="/email_blue.svg" alt="email" />
                 </a>
