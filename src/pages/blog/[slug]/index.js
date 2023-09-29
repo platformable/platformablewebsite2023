@@ -141,7 +141,7 @@ export default function BlogPage({ data }) {
                 target="_blank"
                   href={`mailto:?subject=${
                     data.slug
-                  }!&body=${data?.excerpt?.replace(/(<([^>]+)>)/gi, "")} - https://www.platformable.com/blog/${data?.slug}`}
+                  }!&body=${`${data?.excerpt?.replace(/(<([^>]+)>)/gi, "")} - https://www.platformable.com/blog/${data?.slug}`}`}
                 >
                   <img width={30} src="/email_blue.svg" alt="email" />
                 </a>
