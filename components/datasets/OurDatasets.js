@@ -89,7 +89,7 @@ export default function OurDatasets({ title, datasets }) {
                     target="_blank"
                   >
                     <button
-                      className='rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white'
+                      className='rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white w-full'
                     >
                       <p>Download</p>
                     </button>
@@ -99,23 +99,38 @@ export default function OurDatasets({ title, datasets }) {
                 )}
               </div>
 
-              <div className="grid items-center px-7 bg-[#E9E8F8]">
+              <div className="grid grid-rows-[2.3fr_1fr]  items-center px-7  bg-[#E9E8F8]">
                 {card.btn_buy_enabled ? (
                   <Link
                     href={card?.datasets_bulk_download || ""}
-                    className={`${!card?.datasets_bulk_download && 'pointer-events-none '} flex justify-center`}
+                    className={`${!card?.datasets_bulk_download && 'pointer-events-none '} self-end`}
                     onClick={() => sendPlausibleCustomGoal(card?.plausible_buy_tracker)}
                     target="_blank"
                   >
-                    <button
-                      className='bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple-medium)]'
+                    {/* Change button if is OBOF until sales strategy is defined */}
+                    {card?.datasets_product_name  === 'Open Banking/ Open Finance' ? (
+                      <button
+                      className='bg-[var(--pink)] px-3 py-2 shadow rounded-md text-white  w-full'
+                    >
+                      <p>Contact us </p>
+                    </button>
+                    ) : (
+                      <button
+                      className='bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple-medium)] w-full'
                     >
                       <p>Buy now</p>
                     </button>
+                    )}
+                    
                   </Link>
                 ) : (
                   <div className="flex justify-center"></div>
                 )}
+
+                    {/* Change button if is OBOF until sales strategy is defined */}
+                    {card?.datasets_product_name  === 'Open Banking/ Open Finance' && (
+                      <span className="text-center block mt-2 self-start">for enterprise sales</span>
+                    )}
               </div>
 
               <div className="grid place-content-center px-7 bg-[#DEDCF5]">
