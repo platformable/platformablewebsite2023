@@ -99,7 +99,7 @@ export default function OurDatasets({ title, datasets }) {
                 )}
               </div>
 
-              <div className="grid grid-rows-[2.3fr_1fr]  items-center px-7  bg-[#E9E8F8]">
+              <div className="grid grid-rows-[2fr_1fr]  items-center px-7  bg-[#E9E8F8]">
                 {card.btn_buy_enabled ? (
                   <Link
                     href={card?.datasets_bulk_download || ""}
