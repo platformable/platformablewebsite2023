@@ -107,11 +107,21 @@ export default function OurDatasets({ title, datasets }) {
                     onClick={() => sendPlausibleCustomGoal(card?.plausible_buy_tracker)}
                     target="_blank"
                   >
-                    <button
+                    {/* Change button if is OBOF until sales strategy is defined */}
+                    {card?.datasets_product_name  === 'Open Banking/ Open Finance' ? (
+                      <button
+                      className='bg-[var(--pink)] px-3 py-2 shadow rounded-md text-white text-base'
+                    >
+                      <p>Contact us for enterprise sales</p>
+                    </button>
+                    ) : (
+                      <button
                       className='bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple-medium)]'
                     >
                       <p>Buy now</p>
                     </button>
+                    )}
+                    
                   </Link>
                 ) : (
                   <div className="flex justify-center"></div>
