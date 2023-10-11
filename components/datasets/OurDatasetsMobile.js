@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function OurDatasetsMobile({ title, datasets }) {
   return (
-    <section className={`${styles.bg_section_datasets} py-5 md:hidden block`}>
+    <section className={`${styles.bg_section_datasets} py-5 lg:hidden block`}>
       <div id="ourDatasetMobile" className="container mx-auto">
         <p className="text-white  font-bold mb-5 xl:mb-10">
           You can also access our datasets by purchasing one of our ready-made
