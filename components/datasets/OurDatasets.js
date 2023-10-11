@@ -10,7 +10,7 @@ export default function OurDatasets({ title, datasets }) {
   return (
     <section className={`${styles.bg_section_datasets} md:pb-20 pb-0 pt-2`}>
       <div className="container mx-auto">
-        <div className="hidden md:block md:grid  gap-1">
+        <div className="hidden  lg:grid  gap-1">
           <p className="text-white  font-bold mb-5 xl:mb-10">
             You can also access our datasets by purchasing one of our ready-made
             data products, including trends reports and analytical tools.
@@ -99,22 +99,29 @@ export default function OurDatasets({ title, datasets }) {
                 )}
               </div>
 
-              <div className="grid grid-rows-[2fr_1fr]  items-center px-7  bg-[#E9E8F8]">
+              <div className="grid   items-center px-7  bg-[#E9E8F8]">
                 {card.btn_buy_enabled ? (
                   <Link
                     href={card?.datasets_bulk_download || ""}
-                    className={`${!card?.datasets_bulk_download && 'cursor-pointer '} self-end`}
+                    className={`${!card?.datasets_bulk_download && 'cursor-pointer '} `}
                     onClick={() => sendPlausibleCustomGoal(card?.plausible_buy_tracker)}
                     target="_blank"
                   >
-                    
+                    {/* grid-rows-[2.2fr_1fr] lg:grid-rows-[20fr_1fr] xl:grid-rows-[2.3fr_1fr] */}
                     {/* Change button if is OBOF until sales strategy is defined */}
                     {card?.datasets_product_name  === 'Open Banking/ Open Finance' ? (
+                     <>
                      <button
-                        className='bg-[var(--pink)] px-3 py-2 shadow rounded-md text-white  w-full'
+                        className='bg-[var(--pink)] px-3 py-2 shadow rounded-md text-white  w-full  relative inline-block  lg:translate-y-[45%] xl:translate-y-[50%] mb-6'
                     >
                      <p>Contact us </p>
+
                     </button>
+                    {/* Change button if is OBOF until sales strategy is defined */}
+                    {card?.datasets_product_name  === 'Open Banking/ Open Finance' && (
+                      <span className="text-center block self-start text-sm relative translate-y-5 lg:translate-y-2">for enterprise sales</span>
+                    )}
+                     </>
                     ) : (
                       <button
                       className='bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple-medium)] w-full'
@@ -128,10 +135,7 @@ export default function OurDatasets({ title, datasets }) {
                   <div className="flex justify-center"></div>
                 )}
 
-                    {/* Change button if is OBOF until sales strategy is defined */}
-                    {card?.datasets_product_name  === 'Open Banking/ Open Finance' && (
-                      <span className="text-center block mt-2 self-start">for enterprise sales</span>
-                    )}
+                    
               </div>
 
               <div className="grid place-content-center px-7 bg-[#DEDCF5]">
