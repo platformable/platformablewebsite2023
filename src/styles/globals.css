@@ -3059,3 +3059,102 @@ margin:0 !important;
 .blog-page tr:nth-child(odd) {
   background-color: #f8f8f8;
 }
+
+
+
+
+/* OBOF Carousel */
+
+
+
+.items {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  user-select: none;
+}
+
+.items .item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 870px;
+  height: 500px;
+  /* border-radius: 50%; */
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  z-index: -1;
+  opacity: 0;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item.active {
+  opacity: 1;
+  z-index: 5;
+}
+
+.item.prev {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(-115%, -50%) scale(0.7);
+}
+
+.item.next {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(15%, -50%) scale(0.7);
+}
+
+.items .buttonContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 820px;
+  z-index: 100;
+}
+
+.buttonContainer .button {
+  /* color: #fff; */
+  font-size: 32px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.75;
+  transition: all 300ms ease-in-out;
+}
+
+.buttonContainer .button:hover {
+  opacity: 1;
+}
+
+.buttonContainer .button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: var(--blue-dark);
+  border-radius: 50%;
+  z-index: -99;
+}
+
+.buttonContainer .button:nth-child(1) {
+  float: left;
+}
+
+.buttonContainer .button:nth-child(2) {
+  float: right;
+}
+
+/* ====================================================== */
