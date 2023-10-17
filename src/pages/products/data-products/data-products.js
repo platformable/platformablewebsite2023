@@ -1,12 +1,12 @@
-import Layout from "../../../components/Layout";
-import Hero from "../../../components/data-products/Hero";
+import Layout from "../../../../components/Layout";
+import Hero from "../../../../components/data-products/Hero";
 import styles from '@/styles/DataProducts.module.css'
-import OurProducts from "../../../components/data-products/OurProducts";
-import OurProcess from "../../../components/data-products/OurProcess";
-import FindMore from "../../../components/data-products/FindMore";
-import Testimonials from "../../../components/homepage/Testimonials";
-import Meta from "../../../components/Meta";
-import OurProductssMobile from "../../../components/data-products/OurProductsMobile";
+import OurProducts from "../../../../components/data-products/OurProducts";
+import OurProcess from "../../../../components/data-products/OurProcess";
+import FindMore from "../../../../components/data-products/FindMore";
+import Testimonials from "../../../../components/homepage/Testimonials";
+import Meta from "../../../../components/Meta";
+import OurProductssMobile from "../../../../components/data-products/OurProductsMobile";
 export default function DataProducts({ data }) {
   // console.log("data",data);
 
