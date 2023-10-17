@@ -12,7 +12,7 @@ export default function OpenBankingOpenFinanceTrendsReports() {
         <Layout>
             <Hero />
 
-            <section id="actionable-discover">
+            <section id="actionable-discover" className="bg--gradient-obof py-10">
                 <ActionableInformation />
                 <DiscoverBenefits />
             </section>
