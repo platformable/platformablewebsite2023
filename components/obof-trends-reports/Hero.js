@@ -56,7 +56,7 @@ export default function Hero({data}) {
           <div className={`item active p-10`}>
             <div className="absolute bg-white rounded-[150px] w-[130px] h-[130px]  -ml-7 -mt-10  text-[#3822CC] font-bold flex flex-col justify-center">
               NEW <br /> version <br />{" "}
-              <span className="font-medium">PDF+CSV</span>
+              <span className="font-medium">PDF+CSV</span>🚀
             </div>
             <img src={data?.hero_images?.data[2]?.attributes?.url} alt="" className="w-auto" />
           </div>

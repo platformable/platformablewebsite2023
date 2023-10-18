@@ -5,6 +5,7 @@ import Hero from "../../../../components/obof-trends-reports/Hero";
 import ProductDescription from "../../../../components/obof-trends-reports/ProductDescription";
 import ProductDescriptionMobile from "../../../../components/obof-trends-reports/ProductDescriptionMobile";
 import FindMore from "../../../../components/data-products/FindMore";
+import OurProductssMobile from "../../../../components/data-products/OurProductsMobile";
 
 
 export default function OpenBankingOpenFinanceTrendsReports({data}) {
@@ -19,6 +20,7 @@ export default function OpenBankingOpenFinanceTrendsReports({data}) {
                 <DiscoverBenefits data={data}/>
             </section>
             <ProductDescription data={data}/>
+            <OurProductssMobile products={data?.products}/>
 
         </Layout>
         </>
