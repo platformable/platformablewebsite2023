@@ -5,7 +5,6 @@ import Hero from "../../../../components/obof-trends-reports/Hero";
 import ProductDescription from "../../../../components/obof-trends-reports/ProductDescription";
 import ProductDescriptionMobile from "../../../../components/obof-trends-reports/ProductDescriptionMobile";
 import FindMore from "../../../../components/data-products/FindMore";
-import OurProductssMobile from "../../../../components/data-products/OurProductsMobile";
 
 
 export default function OpenBankingOpenFinanceTrendsReports({data}) {
@@ -20,8 +19,8 @@ export default function OpenBankingOpenFinanceTrendsReports({data}) {
                 <DiscoverBenefits data={data}/>
             </section>
             <ProductDescription data={data}/>
-            <OurProductssMobile products={data?.products}/>
-
+            <ProductDescriptionMobile products={data?.products}/>
+            <FindMore sectors={data?.sectors}/>
         </Layout>
         </>
     );
@@ -30,7 +29,7 @@ export default function OpenBankingOpenFinanceTrendsReports({data}) {
 export async function getServerSideProps(ctx) {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/product-landing-pages/1?populate[hero_images]=*&populate[actionable_information_card][populate][image]=*&populate[discover][populate][persona][populate][persona_image]=*&populate[products][populate][product_icon]=*&populate[sectors][populate][icon][populate][image]=*&populate[discover][populate][benefits]=*`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/product-landing-pages/1?populate[hero_images]=*&populate[actionable_information_card][populate][image]=*&populate[discover][populate][persona][populate][persona_image]=*&populate[products][populate][product_icon]=*&populate[sectors][populate][icon]=*&populate[sectors][populate][image]=*&populate[discover][populate][benefits]=*`
       );
       const data = await res.json();
   
