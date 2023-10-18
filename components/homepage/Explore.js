@@ -41,7 +41,7 @@ const sectorsList = [
 ];
 export default function Explore({ vertical_description_card, title }) {
   return (
-    <section className="py-10">
+    <section className="py-20">
       <div className="container mx-auto">
         <div className="flex gap-x-5 items-center md:mb-10 mb-10">
           <img
