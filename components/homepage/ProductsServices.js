@@ -3,7 +3,7 @@ import styles from "@/styles/Homepage.module.css";
 import Link from "next/link";
 export default function ProductsServices({ title, product_cards }) {
   return (
-    <section className={`${styles.section_products_services} py-10`}>
+    <section className={`bg-[#06DE8B] py-10`}>
       <div className="container mx-auto md:mb-10 mb-10">
         <div className="flex gap-x-5 items-center ">
           <img
@@ -12,7 +12,7 @@ export default function ProductsServices({ title, product_cards }) {
             className="md:flex hidden"
           />
           <h2
-            className={`text-[#5B24EC] font-bold md:leading-10 leading-9`}
+            className={`text-[#2A2FC1] font-bold md:leading-10 leading-9`}
           >
             {title}
           </h2>
@@ -30,14 +30,14 @@ export default function ProductsServices({ title, product_cards }) {
                     src={card?.list_card_description_img?.data?.attributes?.url}
                     alt={`${card?.list_card_description_product_name} icon`}
                   />
-                  <h6 className="">
+                  <h6 className="font-bold">
                     {card?.list_card_description_product_name}
                   </h6>
                 </div>
                 <Link href={`/products${card?.list_card_description_button_text}`}>
                   <button className="border-none shadow-md flex bg-[var(--yellow)] items-center gap-2  rounded-lg  px-3 md:p-x5 py-2">
                     <span className="text-sm md:text-base text-[var(--purple-medium)]">
-                      Know more
+                      find out more
                     </span>
                     <img
                       src="/icon_arrow_purple.svg"

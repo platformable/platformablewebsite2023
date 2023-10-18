@@ -3,12 +3,8 @@ import React from 'react'
 import styles from '@/styles/OBOFTrendsReportspage.module.css'
 import Link from 'next/link';
 
-export default function ProductDescriptionMobile() {
+export default function ProductDescriptionMobile({products}) {
 
-const products=[{
-    id:1,
-    data:""
-}]
 
   return (
     <section className={` py-5 md:hidden block bg-[var(--purple-medium)]`}>
@@ -31,7 +27,7 @@ const products=[{
                     dangerouslySetInnerHTML={{
                       __html: product ?.data_products_product_description,
                     }}
-                    className="mb-4"
+                    className="mb-4 lista-custom"
                   />
                    <small className="font-bold">{product?.disclaimer}</small>
 
@@ -62,7 +58,7 @@ const products=[{
                       <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple)]">
                         <p>
                           <strong>
-                            ${product?.data_products_product_price_quarter}
+                            ${product?.data_products_product_price_quarter} + IVA
                           </strong>{" "}
                           per quarter
                         </p>
@@ -70,7 +66,7 @@ const products=[{
                       <button className="bg-[var(--orange-medium)] leading-snug px-3 py-2 shadow rounded-md text-[var(--purple)]">
                         <p>
                           <strong>
-                            ${product?.data_products_product_price_year}
+                            ${product?.data_products_product_price_year} + IVA
                           </strong>{" "}
                           per year
                         </p>
