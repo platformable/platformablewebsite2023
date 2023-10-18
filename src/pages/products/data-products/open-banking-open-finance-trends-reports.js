@@ -5,43 +5,45 @@ import Hero from "../../../../components/obof-trends-reports/Hero";
 import ProductDescription from "../../../../components/obof-trends-reports/ProductDescription";
 import ProductDescriptionMobile from "../../../../components/obof-trends-reports/ProductDescriptionMobile";
 import FindMore from "../../../../components/data-products/FindMore";
+import OurProductssMobile from "../../../../components/data-products/OurProductsMobile";
 
 
-export default function OpenBankingOpenFinanceTrendsReports() {
+export default function OpenBankingOpenFinanceTrendsReports({data}) {
+    console.log(data)
     return (
         <>
         <Layout>
-            <Hero />
+            <Hero data={data}/>
 
             <section id="actionable-discover" className="bg--gradient-obof py-10">
-                <ActionableInformation />
-                <DiscoverBenefits />
+                <ActionableInformation data={data}/>
+                <DiscoverBenefits data={data}/>
             </section>
-            <ProductDescription />
-            <ProductDescriptionMobile />
+            <ProductDescription data={data}/>
+            <OurProductssMobile products={data?.products}/>
 
         </Layout>
         </>
     );
 }
 
-// export async function getServerSideProps(ctx) {
-//     try {
-//       const res = await fetch(
-//         `${process.env.NEXT_PUBLIC_SERVER_URL}/api/data-product?populate[data_products_hero_img]=*&populate[featured_img]=*&populate[products][populate][product_icon]=*&populate[testimonials][populate][testimonials_img]=*&populate[discovery_images]=*&populate[scope_img1]=*&populate[scope_img2]=*&populate[scope_img3]=*&populate[sectors][populate][icon]=*&&populate[sectors][populate][image]=*`
-//       );
-//       const data = await res.json();
+export async function getServerSideProps(ctx) {
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/product-landing-pages/1?populate[hero_images]=*&populate[actionable_information_card][populate][image]=*&populate[discover][populate][persona][populate][persona_image]=*&populate[products][populate][product_icon]=*&populate[sectors][populate][icon][populate][image]=*&populate[discover][populate][benefits]=*`
+      );
+      const data = await res.json();
   
-//       return {
-//         props: {
-//           data: data?.data?.attributes,
-//         },
-//       };
-//     } catch (error) {
-//       return {
-//         props: {
-//           data: "No Data",
-//         },
-//       };
-//     }
-//   }
+      return {
+        props: {
+          data: data?.data?.attributes,
+        },
+      };
+    } catch (error) {
+      return {
+        props: {
+          data: "No Data",
+        },
+      };
+    }
+  }

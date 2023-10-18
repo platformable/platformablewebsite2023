@@ -3120,7 +3120,7 @@ margin:0 !important;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 820px;
-  z-index: 100;
+  z-index: 6;
 }
 
 .buttonContainer .button {
@@ -3158,3 +3158,11 @@ margin:0 !important;
 }
 
 /* ====================================================== */
+.lista-custom ul{
+  list-style-image: url('/tailored_check.svg') !important;
+  margin-left: 1.5rem;
+  
+}
+.lista-custom ul li{
+  margin-bottom: 1rem; 
+}
