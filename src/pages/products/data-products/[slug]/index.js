@@ -8,7 +8,7 @@ import FindMore from "../../../../../components/data-products/FindMore";
 
 
 export default function OpenBankingOpenFinanceTrendsReports({data}) {
-    console.log(data)
+    
     return (
         <>
         <Layout>
@@ -41,6 +41,7 @@ export async function getServerSideProps(ctx) {
         },
       };
     } catch (error) {
+      console.log("error de products/dataproducts/index",error)
       return {
         props: {
           data: "No Data",
