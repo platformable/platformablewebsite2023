@@ -3,44 +3,9 @@ import ListItemCard from "../ListItemCard";
 
 export default function SupportOpenEcosystems({ list_items_cards, title }) {
   const [supportCards, setSupportCards] = useState(list_items_cards);
-  // const [newCards, setNewCards] = useState([]);
-
-  // useEffect(() => {
-  //   sortCards();
-  // }, []);
-  // const sortCards = () => {
-  //   let cardsCopy = [...supportCards];
-
-  //   let evenCards = cardsCopy.filter(
-  //     (card) => cardsCopy.indexOf(card) % 2 === 0
-  //   );
-  //   let oddCards = cardsCopy.filter(
-  //     (card) => cardsCopy.indexOf(card) % 2 === 1
-  //   );
-  //   let finalArray = [...evenCards, ...oddCards];
-  //   setNewCards(finalArray);
-  // };
-
-  // const allCardForLargeScreen =
-  //   supportCards &&
-  //   supportCards.map((card, i) => (
-  //     <ListItemCard item_description={card} key={i} />
-  //   ));
-
-  // const evenCards =
-  //   supportCards &&
-  //   supportCards
-  //     .filter((card, i) => i % 2 === 0)
-  //     .map((card, i) => <ListItemCard item_description={card} key={i} />);
-
-  // const oddCards =
-  //   supportCards &&
-  //   supportCards
-  //     .filter((card, i) => i % 2 === 1)
-  //     .map((card, i) => <ListItemCard item_description={card} key={i} />);
 
   return (
-    <section className=" bg-[var(--purple-double-extra-light)] py-10 text-[#2A2FC1]">
+    <section className=" bg-[#06DE8B] py-10 text-[#2A2FC1]">
       <div className="flex gap-x-5 items-center container mx-auto  mb-10">
         <img
           src="/icon_section01.svg"

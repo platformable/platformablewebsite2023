@@ -1,0 +1,10 @@
+<svg id="benefits_check" data-name="benefits check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35.121" height="35.121" viewBox="0 0 35.121 35.121">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f157ff"/>
+      <stop offset="1" stop-color="#ff9d00"/>
+    </linearGradient>
+  </defs>
+  <circle id="Ellipse_667" data-name="Ellipse 667" cx="17.561" cy="17.561" r="17.561" fill="url(#linear-gradient)"/>
+  <path id="Path_4925" data-name="Path 4925" d="M76.792,24.012l3.944,3.8,9.3-9.438" transform="translate(-65.854 -5.539)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+</svg>
