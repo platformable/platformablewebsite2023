@@ -4,8 +4,8 @@ import styles from "@/styles/Homepage.module.css";
 import Image from 'next/image'
 
 export default function Hero({ heroImg, heroSubtitle, hero_title }) {
-  const subtitle = heroSubtitle.split(" ")[0];
-  const simpleSubtitle = heroSubtitle.substr(heroSubtitle.indexOf(" ") + 1);
+  const subtitle = heroSubtitle?.split(" ")[0];
+  const simpleSubtitle = heroSubtitle?.substr(heroSubtitle.indexOf(" ") + 1);
 
   return (
     <section id="hero" className="">

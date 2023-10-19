@@ -84,6 +84,21 @@ export default function BlogPage({ data }) {
     findIndexOfActivePost(relatedSectorPosts);
   }, [selectedPostIndexPosition, relatedSectorPosts]);
 
+
+
+  function img_find() {
+    return Array.from(document.getElementsByTagName("img")).map(i => i.src);
+}
+
+
+
+
+useEffect(()=>{
+  const imagesWithSrcset = document.querySelectorAll('.blog-page img')
+  imagesWithSrcset.forEach(image=>image.srcset=image.src)
+},[])
+
+
   const setHeaderSectorColor = (sectorName) => {
     const sectorColors = {
       "Open Ecosystems": "bg--gradient-oe",
