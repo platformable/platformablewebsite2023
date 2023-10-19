@@ -40,7 +40,7 @@ export default function BlogPreviewCard({ post }) {
 
           </p>
         </div>
-        <div className="items-center flex gap-x-7 ml-2">
+        <div className="items-center flex">
           <p className="text-white font-bold">
             {post?.attributes?.sectors?.data[0]?.attributes?.name}
           </p>
