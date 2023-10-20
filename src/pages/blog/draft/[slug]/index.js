@@ -114,7 +114,7 @@ useEffect(()=>{
 
   return (
     <Layout>
-      <Meta title={data?.title} data={data} />
+    {/*   <Meta title={data?.title} data={data} /> */}
 
       <section className="blog-container">
         <div
