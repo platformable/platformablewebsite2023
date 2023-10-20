@@ -1,13 +1,13 @@
 import { useEffect, useState, useMemo } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Layout from "../../../../components/Layout";
+import Layout from "../../../../../components/Layout";
 import styles from "@/styles/Blogpage.module.css";
-import BlogPreviewCard from "../../../../components/BlogPreviewCard";
+import BlogPreviewCard from "../../../../../components/BlogPreviewCard";
 import Head from "next/head";
 import { InlineWidget } from "react-calendly";
 import { LinkedinShareButton, LinkedinIcon } from "react-share";
-import Meta from "../../../../components/Meta";
+import Meta from "../../../../../components/Meta";
 import ReactMarkdown from "react-markdown";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeRaw from "rehype-raw";
@@ -19,7 +19,7 @@ import { usePlausible } from "next-plausible";
 //   .use(rehypeSanitize)
 //   .process(await read('index.html'))
 
-export default function BlogPage({ data }) {
+export default function BlogDraftPage({ data }) {
   const router = useRouter();
   const plausible = usePlausible()
   // console.log("data",data)
@@ -298,7 +298,7 @@ useEffect(()=>{
             <div className="grid lg:grid-cols-3 gap-x-10 gap-y-7">
               {relatedSectorPosts?.map((post, index) => {
                 if (index <= 2) {
-                  return <BlogPreviewCard post={post} key={index} draft={false}/>;
+                  return <BlogPreviewCard post={post} key={index} />;
                 } else {
                   null;
                 }
@@ -318,7 +318,7 @@ export async function getServerSideProps(ctx) {
   try {
     const [data] = await Promise.all([
       fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?filters[slug]=${slug}&populate[teams][populate][image]=*&populate[featured_img]=*&populate[sectors]=*&populate[category]=*&populate[footnote]=*`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?publicationState=preview&filters[publishedAt][$null]=true&filters[slug]=${slug}&populate[teams][populate][image]=*&populate[featured_img]=*&populate[sectors]=*&populate[category]=*&populate[footnote]=*`
       ).then((res) => res.json()),
       // fetch(
       //   `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?populate=*&filters[sectors][name]=Open Health`

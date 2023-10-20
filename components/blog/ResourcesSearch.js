@@ -4,7 +4,7 @@ import Search from "../Search";
 import BlogPreviewCard from "../BlogPreviewCard";
 import Link from "next/link";
 
-export default function ResourcesSearch({ posts, heading }) {
+export default function ResourcesSearch({ posts, heading,draft }) {
   // console.log("posts",posts)
 
   const featuredPost = posts[posts.length - 1]?.attributes;
@@ -127,7 +127,7 @@ export default function ResourcesSearch({ posts, heading }) {
         </div>
 
         <section id="featured-post" className="my-10">
-          <Link href={`/blog/${featuredPost?.slug}`}>
+          <Link href={!draft ?`/blog/${featuredPost?.slug}`:`/blog/draft/${featuredPost?.slug}`}>
             <div className="bg-white rounded-md">
               <div
                 className={`featured-post-top ${setHeaderSectorColor(
@@ -157,7 +157,7 @@ export default function ResourcesSearch({ posts, heading }) {
                     </h6>
 
                     <span>Written by </span>
-                    {featuredPost?.teams.data.map((team, index) => {
+                    {featuredPost?.teams?.data.map((team, index) => {
                       return (
                         <span key={index}>
                           {team.attributes.name +
@@ -221,7 +221,7 @@ export default function ResourcesSearch({ posts, heading }) {
                 //   );
                 // })
                 .map((post, index) => {
-                  return <BlogPreviewCard post={post} key={index} />;
+                  return <BlogPreviewCard post={post} key={index} draft={draft} />;
                 })
             : null}
         </div>
