@@ -5,6 +5,7 @@ import Hero from "../../../../../components/obof-trends-reports/Hero";
 import ProductDescription from "../../../../../components/obof-trends-reports/ProductDescription";
 import ProductDescriptionMobile from "../../../../../components/obof-trends-reports/ProductDescriptionMobile";
 import FindMore from "../../../../../components/data-products/FindMore";
+import Meta from "../../../../../components/Meta";
 
 
 export default function OpenBankingOpenFinanceTrendsReports({data}) {
@@ -31,6 +32,7 @@ export default function OpenBankingOpenFinanceTrendsReports({data}) {
     }
     return (
         <>
+        <Meta title={data?.hero_product_name} keywords={'open banking open finance trends reports, open health, open ecosystems, fintech APIs, financial inclusion'} data={data}/>
         <Layout>
             <Hero data={data}/>
 
