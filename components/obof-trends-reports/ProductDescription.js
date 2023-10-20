@@ -1,7 +1,7 @@
 import styles from "@/styles/OBOFTrendsReportspage.module.css";
 import Link from "next/link";
 
-export default function ProductDescription({ data }) {
+export default function ProductDescription({ data, sectorsStyle }) {
   return (
     <section className="pb-20 pt-2 bg-[var(--purple-medium)] hidden md:block">
       {/* <div className="mb-10 flex gap-x-5">
@@ -37,7 +37,7 @@ export default function ProductDescription({ data }) {
             key={index}
           >
             <div
-              className={`${styles.card_heading} flex flex-col  items-center justify-center gap-5 py-12  px-10`}
+              className={`${sectorsStyle[data?.sector].bgGradientColor} flex flex-col  items-center justify-center gap-5 py-12  md:px-2 lg:px-10`}
             >
               <img
                 src={
@@ -47,11 +47,11 @@ export default function ProductDescription({ data }) {
                 className="w-2/7"
               />
               <p className="text-white text-center  font-bold ">
-                Open Banking/ Open Finance Trends Report
+                {data?.hero_product_name}
               </p>
             </div>
 
-            <div className="text-[#3328C3] flex flex-col justify-center items-center p-7 bg-white">
+            <div className="text-[#3328C3] flex flex-col justify-center items-center p-7 md:px-4 lg:px-7 bg-white">
               <div
                 dangerouslySetInnerHTML={{
                   __html: product?.data_products_product_description,
@@ -61,7 +61,7 @@ export default function ProductDescription({ data }) {
               {/* <small className="font-bold">{'card?.disclaimer'}</small> */}
             </div>
 
-            <div className="grid items-center justify-items-center px-7 bg-[#F6F4FF]">
+            <div className="grid items-center justify-items-center px-3 lg:px-5 bg-[#F6F4FF]">
               {product?.btn_download_enabled && (
                 <Link
                   href={product?.data_products_products_sample}

@@ -89,7 +89,7 @@ export default function Hero({data}) {
             </div>
           </div>
         </div>
-        <div className="flex gap-5 justify-center mt-4">
+        <div className="flex flex-col md:flex-row gap-5 justify-center mt-4">
           <Link href={data?.buy_button}>
           <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple-medium)] w-56">
             <p>Buy now</p>

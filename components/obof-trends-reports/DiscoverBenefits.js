@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-export default function DiscoverBenefits({ data }) {
+export default function DiscoverBenefits({ data, sectorsStyle }) {
   return (
     <div className="container mx-auto my-10">
       <div className="flex gap-x-5 items-center   py-10">
@@ -10,7 +10,7 @@ export default function DiscoverBenefits({ data }) {
           alt=""
           className="md:flex hidden"
         />
-        <h3 className={`text-white  font-bold md:leading-10 leading-8 `}>
+        <h3 className={`${sectorsStyle[data?.sector].textColor} text-white  font-bold md:leading-10 leading-8 `}>
           {data?.discover_title}
         </h3>
       </div>
@@ -55,7 +55,7 @@ export default function DiscoverBenefits({ data }) {
                   <div className="flex gap-x-1 items-center ">
                     <div>
                       <img
-                        src="/benefits_check.svg"
+                        src={sectorsStyle[data?.sector].checklistImage}
                         alt=""
                         className="self-start"
                         width={24}
