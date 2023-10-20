@@ -3,13 +3,13 @@ import React from 'react'
 import styles from '@/styles/OBOFTrendsReportspage.module.css'
 import Link from 'next/link';
 
-export default function ProductDescriptionMobile({products}) {
+export default function ProductDescriptionMobile({ data, sectorsStyle }) {
 
 
   return (
     <section className={` py-5 md:hidden block bg-[var(--purple-medium)]`}>
     <div id="ourDatasetMobile" className="container mx-auto">
-      {products?.map((product, index) => {
+      {data?.products?.map((product, index) => {
         return (
           <div data-card-number={index + 1} key={index}>
             <div
@@ -18,7 +18,7 @@ export default function ProductDescriptionMobile({products}) {
             >
               <div
                 id="product-title"
-                className={`${styles.card_heading}  grid justify-center px-5 py-7 rounded-tl-lg rounded-tr-lg`}
+                className={`${sectorsStyle[data?.sector].bgGradientColor}  grid justify-center px-5 py-7 rounded-tl-lg rounded-tr-lg`}
               >
                 <p className="text-white">{product?.data_products_product_name}</p>
               </div>

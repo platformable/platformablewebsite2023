@@ -10,7 +10,7 @@ export default function BlogsIndex({ posts }) {
       <section id="blog" className={`${styles["background_blog"]} py-10`}>
         <div className="container mx-auto">
           <h1 className="mb-5 font-bold text-white ">Blog</h1>
-          <ResourcesSearch posts={posts} />
+          <ResourcesSearch posts={posts} draft={false}/>
         </div>
       </section>
     </Layout>

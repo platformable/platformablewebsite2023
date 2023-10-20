@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ActionableInformation({data}) {
+export default function ActionableInformation({data, sectorsStyle}) {
   return (
     <div className="container mx-auto">
       <div className="flex gap-x-5 items-center   py-10">
@@ -9,7 +9,7 @@ export default function ActionableInformation({data}) {
           alt=""
           className="md:flex hidden"
         />
-        <h3 className={`text-white  font-bold md:leading-10 leading-8 `}>
+        <h3 className={`${sectorsStyle[data?.sector].textColor} text-white  font-bold md:leading-10 leading-8 `}>
           {data?.actionable_information_title}
         </h3>
       </div>
