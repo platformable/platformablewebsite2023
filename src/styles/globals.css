@@ -506,38 +506,44 @@ h6 {
 }
 
 /* SUMMARY BOX COMPONENT */
-
+.summary-box {
+  color: black !important;
+}
+.summary-box ol, .summary-box ul{
+  margin-left: 1.5rem;
+  list-style-type: style !important;
+}
 .summary-box h3 {
   font-weight: bold;
 }
 .summary-box-general-dark {
-  background: linear-gradient(90deg, #f157ff 0%, #22da8f 100%) 0% 0% no-repeat padding-box;
+  background: linear-gradient(90deg, #f157ff60 0%, #22da8f60 100%) 0% 0% no-repeat padding-box;
   padding:20px;
   border-radius:10px;
 }
 .summary-box-bank-dark {
-  background: linear-gradient(90deg, #f157ff 0%, #f5a423 100%) 0% 0% no-repeat padding-box;
+  background: linear-gradient(90deg, #f157ff60 0%, #f5a42360 100%) 0% 0% no-repeat padding-box;
   padding:20px;
   border-radius: 10px;
 }
 .summary-box-gov-dark {
-  background: linear-gradient(90deg, #f157ff 0%, #22da8f 100%) 0% 0% no-repeat padding-box;
+  background: linear-gradient(90deg, #f157ff60 0%, #22da8f60 100%) 0% 0% no-repeat padding-box;
   padding:20px;
   border-radius: 10px;
 }
 .summary-box-health-dark {
-  background: linear-gradient(90deg, #f157ff 0%, #1d61fe 100%) 0% 0% no-repeat padding-box;
+  background: linear-gradient(90deg, #f157ff60 0%, #1d61fe60 100%) 0% 0% no-repeat padding-box;
   padding:20px;
   border-radius: 10px;
 }
 .summary-box-sustain-dark {
   border-radius: 10px;
-  background: linear-gradient(90deg, #f157ff 0%, #22da8f 100%) 0% 0% no-repeat padding-box;
+  background: linear-gradient(90deg, #f157ff60 0%, #22da8f60 100%) 0% 0% no-repeat padding-box;
   padding:20px;
 }
 .summary-box-oe-dark {
   /* background-color:var(--oe-dark); */
-  background: linear-gradient(90deg, #f157ff 0%, #22da8f 100%) 0% 0% no-repeat padding-box;
+  background: linear-gradient(90deg, #f157ff60 0%, #22da8f60 100%) 0% 0% no-repeat padding-box;
   padding:20px;
   border-radius:10px;
 }
