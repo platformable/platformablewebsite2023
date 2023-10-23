@@ -174,7 +174,7 @@ useEffect(()=>{
                     bgStyle={{ fill: "#3423C5" }}
                   />
                 </LinkedinShareButton>
-                <Link
+                {/* <Link
                   href="https://tidal.com/browse/mix/0105d4b80651774ef38931747c080a"
                   target="_blank"
                 >
@@ -184,7 +184,7 @@ useEffect(()=>{
                     alt="tidal"
                     width={32}
                   />
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -193,7 +193,7 @@ useEffect(()=>{
           </h3>
           <span>Written by </span>
           {data?.teams?.data.map((team, index) => (
-            <span key={index}>
+            <span key={index} className="font-bold">
               {team.attributes.name + " " + team.attributes.lastname}{" "}
               {index < data?.teams?.data.length - 1 ? " & " : ""}
             </span>
@@ -221,7 +221,7 @@ useEffect(()=>{
               dangerouslySetInnerHTML={{
                 __html: data?.content,
               }}
-              className={`mt-7  blog-page`}
+              className={`mt-7 blog-page`}
               id="blogPage"
             />
           )}
