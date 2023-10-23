@@ -191,9 +191,9 @@ useEffect(()=>{
           <h3 className="content-title font-bold text-[var(--purple-extra-dark)] mb-5">
             {data?.title}
           </h3>
-          <span>Written by </span>
+          <span className="text-[var(--purple-extra-dark)]">Written by </span>
           {data?.teams?.data.map((team, index) => (
-            <span key={index} className="font-bold">
+            <span key={index} className="font-bold text-[var(--purple-extra-dark)]">
               {team.attributes.name + " " + team.attributes.lastname}{" "}
               {index < data?.teams?.data.length - 1 ? " & " : ""}
             </span>
@@ -201,7 +201,7 @@ useEffect(()=>{
           <br />
 
           {data?.update_date ? (
-            <span>Updated at <strong>{new Date(data?.update_date).toDateString()}</strong></span>
+            <span className="">Updated at <strong>{new Date(data?.update_date).toDateString()}</strong></span>
           ) : (
             <span>
               Published at {new Date(data?.publishedAt).toDateString()}
