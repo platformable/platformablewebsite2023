@@ -12,20 +12,26 @@ import Testimonials from "../../components/homepage/Testimonials";
 import Link from "next/link";
 import Meta from "../../components/Meta";
 import ProductCarousel from "../../components/ProductCarousel";
+import BannerTop from "../../components/homepage/BannerTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ data }) {
   const newData = data.attributes;
+  console.log(newData)
   return (
-    <Layout>
-      <Meta title={newData?.hero_title} data={data}/>
+    <>
+        <Layout>
+      <Meta title={newData?.hero_title} data={newData}/>
       <div className="relative">
+      <BannerTop data={newData}/>
+        
         <Hero
           heroImg={newData?.hero_img?.data?.attributes.url}
           heroSubtitle={newData?.hero_subtitle}
           hero_title={newData?.hero_title}
         />
+
   {/*       <button
           className={`${styles["contact-btn"]} bg-[var(--yellow)] shadow fixed top-0 left-0  pl-20 pr-7  py-3 text-white my-5 rounded-tr-md rounded-br-md md:block hidden `}
         >
@@ -65,6 +71,8 @@ export default function Home({ data }) {
     
       </div>
     </Layout>
+    </>
+   
   );
 }
 //it is like the useEffect
