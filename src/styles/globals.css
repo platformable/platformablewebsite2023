@@ -242,7 +242,9 @@ h6 {
   margin: 20px 0;
   font-weight: bold;
 }
-
+.blog-page a {
+  word-wrap: break-word;
+}
 .blog-page iframe {
   text-align: center !important;
   margin: 0 auto;
