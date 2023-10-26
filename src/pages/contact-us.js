@@ -32,6 +32,10 @@ export default function ContactUs({ data, posts }) {
               <InlineWidget url="https://calendly.com/platformable" />
             </div>
           </div>
+          <section className="flex justify-center py-14">
+          <iframe src="https://platformable.substack.com/embed" width="480" height="320" ></iframe>
+
+          </section>
         </div>
       </section>
     </Layout>
