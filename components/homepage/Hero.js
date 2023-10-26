@@ -9,7 +9,7 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
 
   return (
     <section id="hero" className="">
-      <div className="container mx-auto pb-10 pt-3">
+      <div className="container mx-auto py-12">
         <h3
           className={`text-center text-[#5B24EC]  font-bold md:leading-none leading-10 mb-4 md:px-0 px-3`}
         >
