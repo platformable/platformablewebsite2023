@@ -4,20 +4,11 @@ import Search from "../Search";
 import BlogPreviewCard from "../BlogPreviewCard";
 import Link from "next/link";
 
-export default function ResourcesSearch({ posts, heading,draft }) {
-  // console.log("posts",posts)
-
-  const featuredPost = posts[posts.length - 1]?.attributes;
-
-  const featured = posts.sort(
-    (a, b) =>
-      new Date(b?.attributes?.createdAt) -
-      new Date(a?.attributes?.createdAt)
-  );
-
-  const featuredPosts = featured[0]
-
-   console.log("featured",featuredPosts)
+export default function ResourcesSearch({ posts, heading, draft }) {
+  // const featuredPost = posts[posts.length - 1]?.attributes;
+  const featuredPost = posts?.filter(
+    (post) => post?.attributes?.is_featured
+  )[0];
 
   const [searchWord, setSearchWord] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -135,25 +126,30 @@ export default function ResourcesSearch({ posts, heading,draft }) {
         </div>
 
         <section id="featured-post" className="my-10">
-          <Link href={!draft ?`/blog/${featuredPosts?.attributes.slug}`:`/blog/draft/${featuredPosts?.attributes.slug}`}>
+          <Link
+            href={
+              !draft
+                ? `/blog/${featuredPost?.attributes.slug}`
+                : `/blog/draft/${featuredPost?.attributes.slug}`
+            }
+          >
             <div className="bg-white rounded-md">
               <div
                 className={`featured-post-top ${setHeaderSectorColor(
-                  featuredPosts?.attributes.sectors?.data[0]?.attributes?.name
+                  featuredPost?.attributes.sectors?.data[0]?.attributes?.name
                 )} rounded-tl-md rounded-tr-md`}
               >
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 py-3 px-7">
                   <div>
                     <p className="text-white font-bold">
-                      {new Date(featuredPosts?.attributes.update_date).getDate()}{" "}
-                      {new Date(featuredPosts?.attributes.update_date).toLocaleDateString(
-                        "en-US",
-                        { month: "long" }
-                      )}
+                      {new Date(featuredPost?.attributes.update_date).getDate()}{" "}
+                      {new Date(
+                        featuredPost?.attributes.update_date
+                      ).toLocaleDateString("en-US", { month: "long" })}
                     </p>
                   </div>
                   <p className="text-white">
-                    {featuredPosts?.attributes.sectors.data[0].attributes.name}
+                    {featuredPost?.attributes.sectors.data[0].attributes.name}
                   </p>
                 </div>
               </div>
@@ -161,17 +157,18 @@ export default function ResourcesSearch({ posts, heading,draft }) {
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 p-7 items-center">
                   <div>
                     <h6 className="leading-8 font-bold text-[#1B014B] my-5">
-                      {featuredPosts?.attributes.title}
+                      {featuredPost?.attributes.title}
                     </h6>
 
                     <span>Written by </span>
-                    {featuredPosts?.attributes.teams?.data.map((team, index) => {
+                    {featuredPost?.attributes.teams?.data.map((team, index) => {
                       return (
                         <span key={index}>
                           {team.attributes.name +
                             " " +
                             team.attributes.lastname}{" "}
-                          {index < featuredPosts?.attributes.teams.data.length - 1
+                          {index <
+                          featuredPost?.attributes.teams.data.length - 1
                             ? " & "
                             : ""}
                         </span>
@@ -180,7 +177,7 @@ export default function ResourcesSearch({ posts, heading,draft }) {
 
                     <div
                       dangerouslySetInnerHTML={{
-                        __html: featuredPosts?.attributes.excerpt,
+                        __html: featuredPost?.attributes.excerpt,
                       }}
                       className="mt-5 leading-7 text-[#1B014B]"
                     />
@@ -189,21 +186,28 @@ export default function ResourcesSearch({ posts, heading,draft }) {
                       <div className="flex gap-x-5 items-center">
                         <img src="/platformable-icon-purple-dark.png" alt="" />
                         <p className="text-[#3524C6] font-bold">
-                          {featuredPosts?.attributes.category.data.attributes.name}
+                          {
+                            featuredPost?.attributes.category.data.attributes
+                              .name
+                          }
                         </p>
                       </div>
                       <div className="flex items-center gap-x-3">
                         <img src="/clockl.svg" alt="" />
                         <p className="text-[#3524C6] font-bold">
-                          {calculateTimeToRead(featuredPosts?.attributes.content) +
-                            " min read"}
+                          {calculateTimeToRead(
+                            featuredPost?.attributes.content
+                          ) + " min read"}
                         </p>
                       </div>
                     </div>
                   </div>
                   <div>
                     <img
-                      src={featuredPosts?.attributes.featured_img.data.attributes.url}
+                      src={
+                        featuredPost?.attributes.featured_img.data.attributes
+                          .url
+                      }
                       alt=""
                     />
                   </div>
@@ -229,7 +233,9 @@ export default function ResourcesSearch({ posts, heading,draft }) {
                 //   );
                 // })
                 .map((post, index) => {
-                  return <BlogPreviewCard post={post} key={index} draft={draft} />;
+                  return (
+                    <BlogPreviewCard post={post} key={index} draft={draft} />
+                  );
                 })
             : null}
         </div>
