@@ -4,6 +4,7 @@ import ResourcesSearch from "../../../components/blog/ResourcesSearch";
 import Meta from "../../../components/Meta";
 
 export default function BlogsIndex({ posts }) {
+  console.log("posts", posts)
   return (
     <Layout>
       <Meta title="Platformable Blog" />

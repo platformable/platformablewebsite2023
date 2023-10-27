@@ -9,7 +9,15 @@ export default function ResourcesSearch({ posts, heading,draft }) {
 
   const featuredPost = posts[posts.length - 1]?.attributes;
 
-  // console.log("featuredPost",featuredPost)
+  const featured = posts.sort(
+    (a, b) =>
+      new Date(b?.attributes?.createdAt) -
+      new Date(a?.attributes?.createdAt)
+  );
+
+  const featuredPosts = featured[0]
+
+   console.log("featured",featuredPosts)
 
   const [searchWord, setSearchWord] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -127,25 +135,25 @@ export default function ResourcesSearch({ posts, heading,draft }) {
         </div>
 
         <section id="featured-post" className="my-10">
-          <Link href={!draft ?`/blog/${featuredPost?.slug}`:`/blog/draft/${featuredPost?.slug}`}>
+          <Link href={!draft ?`/blog/${featuredPosts?.attributes.slug}`:`/blog/draft/${featuredPosts?.attributes.slug}`}>
             <div className="bg-white rounded-md">
               <div
                 className={`featured-post-top ${setHeaderSectorColor(
-                  featuredPost?.sectors?.data[0]?.attributes?.name
+                  featuredPosts?.attributes.sectors?.data[0]?.attributes?.name
                 )} rounded-tl-md rounded-tr-md`}
               >
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 py-3 px-7">
                   <div>
                     <p className="text-white font-bold">
-                      {new Date(featuredPost?.update_date).getDate()}{" "}
-                      {new Date(featuredPost?.update_date).toLocaleDateString(
+                      {new Date(featuredPosts?.attributes.update_date).getDate()}{" "}
+                      {new Date(featuredPosts?.attributes.update_date).toLocaleDateString(
                         "en-US",
                         { month: "long" }
                       )}
                     </p>
                   </div>
                   <p className="text-white">
-                    {featuredPost?.sectors.data[0].attributes.name}
+                    {featuredPosts?.attributes.sectors.data[0].attributes.name}
                   </p>
                 </div>
               </div>
@@ -153,17 +161,17 @@ export default function ResourcesSearch({ posts, heading,draft }) {
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 p-7 items-center">
                   <div>
                     <h6 className="leading-8 font-bold text-[#1B014B] my-5">
-                      {featuredPost?.title}
+                      {featuredPosts?.attributes.title}
                     </h6>
 
                     <span>Written by </span>
-                    {featuredPost?.teams?.data.map((team, index) => {
+                    {featuredPosts?.attributes.teams?.data.map((team, index) => {
                       return (
                         <span key={index}>
                           {team.attributes.name +
                             " " +
                             team.attributes.lastname}{" "}
-                          {index < featuredPost?.teams.data.length - 1
+                          {index < featuredPosts?.attributes.teams.data.length - 1
                             ? " & "
                             : ""}
                         </span>
@@ -172,7 +180,7 @@ export default function ResourcesSearch({ posts, heading,draft }) {
 
                     <div
                       dangerouslySetInnerHTML={{
-                        __html: featuredPost?.excerpt,
+                        __html: featuredPosts?.attributes.excerpt,
                       }}
                       className="mt-5 leading-7 text-[#1B014B]"
                     />
@@ -181,13 +189,13 @@ export default function ResourcesSearch({ posts, heading,draft }) {
                       <div className="flex gap-x-5 items-center">
                         <img src="/platformable-icon-purple-dark.png" alt="" />
                         <p className="text-[#3524C6] font-bold">
-                          {featuredPost?.category.data.attributes.name}
+                          {featuredPosts?.attributes.category.data.attributes.name}
                         </p>
                       </div>
                       <div className="flex items-center gap-x-3">
                         <img src="/clockl.svg" alt="" />
                         <p className="text-[#3524C6] font-bold">
-                          {calculateTimeToRead(featuredPost?.content) +
+                          {calculateTimeToRead(featuredPosts?.attributes.content) +
                             " min read"}
                         </p>
                       </div>
@@ -195,7 +203,7 @@ export default function ResourcesSearch({ posts, heading,draft }) {
                   </div>
                   <div>
                     <img
-                      src={featuredPost?.featured_img.data.attributes.url}
+                      src={featuredPosts?.attributes.featured_img.data.attributes.url}
                       alt=""
                     />
                   </div>
