@@ -929,7 +929,7 @@ h6 {
 .labs-top-bar-posts-header {
   display:flex;
   background-color:var(--oe-dark);
-  color:white;
+  color:black;
   padding:30px 10px;
   gap:10px;
   align-items:center;
@@ -1663,7 +1663,7 @@ pre {
   color:black;
 }
 .shaded-inline-bg-highlight h3 {
-  color:black;
+  color:var(--highlight-color-dark);
 }
 
 
@@ -1675,7 +1675,7 @@ pre {
   color:black;
 }
 .shaded-inline-bg-business h3 {
-  color:black;
+  color:var(--business-color-dark);
 }
 
 
@@ -1890,7 +1890,7 @@ font-size:12px;
 }
 
 
-/* dynamicTable-OB */
+
 
 /* dynamicTable-OG */
 
@@ -1933,7 +1933,7 @@ font-size:12px;
 
 .dynamicTable-oh {
   margin: 20px auto;
-/*   border: 2px solid var(--oh-dark); */
+ border: 2px solid var(--oh-dark);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -2080,7 +2080,7 @@ font-size:12px;
 
 .dynamicTable-business {
   margin: 20px auto;
-  /* border: 2px solid var(--business-color-dark); */
+  border: 2px solid var(--business-color-dark);
   border-radius: 10px;
   overflow: hidden;
 }
