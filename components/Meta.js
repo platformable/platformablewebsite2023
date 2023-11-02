@@ -4,7 +4,7 @@ const Meta = ({ title, keywords, data }) => {
   return (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="keywords" content={keywords} />
+      <meta name="keywords" content={data?.keywords || keywords} />
       <meta
         name="description"
         content={data?.excerpt?.replace(/(<([^>]+)>)/gi, "")}
@@ -58,11 +58,8 @@ const Meta = ({ title, keywords, data }) => {
 };
 
 Meta.defaultProps = {
-  // title: "Platformable",
   keywords:
     "platformable, data, api, open ecosystems, open banking, open finance, open health",
-  description:
-    "Platformable supports the development of open ecosystems to build a future we can all live in",
 };
 
 export default Meta;

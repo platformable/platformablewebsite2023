@@ -5,10 +5,10 @@ import BlogPreviewCard from "../BlogPreviewCard";
 import Link from "next/link";
 
 export default function ResourcesSearch({ posts, heading, draft }) {
-  // const featuredPost = posts[posts.length - 1]?.attributes;
   const featuredPost = posts?.filter(
     (post) => post?.attributes?.is_featured
   )[0];
+
 
   const [searchWord, setSearchWord] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -17,6 +17,7 @@ export default function ResourcesSearch({ posts, heading, draft }) {
   //UseMemo is used to calculate before render
   const showedPosts = useMemo(() => {
     const filteredPosts = posts
+      ?.filter((post, index) => !post?.attributes?.is_featured)
       ?.filter((post, index) => {
         if (searchWord === "") {
           return post;
