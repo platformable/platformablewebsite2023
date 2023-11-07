@@ -30,7 +30,7 @@ export default function FindMore({ sectors }) {
                 className="pr-16 text-[var(--purple-medium)] font-bold"
               />
 
-              <Link href={`/${sector.link}`}>
+              <Link href={`/${sector.link || ""}`}>
                 <button className="rounded bg-[var(--yellow)] px-10 py-4 text-lg text-center font-bold lg:rounded-xl text-[var(--purple-medium)]">
                   Find out more
                 </button>

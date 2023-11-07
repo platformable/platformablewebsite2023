@@ -64,7 +64,7 @@ export default function ProductDescription({ data, sectorsStyle }) {
             <div className="grid items-center justify-items-center px-3 lg:px-5 bg-[#F6F4FF]">
               {product?.btn_download_enabled && (
                 <Link
-                  href={product?.data_products_products_sample}
+                  href={product?.data_products_products_sample || "#"}
                   target="_blank"
                   className={`'pointer-events-none '}`}
                   // onClick={() => sendPlausibleCustomGoal(card?.plausible_download_tracker)}

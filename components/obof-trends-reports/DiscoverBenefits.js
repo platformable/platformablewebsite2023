@@ -10,7 +10,7 @@ export default function DiscoverBenefits({ data, sectorsStyle }) {
           alt=""
           className="md:flex hidden"
         />
-        <h3 className={`${sectorsStyle[data?.sector].textColor} text-white  font-bold md:leading-10 leading-8 `}>
+        <h3 className={`${sectorsStyle[data?.sector]?.textColor} text-white  font-bold md:leading-10 leading-8 `}>
           {data?.discover_title}
         </h3>
       </div>
@@ -39,7 +39,8 @@ export default function DiscoverBenefits({ data, sectorsStyle }) {
               className="lista-custom text-[#3425C9]"
             />
 
-            <Link href={persona?.buy_button}>
+
+            <Link href={persona?.buy_button || "#"}>
               <div className="grid mt-10">
                 <button className="rounded-md  bg-[var(--yellow)] px-7 py-2 shadow text-[var(--purple-medium)]">
                   <p>Buy now</p>
