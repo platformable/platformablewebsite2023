@@ -40,7 +40,7 @@ export default function DiscoverBenefits({ data, sectorsStyle }) {
             />
 
 
-            <Link href={persona?.buy_button || "#"}>
+            <Link href={persona?.buy_button || "#data-product"}>
               <div className="grid mt-10">
                 <button className="rounded-md  bg-[var(--yellow)] px-7 py-2 shadow text-[var(--purple-medium)]">
                   <p>Buy now</p>
