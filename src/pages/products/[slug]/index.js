@@ -1,11 +1,11 @@
-import Layout from "../../../../../components/Layout";
-import ActionableInformation from "../../../../../components/obof-trends-reports/ActionableInformation";
-import DiscoverBenefits from "../../../../../components/obof-trends-reports/DiscoverBenefits";
-import Hero from "../../../../../components/obof-trends-reports/Hero";
-import ProductDescription from "../../../../../components/obof-trends-reports/ProductDescription";
-import ProductDescriptionMobile from "../../../../../components/obof-trends-reports/ProductDescriptionMobile";
-import FindMore from "../../../../../components/data-products/FindMore";
-import Meta from "../../../../../components/Meta";
+import Layout from "../../../../components/Layout";
+import ActionableInformation from "../../../../components/obof-trends-reports/ActionableInformation";
+import DiscoverBenefits from "../../../../components/obof-trends-reports/DiscoverBenefits";
+import Hero from "../../../../components/obof-trends-reports/Hero";
+import ProductDescription from "../../../../components/obof-trends-reports/ProductDescription";
+import ProductDescriptionMobile from "../../../../components/obof-trends-reports/ProductDescriptionMobile";
+import FindMore from "../../../../components/data-products/FindMore";
+import Meta from "../../../../components/Meta";
 
 
 export default function OpenBankingOpenFinanceTrendsReports({data}) {
@@ -63,9 +63,10 @@ export async function getServerSideProps(ctx) {
       };
     } catch (error) {
       return {
-        props: {
-          data: "No Data",
+        redirect: {
+          destination: '/',
+          permanent: false,
         },
-      };
+      }
     }
   }
