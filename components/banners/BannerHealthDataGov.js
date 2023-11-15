@@ -21,7 +21,7 @@ export default function BannerHealthDataGov() {
              <br/>
             <span className="font-bold text-[23px]">Health Data Governance</span>
           </div>
-          <Link href='/https://www.eventbrite.es/e/new-thinking-in-health-data-governance-tickets-750909639947?aff=oddtdtcreator'>
+          <Link href='https://www.eventbrite.es/e/new-thinking-in-health-data-governance-tickets-750909639947?aff=oddtdtcreator'>
               <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple-medium)] w-56">
                 <p>Find out more</p>
               </button>
