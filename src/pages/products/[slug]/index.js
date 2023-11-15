@@ -1,11 +1,11 @@
-import Layout from "../../../../../components/Layout";
-import ActionableInformation from "../../../../../components/obof-trends-reports/ActionableInformation";
-import DiscoverBenefits from "../../../../../components/obof-trends-reports/DiscoverBenefits";
-import Hero from "../../../../../components/obof-trends-reports/Hero";
-import ProductDescription from "../../../../../components/obof-trends-reports/ProductDescription";
-import ProductDescriptionMobile from "../../../../../components/obof-trends-reports/ProductDescriptionMobile";
-import FindMore from "../../../../../components/data-products/FindMore";
-import Meta from "../../../../../components/Meta";
+import Layout from "../../../../components/Layout";
+import ActionableInformation from "../../../../components/obof-trends-reports/ActionableInformation";
+import DiscoverBenefits from "../../../../components/obof-trends-reports/DiscoverBenefits";
+import Hero from "../../../../components/obof-trends-reports/Hero";
+import ProductDescription from "../../../../components/obof-trends-reports/ProductDescription";
+import ProductDescriptionMobile from "../../../../components/obof-trends-reports/ProductDescriptionMobile";
+import FindMore from "../../../../components/data-products/FindMore";
+import Meta from "../../../../components/Meta";
 
 
 export default function OpenBankingOpenFinanceTrendsReports({data}) {
@@ -36,7 +36,7 @@ export default function OpenBankingOpenFinanceTrendsReports({data}) {
         <Layout>
             <Hero data={data}/>
 
-            <section id="actionable-discover" className={`${sectorsStyle[data?.sector].bgColor} py-10`}>
+            <section id="actionable-discover" className={`${sectorsStyle[data?.sector]?.bgColor} py-10`}>
                 <ActionableInformation data={data} sectorsStyle={sectorsStyle}/>
                 <DiscoverBenefits data={data} sectorsStyle={sectorsStyle}/>
             </section>
@@ -53,7 +53,7 @@ export async function getServerSideProps(ctx) {
     try {
       const slug=await ctx.params.slug
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/product-landing-pages?filters[slug]=open-banking-open-finance-trends-report&populate[hero_images]=*&populate[actionable_information_card][populate][image]=*&populate[discover][populate][persona][populate][persona_image]=*&populate[products][populate][product_icon]=*&populate[sectors][populate][icon]=*&populate[sectors][populate][image]=*&populate[discover][populate][benefits]=*&populate[featured_img]=*`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/product-landing-pages?filters[slug]=${slug}&populate[hero_images]=*&populate[actionable_information_card][populate][image]=*&populate[discover][populate][persona][populate][persona_image]=*&populate[products][populate][product_icon]=*&populate[sectors][populate][icon]=*&populate[sectors][populate][image]=*&populate[discover][populate][benefits]=*&populate[featured_img]=*`
       );
       const data = await res.json()
       return {
@@ -63,9 +63,10 @@ export async function getServerSideProps(ctx) {
       };
     } catch (error) {
       return {
-        props: {
-          data: "No Data",
+        redirect: {
+          destination: '/',
+          permanent: false,
         },
-      };
+      }
     }
   }

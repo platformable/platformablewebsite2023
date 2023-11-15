@@ -90,12 +90,12 @@ export default function Hero({data}) {
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-5 justify-center mt-4">
-          <Link href={data?.buy_button}>
+          <Link href={data?.buy_button || "/"}>
           <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple-medium)] w-56">
             <p>Buy now</p>
           </button>
           </Link>
-          <Link href={data?.free_sample_button}>
+          <Link href={data?.free_sample_button || "/"}>
           <button className="rounded-md shadow bg-[var(--purple-light)] px-3 py-2 text-white w-56">
             <p>Free sample</p>
           </button>
