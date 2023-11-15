@@ -123,11 +123,11 @@ useEffect(()=>{
           )} blog-header`}
         >
           <div className="container mx-auto md:flex block justify-between items-center py-10">
-            <h1 className="font-bold text-white">
+            <h3 className="font-bold text-white">
               {data?.sectors?.data?.[0].attributes.name}
-            </h1>
+            </h3>
             <Link href="/blog">
-              <button className="py-2 px-7 bg-[var(--yellow)] border-2 shadow rounded font-medium">
+              <button className="py-2 px-7 bg-[var(--yellow)] shadow rounded font-medium">
                 Back to blog section
               </button>
             </Link>
@@ -188,9 +188,9 @@ useEffect(()=>{
               </div>
             </div>
           </div>
-          <h3 className="content-title font-bold text-[var(--purple-extra-dark)] mb-5">
+          <h1 className="content-title font-bold text-[var(--purple-extra-dark)] mb-5">
             {data?.title}
-          </h3>
+          </h1>
           <span className="text-[var(--purple-extra-dark)]">Written by </span>
           {data?.teams?.data.map((team, index) => (
             <span key={index} className="font-bold text-[var(--purple-extra-dark)]">
@@ -272,7 +272,7 @@ useEffect(()=>{
 
         <div className="container mx-auto  justify-center flex gap-x-5 mb-20 items-center">
           <button
-            className={`rounded px-10 py-5 bg-blue-100 ${styles.bg_blog_next_btn} border-white shadow-md`}
+            className={`rounded px-10 py-5 bg-blue-100 ${styles.bg_blog_prev_btn} border-white shadow-md`}
             onClick={previousPostButton}
             disabled={previousPost ? false : true}
           >

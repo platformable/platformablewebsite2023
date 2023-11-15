@@ -13,6 +13,7 @@ import Link from "next/link";
 import Meta from "../../components/Meta";
 import ProductCarousel from "../../components/ProductCarousel";
 import BannerTop from "../../components/homepage/BannerTop";
+import BannerHealthDataGov from "../../components/banners/BannerHealthDataGov";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,8 @@ export default function Home({ data }) {
         <Layout>
       <Meta title={newData?.hero_title} data={newData}/>
       <div className="relative">
-      <BannerTop data={newData}/>
+      {/* <BannerTop data={newData}/> */}
+      <BannerHealthDataGov />
         
         <Hero
           heroImg={newData?.hero_img?.data?.attributes.url}

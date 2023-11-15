@@ -127,7 +127,7 @@ useEffect(()=>{
               {data?.sectors?.data?.[0].attributes.name}
             </h1>
             <Link href="/blog">
-              <button className="py-2 px-7 bg-[var(--yellow)] border-2 shadow rounded font-medium">
+              <button className="py-2 px-7 bg-[var(--yellow)] shadow rounded font-medium">
                 Back to blog section
               </button>
             </Link>
@@ -272,7 +272,7 @@ useEffect(()=>{
 
         <div className="container mx-auto  justify-center flex gap-x-5 mb-20 items-center">
           <button
-            className={`rounded px-10 py-5 bg-blue-100 ${styles.bg_blog_next_btn} border-white shadow-md`}
+            className={`rounded px-10 py-5 bg-blue-100 ${styles.bg_blog_prev_btn} border-white shadow-md`}
             onClick={previousPostButton}
             disabled={previousPost ? false : true}
           >
