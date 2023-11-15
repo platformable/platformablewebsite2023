@@ -3567,11 +3567,25 @@ margin:0 !important;
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   #bannerTop {
     background-image: url('/banner_top.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
+  }
+
+
+  #bannerTopTest {
+    background-color: #1D61FE;
+  }
+  #bannerTopTest > div:first-child {
+    background: transparent linear-gradient(270deg, #1D61FE 0%, #DCE9FF 100%) 0% 0% no-repeat padding-box;
+  }
+  
+  #bannerTopTest > div:last-child {
+    -webkit-clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+    background: transparent linear-gradient(-270deg, #CA58FE 0%, #C658FE 0%, #1D61FE 100%) 0% 0% no-repeat padding-box;
   }
 }
