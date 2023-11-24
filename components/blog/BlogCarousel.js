@@ -24,7 +24,7 @@ export default function BlogCarousel({carouselData}) {
     let curr = number;
     let pre = number === 0 ? 2 : number - 1;
     let nxt = number === 2 ? 0 : number + 1;
-    console.log(pre, curr, nxt)
+
     for (let i = 0; i < slidesRef.current.childNodes.length - 1; i++) {
       slidesRef.current.childNodes[i].classList.remove("active");
       slidesRef.current.childNodes[i].classList.remove("prev");
