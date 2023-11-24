@@ -366,41 +366,41 @@ h6 {
 
 .inset-box-general-light {
   background-color:var(--oe-light);
-  padding:5px 10px;
+  padding:20px;
   border-radius:10px;
   margin:10px 0;
 }
 .inset-box-bank-light {
   background-color:var(--ob-light);
-  padding:5px 10px;
+  padding:20px;
   border-radius:10px;
   margin:10px 0;
   color:black;
 }
 .inset-box-gov-light {
   background-color:var(--oe-light);
-  padding:5px 10px;
+  padding:20px;
   border-radius:10px;
   margin:10px 0;
   color:black;
 }
 .inset-box-health-light {
   background-color:var(--oh-light);
-  padding:5px 10px;
+  padding:20px;
   border-radius:10px;
   margin:10px 0;
   color:black;
 }
 .inset-box-sustain-light {
   background-color:var(--oe-light);
-  padding:5px 10px;
+  padding:20px;
   border-radius:10px;
   margin:10px 0;
   color:black;
 }
 .inset-box-oe-light  {
   background-color:var(--oe-light);
-  padding:5px 10px;
+  padding:20px;
   border-radius:10px;
   margin:10px 0;
   color:black;
@@ -3588,4 +3588,13 @@ margin:0 !important;
     clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
     background: transparent linear-gradient(-270deg, #CA58FE 0%, #C658FE 0%, #1D61FE 100%) 0% 0% no-repeat padding-box;
   }
+}
+
+
+.magic-pattern {
+  background-color: #ffffff;
+  /* opacity: 0.8; */
+  background-image:  linear-gradient(#e6e6e695 1px, transparent 1px), linear-gradient(to right, #e6e6e695 1px, #ffffff 1px);
+  background-size: 35px 35px;
+
 }
