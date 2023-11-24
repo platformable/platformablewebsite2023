@@ -3598,3 +3598,10 @@ margin:0 !important;
   background-size: 35px 35px;
 
 }
+
+.items .prev  {
+  mask-image: radial-gradient(circle at 90%, var(--purple-medium) 40%, transparent 100%);
+}
+.items .next  {
+  mask-image: radial-gradient(circle at 10%, var(--purple-medium) 40%, transparent 100%);
+}
