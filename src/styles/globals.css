@@ -3589,3 +3589,12 @@ margin:0 !important;
     background: transparent linear-gradient(-270deg, #CA58FE 0%, #C658FE 0%, #1D61FE 100%) 0% 0% no-repeat padding-box;
   }
 }
+
+
+.magic-pattern {
+  background-color: #ffffff;
+  /* opacity: 0.8; */
+  background-image:  linear-gradient(#e6e6e695 1px, transparent 1px), linear-gradient(to right, #e6e6e695 1px, #ffffff 1px);
+  background-size: 35px 35px;
+
+}

@@ -6,28 +6,53 @@ import BlogCarousel from "./BlogCarousel";
 
 export default function ActContent({ data }) {
   return (
-    <section className="">
-      <div className="content-header container mx-auto mt-8">
-        <div className="summary-box text-white summary-box-health-dark">
-          <h3 className="">Who should read this:</h3> Healthcare industry leads,
-          healthtech, health equity advocates, API service providers,
-          researchers, regulators, non-governmental health organizations. <br />
-          <br />
-          <h3 className="">What it’s about:</h3> This article describes our open
-          health data model and our methodology for measuring and mapping
-          ecosystem participation and value generation.
-          <br />
-          <br />
-          <h3 className="">Why it’s important:</h3> We need to be able to
-          measure whether the opening of health systems is enabling innovation
-          and expanding health and wellbeing and generating other benefits for
-          all stakeholders. With the move to digital infrastructures and open
-          APIs for health, we need to understand how value flows through the
-          ecosystem and how it is distributed. We describe a model that can help
-          identify what should be measured to ensure everyone benefits from open
-          health ecosystems. <br />
+    <section className="magic-pattern mt-4  pt-6 pb-10 lg:py-10">
+      <article className="content-intro container mx-auto">
+        <div className="bg-[#F1EFFF] flex flex-col gap-7 p-7 shadow-lg overflow-x-hidden">
+            <div className="">
+              <div className="mb-3 flex flex-wrap flex-1 items-center gap-4">
+                <img src="/tool_icon.svg" alt="tool icon" />
+                <h5 className="text-[var(--purple-medium)] font-bold">Tool</h5>
+              </div>
+              <span className=" text-base lg:text-xl font-bold">Blog Component Code Generator for Headless CMS</span>
+            </div>
+
+
+            <div className="">
+              <div className="mb-3 flex flex-wrap flex-1 items-center gap-4">
+                <img src="/tool_icon.svg" alt="tool icon" />
+                <h5 className="text-[var(--purple-medium)] font-bold">Link</h5>
+              </div>
+              <span className="text-base lg:text-xl font-bold underline">https://codegen.platformable.com/</span>
+            </div>
+
+
+            <div className="">
+              <div className="mb-3 flex flex-wrap flex-1 items-center gap-4">
+                <img src="/tool_icon.svg" alt="tool icon" />
+                <h5 className="text-[var(--purple-medium)] font-bold">Description</h5>
+              </div>
+              <span className="text-base lg:text-xl">Supports a variety of headless CMS platforms, providing flexibility for developers working with different systems. The generated code is optimized for performance and adheres to best practices.</span>
+            </div>
+
+
+            <div className="">
+              <div className="mb-3 flex flex-wrap flex-1 items-center gap-4">
+                <img src="/tool_icon.svg" alt="tool icon" />
+                <h5 className="text-[var(--purple-medium)] font-bold">How this helps foster open ecosystems</h5>
+              </div>
+              <span className="text-base lg:text-xl">By promoting interoperability, standardization, community collaboration, extensibility, documentation, open-source principles, and integration with third-party services.</span>
+            </div>
+
+            <div className="">
+              <div className="mb-3 flex flex-wrap flex-1 items-center gap-4">
+                <img src="/tool_icon.svg" alt="tool icon" />
+                <h5 className="text-[var(--purple-medium)] font-bold">Why we recommend</h5>
+              </div>
+              <span className="text-base lg:text-xl">By integrating this blog component generator into your toolkit, you empower developers to create high-performing, standards-compliant code, ultimately enhancing the overall quality and user satisfaction of your digital content.</span>
+            </div>
         </div>
-      </div>
+      </article>
       <div className="content-first-part container mx-auto">
         {data?.markdown_content ? (
           <ReactMarkdown
@@ -43,7 +68,7 @@ export default function ActContent({ data }) {
             dangerouslySetInnerHTML={{
               __html: data?.act_content_1,
             }}
-            className={`mt-7 blog-page`}
+            className={`mt-7 blog-page bg-white p-7 shadow-lg`}
             id="blogPage"
           />
         )}
@@ -66,7 +91,7 @@ export default function ActContent({ data }) {
             dangerouslySetInnerHTML={{
               __html: data?.act_content_2,
             }}
-            className={`mt-7 blog-page`}
+            className={`blog-page bg-white p-7 shadow-lg`}
             id="blogPage"
           />
         )}
