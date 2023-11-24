@@ -19,7 +19,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ data }) {
   const newData = data.attributes;
-  console.log(newData)
+  // console.log(newData)
   return (
     <>
         <Layout>

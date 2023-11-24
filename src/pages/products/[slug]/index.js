@@ -9,7 +9,7 @@ import Meta from "../../../../components/Meta";
 
 
 export default function OpenBankingOpenFinanceTrendsReports({data}) {
-    console.log(data)
+    // console.log(data)
     const sectorsStyle = {
       'Open Banking': {
         bgColor: 'bg--gradient-obof',

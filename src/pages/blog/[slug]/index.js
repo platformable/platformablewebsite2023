@@ -24,7 +24,6 @@ import RegularContent from "../../../../components/blog/RegularContent";
 export default function BlogPage({ data }) {
   const router = useRouter();
   const plausible = usePlausible()
-  console.log("data",data)
 
   //get post index to create next and prev logic
   const [relatedSectorPosts, setRelatedSectorPosts] = useState([]);
@@ -229,7 +228,6 @@ useEffect(()=>{
           {/* <div className="my-20 flex flex-col gap-10 lg:flex-row items-center justify-center "> */}
           <div className="container mx-auto flex gap-x-10 gap-y-10 justify-center mt-20 mb-10 md:flex-row flex-col items-center">
           {data?.teams?.data?.map((member, index) => {
-               console.log("member",member)
            return (
             
          
