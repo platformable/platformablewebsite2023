@@ -13,6 +13,8 @@ import rehypeSanitize from "rehype-sanitize";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import { usePlausible } from "next-plausible";
+import ActContent from "../../../../components/blog/ActContent";
+import RegularContent from "../../../../components/blog/RegularContent";
 
 // const file = await unified()
 //   .use(remarkRehype, {allowDangerousHtml: true})
@@ -22,7 +24,7 @@ import { usePlausible } from "next-plausible";
 export default function BlogPage({ data }) {
   const router = useRouter();
   const plausible = usePlausible()
-  // console.log("data",data)
+  console.log("data",data)
 
   //get post index to create next and prev logic
   const [relatedSectorPosts, setRelatedSectorPosts] = useState([]);
@@ -111,7 +113,7 @@ useEffect(()=>{
   const calculateTimeToRead = (article) => {
     return Math.ceil(article?.trim().split(/\s+/).length / 225);
   };
-
+  const blogType = 'Act'
   return (
     <Layout>
       <Meta title={data?.title} data={data} />
@@ -133,8 +135,9 @@ useEffect(()=>{
             </Link>
           </div>
         </div>
-        <article className="py-10  container mx-auto">
-          <div className="content-header text-[var(--purple-extra-dark)] md:flex block justify-between mb-10">
+        <article className="py-10 ">
+          <div className="content-header text-[var(--purple-extra-dark)] container mx-auto ">
+            <section className="block md:flex justify-between mb-10">
             <div className="flex items-center gap-x-3">
               <img
                 src="/platformable-icon-purple-little.svg"
@@ -187,10 +190,12 @@ useEffect(()=>{
                 </Link> */}
               </div>
             </div>
-          </div>
-          <h1 className="content-title font-bold text-[var(--purple-extra-dark)] mb-5">
+            </section>
+            <section className="">
+            <h1 className="content-title font-bold text-[var(--purple-extra-dark)] mb-5">
             {data?.title}
           </h1>
+          <div>
           <span className="text-[var(--purple-extra-dark)]">Written by </span>
           {data?.teams?.data.map((team, index) => (
             <span key={index} className="font-bold text-[var(--purple-extra-dark)]">
@@ -198,46 +203,38 @@ useEffect(()=>{
               {index < data?.teams?.data.length - 1 ? " & " : ""}
             </span>
           ))}
-          <br />
-
-          {data?.update_date ? (
+          </div>
+         <div>
+           
+         {data?.update_date ? (
             <span>Updated at {new Date(data?.update_date).toDateString()}</span>
           ) : (
             <span>
               Published at {new Date(data?.publishedAt).toDateString()}
             </span>
           )}
-          {data?.markdown_content ? (
+         </div>
+            </section>
+
+          
+          </div>
+          
+          {data?.is_act_post === true ? 
             
-            <ReactMarkdown
-              className="blog-page"
-              // children={data?.markdown_content}
-              remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeRaw, rehypeSanitize]}
-            >{data?.markdown_content}
-            </ReactMarkdown>
-          ) : (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: data?.content,
-              }}
-              className={`mt-7 blog-page`}
-              id="blogPage"
-            />
-          )}
+           <ActContent data={data} /> : <RegularContent data={data} />}
 
           {data.Calendly ? (
             <InlineWidget url="https://calendly.com/platformable" />
           ) : null}
           {/* <div className="my-20 flex flex-col gap-10 lg:flex-row items-center justify-center "> */}
-          <div className="flex gap-x-10 gap-y-10 justify-center mt-20 mb-10 md:flex-row flex-col items-center">
+          <div className="container mx-auto flex gap-x-10 gap-y-10 justify-center mt-20 mb-10 md:flex-row flex-col items-center">
           {data?.teams?.data?.map((member, index) => (
             
-              <div key={index} className="grid justify-center items-center text-center">
+              <div key={index} className="grid justify-items-center items-center text-center">
               <img
                 src={member?.attributes?.image?.data?.attributes.url}
                 alt="member image"
-                className="mb-7"
+                className="mb-7 "
                 width={150}
               />
               <p className="font-bold text-[var(--purple-medium)]">
@@ -318,7 +315,7 @@ export async function getServerSideProps(ctx) {
   try {
     const [data] = await Promise.all([
       fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?filters[slug]=${slug}&populate[teams][populate][image]=*&populate[featured_img]=*&populate[sectors]=*&populate[category]=*&populate[footnote]=*`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?filters[slug]=${slug}&populate[teams][populate][image]=*&populate[featured_img]=*&populate[sectors]=*&populate[category]=*&populate[footnote]=*&populate[act_tool_component]=*&populate[act_carousel][populate][images]=*`
       ).then((res) => res.json()),
       // fetch(
       //   `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?populate=*&filters[sectors][name]=Open Health`
