@@ -8,10 +8,7 @@ import Head from "next/head";
 import { InlineWidget } from "react-calendly";
 import { LinkedinShareButton, LinkedinIcon } from "react-share";
 import Meta from "../../../../components/Meta";
-import ReactMarkdown from "react-markdown";
-import rehypeSanitize from "rehype-sanitize";
-import rehypeRaw from "rehype-raw";
-import remarkGfm from "remark-gfm";
+
 import { usePlausible } from "next-plausible";
 import ActContent from "../../../../components/blog/ActContent";
 import RegularContent from "../../../../components/blog/RegularContent";
@@ -109,10 +106,11 @@ useEffect(()=>{
     return sectorColors[sectorName];
   };
 
-  const calculateTimeToRead = (article) => {
-    return Math.ceil(article?.trim().split(/\s+/).length / 225);
+  const calculateTimeToRead = (arrayOfArticles) => {
+    return arrayOfArticles.reduce((prevArticle, currentArticle) => {
+      return prevArticle + Math.ceil(currentArticle?.trim().split(/\s+/).length / 225);
+    },0)
   };
-  const blogType = 'Act'
   return (
     <Layout>
       <Meta title={data?.title} data={data} />
@@ -150,7 +148,7 @@ useEffect(()=>{
               <div className="flex items-center gap-x-2">
                 <img src="/clockl.svg" alt="watch" />
                 <span className="font-bold text-[#2B30C1]">
-                  {calculateTimeToRead(data.content)} min read
+                  {calculateTimeToRead(data.content ?[data.content] : [data.act_content_1, data.act_content_2])} min read
                 </span>
               </div>
               <div className="flex items-center gap-x-3">
