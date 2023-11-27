@@ -1,18 +1,11 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import Layout from "../../components/Layout";
-import styles from "@/styles/Homepage.module.css";
 import SupportOpenEcosystems from "../../components/homepage/SupportOpenEcosystems";
 import Explore from "../../components/homepage/Explore";
-import StakeholdersOpenEcosystems from "../../components/homepage/StakeholdersOpenEcosystems";
 import ProductsServices from "../../components/homepage/ProductsServices";
 import Hero from "../../components/homepage/Hero";
-import Footer from "../../components/Footer";
-import Testimonials from "../../components/homepage/Testimonials";
-import Link from "next/link";
 import Meta from "../../components/Meta";
 import ProductCarousel from "../../components/ProductCarousel";
-import BannerTop from "../../components/homepage/BannerTop";
 import BannerHealthDataGov from "../../components/banners/BannerHealthDataGov";
 
 const inter = Inter({ subsets: ["latin"] });
