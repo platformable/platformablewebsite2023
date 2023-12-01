@@ -7,7 +7,7 @@ export default function ProductDescriptionMobile({ data, sectorsStyle }) {
 
 
   return (
-    <section className={` py-5 md:hidden block bg-[var(--purple-medium)]`}>
+    <section id="details" className={` py-5 md:hidden block bg-[var(--purple-medium)]`}>
     <div id="ourDatasetMobile" className="container mx-auto">
       {data?.products?.map((product, index) => {
         return (
