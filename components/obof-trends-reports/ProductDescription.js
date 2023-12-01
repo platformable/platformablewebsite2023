@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export default function ProductDescription({ data, sectorsStyle }) {
   return (
-    <section className="pb-20 pt-2 bg-[var(--purple-medium)] hidden md:block">
+    <section id="details" className="pb-20 pt-2 bg-[var(--purple-medium)] hidden md:block">
       {/* <div className="mb-10 flex gap-x-5">
           <img src="/platformable-icon-purple.svg" alt="Platformable logo" className=""/>
           <h3 className="text-[var(--purple-medium)] font-bold">{title}</h3>
         </div> */}
 
-      <div className="grid mt-5 xl:mt-10 gap-1 container mx-auto" id="data-product">
+      <div className="grid mt-5 xl:mt-10 gap-1 container mx-auto" >
         <div className="grid grid-cols-[1.5fr_2fr_1fr_1fr] ">
           <div className="flex items-center bg-[#3328C3] px-7 gap-5 rounded-tl-xl">
             <div className="w-1/6 flex hidden lg:block">
