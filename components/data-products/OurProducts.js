@@ -52,7 +52,7 @@ export default function OurProducts({ title, products }) {
                 alt=""
                 className="w-2/7"
               />
-                <p className="text-white text-center lg:text-left font-bold w-5/7 underline">
+                <p className="text-white text-center lg:text-left font-bold w-5/7 ">
                   {card?.data_products_product_name}
                 </p>
             </div>
