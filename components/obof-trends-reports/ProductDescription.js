@@ -40,9 +40,7 @@ export default function ProductDescription({ data, sectorsStyle }) {
               className={`${sectorsStyle[data?.sector].bgGradientColor} flex flex-col  items-center justify-center gap-5 py-12  md:px-2 lg:px-10`}
             >
               <img
-                src={
-                  "https://res.cloudinary.com/platformable/image/upload/v1692781219/platformablewebsite2023/OBOF_trends_report_1_66e8ea641f.svg"
-                }
+                src={data?.products?.[0].product_icon?.data?.attributes?.url}
                 alt=""
                 className="w-2/7"
               />
