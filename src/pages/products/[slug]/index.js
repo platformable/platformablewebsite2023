@@ -9,24 +9,23 @@ import Meta from "../../../../components/Meta";
 
 
 export default function OpenBankingOpenFinanceTrendsReports({data}) {
-    // console.log(data)
     const sectorsStyle = {
       'Open Banking': {
         bgColor: 'bg--gradient-obof',
         bgGradientColor: 'bg--gradient-obof',
-        textColor: 'white',
+        textColor: 'text-white',
         checklistImage: '/benefits_check_obof.svg'
       },
       'Open Health': {
         bgColor: 'bg--gradient-oh',
         bgGradientColor: 'bg--gradient-oh',
-        textColor: 'white',
+        textColor: 'text-white',
         checklistImage: '/benefits_check_oh.svg'
       },
       'Open Ecosystems': {
-        bgColor: 'bg-[--oe-dark]',
+        bgColor: 'bg-[var(--green)]',
         bgGradientColor: 'bg--gradient-oe',
-        textColor: 'text-[var(--blue-dark)]',
+        textColor: 'var(--blue)',
         checklistImage: '/benefits_check_oe.svg'
       },
     }
