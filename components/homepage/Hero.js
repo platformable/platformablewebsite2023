@@ -1,9 +1,31 @@
 import Link from "next/link";
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import styles from "@/styles/Homepage.module.css";
 import Image from 'next/image'
 
 export default function Hero({ heroImg, heroSubtitle, hero_title }) {
+  const videoEl = useRef(null);
+  
+  const [videoError, setError] = useState(null)
+  const [isMobile, setIsMobile] = useState(null)
+  
+useEffect(() => {
+  const isMobileDevice = () => {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  };
+  
+  setIsMobile(isMobileDevice)
+}, [])
+  console.log(isMobile)
+  const handleFullScreen = () => {
+      videoEl &&
+        videoEl.current &&
+        videoEl.current.requestFullscreen()
+        .catch((error) => {
+          setError('can´t reproduce video')
+        });
+    };
+    
   const subtitle = heroSubtitle?.split(" ")[0];
   const simpleSubtitle = heroSubtitle?.substr(heroSubtitle.indexOf(" ") + 1);
 
@@ -13,14 +35,28 @@ export default function Hero({ heroImg, heroSubtitle, hero_title }) {
         <h3
           className={`text-center text-[#5B24EC]  font-bold md:leading-none leading-10 mb-4 md:px-0 px-3`}
         >
-          {hero_title}
+          {hero_title} 
         </h3>
         <h3 className="text-center md:leading-10 leading-8 md:px-0 px-5 text-3xl font-light ">
           {" "}
           <strong>{subtitle}</strong> {simpleSubtitle}{" "}
         </h3>
-        <div className="flex justify-center items-center">
-        <img src={heroImg} alt="" className="pt-10 md:px-0 px-5" width={'950px'}/>
+        <div className="flex justify-center"  >
+        
+          <video
+          className="mt-10 max-w-full w-[1100px] "
+          playsInline
+          muted
+          onClick={isMobile ? null : handleFullScreen}
+          loop
+          autoPlay
+          alt="Platformable map"
+          src="https://datasetstorage.ams3.digitaloceanspaces.com/videos/website/Hero_animation_2023%20(2).mp4"
+          ref={videoEl}
+
+        />
+          
+        {/* <img src={heroImg} alt="" className="pt-10 md:px-0 px-5" width={'950px'}/> */}
         </div>
         
 {/* 
