@@ -19,7 +19,7 @@ export default function Home({ data }) {
       <Meta title={newData?.hero_title} data={newData}/>
       <div className="relative">
       {/* <BannerTop data={newData}/> */}
-      <BannerHealthDataGov />
+      {/* <BannerHealthDataGov /> */}
         
         <Hero
           heroImg={newData?.hero_img?.data?.attributes.url}
