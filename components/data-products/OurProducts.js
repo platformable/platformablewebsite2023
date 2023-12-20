@@ -57,7 +57,7 @@ export default function OurProducts({ title, products }) {
                 </p>
             </div>
 
-            <div className="text-[#3328C3] flex flex-col justify-center items-center p-7 bg-white">
+            <div className="text-[#3328C3] flex flex-col justify-center  p-7 bg-white">
               <div
                 dangerouslySetInnerHTML={{
                   __html: card?.data_products_product_description,
@@ -119,6 +119,12 @@ export default function OurProducts({ title, products }) {
                     </button>
                   </Link>
                 </div>
+              ) : card?.data_products_product_name === 'Open Banking Value Tool' ? (
+                <Link href="https://openbankingvalue.platformable.com/"  target="_blank" className="flex justify-center">
+                  <button className="bg-[var(--yellow)] px-3 py-2 shadow-md rounded-md text-[var(--purple)]">
+                <p className="font-bold">Access for free</p>
+              </button>
+                </Link>
               ) : (
                 <Link href="/contact-us" className="flex justify-center">
                   <button className="bg-[var(--pink)] shadow px-3 py-2 rounded-md text-white">

@@ -38,6 +38,13 @@ div[data-card-number='4'] .card_heading  {
     -moz-animation: Gradient 5s ease infinite;
 }
 
+div[data-card-number='5'] .card_heading  {
+    background: transparent linear-gradient(269deg, #FC912A 0%, #F157FF 100%) 0% 0% no-repeat padding-box;
+    background-size: 200% 200%;
+    animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+}
+
 .custom_radio_button {
     accent-color: #8956FF;
     width: 30px;
