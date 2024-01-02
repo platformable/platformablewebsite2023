@@ -1427,6 +1427,14 @@ pre {
 .insetBox2 {
   margin:20px 0;
 }
+
+/* .insetBox2 h3 {
+  font-size: 28px;
+} */
+.insetBox2 h4 {
+  font-size: 24px;
+  font-weight: 400;
+}
 .insetBox2Top {
   padding:20px;
 }
@@ -1530,16 +1538,18 @@ pre {
 }
 
 
+
 .insetBox2-highlight-dark-btn {
-  background-color:var(--highlight-color);
+  background-color:var(--highlight-color-dark);
 }
 .insetBox2-highlight-dark .insetBox2Top {
-  background-color:var(--highlight-color);
+  background-color:var(--highlight-color-dark);
   border-top-left-radius:10px;
   border-top-right-radius:10px;
+  color:white;
 }
 .insetBox2-highlight-dark .insetBox2Bottom {
-  background-color:var(--highlight-color);
+  background-color:var(--highlight-color-light);
 }
 
 
