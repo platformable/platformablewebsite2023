@@ -23,7 +23,8 @@ export default function ActContent({ data }) {
                 <img src="/tool_icon.svg" alt="tool icon" />
                 <h5 className="text-[var(--purple-medium)] font-bold">Link</h5>
               </div>
-              <span className="text-base lg:text-xl font-bold underline">{data.act_tool_component.link}</span>
+             
+              <a href={data.act_tool_component.link} className="font-bold lg:text-xl underline">{data.act_tool_component.link}</a>
             </div>
 
 
