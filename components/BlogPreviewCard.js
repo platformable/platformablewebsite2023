@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 export default function BlogPreviewCard({ post,draft }) {
+  console.log("is draft", draft)
   const calculateTimeToRead = (article) => {
     return Math.ceil(article.trim().split(/\s+/).length / 225);
   };
@@ -48,7 +49,7 @@ export default function BlogPreviewCard({ post,draft }) {
       </div>
 
       <div className="grid justify-center text-center p-7 ">
-      <Link href={`/blog/${post.attributes.slug}`}> <p className="leading-6 font-bold text-[var(--purple-extra-dark)] ">
+      <Link href={!draft ? `/blog/${post?.attributes?.slug}`:`/blog/draft/${post?.attributes?.slug}`}> <p className="leading-6 font-bold text-[var(--purple-extra-dark)] ">
           {post?.attributes?.title}
         </p>
         </Link>

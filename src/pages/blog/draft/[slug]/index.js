@@ -7,11 +7,8 @@ import BlogPreviewCard from "../../../../../components/BlogPreviewCard";
 import Head from "next/head";
 import { InlineWidget } from "react-calendly";
 import { LinkedinShareButton, LinkedinIcon } from "react-share";
-import Meta from "../../../../../components/Meta";
-import ReactMarkdown from "react-markdown";
-import rehypeSanitize from "rehype-sanitize";
-import rehypeRaw from "rehype-raw";
-import remarkGfm from "remark-gfm";
+import ActContent from "../../../../../components/blog/ActContent";
+import RegularContent from "../../../../../components/blog/RegularContent";
 import { usePlausible } from "next-plausible";
 
 // const file = await unified()
@@ -22,7 +19,7 @@ import { usePlausible } from "next-plausible";
 export default function BlogDraftPage({ data }) {
   const router = useRouter();
   const plausible = usePlausible()
-  // console.log("data",data)
+  console.log("post content",data)
 
   //get post index to create next and prev logic
   const [relatedSectorPosts, setRelatedSectorPosts] = useState([]);
@@ -207,24 +204,9 @@ useEffect(()=>{
               Published at {new Date(data?.publishedAt).toDateString()}
             </span>
           )}
-          {data?.markdown_content ? (
+           {data?.is_act_post === true ? 
             
-            <ReactMarkdown
-              className="blog-page"
-              // children={data?.markdown_content}
-              remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeRaw, rehypeSanitize]}
-            >{data?.markdown_content}
-            </ReactMarkdown>
-          ) : (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: data?.content,
-              }}
-              className={`mt-7  blog-page`}
-              id="blogPage"
-            />
-          )}
+            <ActContent data={data} /> : <RegularContent data={data} />}
 
           {data.Calendly ? (
             <InlineWidget url="https://calendly.com/platformable" />
@@ -233,7 +215,7 @@ useEffect(()=>{
           <div className="flex gap-x-10 gap-y-10 justify-center mt-20 mb-10 md:flex-row flex-col items-center">
           {data?.teams?.data?.map((member, index) => (
             
-              <div key={index} className="grid justify-center items-center text-center">
+              <div key={index} className="grid justify-items-center items-center text-center">
               <img
                 src={member?.attributes?.image?.data?.attributes.url}
                 alt="member image"
@@ -318,7 +300,7 @@ export async function getServerSideProps(ctx) {
   try {
     const [data] = await Promise.all([
       fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?publicationState=preview&filters[publishedAt][$null]=true&filters[slug]=${slug}&populate[teams][populate][image]=*&populate[featured_img]=*&populate[sectors]=*&populate[category]=*&populate[footnote]=*`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?publicationState=preview&filters[publishedAt][$null]=true&filters[slug]=${slug}&populate[teams][populate][image]=*&populate[featured_img]=*&populate[sectors]=*&populate[category]=*&populate[footnote]=*&populate[act_tool_component]=*&populate[act_carousel][populate][images]=*`
       ).then((res) => res.json()),
       // fetch(
       //   `${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?populate=*&filters[sectors][name]=Open Health`
