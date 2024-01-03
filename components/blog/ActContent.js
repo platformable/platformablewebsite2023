@@ -14,7 +14,7 @@ export default function ActContent({ data }) {
                 <img src="/tool_icon.svg" alt="tool icon" />
                 <h5 className="text-[var(--purple-medium)] font-bold">Tool</h5>
               </div>
-              <span className=" text-base lg:text-xl font-bold">Blog Component Code Generator for Headless CMS</span>
+              <span className=" text-base lg:text-xl font-bold">{data.act_tool_component.tool}</span>
             </div>
 
 
@@ -23,7 +23,7 @@ export default function ActContent({ data }) {
                 <img src="/tool_icon.svg" alt="tool icon" />
                 <h5 className="text-[var(--purple-medium)] font-bold">Link</h5>
               </div>
-              <span className="text-base lg:text-xl font-bold underline">https://codegen.platformable.com/</span>
+              <span className="text-base lg:text-xl font-bold underline">{data.act_tool_component.link}</span>
             </div>
 
 
@@ -32,7 +32,7 @@ export default function ActContent({ data }) {
                 <img src="/tool_icon.svg" alt="tool icon" />
                 <h5 className="text-[var(--purple-medium)] font-bold">Description</h5>
               </div>
-              <span className="text-base lg:text-xl">Supports a variety of headless CMS platforms, providing flexibility for developers working with different systems. The generated code is optimized for performance and adheres to best practices.</span>
+              <span className="text-base lg:text-xl">{data.act_tool_component.description}</span>
             </div>
 
 
@@ -41,7 +41,7 @@ export default function ActContent({ data }) {
                 <img src="/tool_icon.svg" alt="tool icon" />
                 <h5 className="text-[var(--purple-medium)] font-bold">How this helps foster open ecosystems</h5>
               </div>
-              <span className="text-base lg:text-xl">By promoting interoperability, standardization, community collaboration, extensibility, documentation, open-source principles, and integration with third-party services.</span>
+              <span className="text-base lg:text-xl">{data.act_tool_component.how_this_helps}</span>
             </div>
 
             <div className="">
@@ -49,7 +49,7 @@ export default function ActContent({ data }) {
                 <img src="/tool_icon.svg" alt="tool icon" />
                 <h5 className="text-[var(--purple-medium)] font-bold">Why we recommend</h5>
               </div>
-              <span className="text-base lg:text-xl">By integrating this blog component generator into your toolkit, you empower developers to create high-performing, standards-compliant code, ultimately enhancing the overall quality and user satisfaction of your digital content.</span>
+              <span className="text-base lg:text-xl">{data.act_tool_component.why_we_recommend}</span>
             </div>
         </div>
       </article>
