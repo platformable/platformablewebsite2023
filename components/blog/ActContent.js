@@ -24,7 +24,7 @@ export default function ActContent({ data }) {
                 <h5 className="text-[var(--purple-medium)] font-bold">Link</h5>
               </div>
              
-              <a href="http://www.google.com" className="font-bold lg:text-xl underline">{data.act_tool_component.link}</a>
+              <a href={data.act_tool_component.link} className="font-bold lg:text-xl underline">{data.act_tool_component.link}</a>
             </div>
 
 
