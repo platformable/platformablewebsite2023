@@ -13,19 +13,22 @@ export default function OpenBankingOpenFinanceTrendsReports({data}) {
       'Open Banking': {
         bgColor: 'bg--gradient-obof',
         bgGradientColor: 'bg--gradient-obof',
-        textColor: 'var(--ob-light)',
+        textColor: 'text-[var(--ob-light)]',
+        iconColor: 'var(--ob-light)',
         checklistImage: '/benefits_check_obof.svg'
       },
       'Open Health': {
         bgColor: 'bg--gradient-oh',
         bgGradientColor: 'bg--gradient-oh',
-        textColor: 'var(--oh-ligh)',
+        textColor: 'text-[var(--oh-light)]',
+        iconColor: 'var(--oh-light)',
         checklistImage: '/benefits_check_oh.svg'
       },
       'Open Ecosystems': {
         bgColor: 'bg-[var(--green)]',
         bgGradientColor: 'bg--gradient-oe',
-        textColor: 'var(--blue)',
+        textColor: 'text-[var(--blue)]',
+        iconColor: 'var(--blue)',
         checklistImage: '/benefits_check_oe.svg'
       },
     }
