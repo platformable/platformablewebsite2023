@@ -234,7 +234,7 @@ useEffect(()=>{
            </div>
           {/* </div> */}
 
-          {data?.footnote > 0 ? (
+          {data?.footnote?.length > 0 ? (
             <div className="p-7 rounded-md bg-[#FBC6FD] my-10">
               <p className="font-bold">Article references</p>
               {data?.footnote?.map((note, index) => {
@@ -242,8 +242,8 @@ useEffect(()=>{
                   <div className="flex gap-x-1 my-5" key={index}>
                     <span className="text-xs">{index + 1}</span>
                     <p>
-                      Platformable value model:{" "}
-                      <strong>{note?.footnote}</strong>
+                     <strong>Platformable value model:</strong>{" "}
+                      <>{note?.footnote}</>
                     </p>
                   </div>
                 );
