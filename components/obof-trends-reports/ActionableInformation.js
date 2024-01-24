@@ -6,8 +6,8 @@ export default function ActionableInformation({data, sectorsStyle}) {
     <div className="container mx-auto">
       <div className="flex gap-x-5 items-center   py-10">
        
-        <IconPlatformable color={sectorsStyle[data?.sector]?.textColor} />
-        <h3 className={`text-[${sectorsStyle[data?.sector]?.textColor}] font-bold md:leading-10 leading-8 `}>
+        <IconPlatformable color={sectorsStyle[data?.sector]?.iconColor} />
+        <h3 className={`${sectorsStyle[data?.sector]?.textColor} font-bold md:leading-10 leading-8 `}>
           {data?.actionable_information_title}
         </h3>
       </div>
