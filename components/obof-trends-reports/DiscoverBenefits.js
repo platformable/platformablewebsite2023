@@ -6,8 +6,8 @@ export default function DiscoverBenefits({ data, sectorsStyle }) {
   return (
     <div className="container mx-auto my-10">
       <div className="flex gap-x-5 items-center   py-10">
-        <IconPlatformable color={sectorsStyle[data?.sector]?.textColor} />
-        <h3 className={`text-[${sectorsStyle[data?.sector]?.textColor}] font-bold md:leading-10 leading-8 `}>
+        <IconPlatformable color={sectorsStyle[data?.sector]?.iconColor} />
+        <h3 className={`${sectorsStyle[data?.sector]?.textColor} font-bold md:leading-10 leading-8 `}>
           {data?.discover_title}
         </h3>
       </div>
