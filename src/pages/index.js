@@ -7,6 +7,8 @@ import Hero from "../../components/homepage/Hero";
 import Meta from "../../components/Meta";
 import ProductCarousel from "../../components/ProductCarousel";
 import BannerHealthDataGov from "../../components/banners/BannerHealthDataGov";
+import BannerTop from "../../components/homepage/BannerTop";
+import BannerLMS from "../../components/banners/BannerLMS";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +22,7 @@ export default function Home({ data }) {
       <div className="relative">
       {/* <BannerTop data={newData}/> */}
       {/* <BannerHealthDataGov /> */}
+      <BannerLMS />
         
         <Hero
           heroImg={newData?.hero_img?.data?.attributes.url}
