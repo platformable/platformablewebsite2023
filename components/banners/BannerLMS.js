@@ -14,7 +14,7 @@ export default function BannerLMS() {
       </div>
       <div className="w-full py-5 flex gap-5 justify-center pr-32 items-center">
         
-          <div className="text-[var(--purple-medium-dark)] text-[23px]">
+          <div className="ml-10 text-[var(--purple-medium-dark)] text-[23px]">
             <span className="opacity-90">Join the</span>{' '}
             <span className="font-bold ">Platformable</span>{' '}
             <span className="opacity-90">Learning Academy</span>
