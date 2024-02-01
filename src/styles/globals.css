@@ -3600,6 +3600,20 @@ margin:0 !important;
     clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
     background: transparent linear-gradient(-270deg, #CA58FE 0%, #C658FE 0%, #1D61FE 100%) 0% 0% no-repeat padding-box;
   }
+
+  
+  #bannerLMS {
+    background-color: var(--purple-medium-dark);
+  }
+  #bannerLMS > div:first-child {
+    /* background: transparent linear-gradient(270deg, #1D61FE 0%, #DCE9FF 100%) 0% 0% no-repeat padding-box; */
+  }
+  
+  #bannerLMS > div:last-child {
+    -webkit-clip-path: polygon(100% 0, 100% 40%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+    clip-path: polygon(100% 0, 100% 40%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+    background: transparent linear-gradient(90deg, #97F1CE 0%, #F9BAF9 21%, #FED39F 43%, #F9BAF9 61%, #C1A6F8 85%, #C1A6F8 100%) 0% 0% no-repeat padding-box;
+  }
 }
 
 
