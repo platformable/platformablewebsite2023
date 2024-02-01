@@ -20,7 +20,7 @@ export default function BannerLMS() {
             <span className="opacity-90">Learning Academy</span>
 
           </div>
-          <Link href='https://academy.platformable.com/'>
+          <Link href='https://academy.platformable.com/' target="_blank">
               <button className="bg-[var(--purple-medium-dark)] px-7 py-2 shadow rounded-md">
                 <span>NOW!</span>
               </button>
