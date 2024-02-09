@@ -13,8 +13,8 @@ export default function OpenBankingOpenFinanceTrendsReports({data}) {
       'Open Banking': {
         bgColor: 'bg--gradient-obof',
         bgGradientColor: 'bg--gradient-obof',
-        textColor: 'text-[var(--ob-light)]',
-        iconColor: 'var(--ob-light)',
+        textColor: 'text-white',
+        iconColor: '#fff',
         checklistImage: '/benefits_check_obof.svg'
       },
       'Open Health': {
