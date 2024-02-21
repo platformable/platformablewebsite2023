@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function ResourcesSearch({ posts, heading, draft }) {
   const featuredPost = posts?.filter(
     (post) => post?.attributes?.is_featured
-  )[0];
+  )[0] || posts[ Math.random() * posts.length |0 ];
 
 
   const [searchWord, setSearchWord] = useState("");
