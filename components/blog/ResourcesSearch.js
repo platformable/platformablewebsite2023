@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function ResourcesSearch({ posts, heading, draft }) {
   const featuredPost = posts?.filter(
     (post) => post?.attributes?.is_featured
-  )[0];
+  )[0] || posts[ Math.random() * posts.length |0 ];
 
 
   const [searchWord, setSearchWord] = useState("");
@@ -23,11 +23,11 @@ export default function ResourcesSearch({ posts, heading, draft }) {
           return post;
         } else {
           return (
-            post.attributes.title
+            post?.attributes?.title
               .toLowerCase()
               .includes(searchWord.toLowerCase()) ||
-            post.attributes.content
-              .toLowerCase()
+            post?.attributes?.content
+              ?.toLowerCase()
               .includes(searchWord.toLowerCase())
           );
         }
