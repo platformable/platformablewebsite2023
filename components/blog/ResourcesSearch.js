@@ -23,11 +23,11 @@ export default function ResourcesSearch({ posts, heading, draft }) {
           return post;
         } else {
           return (
-            post.attributes.title
+            post?.attributes?.title
               .toLowerCase()
               .includes(searchWord.toLowerCase()) ||
-            post.attributes.content
-              .toLowerCase()
+            post?.attributes?.content
+              ?.toLowerCase()
               .includes(searchWord.toLowerCase())
           );
         }
