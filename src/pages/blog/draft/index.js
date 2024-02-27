@@ -18,7 +18,7 @@ export default function BlogsDraftIndex({ posts }) {
   );
 }
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   try {
     const [posts] = await Promise.all([
       fetch(
@@ -29,6 +29,7 @@ export async function getServerSideProps(ctx) {
     return {
       props: {
         posts: posts?.data,
+        revalidate: 10,
       },
     };
   } catch (error) {
