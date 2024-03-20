@@ -237,12 +237,12 @@ h6 {
 }
 
 /* BLOGS */
-.blog-page h1,
-.blog-page h2,
-.blog-page h3,
-.blog-page h4,
-.blog-page h5,
-.blog-page h6 {
+.blog-page > h1,
+.blog-page > h2,
+.blog-page > h3,
+.blog-page > h4,
+.blog-page > h5,
+.blog-page > h6 {
   line-height: 55px;
   margin: 20px 0;
   font-weight: bold;
@@ -283,7 +283,7 @@ h6 {
 }
 .blog-page ul li {
   padding: 0px 30px;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .blog-page figure.image {
