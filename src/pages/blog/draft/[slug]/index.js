@@ -19,7 +19,7 @@ import { usePlausible } from "next-plausible";
 export default function BlogDraftPage({ data }) {
   const router = useRouter();
   const plausible = usePlausible()
-  console.log("post content",data)
+  // console.log("post content",data)
 
   //get post index to create next and prev logic
   const [relatedSectorPosts, setRelatedSectorPosts] = useState([]);
@@ -204,6 +204,12 @@ useEffect(()=>{
               Published at {new Date(data?.publishedAt).toDateString()}
             </span>
           )}
+          <div className="container mx-auto ">
+          {data?.featured_img && (
+            <img src={data?.featured_img?.data?.attributes?.url} alt="featured image" className="pt-14 pb-4"/>
+          )}
+
+          </div>
            {data?.is_act_post === true ? 
             
             <ActContent data={data} /> : <RegularContent data={data} />}
