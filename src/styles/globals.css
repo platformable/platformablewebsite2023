@@ -243,7 +243,7 @@ h6 {
 .blog-page h4,
 .blog-page h5,
 .blog-page h6 {
-  line-height: 50px;
+  line-height: 55px;
   margin: 20px 0;
   font-weight: bold;
 }
@@ -258,7 +258,7 @@ h6 {
 
 .blog-page p {
   margin: 25px 0;
-  line-height: 28px;
+  line-height: 30px;
 }
 
 .blog-page article {
