@@ -250,6 +250,10 @@ h6 {
 .blog-page a {
   word-wrap: break-word;
 }
+
+.footnote a {
+  text-decoration: underline;
+}
 .blog-page iframe {
   text-align: center !important;
   margin: 0 auto;

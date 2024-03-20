@@ -214,7 +214,7 @@ useEffect(()=>{
             </section>
 
             {data?.featured_img && (
-            <img src={data?.featured_img?.data?.attributes?.url} alt="featured image" className="pt-14 pb-4"/>
+           <center> <img src={data?.featured_img?.data?.attributes?.url} alt="featured image" className="pt-14 pb-4"/></center>
           )}
           </div>
           
