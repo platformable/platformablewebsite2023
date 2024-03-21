@@ -21,7 +21,7 @@ import RegularContent from "../../../../components/blog/RegularContent";
 export default function BlogPage({ data }) {
   const router = useRouter();
   const plausible = usePlausible()
-
+console.log("blog data", data)
   //get post index to create next and prev logic
   const [relatedSectorPosts, setRelatedSectorPosts] = useState([]);
   const [selectedPostCategory, setSelectedPostcategory] = useState(null);
@@ -213,8 +213,11 @@ useEffect(()=>{
          </div>
             </section>
 
-          
+            {data?.featured_img && (
+           <center> <img src={data?.featured_img?.data?.attributes?.url} alt="featured image" className="pt-14 pb-4"/></center>
+          )}
           </div>
+          
           
           {data?.is_act_post === true ? 
             
