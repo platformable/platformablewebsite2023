@@ -28,18 +28,16 @@ export default function RegularContent({ data }) {
             <div className="p-7 rounded-md bg-[#FBC6FD] ">
               <p className="font-bold">Article references</p>
               {data?.footnote?.map((note, index) => {
-                let subheading = note.subheading;
-                const spacing = ": ";
-                const content = subheading.concat(note.footnote);
+
 
                 return (
                   <div className="flex gap-x-1 my-5" key={index}>
                     <span className="text-xs">{index + 1} </span>
                     <p>
-                      <strong>{note.subheading} :</strong>{" "}
+                      <strong>{note?.subheading} :</strong>{" "}
                       <div
                         dangerouslySetInnerHTML={{
-                          __html: note.footnote,
+                          __html: note?.footnote,
                         }}
                         className={`text-xl footnote `}
                         id="blogPage footnote"
