@@ -3620,3 +3620,102 @@ margin:0 !important;
 .items .next  {
   mask-image: radial-gradient(circle at 10%, var(--purple-medium) 40%, transparent 100%);
 }
+
+
+
+
+
+/* New persona */
+.newpersona {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 0 10px;
+  color: black;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.persona-icon {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 0 10px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.persona-content {
+  padding: 10px 0;
+}
+.persona-card-bg-dark-oh {
+  background-color: var(--oh-dark);
+}
+.persona-card-bg-dark-oe {
+  background-color: var(--oe-dark);
+  color: white;
+}
+.persona-card-bg-dark-orange {
+  background-color: var(--red-orange-dark);
+  color: white;
+}
+.persona-card-bg-dark-highlight {
+  background-color: var(--highlight-color-dark);
+}
+
+.persona-card-bg-dark-business {
+  background-color: var(--business-color-dark);
+}
+
+
+/* simple queote */
+
+.simple-quote {
+/*   background-image:url('https://www.svgrepo.com/show/294342/quotes-quote.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size:100px; */
+  font-weight: bold;
+}
+
+.simple-quote h6 {
+  font-weight: bold;
+}
+
+.simple-quote-health-dark {
+  background: linear-gradient(90deg, #cce0ff 0%, #fbc6fd 100%) 0% 0% no-repeat
+    padding-box;
+  padding: 20px;
+  border-radius: 10px;
+  color: black !important;
+}
+
+.simple-quote-bank-dark {
+  background: linear-gradient(90deg, #fff1e4 0%, #fbc6fd 100%) 0% 0% no-repeat
+    padding-box;
+  padding: 20px;
+  border-radius: 10px;
+  color: black !important;
+}
+
+.simple-quote-oe-dark {
+/*   background: linear-gradient(90deg, #d0ffed 0%, #fbc6fd 100%) 0% 0% no-repeat, url('https://www.svgrepo.com/show/294342/quotes-quote.svg') no-repeat; */
+  background: linear-gradient(90deg, #d0ffed 0%, #fbc6fd 100%) 0% 0% no-repeat
+    padding-box;
+/*     background-image:url('https://www.svgrepo.com/show/294342/quotes-quote.svg');
+    background-repeat:no-repeat; */
+  /*   background-position: center;
+    background-size:100px; */
+  padding: 20px;
+  border-radius: 10px;
+  color: black !important;
+}
+
+.simple-quote-business-dark {
+  /* background-color:var(--oe-dark); */
+  background: linear-gradient(90deg, #E1DBFF 0%, #FBC6FD 100%) 0% 0% no-repeat
+    padding-box;
+  padding: 20px;
+  border-radius: 10px;
+  color: black !important;
+}
