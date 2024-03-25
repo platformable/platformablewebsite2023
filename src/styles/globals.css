@@ -3631,9 +3631,13 @@ margin:0 !important;
   grid-template-columns: 1fr 3fr;
   grid-gap: 0 10px;
   color: black;
-
+  margin:10px 0;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.newpersona h4 {
+  font-weight: bold;
 }
 
 .persona-icon {
@@ -3649,22 +3653,22 @@ margin:0 !important;
   padding: 10px 0;
 }
 .persona-card-bg-dark-oh {
-  background-color: var(--oh-dark);
+  background-color: #dce9ff;
 }
 .persona-card-bg-dark-oe {
   background-color: var(--oe-dark);
   color: white;
 }
 .persona-card-bg-dark-orange {
-  background-color: var(--red-orange-dark);
+  background-color: #FFE1C7;
   color: white;
 }
 .persona-card-bg-dark-highlight {
-  background-color: var(--highlight-color-dark);
+  background-color: #FFE1C7;
 }
 
 .persona-card-bg-dark-business {
-  background-color: var(--business-color-dark);
+  background-color: #e1dbff;
 }
 
 
@@ -3676,6 +3680,7 @@ margin:0 !important;
   background-position: center;
   background-size:100px; */
   font-weight: bold;
+  margin:10px 0px;
 }
 
 .simple-quote h6 {
