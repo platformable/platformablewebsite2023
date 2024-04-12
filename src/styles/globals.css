@@ -3674,12 +3674,8 @@ margin:0 !important;
 
 /* simple queote */
 
-.simple-quote {
- 
-  font-weight: bold;
-}
 
-.simple-quote h6 {
+.simple-quote h6,.simple-quote span{
   font-weight: bold;
 }
 
