@@ -3346,6 +3346,7 @@ font-size:12px;
   margin-bottom: 20px;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   white-space: wrap;
+  overflow-x:auto;
 }
 
 .blog-page table th {
@@ -3353,6 +3354,7 @@ font-size:12px;
 }
 figure.table table {
   width: 100% !important;
+ 
 }
 /* .blog-page table p {
 margin:0 !important;
@@ -3430,6 +3432,7 @@ margin:0 !important;
 .blog-page table tr td {
   border-right: 1px solid #5A23EC;
   border-bottom: 1px solid #5A23EC;
+  border-top: 1px solid #5A23EC;
   padding: 10px 25px;
   text-align: left;
   width: auto !important;
