@@ -2,6 +2,9 @@ import styles from "@/styles/DataGovernancepage.module.css";
 import Link from "next/link";
 
 export default function GovernanceProducts({ title, products }) {
+
+
+  console.log("products", products)
   return (
     <section className="pb-20 pt-2 bg-[var(--purple-medium)] md:block hidden">
       <div className="container mx-auto">
@@ -71,11 +74,22 @@ export default function GovernanceProducts({ title, products }) {
               </div> */}
 
               <div className="grid place-content-center px-7 bg-[#E9E8F8]">
-                <Link href={"/contact-us"}>
+                {
+                  card?.bookbuytn_url === null ? <Link href={"/contact-us"}>
                   <button className="bg-[var(--pink)]  shadow px-3 py-2 rounded-md text-white">
                     <p className="">Join waiting list</p>
                   </button>
-                </Link>
+                </Link>: (<Link href={`${card?.bookbuytn_url}`} target="_blank">
+                  <button className='bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple-medium)] w-full'>
+                    <p className="">{card.bookbuybtn}</p>
+                  </button>
+                </Link>)
+                }
+        {/*         <Link href={"/contact-us"}>
+                  <button className="bg-[var(--pink)]  shadow px-3 py-2 rounded-md text-white">
+                    <p className="">Join waiting list</p>
+                  </button>
+                </Link> */}
               </div>
 
               {/* <div className="grid items-center px-7 bg-[#DEDCF5]">
