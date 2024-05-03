@@ -79,7 +79,7 @@ export default function ProductDescription({ data, sectorsStyle }) {
                 <div className="grid gap-y-2 text-[var(--purple)]">
                   <span className="text-center">
                     <strong>
-                      ${product?.data_products_product_price_quarter}+IVA
+                      {product?.data_products_product_price_quarter}€+IVA
                     </strong>{" "}
                     per quarter
                   </span>
@@ -97,7 +97,7 @@ export default function ProductDescription({ data, sectorsStyle }) {
                 <div className="grid gap-y-2 text-[var(--purple)]">
                   <span className="text-center">
                     <strong>
-                      ${product?.data_products_product_price_year}+IVA
+                      {product?.data_products_product_price_year}€+IVA
                     </strong>{" "}
                     per year
                   </span>
