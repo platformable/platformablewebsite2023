@@ -56,7 +56,7 @@ export default function OurProductssMobile({ title, products }) {
                         <button className="bg-[var(--yellow)] px-3 py-2 shadow rounded-md text-[var(--purple)]">
                           <p>
                             <strong>
-                              ${product?.data_products_product_price_quarter}
+                              {product?.data_products_product_price_quarter}€
                             </strong>{" "}
                             per quarter
                           </p>
@@ -64,7 +64,7 @@ export default function OurProductssMobile({ title, products }) {
                         <button className="bg-[var(--orange-medium)] leading-snug px-3 py-2 shadow rounded-md text-[var(--purple)]">
                           <p>
                             <strong>
-                              ${product?.data_products_product_price_year}
+                              {product?.data_products_product_price_year}€
                             </strong>{" "}
                             per year
                           </p>
