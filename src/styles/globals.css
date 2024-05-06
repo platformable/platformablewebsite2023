@@ -3450,9 +3450,9 @@ margin:0 !important;
 }
 
 .blog-page table tr td:first-child {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+ /*  display: flex; */
+/*   flex-direction: column;
+  justify-content: start; */
   align-items: center;
   font-weight: bold;
 }
