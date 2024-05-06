@@ -206,7 +206,7 @@ useEffect(()=>{
           )}
           <div className="container mx-auto ">
           {data?.featured_img && (
-            <img src={data?.featured_img?.data?.attributes?.url} alt="featured image" className="pt-14 pb-4"/>
+            <img src={data?.featured_img?.data?.attributes?.url} alt="featured image" className="pt-14 pb-4 w-2/4"/>
           )}
 
           </div>
