@@ -14,7 +14,7 @@ export default function ActContent({ data }) {
                 <img src="/tool_icon.svg" alt="tool icon" />
                 <h5 className="text-[var(--purple-medium)] font-bold">Tool</h5>
               </div>
-              <span className=" text-base lg:text-xl font-bold">{data.act_tool_component.tool}</span>
+              <span className=" text-base lg:text-xl font-bold">{data?.act_tool_component?.tool}</span>
             </div>
 
 
@@ -24,7 +24,7 @@ export default function ActContent({ data }) {
                 <h5 className="text-[var(--purple-medium)] font-bold">Link</h5>
               </div>
              
-              <a href={data.act_tool_component.link} className="font-bold lg:text-xl underline" target="_blank">{data.act_tool_component.link}</a>
+              <a href={data?.act_tool_component?.link} className="font-bold lg:text-xl underline" target="_blank">{data?.act_tool_component?.link}</a>
             </div>
 
 
@@ -33,7 +33,7 @@ export default function ActContent({ data }) {
                 <img src="/tool_icon.svg" alt="tool icon" />
                 <h5 className="text-[var(--purple-medium)] font-bold">Description</h5>
               </div>
-              <span className="text-base lg:text-xl">{data.act_tool_component.description}</span>
+              <span className="text-base lg:text-xl">{data?.act_tool_component?.description}</span>
             </div>
 
 
@@ -42,7 +42,7 @@ export default function ActContent({ data }) {
                 <img src="/tool_icon.svg" alt="tool icon" />
                 <h5 className="text-[var(--purple-medium)] font-bold">How this helps foster open ecosystems</h5>
               </div>
-              <span className="text-base lg:text-xl">{data.act_tool_component.how_this_helps}</span>
+              <span className="text-base lg:text-xl">{data?.act_tool_component?.how_this_helps}</span>
             </div>
 
             <div className="">
@@ -50,7 +50,7 @@ export default function ActContent({ data }) {
                 <img src="/tool_icon.svg" alt="tool icon" />
                 <h5 className="text-[var(--purple-medium)] font-bold">Why we recommend</h5>
               </div>
-              <span className="text-base lg:text-xl">{data.act_tool_component.why_we_recommend}</span>
+              <span className="text-base lg:text-xl">{data?.act_tool_component?.why_we_recommend}</span>
             </div>
         </div>
       </article>
@@ -75,7 +75,7 @@ export default function ActContent({ data }) {
         )}
       </div>
       <div className="">
-        <BlogCarousel carouselData={data.act_carousel} />
+        <BlogCarousel carouselData={data?.act_carousel} />
       </div>
       <div className="content-second-part container mx-auto">
         {data?.markdown_content ? (

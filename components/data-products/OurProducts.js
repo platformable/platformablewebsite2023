@@ -85,8 +85,8 @@ export default function OurProducts({ title, products }) {
             <div className="grid items-center justify-center px-7 bg-[#E9E8F8]">
               {card.data_products_product_price_quarter &&
               card.data_products_product_price_year ? (
-                <div className="grid grid-rows-2 gap-y-10">
-                  <Link
+                <div className=" gap-y-10 items-center justify-center">
+            {/*       <Link
                     href={card?.data_product_purchase_quarter || ""}
                     className={`${!card?.data_product_purchase_quarter && 'pointer-events-none '} flex justify-center`}
                     onClick={() => sendPlausibleCustomGoal(card?.plausible_purchase_quarter_tracker)}
@@ -95,12 +95,12 @@ export default function OurProducts({ title, products }) {
                     <button className="bg-[var(--yellow)] flex-grow px-3 py-2 shadow rounded-md text-[var(--purple)]">
                       <p>
                         <strong>
-                          ${card.data_products_product_price_quarter}
+                          {card.data_products_product_price_quarter}€
                         </strong>{" "}
                         per quarter
                       </p>
                     </button>
-                  </Link>
+                  </Link> */}
 
                   <Link
                     href={card?.data_product_purchase_year || ""}
@@ -111,7 +111,7 @@ export default function OurProducts({ title, products }) {
                     <button className="bg-[var(--orange-medium)] leading-snug px-3 flex-grow py-2 shadow rounded-md text-[var(--purple)]">
                       <p>
                         <strong>
-                          ${card.data_products_product_price_year}
+                        €{card.data_products_product_price_year}
                         </strong>{" "}
                         per year
                       </p>

@@ -21,7 +21,7 @@ import RegularContent from "../../../../components/blog/RegularContent";
 export default function BlogPage({ data }) {
   const router = useRouter();
   const plausible = usePlausible()
-
+console.log("blog data", data)
   //get post index to create next and prev logic
   const [relatedSectorPosts, setRelatedSectorPosts] = useState([]);
   const [selectedPostCategory, setSelectedPostcategory] = useState(null);
@@ -213,13 +213,34 @@ useEffect(()=>{
          </div>
             </section>
 
-          
+            {data?.featured_img && (
+           <center> <img src={data?.featured_img?.data?.attributes?.url} alt="featured image" className="pt-14 pb-4 w-2/4"/></center>
+          )}
           </div>
+          
           
           {data?.is_act_post === true ? 
             
            <ActContent data={data} /> : <RegularContent data={data} />}
 
+<div className="container mx-auto">
+{/* {data?.footnote?.length > 0 ? (
+            <div className="p-7 rounded-md bg-[#FBC6FD] my-10">
+              <p className="font-bold">Article references</p>
+              {data?.footnote?.map((note, index) => {
+                return (
+                  <div className="flex gap-x-1 my-5" key={index}>
+                    <span className="text-xs">{index + 1}</span>
+                    <p>
+                     <strong>Platformable value model:</strong>{" "}
+                      <>{note?.footnote}</>
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          ) : null} */}
+</div>
           {data.Calendly ? (
             <InlineWidget url="https://calendly.com/platformable" />
           ) : null}
@@ -251,22 +272,7 @@ useEffect(()=>{
            </div>
           {/* </div> */}
 
-          {data?.footnote?.length > 0 ? (
-            <div className="p-7 rounded-md bg-[#FBC6FD] my-10">
-              <p className="font-bold">Article references</p>
-              {data?.footnote?.map((note, index) => {
-                return (
-                  <div className="flex gap-x-1 my-5" key={index}>
-                    <span className="text-xs">{index + 1}</span>
-                    <p>
-                     <strong>Platformable value model:</strong>{" "}
-                      <>{note?.footnote}</>
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          ) : null}
+      
         </article>
 
         <div className="container mx-auto  justify-center flex gap-x-5 mb-20 items-center">
