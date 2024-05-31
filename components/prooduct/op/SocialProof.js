@@ -7,17 +7,15 @@ export default function SocialProof({data}) {
     const [current, setCurrent] = useState(0);
     const [prev, setPrev] = useState(2);
     const [next, setNext] = useState(1);
-  console.log("current state ", current, slidesRef)
   
     const gotoPrev = () =>
       current > 0
         ? gotoNum(current - 1)
-        : gotoNum(slidesRef.current.childNodes.length - 2);
+        : gotoNum(slidesRef.current.childNodes.length - 1);
   
     const gotoNext = () => (current < 2 ? gotoNum(current + 1) : gotoNum(0));
   
     const gotoNum = (number) => {
-      console.log("given number", number)
       setCurrent(number);
       setPrev(number - 1);
       setNext(number + 1);
@@ -27,9 +25,8 @@ export default function SocialProof({data}) {
       let pre = number === 0 ? 2 : number - 1;
       let nxt = number === 2 ? 0 : number + 1;
       
-      console.log(curr,pre,nxt)
       
-      for (let i = 0; i < slidesRef.current.childNodes.length - 1; i++) {
+      for (let i = 0; i < slidesRef.current.childNodes.length ; i++) {
         slidesRef.current.childNodes[i].classList.remove("active");
         slidesRef.current.childNodes[i].classList.remove("prev");
         slidesRef.current.childNodes[i].classList.remove("next");
@@ -47,7 +44,7 @@ export default function SocialProof({data}) {
     };
   return (
    <>
-    <section className="bg-[#FFE20010] py-14">
+    <section className="hidden md:block bg-[#FFE20010] py-14">
       <div className="container mx-auto">
       <div className={`testimonials-items mt-7 hidden md:block`} ref={slidesRef}>
           <div className={`testimonial-card active p-10 bg-white rounded-xl border border-black`}>

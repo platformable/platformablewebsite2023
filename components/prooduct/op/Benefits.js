@@ -4,11 +4,11 @@ export default function Benefits({data}) {
       <h3 className="text-3xl text-center px-2 md:px-16 mb-10 font-bold">
        {data?.benefitshHeading}
       </h3>
-       <div className="grid  rounded-lg gap-5 grid-cols-5 grid-rows-4">
+       <div className="flex flex-col md:grid rounded-lg gap-5 md:grid-cols-5 md:grid-rows-4">
           {data?.bentoBox?.map((box, index) => (
             <div
               key={index}
-              className={`rounded-lg p-10 h-[500px] gap-10 flex items-start ${
+              className={`rounded-lg p-10 md:h-[500px] gap-10 flex items-start ${
                 index % 2 != 0 ? "flex-col-reverse justify-end " : "flex-col"
               }  ${bentoBoxes.find(i => i.id === box.id)?.colSpan} row-span-1 ${bentoBoxes.find(i => i.id === box.id)?.bgColor}`}
             >
