@@ -1,7 +1,8 @@
 export default function Benefits({data}) {
+  console.log("Benefits",data)
   return (
     <section className="mx-auto container py-14">
-      <h3 className="text-3xl text-center px-2 md:px-16 mb-10 font-bold">
+      <h3 className="text-3xl text-center px-2 md:px-16 mb-10 font-bold" style={{color:data.benefitshHeadingColor}}>
        {data?.benefitshHeading}
       </h3>
        <div className="flex flex-col md:grid rounded-lg gap-5 md:grid-cols-5 md:grid-rows-4">
@@ -14,12 +15,12 @@ export default function Benefits({data}) {
             >
               <div>
                 {box.label && (
-                  <div className="text-lg text-[#3425C9] mb-2 font-medium">{box.label}</div>
+                  <div className="text-lg mb-2 font-medium" style={{color:data.benefitshHeadingColor}}>{box.label}</div>
                 )}
                 {box.title && (
-                  <h1 className="text-2xl mb-4 font-semibold">{box.title}</h1>
+                  <h1 className="text-2xl mb-4 font-semibold" style={{color:data.benefitsTextColor}}>{box.title}</h1>
                 )}
-                {box.text && <p className="text-base">{box.text}</p>}
+                {box.text && <p className="text-base" style={{color:data.benefitsTextColor}}>{box.text}</p>}
               </div>
               {/* {box.linkText && (
             <span className="flex cursor-pointer font-lg flex-row mt-32 items-center justify-start">

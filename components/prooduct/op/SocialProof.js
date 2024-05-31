@@ -42,45 +42,47 @@ export default function SocialProof({data}) {
       slidesRef.current.childNodes[pre]?.classList.add("prev");
       slidesRef.current.childNodes[nxt]?.classList.add("next");
     };
+
+    console.log("data del social",data.testimonials)
   return (
    <>
-    <section className="hidden md:block bg-[#FFE20010] py-14">
+    <section className="hidden md:block  py-14" style={{background:data.testimonials[0].testimonialSectionBgColor}}>
       <div className="container mx-auto">
       <div className={`testimonials-items mt-7 hidden md:block`} ref={slidesRef}>
-          <div className={`testimonial-card active p-10 bg-white rounded-xl border border-black`}>
+          <div className={`testimonial-card active p-10 bg-white rounded-xl`} style={{border:` 1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
             <p>
                 {data?.testimonials?.[2].text}
             </p>
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[2]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
                 <div>
-                    <h5 className="font-bold text-sm">{data?.testimonials?.[2].name}</h5>
-                    <small className="font-medium">{data?.testimonials?.[2].position}</small>
+                    <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0].nameColor}`}}>{data?.testimonials?.[2].name}</h5>
+                    <small className="font-medium" style={{color:`${data?.testimonials[0].positionColor}`}}>{data?.testimonials?.[2].position}</small>
                 </div>
             </div>
           </div>
-          <div className={`testimonial-card next p-10 bg-white rounded-xl border border-black`}>
+          <div className={`testimonial-card next p-10 bg-white rounded-xl`} style={{border:`1px solid  ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
             <p>
                 {data?.testimonials?.[0].text}
             </p>
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[0]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
                 <div>
-                    <h5 className="font-bold text-sm">{data?.testimonials?.[0].name}</h5>
-                    <small className="font-medium">{data?.testimonials?.[0].position}</small>
+                    <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0].nameColor}`}}>{data?.testimonials?.[0].name}</h5>
+                    <small className="font-medium" style={{color:`${data?.testimonials[0].positionColor}`}}>{data?.testimonials?.[0].position}</small>
                 </div>
             </div>
           </div>
           
-          <div className={`testimonial-card prev p-10 bg-white rounded-xl border border-black`}>
+          <div className={`testimonial-card prev p-10 bg-white rounded-xl`} style={{border:`1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
             <p>
                 {data?.testimonials?.[1].text}
             </p>
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[1]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
                 <div>
-                    <h5 className="font-bold text-sm">{data?.testimonials?.[1].name}</h5>
-                    <small className="font-medium">{data?.testimonials?.[1].position}</small>
+                    <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0].nameColor}`}}>{data?.testimonials?.[1].name}</h5>
+                    <small className="font-medium" style={{color:`${data?.testimonials[0].positionColor}`}}>{data?.testimonials?.[1].position}</small>
                 </div>
             </div>
           </div>

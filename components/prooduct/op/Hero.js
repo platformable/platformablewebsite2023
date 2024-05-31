@@ -24,10 +24,7 @@ const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
         <h6>
         {data?.hero_description}
         </h6>
-        <div id="guarantee-hero-container" className="py-7 mx-32 bg-gradient-to-r from-trasnparent via-zinc-600 to-transparent">
-          <span>Trusted by Innovators</span>
-          <p>Cancel at anymtine, no strings attached</p>
-        </div>
+      
         <div className="flex flex-col md:flex-row gap-5 justify-center mt-4 mb-10">
           <Link href={"/"} >
           <button className={` px-3 py-2 shadow rounded-md text-white w-56`} style={{backgroundColor:data.hero.primaryCallToActionBgColor}}>
@@ -36,10 +33,14 @@ const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
           </Link>
           <Link href={"/"}>
           <button className="rounded-md shadow  px-3 py-2  w-56" style={{border:`1px solid ${data.hero.secondaryCallToActionBorderColor}`}}>
-            <p>{data?.hero?.secondaryCallToAction}</p>
+            <p className="text-[#5E2AED]"> {data?.hero?.secondaryCallToAction}</p>
           </button>
           </Link>
           
+        </div>
+        <div id="guarantee-hero-container" className="py-7 mx-60 bg-gradient-to-r from-transparent via-zinc-600 to-transparent">
+          <h3 className="text-[#F157FF] font-bold">Trusted by Innovators</h3>
+          <p>Cancel at anymtine, no strings attached</p>
         </div>
         <img src={data?.hero?.image?.data?.attributes.url} alt="hero image" />
         
