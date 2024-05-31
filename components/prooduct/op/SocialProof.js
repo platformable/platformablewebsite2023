@@ -16,6 +16,7 @@ export default function SocialProof({data}) {
     const gotoNext = () => (current < 2 ? gotoNum(current + 1) : gotoNum(0));
   
     const gotoNum = (number) => {
+      console.log("number", number)
       setCurrent(number);
       setPrev(number - 1);
       setNext(number + 1);
@@ -24,7 +25,7 @@ export default function SocialProof({data}) {
       let curr = number;
       let pre = number === 0 ? 2 : number - 1;
       let nxt = number === 2 ? 0 : number + 1;
-  
+      console.log(pre, curr, nxt)
       for (let i = 0; i < slidesRef.current.childNodes.length - 1; i++) {
         slidesRef.current.childNodes[i].classList.remove("active");
         slidesRef.current.childNodes[i].classList.remove("prev");
@@ -65,15 +66,23 @@ export default function SocialProof({data}) {
             </p>
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[0]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
+                <div>
+                    <h5 className="font-bold text-sm">{data?.testimonials?.[0].name}</h5>
+                    <small className="font-medium">{data?.testimonials?.[0].position}</small>
+                </div>
             </div>
           </div>
           
           <div className={`testimonial-card prev p-10 bg-white rounded-xl border border-black`}>
             <p>
-                {data?.testimonials?.[0].text}
+                {data?.testimonials?.[1].text}
             </p>
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[1]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
+                <div>
+                    <h5 className="font-bold text-sm">{data?.testimonials?.[1].name}</h5>
+                    <small className="font-medium">{data?.testimonials?.[1].position}</small>
+                </div>
             </div>
           </div>
           
