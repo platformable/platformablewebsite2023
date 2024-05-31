@@ -38,7 +38,7 @@ const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
           </Link>
           
         </div>
-        <div id="guarantee-hero-container" className="py-7 mx-60 bg-gradient-to-r from-transparent via-zinc-600 to-transparent">
+        <div id="guarantee-hero-container" className="py-7 md:mx-60 bg-gradient-to-r from-transparent via-zinc-600 to-transparent">
           <h3 className="text-[#F157FF] font-bold">Trusted by Innovators</h3>
           <p>Cancel at anymtine, no strings attached</p>
         </div>
