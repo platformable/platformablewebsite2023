@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function ResourcesSearch({ posts, heading, draft }) {
   const featuredPost = posts?.filter(
     (post) => post?.attributes?.is_featured
-  )[0];
+  )[0] || posts[ Math.random() * posts.length |0 ];
 
 
   const [searchWord, setSearchWord] = useState("");
@@ -23,11 +23,11 @@ export default function ResourcesSearch({ posts, heading, draft }) {
           return post;
         } else {
           return (
-            post.attributes.title
+            post?.attributes?.title
               .toLowerCase()
               .includes(searchWord.toLowerCase()) ||
-            post.attributes.content
-              .toLowerCase()
+            post?.attributes?.content
+              ?.toLowerCase()
               .includes(searchWord.toLowerCase())
           );
         }
@@ -130,8 +130,8 @@ export default function ResourcesSearch({ posts, heading, draft }) {
           <Link
             href={
               !draft
-                ? `/blog/${featuredPost?.attributes.slug}`
-                : `/blog/draft/${featuredPost?.attributes.slug}`
+                ? `/blog/${featuredPost?.attributes?.slug}`
+                : `/blog/draft/${featuredPost?.attributes?.slug}`
             }
           >
             <div className="bg-white rounded-md">
@@ -143,14 +143,14 @@ export default function ResourcesSearch({ posts, heading, draft }) {
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 py-3 px-7">
                   <div>
                     <p className="text-white font-bold">
-                      {new Date(featuredPost?.attributes.update_date).getDate()}{" "}
+                      {new Date(featuredPost?.attributes?.update_date).getDate()}{" "}
                       {new Date(
                         featuredPost?.attributes.update_date
                       ).toLocaleDateString("en-US", { month: "long" })}
                     </p>
                   </div>
                   <p className="text-white">
-                    {featuredPost?.attributes.sectors.data[0].attributes.name}
+                    {featuredPost?.attributes?.sectors?.data?.[0].attributes.name}
                   </p>
                 </div>
               </div>
@@ -162,7 +162,7 @@ export default function ResourcesSearch({ posts, heading, draft }) {
                     </h6>
 
                     <span>Written by </span>
-                    {featuredPost?.attributes.teams?.data.map((team, index) => {
+                    {featuredPost?.attributes.teams?.data?.map((team, index) => {
                       return (
                         <span key={index}>
                           {team.attributes.name +
@@ -206,8 +206,8 @@ export default function ResourcesSearch({ posts, heading, draft }) {
                   <div>
                     <img
                       src={
-                        featuredPost?.attributes.featured_img.data.attributes
-                          .url
+                        featuredPost?.attributes.featured_img?.data?.attributes
+                          ?.url
                       }
                       alt=""
                     />

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 export default function BlogPreviewCard({ post,draft }) {
-  console.log("is draft", draft)
+
   const calculateTimeToRead = (article) => {
     return Math.ceil(article.trim().split(/\s+/).length / 225);
   };

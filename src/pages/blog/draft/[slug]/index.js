@@ -19,7 +19,7 @@ import { usePlausible } from "next-plausible";
 export default function BlogDraftPage({ data }) {
   const router = useRouter();
   const plausible = usePlausible()
-  console.log("post content",data)
+  // console.log("post content",data)
 
   //get post index to create next and prev logic
   const [relatedSectorPosts, setRelatedSectorPosts] = useState([]);
@@ -204,6 +204,12 @@ useEffect(()=>{
               Published at {new Date(data?.publishedAt).toDateString()}
             </span>
           )}
+          <div className="container mx-auto ">
+          {data?.featured_img && (
+            <img src={data?.featured_img?.data?.attributes?.url} alt="featured image" className="pt-14 pb-4 w-2/4"/>
+          )}
+
+          </div>
            {data?.is_act_post === true ? 
             
             <ActContent data={data} /> : <RegularContent data={data} />}
@@ -234,22 +240,7 @@ useEffect(()=>{
            </div>
           {/* </div> */}
 
-          {data?.footnote?.length > 0 ? (
-            <div className="p-7 rounded-md bg-[#FBC6FD] my-10">
-              <p className="font-bold">Article references</p>
-              {data?.footnote?.map((note, index) => {
-                return (
-                  <div className="flex gap-x-1 my-5" key={index}>
-                    <span className="text-xs">{index + 1}</span>
-                    <p>
-                     <strong>Platformable value model:</strong>{" "}
-                      <>{note?.footnote}</>
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          ) : null}
+      
         </article>
 
         <div className="container mx-auto  justify-center flex gap-x-5 mb-20 items-center">

@@ -76,10 +76,10 @@ export default function ProductDescription({ data, sectorsStyle }) {
 
             <div className="grid items-center justify-center px-3 py-4 bg-[#E9E8F8]">
               <div className="grid  gap-y-10">
-                <div className="grid gap-y-2 text-[var(--purple)]">
+           {/*      <div className="grid gap-y-2 text-[var(--purple)]">
                   <span className="text-center">
                     <strong>
-                      ${product?.data_products_product_price_quarter}+IVA
+                      {product?.data_products_product_price_quarter}€+IVA
                     </strong>{" "}
                     per quarter
                   </span>
@@ -93,11 +93,11 @@ export default function ProductDescription({ data, sectorsStyle }) {
                       Buy now
                     </button>
                   </Link>
-                </div>
+                </div> */}
                 <div className="grid gap-y-2 text-[var(--purple)]">
                   <span className="text-center">
                     <strong>
-                      ${product?.data_products_product_price_year}+IVA
+                      €{product?.data_products_product_price_year}
                     </strong>{" "}
                     per year
                   </span>
