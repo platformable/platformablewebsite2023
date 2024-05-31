@@ -2,16 +2,16 @@ import { useState, useRef } from "react";
 
 
 export default function SocialProof({data}) {
+  
+    const slidesRef = useRef(null);
     const [current, setCurrent] = useState(0);
     const [prev, setPrev] = useState(2);
     const [next, setNext] = useState(1);
   
-    const slidesRef = useRef(null);
-  
     const gotoPrev = () =>
       current > 0
         ? gotoNum(current - 1)
-        : gotoNum(slidesRef.current.childNodes.length - 2);
+        : gotoNum(slidesRef.current.childNodes.length - 1);
   
     const gotoNext = () => (current < 2 ? gotoNum(current + 1) : gotoNum(0));
   
@@ -24,27 +24,27 @@ export default function SocialProof({data}) {
       let curr = number;
       let pre = number === 0 ? 2 : number - 1;
       let nxt = number === 2 ? 0 : number + 1;
-  
-      for (let i = 0; i < slidesRef.current.childNodes.length - 1; i++) {
+      
+      
+      for (let i = 0; i < slidesRef.current.childNodes.length ; i++) {
         slidesRef.current.childNodes[i].classList.remove("active");
         slidesRef.current.childNodes[i].classList.remove("prev");
         slidesRef.current.childNodes[i].classList.remove("next");
       }
-      if (prev == -1) {
-        setPrev(2);
-      }
-      if (next == 3) {
-        setNext(0);
-      }
+      // if (prev == -1) {
+      //   setPrev(2);
+      // }
+      // if (next == 3) {
+      //   setNext(0);
+      // }
   
       slidesRef.current.childNodes[curr]?.classList.add("active");
       slidesRef.current.childNodes[pre]?.classList.add("prev");
       slidesRef.current.childNodes[nxt]?.classList.add("next");
     };
-
   return (
    <>
-    <section className="bg-[#FFE20010] py-14">
+    <section className="hidden md:block bg-[#FFE20010] py-14">
       <div className="container mx-auto">
       <div className={`testimonials-items mt-7 hidden md:block`} ref={slidesRef}>
           <div className={`testimonial-card active p-10 bg-white rounded-xl border border-black`}>
@@ -65,15 +65,23 @@ export default function SocialProof({data}) {
             </p>
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[0]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
+                <div>
+                    <h5 className="font-bold text-sm">{data?.testimonials?.[0].name}</h5>
+                    <small className="font-medium">{data?.testimonials?.[0].position}</small>
+                </div>
             </div>
           </div>
           
           <div className={`testimonial-card prev p-10 bg-white rounded-xl border border-black`}>
             <p>
-                {data?.testimonials?.[0].text}
+                {data?.testimonials?.[1].text}
             </p>
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[1]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
+                <div>
+                    <h5 className="font-bold text-sm">{data?.testimonials?.[1].name}</h5>
+                    <small className="font-medium">{data?.testimonials?.[1].position}</small>
+                </div>
             </div>
           </div>
           

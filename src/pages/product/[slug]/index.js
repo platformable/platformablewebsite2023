@@ -48,15 +48,8 @@ export default function OpenBankingOpenFinanceTrendsReports2({data}) {
             
             <WhatsIncluded data={data}/>
             <Benefits data={data}/>
-
-            <section id="" className={` bg-gradient-to-b from-[#A17EFF10] to-[#F0EBFD10] to-30% py-10`}>
-                <div className="container mx-auto">
-                <UseCasesPersona data={data}/>
-                <CTA data={data}/>  
-                </div>
-                
-            </section>
-            <FindMore sectors={data?.sectors}/>
+            <UseCasesPersona data={data}/>
+            <CTA data={data}/>  
         </Layout>
         </>
     );
