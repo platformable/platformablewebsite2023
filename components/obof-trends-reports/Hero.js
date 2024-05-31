@@ -43,7 +43,7 @@ export default function Hero({data}) {
     slidesRef.current.childNodes[nxt]?.classList.add("next");
   };
   return (
-    <section className="overflow-hidden bg-[var(--purple-medium)] text-white text-center pt-20 pb-10">
+    <section className="overflow-hidden text-white text-center pt-20 pb-10">
       <div className="container mx-auto">
         <h1 className="text-lg mb-3">{data?.hero_product_name}</h1>
         <h2 className="font-bold mb-5">
