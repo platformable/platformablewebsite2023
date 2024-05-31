@@ -2,11 +2,12 @@ import { useState, useRef } from "react";
 
 
 export default function SocialProof({data}) {
+  
+    const slidesRef = useRef(null);
     const [current, setCurrent] = useState(0);
     const [prev, setPrev] = useState(2);
     const [next, setNext] = useState(1);
-  
-    const slidesRef = useRef(null);
+  console.log("current state ", current, slidesRef)
   
     const gotoPrev = () =>
       current > 0
@@ -16,7 +17,7 @@ export default function SocialProof({data}) {
     const gotoNext = () => (current < 2 ? gotoNum(current + 1) : gotoNum(0));
   
     const gotoNum = (number) => {
-      console.log("number", number)
+      console.log("given number", number)
       setCurrent(number);
       setPrev(number - 1);
       setNext(number + 1);
@@ -25,24 +26,25 @@ export default function SocialProof({data}) {
       let curr = number;
       let pre = number === 0 ? 2 : number - 1;
       let nxt = number === 2 ? 0 : number + 1;
-      console.log(pre, curr, nxt)
+      
+      console.log(curr,pre,nxt)
+      
       for (let i = 0; i < slidesRef.current.childNodes.length - 1; i++) {
         slidesRef.current.childNodes[i].classList.remove("active");
         slidesRef.current.childNodes[i].classList.remove("prev");
         slidesRef.current.childNodes[i].classList.remove("next");
       }
-      if (prev == -1) {
-        setPrev(2);
-      }
-      if (next == 3) {
-        setNext(0);
-      }
+      // if (prev == -1) {
+      //   setPrev(2);
+      // }
+      // if (next == 3) {
+      //   setNext(0);
+      // }
   
       slidesRef.current.childNodes[curr]?.classList.add("active");
       slidesRef.current.childNodes[pre]?.classList.add("prev");
       slidesRef.current.childNodes[nxt]?.classList.add("next");
     };
-
   return (
    <>
     <section className="bg-[#FFE20010] py-14">

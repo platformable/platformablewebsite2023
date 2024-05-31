@@ -3661,13 +3661,13 @@ margin:0 !important;
 .testimonial-card.prev {
   z-index: 2;
   opacity: 0.25;
-  transform: translate(-145%, -50%) scale(0.8) ;
+  transform: translate(-115%, -50%) scale(0.8) ;
 }
 
 .testimonial-card.next {
   z-index: 2;
   opacity: 0.25;
-  transform: translate(45%, -50%) scale(0.8);
+  transform: translate(15%, -50%) scale(0.8);
 }
 
 .testimonials-items .buttonContainer {
