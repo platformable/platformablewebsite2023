@@ -13,10 +13,10 @@ export default function WhatsIncluded({data}) {
           <div className="rounded-xl bg-[var(--business-color-dark)] opacity-10 h-32 min-h-32 md:h-full"></div>
 
           <section className="px-5 pb-5">
-            <span className="text-2xl font-bold " style={{color:data.whatsIncluded.whatsIncludedTextColor}}>What's included</span>
+            <span className="text-2xl font-bold " style={{color:data.whatsIncluded.whatsIncludedTextColor}}>What&apos;s included</span>
             <div className="grid mt-10 md:grid-cols-2 gap-10">
-              {data?.whatsIncluded?.whatsIncludedContent.map(item => (
-                  <div className="grid gap-4">
+              {data?.whatsIncluded?.whatsIncludedContent.map((item,index) => (
+                  <div className="grid gap-4" key={index}>
                   <span className="font-bold" style={{color:data.whatsIncluded.whatsIncludedMainColor}}>{item?.title}</span>
                   <p className="" style={{color:data.whatsIncluded.whatsIncludedTextColor}}>
                     {item?.text}
