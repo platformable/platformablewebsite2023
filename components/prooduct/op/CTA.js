@@ -2,32 +2,36 @@ import Link from "next/link";
 
 export default function CTA({data}) {
     return (
-        <section className="bg-[#E9E2FF] py-14">
+        <section className="py-14" style={{backgroundColor: data?.pricing?.backgroundColor}}>
             <div className="container mx-auto flex flex-col gap-y-10 md:grid md: grid-cols-2 md:gap-24">
-                <div className="flex flex-col justify-start md:justify-center">
-                <h3 className="font-bold">Try it now.</h3>
-                <h3 className="font-bold">Cancel anytime.</h3>
+                <div className="flex flex-col justify-start md:py-14">
+                <h3 className="font-bold" style={{color: data?.pricing?.mainColor}}>{data?.pricing?.heading}</h3>
+                <h3 className="font-bold">{data?.pricing?.subheading}</h3>
 
                 <p className="mt-10">
-                Gain access to comprehensive reports, exclusive analyst calls, and actionable insights tailored to your needs.
+                    {data?.pricing?.description}
                 </p>
                 </div>
-                <div className="rounded shadow-xl p-10 bg-white grid gap-5">
+                <div className="rounded shadow-xl p-10 bg-white flex flex-col items-start gap-5">
                     <p className="flex items-center gap-3">
-                    <span className="text-5xl font-bold text-[#6A39EE] ">$900</span><span className=" text-3xl font-bold"> / per year</span>
+                    <span className="text-5xl font-bold" style={{color: data?.pricing?.mainColor}}>{data?.pricing?.price?.[0]?.price}</span><span className=" text-3xl font-bold"> / per year</span>
                     </p>
-                    <div className="rounded-full px-3 py-2 bg-[#F2F0FF] text-[#6A39EE]">Save 25%, billed annually</div>
-                    <div id="product-items">
-
-                    </div>
-                    <div className="flex flex-col md:flex-row gap-5 justify-center ">
-                        <Link href={"/"} >
-                        <button className={` px-3 py-2 shadow rounded-md text-white w-56`} style={{backgroundColor:data.hero.primaryCallToActionBgColor}}>
+                    <div className="rounded-full mx-3 md:px-6 py-2 text-[#6A39EE]" style={{backgroundColor: data?.pricing?.backgroundColor, color: data?.pricing?.mainColor}}>{data?.pricing?.price?.[0]?.discountText}</div>
+                    <ul id="product-items" className="list-style-none grid gap-4">
+                        {data?.pricing?.price?.[0]?.description?.map((item, index) => (
+                            <li className="text-base pl-12 py-3" key={index}>
+                                {item?.list_card_description_options}
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="flex flex-col md:flex-row gap-5 md:grid md:grid-cols-2">
+                        <Link href={"/"} className="">
+                        <button className={` px-3 py-2 shadow w-full rounded-md text-white `} style={{backgroundColor:data?.hero?.primaryCallToActionBgColor, border: `1px solid ${data?.hero?.primaryCallToActionBorderColor}`}}>
                             <p>{data?.hero?.primaryCallToAction}</p>
                         </button>
                         </Link>
-                        <Link href={"/"}>
-                        <button className="rounded-md shadow  px-3 py-2  w-56" style={{border:`1px solid ${data.hero.secondaryCallToActionBorderColor}`}}>
+                        <Link href={"/"}  className="">
+                        <button className="rounded-md shadow w-full px-3 py-2 " style={{border:`1px solid ${data.hero.secondaryCallToActionBorderColor}`, backgroundColor:data?.hero?.secondaryCallToActionBgColor}}>
                             <p>{data?.hero?.secondaryCallToAction}</p>
                         </button>
                         </Link>
