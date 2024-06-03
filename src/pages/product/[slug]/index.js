@@ -40,7 +40,7 @@ export default function OpenBankingOpenFinanceTrendsReports2({data}) {
     }
     return (
         <>
-        <Meta title={data?.hero_product_name} keywords={'open banking open finance trends reports, open health, open ecosystems, fintech APIs, financial inclusion'} data={data}/>
+        <Meta title={data?.hero?.SeoKeyword} keywords={'open banking open finance trends reports, open health, open ecosystems, fintech APIs, financial inclusion'} data={data}/>
         <Layout>
             <Hero data={data}/>
             <SocialProof data={data}/>
@@ -60,7 +60,7 @@ export async function getServerSideProps(ctx) {
     try {
       const slug=await ctx.params.slug
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/ob-products-pages?filter[slug]=${slug}&populate[hero][populate][image]=*&populate[whatsIncluded][populate][whatsIncludedContent]=*&populate[bentoBox][populate][image]=*&populate[personaCases][populate][image]=*&populate[callToAction]=*&populate[testimonials][populate][image]=*`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/ob-products-pages?filter[slug]=${slug}&populate[hero][populate][image]=*&populate[whatsIncluded][populate][whatsIncludedContent]=*&populate[bentoBox][populate][image]=*&populate[personaCases][populate][image]=*&populate[callToAction]=*&populate[testimonials][populate][image]=*&populate[whatsIncluded][populate][image]=*&populate[pricing][populate][price][populate][description]=*`
       );
       console.log("res", res)
       const data = await res.json()
