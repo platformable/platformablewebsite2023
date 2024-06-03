@@ -16,7 +16,7 @@ export default function UseCasesPersona({ data }) {
       <h6 className="">{data?.personaSubheading}</h6>
 
       <div className="grid  md:grid-flow-col md:auto-cols-auto  gap-5 mt-16">
-        {data?.personaCases?.map((persona) => (
+        {data?.personaCases?.map((persona,index) => (
           <button
             className={`${
               selectedSector?.label === persona?.label
@@ -24,7 +24,7 @@ export default function UseCasesPersona({ data }) {
                 : ""
             } px-4 py-2 xl:py-3  rounded-md border-2 xl:border-4 `}
             onClick={() => setSelectedSector(persona)}
-          >
+          key={index}>
             <span>{persona?.label}</span>
           </button>
         ))}
