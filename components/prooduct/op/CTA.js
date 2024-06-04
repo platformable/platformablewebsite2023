@@ -27,12 +27,12 @@ export default function CTA({data}) {
                     <div className="flex flex-col md:flex-row gap-5 md:grid md:grid-cols-2">
                         <Link href={"/"} className="">
                         <button className={` px-3 py-2 shadow w-full rounded-md text-white `} style={{backgroundColor:data?.hero?.primaryCallToActionBgColor, border: `1px solid ${data?.hero?.primaryCallToActionBorderColor}`}}>
-                            <p>{data?.hero?.primaryCallToAction}</p>
+                            <p className="text-[18px]">{data?.hero?.primaryCallToAction}</p>
                         </button>
                         </Link>
                         <Link href={"/"}  className="">
                         <button className="rounded-md shadow w-full px-3 py-2 " style={{border:`1px solid ${data.hero.secondaryCallToActionBorderColor}`, backgroundColor:data?.hero?.secondaryCallToActionBgColor}}>
-                            <p>{data?.hero?.secondaryCallToAction}</p>
+                            <p className="text-[18px]">{data?.hero?.secondaryCallToAction}</p>
                         </button>
                         </Link>
                         
