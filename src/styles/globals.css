@@ -3815,7 +3815,7 @@ background-image:url('https://res.cloudinary.com/platform1/image/upload/v1711386
 
 #product-items > li {
   /** the image will be vertically aligned in the center **/
-  background: url(../../public/icon_CTA.svg) left center no-repeat; 
+  background: url('../../public/icon_CTA.svg') left center no-repeat; 
 
   /** move the text to the right **/
   /* padding-left: 30px;  */

@@ -1,7 +1,7 @@
 export default function Benefits({data}) {
   // console.log("Benefits",data)
   return (
-    <section className="mx-auto container py-14">
+    <section className="mx-auto container py-10 md:py-14">
       <h3 className="text-3xl text-center px-2 md:px-16 mb-10 font-bold" style={{color:data.benefitshHeadingColor}}>
        {data?.benefitshHeading}
       </h3>
@@ -28,7 +28,7 @@ export default function Benefits({data}) {
               {box.linkText} {box.link && <a href={box.link}>dsa</a>}
             </span>
           )} */}
-              <img src={box?.image?.data?.attributes?.url} alt={`benefit ${box.title}`} className="object-contain h-80 rounded-xl w-full" />
+              <img src={box?.image?.data?.attributes?.url} alt={`benefit ${box.title}`} className="object-contain  rounded-xl w-full" />
             </div>
           ))}
         </div>

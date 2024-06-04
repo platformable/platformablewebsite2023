@@ -1,7 +1,7 @@
 export default function WhatsIncluded({data}) {
 
   return (
-    <section className="bg-[#fffff] py-14">
+    <section className="bg-[#fffff] py-10 md:py-14">
       <div className="mx-auto container">
         <span className={`font-bold text-sm`} style={{color:data.whatsIncluded.companyNameColor}}>
           {data?.whatsIncluded?.companyName}
