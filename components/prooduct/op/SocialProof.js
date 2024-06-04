@@ -43,10 +43,9 @@ export default function SocialProof({data}) {
       slidesRef.current.childNodes[nxt]?.classList.add("next");
     };
 
-    console.log("data del social",data.testimonials)
   return (
    <>
-    <section className="hidden md:block  py-14" style={{background:data.testimonials[0].testimonialSectionBgColor}}>
+    <section className="hidden md:block  py-10 md:py-14" style={{background:data.testimonials[0].testimonialSectionBgColor}}>
       <div className="container mx-auto">
       <div className={`testimonials-items mt-7 hidden md:block`} ref={slidesRef}>
           <div className={`testimonial-card active  md:w-[320px] lg:w-[500px]  p-10 bg-white rounded-xl`} style={{border:` 1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>

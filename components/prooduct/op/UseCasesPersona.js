@@ -10,12 +10,12 @@ export default function UseCasesPersona({ data }) {
 
       useEffect(() => setSelectedSector(data.personaCases[0]), [])
   return (
-    <section className="container mx-auto py-14">
+    <section className="container mx-auto py-10 md:py-14">
      <div>
      <h3 className="text-[#3425C9] font-bold mb-5" style={{color: selectedSector.mainColor}}>{data?.personaHeading}</h3>
       <h6 className="">{data?.personaSubheading}</h6>
 
-      <div className="grid  md:grid-flow-col md:auto-cols-auto  gap-5 mt-16">
+      <div className="grid  grid-flow-col auto-cols-auto overflow-x-auto gap-5 pb-6 mt-10">
         {data?.personaCases?.map((persona,index) => (
           <button
             className={` px-4 py-2 xl:py-3  rounded-md border-2 xl:border-4 shadow-md font-bold`}
@@ -27,7 +27,7 @@ export default function UseCasesPersona({ data }) {
         ))}
       </div>
 
-      <div className="flex flex-col md:flex-row md:justify-between md:h-80 mt-24 gap-10 md:gap-20 2xl:gap-32">
+      <div className="flex flex-col md:flex-row md:justify-between md:h-80 mt-10 md:mt-24 gap-10 md:gap-20 2xl:gap-32">
         <div className="md:w-3/6">
           <h4 className=" font-bold " style={{color: selectedSector.mainColor}}>{selectedSector?.title}</h4>
           <p className="text-lg leading-6 mt-8" style={{color: selectedSector.textColor}}>{selectedSector?.text}</p>
