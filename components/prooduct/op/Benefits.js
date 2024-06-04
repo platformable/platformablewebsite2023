@@ -28,7 +28,7 @@ export default function Benefits({data}) {
               {box.linkText} {box.link && <a href={box.link}>dsa</a>}
             </span>
           )} */}
-              <img src={box?.image?.data?.attributes?.url} alt={`benefit ${box.title}`} className="object-contain h-80 rounded-xl w-full" />
+              <img src={box?.image?.data?.attributes?.url} alt={`benefit ${box.title}`} className="object-contain md:h-80 rounded-xl w-full" />
             </div>
           ))}
         </div>

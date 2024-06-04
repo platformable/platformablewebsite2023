@@ -43,7 +43,6 @@ export default function SocialProof({data}) {
       slidesRef.current.childNodes[nxt]?.classList.add("next");
     };
 
-    console.log("data del social",data.testimonials)
   return (
    <>
     <section className="hidden md:block  py-14" style={{background:data.testimonials[0].testimonialSectionBgColor}}>
