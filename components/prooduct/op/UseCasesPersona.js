@@ -16,12 +16,12 @@ export default function UseCasesPersona({ data }) {
       <h6 className="">{data?.personaSubheading}</h6>
 
       <div className="grid  md:grid-flow-col md:auto-cols-auto  gap-5 mt-16">
-        {data?.personaCases?.map((persona) => (
+        {data?.personaCases?.map((persona,index) => (
           <button
             className={` px-4 py-2 xl:py-3  rounded-md border-2 xl:border-4 shadow-md font-bold`}
             style={{backgroundColor: selectedSector?.label === persona?.label ? selectedSector.mainColor : '#F7F4FE' , color: selectedSector?.label === persona?.label ? 'white' : selectedSector.mainColor , border: `1px solid ${selectedSector.mainColor}`}}
             onClick={() => setSelectedSector(persona)}
-          >
+          key={index}>
             <span>{persona?.label}</span>
           </button>
         ))}
