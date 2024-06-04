@@ -15,7 +15,7 @@ const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
   },[data])
   
   return (
-    <section className="overflow-hidden bg-gradient-to-b from-[#A17EFF20] from-30%  via-[#E7DFFD20] via-50% to-[#F0EBFD20] to-50% text-center pt-20 pb-10">
+    <section className="overflow-hidden bg-gradient-to-b from-[#A17EFF20] from-30%  via-[#E7DFFD20] via-50% to-[#F0EBFD20] to-50% text-center pt-14 md:pt-20 pb-10 ">
       <div className="container mx-auto">
         <h1 className={`text-lg mb-3  font-bold`} style={{color:data.hero.headingColor}}>{data?.hero?.SeoKeyword}</h1>
         <h2 className="font-bold mb-5" style={{color:data?.hero?.BigHeadlineTextColor}}>
@@ -42,7 +42,7 @@ const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
           <h3 className="text-[#F157FF] font-bold">{data.hero.socialHeading}</h3>
           <p>{data?.hero.socialSubheading}</p>
         </div>
-        <img src={data?.hero?.image?.data?.attributes.url} alt="hero image" />
+        <img src={data?.hero?.image?.data?.attributes.url} alt="hero image" className="align-top"/>
         
         
       </div>
