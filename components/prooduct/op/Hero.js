@@ -22,7 +22,7 @@ const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
         {data?.hero?.bigHeadline}
         </h2>
         <h6>
-        {data?.hero_description}
+        {data?.hero?.subHeadline}
         </h6>
       
         <div className="flex flex-col md:flex-row gap-5 justify-center mt-4 mb-10">
@@ -39,7 +39,7 @@ const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
           
         </div>
         <div id="guarantee-hero-container" className="py-7 md:mx-60 bg-gradient-to-r from-transparent via-zinc-600 to-transparent">
-          <h3 className="text-[#F157FF] font-bold">{data.hero.socialHeading}</h3>
+          <h6 className="text-[#F157FF] font-bold">{data.hero.socialHeading}</h6>
           <p>{data?.hero.socialSubheading}</p>
         </div>
         <img src={data?.hero?.image?.data?.attributes.url} alt="hero image" className="align-top"/>
