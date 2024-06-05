@@ -32,8 +32,8 @@ export default function CTA({data}) {
                         </button>
                         </Link>
                         <Link href={"/"}  className="">
-                        <button className="rounded-md shadow w-full px-3 py-2 " style={{border:`1px solid ${data.hero.secondaryCallToActionBorderColor}`, backgroundColor:data?.hero?.secondaryCallToActionBgColor}}>
-                            <p className="text-[18px]">{data?.hero?.secondaryCallToAction}</p>
+                        <button className="rounded-md shadow w-full px-3 py-2 " style={{border:`1px solid ${data?.pricing?.price?.[0]?.callToActionSecondaryBorderColor}`, backgroundColor:data?.hero?.secondaryCallToActionBgColor}}>
+                            <p className="text-[18px]" style={{color:data?.pricing?.price[0]?.callToActionSecondaryTextColor}}>{data?.hero?.secondaryCallToAction}</p>
                         </button>
                         </Link>
                         

@@ -48,8 +48,8 @@ export default function SocialProof({data}) {
     <section className="hidden md:block  py-10 md:py-14" style={{background:data.testimonials[0].testimonialSectionBgColor}}>
       <div className="container mx-auto">
       <div className={`testimonials-items mt-7 hidden md:block`} ref={slidesRef}>
-          <div className={`testimonial-card active  md:w-[320px] lg:w-[500px]  p-10 bg-white rounded-xl`} style={{border:` 1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
-            <p>
+          <div className={`testimonial-card active  md:w-[320px] lg:w-[400px]  p-10 bg-white rounded-xl`} style={{border:` 1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
+            <p className="text-[14px]">
                 {data?.testimonials?.[2].text}
             </p>
             <div className="flex items-center gap-3">
@@ -60,8 +60,8 @@ export default function SocialProof({data}) {
                 </div>
             </div>
           </div>
-          <div className={`testimonial-card next md:w-[320px] lg:w-[500px] p-10 bg-white rounded-xl`} style={{border:`1px solid  ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
-            <p>
+          <div className={`testimonial-card next md:w-[320px] lg:w-[400px] p-10 bg-white rounded-xl`} style={{border:`1px solid  ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
+            <p className="text-[14px]"> 
                 {data?.testimonials?.[0].text}
             </p>
             <div className="flex items-center gap-3">
@@ -73,8 +73,8 @@ export default function SocialProof({data}) {
             </div>
           </div>
           
-          <div className={`testimonial-card prev md:w-[320px] lg:w-[500px] p-10 bg-white rounded-xl`} style={{border:`1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
-            <p>
+          <div className={`testimonial-card prev md:w-[320px] lg:w-[400px] p-10 bg-white rounded-xl`} style={{border:`1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
+            <p className="text-[14px]"> 
                 {data?.testimonials?.[1].text}
             </p>
             <div className="flex items-center gap-3">
