@@ -50,13 +50,13 @@ export default function SocialProof({data}) {
       <div className={`testimonials-items mt-7 hidden md:block`} ref={slidesRef}>
           <div className={`testimonial-card active  md:w-[320px] lg:w-[400px]  p-10 bg-white rounded-xl`} style={{border:` 1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
             <p className="text-[14px]">
-                {data?.testimonials?.[2].text}
+                {data?.testimonials?.[2]?.text}
             </p>
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[2]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
                 <div>
-                    <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0].nameColor}`}}>{data?.testimonials?.[2].name}</h5>
-                    <small className="font-medium" style={{color:`${data?.testimonials[0].positionColor}`}}>{data?.testimonials?.[2].position}</small>
+                    <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0]?.nameColor}`}}>{data?.testimonials?.[2]?.name}</h5>
+                    <small className="font-medium" style={{color:`${data?.testimonials[0]?.positionColor}`}}>{data?.testimonials?.[2]?.position}</small>
                 </div>
             </div>
           </div>
@@ -67,8 +67,8 @@ export default function SocialProof({data}) {
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[0]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
                 <div>
-                    <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0].nameColor}`}}>{data?.testimonials?.[0].name}</h5>
-                    <small className="font-medium" style={{color:`${data?.testimonials[0].positionColor}`}}>{data?.testimonials?.[0].position}</small>
+                    <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0]?.nameColor}`}}>{data?.testimonials?.[0]?.name}</h5>
+                    <small className="font-medium" style={{color:`${data?.testimonials[0]?.positionColor}`}}>{data?.testimonials?.[0]?.position}</small>
                 </div>
             </div>
           </div>
@@ -80,8 +80,8 @@ export default function SocialProof({data}) {
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[1]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
                 <div>
-                    <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0].nameColor}`}}>{data?.testimonials?.[1].name}</h5>
-                    <small className="font-medium" style={{color:`${data?.testimonials[0].positionColor}`}}>{data?.testimonials?.[1].position}</small>
+                    <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0]?.nameColor}`}}>{data?.testimonials?.[1]?.name}</h5>
+                    <small className="font-medium" style={{color:`${data?.testimonials[0]?.positionColor}`}}>{data?.testimonials?.[1]?.position}</small>
                 </div>
             </div>
           </div>
