@@ -112,7 +112,7 @@ export default function SocialProof({data}) {
           </div>
       </div> */}
       <div className="container mx-auto ">
-      <div className={`grid grid-cols-2 w-4/6 mx-auto gap-5 `} ref={slidesRef}>
+      <div className={`grid grid-cols-2  gap-5 `} ref={slidesRef}>
           {/* <div className={`   p-10 bg-white rounded-xl`} style={{border:` 1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
             <p>
                 {data?.testimonials?.[2].text}
@@ -126,7 +126,7 @@ export default function SocialProof({data}) {
             </div>
           </div> */}
           <div className={`flex flex-col justify-between p-10 bg-white rounded-xl`} style={{border:`1px solid  ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
-            <p>
+            <p className="text-[15px]">
                 {data?.testimonials?.[0].text}
             </p>
             <div className="flex items-center gap-3 mt-5">
@@ -139,7 +139,7 @@ export default function SocialProof({data}) {
           </div>
           
           <div className={`flex flex-col justify-between p-10 bg-white rounded-xl`} style={{border:`1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
-            <p>
+          <p className="text-[15px]">
                 {data?.testimonials?.[1].text}
             </p>
             <div className="flex items-center gap-3 mt-5">
