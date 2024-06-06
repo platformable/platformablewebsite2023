@@ -48,43 +48,47 @@ export default function SocialProof({data}) {
 
   return (
    <>
+
     <section className=" py-10 md:py-14" style={{background:data.testimonials[0].testimonialSectionBgColor}}>
       {/* <div className="container mx-auto hidden md:block">
       <div className={`testimonials-items `} ref={slidesRef}>
           <div className={`testimonial-card active  md:w-[320px] lg:w-[500px]  p-10 bg-white rounded-xl`} style={{border:` 1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
             <p>
                 {data?.testimonials?.[current].text}
+
             </p>
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[current]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
                 <div>
+
                     <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0].nameColor}`}}>{data?.testimonials?.[current].name}</h5>
                     <small className="font-medium" style={{color:`${data?.testimonials[0].positionColor}`}}>{data?.testimonials?.[current].position}</small>
+
                 </div>
             </div>
           </div>
-          <div className={`testimonial-card next md:w-[320px] lg:w-[500px] p-10 bg-white rounded-xl`} style={{border:`1px solid  ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
-            <p>
+          <div className={`testimonial-card next md:w-[320px] lg:w-[400px] p-10 bg-white rounded-xl`} style={{border:`1px solid  ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
+            <p className="text-[14px]"> 
                 {data?.testimonials?.[0].text}
             </p>
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[0]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
                 <div>
-                    <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0].nameColor}`}}>{data?.testimonials?.[0].name}</h5>
-                    <small className="font-medium" style={{color:`${data?.testimonials[0].positionColor}`}}>{data?.testimonials?.[0].position}</small>
+                    <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0]?.nameColor}`}}>{data?.testimonials?.[0]?.name}</h5>
+                    <small className="font-medium" style={{color:`${data?.testimonials[0]?.positionColor}`}}>{data?.testimonials?.[0]?.position}</small>
                 </div>
             </div>
           </div> 
           
-          <div className={`testimonial-card prev md:w-[320px] lg:w-[500px] p-10 bg-white rounded-xl`} style={{border:`1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
-            <p>
+          <div className={`testimonial-card prev md:w-[320px] lg:w-[400px] p-10 bg-white rounded-xl`} style={{border:`1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
+            <p className="text-[14px]"> 
                 {data?.testimonials?.[1].text}
             </p>
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[1]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
                 <div>
-                    <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0].nameColor}`}}>{data?.testimonials?.[1].name}</h5>
-                    <small className="font-medium" style={{color:`${data?.testimonials[0].positionColor}`}}>{data?.testimonials?.[1].position}</small>
+                    <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0]?.nameColor}`}}>{data?.testimonials?.[1]?.name}</h5>
+                    <small className="font-medium" style={{color:`${data?.testimonials[0]?.positionColor}`}}>{data?.testimonials?.[1]?.position}</small>
                 </div>
             </div>
           </div> 
