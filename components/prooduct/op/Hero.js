@@ -27,12 +27,12 @@ const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
           <a href={data.hero.primaryCallToActionUrl} 
           
           target="_blank">
-            <p className={` px-3 py-2 shadow rounded-md text-white w-56`} style={{backgroundColor:data.hero.primaryCallToActionBgColor}}>{data?.hero?.primaryCallToAction}</p>
+            <p className={` px-3 py-2 shadow rounded-md text-white w-56`} style={{backgroundColor:data.hero.primaryCallToActionBgColor,color:data.hero.primaryCallToActionTextColor}}>{data?.hero?.primaryCallToAction}</p>
           </a>
     
           <a href={data?.hero?.secondaryCallToActionUrl} target="_blank">
           <button className="rounded-md shadow  px-3 py-2  w-56" style={{border:`1px solid ${data.hero.secondaryCallToActionBorderColor}`}}>
-            <p className="text-[#5E2AED]"> {data?.hero?.secondaryCallToAction}</p>
+            <p className="text-[#5E2AED]" style={{color:data.hero.secondaryCallToActionTextColor}}> {data?.hero?.secondaryCallToAction}</p>
           </button>
           </a>
           
