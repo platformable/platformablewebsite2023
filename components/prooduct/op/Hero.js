@@ -22,12 +22,12 @@ const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
         {data?.hero?.subHeadline}
         </h6>
       
-        <div className="flex flex-col md:flex-row gap-5 justify-center mt-4 mb-10">
+        <div className="flex flex-col md:flex-row gap-5 justify-center items-center mt-4 mb-10">
           
-          <a href={data.hero.primaryCallToActionUrl} className={` px-3 py-2 shadow rounded-md text-white w-56`} style={{backgroundColor:data.hero.primaryCallToActionBgColor}}
+          <a href={data.hero.primaryCallToActionUrl} 
           
           target="_blank">
-            <p>{data?.hero?.primaryCallToAction}</p>
+            <p className={` px-3 py-2 shadow rounded-md text-white w-56`} style={{backgroundColor:data.hero.primaryCallToActionBgColor}}>{data?.hero?.primaryCallToAction}</p>
           </a>
     
           <a href={data?.hero?.secondaryCallToActionUrl} target="_blank">
