@@ -27,7 +27,7 @@ const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
           <a href={data.hero.primaryCallToActionUrl} 
           
           target="_blank">
-            <p className={` px-3 py-2 shadow rounded-md text-white w-56`} style={{backgroundColor:data.hero.primaryCallToActionBgColor,color:data.hero.primaryCallToActionTextColor}}>{data?.hero?.primaryCallToAction}</p>
+            <p className={` px-3 py-2 shadow rounded-md text-white w-56 font-bold`} style={{backgroundColor:data.hero.primaryCallToActionBgColor,color:data.hero.primaryCallToActionTextColor}}>{data?.hero?.primaryCallToAction}</p>
           </a>
     
           <a href={data?.hero?.secondaryCallToActionUrl} target="_blank">
