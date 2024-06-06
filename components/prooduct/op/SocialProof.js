@@ -112,7 +112,7 @@ export default function SocialProof({data}) {
           </div>
       </div> */}
       <div className="container mx-auto ">
-      <div className={`grid grid-cols-2  gap-5 `} ref={slidesRef}>
+      <div className={`grid grid-cols-2  gap-5 md:block hidden`} ref={slidesRef}>
           {/* <div className={`   p-10 bg-white rounded-xl`} style={{border:` 1px solid ${data?.testimonials[0]?.testimonialsCardBorderColor}`}}>
             <p>
                 {data?.testimonials?.[2].text}
