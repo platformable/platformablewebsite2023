@@ -272,7 +272,9 @@ export default function Footer() {
                 <small className="text-white mb-1  md:ml-1 lg:ml-0">
                   Enter your email
                 </small>
+                <label htmlFor="email"></label>
                 <input
+                id="email"
                   type="email"
                   className={
                     errorMessage === ""
