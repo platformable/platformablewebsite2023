@@ -41,7 +41,7 @@ const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
           <h6 className="text-[#F157FF] font-bold">{data.hero.socialHeading}</h6>
           <p>{data?.hero.socialSubheading}</p>
         </div>
-        <img src={data?.hero?.image?.data?.attributes.url} alt="hero image" className="align-top"/>
+        <img src={data?.hero?.image?.data?.attributes.url} alt={data?.hero?.image?.data?.attributes.alternativeText} className="align-top"/>
         
         
       </div>

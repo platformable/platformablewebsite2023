@@ -14,7 +14,7 @@ import CTA from "../../../../components/prooduct/op/CTA";
 
 
 export default function OpenBankingOpenFinanceTrendsReports2({data}) {
-  console.log("new product data", data)
+  // console.log("new product data", data)
     const sectorsStyle = {
       'Open Banking': {
         bgColor: 'bg--gradient-obof',
@@ -60,9 +60,8 @@ export async function getServerSideProps(ctx) {
     try {
       const slug=await ctx.params.slug
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/ob-products-pages?filter[slug]=${slug}&populate[hero][populate][image]=*&populate[whatsIncluded][populate][whatsIncludedContent]=*&populate[bentoBox][populate][image]=*&populate[personaCases][populate][image]=*&populate[callToAction]=*&populate[testimonials][populate][image]=*&populate[whatsIncluded][populate][image]=*&populate[pricing][populate][price][populate][description]=*`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/ob-products-pages?filter[slug]=${slug}&populate[hero][populate][image]=*&populate[whatsIncluded][populate][whatsIncludedContent]=*&populate[bentoBox][populate][image]=*&populate[personaCases][populate][image]=*&populate[callToAction]=*&populate[testimonials][populate][image]=*&populate[whatsIncluded][populate][image]=*&populate[pricing][populate][price][populate][description]=*&populate[featured_img]=*`
       );
-      console.log("res", res)
       const data = await res.json()
       return {
         props: {
