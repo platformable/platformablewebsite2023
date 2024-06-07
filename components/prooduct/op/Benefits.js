@@ -19,7 +19,7 @@ export default function Benefits({data}) {
                   <div className="text-lg mb-2 font-medium" style={{color:data.benefitshHeadingColor}}>{box.label}</div>
                 )}
                 {box.title && (
-                  <h1 className="text-2xl mb-4 font-semibold" style={{color:box.textColor}}>{box.title}</h1>
+                  <h2 className="text-2xl mb-4 font-semibold" style={{color:box.textColor}}>{box.title}</h2>
                 )}
                 {box.text && <p className="text-base" style={{color:box.textColor}}>{box.text}</p>}
               </div>
