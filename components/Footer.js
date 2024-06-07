@@ -185,7 +185,7 @@ export default function Footer() {
               className="text-center"
               src={LogoWhite}
               alt={"platformable logo"}
-              width={300}
+              width={'auto'}
               height={70}
               unoptimized
             />

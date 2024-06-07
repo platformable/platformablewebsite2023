@@ -130,7 +130,7 @@ export default function SocialProof({data}) {
                 {data?.testimonials?.[0].text}
             </p>
             <div className="flex items-center gap-3 mt-5">
-                <img src={data?.testimonials?.[0]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
+                <img src={data?.testimonials?.[0]?.image?.data?.attributes?.url} alt={`${data?.testimonials?.[0].name} image`} className="rounded-full w-10 h-10 aspect-square" />
                 <div className="">
                     <h5 className="font-bold text-sm" style={{color:`${data?.testimonials[0].nameColor}`}}>{data?.testimonials?.[0].name}</h5>
                     <small className="font-medium" style={{color:`${data?.testimonials[0].positionColor}`}}>{data?.testimonials?.[0].position}</small>
