@@ -19,7 +19,7 @@ export default function Benefits({data}) {
                   <div className="text-lg mb-2 font-medium" style={{color:data.benefitshHeadingColor}}>{box.label}</div>
                 )}
                 {box.title && (
-                  <h1 className="text-2xl mb-4 font-semibold" style={{color:box.textColor}}>{box.title}</h1>
+                  <h2 className="text-2xl mb-4 font-semibold" style={{color:box.textColor}}>{box.title}</h2>
                 )}
                 {box.text && <p className="text-base" style={{color:box.textColor}}>{box.text}</p>}
               </div>
@@ -28,7 +28,7 @@ export default function Benefits({data}) {
               {box.linkText} {box.link && <a href={box.link}>dsa</a>}
             </span>
           )} */}
-              <img src={box?.image?.data?.attributes?.url} alt={`benefit ${box.title}`} className="object-contain  rounded-xl w-full" />
+              <img src={box?.image?.data?.attributes?.url} alt={box?.image?.data?.attributes?.alternativeText} className="object-contain  rounded-xl w-full" />
             </div>
           ))}
         </div>

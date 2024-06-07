@@ -32,7 +32,7 @@ export default function UseCasesPersona({ data }) {
           <h4 className=" font-bold " style={{color: selectedSector.mainColor}}>{selectedSector?.title}</h4>
           <p className="text-lg leading-6 mt-8" style={{color: selectedSector.textColor}}>{selectedSector?.text}</p>
         </div>
-        <img className="md:mr-10" src={selectedSector?.image?.data?.attributes?.url} alt={selectedSector} />
+        <img className="md:mr-10" src={selectedSector?.image?.data?.attributes?.url} alt={`${selectedSector?.image?.data?.attributes?.alternativeText}`} />
       </div>
      </div>
     </section>

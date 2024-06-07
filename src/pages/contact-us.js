@@ -7,7 +7,10 @@ import WaintingListForm from "../../components/contact-us.js/WaintingListForm";
 import SendMessageForm from "../../components/contact-us.js/SendMessageForm";
 
 export default function ContactUs({ data, posts }) {
-  //   console.log("data", data);
+    const metaData = {
+      excerpt: 'Platformable contact section is public and open',
+      keywords: 'platformable, data, api, open ecosystems, open banking, open finance, open health'
+    }
 
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
@@ -15,7 +18,7 @@ export default function ContactUs({ data, posts }) {
   
   return (
     <Layout>
-      {/* <Meta title={data?.title} data={data} /> */}
+      <Meta title={'Contact us'} data={metaData} />
       <section className={`bg-[#7D43FF]`}>
         <div className="text-white container mx-auto pt-10 pb-16">
           <h1 className="mb-5 font-bold">{data?.title || "Contact us"}</h1>
