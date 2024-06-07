@@ -1,6 +1,13 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const Meta = ({ title, keywords, data }) => {
+
+
+  const router = useRouter();
+  const urlPath=router.asPath
+
+  
   return (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,7 +27,7 @@ const Meta = ({ title, keywords, data }) => {
         name="twitter:description"
         content={data?.excerpt?.replace(/(<([^>]+)>)/gi, "")}
       />
-      <meta name="twitter:site" content={`https://www.platformable.com/blog/${data?.slug}`} />
+      <meta name="twitter:site" content={`https://www.platformable.com${urlPath}`} />
       <meta
         name="twitter:image"
         content={
@@ -51,7 +58,7 @@ const Meta = ({ title, keywords, data }) => {
         }
       />
       <meta property="og:image:alt" content={title} />
-      <meta property="og:url" content={`https://www.platformable.com/blog/${data?.slug}`} />
+      <meta property="og:url" content={`https://www.platformable.com${urlPath}`} />
       <meta property="og:site_name" content="platformable.com" />
     </Head>
   );
