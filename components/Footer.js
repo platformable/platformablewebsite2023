@@ -269,10 +269,12 @@ export default function Footer() {
               <div
                 className={`flex flex-col mx-auto w-11/12 md:w-5/12 xl:contents`}
               >
-                <small className="text-white mb-1  md:ml-1 lg:ml-0">
+                <label htmlFor="email" className="text-white mb-1  md:ml-1 lg:ml-0 text-[12px]">
                   Enter your email
-                </small>
+                </label>
+               
                 <input
+                id="email"
                   type="email"
                   className={
                     errorMessage === ""
