@@ -3,13 +3,14 @@ import styles from "@/styles/OBOFTrendsReportspage.module.css";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 import {useRouter} from 'next/router'
+import Image from "next/image";
 
 export default function Hero({data}) {
 const [renderx,setRenderx]=useState(false)
 const [headingColor,setHeadingColor]=useState('')
 const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
 
-
+console.log("data",data)
   
   return (
     <section className="overflow-hidden bg-gradient-to-b from-[#A17EFF20] from-30%  via-[#E7DFFD20] via-50% to-[#F0EBFD20] to-50% text-center pt-14 md:pt-20 pb-10 ">
@@ -41,8 +42,14 @@ const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
           <h6 className="text-[#F157FF] font-bold">{data.hero.socialHeading}</h6>
           <p>{data?.hero.socialSubheading}</p>
         </div>
-        <img src={data?.hero?.image?.data?.attributes.url} alt={data?.hero?.image?.data?.attributes.alternativeText} className="align-top"/>
-        
+        {/* <img src={data?.hero?.image?.data?.attributes.url} alt={data?.hero?.image?.data?.attributes.alternativeText} className="align-top"/> */}
+        <Image
+      src={data?.hero?.image?.data?.attributes.url} alt={data?.hero?.image?.data?.attributes.alternativeText} className="align-top"
+            width={1980}
+            height={1080}
+            unoptimized
+    
+    />
         
       </div>
     </section>
