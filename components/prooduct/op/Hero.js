@@ -10,7 +10,7 @@ const [renderx,setRenderx]=useState(false)
 const [headingColor,setHeadingColor]=useState('')
 const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
 
-console.log("data",data)
+
   
   return (
     <section className="overflow-hidden bg-gradient-to-b from-[#A17EFF20] from-30%  via-[#E7DFFD20] via-50% to-[#F0EBFD20] to-50% text-center pt-14 md:pt-20 pb-10 ">
