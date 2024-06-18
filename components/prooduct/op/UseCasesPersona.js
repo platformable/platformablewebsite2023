@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 
 export default function UseCasesPersona({ data }) {
-  const [selectedSector, setSelectedSector] = useState("Bank Executives");
+  const [selectedSector, setSelectedSector] = useState("");
+  console.log("data",data)
 
   const chooseSector = (category) =>
-    data.personaCases
-      ? data.bentoBox.find((i) => i.label === selectedSector)
+    data?.personaCases
+      ? data?.bentoBox?.find((i) => i.label === selectedSector)
       : setSelectedSector(category);
 
-      useEffect(() => setSelectedSector(data.personaCases[0]), [])
+      useEffect(() => setSelectedSector(data?.personaCases[0]), [])
+
+      console.log("selectedSector",selectedSector)
   return (
-    <section className="container mx-auto py-10 md:py-14">
+    <section className="container mx-auto py-10 md:py-14 ">
      <div>
      <h3 className="text-[#3425C9] font-bold mb-5" style={{color: selectedSector.mainColor}}>{data?.personaHeading}</h3>
       <h6 className="">{data?.personaSubheading}</h6>
@@ -29,8 +32,17 @@ export default function UseCasesPersona({ data }) {
 
       <div className="flex flex-col md:flex-row md:justify-between md:h-80 mt-10 md:mt-24 gap-10 md:gap-20 2xl:gap-32">
         <div className="md:w-3/6">
-          <h4 className=" font-bold " style={{color: selectedSector.mainColor}}>{selectedSector?.title}</h4>
+          <h4 className=" font-bold leading-10" style={{color: selectedSector.mainColor}}>{selectedSector?.title}</h4>
           <p className="text-lg leading-6 mt-8" style={{color: selectedSector.textColor}}>{selectedSector?.text}</p>
+          <div className="personas-homepage-list">
+            <ul className="mt-5 ">
+           {selectedSector ? (
+            selectedSector?.item?.[0]?.children?.map((item,index)=>{
+             return <li className="flex items-center gap-x-2 my-1"> <p className="rounded-full px-2 text-white" style={{backgroundColor:selectedSector.mainColor}}>✓</p>{item?.children[0]?.text}</li>
+            })
+           ):''}
+           </ul>
+          </div>
         </div>
         <img className="md:mr-10" src={selectedSector?.image?.data?.attributes?.url} alt={`${selectedSector?.image?.data?.attributes?.alternativeText}`} />
       </div>

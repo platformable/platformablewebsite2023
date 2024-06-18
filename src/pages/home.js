@@ -19,7 +19,7 @@ export default function Perritos({data}) {
             <Collaborators data={data} />
             <Products data={data} />
             <Benefits data={data}/>
-            {/* <UseCasesPersona data={data}/> */}
+            <UseCasesPersona data={data}/>
             <HowItWorks data={data} />
         </Layout>
         </>
@@ -30,7 +30,7 @@ export async function getServerSideProps(ctx) {
     
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/home?populate[hero][populate][image]=*&populate[collaborators][populate][collaboratorLogo][populate][collaborator_img]=*&populate[benefits][populate][benefits_img]=*&populate[steps]=*&populate[callToAction][populate][cta_option]=*&populate[callToAction][populate][cta_img]=*&populate[products][populate][product][populate][image]=*&populate[persona][populate][image]=*`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/home?populate[hero][populate][image]=*&populate[collaborators][populate][collaboratorLogo][populate][collaborator_img]=*&populate[benefits][populate][benefits_img]=*&populate[steps]=*&populate[callToAction][populate][cta_option]=*&populate[callToAction][populate][cta_img]=*&populate[products][populate][product][populate][image]=*&populate[personaCases][populate][image]=*`
       );
       const data = await res.json()
       return {
