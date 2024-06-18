@@ -19,8 +19,12 @@ export default function Products({data}) {
        {data?.sectorSubheading}
       </p>
 
-      <div className="grid md:grid-cols-3 gap-x-10 gap-y-5 my-10">
-        
+      <div className="grid md:grid-cols-3 gap-x-10 gap-y-5 mt-10 mb-14 lg:mt-14 lg:mb-20">
+        {data?.products?.map(prod => (
+          <button className="px-6 py-2 bg-white" onClick={() => setProducts(data?.products.find(item => item?.sector === prod.sector).product)}>
+              {prod?.sector}
+          </button>
+        ))}
       </div>
 
       <div className="flex flex-col md:grid rounded-lg gap-5 md:grid-cols-5 ">
