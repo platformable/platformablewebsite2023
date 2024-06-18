@@ -38,7 +38,7 @@ export default function UseCasesPersona({ data }) {
             <ul className="mt-5 ">
            {selectedSector ? (
             selectedSector?.item?.[0]?.children?.map((item,index)=>{
-             return <li className="flex items-center gap-x-2 my-5"> <p className="rounded-full px-2 text-white" style={{backgroundColor:selectedSector.mainColor}}>✓</p>{item?.children[0]?.text}</li>
+             return <li className="flex items-center gap-x-2 my-5" key={index}> <p className="rounded-full px-2 text-white" style={{backgroundColor:selectedSector.mainColor}}>✓</p>{item?.children[0]?.text}</li>
             })
            ):''}
            </ul>
