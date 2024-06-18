@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function GovernanceProducts({ title, products }) {
 
 
-  console.log("products", products)
+  // console.log("products", products)
   return (
     <section className="pb-20 pt-2 bg-[var(--purple-medium)] md:block hidden">
       <div className="container mx-auto">

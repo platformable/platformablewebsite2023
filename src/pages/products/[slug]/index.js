@@ -13,7 +13,7 @@ import UseCasesPersona from "../../../../components/prooduct/op/UseCasesPersona"
 import CTA from "../../../../components/prooduct/op/CTA";
 
 
-export default function OpenBankingOpenFinanceTrendsReports2({data}) {
+export default function ProductTemplate({data}) {
   // console.log("new product data", data)
     const sectorsStyle = {
       'Open Banking': {
