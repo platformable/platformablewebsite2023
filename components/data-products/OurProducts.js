@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePlausible } from "next-plausible";
 
 export default function OurProducts({ title, products }) {
-  console.log(products)
+  // console.log(products)
   const plausible = usePlausible();
 
   const sendPlausibleCustomGoal = (goalName) => {
