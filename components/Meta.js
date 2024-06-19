@@ -14,7 +14,7 @@ const Meta = ({ title, keywords, data }) => {
       <meta name="keywords" content={data?.keywords || keywords} />
       <meta
         name="description"
-        content={data?.excerpt?.replace(/(<([^>]+)>)/gi, "")}
+        content={data?.excerpt?.replace(/(<([^>]+)>)/gi, "") || keywords}
       />
       <meta charSet="utf-8" />
       <link rel="icon" href="/favicon.ico" />

@@ -5,7 +5,7 @@ export default function Hero({data}) {
       <div className="container mx-auto grid lg:grid-cols-2 gap-y-5 lg:gap-x-10" >
         <article>
         <h1 className={`text-lg mb-3  font-bold`} style={{color:data.hero[0]?.headingColor}}>{data?.hero[0]?.SeoKeyword}</h1>
-            <h2 className="font-bold mb-5" style={{color:data?.hero[0]?.BigHeadlineTextColor}}>
+            <h2 className="font-bold mb-5 leading-10" style={{color:data?.hero[0]?.BigHeadlineTextColor}}>
             {data?.hero[0]?.bigHeadline}
             </h2>
             <h6 className="" style={{color: data?.hero[0]?.subHeadlineTextColor}}>
@@ -30,13 +30,13 @@ export default function Hero({data}) {
        </article>
         
         {/* <img src={data?.hero[0]?.image?.data?.attributes.url} alt={data?.hero[0]?.image?.data?.attributes.alternativeText} className="align-top"/> */}
-        {/* <Image
+        <Image
             src={data?.hero[0]?.image?.data?.attributes.url} alt={data?.hero[0]?.image?.data?.attributes.alternativeText} className="align-top"
             width={600}
             height={450}
             unoptimized
     
-    /> */}
+    />
 
         
       </div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function UseCasesPersona({ data }) {
   const [selectedSector, setSelectedSector] = useState("");
-  console.log("data",data)
+
 
   const chooseSector = (category) =>
     data?.personaCases
@@ -11,11 +11,10 @@ export default function UseCasesPersona({ data }) {
 
       useEffect(() => setSelectedSector(data?.personaCases[0]), [])
 
-      console.log("selectedSector",selectedSector)
   return (
     <section className="container mx-auto py-10 md:py-14 ">
      <div>
-     <h3 className="text-[#3425C9] font-bold mb-5" style={{color: selectedSector.mainColor}}>{data?.personaHeading}</h3>
+     <h3 className="text-[#3425C9] font-bold mb-5 leading-10" style={{color: selectedSector.mainColor}}>{data?.personaHeading}</h3>
       <h6 className="">{data?.personaSubheading}</h6>
 
       <div className="grid  grid-flow-col auto-cols-auto overflow-x-auto gap-5 pb-6 mt-10">
