@@ -4,7 +4,7 @@ export default function HowItWorks({data}) {
     return (
         <section className="bg-[#2E16A7] py-10 md:py-14 text-white">
            <div className="container mx-auto ">
-           <h2 className="font-bold text-center mb-3">{data?.howItWorksHeading}</h2>
+           <h2 className="font-bold text-center mb-3 leading-10">{data?.howItWorksHeading}</h2>
            <p className="text-center">{data?.howItWorksSubheading}</p>
            
            <div className="grid lg:grid-cols-3 gap-y-10 lg:divide-x divide-[#FFE200] mt-14">

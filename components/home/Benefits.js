@@ -3,7 +3,7 @@ export default function Benefits({data}) {
     return (
         <section className="bg-[#5A23EC]  py-10 md:py-14">
             <div className="container mx-auto">
-                <h2 className="text-white font-bold text-center">{data?.benefitsHeading}</h2>
+                <h2 className="text-white font-bold text-center leading-10">{data?.benefitsHeading}</h2>
                 <p className="text-white mt-4 text-center">{data?.sectorSubheading}</p>
                 <div className="grid md:grid-cols-2 gap-14 mt-14">
                     {

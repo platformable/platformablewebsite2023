@@ -12,7 +12,7 @@ export default function Products({data}) {
   return (
     <section className="bg-[#2E16A7] py-10 md:py-14">
       <div className="container mx-auto">
-      <h2 className="text-white font-bold text-center">
+      <h2 className="text-white font-bold text-center leading-10">
         {data?.sectorHeading}
       </h2>
       <p className="mt-7 text-white text-center">
