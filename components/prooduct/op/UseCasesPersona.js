@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function UseCasesPersona({ data }) {
   const [selectedSector, setSelectedSector] = useState("");
-  console.log("data",data)
+
 
   const chooseSector = (category) =>
     data?.personaCases
@@ -11,7 +11,6 @@ export default function UseCasesPersona({ data }) {
 
       useEffect(() => setSelectedSector(data?.personaCases[0]), [])
 
-      console.log("selectedSector",selectedSector)
   return (
     <section className="container mx-auto py-10 md:py-14 ">
      <div>
