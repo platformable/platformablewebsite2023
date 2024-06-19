@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 
 export default function Products({data}) {
   const [products, setProducts] = useState([])
+  const [sector, setSector]=useState("Open Banking")
+  
 
   useEffect(() => {
     if (data) {
-      setProducts(data?.products.find(item => item?.sector === 'Open Ecosystems').product)
+      setProducts(data?.products.find(item => item?.sector === 'Open Banking').product)
     }
   }, [])
   return (
@@ -21,7 +23,16 @@ export default function Products({data}) {
 
       <div className="grid md:grid-cols-3 gap-x-10 gap-y-5 mt-10 mb-14 lg:mt-14 lg:mb-20">
         {data?.products?.map((prod, index) => (
-          <button key={index} className="px-6 py-2 bg-white" onClick={() => setProducts(data?.products.find(item => item?.sector === prod.sector).product)}>
+          <button key={index} className={`px-6 pt-1 pb-5 bg-white rounded-md shadow ${sector !== prod.sector ? 'opacity-80':''}`} onClick={() => {
+            setSector(prod.sector)
+            setProducts(data?.products.find(item => item?.sector === prod.sector).product)}
+            }>
+              <div className={`h-2  rounded-tl-md rounded-tr-md mb-5 
+              ${prod.sector==='Open Banking' ? 'bg--gradient-obof':''}
+              ${prod.sector==='Open Ecosystems' ? 'bg--gradient-oe':''}
+              ${prod.sector==='Open Health' ? 'bg--gradient-oh':''}
+              
+              `}></div>
               {prod?.sector}
           </button>
         ))}

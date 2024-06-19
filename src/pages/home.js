@@ -9,7 +9,7 @@ import Products from "../../components/home/Products";
 
 
 export default function Perritos({data}) {
-  console.log("new product data", data)
+  
    
     return (
         <>

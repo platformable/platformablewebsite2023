@@ -30,13 +30,13 @@ export default function Hero({data}) {
        </article>
         
         {/* <img src={data?.hero[0]?.image?.data?.attributes.url} alt={data?.hero[0]?.image?.data?.attributes.alternativeText} className="align-top"/> */}
-        {/* <Image
+        <Image
             src={data?.hero[0]?.image?.data?.attributes.url} alt={data?.hero[0]?.image?.data?.attributes.alternativeText} className="align-top"
             width={600}
             height={450}
             unoptimized
     
-    /> */}
+    />
 
         
       </div>
