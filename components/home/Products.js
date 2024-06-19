@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function Products({data}) {
   const [products, setProducts] = useState([])
   const [sector, setSector]=useState("Open Banking")
-  
+ 
 
   useEffect(() => {
     if (data) {
@@ -12,7 +12,9 @@ export default function Products({data}) {
     }
   }, [])
   return (
-    <section className="bg-[#2E16A7] py-10 md:py-14">
+    <section className={`py-10 md:py-14 ${sector==='Open Banking' ? 'bg--gradient-obof':''}
+    ${sector==='Open Ecosystems' ? 'bg--gradient-oe':''}
+    ${sector==='Open Health' ? 'bg--gradient-oh':''}`}>
       <div className="container mx-auto">
       <h2 className="text-white font-bold text-center leading-10">
         {data?.sectorHeading}
