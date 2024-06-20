@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CheckIcon from "../CheckIcon";
 
 export default function HowItWorks({data}) {
     return (
@@ -18,14 +19,14 @@ export default function HowItWorks({data}) {
 
            </div>
            
-           <div className="p-5 md:p-20 bg-[#5A24EC] mt-10 md:mt-20 rounded-lg grid md:grid-cols-[2fr_1.2fr] shadow">
+           <div className="p-5 md:p-20 bg-[#FDEC6E] mt-10 md:mt-20 rounded-lg grid md:grid-cols-[2fr_1.2fr] shadow">
                 <div>
-                    <h4 className="font-bold text-2xl md:text-5xl ">Ready to Innovate?</h4>
+                    <h4 className="font-bold text-2xl md:text-5xl text-[#5B24EC]">Ready to Innovate?</h4>
                     <ul className="flex flex-col gap-4 my-10">
                         {data?.callToAction?.cta_option?.map((option, index) => (
                             // <li className="text-2xl text-white font-medium" key={index}>{option?.option}</li>
                             // <li className="flex items-center gap-x-2 my-1 text-2xl font-medium text-white"> <p className="rounded-full px-2 text-white" style={{backgroundColor:selectedSector.mainColor}}>✓</p></li>
-                             <li className="flex items-center gap-x-2 my-1" key={index}> <p className="rounded-full px-2 text-black" style={{backgroundColor:data.hero[0]?.primaryCallToActionBgColor}}>✓</p>{option?.option}</li>
+                             <li className="flex items-center gap-x-2 my-1 text-[#5B24EC]" key={index}> <p className="rounded-full p-2 text-black bg-[#5B24EC]" > <CheckIcon /> </p>{option?.option}</li>
                         ))}
                     </ul>
 
