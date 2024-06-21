@@ -33,7 +33,7 @@ export default function HowItWorks({data}) {
                     <a href={data.hero[0]?.primaryCallToActionUrl} 
             
                         target="_blank">
-                     <button className={` px-3 py-2 shadow rounded-md text-white font-bold`} style={{backgroundColor:data.hero[0]?.primaryCallToActionBgColor,color:data.hero[0]?.primaryCallToActionTextColor}}>{data?.hero[0]?.primaryCallToAction}</button>
+                     <button className={` px-3 py-2 shadow rounded-md text-white font-bold`} style={{backgroundColor:'#5B24EC',color:'#FFEB55'}}>{data?.hero[0]?.primaryCallToAction}</button>
                     </a>
                 </div>            
                 <Image src={data?.callToAction?.cta_img?.data?.attributes?.url} alt={data?.callToAction?.cta_img?.data?.attributes?.alternativeText} width={data?.callToAction?.cta_img?.data?.attributes?.width} height={data?.callToAction?.cta_img?.data?.attributes?.height}/>
