@@ -25,7 +25,7 @@ export default function Products({data}) {
 
       <div className="grid md:grid-cols-3 gap-x-10 gap-y-5 mt-10 mb-14 lg:mt-14 lg:mb-20">
         {data?.products?.map((prod, index) => (
-          <button key={index} className={`px-1 pt-1  pb-5 bg-white rounded-md shadow text-[30px] font-bold text-[#5A24EC] ${sector !== prod.sector ? 'opacity-60':''}`} onClick={() => {
+          <button key={index} className={`px-1 pt-1  pb-5 bg-white rounded-md shadow text-[22px] font-bold text-[#5A24EC] ${sector !== prod.sector ? 'opacity-60':''}`} onClick={() => {
             setSector(prod.sector)
             setProducts(data?.products.find(item => item?.sector === prod.sector).product)}
             }>

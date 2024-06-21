@@ -78,7 +78,13 @@
   --highlight-color-light:#FBC6FD;
 
 }
-
+.dot {
+  height: 35px;
+  width: 35px;
+  
+  border-radius: 50%;
+  display: inline-block;
+}
 img {
   image-rendering: -moz-crisp-edges;
     image-rendering: -o-crisp-edges;

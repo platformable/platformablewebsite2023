@@ -26,7 +26,7 @@ export default function HowItWorks({data}) {
                         {data?.callToAction?.cta_option?.map((option, index) => (
                             // <li className="text-2xl text-white font-medium" key={index}>{option?.option}</li>
                             // <li className="flex items-center gap-x-2 my-1 text-2xl font-medium text-white"> <p className="rounded-full px-2 text-white" style={{backgroundColor:selectedSector.mainColor}}>✓</p></li>
-                             <li className="flex items-center gap-x-2 my-1 text-[#5B24EC]" key={index}> <p className="rounded-full p-2 text-black bg-[#5B24EC]" > <CheckIcon /> </p>{option?.option}</li>
+                             <li className="flex items-center gap-x-2 my-1 text-[#5B24EC]" key={index}> <p className="dot p-3 text-black bg-[#5B24EC]" > <CheckIcon /> </p>{option?.option}</li>
                         ))}
                     </ul>
 
