@@ -19,7 +19,7 @@ export default function HowItWorks({data}) {
 
            </div>
            
-           <div className="p-5 md:p-20 bg-[#FDEC6E] mt-10 md:mt-20 rounded-lg grid md:grid-cols-[2fr_1.2fr] shadow">
+           <div className="p-5 md:p-20 bg-[#FDEC6E] mt-10 md:mt-20 rounded-lg grid md:grid-cols-[1fr_1fr] shadow">
                 <div>
                     <h4 className="font-bold text-2xl md:text-4xl text-[#5B24EC]">Ready to Innovate?</h4>
                     <ul className="flex flex-col gap-4 my-10">
