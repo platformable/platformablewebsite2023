@@ -1,8 +1,9 @@
-export default function Benefits({data}) {
+export default function Benefits({data, colorScheme}) {
   // console.log("Benefits",data)
   return (
-    <section className="mx-auto container py-10 md:py-14">
-      <h3 className="text-3xl text-center px-2 md:px-16 mb-10 font-bold" style={{color:data.benefitshHeadingColor}}>
+    <section style={{background: colorScheme.benefits?.backgroundColor}}>
+      <div className="mx-auto container py-10 md:py-14" >
+      <h3 className="text-3xl text-center px-2 md:px-16 mb-10 font-bold" style={{color:colorScheme.benefits.benefitshHeadingColor}}>
        {data?.benefitshHeading}
       </h3>
        <div className="flex flex-col md:grid rounded-lg gap-5 md:grid-cols-5 ">
@@ -12,11 +13,11 @@ export default function Benefits({data}) {
               className={`rounded-lg p-10  gap-10 flex items-start ${
                 index % 2 != 0 ? "flex-col-reverse justify-end " : box?.column === 'col-span-5' ? 'flex flex-col md:grid md:grid-cols-[1fr_3fr]' : "flex-col"
               }  ${box?.column} row-span-1 `}
-              style={{backgroundColor: box.backgroundColor}}
+              style={{backgroundColor: colorScheme.benefits?.boxLabelBackgroundColor}}
             >
               <div>
                 {box.label && (
-                  <div className="text-lg mb-2 font-medium" style={{color:data.benefitshHeadingColor}}>{box.label}</div>
+                  <div className="text-lg mb-2 font-medium" style={{color:colorScheme.benefits?.boxLabelTextColor}}>{box.label}</div>
                 )}
                 {box.title && (
                   <h2 className="text-2xl mb-4 font-semibold" style={{color:box.textColor}}>{box.title}</h2>
@@ -32,7 +33,9 @@ export default function Benefits({data}) {
             </div>
           ))}
         </div>
+    </div>
     </section>
+    
   );
 }
 

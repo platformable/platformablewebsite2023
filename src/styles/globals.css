@@ -3839,11 +3839,6 @@ background-image:url('https://res.cloudinary.com/platform1/image/upload/v1711386
 }
 
 
-
-#guarantee-hero-container {
-  background: transparent linear-gradient(270deg, #FFFFFF39 0%, #FFFFFFCE 16%, #FFFFFF 50%, #FFFFFFD6 78%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
-}
-
 #product-items > li {
   /** the image will be vertically aligned in the center **/
   background: url('../../public/icon_CTA.svg') left center no-repeat; 

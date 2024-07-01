@@ -1,22 +1,21 @@
-import Link from "next/link";
 
-export default function CTA({data}) {
+export default function CTA({data, colorScheme}) {
     return (
-        <section className="py-10 md:py-14" style={{backgroundColor: data?.pricing?.backgroundColor}}>
+        <section className="py-10 md:py-14" style={{background: colorScheme.pricing?.backgroundColor}}>
             <div className="container mx-auto flex flex-col gap-y-10 md:grid md: grid-cols-2 md:gap-24">
                 <div className="flex flex-col justify-start md:py-14">
-                <h3 className="font-bold" style={{color: data?.pricing?.mainColor}}>{data?.pricing?.heading}</h3>
-                <h3 className="font-bold">{data?.pricing?.subheading}</h3>
+                <h3 className="font-bold" style={{color: colorScheme?.pricing?.headingTextColor}}>{data?.pricing?.heading}</h3>
+                <h3 className="font-bold" style={{color: colorScheme?.pricing?.subheadingTextColor}}>{data?.pricing?.subheading}</h3>
 
-                <p className="mt-10">
+                <h6 className="mt-10" style={{color: colorScheme?.pricing?.descriptionTextColor}}>
                     {data?.pricing?.description}
-                </p>
+                </h6>
                 </div>
                 <div className="rounded shadow-xl p-10 bg-white flex flex-col items-start gap-5">
                     <p className="flex items-center gap-3">
-                    <span className="text-5xl font-bold" style={{color: data?.pricing?.mainColor}}>{data?.pricing?.price?.[0]?.price}</span><span className=" text-3xl font-bold"> / per year</span>
+                    <span className="text-5xl font-bold" style={{color: colorScheme?.pricing?.mainColor}}>{data?.pricing?.price?.[0]?.price}</span><span className=" text-3xl font-bold"> / per year</span>
                     </p>
-                    <div className="rounded-full px-3 md:px-6 py-2 text-[#6A39EE]" style={{backgroundColor: data?.pricing?.backgroundColor, color: data?.pricing?.mainColor}}>{data?.pricing?.price?.[0]?.discountText}</div>
+                    <div className="rounded-full px-3 md:px-6 py-2 text-[#6A39EE]" style={{backgroundColor: colorScheme?.pricing?.backgroundColor, color: colorScheme?.pricing?.mainColor}}>{data?.pricing?.price?.[0]?.discountText}</div>
                     <ul id="product-itemss" className="list-style-none grid gap-4 ">
                         {data?.pricing?.price?.[0]?.description?.map((item, index) => (
                             <li className="text-base py-3 flex gap-x-5 items-center" key={index}>
@@ -27,13 +26,13 @@ export default function CTA({data}) {
                     </ul>
                     <div className="flex flex-col md:flex-row gap-5 md:grid md:grid-cols-2 w-full">
                         <a href={data?.pricing?.price[0]?.callToActionMainUrl} className="" target="_blank">
-                        <button className={` px-3 py-2 shadow w-full rounded-md text-white `} style={{backgroundColor:data?.hero?.primaryCallToActionBgColor, border: `1px solid ${data?.hero?.primaryCallToActionBorderColor}`}}>
-                            <p className="text-[18px] font-bold" style={{color:data.pricing.price[0].callToActionMainTextColor}}>{data?.hero?.primaryCallToAction}</p>
+                        <button className={` px-3 py-2 shadow w-full rounded-md text-white`} style={{backgroundColor:colorScheme?.pricing?.primaryCallToActionBgColor, border: `1px solid ${colorScheme?.pricing?.primaryCallToActionBorderColor}`}}>
+                            <p className="text-[18px] font-bold" style={{color:colorScheme.pricing.callToActionMainTextColor}}>{data?.hero?.primaryCallToAction}</p>
                         </button>
                         </a>
                         <a href={data?.pricing?.price[0]?.callToActionSecondaryUrl}  className="">
-                        <button className="rounded-md shadow w-full px-3 py-2 " style={{border:`1px solid ${data?.pricing?.price?.[0]?.callToActionSecondaryBorderColor}`, backgroundColor:data?.hero?.secondaryCallToActionBgColor}}>
-                            <p className="text-[18px]" style={{color:data?.pricing?.price[0]?.callToActionSecondaryTextColor}}>{data?.hero?.secondaryCallToAction}</p>
+                        <button className="rounded-md shadow w-full px-3 py-2 " style={{border:`1px solid ${colorScheme?.pricing?.secondaryCallToActionBorderColor}`, backgroundColor:colorScheme?.pricing?.secondaryCallToActionBgColor}}>
+                            <p className="text-[18px]" style={{color:colorScheme?.pricing?.secondaryCallToActionTextColor}}>{data?.hero?.secondaryCallToAction}</p>
                         </button>
                         </a>
                         
