@@ -1,25 +1,18 @@
 'use client'
 import styles from "@/styles/OBOFTrendsReportspage.module.css";
-import Link from "next/link";
-import { useEffect, useState, useRef } from "react";
-import {useRouter} from 'next/router'
 import Image from "next/image";
 
-export default function Hero({data}) {
-const [renderx,setRenderx]=useState(false)
-const [headingColor,setHeadingColor]=useState('')
-const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
-
+export default function Hero({data, colorScheme}) {
 
   
   return (
-    <section className="overflow-hidden bg-gradient-to-b from-[#A17EFF20] from-30%  via-[#E7DFFD20] via-50% to-[#F0EBFD20] to-50% text-center pt-14 md:pt-20 pb-10 ">
+    <section className="overflow-hidden  text-center pt-14 md:pt-20 pb-10 " style={{background: colorScheme.hero.backgroundColor}}>
       <div className="container mx-auto">
-        <h1 className={`text-lg mb-3  font-bold`} style={{color:data.hero.headingColor}}>{data?.hero?.SeoKeyword}</h1>
-        <h2 className="font-bold mb-5" style={{color:data?.hero?.BigHeadlineTextColor}}>
+        <h1 className={`text-lg mb-3  font-bold`} style={{color:colorScheme.hero.headingColor}}>{data?.hero?.SeoKeyword}</h1>
+        <h2 className="font-bold mb-5" style={{color:colorScheme?.hero?.bigHeadlineTextColor}}>
         {data?.hero?.bigHeadline}
         </h2>
-        <h6>
+        <h6  style={{color:colorScheme?.hero?.subHeadlineTextColor}}>
         {data?.hero?.subHeadline}
         </h6>
       
@@ -27,20 +20,20 @@ const [primaryCallToAcctionBgColor,setPrimaryCallToAcctionBgColor]=useState('')
           
           <a href={data.hero.primaryCallToActionUrl} 
           
-          target="_blank">
-            <p className={` px-3 py-2 shadow rounded-md text-white w-56 font-bold`} style={{backgroundColor:data.hero.primaryCallToActionBgColor,color:data.hero.primaryCallToActionTextColor}}>{data?.hero?.primaryCallToAction}</p>
+          target="_blank" className="shadow rounded-md px-3 py-2  w-56" style={{border:`1px solid ${colorScheme.hero.primaryCallToActionBorderColor}`, backgroundColor:colorScheme.hero.primaryCallToActionBgColor,color:colorScheme.hero.primaryCallToActionTextColor}}>
+            <p className={`font-bold`} >{data?.hero?.primaryCallToAction}</p>
           </a>
     
           <a href={data?.hero?.secondaryCallToActionUrl} target="_blank">
-          <button className="rounded-md shadow  px-3 py-2  w-56" style={{border:`1px solid ${data.hero.secondaryCallToActionBorderColor}`}}>
-            <p className="text-[#5E2AED]" style={{color:data.hero.secondaryCallToActionTextColor}}> {data?.hero?.secondaryCallToAction}</p>
+          <button className="rounded-md shadow  px-3 py-2  w-56" style={{border:`1px solid ${colorScheme.hero.secondaryCallToActionBorderColor}`}}>
+            <p className="text-[#5E2AED]" style={{color:colorScheme.hero.secondaryCallToActionTextColor}}> {data?.hero?.secondaryCallToAction}</p>
           </button>
           </a>
           
         </div>
-        <div id="guarantee-hero-container" className="py-7 md:mx-60 bg-gradient-to-r from-transparent via-zinc-600 to-transparent">
-          <h6 className="text-[#F157FF] font-bold">{data.hero.socialHeading}</h6>
-          <p>{data?.hero.socialSubheading}</p>
+        <div id="guarantee-hero-container" className="py-7 mb-6 md:mb-10" style={{background: colorScheme.hero?.socialSectionBackgroundColor }}>
+          <h6 className="font-bold" style={{color:colorScheme.hero.socialHeadingTextColor}}>{data.hero.socialHeading}</h6>
+          <p className="" style={{color:colorScheme.hero.socialSubheadingTextColor}}>{data?.hero.socialSubheading}</p>
         </div>
         {/* <img src={data?.hero?.image?.data?.attributes.url} alt={data?.hero?.image?.data?.attributes.alternativeText} className="align-top"/> */}
         <Image

@@ -1,20 +1,14 @@
 import Layout from "../../../../components/Layout";
-import ActionableInformation from "../../../../components/obof-trends-reports/ActionableInformation";
-import DiscoverBenefits from "../../../../components/obof-trends-reports/DiscoverBenefits";
 import Hero from "../../../../components/prooduct/op/Hero";
-import ProductDescription from "../../../../components/obof-trends-reports/ProductDescription";
-import ProductDescriptionMobile from "../../../../components/obof-trends-reports/ProductDescriptionMobile";
-import FindMore from "../../../../components/data-products/FindMore";
 import Meta from "../../../../components/Meta";
 import WhatsIncluded from "../../../../components/prooduct/op/WhatsIncluded";
 import SocialProof from "../../../../components/prooduct/op/SocialProof";
 import Benefits from "../../../../components/prooduct/op/Benefits";
 import UseCasesPersona from "../../../../components/prooduct/op/UseCasesPersona";
 import CTA from "../../../../components/prooduct/op/CTA";
-
+import { colorSchemeBySector } from "../../../../components/prooduct/colorScheme";
 
 export default function ProductTemplate({data}) {
-  // console.log("new product data", data)
     const sectorsStyle = {
       'Open Banking': {
         bgColor: 'bg--gradient-obof',
@@ -42,14 +36,14 @@ export default function ProductTemplate({data}) {
         <>
         <Meta title={data?.hero?.SeoKeyword} keywords={'open banking open finance trends reports, open health, open ecosystems, fintech APIs, financial inclusion'} data={data}/>
         <Layout>
-            <Hero data={data}/>
-            <SocialProof data={data}/>
+            <Hero data={data} colorScheme={colorSchemeBySector[data?.sector]}/>
+            <SocialProof data={data} colorScheme={colorSchemeBySector[data?.sector]}/>
 
             
-            <WhatsIncluded data={data}/>
-            <Benefits data={data}/>
-            <UseCasesPersona data={data}/>
-            <CTA data={data}/>  
+            <WhatsIncluded data={data} colorScheme={colorSchemeBySector[data?.sector]}/>
+            <Benefits data={data} colorScheme={colorSchemeBySector[data?.sector]}/>
+            <UseCasesPersona data={data} colorScheme={colorSchemeBySector[data?.sector]}/>
+            <CTA data={data} colorScheme={colorSchemeBySector[data?.sector]}/>  
         </Layout>
         </>
     );

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CheckIcon from "../../CheckIcon";
 
-export default function UseCasesPersona({ data }) {
+export default function UseCasesPersona({ data, colorScheme }) {
   const [selectedSector, setSelectedSector] = useState("");
 
 
@@ -13,9 +13,9 @@ export default function UseCasesPersona({ data }) {
       useEffect(() => setSelectedSector(data?.personaCases[0]), [])
 
   return (
-    <section className="container mx-auto py-10 md:py-14 ">
+    <section className="container mx-auto py-10 md:py-14 "style={{background: colorScheme.personas.backgroundColor}} >
      <div>
-     <h3 className="text-[#3425C9] font-bold mb-5 leading-10" style={{color: selectedSector.mainColor}}>{data?.personaHeading}</h3>
+     <h3 className="font-bold mb-5 leading-10" style={{color: colorScheme.personas.mainColor}}>{data?.personaHeading}</h3>
       <h6 className="">{data?.personaSubheading}</h6>
 
       <div className="grid  grid-flow-col auto-cols-auto overflow-x-auto gap-5 pb-6 mt-10">
@@ -32,13 +32,13 @@ export default function UseCasesPersona({ data }) {
 
       <div className="flex flex-col md:flex-row md:justify-between md:h-80 mt-10 md:mt-24 gap-10 md:gap-20 2xl:gap-32">
         <div className="md:w-3/6">
-          <h4 className=" font-bold leading-10" style={{color: selectedSector.mainColor}}>{selectedSector?.title}</h4>
-          <p className="text-lg leading-6 mt-8" style={{color: selectedSector.textColor}}>{selectedSector?.text}</p>
+          <h4 className=" font-bold leading-10" style={{color: colorScheme.personas.mainColor}}>{selectedSector?.title}</h4>
+          <p className="text-lg leading-6 mt-8" style={{color: colorScheme.personas.textColor}}>{selectedSector?.text}</p>
           <div className="personas-homepage-list">
             <ul className="mt-5 ">
            {selectedSector ? (
             selectedSector?.item?.[0]?.children?.map((item,index)=>{
-             return <li className="flex items-center gap-x-2 my-5" key={index}> <p className="dot p-3 text-white" style={{backgroundColor:selectedSector.mainColor}}><CheckIcon/></p>{item?.children[0]?.text}</li>
+             return <li className="flex items-center gap-x-2 my-5" key={index}> <p className="dot p-3 text-white" style={{backgroundColor:colorScheme.personas.mainColor}}><CheckIcon/></p>{item?.children[0]?.text}</li>
             })
            ):''}
            </ul>
