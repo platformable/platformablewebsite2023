@@ -4,7 +4,7 @@ import CheckIcon from "../../CheckIcon";
 export default function UseCasesPersona({ data, colorScheme }) {
   const [selectedSector, setSelectedSector] = useState("");
 
-
+console.log("colorScheme",colorScheme)
   const chooseSector = (category) =>
     data?.personaCases
       ? data?.bentoBox?.find((i) => i.label === selectedSector)
@@ -32,13 +32,13 @@ export default function UseCasesPersona({ data, colorScheme }) {
 
       <div className="flex flex-col md:flex-row md:justify-between md:h-80 mt-10 md:mt-24 gap-10 md:gap-20 2xl:gap-32">
         <div className="md:w-3/6">
-          <h4 className=" font-bold leading-10" style={{color: colorScheme?.personas.mainColor}}>{selectedSector?.title}</h4>
-          <p className="text-lg leading-6 mt-8" style={{color: colorScheme?.personas.textColor}}>{selectedSector?.text}</p>
+          <h4 className=" font-bold leading-10" style={{color: colorScheme?.personas?.mainColor}}>{selectedSector?.title}</h4>
+          <p className="text-lg leading-6 mt-8" style={{color: colorScheme?.personas?.textColor}}>{selectedSector?.text}</p>
           <div className="personas-homepage-list">
             <ul className="mt-5 ">
            {selectedSector ? (
             selectedSector?.item?.[0]?.children?.map((item,index)=>{
-             return <li className="flex items-center gap-x-2 my-5" key={index}> <p className="dot p-3 text-white" style={{backgroundColor:colorScheme?.personas.mainColor}}><CheckIcon/></p>{item?.children[0]?.text}</li>
+             return <li className="flex items-center gap-x-2 my-5" key={index}> <p className="dot p-3 text-white" style={{backgroundColor:colorScheme?.personas?.mainColor}}><CheckIcon/></p>{item?.children[0]?.text}</li>
             })
            ):''}
            </ul>
