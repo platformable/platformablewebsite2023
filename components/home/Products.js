@@ -59,7 +59,7 @@ export default function Products({data}) {
                 {box.text && <p className="text-base" style={{color:box.textColor}}>{box.text}</p>}
 
                 {box?.getStarted && (
-                  <button className="rounded-full text-white text-xs bg-[#5E2AED] mt-5  px-4 py-1">Get started</button>
+                  <a target="_blank" href={box.getStarted} className="rounded-full text-white text-xs bg-[#5E2AED] mt-5  px-4 py-1">Get started</a>
                  )}
               </div>
               {/* {box.linkText && (
