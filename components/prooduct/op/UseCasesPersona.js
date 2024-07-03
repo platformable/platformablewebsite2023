@@ -35,7 +35,7 @@ export default function UseCasesPersona({ data, colorScheme }) {
           <p className="text-lg leading-6 mt-8" style={{color: colorScheme?.personas?.textColor}}>{selectedSector?.text}</p>
           <div className="personas-homepage-list">
             <ul className="mt-5 ">
-           {selectedSector && selectedSector.item.length > 0 ? (
+           {selectedSector && selectedSector?.item?.length > 0 ? (
             selectedSector?.item?.[0]?.children?.map((item,index)=>{
              return <li className="flex items-center gap-x-2 my-5" key={index}> <div><p className="dot p-3 text-white" style={{backgroundColor:colorScheme?.personas?.mainColor}}><CheckIcon/></p></div>{item?.children[0]?.text}</li>
             })
