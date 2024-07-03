@@ -16,11 +16,11 @@ export default function Hero({data}) {
             
             <a href={data.hero[0]?.primaryCallToActionUrl} 
             
-            target="_blank">
+            >
                 <p className={` px-3 py-2 shadow rounded-md text-white font-bold`} style={{backgroundColor:data.hero[0]?.primaryCallToActionBgColor,color:data.hero[0]?.primaryCallToActionTextColor}}>{data?.hero[0]?.primaryCallToAction}</p>
             </a>
         
-            <a href={data?.hero[0]?.secondaryCallToActionUrl} target="_blank">
+            <a href={data?.hero[0]?.secondaryCallToActionUrl} >
             <button className="rounded-md shadow  px-3 py-2" style={{border:`1px solid ${data.hero[0]?.secondaryCallToActionBorderColor}`}} id="secondaryCallToAction">
                 <p className="text-[#5E2AED]" style={{color:data.hero[0]?.secondaryCallToActionTextColor}}> {data?.hero[0]?.secondaryCallToAction}</p>
             </button>
