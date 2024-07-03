@@ -8,9 +8,9 @@ export default function Hero({data}) {
             <h2 className="font-bold mb-5 leading-10" style={{color:data?.hero[0]?.BigHeadlineTextColor}}>
             {data?.hero[0]?.bigHeadline}
             </h2>
-            <h6 className="" style={{color: data?.hero[0]?.subHeadlineTextColor}}>
+            <p className="text-2xl" style={{color: data?.hero[0]?.subHeadlineTextColor}}>
             {data?.hero[0]?.subHeadline}
-            </h6>
+            </p>
         
             <div className="flex flex-col md:flex-row gap-5 justify-center md:justify-start items-center mt-10 mb-10">
             
@@ -21,7 +21,7 @@ export default function Hero({data}) {
             </a>
         
             <a href={data?.hero[0]?.secondaryCallToActionUrl} target="_blank">
-            <button className="rounded-md shadow  px-3 py-2" style={{border:`1px solid ${data.hero[0]?.secondaryCallToActionBorderColor}`}}>
+            <button className="rounded-md shadow  px-3 py-2" style={{border:`1px solid ${data.hero[0]?.secondaryCallToActionBorderColor}`}} id="secondaryCallToAction">
                 <p className="text-[#5E2AED]" style={{color:data.hero[0]?.secondaryCallToActionTextColor}}> {data?.hero[0]?.secondaryCallToAction}</p>
             </button>
             </a>
