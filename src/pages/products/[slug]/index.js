@@ -9,7 +9,7 @@ import CTA from "../../../../components/prooduct/op/CTA";
 import { colorSchemeBySector } from "../../../../components/prooduct/colorScheme";
 
 export default function ProductTemplate({data}) {
-  console.log("data del products", data)
+  
     const sectorsStyle = {
       'Open Banking': {
         bgColor: 'bg--gradient-obof',
