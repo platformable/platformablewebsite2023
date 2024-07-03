@@ -12,7 +12,7 @@ export default function HowItWorks({data}) {
                 {data?.steps?.map((step, index) => (
                      <div className="px-5 md:px-10 py-3 text-center" key={index}>
                      <span className="font-medium text-[#FFE200]">{step?.step}</span>
-                     <h5 className="font-bold mt-2 my-4">{step?.heading}</h5>
+                     <h2 className="text-2xl font-bold mt-2 my-4">{step?.heading}</h2>
                      <p className="">{step?.description}</p>
                  </div>
                 ))}   
@@ -21,7 +21,7 @@ export default function HowItWorks({data}) {
            
            <div className="p-5 md:p-20 bg-[#FDEC6E] mt-10 md:mt-20 rounded-lg grid md:grid-cols-[1fr_1fr] shadow">
                 <div className="mb-10 md:mb-0">
-                    <h4 className="font-bold text-3xl md:text-5xl text-[#5B24EC]">Ready to Innovate?</h4>
+                    <h1 className="font-bold text-3xl md:text-5xl text-[#5B24EC]">Ready to Innovate?</h1>
                     <ul className="flex flex-col gap-4 my-10">
                         {data?.callToAction?.cta_option?.map((option, index) => (
                             // <li className="text-2xl text-white font-medium" key={index}>{option?.option}</li>

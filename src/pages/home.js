@@ -6,10 +6,12 @@ import UseCasesPersona from "../../components/prooduct/op/UseCasesPersona";
 import Collaborators from "../../components/home/Collaborators";
 import HowItWorks from "../../components/home/HowItWorks";
 import Products from "../../components/home/Products";
+import { colorSchemeBySector } from "../../components/prooduct/colorScheme";
 
 
 export default function Perritos({data}) {
   
+
    
     return (
         <>
@@ -19,7 +21,7 @@ export default function Perritos({data}) {
             <Collaborators data={data} />
             <Products data={data} />
             <Benefits data={data}/>
-            <UseCasesPersona data={data}/>
+            <UseCasesPersona data={data} colorScheme={colorSchemeBySector.OB}/>
             <HowItWorks data={data} />
         </Layout>
         </>

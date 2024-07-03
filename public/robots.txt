@@ -37,4 +37,4 @@ User-agent: *
 Crawl-delay: 10
 Disallow: /blog/draft
 
-Sitemap: https://backend.platformable.com/api/sitemap/index.xml
+Sitemap: https://platformable.com/sitemap.xml

@@ -199,8 +199,10 @@ useEffect( ()=>{
             </Link>
           </div>
           <button
+          id="burguer"
             className={headerStyles["responsive-burger-icon"]}
             type="button"
+            aria-label="Aria Burguer"
             onClick={() => setBurgerClick((burgerClick) => !burgerClick)}
           >
             {burgerClick ? (

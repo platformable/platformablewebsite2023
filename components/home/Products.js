@@ -56,10 +56,10 @@ export default function Products({data}) {
                 {box.title && (
                   <h2 className="text-2xl mb-4 font-semibold" style={{color:box.textColor}}>{box.title}</h2>
                 )}
-                {box.text && <p className="text-base" style={{color:box.textColor}}>{box.text}</p>}
+                {box.text && <p className="text-base mb-5" style={{color:box.textColor}}>{box.text}</p>}
 
                 {box?.getStarted && (
-                  <button className="rounded-full text-white text-xs bg-[#5E2AED] mt-5  px-4 py-1">Get started</button>
+                  <a target="_blank" href={box.getStarted} className="rounded-full text-white text-xs bg-[#5E2AED] mt-5  px-4 py-1">Get started</a>
                  )}
               </div>
               {/* {box.linkText && (
