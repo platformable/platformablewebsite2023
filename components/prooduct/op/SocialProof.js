@@ -127,26 +127,26 @@ export default function SocialProof({data, colorScheme}) {
           </div> */}
           <div className={`flex flex-col justify-between p-10 bg-white rounded-xl`} style={{border:`1px solid  ${colorScheme?.testimonials.testimonialsCardBorderColor}`}}>
             <p className="text-[15px]">
-                {data?.testimonials?.[0].text}
+                {data?.testimonials?.[0]?.text}
             </p>
             <div className="flex items-center gap-3 mt-5">
-                <img src={data?.testimonials?.[0]?.image?.data?.attributes?.url} alt={`${data?.testimonials?.[0].name} image`} className="rounded-full w-10 h-10 aspect-square" />
+                <img src={data?.testimonials?.[0]?.image?.data?.attributes?.url} alt={`${data?.testimonials?.[0]?.name} image`} className="rounded-full w-10 h-10 aspect-square" />
                 <div className="">
-                    <h5 className="font-bold text-sm" style={{color:`${colorScheme?.testimonials.nameColor}`}}>{data?.testimonials?.[0].name}</h5>
-                    <small className="font-medium" style={{color:`${colorScheme?.testimonials.positionColor}`}}>{data?.testimonials?.[0].position}</small>
+                    <h5 className="font-bold text-sm" style={{color:`${colorScheme?.testimonials?.nameColor}`}}>{data?.testimonials?.[0]?.name}</h5>
+                    <small className="font-medium" style={{color:`${colorScheme?.testimonials?.positionColor}`}}>{data?.testimonials?.[0]?.position}</small>
                 </div>
             </div>
           </div>
           
-          <div className={`flex flex-col justify-between p-10 bg-white rounded-xl`} style={{border:`1px solid ${colorScheme?.testimonials.testimonialsCardBorderColor}`}}>
+          <div className={`flex flex-col justify-between p-10 bg-white rounded-xl`} style={{border:`1px solid ${colorScheme?.testimonials?.testimonialsCardBorderColor}`}}>
           <p className="text-[15px]">
-                {data?.testimonials?.[1].text}
+                {data?.testimonials?.[1]?.text}
             </p>
             <div className="flex items-center gap-3 mt-5">
                 <img src={data?.testimonials?.[1]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
                 <div>
-                    <h5 className="font-bold text-sm" style={{color:`${colorScheme?.testimonials.nameColor}`}}>{data?.testimonials?.[1].name}</h5>
-                    <small className="font-medium" style={{color:`${colorScheme?.testimonials.positionColor}`}}>{data?.testimonials?.[1].position}</small>
+                    <h5 className="font-bold text-sm" style={{color:`${colorScheme?.testimonials?.nameColor}`}}>{data?.testimonials?.[1]?.name}</h5>
+                    <small className="font-medium" style={{color:`${colorScheme?.testimonials?.positionColor}`}}>{data?.testimonials?.[1]?.position}</small>
                 </div>
             </div>
           </div>
@@ -167,28 +167,28 @@ export default function SocialProof({data, colorScheme}) {
                 </div>
             </div>
           </div> */}
-          <div className={`  p-10 bg-white rounded-xl`} style={{border:`1px solid  ${colorScheme?.testimonials.testimonialsCardBorderColor}`}}>
+          <div className={`  p-10 bg-white rounded-xl`} style={{border:`1px solid  ${colorScheme?.testimonials?.testimonialsCardBorderColor}`}}>
             <p>
-                {data?.testimonials?.[0].text}
+                {data?.testimonials?.[0]?.text}
             </p>
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[0]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
                 <div>
-                    <h5 className="font-bold text-sm" style={{color:`${colorScheme?.testimonials.nameColor}`}}>{data?.testimonials?.[0].name}</h5>
-                    <small className="font-medium" style={{color:`${colorScheme?.testimonials.positionColor}`}}>{data?.testimonials?.[0].position}</small>
+                    <h5 className="font-bold text-sm" style={{color:`${colorScheme?.testimonials?.nameColor}`}}>{data?.testimonials?.[0]?.name}</h5>
+                    <small className="font-medium" style={{color:`${colorScheme?.testimonials?.positionColor}`}}>{data?.testimonials?.[0]?.position}</small>
                 </div>
             </div>
           </div>
           
-          <div className={` p-10 bg-white rounded-xl`} style={{border:`1px solid ${colorScheme?.testimonials.testimonialsCardBorderColor}`}}>
+          <div className={` p-10 bg-white rounded-xl`} style={{border:`1px solid ${colorScheme?.testimonials?.testimonialsCardBorderColor}`}}>
             <p>
-                {data?.testimonials?.[1].text}
+                {data?.testimonials?.[1]?.text}
             </p>
             <div className="flex items-center gap-3">
                 <img src={data?.testimonials?.[1]?.image?.data?.attributes?.url} alt="" className="rounded-full w-10 h-10 aspect-square" />
                 <div>
-                    <h5 className="font-bold text-sm" style={{color:`${colorScheme?.testimonials.nameColor}`}}>{data?.testimonials?.[1].name}</h5>
-                    <small className="font-medium" style={{color:`${colorScheme?.testimonials.positionColor}`}}>{data?.testimonials?.[1].position}</small>
+                    <h5 className="font-bold text-sm" style={{color:`${colorScheme?.testimonials.nameColor}`}}>{data?.testimonials?.[1]?.name}</h5>
+                    <small className="font-medium" style={{color:`${colorScheme?.testimonials.positionColor}`}}>{data?.testimonials?.[1]?.position}</small>
                 </div>
             </div>
           </div>
