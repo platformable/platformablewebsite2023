@@ -14,8 +14,8 @@ export default function UseCasesPersona({ data, colorScheme }) {
   return (
     <section className="container mx-auto py-10 md:py-14 "style={{background: colorScheme?.personas?.backgroundColor}} >
      <div>
-     <h3 className="font-bold mb-5 leading-10" style={{color: colorScheme?.personas?.mainColor}}>{data?.personaHeading}</h3>
-      <h6 className="">{data?.personaSubheading}</h6>
+     <h2 className="font-bold mb-5 leading-10" style={{color: colorScheme?.personas?.mainColor}}>{data?.personaHeading}</h2>
+      <p className="text-2xl">{data?.personaSubheading}</p>
 
       <div className="grid  grid-flow-col auto-cols-auto overflow-x-auto gap-5 pb-6 mt-10">
         {data?.personaCases?.map((persona,index) => (
