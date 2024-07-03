@@ -19,7 +19,7 @@ export default function Benefits({data}) {
                             className=""/>
                             </div>
                             <p className="font-bold text-base text-[#FAFA62] mt-5">{benefit?.label}</p>
-                            <h4 className="font-bold text-white mt-3">{benefit?.title}</h4>
+                            <h3 className="font-bold text-white mt-3 text-4xl">{benefit?.title}</h3>
                             <p className="px-10 lg:px-20 text-md text-white mt-5">{benefit?.description}</p>
                         </div>
                         ))
