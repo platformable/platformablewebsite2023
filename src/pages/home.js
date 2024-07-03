@@ -11,6 +11,7 @@ import { colorSchemeBySector } from "../../components/prooduct/colorScheme";
 
 export default function Perritos({data}) {
   
+
    
     return (
         <>

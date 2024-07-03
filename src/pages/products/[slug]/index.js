@@ -9,6 +9,7 @@ import CTA from "../../../../components/prooduct/op/CTA";
 import { colorSchemeBySector } from "../../../../components/prooduct/colorScheme";
 
 export default function ProductTemplate({data}) {
+  console.log("data del products", data)
     const sectorsStyle = {
       'Open Banking': {
         bgColor: 'bg--gradient-obof',
@@ -53,8 +54,9 @@ export async function getServerSideProps(ctx) {
     
     try {
       const slug=await ctx.params.slug
+      console.log("slug",slug)
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/ob-products-pages?filter[slug]=${slug}&populate[hero][populate][image]=*&populate[whatsIncluded][populate][whatsIncludedContent]=*&populate[bentoBox][populate][image]=*&populate[personaCases][populate][image]=*&populate[callToAction]=*&populate[testimonials][populate][image]=*&populate[whatsIncluded][populate][image]=*&populate[pricing][populate][price][populate][description]=*&populate[featured_img]=*`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/ob-products-pages?filters[slug]=${slug}&populate[hero][populate][image]=*&populate[whatsIncluded][populate][whatsIncludedContent]=*&populate[bentoBox][populate][image]=*&populate[personaCases][populate][image]=*&populate[callToAction]=*&populate[testimonials][populate][image]=*&populate[whatsIncluded][populate][image]=*&populate[pricing][populate][price][populate][description]=*&populate[featured_img]=*`
       );
       const data = await res.json()
       return {
