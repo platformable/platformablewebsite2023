@@ -29,15 +29,15 @@ export default function UseCasesPersona({ data, colorScheme }) {
         ))}
       </div>
 
-      <div className="flex flex-col md:flex-row md:justify-between md:h-80 mt-10 md:mt-24 gap-10 md:gap-20 2xl:gap-32">
+      <div className="flex flex-col md:flex-row md:justify-between md:h-80 my-10  gap-10 md:gap-20 2xl:gap-32">
         <div className="md:w-3/6">
-          <h2 className="font-bold leading-10" style={{color: colorScheme?.personas?.mainColor}}>{selectedSector?.title}</h2>
+          <h2 className="font-bold leading-10 text-4xl" style={{color: colorScheme?.personas?.mainColor}}>{selectedSector?.title}</h2>
           <p className="text-lg leading-6 mt-8" style={{color: colorScheme?.personas?.textColor}}>{selectedSector?.text}</p>
           <div className="personas-homepage-list">
             <ul className="mt-5 ">
-           {selectedSector ? (
+           {selectedSector && selectedSector.item.length > 0 ? (
             selectedSector?.item?.[0]?.children?.map((item,index)=>{
-             return <li className="flex items-center gap-x-2 my-5" key={index}> <p className="dot p-3 text-white" style={{backgroundColor:colorScheme?.personas?.mainColor}}><CheckIcon/></p>{item?.children[0]?.text}</li>
+             return <li className="flex items-center gap-x-2 my-5" key={index}> <div><p className="dot p-3 text-white" style={{backgroundColor:colorScheme?.personas?.mainColor}}><CheckIcon/></p></div>{item?.children[0]?.text}</li>
             })
            ):''}
            </ul>
