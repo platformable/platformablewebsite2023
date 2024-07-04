@@ -1,7 +1,23 @@
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 export default function Collaborators({data}) {
-    const gapWidth = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--purple'));
-    console.log(gapWidth)
+    const carouselTrackRef = useRef(null)
+    const slideWidth = 50;
+    const gapWidth = 20;
+    const totalWidth = (slideWidth + gapWidth) * data?.collaborators?.collaboratorLogo?.length;
+    const duplicatedTotalWidth = totalWidth * 2;
+    const halfTotalWidth = duplicatedTotalWidth / 2;
+
+    const baseDuration = 40; // secondes | default = 40
+    const baseWidth = 500; // px | default = 5000
+    const scrollDuration = (halfTotalWidth / baseWidth) * baseDuration;
+
+    useEffect(() => {
+        carouselTrackRef.current.style.setProperty('--total-width', `${halfTotalWidth}px`)
+        carouselTrackRef.current.style.setProperty('--scroll-duration', `${scrollDuration}s`)
+
+    }, [])
+
     return (
         <section className="bg-white">
                 <div className="container mx-auto py-6 lg:py-10">
@@ -13,12 +29,12 @@ export default function Collaborators({data}) {
                     </div>
                 </div>
 
-                <div class="carousel" aria-live="polite" aria-label="Image Carousel" className="overflow-hidden w-full">
-                    <div class="carousel-track" className="flex">
-                        {slidesData.map((slide, index) => (
+                <div class="carousel" aria-live="polite" aria-label="Image Carousel" className="container mx-auto ">
+                    <div ref={carouselTrackRef} style={{animation: `scroll ${scrollDuration}s linear infinite;`}} className={`carousel-track flex flex-row gap-5`}>
+                        {[...slidesData, ...slidesData, ...slidesData].map((slide, index) => (
                             <>
-                            <div className="bg-red-500/60">
-
+                            <div  className="slide overflow-hidden rounded-lg w-full aspect-video bg-red-500/60">
+                                {index}
                             </div>
                             </>
                         ))}
