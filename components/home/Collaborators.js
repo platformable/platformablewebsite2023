@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 export default function Collaborators({data}) {
+   
     return (
         <section className="bg-white">
                 <div className="container mx-auto py-6 lg:py-10">
@@ -10,6 +12,9 @@ export default function Collaborators({data}) {
                         ))}
                     </div>
                 </div>
+
+                
             </section>
     );
 }
+
