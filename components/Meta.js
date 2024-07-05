@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const Meta = ({ title, keywords, data }) => {
+  console.log("meta", data)
 
 
   const router = useRouter();
