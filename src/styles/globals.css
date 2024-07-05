@@ -3873,16 +3873,4 @@ border-radius:50%;
 padding:"10px"
   } */
 
-  .carousel-track {
-    display: flex;
-    animation: scroll var(--scroll-duration) linear infinite;
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-1 * var(--total-width)));
-    }
-  }
+ 
