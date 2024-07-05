@@ -154,6 +154,7 @@ useEffect(()=>{
               <div className="flex items-center gap-x-3">
                 <a
                 target="_blank"
+                onClick={(e) => e.preventDefault()}
                   href={`mailto:?subject=${
                     data.slug
                   }!&body=${`${data?.excerpt?.replace(/(<([^>]+)>)/gi, "") +` - https://www.platformable.com/blog/${data?.slug}`}`}`}
