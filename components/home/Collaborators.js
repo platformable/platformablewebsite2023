@@ -31,7 +31,7 @@ export default function Collaborators({data}) {
     }, []);
 
     useEffect(() => {
-        if (currentIndex === logos.length) {
+        if (currentIndex === (logos.length) / 2) {
           setTimeout(() => {
             setIsTransitioning(false);
             setCurrentIndex(0);
@@ -51,7 +51,7 @@ export default function Collaborators({data}) {
                     <div
                          className={`${styles.slider} ${isTransitioning ? styles.transition : ''}`}
                          style={{
-                           transform: `translateX(-${(currentIndex * 100) / logos.length}%)`,
+                           transform: `translateX(-${2*((currentIndex * 100) / logos.length)}%)`,
                          }}
                     >
                         {logos.map((logo, index) => (
