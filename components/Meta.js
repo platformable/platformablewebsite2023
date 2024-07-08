@@ -49,6 +49,8 @@ const Meta = ({ title, keywords, data }) => {
           "https://res.cloudinary.com/platformable/image/upload/v1692982725/platformablewebsite2023/value_model_1280x720_ae8a224428.png"
         }
       />
+      <meta property="og:image:alt" content="description"></meta>
+      <meta property="og:image:type" content="image/jpeg"></meta>
       <meta
         property="og:image:secure_url"
         content={
