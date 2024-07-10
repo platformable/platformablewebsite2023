@@ -46,7 +46,7 @@ export const colorSchemeBySector = {
             subheadingTextColor: '#fff',
             descriptionTextColor: '#fff',
             mainColor: '#6A39EE',
-            primaryCallToActionBgColor: '#FF9D02',
+            primaryCallToActionBgColor: '#5E2AED',
             primaryCallToActionTextColor: '#fff',
             primaryCallToActionBorderColor: 'transparent',
             secondaryCallToActionBgColor: 'transparent',
