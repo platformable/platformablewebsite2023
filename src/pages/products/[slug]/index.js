@@ -9,6 +9,8 @@ import CTA from "../../../../components/prooduct/op/CTA";
 import { colorSchemeBySector } from "../../../../components/prooduct/colorScheme";
 
 export default function ProductTemplate({data}) {
+
+  console.log("data",data)
   
     const sectorsStyle = {
       'Open Banking': {
@@ -38,7 +40,10 @@ export default function ProductTemplate({data}) {
         <Meta title={data?.hero?.SeoKeyword} keywords={'open banking open finance trends reports, open health, open ecosystems, fintech APIs, financial inclusion'} data={data}/>
         <Layout>
             <Hero data={data} colorScheme={colorSchemeBySector[data?.sector]}/>
-            <SocialProof data={data} colorScheme={colorSchemeBySector[data?.sector]}/>
+            
+            {data?.testimonials[0]?.name ===''  ||
+            data?.testimonials[0]?.name ===null
+            ?'':<SocialProof data={data} colorScheme={colorSchemeBySector[data?.sector]}/>}
 
             
             <WhatsIncluded data={data} colorScheme={colorSchemeBySector[data?.sector]}/>
