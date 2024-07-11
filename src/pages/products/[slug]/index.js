@@ -47,8 +47,8 @@ export default function ProductTemplate({data}) {
 
             
             <WhatsIncluded data={data} colorScheme={colorSchemeBySector[data?.sector]}/>
-            <Benefits data={data} colorScheme={colorSchemeBySector[data?.sector]}/>
-            <UseCasesPersona data={data} colorScheme={colorSchemeBySector[data?.sector]}/>
+            {data?.benefitsHeading && <Benefits data={data} colorScheme={colorSchemeBySector[data?.sector]}/>}
+          {data?.personaHeading && <UseCasesPersona data={data} colorScheme={colorSchemeBySector[data?.sector]}/> }  
             <CTA data={data} colorScheme={colorSchemeBySector[data?.sector]}/>  
         </Layout>
         </>
