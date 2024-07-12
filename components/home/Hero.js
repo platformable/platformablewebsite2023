@@ -5,7 +5,7 @@ export default function Hero({data}) {
       <div className="container mx-auto grid lg:grid-cols-2 gap-y-5 lg:gap-x-10" >
         <article>
         <h1 className={`text-lg mb-3  font-bold`} style={{color:data.hero[0]?.headingColor}}>{data?.hero[0]?.SeoKeyword}</h1>
-            <h2 className="font-bold mb-5 leading-10" style={{color:data?.hero[0]?.BigHeadlineTextColor}}>
+            <h2 className="font-bold mb-5 leading-tight" style={{color:data?.hero[0]?.BigHeadlineTextColor}}>
             {data?.hero[0]?.bigHeadline}
             </h2>
             <p className="text-2xl" style={{color: data?.hero[0]?.subHeadlineTextColor}}>
