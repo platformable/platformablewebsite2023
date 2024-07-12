@@ -51,7 +51,7 @@ export default function Collaborators({data}) {
                     <div
                          className={`${styles.slider} ${isTransitioning ? styles.transition : ''}`}
                          style={{
-                           transform: `translateX(-${2*((currentIndex * 100) / logos.length)}%)`,
+                           transform: `translateX(-${1.75*((currentIndex * 100) / logos.length)}%)`,
                          }}
                     >
                         {logos.map((logo, index) => (

@@ -1,3 +1,4 @@
+import CheckIcon from "../../CheckIcon";
 
 export default function CTA({data, colorScheme}) {
     return (
@@ -16,10 +17,10 @@ export default function CTA({data, colorScheme}) {
                     <span className="text-5xl font-bold" style={{color: colorScheme?.pricing?.mainColor}}>{data?.pricing?.price?.[0]?.price}</span><span className=" text-3xl font-bold"> / per year</span>
                     </p>
                     <div className="rounded-full px-3 md:px-6 py-2 text-[#6A39EE]" style={{backgroundColor: colorScheme?.pricing?.backgroundColor, color: colorScheme?.pricing?.mainColor}}>{data?.pricing?.price?.[0]?.discountText}</div>
-                    <ul id="product-itemss" className="list-style-none grid gap-4 ">
+                    <ul id="product-items" className="list-style-none grid gap-4 ">
                         {data?.pricing?.price?.[0]?.description?.map((item, index) => (
                             <li className="text-base py-3 flex gap-x-5 items-center" key={index}>
-                                <img src="/icon_CTA.svg" alt="" />
+                                <CheckIcon />
                                 {item?.list_card_description_options}
                             </li>
                         ))}
