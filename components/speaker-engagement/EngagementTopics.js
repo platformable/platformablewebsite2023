@@ -38,7 +38,9 @@ export default function EngagementTopics({ topics }) {
         ))}
       </div>
       <div className="container mx-auto flex flex-col justify-center gap-y-1 px-16 lg:flex lg:flex-row mt-14">
-        {topics.services.slice(3, 7).map((topic, index) => (
+        {topics.services.slice(3, 7).map((topic, index) => {
+          console.log(topic)
+        return  (
           <div
             className={`xl:px-14 text-white flex flex-1 flex-col items-center mb-16 md:gap-3`}
             key={index}
@@ -48,6 +50,7 @@ export default function EngagementTopics({ topics }) {
               width={100}
               height={38}
               className="mb-2"
+              alt={topic?.service_img?.data?.attributes?.alternativeText}
             />
             <p
               className={`px-10 md:px-44 lg:px-8 xl:px-0 text-center text-base`}
@@ -55,7 +58,7 @@ export default function EngagementTopics({ topics }) {
               {topic?.service}
             </p>
           </div>
-        ))}
+        )})}
       </div>
       <div
         className={`md:mt-4 md:p-5 hidden sm:block sm:mt-[-10px] sm:flex sm:p-3 sm:w-10/12 h-24 lg:w-10/12 mx-auto bg-white text-white md:w-11/12 lg:mt-10 lg:flex xl:w-8/12 items-center gap-x-3`}
@@ -65,6 +68,7 @@ export default function EngagementTopics({ topics }) {
           width={74}
           height={20}
           className="p-3 ml-2"
+          alt='didnt find'
         />
         <p className="text-customBlue font-bold md:w-8/12 lg:w-9/12 sm:text-sm lg:text-base xl:text-lg">
           {topics?.topics_contact_description}

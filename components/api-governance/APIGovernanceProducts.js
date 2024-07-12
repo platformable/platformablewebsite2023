@@ -89,7 +89,7 @@ export default function GovernanceProducts({ products }) {
           ))}
           <div className="grid grid-cols-[1.5fr_2fr_1fr_1fr] bg-white py-7">
             <div className="px-7 col-start-1 col-end-4 text-[#3328C3]  flex items-center gap-x-5">
-              <img src="/didnt_find.png" alt="dataset blank icon" />
+              <img src="/didnt_find.png" alt="dataset blank icon"/>
               <div className="">
                 <h5 className="mb-1 font-bold">
                   {"Didn't find the product you were looking for ?"}
