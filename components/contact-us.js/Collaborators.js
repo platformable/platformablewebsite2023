@@ -15,7 +15,7 @@ import styles from '@/styles/LogoSlider.module.css';
 //     '/logo10.png',
 //   ];
 export default function Collaborators({data}) {
-    const logos = [...data.collaborators?.collaboratorLogo, ...data.collaborators?.collaboratorLogo.slice(0,5)]
+    const logos = [...data?.collaborators, ...data.collaborators?.slice(0,5)]
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
     const intervalRef = useRef(null);
@@ -41,7 +41,7 @@ export default function Collaborators({data}) {
     return (
         <section className="bg-white">
                 <div className="container mx-auto py-6 lg:py-10">
-                    <h2 className="text-xl font-bold text-[#FD27FF] text-center mb-14">{data?.collaborators?.heading}</h2>
+                    <h2 className="text-xl font-bold text-[#FD27FF] text-center mb-14">WE HAVE WORKED WITH</h2>
                     {/* <div className="grid grid-cols-2 items-center justify-between  lg:gap-0 lg:grid-cols-7 mt-5 lg:mt-8">
                         {data?.collaborators?.collaboratorLogo?.map((img, index) => (
                             <center key={index}><img  src={img.collaborator_img?.data?.attributes?.url} alt={'logo'} className="object-fill p-0 m-0" width={140} height={300}/></center>
