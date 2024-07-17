@@ -14,9 +14,9 @@ export default function VerticalDescriptionCard({ card, position }) {
   ];
 
   const cardUrl = [
-    { iconUrl: "/home-Open-Ecosystems-icon.svg" },
-    { iconUrl: "/home-open-banking-icon.svg" },
-    { iconUrl: "/open_health_white.svg" },
+    { iconUrl: "/home-Open-Ecosystems-icon.svg",alt:"Open-Ecosystems-icon" },
+    { iconUrl: "/home-open-banking-icon.svg",alt:'open-banking-icon' },
+    { iconUrl: "/open_health_white.svg",alt:'open_health_icon' },
   ];
 
   return (
@@ -26,7 +26,7 @@ export default function VerticalDescriptionCard({ card, position }) {
       }`}
     >
       <div className="flex justify-start items-center mb-7 gap-x-2">
-        <img src={cardUrl[position - 1].iconUrl} />
+        <img src={cardUrl[position - 1].iconUrl} alt={cardUrl[position - 1].alt}/>
         <h6 className="font-bold text-white">
           {vertical_description_card_title}
         </h6>
