@@ -53,7 +53,7 @@ export default function index({ data }) {
                         searchFunction(e.target.value.toLowerCase())
                       }
                       id="default-search"
-                      className="block px-4 py-2 pr-9 w-1/2 text-lg border text-black rounded-lg border-4  text-black "
+                      className="block px-4 py-2 pr-9 w-1/2 text-lg border text-black rounded-lg border-black border-2  text-black "
                       defaultValue=""
                       required
                     />
@@ -82,7 +82,7 @@ export default function index({ data }) {
           </div>
 
           {/* <ResourcesSearch posts={posts} draft={false}/> */}
-          <ul className="mt-20 mb-5">
+          <ul className="mt-14 mb-5">
             {data.length > 0 ?
             (data?.filter((post, index) => {
                 if (searchWord === "") {
@@ -102,7 +102,7 @@ export default function index({ data }) {
                   return (
                     <li className="my-5" key={index}>
                       <Link href={`/help-guide/${guide?.attributes?.slug}`}>
-                        <p className="text-[#3425C9]">
+                        <p className="text-[#3425C9] font-bold">
                           {index + 1}.- {guide?.attributes?.title}
                         </p>
                         <div
