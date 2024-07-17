@@ -112,9 +112,9 @@ export default function BlogPage({ data }) {
     <Layout>
       <Meta title={data?.title} data={data} />
 
-      <section className="blog-container">
+      <section className="blog-container py-10">
         <div
-          className={`bg--gradient-oe blog-header`}
+          className={`bg-[#3425C9] blog-header`}
         >
           <div className="container mx-auto md:flex block justify-between items-center py-10">
             <h3 className="font-bold text-white">
@@ -140,17 +140,7 @@ export default function BlogPage({ data }) {
                 </h5>
               </div>
               <div className="items-center flex gap-x-7 gap-y-7 md:mt-0 mt-5">
-                <div className="flex items-center gap-x-2">
-                  <img src="/clockl.svg" alt="watch" />
-                  <span className="font-bold text-[#2B30C1]">
-                    {calculateTimeToRead(
-                      data.content
-                        ? [data.content]
-                        : [data.act_content_1, data.act_content_2]
-                    )}{" "}
-                    min read
-                  </span>
-                </div>
+         
                 <div className="flex items-center gap-x-3">
                {/*    <a
                     target="_blank"
