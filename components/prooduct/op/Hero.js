@@ -1,5 +1,3 @@
-'use client'
-import styles from "@/styles/OBOFTrendsReportspage.module.css";
 import Image from "next/image";
 
 export default function Hero({data, colorScheme}) {

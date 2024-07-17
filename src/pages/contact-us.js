@@ -1,12 +1,10 @@
 import Layout from "../../components/Layout";
-import styles from "@/styles/ContactUspage.module.css";
 import Meta from "../../components/Meta";
-import { InlineWidget } from "react-calendly";
 import React, { useState } from "react";
-import WaintingListForm from "../../components/contact-us.js/WaintingListForm";
-import SendMessageForm from "../../components/contact-us.js/SendMessageForm";
-
-export default function ContactUs({ data, posts }) {
+import Hero from "../../components/contact-us.js/Hero";
+import Link from "next/link";
+import Collaborators from "../../components/contact-us.js/Collaborators";
+export default function ContactUs({ data }) {
     const metaData = {
       excerpt: 'Platformable contact section is public and open',
       keywords: 'platformable, data, api, open ecosystems, open banking, open finance, open health'
@@ -20,7 +18,23 @@ export default function ContactUs({ data, posts }) {
     <Layout>
       <Meta title={'Contact us'} data={metaData} />
       <section className={`bg-[#7D43FF]`}>
-        <div className="text-white container mx-auto pt-10 pb-16">
+        <Hero data={data} />
+        <div className=" grid lg:grid-cols-3 gap-y-10 lg:divide-x divide-[#FD27FF] bg-[#6f3df4] py-14">
+                {data?.contactOptions?.map((option, index) => (
+                     <div className="px-5 md:px-10 py-3 text-center flex flex-col items-center" key={index}>
+                     <h2 className="text-white text-2xl font-bold my-4">{option?.label}</h2>
+                     <div className="font-medium text-white mb-8">{option?.description}</div>
+                      <Link href={option.clickHereUrl} className="mt-auto" target="_blank">
+                      <button className="text-white rounded-lg py-2 px-6  bg-[#FD27FF]" style={{}}>
+                        {option?.buttonText}
+                      </button>
+                      </Link>
+                 </div>
+                ))}   
+
+           </div>
+           <Collaborators data={data} />
+        {/* <div className="text-white container mx-auto pt-10 pb-16">
           <h1 className="mb-5 font-bold">{data?.title || "Contact us"}</h1>
           <div className="wrapper grid lg:grid-cols-[1fr_1fr_1fr] grid-cols-1">
            
@@ -34,44 +48,38 @@ export default function ContactUs({ data, posts }) {
               </h6>
               <InlineWidget url="https://calendly.com/platformable" />
             </div>
-          </div>
-          {/* <section className="flex justify-center py-14">
+          </div> 
+           <section className="flex justify-center py-14">
           <iframe src="https://platformable.substack.com/embed" width="480" height="320" ></iframe>
 
-          </section> */}
-        </div>
+          </section>
+        </div>*/}
       </section>
     </Layout>
   );
 }
 
-// export async function getServerSideProps(ctx) {
-//   try {
-//   /*   const res = await fetch(
-//       `${process.env.NEXT_PUBLIC_SERVER_URL}/api/engage?populate=*`
-//     );
-//     const data = await res.json(); */
+export async function getServerSideProps(ctx) {
+  try {
+  
 
-//     const [data, posts] = await Promise.all([
-//       fetch(
-//         `${process.env.NEXT_PUBLIC_SERVER_URL}/api/engage?populate=*`
-//       ).then((res) => res.json()),
-//       fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/posts?populate=*`).then(
-//         (res) => res.json()),
-//     ]);
+    const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/contact?populate[hero][populate][image]=*&populate[contactOptions]=*&populate[collaborators][populate][collaborator_img]=*`
+      )
+    const data = await res.json()
+     
 
-//     return {
-//       props: {
-//         data: data?.data?.attributes,
-//         posts: posts?.data,
-//       },
-//     };
+    return {
+      props: {
+        data: data?.data?.attributes,
+      },
+    };
 
-//   } catch (error) {
-//     return {
-//       props: {
-//         data: "No Data",
-//       },
-//     };
-//   }
-// }
+  } catch (error) {
+    return {
+      props: {
+        data: "No Data",
+      },
+    };
+  }
+}
