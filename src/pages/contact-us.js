@@ -19,7 +19,7 @@ export default function ContactUs({ data }) {
       <Meta title={'Contact us'} data={metaData} />
       <section className={`bg-[#7D43FF]`}>
         <Hero data={data} />
-        <div className=" grid lg:grid-cols-3 gap-y-10 lg:divide-x divide-[#FD27FF] bg-[#6f3df4] py-14">
+        <div className=" grid lg:grid-cols-3 gap-y-10 lg:divide-x divide-[#FD27FF] bg-[#4D21DD] py-14">
                 {data?.contactOptions?.map((option, index) => (
                      <div className="px-5 md:px-10 py-3 text-center flex flex-col items-center" key={index}>
                      <h2 className="text-white text-2xl font-bold my-4">{option?.label}</h2>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function Hero({data}) {
     return (
-        <section id="new-hero-home" className="bg-[url('/Untitled.svg')] bg-cover relative overflow-hidden pt-14 md:pt-20 pb-24">
+        <section id="new-hero-home" className="bg-[url('/radial-pattern.svg')] bg-cover relative overflow-hidden pt-14 md:pt-20  ">
       <div className="container mx-auto grid lg:grid-cols-2 gap-y-5 lg:gap-x-10" >
         <article>
         <h1 className={`text-lg mb-3  font-bold`} style={{color:data.hero?.headingColor}}>{data?.hero?.SeoKeyword}</h1>
