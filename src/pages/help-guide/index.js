@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Meta from "../../../components/Meta";
 import Layout from "../../../components/Layout";
 import Link from "next/link";
 import Search from "../../../components/Search";
 
-export default function index({ data }) {
+export default function HelpGuide({ data }) {
   const metaData = {
     excerpt:
       "Stay updated with the latest trends and insights on open data, APIs, and ecosystem innovation.",
