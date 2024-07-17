@@ -9,7 +9,7 @@ import Products from "../../components/home/Products";
 import { colorSchemeBySector } from "../../components/prooduct/colorScheme";
 
 
-export default function Perritos({data}) {
+export default function Homepage({data}) {
   
 
    
