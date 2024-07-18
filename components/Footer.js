@@ -179,7 +179,7 @@ export default function Footer() {
         // style={{ backgroundColor: "var(--purple-medium)" }}
         className={`${style["bg-footer"]}  mx-auto text-white pt-11 pb-8 px-4 lg:flex lg:gap-2 justify-center items-start`}
       >
-        <div className="grid xl:gap-14 pt-6 lg:pt-0">
+        <div className="grid gap-4 xl:gap-8 pt-6 lg:pt-0">
           <Link href="/">
             <Image
               className="text-center"
@@ -267,7 +267,7 @@ export default function Footer() {
               </p>
             ) : (
               <div
-                className={`flex flex-col mx-auto w-11/12 md:w-5/12 xl:contents`}
+                className={`flex flex-col`}
               >
                 <label htmlFor="email" className="text-white mb-1  md:ml-1 lg:ml-0 text-[12px]">
                   Enter your email
