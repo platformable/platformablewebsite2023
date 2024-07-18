@@ -17,7 +17,7 @@ export default function Hero({data}) {
 
         </article>
       
-        <div className="flex flex-col md:flex-row  gap-14 justify-center mt-16">
+        {/* <div className="flex flex-col md:flex-row  gap-14 justify-center mt-16">
           
           {data?.partnerType?.map((partner, index) => (
               <div className="grid basis-1/3" key={index}>
@@ -39,7 +39,7 @@ export default function Hero({data}) {
               </div>
           ))}
           
-        </div>
+        </div> */}
        
         
         
