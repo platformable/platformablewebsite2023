@@ -7,7 +7,7 @@ import Search from "../../../components/Search";
 export default function HelpGuide({ data }) {
   const metaData = {
     excerpt:
-      "Stay updated with the latest trends and insights on open data, APIs, and ecosystem innovation.",
+      "Explore the comprehensive Help Guide at Platformable. Find detailed instructions, FAQs, and support resources to make the most out of our platform.",
   };
 
 
@@ -19,7 +19,7 @@ export default function HelpGuide({ data }) {
 
   return (
     <Layout>
-      <Meta title="Platformable Blog" data={metaData} />
+      <Meta title="Help Guide | Platformable" data={metaData} />
       <section id="blog" className={`py-10 `}>
         <div className={`bg-[#3425C9] blog-header`}>
           <div className="container mx-auto md:flex block justify-between items-center py-10">
