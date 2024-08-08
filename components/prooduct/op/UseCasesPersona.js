@@ -3,7 +3,7 @@ import CheckIcon from "../../CheckIcon";
 
 export default function UseCasesPersona({ data, colorScheme }) {
   const [selectedSector, setSelectedSector] = useState("");
-
+console.log("product page hoy", data)
   const chooseSector = (category) =>
     data?.personaCases
       ? data?.bentoBox?.find((i) => i.label === selectedSector)
@@ -37,7 +37,10 @@ export default function UseCasesPersona({ data, colorScheme }) {
             <ul className="mt-5 list-style-none flex flex-col gap-6">
            {selectedSector && selectedSector?.item?.length > 0 ? (
             selectedSector?.item?.[0]?.children?.map((item,index)=>{
-             return <li className="flex items-center gap-x-3 " key={index}> <CheckIcon/>{item?.children[0]?.text}</li>
+              console.log("selected sector", selectedSector)
+              if (item?.children?.length > 0) {
+                return <li className="flex items-center gap-x-3 " key={index}> <CheckIcon/>{item?.children[0]?.text}</li>
+              }
             })
            ):''}
            </ul>
