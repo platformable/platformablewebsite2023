@@ -16,7 +16,7 @@ export default function FindMore({ sectors }) {
           >
             <div className="grid grid-rows-[1fr_1.5fr_1fr] gap-y-10 mb-10">
               <div className="flex gap-5 items-center">
-                <img src={sector?.icon?.data?.attributes?.url} alt="" />
+                <img src={sector?.icon?.data?.attributes?.url} alt={sector?.icon?.data?.attributes?.alternativeText} />
                 <h2 className="font-bold text-[var(--purple-medium)]">
                   {sector?.title}
                 </h2>
@@ -39,7 +39,7 @@ export default function FindMore({ sectors }) {
             <img
               className={``}
               src={sector?.image?.data?.attributes?.url}
-              alt=""
+              alt={sector?.image?.data?.attributes?.alternativeText}
             />
           </div>
         ))}

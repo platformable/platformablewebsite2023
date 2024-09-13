@@ -6,7 +6,7 @@ export default function PrivacyPolicy({ data }) {
     <>
       <div className="container mx-auto py-16 grid gap-10">
         <div className="flex gap-5">
-          <img src="/icon_section_black.svg" alt="" />
+          <img src="/icon_section_black.svg" alt="Platformable logo" />
           <h4 className="font-bold">Our Privacy Policy</h4>
         </div>
         <p className="">

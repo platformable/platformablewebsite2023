@@ -8,7 +8,7 @@ export default function OurProcess({ data }) {
         <div className="flex gap-x-5 items-center  mb-10">
           <img
             src="/icon_section01.svg"
-            alt=""
+            alt="Platformable logo"
             className="md:flex hidden"
           />
           <h3
@@ -35,7 +35,7 @@ export default function OurProcess({ data }) {
             <div className="grid md:grid-cols-3 gap-y-7 gap-x-7">
 
                  {data?.discovery_images?.data?.map((img,index) => (
-                  <img src={img.attributes.url} alt="" className="" key={index}/>
+                  <img src={img.attributes.url} alt={img.attributes.alternativeText} className="" key={index}/>
                  )
                 )} 
                 
@@ -51,10 +51,10 @@ export default function OurProcess({ data }) {
             </div>
             </div>
             <div className="grid grid-cols-1 gap-y-3">
-              <img src={data?.scope_img1?.data.attributes.url} alt=""></img>
+              <img src={data?.scope_img1?.data.attributes.url} alt={data?.scope_img1?.data.attributes.alternativeText}></img>
               <div className="grid md:grid-cols-2 grid-cols-1 gap-4 justify-between">
-              <img src={data?.scope_img2?.data.attributes.url} alt=""></img>
-              <img src={data?.scope_img3?.data[0].attributes.url} alt="" width="98.5%"></img>
+              <img src={data?.scope_img2?.data.attributes.url} alt={data?.scope_img2?.data.attributes.alternativeText}></img>
+              <img src={data?.scope_img3?.data[0].attributes.url} alt={data?.scope_img3?.data[0].attributes.alternativeText} width="98.5%"></img>
 
               </div>
             </div>

@@ -249,7 +249,7 @@ useEffect(()=>{
             onClick={previousPostButton}
             disabled={previousPost ? false : true}
           >
-            <img src="/left_arrow.svg" alt="" />
+            <img src="/left_arrow.svg" alt="left arrow icon" />
           </button>
           <p>Related article</p>
           <button
@@ -257,7 +257,7 @@ useEffect(()=>{
             onClick={nextPostButton}
             disabled={nextPost ? false : true}
           >
-            <img src="/icon_aroow.svg" alt="" />
+            <img src="/icon_aroow.svg" alt="right arrow icon" />
           </button>
         </div>
 

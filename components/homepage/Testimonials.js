@@ -31,7 +31,7 @@ export default function Testimonials({ data, title, logos }) {
         <div className="flex gap-x-5 items-center ">
           <img
             src="/platformable-icon-purple.svg"
-            alt=""
+            alt="Platformable logo"
             className="md:flex hidden"
           />
           <h2 className={`text-[#5B24EC]  font-bold  md:leading-10 leading-8`}>
@@ -57,13 +57,13 @@ export default function Testimonials({ data, title, logos }) {
                   className="rounded-2xl bg-white shadow-xl grid grid-rows-[3fr_0.8fr] content-between"
                   key={index}
                 >
-                  <div className="px-7 pt-7 flex flex-col gap-4 md:flex-row items-center rounded-t-2xl">
+                  <div className="px-7  flex flex-col gap-8 md:flex-row items-center rounded-t-2xl">
                     <div className="">
-                      <img
+                      {/* <img
                         src={testimonial.testimonials_img.data.attributes.url}
-                        alt=""
+                        alt={testimonial.testimonials_img.data.attributes.alternativeText}
                         className="place-center"
-                      />
+                      /> */}
                       <div
                         dangerouslySetInnerHTML={{
                           __html: testimonial.testimonials_text,
@@ -76,6 +76,7 @@ export default function Testimonials({ data, title, logos }) {
                       src={
                         "/APIToS_logo.png"
                       }
+                      alt="APITos logo"
                       className=""
                     />
                   </div>

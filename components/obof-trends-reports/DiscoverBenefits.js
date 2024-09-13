@@ -24,7 +24,7 @@ export default function DiscoverBenefits({ data, sectorsStyle }) {
             </h5>
 
             <div className="flex justify-center mt-10">
-              <img src={persona.persona_image?.data?.attributes.url} alt="" />
+              <img src={persona.persona_image?.data?.attributes.url} alt={persona.persona_image?.data?.attributes.alternativeText} />
             </div>
 
             <h6 className="text-[#3425C9] font-bold my-10">Tailored for:</h6>

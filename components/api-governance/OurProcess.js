@@ -7,7 +7,7 @@ export default function OurProcess({ data }) {
         <div className="flex gap-x-5 items-center  mb-10">
           <img
              src="/platformable-icon-purple-dark.png"
-            alt=""
+            alt="Platformable logo"
             className="md:flex hidden"
           />
           <h3
@@ -23,7 +23,7 @@ export default function OurProcess({ data }) {
           className="text-[#3B27CE]"
         />
         <div className=" rounded ">
-        <img src={data?.diagram?.data?.attributes?.url} alt="" />
+        <img src={data?.diagram?.data?.attributes?.url} alt={data?.diagram?.data?.attributes?.alternativeText}/>
         </div>
       </div>
     </section>
