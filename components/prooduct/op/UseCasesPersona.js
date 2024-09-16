@@ -3,7 +3,6 @@ import CheckIcon from "../../CheckIcon";
 
 export default function UseCasesPersona({ data, colorScheme }) {
   const [selectedSector, setSelectedSector] = useState("");
-console.log("product page hoy", data)
   const chooseSector = (category) =>
     data?.personaCases
       ? data?.bentoBox?.find((i) => i.label === selectedSector)

@@ -25,7 +25,7 @@ export default function ActionableInformation({data, sectorsStyle}) {
           <p className="text-white font-bold text-center ">{card?.title}</p>
 
           <div className="text-center flex justify-center">
-            <img src={card?.image?.data?.attributes?.url} alt="" className="text-center" />
+            <img src={card?.image?.data?.attributes?.url} alt={card?.image?.data?.attributes?.alternativeText} className="text-center" />
           </div>
 
           <p className="leading-6 text-white text-center">

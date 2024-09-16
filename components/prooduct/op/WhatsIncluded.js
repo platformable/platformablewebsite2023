@@ -11,7 +11,7 @@ export default function WhatsIncluded({data, colorScheme}) {
         </h2>
         <section className="grid md:grid-cols-[1fr_3fr] gap-5 mt-8 md:mt-14">
         <div className="rounded-xl   md:h-full flex items-center">
-            <img src={data?.whatsIncluded?.image?.data?.attributes?.url} alt="" />
+            <img src={data?.whatsIncluded?.image?.data?.attributes?.url} alt={data?.whatsIncluded?.image?.data?.attributes?.alternativeText} />
           </div>
 
           <section className="px-5 pb-5">

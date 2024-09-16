@@ -58,10 +58,10 @@ export default function Hero({data}) {
               NEW <br /> version <br />{" "}
               <span className="font-medium">PDF+CSV</span>🚀
             </div>
-            <img src={data?.hero_images?.data[2]?.attributes?.url} alt="" className="w-auto" />
+            <img src={data?.hero_images?.data[2]?.attributes?.url} alt={data?.hero_images?.data[2]?.attributes?.alternativeText} className="w-auto" />
           </div>
           <div className={`item next p-10`}>
-            <img src={data?.hero_images?.data[0]?.attributes?.url} alt="" />
+            <img src={data?.hero_images?.data[0]?.attributes?.url} alt={data?.hero_images?.data[0]?.attributes?.alternativeText}/>
           </div>
           {/* <div className={`item`}>
             <img src="http://via.placeholder.com/500x500" alt="" />
@@ -70,7 +70,7 @@ export default function Hero({data}) {
             <img src="http://via.placeholder.com/500x500" alt="" />
           </div> */}
           <div className={`item prev p-10`}>
-            <img src={data?.hero_images?.data[1]?.attributes?.url} alt="" />
+            <img src={data?.hero_images?.data[1]?.attributes?.url} alt={data?.hero_images?.data[1]?.attributes?.alternativeText} />
           </div>
           <div className={`buttonContainer`}>
             <div className={`button`} onClick={gotoPrev}>

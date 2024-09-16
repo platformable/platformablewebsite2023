@@ -10,7 +10,7 @@ import { colorSchemeBySector } from "../../../../components/prooduct/colorScheme
 
 export default function ProductTemplate({data}) {
 
-  console.log("data",data)
+  console.log("product data",data)
   
     const sectorsStyle = {
       'Open Banking': {

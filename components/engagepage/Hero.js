@@ -16,12 +16,12 @@ export default function Hero({ data }) {
 
           <div className="flex flex-col lg:grid lg:grid-cols-[4fr_1fr_4fr] xl:gap-x-20 items-center gap-10 mb-2">
             <div className="flex gap-x-7 items-center">
-              <img src={data?.subtitle1_img?.data?.attributes.url} alt="" />
+              <img src={data?.subtitle1_img?.data?.attributes.url} alt={data?.subtitle1_img?.data?.attributes.alternativeText} />
               <p>{data?.subtitle1_text}</p>
             </div>
             <p className="text-center">OR</p>
             <div className="flex gap-x-7 items-center">
-              <img src={data?.subtitle2_img?.data?.attributes.url} alt="" />
+              <img src={data?.subtitle2_img?.data?.attributes.url} alt={data?.subtitle2_img?.data?.attributes.alternativeText}/>
               <p>{data?.subtitle2_text}</p>
             </div>
           </div>

@@ -185,7 +185,7 @@ export default function ResourcesSearch({ posts, heading, draft }) {
 
                     <div className="flex justify-between my-5">
                       <div className="flex gap-x-5 items-center">
-                        <img src="/platformable-icon-purple-dark.png" alt="" />
+                        <img src="/platformable-icon-purple-dark.png" alt="Platformable logo" />
                         <p className="text-[#3524C6] font-bold">
                           {
                             featuredPost?.attributes.category.data.attributes
@@ -194,7 +194,7 @@ export default function ResourcesSearch({ posts, heading, draft }) {
                         </p>
                       </div>
                       <div className="flex items-center gap-x-3">
-                        <img src="/clockl.svg" alt="" />
+                        <img src="/clockl.svg" alt="clock icon" />
                         <p className="text-[#3524C6] font-bold">
                           {calculateTimeToRead(
                             featuredPost?.attributes.content
@@ -209,7 +209,10 @@ export default function ResourcesSearch({ posts, heading, draft }) {
                         featuredPost?.attributes.featured_img?.data?.attributes
                           ?.url
                       }
-                      alt=""
+                      alt={
+                        featuredPost?.attributes.featured_img?.data?.attributes
+                          ?.alternativeText
+                      }
                     />
                   </div>
                 </div>

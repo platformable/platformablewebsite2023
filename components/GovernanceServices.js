@@ -13,7 +13,7 @@ export default function GovernanceServices({ description, services }) {
         <div className="flex flex-wrap gap-y-16 justify-center">
           {services?.map((service, i) => (
             <div className="flex w-2/6 px-7 flex-col gap-6 items-center justify-start" key={i}>
-              <img src={service.service_img.data.attributes.url} alt="Data Governance service icon"/>
+              <img src={service.service_img.data.attributes.url} alt={service.service_img.data.attributes.alternativeText}/>
               <p className="text-white text-center">{service.service}</p>
             </div>
           ))}

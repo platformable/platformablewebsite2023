@@ -18,7 +18,7 @@ export default function Team({ data,styles }) {
          return  (
           <div key={index} className="w-full md:w-1/4 px-4 ">
             <div className="card">
-              <img src={member.attributes.url} alt="" key={index} />
+              <img src={member.attributes.url} alt={member.attributes.alternativeText} key={index} />
             </div>
           </div>
         )} else {null}
@@ -34,7 +34,7 @@ export default function Team({ data,styles }) {
          return  (
           <div key={index} className="w-full md:w-1/4 px-4 ">
             <div className="card">
-              <img src={member.attributes.url} alt="" key={index} />
+              <img src={member.attributes.url} alt={member.attributes.alternativeText} key={index} />
             </div>
           </div>
         )} else {null}

@@ -49,7 +49,7 @@ export default function GovernanceProducts({ products }) {
               >
                 <img
                   src={card?.product_icon?.data?.attributes?.url}
-                  alt=""
+                  alt={card?.product_icon?.data?.attributes?.alternativeText}
                   className="w-2/7"
                 />
                 <p className="text-white font-bold w-5/7 text-center lg:text-left">
