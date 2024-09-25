@@ -41,7 +41,7 @@ export default function ProductDescription({ data, sectorsStyle }) {
             >
               <img
                 src={data?.products?.[0].product_icon?.data?.attributes?.url}
-                alt=""
+                alt={data?.products?.[0].product_icon?.data?.attributes?.alternativeText}
                 className="w-2/7"
               />
               <p className="text-white text-center  font-bold ">

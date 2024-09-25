@@ -19,7 +19,8 @@ export default function BlogPreviewCard({ post,draft }) {
     // <Link href={`/blog/${}`}>
     <div className="bg-white rounded-md relative grid md:grid-rows-[0.5fr_100px_1fr]  grid-rows-[0.8fr_0.2fr_1fr]">
       <div className="p-7 relative overflow-hidden h-60">
-       <Link href={!draft ? `/blog/${post?.attributes?.slug}`:`/blog/draft/${post?.attributes?.slug}`}><img src={post?.attributes?.featured_img?.data?.attributes?.url} alt="" className="w-full h-full object-contain"/></Link>
+       <Link href={!draft ? `/blog/${post?.attributes?.slug}`:`/blog/draft/${post?.attributes?.slug}`}>
+       <img src={post?.attributes?.featured_img?.data?.attributes?.url} alt={post?.attributes?.featured_img?.data?.attributes?.alternativeText} className="w-full h-full object-contain"/></Link>
       </div>
       <div className={`${setHeaderSectorColor(post?.attributes?.sectors?.data[0]?.attributes?.name)} grid grid-cols-[1fr_3fr]`}>
         <div className="flex flex-col items-center justify-center rounded-tr-md rounded-br-md text-white p-2">
@@ -67,11 +68,11 @@ export default function BlogPreviewCard({ post,draft }) {
           </div>
           <div className="flex justify-between items-center gap-x-3">
             <div className="flex items-center gap-x-3 text-[#3524C6] font-bold">
-              <img src="/platformable-icon-purple-dark.png" alt="" width={32} />
+              <img src="/platformable-icon-purple-dark.png" alt="Platformable logo" width={32} />
               {post?.attributes?.category?.data?.attributes?.name}
             </div>
             <div className="flex items-center gap-x-3">
-              <img src="/clockl.svg" alt="" />
+              <img src="/clockl.svg" alt="clock icon" />
               <span className="text-[#3524C6]  font-bold">
                 {post?.attributes?.content ? (
                   <span>
