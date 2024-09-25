@@ -122,7 +122,7 @@ export default function ResourcesSearch({ posts, heading, draft }) {
           </button>
         </div>
 
-        <div className="flex my-5">
+        <div className="flex my-5 hidden">
           <Search searchFunction={searchFunction} />
         </div>
 
