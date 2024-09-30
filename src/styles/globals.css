@@ -76,9 +76,11 @@
   --gradient-obof-btn: linear-gradient(to right,#FF9D00 0%,#F157FF 50%, #5D27EC 100%) 0% 0%;
   --gradient-oe-btn: linear-gradient(to right,#22DA8F 0%,#F157FF 50%, #5D27EC 100%) 0% 0%; /* define gradient variable */
   --gradient-oh-btn: linear-gradient(to right,#1D61FE 0%,#F157FF 50%, #5D27EC 100%) 0% 0%; /* define gradient variable */
+  --gradient-traceability-btn: linear-gradient(to right,#10DEFE 0%,#F157FF 50%, #7D43FF 100%) 0% 0%; /* define gradient variable */
   --gradient-obof-home: linear-gradient(to bottom, #5A23EC 0%,#FF9D00 30%, #FF9D00 100%) 0% 0%;
   --gradient-oe-home: linear-gradient(to bottom,#5A23EC 0%, #22DA8F 30%, #22DA8F 100%) 0% 0%; /* define gradient variable */
   --gradient-oh-home: linear-gradient(to bottom,#5A23EC 0%,#1D61FE 30%, #1D61FE 100%) 0% 0%; /* define gradient variable */
+  --gradient-traceability-home: linear-gradient(to bottom,#5A23EC 0%,#00E2FF 30%, #10DFFF 100%) 0% 0%; /* define gradient variable */
   --highlight-color-dark:#f157ff;
   --business-color-dark:#7D43FF;
   --business-color-light:#e1dbff;
@@ -193,6 +195,9 @@ h6 {
 .bg--gradient-oh-btn {
   background: var(--gradient-oh-btn);
 }
+.bg--gradient-traceability-btn {
+  background: var(--gradient-traceability-btn);
+}
 
 .bg--gradient-obof-home {
   background: var(--gradient-obof-home);
@@ -202,6 +207,10 @@ h6 {
 }
 .bg--gradient-oh-home {
   background: var(--gradient-oh-home);
+}
+
+.bg--gradient-traceability-home {
+  background: var(--gradient-traceability-home);
 }
 
 /* DIFFERENT DEVICES */
