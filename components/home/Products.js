@@ -14,7 +14,9 @@ export default function Products({data}) {
   return (
     <section className={`py-10 md:py-14 ${sector==='Open Banking' ? 'bg--gradient-obof-home':''}
     ${sector==='Open Ecosystems' ? 'bg--gradient-oe-home':''}
-    ${sector==='Open Health' ? 'bg--gradient-oh-home':''}`}>
+    ${sector==='Open Health' ? 'bg--gradient-oh-home':''}
+    ${sector==='Traceability' ? 'bg--gradient-traceability-home':''}
+    `}>
       <div className="container mx-auto">
       <h2 className="text-white font-bold text-center leading-10">
         {data?.sectorHeading}
@@ -23,7 +25,7 @@ export default function Products({data}) {
        {data?.sectorSubheading}
       </p>
 
-      <div className="grid md:grid-cols-3 gap-x-10 gap-y-5 mt-10 mb-14 lg:mt-14 lg:mb-20">
+      <div className="grid md:grid-cols-4 gap-x-10 gap-y-5 mt-10 mb-14 lg:mt-14 lg:mb-20">
         {data?.products?.map((prod, index) => (
           <button key={index} className={`px-1 pt-1  pb-5 bg-white rounded-md shadow text-[22px] font-bold text-[#5A24EC] ${sector !== prod.sector ? 'opacity-60':''}`} onClick={() => {
             setSector(prod.sector)
@@ -33,6 +35,7 @@ export default function Products({data}) {
               ${prod.sector==='Open Banking' ? 'bg--gradient-obof-btn':''}
               ${prod.sector==='Open Ecosystems' ? 'bg--gradient-oe-btn':''}
               ${prod.sector==='Open Health' ? 'bg--gradient-oh-btn':''}
+               ${prod.sector==='Traceability' ? 'bg--gradient-traceability-btn':''}
               
               `}></div>
             {prod?.sector}
