@@ -14,7 +14,7 @@ export default function CTA({data, colorScheme}) {
                 </div>
                 <div className="rounded shadow-xl p-10 bg-white flex flex-col items-start gap-5">
                     <p className="flex items-center gap-3">
-                    <span className="text-5xl font-bold" style={{color: colorScheme?.pricing?.mainColor}}>{data?.pricing?.price?.[0]?.price}</span><span className=" text-3xl font-bold"> / {data.pricing.price[0].billingFrequency}</span>
+                    <span className="text-5xl font-bold" style={{color: colorScheme?.pricing?.mainColor}}>{data?.pricing?.price?.[0]?.price}</span><span className=" text-3xl font-bold"> / {data?.pricing?.price[0]?.billingFrequency}</span>
                     </p>
                     <div className="rounded-full px-3 md:px-6 py-2 text-[#6A39EE] font-bold" style={{backgroundColor: colorScheme?.pricing?.mainColor+'30', color: colorScheme?.pricing?.mainColor}}>{data?.pricing?.price?.[0]?.discountText}</div>
                     <ul id="product-items" className="list-style-none grid gap-4 ">

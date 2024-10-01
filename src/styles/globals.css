@@ -185,6 +185,9 @@ h6 {
 .bg--gradient-oh {
   background: var(--gradient-oh);
 }
+.bg--gradient-traceability {
+  background: var(--gradient-traceability);
+}
 
 .bg--gradient-obof-btn {
   background: var(--gradient-obof-btn);
