@@ -34,6 +34,13 @@ export default function ProductTemplate({data}) {
         iconColor: 'var(--blue)',
         checklistImage: '/benefits_check_oe.svg'
       },
+      'Traceability': {
+        bgColor: 'bg-[var(--green)]',
+        bgGradientColor: 'bg--gradient-traceability',
+        textColor: 'text-[var(--blue)]',
+        iconColor: 'var(--blue)',
+        checklistImage: '/benefits_check_oe.svg'
+      },
     }
     return (
         <>
@@ -42,7 +49,7 @@ export default function ProductTemplate({data}) {
             <Hero data={data} colorScheme={colorSchemeBySector[data?.sector]}/>
             
             {data?.testimonials[0]?.name ===''  ||
-            data?.testimonials[0]?.name ===null
+            data?.testimonials[0]?.name ===null || data.testimonials.length ===0
             ?'':<SocialProof data={data} colorScheme={colorSchemeBySector[data?.sector]}/>}
 
             
