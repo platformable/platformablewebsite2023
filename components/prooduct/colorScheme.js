@@ -177,7 +177,7 @@ export const colorSchemeBySector = {
             secondaryCallToActionTextColor: '#fff',
             secondaryCallToActionBorderColor: '#fff',
             socialSectionBackgroundColor: 'linear-gradient(90deg, #5031DE 0%, #1217A2EE 55%, #5031DE 100%)',
-            socialHeadingTextColor: '#FF9D00',
+            socialHeadingTextColor: '#10DEFE',
             socialSubheadingTextColor: '#fff',
         },
         testimonials: {
@@ -203,7 +203,7 @@ export const colorSchemeBySector = {
         personas: {
             backgroundColor: '#fff',
             mainColor: '#5E2AED',
-            textColor: '#5E2AED'
+            textColor: '#000'
         },
         pricing: {
             backgroundColor: 'linear-gradient(to right, #6A39EE 0%, #2D16A5 100%)',
