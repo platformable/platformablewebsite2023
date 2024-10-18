@@ -39,7 +39,6 @@ export default function EngagementTopics({ topics }) {
       </div>
       <div className="container mx-auto flex flex-col justify-center gap-y-1 px-16 lg:flex lg:flex-row mt-14">
         {topics.services.slice(3, 7).map((topic, index) => {
-          console.log(topic)
         return  (
           <div
             className={`xl:px-14 text-white flex flex-1 flex-col items-center mb-16 md:gap-3`}

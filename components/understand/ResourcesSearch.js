@@ -15,9 +15,9 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
           return post;
         }
         return (
-          post.attributes.content
-            .toLowerCase()
-            .includes(searchWord.toLowerCase()) ||
+          // post.attributes.content
+          //   .toLowerCase()
+          //   .includes(searchWord.toLowerCase()) ||
           post.attributes.title.toLowerCase().includes(searchWord.toLowerCase())
         );
       })
@@ -107,9 +107,9 @@ export default function ResourcesSearch({ posts, heading, filterByCategory }) {
           </button>
         </div>
 
-        {/* <div className="flex">
+        <div className="flex">
           <Search searchFunction={searchFunction} />
-        </div> */}
+        </div>
 
         <div className="grid md:grid-cols-3 grid-cols-1 gap-x-5 px-5 gap-y-5 md:px-0 my-10">
           {showedPosts

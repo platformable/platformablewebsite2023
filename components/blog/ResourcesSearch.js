@@ -25,10 +25,11 @@ export default function ResourcesSearch({ posts, heading, draft }) {
           return (
             post?.attributes?.title
               .toLowerCase()
-              .includes(searchWord.toLowerCase()) ||
-            post?.attributes?.content
-              ?.toLowerCase()
-              .includes(searchWord.toLowerCase())
+              .includes(searchWord.toLowerCase()) 
+            //   ||
+            // post?.attributes?.content
+            //   ?.toLowerCase()
+            //   .includes(searchWord.toLowerCase())
           );
         }
       })
@@ -122,7 +123,7 @@ export default function ResourcesSearch({ posts, heading, draft }) {
           </button>
         </div>
 
-        <div className="flex my-5 hidden">
+        <div className="flex my-5">
           <Search searchFunction={searchFunction} />
         </div>
 
@@ -224,18 +225,6 @@ export default function ResourcesSearch({ posts, heading, draft }) {
         <div className="grid md:grid-cols-3 grid-cols-1 gap-x-5 px-5 gap-y-5 md:px-0 my-10">
           {showedPosts
             ? showedPosts
-
-                // .filter((post, index) => {
-                //   if (searchWord === "") {
-                //     return post;
-                //   }
-                //   return (
-                //     post.attributes.content
-                //       .toLowerCase()
-                //       .includes(searchWord) ||
-                //     post.attributes.title.toLowerCase().includes(searchWord)
-                //   );
-                // })
                 .map((post, index) => {
                   return (
                     <BlogPreviewCard post={post} key={index} draft={draft} />
