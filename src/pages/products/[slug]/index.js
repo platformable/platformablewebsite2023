@@ -10,7 +10,7 @@ import { colorSchemeBySector } from "../../../../components/prooduct/colorScheme
 
 export default function ProductTemplate({data}) {
 
-  console.log("product data",data)
+  // console.log("product data",data)
   
     const sectorsStyle = {
       'Open Banking': {
@@ -66,7 +66,7 @@ export async function getServerSideProps(ctx) {
     
     try {
       const slug=await ctx.params.slug
-      console.log("slug",slug)
+      // console.log("slug",slug)
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_SERVER_URL}/api/ob-products-pages?filters[slug]=${slug}&populate[hero][populate][image]=*&populate[whatsIncluded][populate][whatsIncludedContent]=*&populate[bentoBox][populate][image]=*&populate[personaCases][populate][image]=*&populate[callToAction]=*&populate[testimonials][populate][image]=*&populate[whatsIncluded][populate][image]=*&populate[pricing][populate][price][populate][description]=*&populate[featured_img]=*`
       );

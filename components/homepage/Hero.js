@@ -16,7 +16,6 @@ useEffect(() => {
   
   setIsMobile(isMobileDevice)
 }, [])
-  console.log(isMobile)
   const handleFullScreen = () => {
       videoEl &&
         videoEl.current &&

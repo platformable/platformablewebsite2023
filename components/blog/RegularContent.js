@@ -33,7 +33,7 @@ export default function RegularContent({ data }) {
                 return (
                   <div className="flex gap-x-1 my-5" key={index}>
                     <span className="text-xs">{index + 1} </span>
-                    <p>
+                    <div>
                       <strong>{note?.subheading} :</strong>{" "}
                       <div
                         dangerouslySetInnerHTML={{
@@ -42,7 +42,7 @@ export default function RegularContent({ data }) {
                         className={`text-xl footnote `}
                         id="blogPage footnote"
                       />
-                    </p>
+                    </div>
                   </div>
                 );
               })}

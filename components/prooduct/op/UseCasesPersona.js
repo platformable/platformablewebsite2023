@@ -36,7 +36,7 @@ export default function UseCasesPersona({ data, colorScheme }) {
             <ul className="mt-5 list-style-none flex flex-col gap-6">
            {selectedSector && selectedSector?.item?.length > 0 ? (
             selectedSector?.item?.[0]?.children?.map((item,index)=>{
-              console.log("selected sector", selectedSector)
+              // console.log("selected sector", selectedSector)
               if (item?.children?.length > 0) {
                 return <li className="flex items-center gap-x-3 " key={index}> <CheckIcon/>{item?.children[0]?.text}</li>
               }
