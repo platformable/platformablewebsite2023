@@ -188,6 +188,7 @@ export default function Footer() {
               width={'auto'}
               height={70}
               unoptimized
+              loading="lazy"
             />
           </Link>
           <span className="font-bold pl-2">

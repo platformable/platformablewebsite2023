@@ -1,0 +1,17 @@
+/* /* To style the document scrollbar, remove `.custom-scrollbar` */
+.customScrollbar::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 15px;
+
+  }
+  .customScrollbar::-webkit-scrollbar-track {
+    /* background : linear-gradient(#a177ff90 10%, ); */
+    /* background: linear-gradient(0.25turn, #9f80e390, #a177ff90, #9f80e390); */
+    background: linear-gradient(0.25turn,#fff, #5eb8df, #ebf8e1, #f69d3c, #fff);
+  }
+  .customScrollbar::-webkit-scrollbar-thumb {
+    background : #5a24ec90;
+    border-radius: 10px;
+    /* box-shadow:  0 0 6px rgba(0, 0, 0, 0.5); */
+  } 
+  
