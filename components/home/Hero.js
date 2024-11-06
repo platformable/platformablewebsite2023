@@ -31,12 +31,14 @@ export default function Hero({data}) {
         
         {/* <img src={data?.hero[0]?.image?.data?.attributes.url} alt={data?.hero[0]?.image?.data?.attributes.alternativeText} className="align-top"/> */}
         <Image
-            src={data?.hero[0]?.image?.data?.attributes.url} alt={data?.hero[0]?.image?.data?.attributes.alternativeText} className="align-top"
+            // src={data?.hero[0]?.image?.data?.attributes.url} 
+            src="/hero_home_page_converted.webp"
+            alt={data?.hero[0]?.image?.data?.attributes.alternativeText} 
+            className="align-top aspect-auto"
             width={600}
             height={450}
             unoptimized
-    
-    />
+        />
 
         
       </div>

@@ -14,9 +14,9 @@ export default function Benefits({data}) {
                             width={400}
                             height={400}
                             alt={benefit?.benefits_img?.data?.attributes?.alternativeText}
-                    
+                            
                             loading="lazy"
-                            className=""/>
+                            className="aspect-video"/>
                             </div>
                             <p className="font-bold text-base text-[#FAFA62] mt-5">{benefit?.label}</p>
                             <h3 className="font-bold text-white mt-3 text-4xl">{benefit?.title}</h3>

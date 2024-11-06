@@ -27,18 +27,18 @@ export default function Products({data}) {
 
       <div className="grid md:grid-cols-4 gap-x-10 gap-y-5 mt-10 mb-14 lg:mt-14 lg:mb-20">
         {data?.products?.map((prod, index) => (
-          <button key={index} className={`px-1 pt-1  pb-5 bg-white rounded-md shadow text-[22px] font-bold text-[#5A24EC] ${sector !== prod.sector ? 'opacity-60':''}`} onClick={() => {
+          <button key={index} className={`px-1 pt-1 grid pb-5 bg-white rounded-md shadow text-[22px] font-bold text-[#5A24EC] ${sector !== prod.sector ? 'opacity-60':''}`} onClick={() => {
             setSector(prod.sector)
             setProducts(data?.products.find(item => item?.sector === prod.sector).product)}
             }>
-              <div className={`h-2  rounded-tl-md rounded-tr-md mb-5 
+              <div className={`h-2 mb-auto rounded-tl-md rounded-tr-md xl:mb-5
               ${prod.sector==='Open Banking' ? 'bg--gradient-obof-btn':''}
               ${prod.sector==='Open Ecosystems' ? 'bg--gradient-oe-btn':''}
               ${prod.sector==='Open Health' ? 'bg--gradient-oh-btn':''}
                ${prod.sector==='Traceability' ? 'bg--gradient-traceability-btn':''}
               
               `}></div>
-            {prod?.sector}
+            <h6>{prod?.sector}</h6>
           </button>
         ))}
       </div>
@@ -70,7 +70,7 @@ export default function Products({data}) {
               {box.linkText} {box.link && <a href={box.link}>dsa</a>}
             </span>
           )} */}
-              <img src={box?.image?.data?.attributes?.url} alt={box?.image?.data?.attributes?.alternativeText} className="object-contain max-h-[400px] rounded-xl w-full" />
+              <img src={box?.image?.data?.attributes?.url} alt={box?.image?.data?.attributes?.alternativeText} className="object-contain max-h-[400px] rounded-xl w-full aspect-video" />
             </div>
           ))}
         </div>
