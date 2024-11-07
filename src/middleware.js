@@ -8,7 +8,7 @@ export function middleware(request) {
   let redirectData;
   // console.log("pathname",pathname)
 
-  if(pathname !== '/') {
+  if(pathname !== '/' && pathname !=='/blog') {
     redirectData = blogLinksSource.find(item => item.old_link.includes(pathname)) || null
   }
 
@@ -25,6 +25,7 @@ export function middleware(request) {
 
 export const config = {
   matcher: [
+    '/((?!api/|_next/static|_next/image|favicon.ico|js/).*)',
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
@@ -32,13 +33,13 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
-    {
+    /* {
       source: '/((?!api/|_next/static|_next/image|favicon.ico|js/).*)',
       missing: [
         { type: 'header', key: 'next-router-prefetch' },
         { type: 'header', key: 'purpose', value: 'prefetch' },
         { type: 'header', key: 'sec-fetch-site', value: 'same-origin' },
       ],
-    },
+    }, */
   ],
 }
