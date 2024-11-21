@@ -226,9 +226,9 @@ export default function Footer() {
     <section className={`${style["bg-footer"]} `}>
       <div
         // style={{ backgroundColor: "var(--purple-medium)" }}
-        className={`mx-auto lg:mx-24 text-white pt-8 pb-8 px-4 lg:flex  lg:gap-5 justify-between items-start flex-nowrap `}
+        className={`mx-auto lg:mx-20 text-white pt-8 pb-8  lg:flex  lg:gap-5 justify-between items-start flex-nowrap `}
       >
-        <div id="footer-logo" className="grid gap-y-5 xl:gap-8 pt-6 lg:pt-0">
+        <div id="footer-logo" className="grid gap-y-5 xl:gap-8 pt-6 lg:pt-0 lg:w-4/7">
           <Link href="/">
             <Image
               className="text-center"
@@ -240,9 +240,9 @@ export default function Footer() {
               loading="lazy"
             />
           </Link>
-          <div id="sitemap-links" className="grid grid md:grid-cols-3 xl:grid-cols-6 mt-6 lg:mt-10 lg:mt-0 gap-4 lg:gap-10 lg:mx-auto ">
+          <div id="sitemap-links" className="grid grid md:grid-cols-3 xl:grid-cols-6 mt-6 lg:mt-0 gap-x-4 gap-y-7 lg:gap-x-3 lg:mx-auto ">
           {sitemap.map((section, index) => (
-            <div className="grid gap-4 content-start " key={index}>
+            <div className="grid gap-4 content-start px-3" key={index}>
               <span className="font-bold opacity-90">{section.title}</span>
               <div className="grid gap-2">
                 {section.links.map((link, index) => (
@@ -257,10 +257,10 @@ export default function Footer() {
         </div>
 
        
-        <div id="subscription-form" className="grid gap-4 mt-14 lg:mt-0 md:flex md:flex-col md:justify-center md:gap-4 lg:grid lg:gap-2">
+        <div id="subscription-form" className="grid gap-4 mt-14 lg:mt-0 md:flex md:flex-col md:justify-center md:gap-4 lg:grid lg:gap-2 lg:w-3/7">
           <div className="flex flex-col gap-y-5 md:justify-center">
             {/* md:justify-center put the icons and text in the center vertically */}
-            <div className="flex gap-x-5 justify-center">
+            <div className="flex gap-x-2 justify-center h-[55px] items-center">
               <Link href="mailto:mark@platformable.com">
                 <img src="/email.svg" className="text-white" alt="email" width={55} height={55}/>
               </Link>
@@ -283,8 +283,8 @@ export default function Footer() {
                 />
               </Link>
             </div>
-            <div className="text-center flex justify-center mt-3 md:mt-2 lg:mt-3">
-              <div className="md:w-3/4 lg:w-full ">
+            <div className=" mt-3 md:mt-2 lg:mt-3">
+              <div className="">
                 <p className="font-bold text-base">
                   Join our newsletter community
                 </p>
