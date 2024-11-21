@@ -55,7 +55,7 @@ export default function MegaMenu() {
                     return (
                   <li key={index}>
                     <Link
-                      href="#"
+                      href={product.link}
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm"> {product?.title} </p>
@@ -75,7 +75,7 @@ export default function MegaMenu() {
                     return (
                 <li key={index}>
                     <Link
-                      href="#"
+                      href={product.link}
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm"> {product?.title} </p>
@@ -94,7 +94,7 @@ export default function MegaMenu() {
                     return (
                 <li key={index}>
                     <Link
-                      href="#"
+                      href={product.link}
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                       <p className="font-bold text-sm"> {product?.title} </p>
@@ -113,7 +113,7 @@ export default function MegaMenu() {
                     return (
                   <li key={index}>
                     <Link
-                      href="#"
+                      href={product.link}
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                      <p className="font-bold text-sm"> {product?.title} </p>
@@ -163,7 +163,7 @@ export default function MegaMenu() {
                  
                 <li>
                     <Link
-                      href="#"
+                      href="/blog"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Blog </p>
@@ -171,19 +171,21 @@ export default function MegaMenu() {
                     </Link>
                   </li>
 
-                  <li>
+                  {/* <li>
                     <Link
                       href="#"
+                      target="_blank"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Newsletter </p>
-                       {/* <span className="text-xs">{product.description}</span> */}
+                       {/* <span className="text-xs">{product.description}</span> 
                     </Link>
-                  </li>
+                  </li> */}
 
                   <li>
                     <Link
-                      href="#"
+                      href="https://www.linkedin.com/company/platformable"
+                      target="_blank"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Linkedin </p>
@@ -192,7 +194,8 @@ export default function MegaMenu() {
                   </li>
                   <li>
                     <Link
-                      href="#"
+                      href="https://www.youtube.com/@platformable"
+                      target="_blank"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Youtube </p>
@@ -244,7 +247,7 @@ export default function MegaMenu() {
 
                   <li>
                     <Link
-                      href="/contact-us"
+                      href="/meet-an-expert"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Meet an expert </p>
@@ -254,7 +257,7 @@ export default function MegaMenu() {
 
                   <li>
                     <Link
-                        href="/contact-us"
+                        href="/become-partner"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Become a partner </p>
