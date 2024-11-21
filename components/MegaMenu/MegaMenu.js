@@ -5,7 +5,7 @@ import Image from "next/image";
 import {SectorsNavData} from '../../src/utils/menu'
 export default function MegaMenu() {
   return (
-    <nav className="relative bg-white  border-gray-300 text-gray-900">
+    <nav className="relative bg-white  border-gray-300 ">
       <div className=" flex justify-between items-center">
         <div className="relative block  text-xl text-teal-600 font-bold">
         <Link href="/">
@@ -24,33 +24,34 @@ export default function MegaMenu() {
 
           <li className="toggleable ">
             <input
-              type="checkbox"
+              type="radio"
+              name="menu-tog"
               value="selected"
               id="toggle-one"
               className="toggle-input"
             />
             <label
-              for="toggle-one"
-              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold text-[#2a2fc1]"
+              htmlFor="toggle-one"
+              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold"
             >
               Products
             </label>
             <div
               role="toggle"
-              className=" mega-menu mb-16 sm:mb-0 shadow-xl bg-white shadow-md border"
+              className=" mega-menu mb-16 sm:mb-0 bg-white shadow-md border"
             >
-              <div className=" w-full flex flex-wrap justify-between mx-2">
-                <ul className="px-4 py-5 w-full sm:w-1/2 lg:w-1/4 border-[#2a2fc1] border-b sm:border-r lg:border-b-0 ">
-                  <h3 className="font-bold text-xl text-[#2a2fc1] text-bold mb-2">
+              <div className=" w-full flex flex-wrap justify-between">
+                <ul className="px-4 py-5 w-full sm:w-1/2 lg:w-1/4 border-[#3423C5] border-b sm:border-r lg:border-b-0 ">
+                  <h3 className="font-bold text-base px-3 text-[#3423C5] text-bold mb-2">
                     {SectorsNavData["Open Ecosystem"].title}
                   </h3>
 
                   {SectorsNavData["Open Ecosystem"].products.map((product,index)=>{
                     return (
-                <li>
+                  <li key={index}>
                     <Link
                       href="#"
-                      className="block px-3 py-5 hover:bg-purple-100  hover:text-[#2a2fc1]"
+                      className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm"> {product?.title} </p>
                        <span className="text-xs">{product.description}</span>
@@ -60,17 +61,17 @@ export default function MegaMenu() {
                   })}
                   
                 </ul>
-                <ul className="px-4 py-5 w-full sm:w-1/2 lg:w-1/4 border-[#2a2fc1] border-b sm:border-r-0 lg:border-r lg:border-b-0 ">
-                <h3 className="font-bold text-xl text-[#2a2fc1] text-bold mb-2">
+                <ul className="px-4 py-5 w-full sm:w-1/2 lg:w-1/4 border-[#3423C5] border-b sm:border-r-0 lg:border-r lg:border-b-0 ">
+                <h3 className="font-bold text-base px-3 text-[#3423C5] text-bold mb-2">
                     {SectorsNavData["Open Banking"].title}
                   </h3>
                 
                 {SectorsNavData["Open Banking"].products.map((product,index)=>{
                     return (
-                <li>
+                <li key={index}>
                     <Link
                       href="#"
-                      className="block px-3 py-5 hover:bg-purple-100  hover:text-[#2a2fc1]"
+                      className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm"> {product?.title} </p>
                        <span className="text-xs">{product.description}</span>
@@ -79,17 +80,17 @@ export default function MegaMenu() {
                     )
                   })}
                 </ul>
-                <ul className="px-4 py-5 w-full sm:w-1/2 lg:w-1/4 border-[#2a2fc1] border-b sm:border-r-0 lg:border-r lg:border-b-0 ">
-                <h3 className="font-bold text-xl text-[#2a2fc1] text-bold mb-2">
+                <ul className="px-4 py-5 w-full sm:w-1/2 lg:w-1/4 border-[#3423C5] border-b sm:border-r lg:border-r lg:border-b-0 ">
+                <h3 className="font-bold text-base px-3 text-[#3423C5] text-bold mb-2">
                     {SectorsNavData["Open Health"].title}
                   </h3>
                 
                 {SectorsNavData["Open Health"].products.map((product,index)=>{
                     return (
-                <li>
+                <li key={index}>
                     <Link
                       href="#"
-                      className="block px-3 py-5 hover:bg-purple-100  hover:text-[#2a2fc1]"
+                      className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                       <p className="font-bold text-sm"> {product?.title} </p>
                       <span className="text-xs">{product.description}</span>
@@ -98,17 +99,17 @@ export default function MegaMenu() {
                     )
                   })}
                 </ul>
-                <ul className="px-4 py-5 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r-0 lg:border-r-0 lg:border-b-0 ">
-                <h3 className="font-bold text-xl text-[#2a2fc1] text-bold mb-2">
-                    {SectorsNavData["Traceability"].title}
+                <ul className="px-4 py-5 w-full sm:w-1/2 lg:w-1/4 border-gray-600 lg:border-r-0 lg:border-b-0 ">
+                <h3 className="font-bold text-base px-3 text-[#3423C5] text-bold mb-2">
+                    <span className="font-bold text-[#FF3CF0]">NEW{' '}</span>{SectorsNavData["Traceability"].title}
                   </h3>
                 
                 {SectorsNavData["Traceability"].products.map((product,index)=>{
                     return (
-                <li>
+                  <li key={index}>
                     <Link
                       href="#"
-                      className="block px-3 py-5 hover:bg-purple-100  hover:text-[#2a2fc1]"
+                      className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                      <p className="font-bold text-sm"> {product?.title} </p>
                       <span className="text-xs">{product.description}</span>
@@ -133,32 +134,30 @@ export default function MegaMenu() {
 
           <li className="toggleable ">
             <input
-              type="checkbox"
+              type="radio"
+              name="menu-tog"
+
               value="selected"
-              id="Resources"
+              id="toggle-two"
               className="toggle-input"
             />
             <label
-              for="Resources"
-              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold text-[#2a2fc1]"
+              htmlFor="toggle-two"
+              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold "
             >
               Resources
             </label>
             <div
               role="toggle"
-              className=" single-mega-menu mb-16 sm:mb-0 shadow-xl bg-white shadow-md border"
+              className=" single-resources-menu mb-16 sm:mb-0 bg-white shadow-md border"
             >
-              <div className=" w-full flex flex-wrap justify-between mx-2">
+              <div className=" w-full flex flex-wrap justify-between">
                 <ul className="px-4 py-5 w-full ">
-                  <h3 className="font-bold text-xl text-[#2a2fc1] text-bold mb-2">
-                  Resources
-                  </h3>
-
                  
                 <li>
                     <Link
                       href="#"
-                      className="block px-3 py-5 hover:bg-purple-100  hover:text-[#2a2fc1]"
+                      className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Blog </p>
                        {/* <span className="text-xs">{product.description}</span> */}
@@ -168,7 +167,7 @@ export default function MegaMenu() {
                   <li>
                     <Link
                       href="#"
-                      className="block px-3 py-5 hover:bg-purple-100  hover:text-[#2a2fc1]"
+                      className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Newsletter </p>
                        {/* <span className="text-xs">{product.description}</span> */}
@@ -178,7 +177,7 @@ export default function MegaMenu() {
                   <li>
                     <Link
                       href="#"
-                      className="block px-3 py-5 hover:bg-purple-100  hover:text-[#2a2fc1]"
+                      className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Linkedin </p>
                        {/* <span className="text-xs">{product.description}</span> */}
@@ -187,7 +186,7 @@ export default function MegaMenu() {
                   <li>
                     <Link
                       href="#"
-                      className="block px-3 py-5 hover:bg-purple-100  hover:text-[#2a2fc1]"
+                      className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Youtube </p>
                        {/* <span className="text-xs">{product.description}</span> */}
@@ -205,32 +204,29 @@ export default function MegaMenu() {
 
           <li className="toggleable ">
             <input
-              type="checkbox"
+              type="radio"
+              name="menu-tog"
               value="selected"
-              id="Company"
+              id="toggle-three"
               className="toggle-input"
             />
             <label
-              for="Company"
-              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold text-[#2a2fc1]"
+              htmlFor="toggle-three"
+              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold"
             >
               Company
             </label>
             <div
               role="toggle"
-              className=" single-mega-menu mb-16 sm:mb-0 shadow-xl bg-white shadow-md border"
+              className="single-company-menu mb-16 sm:mb-0 bg-white border"
             >
-              <div className=" w-full flex flex-wrap justify-between mx-2">
+              <div className=" w-full flex flex-wrap justify-between">
                 <ul className="px-4 py-5 w-full ">
-                  <h3 className="font-bold text-xl text-[#2a2fc1] text-bold mb-2">
-                  Company
-                  </h3>
-
                  
                 <li>
                     <Link
                       href="/about"
-                      className="block px-3 py-5 hover:bg-purple-100  hover:text-[#2a2fc1]"
+                      className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">About </p>
                        {/* <span className="text-xs">{product.description}</span> */}
@@ -240,7 +236,7 @@ export default function MegaMenu() {
                   <li>
                     <Link
                       href="/contact-us"
-                      className="block px-3 py-5 hover:bg-purple-100  hover:text-[#2a2fc1]"
+                      className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Meet an expert </p>
                        {/* <span className="text-xs">{product.description}</span> */}
@@ -250,7 +246,7 @@ export default function MegaMenu() {
                   <li>
                     <Link
                         href="/contact-us"
-                      className="block px-3 py-5 hover:bg-purple-100  hover:text-[#2a2fc1]"
+                      className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Become a partner </p>
                        {/* <span className="text-xs">{product.description}</span> */}
@@ -259,7 +255,7 @@ export default function MegaMenu() {
                   <li>
                     <Link
                         href="/contact-us"
-                      className="block px-3 py-5 hover:bg-purple-100  hover:text-[#2a2fc1]"
+                      className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Contact us </p>
                        {/* <span className="text-xs">{product.description}</span> */}

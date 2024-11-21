@@ -3869,10 +3869,7 @@ background-image:url('https://res.cloudinary.com/platform1/image/upload/v1711386
 
 /* HOMEPAGE */
 
-/* .personas-homepage-list ul {
-  list-style: none;
-
-  }
+/* 
 
 
 .personas-homepage-list ul li:before {
@@ -3906,88 +3903,77 @@ example:
   }
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .mega-menu {
-    opacity:0;
-    visibility:hidden;
-    z-index: -900;
     left: 0;
     position: absolute;
     text-align: left;
     width: 100%;
-    transition: all 0.15s linear 0s;
+    box-shadow: 10px 15px 30px #271ABA70;
   }
 
-  .single-mega-menu {
-    opacity:0;
-    visibility:hidden;
-    z-index: -900;
+  .single-resources-menu, .single-company-menu {
     right:0;
     position: absolute;
     text-align: left;
     width: 25%;
-    transition: all 0.15s linear 0s;
-  }
-  /* #hoverable Class Styles */
-  .hoverable {
-    position: static;
-  }
+    box-shadow: 10px 15px 30px #271ABA70;
 
-  .hoverable > a:after {
-    /* content: "\25BC"; */
+  }
+ 
+
+  .toggleable > label:after {
     font-size: 10px;
     padding-left: 6px;
     position: relative;
     top: -1px;
   }
 
-  .hoverable:hover .mega-menu {
-    opacity:1;
-    visibility:visible;
+ 
+  .mega-menu,
+  .single-resources-menu,
+  .single-company-menu {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -900;
+    transition: opacity 0.3s, visibility 0.3s ease-in, z-index 0.3s ease-in;
+  }
+  
+  #toggle-one:checked ~ .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    z-index: 900;
+  }
+  
+  #toggle-two:checked ~ .single-resources-menu {
+    opacity: 1;
+    visibility: visible;
     z-index: 900;
   }
 
-
-  /* #toggle Class Styles */
-
-  .toggleable > label:after {
-    content: "\25BC";
-    font-size: 10px;
-    padding-left: 6px;
-    position: relative;
-    top: -1px;
+  #toggle-three:checked ~ .single-company-menu {
+  opacity: 1;
+  visibility: visible;
+  z-index: 900;
+}
+  #toggle-one:checked ~ .single-resources-menu,
+  #toggle-one:checked ~ .single-company-menu,
+  #toggle-two:checked ~ .mega-menu,
+  #toggle-two:checked ~ .single-company-menu,
+  #toggle-three:checked ~ .mega-menu,
+  #toggle-three:checked ~ .single-resources-menu {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -900;
   }
 
   .toggle-input {
     display: none;
   }
-  .toggle-input:not(checked) ~ .mega-menu {
-    opacity:0;
-    visibility:hidden;
-    z-index: -900;
-  }
 
-  .toggle-input:checked ~ .mega-menu {
-    opacity:1;
-    visibility:visible;
-    z-index: 900;
+  .toggle-input + label {
+    cursor: pointer;
   }
-
-  .toggle-input:checked ~ .single-mega-menu {
-    opacity:1;
-    visibility:visible;
-    z-index: 900;
-  }
-
   .toggle-input:checked + label {
-    color: white;
-    /* background: rgb(3, 102, 114); */ /*@apply bg-teal-700 */
-    background:purple;
+    color: #3423C5;
   }
 
-  .toggle-input:checked ~ label:after {
-    content: "\25B2";
-    font-size: 10px;
-    padding-left: 6px;
-    position: relative;
-    top: -1px;
-  }
-
+/* ----------------------- */
