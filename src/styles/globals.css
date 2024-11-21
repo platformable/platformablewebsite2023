@@ -3934,7 +3934,7 @@ example:
     opacity: 0;
     visibility: hidden;
     z-index: -900;
-    transition: opacity 0.3s, visibility 0.3s ease-in, z-index 0.3s ease-in;
+    transition: opacity 0.3s, visibility 0.3s ease-in, z-index 0.3s;
   }
   
   #toggle-one:checked ~ .mega-menu {
