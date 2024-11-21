@@ -3869,10 +3869,7 @@ background-image:url('https://res.cloudinary.com/platform1/image/upload/v1711386
 
 /* HOMEPAGE */
 
-/* .personas-homepage-list ul {
-  list-style: none;
-
-  }
+/* 
 
 
 .personas-homepage-list ul li:before {
@@ -3885,3 +3882,98 @@ border-radius:50%;
 padding:"10px"
   } */
 
+
+
+
+
+
+
+
+  /* #Mega Menu Styles
+  if you use sass, convert all this additional css to tailwindcss using the 'hack' @apply for all element.style (css properties)
+[ https://tailwindcss.com/docs/functions-and-directives/#apply ]
+example:
+  .mega-menu {
+  @apply
+  hidden
+  left-0
+  absolute
+  text-left
+  w-full;
+  }
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .mega-menu {
+    left: 0;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    box-shadow: 10px 15px 30px #271ABA70;
+  }
+
+  .single-resources-menu, .single-company-menu {
+    right:0;
+    position: absolute;
+    text-align: left;
+    width: 25%;
+    box-shadow: 10px 15px 30px #271ABA70;
+
+  }
+ 
+
+  .toggleable > label:after {
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+  }
+
+ 
+  .mega-menu,
+  .single-resources-menu,
+  .single-company-menu {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -900;
+    transition: opacity 0.3s, visibility 0.3s ease-in, z-index 0.3s ease-in;
+  }
+  
+  #toggle-one:checked ~ .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    z-index: 900;
+  }
+  
+  #toggle-two:checked ~ .single-resources-menu {
+    opacity: 1;
+    visibility: visible;
+    z-index: 900;
+  }
+
+  #toggle-three:checked ~ .single-company-menu {
+  opacity: 1;
+  visibility: visible;
+  z-index: 900;
+}
+  #toggle-one:checked ~ .single-resources-menu,
+  #toggle-one:checked ~ .single-company-menu,
+  #toggle-two:checked ~ .mega-menu,
+  #toggle-two:checked ~ .single-company-menu,
+  #toggle-three:checked ~ .mega-menu,
+  #toggle-three:checked ~ .single-resources-menu {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -900;
+  }
+
+  .toggle-input {
+    display: none;
+  }
+
+  .toggle-input + label {
+    cursor: pointer;
+  }
+  .toggle-input:checked + label {
+    color: #3423C5;
+  }
+
+/* ----------------------- */
