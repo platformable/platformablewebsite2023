@@ -7,27 +7,40 @@ import style from "../src/styles/Footer.module.css";
 
 const sitemap = [
   {
-    title: "How we work",
+    title: "Open Ecosystem Products",
     links: [
       {
-        label: "Understand",
-        url: "/understand",
+        label: "API Industry Trends Report",
+        url: "/#",
       },
       {
-        label: "Act",
-        url: "/act",
-      },
-      {
-        label: "Engage",
-        url: "/engage",
+        label: "Consultancy and Speaker Engagement",
+        url: "/#",
       },
     ],
   },
   {
-    title: "Products",
+    title: "Open Banking Products",
     links: [
       {
-        label: "Datasets",
+        label: "OBOF Trends Report",
+        url: "/products/datasets",
+      },
+      {
+        label: "Open Banking Accelerator",
+        url: "/products/data-products",
+      },
+      {
+        label: "Consultancy and Speaker Engagement",
+        url: "/#",
+      },
+    ],
+  },
+  {
+    title: "Open Health Products",
+    links: [
+      {
+        label: "Health Data Governance Mentoring and Support",
         url: "/products/datasets",
       },
       {
@@ -35,38 +48,74 @@ const sitemap = [
         url: "/products/data-products",
       },
       {
-        label: "Data Governance",
-        url: "/products/data-governance",
+        label: "Open Health Accelerator",
+        url: "/#",
       },
       {
-        label: "API Governance",
-        url: "/products/api-governance",
-      },
-      {
-        label: "Speaker Engagement",
-        url: "/products/speaker-engagement",
-      },
-      {
-        label: "Open Ecosystem Consultancy",
-        url: "/products/open-ecosystem-consultancy",
+        label: "Consultancy and Speaker Engagement",
+        url: "/#",
       },
     ],
   },
   {
-    title: "Platformable",
+    title: "Traceability Products",
+    links: [
+      {
+        label: "Data Governance",
+        url: "/products/data-governance",
+      },
+      {
+        label: "Traceability Ecosystem Mapping",
+        url: "/#",
+      },
+      {
+        label: "Consultancy and Speaker Engagement",
+        url: "/products/speaker-engagement",
+      },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      {
+        label: "Blog",
+        url: "/blog",
+      },
+      {
+        label: "Newsletter",
+        url: "/#",
+      },
+      {
+        label: "Linkedin",
+        url: "/products/data-governance",
+      },
+      {
+        label: "Youtube",
+        url: "https://www.youtube.com/@platformable",
+      },
+     
+    ],
+  },
+  {
+    title: "Company",
     links: [
       {
         label: "About us",
         url: "/about",
       },
       {
+        label: "Meet an expert",
+        url: "/meet-an-expert",
+      },
+      {
+        label: "Become a partner",
+        url: "/become-partner",
+      },
+      {
         label: "Contact us",
         url: "/contact-us",
       },
-      {
-        label: "Blog",
-        url: "/blog",
-      },
+     
     ],
   },
 ];
@@ -174,82 +223,63 @@ export default function Footer() {
   //   }
   // }
   return (
-    <>
-      <section
+    <section className={`${style["bg-footer"]} `}>
+      <div
         // style={{ backgroundColor: "var(--purple-medium)" }}
-        className={`${style["bg-footer"]}  mx-auto text-white pt-11 pb-8 px-4 lg:flex lg:gap-2 justify-center items-start`}
+        className={`mx-auto lg:mx-24 text-white pt-8 pb-8 px-4 lg:flex  lg:gap-5 justify-between items-start flex-nowrap `}
       >
-        <div className="grid gap-4 xl:gap-8 pt-6 lg:pt-0">
+        <div id="footer-logo" className="grid gap-y-5 xl:gap-8 pt-6 lg:pt-0">
           <Link href="/">
             <Image
               className="text-center"
               src={LogoWhite}
               alt={"platformable logo"}
               width={'auto'}
-              height={70}
+              height={55}
               unoptimized
               loading="lazy"
             />
           </Link>
-          <span className="font-bold pl-2">
-            We are committed to minimising the
-            <br />
-            amount of data we collect about our
-            <br /> visitors and subscribers.
-            <br />
-            <br /> See our
-            <Link href="/privacy-policy">
-              <span style={{ color: "var(--yellow)" }}> privacy policy </span>
-            </Link>
-            for more details
-            <br />
-            <br />
-            <span className="flex items-center gap-2">
-              Proudly{" "}
-              <span>
-                <img src="/heart-fixed-icon.png" alt="pride heart" />
-              </span>{" "}
-              based in Barcelona
-            </span>
-          </span>
-        </div>
-
-        <div className="grid grid-cols-3 mt-10 lg:mt-0 gap-4 lg:gap-10 lg:mx-auto xl:mx-16">
+          <div id="sitemap-links" className="grid grid md:grid-cols-3 xl:grid-cols-6 mt-6 lg:mt-10 lg:mt-0 gap-4 lg:gap-10 lg:mx-auto ">
           {sitemap.map((section, index) => (
-            <div className="grid gap-4 content-start lg:pt-5" key={index}>
+            <div className="grid gap-4 content-start " key={index}>
               <span className="font-bold opacity-90">{section.title}</span>
               <div className="grid gap-2">
                 {section.links.map((link, index) => (
                   <small key={index}>
-                    <Link href={link.url}>{link.label}</Link>
+                    <Link target="_blank" href={link.url}>{link.label}</Link>
                   </small>
                 ))}
               </div>
             </div>
           ))}
         </div>
-        <div className="grid gap-4 mt-14 md:flex md:flex-col md:justify-center md:gap-4 md:mt-20 lg:grid lg:gap-2 lg:mt-4 xl:mt-0 lg:w-2/12">
+        </div>
+
+       
+        <div id="subscription-form" className="grid gap-4 mt-14 lg:mt-0 md:flex md:flex-col md:justify-center md:gap-4 lg:grid lg:gap-2">
           <div className="flex flex-col gap-y-5 md:justify-center">
             {/* md:justify-center put the icons and text in the center vertically */}
             <div className="flex gap-x-5 justify-center">
               <Link href="mailto:mark@platformable.com">
-                <img src="/email.svg" className="text-white" alt="email" />
+                <img src="/email.svg" className="text-white" alt="email" width={55} height={55}/>
               </Link>
               <Link
                 href="https://www.linkedin.com/company/platformable/"
                 className="text-white"
                 target="_blank"
               >
-                <img src="/Linkedin.svg" alt="linkedin" />
+                <img src="/Linkedin.svg" alt="linkedin" width={55} height={55}/>
               </Link>
               <Link
                 href="https://tidal.com/browse/mix/0105d4b80651774ef38931747c080a"
                 target="_blank"
               >
                 <img
-                  src="/tidal_footer.svg"
+                  src="/youtube_footer.svg"
                   className="text-white"
-                  alt="tidal"
+                  alt="youtube"
+                  width={55} height={55}
                 />
               </Link>
             </div>
@@ -310,10 +340,31 @@ export default function Footer() {
             )}
           </div>
         </div>
-      </section>
+        
+      </div>
+      <div id="company-description" className={`${style["bg-footer"]} container mx-auto text-white pt-16 md:pt-24 pb-10 flex justify-center w-full font-bold`}>
+           <center>
+           We are committed to minimising the
+            
+            amount of data we collect about our
+             visitors and subscribers.
+            
+             See our
+            <Link href="/privacy-policy">
+              <span style={{ color: "var(--yellow)" }}> privacy policy </span>
+            </Link>
+            for more details
+            
+            <br/>
+              Proudly{" "}
+                <img src="/heart-fixed-icon.png" alt="pride heart" className="inline"/>
+              {" "}
+              based in Barcelona
+           </center>
+          </div>
       <div
         // style={{ backgroundColor: "var(--purple-medium)" }}
-        className={` ${style["bg-footer"]} text-white  flex flex-col justify-center items-center  pt-5 pb-8 border-t border-white border-solid`}
+        className={` ${style["bg-footer"]} text-white  flex flex-col justify-center items-center  pt-5 pb-8 border-t border-white/40 border-solid`}
       >
         <Link href="#header">
           <div className="flex flex-col items-center gap-2">
@@ -326,6 +377,6 @@ export default function Footer() {
           </div>
         </Link>
       </div>
-    </>
+    </section>
   );
 }
