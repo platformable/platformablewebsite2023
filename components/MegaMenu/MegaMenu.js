@@ -1,9 +1,12 @@
 
 import React from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {SectorsNavData} from '../../src/utils/menu'
 export default function MegaMenu() {
+  const [menu, setMenu] = useState('');
+
   return (
     <nav className="relative bg-white  border-gray-300 ">
       <div className=" flex justify-between items-center">
@@ -25,6 +28,8 @@ export default function MegaMenu() {
           <li className="toggleable ">
             <input
               type="radio"
+              checked={menu === 'products'}
+              onClick={() => menu === 'products' ? setMenu('') : setMenu('products')}
               name="menu-tog"
               value="selected"
               id="toggle-one"
@@ -135,6 +140,8 @@ export default function MegaMenu() {
           <li className="toggleable ">
             <input
               type="radio"
+              checked={menu === 'resources'}
+              onClick={() => menu === 'resources' ? setMenu('') : setMenu('resources')}
               name="menu-tog"
 
               value="selected"
@@ -205,6 +212,8 @@ export default function MegaMenu() {
           <li className="toggleable ">
             <input
               type="radio"
+              checked={menu === 'company'}
+              onClick={() => menu === 'company' ? setMenu(''): setMenu('company')}
               name="menu-tog"
               value="selected"
               id="toggle-three"
