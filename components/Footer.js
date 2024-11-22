@@ -11,11 +11,11 @@ const sitemap = [
     links: [
       {
         label: "API Industry Trends Report",
-        url: "/#",
+        url: "/contact-us",
       },
       {
         label: "Consultancy and Speaker Engagement",
-        url: "/#",
+        url: "/contact-us",
       },
     ],
   },
@@ -24,15 +24,15 @@ const sitemap = [
     links: [
       {
         label: "OBOF Trends Report",
-        url: "/products/datasets",
+        url: "/products/open-banking",
       },
       {
         label: "Open Banking Accelerator",
-        url: "/products/data-products",
+        url: "/contact-us",
       },
       {
         label: "Consultancy and Speaker Engagement",
-        url: "/#",
+        url: "/contact-us",
       },
     ],
   },
@@ -41,19 +41,15 @@ const sitemap = [
     links: [
       {
         label: "Health Data Governance Mentoring and Support",
-        url: "/products/datasets",
-      },
-      {
-        label: "Data Products",
-        url: "/products/data-products",
+        url: "/contact-us",
       },
       {
         label: "Open Health Accelerator",
-        url: "/#",
+        url: "/contact-us",
       },
       {
         label: "Consultancy and Speaker Engagement",
-        url: "/#",
+        url: "/contact-us",
       },
     ],
   },
@@ -62,15 +58,15 @@ const sitemap = [
     links: [
       {
         label: "Data Governance",
-        url: "/products/data-governance",
+        url: "/contact-us",
       },
       {
         label: "Traceability Ecosystem Mapping",
-        url: "/#",
+        url: "/contact-us",
       },
       {
         label: "Consultancy and Speaker Engagement",
-        url: "/products/speaker-engagement",
+        url: "/contact-us",
       },
     ],
   },
@@ -81,13 +77,13 @@ const sitemap = [
         label: "Blog",
         url: "/blog",
       },
-      {
-        label: "Newsletter",
-        url: "/#",
-      },
+      // {
+      //   label: "Newsletter",
+      //   url: "/#",
+      // },
       {
         label: "Linkedin",
-        url: "/products/data-governance",
+        url: "https://www.linkedin.com/company/platformable",
       },
       {
         label: "Youtube",
