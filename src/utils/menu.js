@@ -4,7 +4,7 @@ export const SectorsNavData = {
     products: [
       {
         title: "API Industry Trends Report",
-        description: "Discover Open Banking Trends",
+        description: "Discover API Economy trends",
         link: "/contact-us",
       },
       /*{ title: "Open Ecosystem Online Courses", description: "Ecosystem Monitoring Dashboard", link: "" },
