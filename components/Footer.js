@@ -222,7 +222,7 @@ export default function Footer() {
     <section className={`${style["bg-footer"]} `}>
       <div
         // style={{ backgroundColor: "var(--purple-medium)" }}
-        className={`mx-auto lg:mx-20 text-white pt-8 pb-8  lg:flex  lg:gap-5 justify-between items-start flex-nowrap `}
+        className={`container mx-auto  text-white pt-8 pb-8  lg:flex  lg:gap-5 justify-between items-start flex-nowrap `}
       >
         <div id="footer-logo" className="grid gap-y-5 xl:gap-8 pt-6 lg:pt-0 lg:w-4/7">
           <Link href="/">
