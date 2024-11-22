@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import Logo from "/public/logo.png";
+import { useState } from "react";
 import Image from "next/image";
 import LogoWhite from "/public/Platformable-logo-white.png";
 import style from "../src/styles/Footer.module.css";
@@ -77,10 +76,7 @@ const sitemap = [
         label: "Blog",
         url: "/blog",
       },
-      // {
-      //   label: "Newsletter",
-      //   url: "/#",
-      // },
+  
       {
         label: "Linkedin",
         url: "https://www.linkedin.com/company/platformable",
@@ -120,7 +116,6 @@ export default function Footer() {
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isResponse, setIsResponse] = useState(false);
-  const [subscribers, setSubscribers] = useState([]);
 
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 

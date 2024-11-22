@@ -34,12 +34,7 @@ export default function SocialProof({data, colorScheme}) {
         slidesRef.current.childNodes[i].classList.remove("prev");
         slidesRef.current.childNodes[i].classList.remove("next");
       }
-      // if (prev == -1) {
-      //   setPrev(2);
-      // }
-      // if (next == 3) {
-      //   setNext(0);
-      // }
+    
   
       slidesRef.current.childNodes[curr]?.classList.add("active");
       slidesRef.current.childNodes[pre]?.classList.add("prev");
