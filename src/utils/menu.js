@@ -4,14 +4,14 @@ export const SectorsNavData = {
     products: [
       {
         title: "API Industry Trends Report",
-        description: "Discover Open Banking Trends",
+        description: "Discover open banking trends",
         link: "/contact-us",
       },
       /*{ title: "Open Ecosystem Online Courses", description: "Ecosystem Monitoring Dashboard", link: "" },
         { title: "OBOF Online Courses", description: "Advance Your Open Banking Skills", link: "" }, */
       {
         title: "Consultancy and Speaker Engagement",
-        description: "Expert Guidance and Insights",
+        description: "Expert guidance and insights",
         link: "/contact-us",
       },
     ],
@@ -22,18 +22,18 @@ export const SectorsNavData = {
     products: [
       {
         title: "OBOF Trends Report",
-        description: "Discover Open Banking Trends",
+        description: "Discover open banking trends",
         link: "/products/open-banking",
       },
       {
         title: "Open Banking Accelerator",
-        description: "Ecosystem Monitoring Dashboard",
+        description: "Ecosystem monitoring dashboard",
         link: "/contact-us",
       },
       /*   { title: "OBOF Online Courses", description: "Advance Your Open Banking Skills", link: "" }, */
       {
         title: "Consultancy and Speaker Engagement",
-        description: "Open Banking Expertise at Your Service",
+        description: "Open banking expertise at your service",
         link: "/contact-us",
       },
     ],
@@ -46,18 +46,18 @@ export const SectorsNavData = {
         { title: "HDG In-Person Training", description: "Hands-On Health Data Governance Training", link: "" }, */
       {
         title: "Health Data Governance Mentoring and Support",
-        description: "Streamline Health Data Management",
+        description: "Streamline health data management",
         link: "/contact-us",
       },
       {
         title: "Open Health Accelerator",
         description:
-          "Keep Up with Health Policies, Regulations and Health API Platforms",
+          "Keep up with health policies, regulations and health api platforms",
         link: "/contact-us",
       },
       {
         title: "Consultancy and Speaker Engagement",
-        description: "Open Health Expertise at Your Service",
+        description: "Open health expertise at your service",
         link: "/contact-us",
       },
     ],
@@ -68,17 +68,17 @@ export const SectorsNavData = {
     products: [
       {
         title: "Data Governance",
-        description: "Mastering Data Governance for Traceability",
+        description: "Mastering data governance for traceability",
         link: "/contact-us",
       },
       {
         title: "Traceability Ecosystem Mapping",
-        description: "Dynamic Traceability Ecosystem Website",
+        description: "Dynamic traceability ecosystem website",
         link: "/contact-us",
       },
       {
         title: "Consultancy and Speaker Engagement",
-        description: "Traceability Expertise",
+        description: "Traceability expertise",
         link: "/contact-us",
       },
     ],
