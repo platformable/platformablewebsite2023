@@ -37,7 +37,7 @@ export default function MegaMenu() {
             />
             <label
               htmlFor="toggle-one"
-              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold"
+              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold text-[#3423C5]"
             >
               Products
             </label>
@@ -78,7 +78,7 @@ export default function MegaMenu() {
                       href={product.link}
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
-                       <p className="font-bold text-sm"> {product?.title} </p>
+                       <p className="font-bold text-sm "> {product?.title} </p>
                        <span className="text-xs">{product.description}</span>
                     </Link>
                   </li>
@@ -150,7 +150,7 @@ export default function MegaMenu() {
             />
             <label
               htmlFor="toggle-two"
-              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold "
+              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold text-[#3423C5] "
             >
               Resources
             </label>
@@ -224,9 +224,9 @@ export default function MegaMenu() {
             />
             <label
               htmlFor="toggle-three"
-              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold"
+              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold text-[#3423C5]"
             >
-              Company
+              About
             </label>
             <div
               role="toggle"
@@ -240,7 +240,7 @@ export default function MegaMenu() {
                       href="/about"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
-                       <p className="font-bold text-sm">About </p>
+                       <p className="font-bold text-sm">About us </p>
                        {/* <span className="text-xs">{product.description}</span> */}
                     </Link>
                   </li>
