@@ -33,7 +33,7 @@ export const SectorsNavData = {
       /*   { title: "OBOF Online Courses", description: "Advance Your Open Banking Skills", link: "" }, */
       {
         title: "Consultancy and Speaker Engagement",
-        description: "Open banking expertise at your service",
+        description: "Open banking expertise",
         link: "/contact-us",
       },
     ],
@@ -52,12 +52,12 @@ export const SectorsNavData = {
       {
         title: "Open Health Accelerator",
         description:
-          "Keep up with health policies, regulations and health api platforms",
+          "Keep up with health policies, regulations and health API platforms",
         link: "/contact-us",
       },
       {
         title: "Consultancy and Speaker Engagement",
-        description: "Open health expertise at your service",
+        description: "Open health expertise",
         link: "/contact-us",
       },
     ],
