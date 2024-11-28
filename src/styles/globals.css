@@ -3977,3 +3977,35 @@ example:
   }
 
 /* ----------------------- */
+
+/* STATIC CAROUSEL */
+
+.carousel-container {
+ /*  display: flex; */
+  /* Add your desired styles for spacing, alignment, etc. */
+}
+
+.carousel-container img {
+  /* Add your desired image styles */
+  width: 200px;
+  height: auto;
+  margin: 10px;
+}
+
+@keyframes pulsate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* The element to animate */
+.pulsating-element {
+
+  animation: pulsate 4000ms infinite; 
+}
