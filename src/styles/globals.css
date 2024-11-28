@@ -3974,5 +3974,5 @@ example:
 /* The element to animate */
 .pulsating-element {
  /* order: name, duration, transicion, delay, repeticion */
-  animation: pulsate 6000ms ease-in 500ms infinite; 
+  animation: pulsate 6000ms ease-in 0s infinite; 
 }
