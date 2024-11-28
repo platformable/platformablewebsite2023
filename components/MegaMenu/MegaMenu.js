@@ -45,7 +45,7 @@ export default function MegaMenu() {
               role="toggle"
               className=" mega-menu mb-16 sm:mb-0 bg-white shadow-md border"
             >
-              <div className=" w-full flex flex-wrap justify-between text-[#3423C5]">
+              <div className=" w-full flex flex-wrap justify-between ">
                 <ul className="px-4 py-5 w-full sm:w-1/2 lg:w-1/4 border-[#3423C5] border-b sm:border-r lg:border-b-0 ">
                   <h3 className="font-bold text-base px-3 text-[#3423C5] text-bold mb-2">
                     {SectorsNavData["Open Ecosystem"].title}
@@ -156,7 +156,7 @@ export default function MegaMenu() {
             </label>
             <div
               role="toggle"
-              className=" single-resources-menu mb-16 sm:mb-0 bg-white shadow-md border text-[#3423C5]"
+              className=" single-resources-menu mb-16 sm:mb-0 bg-white shadow-md border "
             >
               <div className=" w-full flex flex-wrap justify-between">
                 <ul className="px-4 py-5 w-full ">
@@ -232,7 +232,7 @@ export default function MegaMenu() {
               role="toggle"
               className="single-company-menu mb-16 sm:mb-0 bg-white border"
             >
-              <div className=" w-full flex flex-wrap justify-between text-[#3423C5]">
+              <div className=" w-full flex flex-wrap justify-between ">
                 <ul className="px-4 py-5 w-full ">
                  
                 <li>
