@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import Logo from "/public/logo.png";
+import { useState } from "react";
 import Image from "next/image";
 import LogoWhite from "/public/Platformable-logo-white.png";
 import style from "../src/styles/Footer.module.css";
@@ -11,11 +10,11 @@ const sitemap = [
     links: [
       {
         label: "API Industry Trends Report",
-        url: "/#",
+        url: "/contact-us",
       },
       {
         label: "Consultancy and Speaker Engagement",
-        url: "/#",
+        url: "/contact-us",
       },
     ],
   },
@@ -24,15 +23,15 @@ const sitemap = [
     links: [
       {
         label: "OBOF Trends Report",
-        url: "/products/datasets",
+        url: "/products/open-banking",
       },
       {
         label: "Open Banking Accelerator",
-        url: "/products/data-products",
+        url: "/contact-us",
       },
       {
         label: "Consultancy and Speaker Engagement",
-        url: "/#",
+        url: "/contact-us",
       },
     ],
   },
@@ -41,19 +40,15 @@ const sitemap = [
     links: [
       {
         label: "Health Data Governance Mentoring and Support",
-        url: "/products/datasets",
-      },
-      {
-        label: "Data Products",
-        url: "/products/data-products",
+        url: "/contact-us",
       },
       {
         label: "Open Health Accelerator",
-        url: "/#",
+        url: "/contact-us",
       },
       {
         label: "Consultancy and Speaker Engagement",
-        url: "/#",
+        url: "/contact-us",
       },
     ],
   },
@@ -62,15 +57,15 @@ const sitemap = [
     links: [
       {
         label: "Data Governance",
-        url: "/products/data-governance",
+        url: "/contact-us",
       },
       {
         label: "Traceability Ecosystem Mapping",
-        url: "/#",
+        url: "/contact-us",
       },
       {
         label: "Consultancy and Speaker Engagement",
-        url: "/products/speaker-engagement",
+        url: "/contact-us",
       },
     ],
   }, */
@@ -81,13 +76,10 @@ const sitemap = [
         label: "Blog",
         url: "/blog",
       },
-      {
-        label: "Newsletter",
-        url: "/#",
-      },
+  
       {
         label: "Linkedin",
-        url: "/products/data-governance",
+        url: "https://www.linkedin.com/company/platformable",
       },
       {
         label: "Youtube",
@@ -122,7 +114,6 @@ export default function Footer() {
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isResponse, setIsResponse] = useState(false);
-  const [subscribers, setSubscribers] = useState([]);
 
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
@@ -259,7 +250,7 @@ export default function Footer() {
           </div>
           <div
             id="sitemap-links"
-            className="grid grid-cols-2 md:grid-cols-2  mt-6 lg:mt-0 gap-x-5 gap-y-7 lg:gap-x-5 text-white justify-between  md:pl-10"
+            className="grid grid-cols-2 md:grid-cols-2  mt-4  gap-y-7  text-white justify-between  "
           >
             {sitemap.map((section, index) => (
               <div className="grid gap-4 content-start px-3" key={index}>
@@ -279,7 +270,7 @@ export default function Footer() {
 
           <div
           id="subscription-form"
-          className=" grid gap-4 mt-14 lg:mt-0 md:flex md:flex-col md:justify-center md:gap-4 lg:grid lg:gap-2 "
+          className=" grid gap-4 mt-14 lg:mt-0 md:flex md:flex-col  md:gap-4 lg:grid lg:gap-2 "
         >
           <div className="flex flex-col gap-y-5 md:justify-center">
             {/* md:justify-center put the icons and text in the center vertically */}
@@ -306,7 +297,7 @@ export default function Footer() {
                 />
               </Link>
               <Link
-                href="https://tidal.com/browse/mix/0105d4b80651774ef38931747c080a"
+                href="https://www.youtube.com/@platformable"
                 target="_blank"
               >
                 <img
@@ -317,9 +308,21 @@ export default function Footer() {
                   height={55}
                 />
               </Link>
+              <Link
+                href="https://tidal.com/browse/mix/0105d4b80651774ef38931747c080a"
+                target="_blank"
+              >
+                <img
+                  src="/tidal_footer.svg"
+                  className="text-white"
+                  alt="tidal"
+                  width={55}
+                  height={55}
+                />
+              </Link>
             </div>
-            <div className=" mt-3 md:mt-2 lg:mt-3">
-              <div className="">
+            <div className=" my-3 md:mt-2 lg:mt-3">
+              <div className="text-center">
                 <p className="font-bold text-base text-white">
                   Join our newsletter community
                 </p>
@@ -352,7 +355,7 @@ export default function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 {errorMessage && (
-                  <p className="text-base ml-1 text-red-500">{errorMessage}</p>
+                  <p className="text-base ml-1 text-red-500 text-center">{errorMessage}</p>
                 )}
                 {/* <img
                 src="/iron_footer.svg"

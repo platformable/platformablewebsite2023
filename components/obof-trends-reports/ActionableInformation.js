@@ -33,48 +33,7 @@ export default function ActionableInformation({data, sectorsStyle}) {
           </p>
         </div>
         ))}
-        {/* <div
-          id="actionable-card"
-          className="actionable-card bg-[#5A23EC] p-7 grid grid-rows-[0.5fr_1.5fr_1fr] gap-y-5 rounded-lg"
-        >
-          <p className="text-white font-bold text-center ">Strategies</p>
-
-          <div className="text-center flex justify-center">
-            <img src="/temporary_icon.svg" alt="" className="text-center" />
-          </div>
-
-          <p className="leading-6 text-white text-center">
-          Learn how businesses are leveraging Open Banking for success
-          </p>
-        </div>
-        <div
-          id="actionable-card"
-          className="actionable-card bg-[#5A23EC] p-7 grid grid-rows-[0.5fr_1.5fr_1fr] gap-y-5 rounded-lg"
-        >
-          <p className="text-white font-bold text-center ">Uncover the Impact</p>
-
-          <div className="text-center flex justify-center">
-            <img src="/temporary_icon.svg" alt="" className="text-center" />
-          </div>
-
-          <p className="leading-6 text-white text-center">
-          Discover how this dynamic ecosystem transforms societies, fuels local economies, etc
-          </p>
-        </div>
-        <div
-          id="actionable-card"
-          className="actionable-card bg-[#5A23EC] p-7 grid grid-rows-[0.5fr_1.5fr_1fr] gap-y-5 rounded-lg"
-        >
-          <p className="text-white font-bold text-center ">Exclusive Case Studies</p>
-
-          <div className="text-center flex justify-center">
-            <img src="/temporary_icon.svg" alt="" className="text-center" />
-          </div>
-
-          <p className="leading-6 text-white text-center">
-          Gain inspiration from real-world success stories
-          </p>
-        </div> */}
+       
       </div>
     </div>
   );

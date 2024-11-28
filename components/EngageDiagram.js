@@ -7,15 +7,13 @@ export const EngageDiagram = ({title}) => {
         heading_rect[0].style.stroke = '#fff'
         heading_rect[0].style.strokeWidth = '3px'
 
-        // animation test
-        // heading_rect[0].classList.add('change_fill_color')
+     
     }
     const unhighlightSection = (e) => {
         const heading_rect = document.getElementsByName(e.target.id)
         heading_rect[0].style.stroke = ''
 
-        // end animation test
-        // heading_rect[0].classList.remove('change_fill_color')
+   
 
     }
     return (
