@@ -7,10 +7,13 @@ import Collaborators from "../../components/home/Collaborators";
 import HowItWorks from "../../components/home/HowItWorks";
 import Products from "../../components/home/Products";
 import { colorSchemeBySector } from "../../components/prooduct/colorScheme";
+import StaticCarousel from "../../components/StaticCarousel/StaticCarousel";
 
 
 export default function Homepage({data}) {
   
+
+
 
    
     return (
@@ -18,7 +21,8 @@ export default function Homepage({data}) {
         <Meta title={data?.hero[0]?.SeoKeyword} keywords={data?.hero[0]?.SeoKeyword}  data={data}/>
         <Layout>
             <Hero data={data}/>
-            <Collaborators data={data} />
+            {/* <Collaborators data={data} /> */}
+            <StaticCarousel data={data}/>
             <Products data={data} />
             <Benefits data={data}/>
             <UseCasesPersona data={data} colorScheme={colorSchemeBySector.OB}/>

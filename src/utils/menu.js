@@ -4,7 +4,7 @@ export const SectorsNavData = {
     products: [
       {
         title: "API Industry Trends Report",
-        description: "Discover API economy trends",
+        description: "Discover open banking trends",
         link: "/contact-us",
       },
       /*{ title: "Open Ecosystem Online Courses", description: "Ecosystem Monitoring Dashboard", link: "" },
@@ -22,7 +22,7 @@ export const SectorsNavData = {
     products: [
       {
         title: "OBOF Trends Report",
-        description: "Discover Open Banking trends",
+        description: "Discover open banking trends",
         link: "/products/open-banking",
       },
       {
@@ -33,7 +33,7 @@ export const SectorsNavData = {
       /*   { title: "OBOF Online Courses", description: "Advance Your Open Banking Skills", link: "" }, */
       {
         title: "Consultancy and Speaker Engagement",
-        description: "Open Banking expertise at your service",
+        description: "Open banking expertise at your service",
         link: "/contact-us",
       },
     ],
@@ -45,19 +45,19 @@ export const SectorsNavData = {
       /* { title: "HDG Self-Paced Learning", description: "Learn Health Data Governance at Your Pace", link: "" },
         { title: "HDG In-Person Training", description: "Hands-On Health Data Governance Training", link: "" }, */
       {
-        title: "Health Data Governance mentoring and support",
+        title: "Health Data Governance Mentoring and Support",
         description: "Streamline health data management",
         link: "/contact-us",
       },
       {
         title: "Open Health Accelerator",
         description:
-          "Keep up with health policies, regulations and health API platforms",
+          "Keep up with health policies, regulations and health api platforms",
         link: "/contact-us",
       },
       {
         title: "Consultancy and Speaker Engagement",
-        description: "Open Health expertise at your service",
+        description: "Open health expertise at your service",
         link: "/contact-us",
       },
     ],

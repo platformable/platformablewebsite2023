@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { useEffect, useRef, useState} from "react";
 import styles from '@/styles/LogoSlider.module.css';
+import StaticCarousel from "../StaticCarousel/StaticCarousel";
 
 export default function Collaborators({data}) {
     const logos = [...data.collaborators?.collaboratorLogo, ...data.collaborators?.collaboratorLogo.slice(0,5)]
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
     const intervalRef = useRef(null);
@@ -48,6 +50,7 @@ export default function Collaborators({data}) {
                         </div>
                         ))}
                     </div>
+                   
                 </div>
                 </div>
                
