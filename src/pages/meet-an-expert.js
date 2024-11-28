@@ -3,6 +3,7 @@ import Layout from "../../components/Layout";
 import Hero from "../../components/meet-an-expert/Hero";
 import SocialProof from "../../components/meet-an-expert/SocialProof";
 import Meta from "../../components/Meta";
+import StaticCarousel from "../../components/StaticCarousel/StaticCarousel";
 
 export default function MeetAnExpert({ data}) {
 
@@ -10,7 +11,8 @@ export default function MeetAnExpert({ data}) {
     <Layout>
       <Meta title={data?.hero?.smallHeadline} data={data} />
       <Hero data={data} />
-      <Collaborators data={data}/>
+      <StaticCarousel data={data} />
+      {/* <Collaborators data={data}/> */}
       <SocialProof data={data} />
     </Layout>
   );

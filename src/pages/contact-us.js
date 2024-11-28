@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Hero from "../../components/contact-us.js/Hero";
 import Link from "next/link";
 import Collaborators from "../../components/contact-us.js/Collaborators";
+import StaticCarousel from "../../components/StaticCarousel/StaticCarousel";
 export default function ContactUs({ data }) {
     const metaData = {
       excerpt: 'Platformable contact section is public and open',
@@ -13,7 +14,6 @@ export default function ContactUs({ data }) {
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
 
-  
   return (
     <Layout>
       <Meta title={'Contact us'} data={metaData} />
@@ -33,7 +33,8 @@ export default function ContactUs({ data }) {
                 ))}   
 
            </div>
-           <Collaborators data={data} />
+           <StaticCarousel data={data} />
+        {/*    <Collaborators data={data} /> */}
         {/* <div className="text-white container mx-auto pt-10 pb-16">
           <h1 className="mb-5 font-bold">{data?.title || "Contact us"}</h1>
           <div className="wrapper grid lg:grid-cols-[1fr_1fr_1fr] grid-cols-1">
