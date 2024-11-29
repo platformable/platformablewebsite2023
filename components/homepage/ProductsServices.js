@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "@/styles/Homepage.module.css";
 import Link from "next/link";
 export default function ProductsServices({ title, product_cards }) {

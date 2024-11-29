@@ -1,9 +1,9 @@
 
-import React from "react";
+
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {SectorsNavData} from '../../src/utils/menu'
+import { SectorsNavData } from '../../src/utils/menu'
 export default function MegaMenu() {
   const [menu, setMenu] = useState('');
 

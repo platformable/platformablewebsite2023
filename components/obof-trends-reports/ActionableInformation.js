@@ -1,4 +1,4 @@
-import React from "react";
+
 import IconPlatformable from "../IconPlatformable";
 
 export default function ActionableInformation({data, sectorsStyle}) {
