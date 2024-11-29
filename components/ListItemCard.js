@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 export default function ListItemCard({item_description}) {
   const {list_item_card_text, list_item_card_img} = item_description

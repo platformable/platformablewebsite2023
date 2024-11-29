@@ -12,9 +12,6 @@
 } */
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
   --purple: #7743f5;
   --purple-extra-dark: #1d17a8;
   --purple-dark: #2a2fc1;
@@ -103,33 +100,8 @@ img {
 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-/* #rect_parent[data-product-type-rectangle="Rectangle Data governance"]:hover ~ rect[id="Rectangle Data governance"]  {
-  fill: red;
-} */
 
-.change_fill_color {
-  animation: opacityMove 10s infinite ease-in-out;
-  /* opacity: 70%; */
-}
 
-@keyframes opacityMove {
-  0% {
-    opacity: 70%;
-  }
-  50% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 70%;
-  }
-}
 html {
   scroll-behavior: smooth !important;
 }
@@ -3934,7 +3906,7 @@ example:
     opacity: 0;
     visibility: hidden;
     z-index: -900;
-    transition: opacity 0.3s, visibility 0.3s ease-in, z-index 0.3s ease-in;
+    transition: opacity 0.3s, visibility 0.3s ease-in, z-index 0.3s;
   }
   
   #toggle-one:checked ~ .mega-menu {
@@ -3977,3 +3949,30 @@ example:
   }
 
 /* ----------------------- */
+
+/* STATIC CAROUSEL */
+
+.carousel-container {
+ /*  display: flex; */
+  /* Add your desired styles for spacing, alignment, etc. */
+}
+
+
+
+@keyframes pulsate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* The element to animate */
+.pulsating-element {
+ /* order: name, duration, transicion, delay, repeticion */
+  animation: pulsate 6000ms ease-in 0s infinite; 
+}

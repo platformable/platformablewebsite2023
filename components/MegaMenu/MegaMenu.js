@@ -1,15 +1,15 @@
 
-import React from "react";
+
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {SectorsNavData} from '../../src/utils/menu'
+import { SectorsNavData } from '../../src/utils/menu'
 export default function MegaMenu() {
   const [menu, setMenu] = useState('');
 
   return (
     <nav className="relative bg-white  border-gray-300 ">
-      <div className=" flex justify-between items-center">
+      <div className=" flex justify-between items-center ">
         <div className="relative block  text-xl text-teal-600 font-bold">
         <Link href="/">
           <Image
@@ -37,15 +37,16 @@ export default function MegaMenu() {
             />
             <label
               htmlFor="toggle-one"
-              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold"
+              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold text-[#3423C5]"
             >
               Products
             </label>
             <div
               role="toggle"
               className=" mega-menu mb-16 sm:mb-0 bg-white shadow-md border"
+              onMouseLeave={()=>setMenu('')}
             >
-              <div className=" w-full flex flex-wrap justify-between">
+              <div className=" w-full flex flex-wrap justify-between ">
                 <ul className="px-4 py-5 w-full sm:w-1/2 lg:w-1/4 border-[#3423C5] border-b sm:border-r lg:border-b-0 ">
                   <h3 className="font-bold text-base px-3 text-[#3423C5] text-bold mb-2">
                     {SectorsNavData["Open Ecosystem"].title}
@@ -55,7 +56,7 @@ export default function MegaMenu() {
                     return (
                   <li key={index}>
                     <Link
-                      href="#"
+                      href={product.link}
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm"> {product?.title} </p>
@@ -75,10 +76,10 @@ export default function MegaMenu() {
                     return (
                 <li key={index}>
                     <Link
-                      href="#"
+                      href={product.link}
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
-                       <p className="font-bold text-sm"> {product?.title} </p>
+                       <p className="font-bold text-sm "> {product?.title} </p>
                        <span className="text-xs">{product.description}</span>
                     </Link>
                   </li>
@@ -94,7 +95,7 @@ export default function MegaMenu() {
                     return (
                 <li key={index}>
                     <Link
-                      href="#"
+                      href={product.link}
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                       <p className="font-bold text-sm"> {product?.title} </p>
@@ -113,7 +114,7 @@ export default function MegaMenu() {
                     return (
                   <li key={index}>
                     <Link
-                      href="#"
+                      href={product.link}
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                      <p className="font-bold text-sm"> {product?.title} </p>
@@ -150,20 +151,20 @@ export default function MegaMenu() {
             />
             <label
               htmlFor="toggle-two"
-              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold "
+              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold text-[#3423C5] "
             >
               Resources
             </label>
             <div
               role="toggle"
-              className=" single-resources-menu mb-16 sm:mb-0 bg-white shadow-md border"
+              className=" single-resources-menu mb-16 sm:mb-0 bg-white shadow-md border "
             >
               <div className=" w-full flex flex-wrap justify-between">
                 <ul className="px-4 py-5 w-full ">
                  
                 <li>
                     <Link
-                      href="#"
+                      href="/blog"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Blog </p>
@@ -171,19 +172,21 @@ export default function MegaMenu() {
                     </Link>
                   </li>
 
-                  <li>
+                  {/* <li>
                     <Link
                       href="#"
+                      target="_blank"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Newsletter </p>
-                       {/* <span className="text-xs">{product.description}</span> */}
+                       {/* <span className="text-xs">{product.description}</span> 
                     </Link>
-                  </li>
+                  </li> */}
 
                   <li>
                     <Link
-                      href="#"
+                      href="https://www.linkedin.com/company/platformable"
+                      target="_blank"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Linkedin </p>
@@ -192,7 +195,8 @@ export default function MegaMenu() {
                   </li>
                   <li>
                     <Link
-                      href="#"
+                      href="https://www.youtube.com/@platformable"
+                      target="_blank"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Youtube </p>
@@ -221,15 +225,15 @@ export default function MegaMenu() {
             />
             <label
               htmlFor="toggle-three"
-              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold"
+              className="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold text-[#3423C5]"
             >
-              Company
+              About
             </label>
             <div
               role="toggle"
               className="single-company-menu mb-16 sm:mb-0 bg-white border"
             >
-              <div className=" w-full flex flex-wrap justify-between">
+              <div className=" w-full flex flex-wrap justify-between ">
                 <ul className="px-4 py-5 w-full ">
                  
                 <li>
@@ -237,14 +241,14 @@ export default function MegaMenu() {
                       href="/about"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
-                       <p className="font-bold text-sm">About </p>
+                       <p className="font-bold text-sm">About us </p>
                        {/* <span className="text-xs">{product.description}</span> */}
                     </Link>
                   </li>
 
                   <li>
                     <Link
-                      href="/contact-us"
+                      href="/meet-an-expert"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Meet an expert </p>
@@ -254,7 +258,7 @@ export default function MegaMenu() {
 
                   <li>
                     <Link
-                        href="/contact-us"
+                        href="/become-partner"
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm">Become a partner </p>
