@@ -3,7 +3,6 @@ import Hero from "../../components/home/Hero";
 import Meta from "../../components/Meta";
 import Benefits from "../../components/home/Benefits";
 import UseCasesPersona from "../../components/prooduct/op/UseCasesPersona";
-import Collaborators from "../../components/home/Collaborators";
 import HowItWorks from "../../components/home/HowItWorks";
 import Products from "../../components/home/Products";
 import { colorSchemeBySector } from "../../components/prooduct/colorScheme";

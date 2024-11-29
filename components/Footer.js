@@ -212,11 +212,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 py-10 gap-x-7 justify-between ">
           <div
             id="footer-logo"
-            className="grid gap-y-5 xl:gap-8 pt-6 lg:pt-0"
+            className="grid gap-y-5 xl:gap-0 pt-6 md:pt-0"
           >
             <Link href="/">
               <Image
-                className="text-center"
+                className=""
                 src={LogoWhite}
                 alt={"platformable logo"}
                 width={"auto"}
@@ -227,10 +227,9 @@ export default function Footer() {
             </Link>
 
             <div
-        id="company-description"
-        className={` text-white  pb-10   font-bold pl-5`}
-      >
-        <>
+              id="company-description"
+              className={` text-white  pb-10   font-bold pl-3`}
+            >
           We are committed to minimising the amount of data we collect about our
           visitors and subscribers. See our
           <Link href="/privacy-policy">
@@ -245,7 +244,6 @@ export default function Footer() {
             className="inline"
           />{" "}
           based in Barcelona
-        </>
       </div>
           </div>
           <div
@@ -270,9 +268,9 @@ export default function Footer() {
 
           <div
           id="subscription-form"
-          className=" grid gap-4 mt-14 lg:mt-0 md:flex md:flex-col  md:gap-4 lg:grid lg:gap-2 "
+          className=" grid gap-4 mt-14 md:mt-0 md:flex md:flex-col  md:gap-4 lg:grid lg:gap-2 "
         >
-          <div className="flex flex-col gap-y-5 md:justify-center">
+          <div className="flex flex-col justify-center gap-y-2">
             {/* md:justify-center put the icons and text in the center vertically */}
             <div className="flex gap-x-2 justify-center h-[55px] items-center">
               <Link href="mailto:mark@platformable.com">

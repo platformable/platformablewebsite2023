@@ -4,7 +4,7 @@ export const SectorsNavData = {
     products: [
       {
         title: "API Industry Trends Report",
-        description: "Discover open banking trends",
+        description: "Stay ahead with the latest API trends",
         link: "/contact-us",
       },
       /*{ title: "Open Ecosystem Online Courses", description: "Ecosystem Monitoring Dashboard", link: "" },
@@ -28,7 +28,7 @@ export const SectorsNavData = {
       {
         title: "Open Banking Accelerator",
         description: "Ecosystem monitoring dashboard",
-        link: "/contact-us",
+        link: "/products/open-banking-accelerator",
       },
       /*   { title: "OBOF Online Courses", description: "Advance Your Open Banking Skills", link: "" }, */
       {
@@ -57,7 +57,7 @@ export const SectorsNavData = {
       },
       {
         title: "Consultancy and Speaker Engagement",
-        description: "Open health expertise",
+        description: "Expert health data governance guidance",
         link: "/contact-us",
       },
     ],
