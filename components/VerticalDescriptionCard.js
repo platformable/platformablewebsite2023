@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "@/styles/Homepage.module.css";
 export default function VerticalDescriptionCard({ card, position }) {
   const {
