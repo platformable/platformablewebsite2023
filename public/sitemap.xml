@@ -6,6 +6,12 @@
     xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <!-- Blogs URLs ****-->
     <url>
+        <loc>https://platformable.com/blog/digital-open-ecosystem-mindset</loc>
+        <lastmod>2024-12-09T09:23:40.531Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://platformable.com/blog/measuring-the-value-of-open-ecosystems-1-our-model</loc>
         <lastmod>2024-06-14T09:23:40.531Z</lastmod>
         <changefreq>weekly</changefreq>
