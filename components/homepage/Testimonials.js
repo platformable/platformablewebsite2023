@@ -1,4 +1,4 @@
-import React from "react";
+
 import TestimonialCard from "./TestimonialCard";
 import styles from "@/styles/Homepage.module.css";
 

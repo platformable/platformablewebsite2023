@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 export default function CheckIcon({backgroundColor = '#5B24EC'}) {
   return (
