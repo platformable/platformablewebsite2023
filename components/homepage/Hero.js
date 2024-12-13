@@ -1,9 +1,9 @@
 import Link from "next/link";
-import React, {useEffect, useRef, useState} from "react";
+import React, {useCallback, useEffect, useRef, useState} from "react";
 import styles from "@/styles/Homepage.module.css";
 import Image from 'next/image'
 
-export default function Hero({ heroImg, heroSubtitle, hero_title }) {
+export default function Hero({ heroSubtitle, hero_title }) {
   const videoEl = useRef(null);
   
   const [videoError, setError] = useState(null)
@@ -16,14 +16,14 @@ useEffect(() => {
   
   setIsMobile(isMobileDevice)
 }, [])
-  const handleFullScreen = () => {
+  const handleFullScreen = useCallback(() => {
       videoEl &&
         videoEl.current &&
         videoEl.current.requestFullscreen()
         .catch((error) => {
           setError('can´t reproduce video')
         });
-    };
+    }, [videoEl]);
     
   const subtitle = heroSubtitle?.split(" ")[0];
   const simpleSubtitle = heroSubtitle?.substr(heroSubtitle.indexOf(" ") + 1);

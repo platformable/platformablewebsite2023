@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-const Meta = ({ title, keywords, data }) => {
+const Meta = ({ children,title, keywords, data }) => {
 
   const router = useRouter();
   const urlPath=router.asPath
@@ -18,7 +18,7 @@ const Meta = ({ title, keywords, data }) => {
       <meta charSet="utf-8" />
       <link rel="icon" href="/favicon.ico" />
       <title>{title + ' » Platformable'}</title>
-
+      {children}
       {/* Twitter Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
