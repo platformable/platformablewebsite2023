@@ -148,6 +148,7 @@ export default function MegaMenu() {
               value="selected"
               id="toggle-two"
               className="toggle-input"
+              
             />
             <label
               htmlFor="toggle-two"
@@ -158,6 +159,7 @@ export default function MegaMenu() {
             <div
               role="toggle"
               className=" single-resources-menu mb-16 sm:mb-0 bg-white shadow-md border "
+              onMouseLeave={()=>setMenu('')}
             >
               <div className=" w-full flex flex-wrap justify-between">
                 <ul className="px-4 py-5 w-full ">
@@ -213,7 +215,8 @@ export default function MegaMenu() {
           </li>
           {/* <!-- end Toggleable Link--> */}
 
-          <li className="toggleable ">
+          <li className="toggleable "
+            onMouseLeave={()=>setMenu('')}>
             <input
               type="radio"
               checked={menu === 'company'}
