@@ -21,7 +21,7 @@ export default function HowItWorks({data}) {
            
            <div className="p-5 md:p-20 bg-[#FDEC6E] mt-10 md:mt-20 rounded-lg grid md:grid-cols-[1fr_1fr] shadow">
                 <div className="mb-10 md:mb-0">
-                    <h1 className="font-bold text-3xl md:text-5xl text-[#5B24EC]">Ready to Innovate?</h1>
+                    <h4 className="font-bold text-3xl md:text-5xl text-[#5B24EC]">Ready to Innovate?</h4>
                     <ul className="flex flex-col gap-6 my-10">
                         {data?.callToAction?.cta_option?.map((option, index) => (
                             // <li className="flex items-center gap-x-2 my-1 text-2xl font-medium text-white"> <p className="rounded-full px-2 text-white" style={{backgroundColor:selectedSector.mainColor}}>✓</p></li>

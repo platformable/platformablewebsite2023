@@ -3,7 +3,7 @@ import React, {useEffect, useRef, useState} from "react";
 import styles from "@/styles/Homepage.module.css";
 import Image from 'next/image'
 
-export default function Hero({ heroImg, heroSubtitle, hero_title }) {
+export default function Hero({ heroSubtitle, hero_title }) {
   const videoEl = useRef(null);
   
   const [videoError, setError] = useState(null)
