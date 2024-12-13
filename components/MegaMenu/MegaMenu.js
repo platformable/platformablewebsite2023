@@ -80,7 +80,7 @@ export default function MegaMenu() {
                       className="block px-3 py-5 hover:bg-[#F3EEFE]  hover:text-[#3423C5] rounded"
                     >
                        <p className="font-bold text-sm "> {product?.title} </p>
-                       <span className="text-xs">{product.description}</span>
+                       <span className="text-xs ">{product.description}</span>
                     </Link>
                   </li>
                     )
