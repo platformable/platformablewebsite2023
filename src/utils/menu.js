@@ -22,7 +22,7 @@ export const SectorsNavData = {
     products: [
       {
         title: "OBOF Trends Report",
-        description: "Discover open banking trends",
+        description: "Strategic insights into the latest trends across the globe in markets, pricing, regulations, products, technology, social impact and more",
         link: "/products/open-banking",
       },
       {
