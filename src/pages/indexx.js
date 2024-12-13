@@ -25,7 +25,7 @@ export default function Home({ data }) {
       <BannerLMS />
         
         <Hero
-          heroImg={newData?.hero_img?.data?.attributes.url}
+         
           heroSubtitle={newData?.hero_subtitle}
           hero_title={newData?.hero_title}
         />

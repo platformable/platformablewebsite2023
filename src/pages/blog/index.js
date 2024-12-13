@@ -10,7 +10,9 @@ export default function BlogsIndex({ posts }) {
   }
   return (
     <Layout>
-      <Meta title="Insights & Updates | Platformable Blog" data={metaData}/>
+      <Meta title="Insights & Updates | Platformable Blog" data={metaData}>
+      <link rel="canonical" href="https://www.platformable.com/blog/" />
+      </Meta>
       <section id="blog" className={`${styles["background_blog"]} py-10`}>
         <div className="container mx-auto">
           <h1 className="mb-5 font-bold text-white ">Blog</h1>

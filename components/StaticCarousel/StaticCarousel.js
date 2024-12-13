@@ -40,7 +40,7 @@ function StaticCarousel({ data }) {
       <p>NI:{(currentIndex + 4) % logos.length}</p> */}
        <section className="bg-white">
                 <div className="container mx-auto py-6 lg:py-10">
-                    <h2 className="text-xl font-bold text-[#FD27FF] text-center mb-14">{data?.collaborators?.heading ||' WE HAVE WORKED WITH'}</h2>
+                    <h3 className="text-xl font-bold text-[#FD27FF] text-center mb-14">{data?.collaborators?.heading ||' WE HAVE WORKED WITH'}</h3>
       <div className="carousel-container grid md:grid-cols-2 gap-y-4  justify-center justify-items-center lg:flex lg:justify-center lg:gap-x-14">
         {displayedLogos.map((logo, index) => (
           <img key={index} src={logo.collaborator_img.data?.attributes?.url} alt={logo.collaborator_img.data?.attributes?.alternativeText} 
