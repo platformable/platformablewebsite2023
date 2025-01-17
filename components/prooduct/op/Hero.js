@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero({data, colorScheme}) {
 
-  
+  console.log("product data",data)
   return (
     <section className="overflow-hidden  text-center pt-14 md:pt-20 pb-10 " style={{background: colorScheme.hero.backgroundColor}}>
       <div className="container mx-auto">
@@ -18,13 +18,13 @@ export default function Hero({data, colorScheme}) {
           
           <a href={data.hero.primaryCallToActionUrl} 
           
-          target="_blank" className="shadow rounded-md px-3 py-2  w-56" style={{border:`1px solid ${colorScheme.hero.primaryCallToActionBorderColor}`, backgroundColor:colorScheme.hero.primaryCallToActionBgColor,color:colorScheme.hero.primaryCallToActionTextColor}}>
+          target="_blank" className="shadow rounded-md px-3 py-2  w-56" style={{border:`1px solid ${colorScheme.hero.primaryCallToActionBorderColor}`, backgroundColor:data.hero.primaryCallToActionBgColor,color:data.hero.primaryCallToActionTextColor}}>
             <p className={`font-bold`} >{data?.hero?.primaryCallToAction}</p>
           </a>
     
           <a href={data?.hero?.secondaryCallToActionUrl} target="_blank">
-          <button className="rounded-md shadow  px-3 py-2  w-56" style={{border:`1px solid ${colorScheme.hero.secondaryCallToActionBorderColor}`}}>
-            <p className="text-[#5E2AED]" style={{color:colorScheme.hero.secondaryCallToActionTextColor}}> {data?.hero?.secondaryCallToAction}</p>
+          <button className="rounded-md shadow  px-3 py-2  w-56" style={{backgroundColor:data.hero.secondaryCallToActionBgColor}}>
+            <p className="text-[#5E2AED]" style={{color:data.hero.secondaryCallToActionTextColor,backgroundColor:data.hero.secondaryCallToActionBgColor}}> {data?.hero?.secondaryCallToAction}</p>
           </button>
           </a>
           
