@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero({data, colorScheme}) {
 
-  console.log("product data",data)
+ // console.log("product data",data)
   return (
     <section className="overflow-hidden  text-center pt-14 md:pt-20 pb-10 " style={{background: colorScheme.hero.backgroundColor}}>
       <div className="container mx-auto">
