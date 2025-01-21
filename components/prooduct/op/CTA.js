@@ -28,12 +28,12 @@ export default function CTA({data, colorScheme}) {
                     </ul>
                     <div className="flex flex-col md:flex-row gap-5 md:grid md:grid-cols-2 w-full">
                         <a href={data?.pricing?.price[0]?.callToActionMainUrl} className="" target="_blank">
-                        <button className={` px-3 py-2 shadow w-full rounded-md text-white`} style={{backgroundColor:data?.pricing.price[0]?.callToActionMainBgColor, border: `1px solid ${colorScheme?.pricing?.primaryCallToActionBorderColor}`}}>
+                        <button className={` px-3 py-2 shadow w-full rounded-md text-white`} style={{backgroundColor:data?.pricing.price[0]?.callToActionMainBgColor, border: `1px solid ${data?.pricing?.price[0]?.callToActionMainBorderColor}`}}>
                             <p className="text-[18px] font-bold" style={{color:data?.pricing?.price[0]?.callToActionMainTextColor}}>{data?.hero?.primaryCallToAction}</p>
                         </button>
                         </a>
                         <a href={data?.pricing?.price[0]?.callToActionSecondaryUrl}  className="">
-                        <button className="rounded-md shadow w-full px-3 py-2 " style={{border:`1px solid ${colorScheme?.pricing?.secondaryCallToActionBorderColor}`, backgroundColor:data?.pricing.price[0]?.callToActionSecondaryBgColor}}>
+                        <button className="rounded-md shadow w-full px-3 py-2 " style={{border:`1px solid ${data?.pricing?.price[0]?.callToActionSecondaryBorderColor}`, backgroundColor:data?.pricing.price[0]?.callToActionSecondaryBgColor}}>
                             <p className="text-[18px]" style={{color:data?.pricing?.price[0]?.callToActionSecondaryTextColor}}>{data?.hero?.secondaryCallToAction}</p>
                         </button>
                         </a>
