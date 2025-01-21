@@ -1,6 +1,7 @@
 import CheckIcon from "../../CheckIcon";
 
 export default function CTA({data, colorScheme}) {
+    console.log("cta data",data.pricing.price)
     return (
         <section className="py-10 md:py-14" style={{background: colorScheme.pricing?.backgroundColor}}>
             <div className="container mx-auto flex flex-col gap-y-10 md:grid md: grid-cols-2 md:gap-24">
@@ -27,13 +28,13 @@ export default function CTA({data, colorScheme}) {
                     </ul>
                     <div className="flex flex-col md:flex-row gap-5 md:grid md:grid-cols-2 w-full">
                         <a href={data?.pricing?.price[0]?.callToActionMainUrl} className="" target="_blank">
-                        <button className={` px-3 py-2 shadow w-full rounded-md text-white`} style={{backgroundColor:colorScheme?.pricing?.primaryCallToActionBgColor, border: `1px solid ${colorScheme?.pricing?.primaryCallToActionBorderColor}`}}>
-                            <p className="text-[18px] font-bold" style={{color:colorScheme.pricing.callToActionMainTextColor}}>{data?.hero?.primaryCallToAction}</p>
+                        <button className={` px-3 py-2 shadow w-full rounded-md text-white`} style={{backgroundColor:data?.pricing.price[0]?.callToActionMainBgColor, border: `1px solid ${colorScheme?.pricing?.primaryCallToActionBorderColor}`}}>
+                            <p className="text-[18px] font-bold" style={{color:data?.pricing?.price[0]?.callToActionMainTextColor}}>{data?.hero?.primaryCallToAction}</p>
                         </button>
                         </a>
                         <a href={data?.pricing?.price[0]?.callToActionSecondaryUrl}  className="">
-                        <button className="rounded-md shadow w-full px-3 py-2 " style={{border:`1px solid ${colorScheme?.pricing?.secondaryCallToActionBorderColor}`, backgroundColor:colorScheme?.pricing?.secondaryCallToActionBgColor}}>
-                            <p className="text-[18px]" style={{color:colorScheme?.pricing?.secondaryCallToActionTextColor}}>{data?.hero?.secondaryCallToAction}</p>
+                        <button className="rounded-md shadow w-full px-3 py-2 " style={{border:`1px solid ${colorScheme?.pricing?.secondaryCallToActionBorderColor}`, backgroundColor:data?.pricing.price[0]?.callToActionSecondaryBgColor}}>
+                            <p className="text-[18px]" style={{color:data?.pricing?.price[0]?.callToActionSecondaryTextColor}}>{data?.hero?.secondaryCallToAction}</p>
                         </button>
                         </a>
                         
