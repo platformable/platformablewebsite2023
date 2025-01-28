@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@newrelic/next": "^0.7.0",
+    "@next/font": "^14.2.15",
     "autoprefixer": "10.4.14",
     "dotenv": "^16.3.1",
     "eslint": "8.43.0",

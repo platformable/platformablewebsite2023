@@ -1,18 +1,20 @@
 import Layout from "../../components/Layout";
 import Hero from "../../components/home/Hero";
 import Meta from "../../components/Meta";
-import Benefits from "../../components/home/Benefits";
-import UseCasesPersona from "../../components/prooduct/op/UseCasesPersona";
-import HowItWorks from "../../components/home/HowItWorks";
-import Products from "../../components/home/Products";
+// import Benefits from "../../components/home/Benefits";
+// import UseCasesPersona from "../../components/prooduct/op/UseCasesPersona";
+// import HowItWorks from "../../components/home/HowItWorks";
+// import Products from "../../components/home/Products";
 import { colorSchemeBySector } from "../../components/prooduct/colorScheme";
 import StaticCarousel from "../../components/StaticCarousel/StaticCarousel";
+import dynamic from "next/dynamic";
 
+const HowItWorks = dynamic(() => import('../../components/home/HowItWorks'))
+const UseCasesPersona = dynamic(() => import('../../components/prooduct/op/UseCasesPersona'))
+const Products = dynamic(() => import('../../components/home/Products'))
+const Benefits = dynamic(() => import('../../components/home/Benefits'))
 
 export default function Homepage({data}) {
-  
-
-
 
    
     return (

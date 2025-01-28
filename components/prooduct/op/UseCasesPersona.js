@@ -4,13 +4,8 @@ import Image from "next/image";
 import styles from '../../../src/styles/NewHomepage.module.css'
 
 export default function UseCasesPersona({ data, colorScheme }) {
-  const [selectedSector, setSelectedSector] = useState("");
-  const chooseSector = (category) =>
-    data?.personaCases
-      ? data?.bentoBox?.find((i) => i.label === selectedSector)
-      : setSelectedSector(category);
-
-      useEffect(() => setSelectedSector(data?.personaCases[0]), [])
+  const [selectedSector, setSelectedSector] = useState(data?.personaCases[0]);
+ 
 
   return (
     <section id="persona-section" className="container mx-auto py-10 md:py-14 "style={{background: colorScheme?.personas?.backgroundColor}} >
@@ -47,7 +42,11 @@ export default function UseCasesPersona({ data, colorScheme }) {
            </ul>
           </div>
         </div>
-        <Image width={360} height={400} className="md:mr-10" src={selectedSector?.image?.data?.attributes?.url} alt={`${selectedSector?.image?.data?.attributes?.alternativeText}`} />
+        {
+          selectedSector && (
+            <Image loading="lazy" width={360} height={400} className="md:mr-10" src={selectedSector?.image?.data?.attributes?.url} alt={`${selectedSector?.image?.data?.attributes?.alternativeText}`} />
+          )
+        }
       </div>
      </div>
     </section>

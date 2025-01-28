@@ -35,7 +35,7 @@ export default function HowItWorks({data}) {
                      <button className={`text-xl px-4 py-2 md:mt-5 shadow rounded-md text-white font-bold`} style={{backgroundColor:'#5B24EC',color:'#FFEB55'}}>{data?.hero[0]?.primaryCallToAction}</button>
                     </a>
                 </div>            
-                <Image src={data?.callToAction?.cta_img?.data?.attributes?.url} alt={data?.callToAction?.cta_img?.data?.attributes?.alternativeText} width={data?.callToAction?.cta_img?.data?.attributes?.width} height={data?.callToAction?.cta_img?.data?.attributes?.height}/>
+                <Image src={data?.callToAction?.cta_img?.data?.attributes?.url} alt={data?.callToAction?.cta_img?.data?.attributes?.alternativeText} width={data?.callToAction?.cta_img?.data?.attributes?.width} height={data?.callToAction?.cta_img?.data?.attributes?.height} loading="lazy"/>
            </div>
            </div>
         </section>
