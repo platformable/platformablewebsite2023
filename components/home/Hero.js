@@ -1,17 +1,19 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
-export default function Hero({data}) {
+export default function Hero({data, isMobile}) {
+   
     return (
         <section id="new-hero-home" className="bg-[url('/Untitled.svg')] bg-cover relative overflow-hidden pt-14 md:pt-20 pb-10">
       <div className="container mx-auto grid lg:grid-cols-2 gap-y-5 lg:gap-x-10" >
         <article>
-        <h1 className={`text-lg mb-3  font-bold`} style={{color:data.hero[0]?.headingColor}}>{data?.hero[0]?.SeoKeyword}</h1>
-            <h2 className="font-bold mb-5 leading-tight" style={{color:data?.hero[0]?.BigHeadlineTextColor}}>
+        <p className={`text-lg mb-3  font-bold`} style={{color:data.hero[0]?.headingColor}}>{data?.hero[0]?.SeoKeyword}</p>
+            <h1 className="font-bold mb-5 text-4xl leading-tight" style={{color:data?.hero[0]?.BigHeadlineTextColor}}>
             {data?.hero[0]?.bigHeadline}
-            </h2>
-            <p className="text-2xl" style={{color: data?.hero[0]?.subHeadlineTextColor}}>
+            </h1>
+            <h2 className="text-2xl" style={{color: data?.hero[0]?.subHeadlineTextColor}}>
             {data?.hero[0]?.subHeadline}
-            </p>
+            </h2>
         
             <div className="flex flex-col md:flex-row gap-5 justify-center md:justify-start items-center mt-10 mb-10">
             
@@ -31,17 +33,19 @@ export default function Hero({data}) {
        </article>
         
         {/* <img src={data?.hero[0]?.image?.data?.attributes.url} alt={data?.hero[0]?.image?.data?.attributes.alternativeText} className="align-top"/> */}
+
         <Image
             src={data?.hero[0]?.image?.data?.attributes.url} 
             // src="/hero_home_page_converted.webp"
             alt={data?.hero[0]?.image?.data?.attributes.alternativeText} 
-            className="align-top aspect-auto"
-            width={600}
-            priority={true}
+            className="object-contain "
+            //Put isMobile Variable on false to load the image with high priority, 
+            // so we try to load the image with high priority only on desktop
+            priority={!isMobile}
+            width={700}
             height={450}
-            // unoptimized
+            sizes="(max-width: 768px) 100vw, (min-width: 768px) 50vw"
         />
-
         
       </div>
     </section>
