@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import styles from "@/styles/Understandpage.module.css";
 import Search from "../../components/Search";
 import BlogPreviewCard from "../BlogPreviewCard";

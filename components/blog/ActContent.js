@@ -1,8 +1,10 @@
-import ReactMarkdown from "react-markdown";
+// import ReactMarkdown from "react-markdown";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import BlogCarousel from "./BlogCarousel";
+import dynamic from "next/dynamic";
+const ReactMarkdown = dynamic(() => import("react-markdown"), { ssr: false });
 
 export default function ActContent({ data }) {
   return (

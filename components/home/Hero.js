@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 export default function Hero({data}) {
     return (
         <section id="new-hero-home" className="bg-[url('/Untitled.svg')] bg-cover relative overflow-hidden pt-14 md:pt-20 pb-10">
@@ -36,8 +37,9 @@ export default function Hero({data}) {
             alt={data?.hero[0]?.image?.data?.attributes.alternativeText} 
             className="align-top aspect-auto"
             width={600}
+            priority={true}
             height={450}
-            unoptimized
+            // unoptimized
         />
 
         
