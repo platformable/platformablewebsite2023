@@ -1,7 +1,9 @@
-import ReactMarkdown from "react-markdown";
+// import ReactMarkdown from "react-markdown";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
+import dynamic from "next/dynamic";
+const ReactMarkdown = dynamic(() => import("react-markdown"), { ssr: false });
 
 export default function RegularContent({ data }) {
   return (
