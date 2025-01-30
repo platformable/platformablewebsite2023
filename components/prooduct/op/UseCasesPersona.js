@@ -27,7 +27,7 @@ export default function UseCasesPersona({ data, colorScheme }) {
 
       <div className="flex flex-col items-center  md:flex-row md:justify-between lg:h-80 my-10  gap-10 md:gap-20 2xl:gap-32">
         <div className="md:w-3/6">
-          <h2 className="font-bold leading-10 text-4xl" style={{color: colorScheme?.personas?.mainColor}}>{selectedSector?.title}</h2>
+          <h3 className="font-bold leading-10 text-4xl" style={{color: colorScheme?.personas?.mainColor}}>{selectedSector?.title}</h3>
           <p className="text-lg leading-6 mt-8" style={{color: colorScheme?.personas?.textColor}}>{selectedSector?.text}</p>
           <div className="personas-homepage-list">
             <ul className="mt-5 list-style-none flex flex-col gap-6">
