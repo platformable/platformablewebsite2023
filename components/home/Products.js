@@ -38,7 +38,7 @@ export default function Products({data}) {
                ${prod.sector==='Traceability' ? 'bg--gradient-traceability-btn':''}
               
               `}></div>
-            <h6>{prod?.sector}</h6>
+            <h3 className="text-[22px]">{prod?.sector}</h3>
           </button>
         ))}
       </div>
@@ -57,7 +57,7 @@ export default function Products({data}) {
                   <div className="text-lg mb-2 font-medium" style={{color:'#5E2AED'}}>{box.label}</div>
                 )}
                 {box.title && (
-                  <h2 className="text-2xl mb-4 font-semibold" style={{color:box.textColor}}>{box.title}</h2>
+                  <h4 className="text-2xl mb-4 font-semibold" style={{color:box.textColor}}>{box.title}</h4>
                 )}
                 {box.text && <p className="text-base mb-5" style={{color:box.textColor}}>{box.text}</p>}
 

@@ -12,7 +12,7 @@ export default function HowItWorks({data}) {
                 {data?.steps?.map((step, index) => (
                      <div className="px-5 md:px-10 py-3 text-center" key={index}>
                      <span className="font-medium text-[#FFE200]">{step?.step}</span>
-                     <h2 className="text-2xl font-bold mt-2 my-4">{step?.heading}</h2>
+                     <h3 className="text-2xl font-bold mt-2 my-4">{step?.heading}</h3>
                      <p className="">{step?.description}</p>
                  </div>
                 ))}   
