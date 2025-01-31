@@ -182,30 +182,7 @@ export default function Footer() {
     }
   };
 
-  // useEffect(() => {
-  //   handleGet();
-  // }, []);
-  // async function handleGet() {
-  //   try {
-  //     let response = await fetch(`/api/subscribe`, {
-  //       method: "GET",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Authorization: `Bearer ${apiKey}`,
-  //       },
-  //     });
-
-  //     if (response.ok) {
-  //       let data = await response.json();
-  //       console.log(data);
-  //       setSubscribers(data);
-  //     } else {
-  //       console.log(`not successful to see subscribers`);
-  //     }
-  //   } catch (error) {
-  //     return `Error: ${error}`;
-  //   }
-  // }
+  
   return (
     <section className={`${style["bg-footer"]} `}>
       <div className="container mx-auto">
@@ -219,7 +196,7 @@ export default function Footer() {
                 className=""
                 src={LogoWhite}
                 alt={"platformable logo"}
-                width={"auto"}
+                width={257}
                 height={55}
                 unoptimized
                 loading="lazy"
@@ -238,9 +215,12 @@ export default function Footer() {
           for more details
           <br />
           Proudly{" "}
-          <img
+          <Image
             src="/heart-fixed-icon.png"
             alt="pride heart"
+            width={66}
+            height={56}
+            loading="lazy"
             className="inline"
           />{" "}
           based in Barcelona
