@@ -13,36 +13,7 @@ export default function ProductTemplate({data}) {
 
   // console.log("product data",data)
   
-    const sectorsStyle = {
-      'Open Banking': {
-        bgColor: 'bg--gradient-obof',
-        bgGradientColor: 'bg--gradient-obof',
-        textColor: 'text-[var(--ob-light)]',
-        iconColor: 'var(--ob-light)',
-        checklistImage: '/benefits_check_obof.svg'
-      },
-      'Open Health': {
-        bgColor: 'bg--gradient-oh',
-        bgGradientColor: 'bg--gradient-oh',
-        textColor: 'text-[var(--oh-light)]',
-        iconColor: 'var(--oh-light)',
-        checklistImage: '/benefits_check_oh.svg'
-      },
-      'Open Ecosystems': {
-        bgColor: 'bg-[var(--green)]',
-        bgGradientColor: 'bg--gradient-oe',
-        textColor: 'text-[var(--blue)]',
-        iconColor: 'var(--blue)',
-        checklistImage: '/benefits_check_oe.svg'
-      },
-      'Traceability': {
-        bgColor: 'bg-[var(--green)]',
-        bgGradientColor: 'bg--gradient-traceability',
-        textColor: 'text-[var(--blue)]',
-        iconColor: 'var(--blue)',
-        checklistImage: '/benefits_check_oe.svg'
-      },
-    }
+   
     return (
         <>
         <Meta title={data?.hero?.SeoKeyword} keywords={'open banking open finance trends reports, open health, open ecosystems, fintech APIs, financial inclusion'} data={data}/>

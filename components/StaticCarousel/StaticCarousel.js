@@ -44,7 +44,7 @@ function StaticCarousel({ data }) {
                     <h2 className="text-xl font-bold text-[#FD27FF] text-center mb-14">{data?.collaborators?.heading ||' WE HAVE WORKED WITH'}</h2>
       <div className="carousel-container grid md:grid-cols-2 gap-y-4  justify-center justify-items-center lg:flex lg:justify-center lg:gap-x-14">
         {displayedLogos.map((logo, index) => (
-          <Image width={200} height={61} loading="lazy" key={index} src={logo.collaborator_img.data?.attributes?.url} alt={logo.collaborator_img.data?.attributes?.alternativeText} 
+          <Image width={200} height={61} loading="lazy" quality={65} key={index} src={logo.collaborator_img.data?.attributes?.url} alt={logo.collaborator_img.data?.attributes?.alternativeText} 
           className={`pulsating-element md:mx-2`}/>
         ))}
       </div>

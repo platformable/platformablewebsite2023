@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 export default function Hero({data, isMobile}) {
    
@@ -38,13 +37,10 @@ export default function Hero({data, isMobile}) {
             src={data?.hero[0]?.image?.data?.attributes.url} 
             // src="/hero_home_page_converted.webp"
             alt={data?.hero[0]?.image?.data?.attributes.alternativeText} 
-            className="object-contain "
-            //Put isMobile Variable on false to load the image with high priority, 
-            // so we try to load the image with high priority only on desktop
-            priority={!isMobile}
-            width={700}
-            height={450}
-            sizes="(max-width: 768px) 100vw, (min-width: 768px) 50vw"
+            className=""
+            priority
+            width={data?.hero[0]?.image?.data?.attributes.width}
+            height={data?.hero[0]?.image?.data?.attributes.height}
         />
         
       </div>
