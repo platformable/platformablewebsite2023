@@ -445,16 +445,16 @@ h6 {
 }
 
 .inset-box-business-light {
-  background-color: var(--business-color);
-  padding:5px 10px;
+  background-color: var(--business-color-light);
+  padding:20px;
   border-radius:10px;
   margin:10px 0;
   color:black !important;
 }
 
 .inset-box-highlight-light {
-  background-color: var(--highlight-color);
-  padding:5px 10px;
+  background-color: var(--highlight-color-light);
+  padding:20px;
   border-radius:10px;
   margin:10px 0;
   color:black !important;
