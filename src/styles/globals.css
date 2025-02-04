@@ -602,7 +602,13 @@ h6 {
   border-radius:10px;
   color:black !important;
 }
-
+.summary-box-traceability-dark {
+  background: linear-gradient(90deg, #C7F8FF 0%, #FBC6FD 100%) 0% 0% no-repeat
+    padding-box;
+  padding: 20px;
+  border-radius: 10px;
+  color: black !important;
+}
 .top-blog-card-img-container img {
   width: 30px;
 }
