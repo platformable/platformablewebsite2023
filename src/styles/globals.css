@@ -91,11 +91,12 @@
   display: inline-block;
 }
 img {
-  image-rendering: -moz-crisp-edges;
+  /* image-rendering: -moz-crisp-edges;
     image-rendering: -o-crisp-edges;
     image-rendering: -webkit-optimize-contrast;
-    /* image-rendering: optimizeQuality;  this value does not appear in the MDN reference*/ 
-    -ms-interpolation-mode: nearest-neighbor;
+   image-rendering: optimizeQuality;   */
+    /* -ms-interpolation-mode: nearest-neighbor; */
+/*     object-fit: cover; */
 
 }
 
