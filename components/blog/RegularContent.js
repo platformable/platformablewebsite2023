@@ -1,9 +1,9 @@
 // import ReactMarkdown from "react-markdown";
-import rehypeSanitize from "rehype-sanitize";
-import rehypeRaw from "rehype-raw";
-import remarkGfm from "remark-gfm";
-import dynamic from "next/dynamic";
-const ReactMarkdown = dynamic(() => import("react-markdown"), { ssr: false });
+import rehypeSanitize from "rehype-sanitize"
+import rehypeRaw from "rehype-raw"
+import remarkGfm from "remark-gfm"
+import dynamic from "next/dynamic"
+const ReactMarkdown = dynamic(() => import("react-markdown"), { ssr: false })
 
 export default function RegularContent({ data }) {
   return (
@@ -27,11 +27,9 @@ export default function RegularContent({ data }) {
             id="blogPage"
           />
           {data?.footnote?.length > 0 ? (
-            <div className="p-7 rounded-md bg-[#FBC6FD] ">
+            <div className="p-7 rounded-md bg-[#FBC6FD] footnote">
               <p className="font-bold">Article references</p>
               {data?.footnote?.map((note, index) => {
-
-
                 return (
                   <div className="flex gap-x-1 my-5" key={index}>
                     <span className="text-xs">{index + 1} </span>
@@ -46,12 +44,12 @@ export default function RegularContent({ data }) {
                       />
                     </div>
                   </div>
-                );
+                )
               })}
             </div>
           ) : null}
         </>
       )}
     </section>
-  );
+  )
 }
