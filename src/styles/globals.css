@@ -67,7 +67,7 @@
   --gradient-obof: linear-gradient(to right, #f157ff 0%, #ff9d00 100%) 0% 0%;
   --gradient-oe: linear-gradient(to right, #f157ff 0%, #06de8b 100%) 0% 0%; /* define gradient variable */
   --gradient-oh: linear-gradient(to right, #f157ff 0%, #0062ff 100%) 0% 0%; /* define gradient variable */
-  --gradient-traceability: linear-gradient(to right, #f157ff 0%, #0062ff 100%)
+  --gradient-traceability: linear-gradient(to right, #f157ff 0%, #10dfff 100%)
     0% 0%; /* define gradient variable */
   --gradient-obof-btn: linear-gradient(
       to right,
