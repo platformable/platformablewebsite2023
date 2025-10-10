@@ -1,43 +1,40 @@
-import React, { useState, useEffect, useMemo } from "react";
-import styles from "@/styles/Blog.module.css";
-import Search from "../Search";
-import BlogPreviewCard from "../BlogPreviewCard";
-import Link from "next/link";
+import React, { useState, useEffect, useMemo } from "react"
+import styles from "@/styles/Blog.module.css"
+import Search from "../Search"
+import BlogPreviewCard from "../BlogPreviewCard"
+import Link from "next/link"
 
 export default function ResourcesSearch({ posts, heading, draft }) {
-  const featuredPost = posts?.filter(
-    (post) => post?.attributes?.is_featured
-  )[0] || posts[ Math.random() * posts.length |0 ];
+  const featuredPost =
+    posts?.filter((post) => post?.attributes?.is_featured)[0] ||
+    posts[(Math.random() * posts.length) | 0]
 
+  const [searchWord, setSearchWord] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState("All")
 
-  const [searchWord, setSearchWord] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const [seeAllPosts, setSeeAllPosts] = useState(false);
+  const [seeAllPosts, setSeeAllPosts] = useState(false)
   //UseMemo is used to calculate before render
   const showedPosts = useMemo(() => {
     const filteredPosts = posts
       ?.filter((post, index) => !post?.attributes?.is_featured)
       ?.filter((post, index) => {
         if (searchWord === "") {
-          return post;
+          return post
         } else {
-          return (
-            post?.attributes?.title
-              .toLowerCase()
-              .includes(searchWord.toLowerCase()) 
-            //   ||
-            // post?.attributes?.content
-            //   ?.toLowerCase()
-            //   .includes(searchWord.toLowerCase())
-          );
+          return post?.attributes?.title
+            .toLowerCase()
+            .includes(searchWord.toLowerCase())
+          //   ||
+          // post?.attributes?.content
+          //   ?.toLowerCase()
+          //   .includes(searchWord.toLowerCase())
         }
       })
       .sort(
         (a, b) =>
           new Date(b?.attributes?.update_date) -
           new Date(a?.attributes?.update_date)
-      );
+      )
     const findPostsBycategory =
       selectedCategory === "All"
         ? filteredPosts
@@ -45,28 +42,29 @@ export default function ResourcesSearch({ posts, heading, draft }) {
             post?.attributes?.sectors?.data?.some((element) =>
               element.attributes.name.includes(selectedCategory)
             )
-          );
-    return seeAllPosts ? findPostsBycategory : findPostsBycategory.slice(0, 6);
-  }, [searchWord, seeAllPosts, selectedCategory]);
+          )
+    return seeAllPosts ? findPostsBycategory : findPostsBycategory.slice(0, 6)
+  }, [searchWord, seeAllPosts, selectedCategory])
   const searchFunction = (word) => {
-    setSearchWord(word);
-  };
+    setSearchWord(word)
+  }
   const chooseCategory = (category) =>
     category === selectedCategory
       ? setSelectedCategory("All")
-      : setSelectedCategory(category);
+      : setSelectedCategory(category)
 
   const calculateTimeToRead = (article) => {
-    return Math.ceil(article?.trim().split(/\s+/).length / 225);
-  };
+    return Math.ceil(article?.trim().split(/\s+/).length / 225)
+  }
   const setHeaderSectorColor = (sectorName) => {
     const sectorColors = {
       "Open Ecosystems": "bg--gradient-oe",
       "Open Banking / Open Finance": "bg--gradient-obof",
       "Open Health": "bg--gradient-oh",
-    };
-    return sectorColors[sectorName];
-  };
+      Traceability: "bg--gradient-traceability",
+    }
+    return sectorColors[sectorName]
+  }
   return (
     <section className={`${styles["understand-posts-bg"]}`}>
       <div className="">
@@ -144,14 +142,19 @@ export default function ResourcesSearch({ posts, heading, draft }) {
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-5 py-3 px-7">
                   <div>
                     <p className="text-white font-bold">
-                      {new Date(featuredPost?.attributes?.update_date).getDate()}{" "}
+                      {new Date(
+                        featuredPost?.attributes?.update_date
+                      ).getDate()}{" "}
                       {new Date(
                         featuredPost?.attributes.update_date
                       ).toLocaleDateString("en-US", { month: "long" })}
                     </p>
                   </div>
                   <p className="text-white">
-                    {featuredPost?.attributes?.sectors?.data?.[0].attributes.name}
+                    {
+                      featuredPost?.attributes?.sectors?.data?.[0].attributes
+                        .name
+                    }
                   </p>
                 </div>
               </div>
@@ -163,19 +166,21 @@ export default function ResourcesSearch({ posts, heading, draft }) {
                     </h6>
 
                     <span>Written by </span>
-                    {featuredPost?.attributes.teams?.data?.map((team, index) => {
-                      return (
-                        <span key={index}>
-                          {team.attributes.name +
-                            " " +
-                            team.attributes.lastname}{" "}
-                          {index <
-                          featuredPost?.attributes.teams.data.length - 1
-                            ? " & "
-                            : ""}
-                        </span>
-                      );
-                    })}
+                    {featuredPost?.attributes.teams?.data?.map(
+                      (team, index) => {
+                        return (
+                          <span key={index}>
+                            {team.attributes.name +
+                              " " +
+                              team.attributes.lastname}{" "}
+                            {index <
+                            featuredPost?.attributes.teams.data.length - 1
+                              ? " & "
+                              : ""}
+                          </span>
+                        )
+                      }
+                    )}
 
                     <div
                       dangerouslySetInnerHTML={{
@@ -186,7 +191,10 @@ export default function ResourcesSearch({ posts, heading, draft }) {
 
                     <div className="flex justify-between my-5">
                       <div className="flex gap-x-5 items-center">
-                        <img src="/platformable-icon-purple-dark.png" alt="Platformable logo" />
+                        <img
+                          src="/platformable-icon-purple-dark.png"
+                          alt="Platformable logo"
+                        />
                         <p className="text-[#3524C6] font-bold">
                           {
                             featuredPost?.attributes.category.data.attributes
@@ -224,12 +232,9 @@ export default function ResourcesSearch({ posts, heading, draft }) {
 
         <div className="grid md:grid-cols-3 grid-cols-1 gap-x-5 px-5 gap-y-5 md:px-0 my-10">
           {showedPosts
-            ? showedPosts
-                .map((post, index) => {
-                  return (
-                    <BlogPreviewCard post={post} key={index} draft={draft} />
-                  );
-                })
+            ? showedPosts.map((post, index) => {
+                return <BlogPreviewCard post={post} key={index} draft={draft} />
+              })
             : null}
         </div>
         <div className="flex gap-3 flex-col justify-center items-center">
@@ -254,5 +259,5 @@ export default function ResourcesSearch({ posts, heading, draft }) {
         </div>
       </div>
     </section>
-  );
+  )
 }
