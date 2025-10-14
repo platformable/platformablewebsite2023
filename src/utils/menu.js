@@ -7,8 +7,7 @@ export const SectorsNavData = {
         description: "Stay ahead with the latest API trends",
         link: "/contact-us",
       },
-      /*{ title: "Open Ecosystem Online Courses", description: "Ecosystem Monitoring Dashboard", link: "" },
-        { title: "OBOF Online Courses", description: "Advance Your Open Banking Skills", link: "" }, */
+
       {
         title: "Consultancy and Speaker Engagement",
         description: "Expert guidance and insights",
@@ -31,7 +30,7 @@ export const SectorsNavData = {
         description: "Ecosystem monitoring dashboard",
         link: "/products/open-banking-accelerator",
       },
-      /*   { title: "OBOF Online Courses", description: "Advance Your Open Banking Skills", link: "" }, */
+
       {
         title: "Consultancy and Speaker Engagement",
         description: "Open banking expertise",
@@ -43,8 +42,6 @@ export const SectorsNavData = {
   "Open Health": {
     title: "Open Health",
     products: [
-      /* { title: "HDG Self-Paced Learning", description: "Learn Health Data Governance at Your Pace", link: "" },
-        { title: "HDG In-Person Training", description: "Hands-On Health Data Governance Training", link: "" }, */
       {
         title: "Health Data Governance Mentoring and Support",
         description: "Streamline health data management",
