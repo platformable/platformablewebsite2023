@@ -51,7 +51,7 @@ export const SectorsNavData = {
         title: "Global Digital Health Policy Maturity",
         description:
           "Keep up with health policies, regulations and health API platforms",
-        link: "/contact-us",
+        link: "/products/Global-Digital-Health-Policy-Maturity-Dashboard",
       },
       {
         title: "Consultancy and Speaker Engagement",
