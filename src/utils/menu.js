@@ -22,7 +22,8 @@ export const SectorsNavData = {
     products: [
       {
         title: "OBOF Trends Report",
-        description: "Strategic insights into the latest trends across the globe in markets, pricing, regulations, products, technology, social impact and more",
+        description:
+          "Strategic insights into the latest trends across the globe in markets, pricing, regulations, products, technology, social impact and more",
         link: "/products/open-banking",
       },
       {
@@ -50,7 +51,7 @@ export const SectorsNavData = {
         link: "/contact-us",
       },
       {
-        title: "Open Health Accelerator",
+        title: "Global Digital Health Policy Maturity",
         description:
           "Keep up with health policies, regulations and health API platforms",
         link: "/contact-us",
@@ -83,4 +84,4 @@ export const SectorsNavData = {
       },
     ],
   },
-};
+}
