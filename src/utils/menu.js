@@ -43,9 +43,10 @@ export const SectorsNavData = {
     title: "Open Health",
     products: [
       {
-        title: "Health Data Governance Mentoring and Support",
-        description: "Streamline health data management",
-        link: "/contact-us",
+        title: "Open Health to Digital Health",
+        description:
+          "Platformable can help mentor and build your health data governance team to generate real value from your health data, meet regulations, work from a patient-centric view, and prepare for AI implementations",
+        link: "/products/health-data-governance-mentoring",
       },
       {
         title: "Global Digital Health Policy Maturity",
