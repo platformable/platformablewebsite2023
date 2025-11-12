@@ -40,8 +40,13 @@ export const SectorsNavData = {
   },
 
   "Open Health": {
-    title: "Open Health",
+    title: "Digital Health",
     products: [
+      /*       {
+        title: "Health Data Governance Mentoring and Support",
+        description: "Streamline health data management",
+        link: "/contact-us",
+      }, */
       {
         title: "Open Health to Digital Health",
         description:
