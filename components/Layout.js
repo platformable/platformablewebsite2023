@@ -1,13 +1,18 @@
+import Header from "./Header"
+import Footer from "./Footer"
+import Script from "next/script"
 
-import Header from './Header'
-import Footer from './Footer'
-
-export default function Layout({children}) {
+export default function Layout({ children }) {
   return (
-  <>
-  <Header/>
-    <main>{children}</main>
-    <Footer/>
-  </>
+    <>
+      <Header />
+      <main>{children}</main>
+      <Script
+        src="https://analytics.platformable.com/track.js"
+        data-site-id="platformable-website-9ba03ce8"
+        strategy="afterInteractive"
+      />
+      <Footer />
+    </>
   )
 }
